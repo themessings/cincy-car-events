@@ -1,0 +1,51 @@
+home:
+  name: "Cincinnati, OH"
+  lat: 39.1031
+  lon: -84.5120
+
+filters:
+  # Approx driving-time proxies (edit freely)
+  local_max_miles: 120      # ~2 hours
+  rally_max_miles: 360      # ~6 hours
+  lookahead_days: 365       # how far into the future to keep
+  drop_past_days: 2         # keep very recent past to avoid missing late posts
+
+categorization:
+  rally_keywords:
+    - rally
+    - tour
+    - road rally
+    - driving tour
+    - poker run
+    - cruise
+  local_keywords:
+    - cars and coffee
+    - car show
+    - meet
+    - meetup
+    - cruise-in
+    - cars & coffee
+    - autocross
+    - track day
+    - concours
+
+sources:
+  # CarsAndCoffeeEvents: Ohio events listing (good aggregator)
+  - type: html_carsandcoffeeevents_ohio
+    name: "CarsAndCoffeeEvents - Ohio"
+    url: "https://carsandcoffeeevents.com/ohio-car-and-bike-events/"
+
+  # Cincinnati Cars and Coffee series page
+  - type: html_wordpress_events_list
+    name: "Cincinnati Cars and Coffee (Series)"
+    url: "https://carsandcoffeeevents.com/series/cincinnati-cars-and-coffee-2/"
+
+  # OVR PCA public Google Calendar ICS link (public feed)
+  - type: ics
+    name: "OVR PCA Social Events (ICS)"
+    url: "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+
+  # Add more ICS feeds here as you find them:
+  # - type: ics
+  #   name: "Another club calendar"
+  #   url: "https://example.com/calendar.ics"
