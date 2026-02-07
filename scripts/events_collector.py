@@ -32,6 +32,35 @@ GEOCODE_CACHE_PATH = os.path.join(DATA_DIR, "geocode_cache.json")
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(RUNS_DIR, exist_ok=True)
 
+DEFAULT_APEX_FOLDER_ID = "1bd9LR2JfE7AJm9Z5dwlIc_u5WpO3atQM"
+APEX_PARENT_FOLDER_ID = os.getenv("APEX_PARENT_FOLDER_ID", DEFAULT_APEX_FOLDER_ID)
+APEX_PARENT_FOLDER_URL = os.getenv("APEX_PARENT_FOLDER_URL")
+APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
+APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
+APEX_SHARED_DRIVE_ID = os.getenv("APEX_SHARED_DRIVE_ID")
+APEX_SHARE_WITH_EMAIL = os.getenv("APEX_SHARE_WITH_EMAIL")
+
+
+def drive_list_kwargs() -> dict:
+    if APEX_SHARED_DRIVE_ID:
+        return {
+            "includeItemsFromAllDrives": True,
+            "supportsAllDrives": True,
+            "driveId": APEX_SHARED_DRIVE_ID,
+            "corpora": "drive",
+        }
+    return {
+        "includeItemsFromAllDrives": True,
+        "supportsAllDrives": True,
+    }
+
+
+def resolve_parent_folder_id() -> str:
+    if APEX_PARENT_FOLDER_URL:
+        match = re.search(r"/folders/([a-zA-Z0-9_-]+)", APEX_PARENT_FOLDER_URL)
+        if match:
+            return match.group(1)
+    return APEX_PARENT_FOLDER_ID
 APEX_PARENT_FOLDER_ID = os.getenv("APEX_PARENT_FOLDER_ID", "1Bt1YYRMnfoRFZo5NvJyP1YxeBCH4e8Gv")
 APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
 APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
@@ -487,6 +516,11 @@ def find_or_create_subfolder(drive, parent_id: str, folder_name: str) -> str:
         f"and '{parent_id}' in parents "
         "and trashed=false"
     )
+    response = drive.files().list(
+        q=query,
+        fields="files(id, name)",
+        **drive_list_kwargs(),
+    ).execute()
     response = drive.files().list(q=query, fields="files(id, name)").execute()
     files = response.get("files", [])
     if files:
@@ -497,6 +531,7 @@ def find_or_create_subfolder(drive, parent_id: str, folder_name: str) -> str:
         "mimeType": "application/vnd.google-apps.folder",
         "parents": [parent_id],
     }
+    created = drive.files().create(body=metadata, fields="id", supportsAllDrives=True).execute()
     created = drive.files().create(body=metadata, fields="id").execute()
     return created["id"]
 
@@ -508,6 +543,11 @@ def find_or_create_spreadsheet(drive, parent_id: str, name: str) -> str:
         f"and '{parent_id}' in parents "
         "and trashed=false"
     )
+    response = drive.files().list(
+        q=query,
+        fields="files(id, name)",
+        **drive_list_kwargs(),
+    ).execute()
     response = drive.files().list(q=query, fields="files(id, name)").execute()
     files = response.get("files", [])
     if files:
@@ -518,6 +558,39 @@ def find_or_create_spreadsheet(drive, parent_id: str, name: str) -> str:
         "mimeType": "application/vnd.google-apps.spreadsheet",
         "parents": [parent_id],
     }
+    created = drive.files().create(body=metadata, fields="id", supportsAllDrives=True).execute()
+    return created["id"]
+
+
+def verify_parent_access(drive, parent_id: str) -> bool:
+    try:
+        meta = drive.files().get(
+            fileId=parent_id,
+            fields="id,name,driveId,owners(emailAddress),permissions(emailAddress,role)",
+            supportsAllDrives=True,
+        ).execute()
+        name = meta.get("name", "unknown")
+        drive_id = meta.get("driveId") or "My Drive"
+        owners = ", ".join(
+            owner.get("emailAddress", "unknown")
+            for owner in meta.get("owners", [])
+            if owner.get("emailAddress")
+        )
+        print(f"   Access verified for folder: {name} (drive: {drive_id})")
+        if owners:
+            print(f"   Folder owners: {owners}")
+        return True
+    except Exception as ex:
+        print(f"❌ Unable to access parent folder {parent_id}: {ex}")
+        print("   Ensure the service account has Editor access to the APEX folder.")
+        return False
+
+
+def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
+    sheet_info = sheets.spreadsheets().get(
+        spreadsheetId=spreadsheet_id,
+        includeGridData=False,
+    ).execute()
     created = drive.files().create(body=metadata, fields="id").execute()
     return created["id"]
 
@@ -537,6 +610,37 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
         print("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON.")
         return
 
+    if getattr(creds, "service_account_email", None):
+        print(f"   Using Google service account: {creds.service_account_email}")
+
+    drive = build("drive", "v3", credentials=creds)
+    sheets = build("sheets", "v4", credentials=creds)
+
+    parent_id = resolve_parent_folder_id()
+    if parent_id != APEX_PARENT_FOLDER_ID:
+        print(f"   Using Apex folder from URL: {parent_id}")
+
+    if not verify_parent_access(drive, parent_id):
+        return
+
+    subfolder_id = find_or_create_subfolder(drive, parent_id, APEX_SUBFOLDER_NAME)
+    spreadsheet_id = find_or_create_spreadsheet(drive, subfolder_id, APEX_SPREADSHEET_NAME)
+    ensure_sheet_tab(sheets, spreadsheet_id, "Events")
+    if APEX_SHARE_WITH_EMAIL:
+        try:
+            drive.permissions().create(
+                fileId=spreadsheet_id,
+                body={
+                    "type": "user",
+                    "role": "writer",
+                    "emailAddress": APEX_SHARE_WITH_EMAIL,
+                },
+                sendNotificationEmail=False,
+                supportsAllDrives=True,
+            ).execute()
+            print(f"   Shared sheet with: {APEX_SHARE_WITH_EMAIL}")
+        except Exception as ex:
+            print(f"⚠️ Unable to share sheet with {APEX_SHARE_WITH_EMAIL}: {ex}")
     drive = build("drive", "v3", credentials=creds)
     sheets = build("sheets", "v4", credentials=creds)
 
@@ -585,6 +689,8 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
     ).execute()
 
     print(f"   Updated Google Sheet: {APEX_SPREADSHEET_NAME} ({spreadsheet_id})")
+    print(f"   Sheet URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
+    print(f"   Folder URL: https://drive.google.com/drive/folders/{subfolder_id}")
 
 
 def main():
