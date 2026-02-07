@@ -15,6 +15,8 @@ import yaml
 from bs4 import BeautifulSoup
 from dateutil import tz
 from icalendar import Calendar
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
 
 # -------------------------
 # Paths
@@ -29,6 +31,10 @@ GEOCODE_CACHE_PATH = os.path.join(DATA_DIR, "geocode_cache.json")
 
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(RUNS_DIR, exist_ok=True)
+
+APEX_PARENT_FOLDER_ID = os.getenv("APEX_PARENT_FOLDER_ID", "1Bt1YYRMnfoRFZo5NvJyP1YxeBCH4e8Gv")
+APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
+APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
 
 
 # -------------------------
@@ -459,6 +465,128 @@ def write_csv(events: List[EventItem], path: str) -> None:
             w.writerow(d)
 
 
+def get_google_credentials() -> Optional[service_account.Credentials]:
+    service_account_path = os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE")
+    service_account_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
+    scopes = [
+        "https://www.googleapis.com/auth/drive",
+        "https://www.googleapis.com/auth/spreadsheets",
+    ]
+    if service_account_path:
+        return service_account.Credentials.from_service_account_file(service_account_path, scopes=scopes)
+    if service_account_json:
+        info = json.loads(service_account_json)
+        return service_account.Credentials.from_service_account_info(info, scopes=scopes)
+    return None
+
+
+def find_or_create_subfolder(drive, parent_id: str, folder_name: str) -> str:
+    query = (
+        "mimeType='application/vnd.google-apps.folder' "
+        f"and name='{folder_name}' "
+        f"and '{parent_id}' in parents "
+        "and trashed=false"
+    )
+    response = drive.files().list(q=query, fields="files(id, name)").execute()
+    files = response.get("files", [])
+    if files:
+        return files[0]["id"]
+
+    metadata = {
+        "name": folder_name,
+        "mimeType": "application/vnd.google-apps.folder",
+        "parents": [parent_id],
+    }
+    created = drive.files().create(body=metadata, fields="id").execute()
+    return created["id"]
+
+
+def find_or_create_spreadsheet(drive, parent_id: str, name: str) -> str:
+    query = (
+        "mimeType='application/vnd.google-apps.spreadsheet' "
+        f"and name='{name}' "
+        f"and '{parent_id}' in parents "
+        "and trashed=false"
+    )
+    response = drive.files().list(q=query, fields="files(id, name)").execute()
+    files = response.get("files", [])
+    if files:
+        return files[0]["id"]
+
+    metadata = {
+        "name": name,
+        "mimeType": "application/vnd.google-apps.spreadsheet",
+        "parents": [parent_id],
+    }
+    created = drive.files().create(body=metadata, fields="id").execute()
+    return created["id"]
+
+
+def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
+    sheet_info = sheets.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
+    titles = {sheet["properties"]["title"] for sheet in sheet_info.get("sheets", [])}
+    if title in titles:
+        return
+    requests_body = {"requests": [{"addSheet": {"properties": {"title": title}}}]}
+    sheets.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id, body=requests_body).execute()
+
+
+def update_apex_spreadsheet(events: List[EventItem]) -> None:
+    creds = get_google_credentials()
+    if not creds:
+        print("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON.")
+        return
+
+    drive = build("drive", "v3", credentials=creds)
+    sheets = build("sheets", "v4", credentials=creds)
+
+    subfolder_id = find_or_create_subfolder(drive, APEX_PARENT_FOLDER_ID, APEX_SUBFOLDER_NAME)
+    spreadsheet_id = find_or_create_spreadsheet(drive, subfolder_id, APEX_SPREADSHEET_NAME)
+    ensure_sheet_tab(sheets, spreadsheet_id, "Events")
+
+    headers = [
+        "title",
+        "start_iso",
+        "end_iso",
+        "category",
+        "miles_from_cincy",
+        "location",
+        "city_state",
+        "url",
+        "source",
+        "lat",
+        "lon",
+        "last_seen_iso",
+    ]
+    values = [headers]
+    for ev in events:
+        values.append(
+            [
+                ev.title,
+                ev.start_iso,
+                ev.end_iso,
+                ev.category,
+                ev.miles_from_cincy,
+                ev.location,
+                ev.city_state,
+                ev.url,
+                ev.source,
+                ev.lat,
+                ev.lon,
+                ev.last_seen_iso,
+            ]
+        )
+
+    sheets.spreadsheets().values().update(
+        spreadsheetId=spreadsheet_id,
+        range="Events!A1",
+        valueInputOption="RAW",
+        body={"values": values},
+    ).execute()
+
+    print(f"   Updated Google Sheet: {APEX_SPREADSHEET_NAME} ({spreadsheet_id})")
+
+
 def main():
     cfg = load_yaml(CONFIG_PATH)
 
@@ -495,6 +623,7 @@ def main():
     }
     save_json(EVENTS_JSON_PATH, payload)
     write_csv(merged, EVENTS_CSV_PATH)
+    update_apex_spreadsheet(merged)
 
     # Snapshot this run (append-only history)
     run_stamp = datetime.now(tz=tz.gettz("America/New_York")).strftime("%Y-%m-%d_%H%M%S")
