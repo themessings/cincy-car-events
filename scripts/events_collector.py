@@ -61,6 +61,9 @@ def resolve_parent_folder_id() -> str:
         if match:
             return match.group(1)
     return APEX_PARENT_FOLDER_ID
+APEX_PARENT_FOLDER_ID = os.getenv("APEX_PARENT_FOLDER_ID", "1Bt1YYRMnfoRFZo5NvJyP1YxeBCH4e8Gv")
+APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
+APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
 
 
 # -------------------------
@@ -518,6 +521,7 @@ def find_or_create_subfolder(drive, parent_id: str, folder_name: str) -> str:
         fields="files(id, name)",
         **drive_list_kwargs(),
     ).execute()
+    response = drive.files().list(q=query, fields="files(id, name)").execute()
     files = response.get("files", [])
     if files:
         return files[0]["id"]
@@ -528,6 +532,7 @@ def find_or_create_subfolder(drive, parent_id: str, folder_name: str) -> str:
         "parents": [parent_id],
     }
     created = drive.files().create(body=metadata, fields="id", supportsAllDrives=True).execute()
+    created = drive.files().create(body=metadata, fields="id").execute()
     return created["id"]
 
 
@@ -543,6 +548,7 @@ def find_or_create_spreadsheet(drive, parent_id: str, name: str) -> str:
         fields="files(id, name)",
         **drive_list_kwargs(),
     ).execute()
+    response = drive.files().list(q=query, fields="files(id, name)").execute()
     files = response.get("files", [])
     if files:
         return files[0]["id"]
@@ -585,6 +591,12 @@ def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
         spreadsheetId=spreadsheet_id,
         includeGridData=False,
     ).execute()
+    created = drive.files().create(body=metadata, fields="id").execute()
+    return created["id"]
+
+
+def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
+    sheet_info = sheets.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
     titles = {sheet["properties"]["title"] for sheet in sheet_info.get("sheets", [])}
     if title in titles:
         return
@@ -629,6 +641,12 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
             print(f"   Shared sheet with: {APEX_SHARE_WITH_EMAIL}")
         except Exception as ex:
             print(f"⚠️ Unable to share sheet with {APEX_SHARE_WITH_EMAIL}: {ex}")
+    drive = build("drive", "v3", credentials=creds)
+    sheets = build("sheets", "v4", credentials=creds)
+
+    subfolder_id = find_or_create_subfolder(drive, APEX_PARENT_FOLDER_ID, APEX_SUBFOLDER_NAME)
+    spreadsheet_id = find_or_create_spreadsheet(drive, subfolder_id, APEX_SPREADSHEET_NAME)
+    ensure_sheet_tab(sheets, spreadsheet_id, "Events")
 
     headers = [
         "title",
