@@ -356,7 +356,12 @@ def collect_ics(source: dict) -> List[dict]:
 def collect_facebook_page_events(source: dict) -> List[dict]:
     page_id = source.get("page_id")
     if not page_id:
-        raise ValueError("facebook_page_events source requires page_id")
+        page_id_env = source.get("page_id_env")
+        if page_id_env:
+            page_id = os.getenv(page_id_env)
+    if not page_id:
+        print("⚠️ Skipping Facebook events: missing page_id/page_id_env.")
+        return []
     if not FACEBOOK_ACCESS_TOKEN:
         print("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
         return []
