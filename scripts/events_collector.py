@@ -28,6 +28,7 @@ CONFIG_PATH = os.path.join(ROOT, "config", "sources.yml")
 EVENTS_JSON_PATH = os.path.join(DATA_DIR, "events.json")
 EVENTS_CSV_PATH = os.path.join(DATA_DIR, "events.csv")
 GEOCODE_CACHE_PATH = os.path.join(DATA_DIR, "geocode_cache.json")
+URL_CACHE_PATH = os.path.join(DATA_DIR, "url_cache.json")
 
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(RUNS_DIR, exist_ok=True)
@@ -39,7 +40,10 @@ APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
 APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
 APEX_SHARED_DRIVE_ID = os.getenv("APEX_SHARED_DRIVE_ID")
 APEX_SHARE_WITH_EMAIL = os.getenv("APEX_SHARE_WITH_EMAIL")
+
 FACEBOOK_ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
+
+SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
 
 
 def drive_list_kwargs() -> dict:
@@ -105,7 +109,6 @@ def parse_dt(text: str) -> Optional[datetime]:
 
 
 def haversine_miles(lat1, lon1, lat2, lon2) -> float:
-    # Earth radius in miles
     R = 3958.7613
     import math
 
@@ -142,7 +145,6 @@ def clean_ws(s: str) -> str:
 
 
 def guess_city_state(location: str) -> str:
-    # Lightweight heuristic: look for "City, ST"
     m = re.search(r"([A-Za-z .'-]+),\s*([A-Z]{2})\b", location or "")
     if m:
         return f"{m.group(1).strip()}, {m.group(2)}"
@@ -154,8 +156,11 @@ def categorize(title: str, location: str, cfg: dict) -> str:
     for kw in cfg["categorization"]["rally_keywords"]:
         if kw.lower() in t:
             return "rally"
-    # default to local unless rally keyword triggers
     return "local"
+
+
+def log(msg: str) -> None:
+    print(msg, flush=True)
 
 
 # -------------------------
@@ -172,7 +177,6 @@ def geocode(place: str, cache: Dict[str, dict]) -> Optional[Tuple[float, float]]
             return float(v["lat"]), float(v["lon"])
         return None
 
-    # Nominatim usage policy: be gentle
     url = "https://nominatim.openstreetmap.org/search"
     params = {"q": place, "format": "json", "limit": 1}
     headers = {"User-Agent": "cincy-car-events-bot/1.0 (github actions)"}
@@ -181,15 +185,16 @@ def geocode(place: str, cache: Dict[str, dict]) -> Optional[Tuple[float, float]]
         r = requests.get(url, params=params, headers=headers, timeout=20)
         r.raise_for_status()
         data = r.json()
-        time.sleep(1.1)  # polite throttle
+        time.sleep(1.1)
         if data:
             lat, lon = data[0]["lat"], data[0]["lon"]
             cache[place] = {"lat": lat, "lon": lon}
             return float(lat), float(lon)
         cache[place] = None
         return None
-    except Exception:
+    except Exception as ex:
         cache[place] = None
+        log(f"⚠️ Geocode failed for '{place}': {ex}")
         return None
 
 
@@ -198,7 +203,7 @@ def miles_from_home(lat: float, lon: float, home_lat: float, home_lon: float) ->
 
 
 # -------------------------
-# Source collectors
+# HTTP fetching
 # -------------------------
 def fetch_html(url: str) -> BeautifulSoup:
     headers = {"User-Agent": "cincy-car-events-bot/1.0 (github actions)"}
@@ -207,18 +212,22 @@ def fetch_html(url: str) -> BeautifulSoup:
     return BeautifulSoup(r.text, "html.parser")
 
 
+def fetch_text(url: str) -> str:
+    headers = {"User-Agent": "cincy-car-events-bot/1.0 (github actions)"}
+    r = requests.get(url, headers=headers, timeout=30)
+    r.raise_for_status()
+    return r.text
+
+
+# -------------------------
+# Existing collectors
+# -------------------------
 def collect_carsandcoffeeevents_ohio(source: dict) -> List[dict]:
-    """
-    Parses the Ohio listing page where events are listed in repeating blocks.
-    """
     soup = fetch_html(source["url"])
     events = []
 
-    # The site uses a typical "tribe-events" (Modern Tribe) structure.
-    # We'll grab event blocks by common selectors and degrade gracefully.
     blocks = soup.select(".tribe-events-calendar-list__event-row, article.tribe-events-calendar-list__event")
     if not blocks:
-        # fallback for older markup
         blocks = soup.select(".tribe-events-calendar-list__event")
 
     for b in blocks:
@@ -228,15 +237,12 @@ def collect_carsandcoffeeevents_ohio(source: dict) -> List[dict]:
 
         time_el = b.select_one("time")
         start_txt = clean_ws(time_el.get("datetime") or time_el.get_text()) if time_el else ""
-        # If datetime attr exists it's usually ISO; otherwise human text.
         start_dt = parse_dt(start_txt) if start_txt else None
 
-        # Location
         loc_el = b.select_one(".tribe-events-calendar-list__event-venue-title, .tribe-events-calendar-list__event-venue")
         addr_el = b.select_one(".tribe-events-calendar-list__event-venue-address, .tribe-events-venue-details")
         location = clean_ws((loc_el.get_text() if loc_el else "") + " " + (addr_el.get_text() if addr_el else ""))
 
-        # If no start, skip (we can’t reliably filter)
         if not title or not start_dt:
             continue
 
@@ -255,13 +261,9 @@ def collect_carsandcoffeeevents_ohio(source: dict) -> List[dict]:
 
 
 def collect_wordpress_events_series(source: dict) -> List[dict]:
-    """
-    Parses a "series" events page on carsandcoffeeevents.com where each entry is a date row.
-    """
     soup = fetch_html(source["url"])
     events = []
 
-    # Try to find recurring date blocks
     rows = soup.select(".tribe-common-g-row.tribe-events-calendar-list__event-row, article.tribe-events-calendar-list__event")
     if not rows:
         rows = soup.select("article")
@@ -322,13 +324,11 @@ def collect_ics(source: dict) -> List[dict]:
         start_dt = dtstart.dt
         end_dt = dtend.dt if dtend else None
 
-        # normalize tz-aware
         if isinstance(start_dt, datetime) and start_dt.tzinfo is None:
             start_dt = start_dt.replace(tzinfo=timezone.utc).astimezone(tz.gettz("America/New_York"))
         elif isinstance(start_dt, datetime):
             start_dt = start_dt.astimezone(tz.gettz("America/New_York"))
         else:
-            # date-only event
             start_dt = datetime.combine(start_dt, datetime.min.time()).replace(tzinfo=tz.gettz("America/New_York"))
 
         if end_dt:
@@ -360,10 +360,10 @@ def collect_facebook_page_events(source: dict) -> List[dict]:
         if page_id_env:
             page_id = os.getenv(page_id_env)
     if not page_id:
-        print("⚠️ Skipping Facebook events: missing page_id/page_id_env.")
+        log("⚠️ Skipping Facebook events: missing page_id/page_id_env.")
         return []
     if not FACEBOOK_ACCESS_TOKEN:
-        print("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
+        log("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
         return []
 
     url = f"https://graph.facebook.com/v18.0/{page_id}/events"
@@ -378,12 +378,15 @@ def collect_facebook_page_events(source: dict) -> List[dict]:
         r = requests.get(url, params=params, timeout=30)
         r.raise_for_status()
         payload = r.json()
+
         for item in payload.get("data", []):
             title = clean_ws(item.get("name", ""))
             start_dt = parse_dt(item.get("start_time"))
             end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
+
             place = item.get("place") or {}
             location = clean_ws(place.get("name", ""))
+
             if place.get("location"):
                 loc = place["location"]
                 parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
@@ -408,6 +411,207 @@ def collect_facebook_page_events(source: dict) -> List[dict]:
         params = None
 
     return events
+
+
+# -------------------------
+# NEW: Search the web (SerpAPI) + parse schema.org Event
+# -------------------------
+def serpapi_search(query: str, max_results: int = 20) -> List[str]:
+    if not SERPAPI_API_KEY:
+        log("⚠️ Skipping SerpAPI search: missing SERPAPI_API_KEY.")
+        return []
+
+    url = "https://serpapi.com/search.json"
+    params = {
+        "engine": "google",
+        "q": query,
+        "api_key": SERPAPI_API_KEY,
+        "num": min(max_results, 100),
+    }
+    r = requests.get(url, params=params, timeout=40)
+    r.raise_for_status()
+    data = r.json()
+
+    links: List[str] = []
+    for item in data.get("organic_results", []):
+        link = item.get("link")
+        if link:
+            links.append(link)
+
+    return links[:max_results]
+
+
+def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
+    """
+    Extract schema.org Event(s) from JSON-LD blocks.
+    Returns raw event dicts with title/start/end/location/url/source (source filled by caller).
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    scripts = soup.select('script[type="application/ld+json"]')
+    out: List[dict] = []
+
+    def normalize_event(obj: dict) -> Optional[dict]:
+        if not isinstance(obj, dict):
+            return None
+
+        t = obj.get("@type")
+        # Sometimes @type is a list
+        if isinstance(t, list):
+            is_event = any(str(x).lower() == "event" for x in t)
+        else:
+            is_event = str(t).lower() == "event"
+
+        if not is_event:
+            return None
+
+        name = clean_ws(obj.get("name") or obj.get("summary") or "")
+        start = clean_ws(obj.get("startDate") or "")
+        end = clean_ws(obj.get("endDate") or "")
+        loc = obj.get("location") or {}
+
+        location_str = ""
+        if isinstance(loc, dict):
+            # location.name + address
+            loc_name = clean_ws(loc.get("name") or "")
+            addr = loc.get("address") or {}
+            if isinstance(addr, dict):
+                parts = [
+                    addr.get("streetAddress"),
+                    addr.get("addressLocality"),
+                    addr.get("addressRegion"),
+                    addr.get("postalCode"),
+                ]
+                addr_str = clean_ws(" ".join(p for p in parts if p))
+            else:
+                addr_str = clean_ws(str(addr))
+            location_str = clean_ws(" ".join(x for x in [loc_name, addr_str] if x))
+        else:
+            location_str = clean_ws(str(loc))
+
+        event_url = clean_ws(obj.get("url") or page_url)
+
+        start_dt = parse_dt(start)
+        end_dt = parse_dt(end) if end else None
+        if not name or not start_dt:
+            return None
+
+        return {
+            "title": name,
+            "start_dt": start_dt,
+            "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+            "location": location_str,
+            "url": event_url,
+        }
+
+    for s in scripts:
+        txt = s.get_text(strip=True)
+        if not txt:
+            continue
+        try:
+            data = json.loads(txt)
+        except Exception:
+            continue
+
+        candidates: List[dict] = []
+        if isinstance(data, dict):
+            candidates.append(data)
+            # graph style
+            if "@graph" in data and isinstance(data["@graph"], list):
+                candidates.extend([x for x in data["@graph"] if isinstance(x, dict)])
+        elif isinstance(data, list):
+            candidates.extend([x for x in data if isinstance(x, dict)])
+
+        for obj in candidates:
+            ev = normalize_event(obj)
+            if ev:
+                out.append(ev)
+
+    # Dedup within page (title + start)
+    seen = set()
+    deduped = []
+    for e in out:
+        k = (e["title"].lower().strip(), e["start_dt"].isoformat()[:16])
+        if k in seen:
+            continue
+        seen.add(k)
+        deduped.append(e)
+
+    return deduped
+
+
+def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List[dict]:
+    """
+    Discovers event pages via SerpAPI search, then extracts schema.org Event objects.
+    Uses a URL cache to avoid re-fetching the same page too often.
+    """
+    query = source.get("query", "")
+    max_results = int(source.get("max_results", 20))
+    if not query:
+        log(f"⚠️ Skipping web_search_serpapi: missing query for source {source.get('name')}")
+        return []
+
+    links = serpapi_search(query, max_results=max_results)
+    if not links:
+        return []
+
+    out: List[dict] = []
+    now = datetime.now(tz=tz.gettz("America/New_York"))
+
+    for u in links:
+        u = clean_ws(u)
+        if not u:
+            continue
+
+        # Cache: don’t refetch same URL more than once every 24h
+        cached = url_cache.get(u)
+        if cached:
+            try:
+                last = datetime.fromisoformat(cached.get("fetched_at_iso"))
+                if (now - last) < timedelta(hours=24) and cached.get("events"):
+                    for e in cached["events"]:
+                        # restore datetimes
+                        e["start_dt"] = datetime.fromisoformat(e["start_iso"])
+                        e["end_dt"] = datetime.fromisoformat(e["end_iso"])
+                        e["source"] = source["name"]
+                        out.append(e)
+                    continue
+            except Exception:
+                pass
+
+        try:
+            html = fetch_text(u)
+            events = parse_schema_org_events_from_html(u, html)
+            packed = []
+            for e in events:
+                e2 = {
+                    "title": e["title"],
+                    "start_dt": e["start_dt"],
+                    "end_dt": e["end_dt"],
+                    "location": e.get("location", ""),
+                    "url": e.get("url", u),
+                    "source": source["name"],
+                }
+                out.append(e2)
+                packed.append(
+                    {
+                        "title": e2["title"],
+                        "start_iso": e2["start_dt"].isoformat(),
+                        "end_iso": e2["end_dt"].isoformat(),
+                        "location": e2["location"],
+                        "url": e2["url"],
+                    }
+                )
+
+            url_cache[u] = {
+                "fetched_at_iso": now.isoformat(),
+                "events": packed,
+            }
+            time.sleep(0.6)
+        except Exception as ex:
+            log(f"⚠️ Web page parse failed: {u} :: {ex}")
+            url_cache[u] = {"fetched_at_iso": now.isoformat(), "events": []}
+
+    return out
 
 
 # -------------------------
@@ -438,15 +642,13 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
         if not title or not start_dt:
             continue
 
-        # time window filter
         if start_dt < window_start or start_dt > window_end:
             continue
 
         city_state = guess_city_state(location)
 
-        # geocode location (use city_state first if present)
         query = city_state or location
-        latlon = geocode(query, geocache)
+        latlon = geocode(query, geocache) if query else None
         lat = lon = None
         miles = None
         if latlon:
@@ -455,16 +657,11 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
 
         cat = categorize(title, location, cfg)
 
-        # distance filter
         if miles is not None:
             if cat == "local" and miles > local_max:
                 continue
             if cat == "rally" and miles > rally_max:
                 continue
-        else:
-            # If we can't geocode, keep it but mark unknown distance;
-            # you can choose to drop these if you prefer.
-            pass
 
         out.append(
             EventItem(
@@ -487,10 +684,9 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
 
 
 def dedupe_merge(existing: List[EventItem], incoming: List[EventItem]) -> List[EventItem]:
-    # Dedup key: (title normalized + start date + url fallback)
     def key(ev: EventItem) -> str:
         t = re.sub(r"\s+", " ", ev.title.lower()).strip()
-        s = ev.start_iso[:16]  # minute-level
+        s = ev.start_iso[:16]
         u = ev.url or ""
         return f"{t}||{s}||{u}"
 
@@ -499,7 +695,6 @@ def dedupe_merge(existing: List[EventItem], incoming: List[EventItem]) -> List[E
     for ev in incoming:
         k = key(ev)
         if k in merged:
-            # update last_seen + any missing fields
             cur = merged[k]
             cur.last_seen_iso = ev.last_seen_iso
             if (cur.miles_from_cincy is None) and (ev.miles_from_cincy is not None):
@@ -516,7 +711,6 @@ def dedupe_merge(existing: List[EventItem], incoming: List[EventItem]) -> List[E
         else:
             merged[k] = ev
 
-    # Sort by start time
     def sort_key(ev: EventItem):
         try:
             return datetime.fromisoformat(ev.start_iso)
@@ -545,10 +739,12 @@ def write_csv(events: List[EventItem], path: str) -> None:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         for ev in events:
-            d = asdict(ev)
-            w.writerow(d)
+            w.writerow(asdict(ev))
 
 
+# -------------------------
+# Google Sheets export
+# -------------------------
 def get_google_credentials() -> Optional[service_account.Credentials]:
     service_account_path = os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE")
     service_account_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
@@ -571,20 +767,12 @@ def find_or_create_subfolder(drive, parent_id: str, folder_name: str) -> str:
         f"and '{parent_id}' in parents "
         "and trashed=false"
     )
-    response = drive.files().list(
-        q=query,
-        fields="files(id, name)",
-        **drive_list_kwargs(),
-    ).execute()
+    response = drive.files().list(q=query, fields="files(id, name)", **drive_list_kwargs()).execute()
     files = response.get("files", [])
     if files:
         return files[0]["id"]
 
-    metadata = {
-        "name": folder_name,
-        "mimeType": "application/vnd.google-apps.folder",
-        "parents": [parent_id],
-    }
+    metadata = {"name": folder_name, "mimeType": "application/vnd.google-apps.folder", "parents": [parent_id]}
     created = drive.files().create(body=metadata, fields="id", supportsAllDrives=True).execute()
     return created["id"]
 
@@ -596,20 +784,12 @@ def find_or_create_spreadsheet(drive, parent_id: str, name: str) -> str:
         f"and '{parent_id}' in parents "
         "and trashed=false"
     )
-    response = drive.files().list(
-        q=query,
-        fields="files(id, name)",
-        **drive_list_kwargs(),
-    ).execute()
+    response = drive.files().list(q=query, fields="files(id, name)", **drive_list_kwargs()).execute()
     files = response.get("files", [])
     if files:
         return files[0]["id"]
 
-    metadata = {
-        "name": name,
-        "mimeType": "application/vnd.google-apps.spreadsheet",
-        "parents": [parent_id],
-    }
+    metadata = {"name": name, "mimeType": "application/vnd.google-apps.spreadsheet", "parents": [parent_id]}
     created = drive.files().create(body=metadata, fields="id", supportsAllDrives=True).execute()
     return created["id"]
 
@@ -623,26 +803,16 @@ def verify_parent_access(drive, parent_id: str) -> bool:
         ).execute()
         name = meta.get("name", "unknown")
         drive_id = meta.get("driveId") or "My Drive"
-        owners = ", ".join(
-            owner.get("emailAddress", "unknown")
-            for owner in meta.get("owners", [])
-            if owner.get("emailAddress")
-        )
-        print(f"   Access verified for folder: {name} (drive: {drive_id})")
-        if owners:
-            print(f"   Folder owners: {owners}")
+        log(f"   Access verified for folder: {name} (drive: {drive_id})")
         return True
     except Exception as ex:
-        print(f"❌ Unable to access parent folder {parent_id}: {ex}")
-        print("   Ensure the service account has Editor access to the APEX folder.")
+        log(f"❌ Unable to access parent folder {parent_id}: {ex}")
+        log("   Ensure the service account has Editor access to the APEX folder.")
         return False
 
 
 def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
-    sheet_info = sheets.spreadsheets().get(
-        spreadsheetId=spreadsheet_id,
-        includeGridData=False,
-    ).execute()
+    sheet_info = sheets.spreadsheets().get(spreadsheetId=spreadsheet_id, includeGridData=False).execute()
     titles = {sheet["properties"]["title"] for sheet in sheet_info.get("sheets", [])}
     if title in titles:
         return
@@ -653,16 +823,10 @@ def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
 def update_apex_spreadsheet(events: List[EventItem]) -> None:
     creds = get_google_credentials()
     if not creds:
-        print("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON.")
+        log("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON.")
         return
 
-    if getattr(creds, "service_account_email", None):
-        print(f"   Using Google service account: {creds.service_account_email}")
-
     parent_id = resolve_parent_folder_id()
-    if parent_id != APEX_PARENT_FOLDER_ID:
-        print(f"   Using Apex folder from URL: {parent_id}")
-
     drive = build("drive", "v3", credentials=creds)
     sheets = build("sheets", "v4", credentials=creds)
 
@@ -672,21 +836,7 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
     subfolder_id = find_or_create_subfolder(drive, parent_id, APEX_SUBFOLDER_NAME)
     spreadsheet_id = find_or_create_spreadsheet(drive, subfolder_id, APEX_SPREADSHEET_NAME)
     ensure_sheet_tab(sheets, spreadsheet_id, "Events")
-    if APEX_SHARE_WITH_EMAIL:
-        try:
-            drive.permissions().create(
-                fileId=spreadsheet_id,
-                body={
-                    "type": "user",
-                    "role": "writer",
-                    "emailAddress": APEX_SHARE_WITH_EMAIL,
-                },
-                sendNotificationEmail=False,
-                supportsAllDrives=True,
-            ).execute()
-            print(f"   Shared sheet with: {APEX_SHARE_WITH_EMAIL}")
-        except Exception as ex:
-            print(f"⚠️ Unable to share sheet with {APEX_SHARE_WITH_EMAIL}: {ex}")
+
     headers = [
         "title",
         "start_iso",
@@ -727,15 +877,20 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
         body={"values": values},
     ).execute()
 
-    print(f"   Updated Google Sheet: {APEX_SPREADSHEET_NAME} ({spreadsheet_id})")
-    print(f"   Sheet URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
-    print(f"   Folder URL: https://drive.google.com/drive/folders/{subfolder_id}")
+    log(f"   Updated Google Sheet: {APEX_SPREADSHEET_NAME} ({spreadsheet_id})")
+    log(f"   Sheet URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
+    log(f"   Folder URL: https://drive.google.com/drive/folders/{subfolder_id}")
 
 
+# -------------------------
+# Main
+# -------------------------
 def main():
     cfg = load_yaml(CONFIG_PATH)
 
     geocache = load_json(GEOCODE_CACHE_PATH, {})
+    url_cache = load_json(URL_CACHE_PATH, {})
+
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
 
@@ -752,16 +907,18 @@ def main():
                 raw_events.extend(collect_ics(s))
             elif stype == "facebook_page_events":
                 raw_events.extend(collect_facebook_page_events(s))
+            elif stype == "web_search_serpapi":
+                raw_events.extend(collect_web_search_serpapi(s, url_cache))
             else:
-                print(f"Skipping unknown source type: {stype} ({s.get('name')})")
+                log(f"Skipping unknown source type: {stype} ({s.get('name')})")
         except Exception as ex:
-            print(f"Source failed: {s.get('name')} :: {ex}")
+            log(f"Source failed: {s.get('name')} :: {ex}")
 
     incoming = to_event_items(raw_events, cfg, geocache)
     merged = dedupe_merge(existing, incoming)
 
-    # Persist
     save_json(GEOCODE_CACHE_PATH, geocache)
+    save_json(URL_CACHE_PATH, url_cache)
 
     payload = {
         "generated_at_iso": now_et_iso(),
@@ -772,7 +929,6 @@ def main():
     write_csv(merged, EVENTS_CSV_PATH)
     update_apex_spreadsheet(merged)
 
-    # Snapshot this run (append-only history)
     run_stamp = datetime.now(tz=tz.gettz("America/New_York")).strftime("%Y-%m-%d_%H%M%S")
     run_path = os.path.join(RUNS_DIR, f"run_{run_stamp}.json")
     save_json(
@@ -785,10 +941,10 @@ def main():
         },
     )
 
-    print(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged)}")
-    print(f"   Wrote: {EVENTS_JSON_PATH}")
-    print(f"   Wrote: {EVENTS_CSV_PATH}")
-    print(f"   Wrote: {run_path}")
+    log(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged)}")
+    log(f"   Wrote: {EVENTS_JSON_PATH}")
+    log(f"   Wrote: {EVENTS_CSV_PATH}")
+    log(f"   Wrote: {run_path}")
 
 
 if __name__ == "__main__":
