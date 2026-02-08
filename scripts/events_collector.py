@@ -39,6 +39,7 @@ APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
 APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
 APEX_SHARED_DRIVE_ID = os.getenv("APEX_SHARED_DRIVE_ID")
 APEX_SHARE_WITH_EMAIL = os.getenv("APEX_SHARE_WITH_EMAIL")
+FACEBOOK_ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
 
 
 def drive_list_kwargs() -> dict:
@@ -61,9 +62,6 @@ def resolve_parent_folder_id() -> str:
         if match:
             return match.group(1)
     return APEX_PARENT_FOLDER_ID
-APEX_PARENT_FOLDER_ID = os.getenv("APEX_PARENT_FOLDER_ID", "1Bt1YYRMnfoRFZo5NvJyP1YxeBCH4e8Gv")
-APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
-APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
 
 
 # -------------------------
@@ -355,6 +353,58 @@ def collect_ics(source: dict) -> List[dict]:
     return out
 
 
+def collect_facebook_page_events(source: dict) -> List[dict]:
+    page_id = source.get("page_id")
+    if not page_id:
+        raise ValueError("facebook_page_events source requires page_id")
+    if not FACEBOOK_ACCESS_TOKEN:
+        print("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
+        return []
+
+    url = f"https://graph.facebook.com/v18.0/{page_id}/events"
+    params = {
+        "access_token": FACEBOOK_ACCESS_TOKEN,
+        "fields": "name,start_time,end_time,place,timezone,description",
+        "limit": 100,
+    }
+
+    events: List[dict] = []
+    while url:
+        r = requests.get(url, params=params, timeout=30)
+        r.raise_for_status()
+        payload = r.json()
+        for item in payload.get("data", []):
+            title = clean_ws(item.get("name", ""))
+            start_dt = parse_dt(item.get("start_time"))
+            end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
+            place = item.get("place") or {}
+            location = clean_ws(place.get("name", ""))
+            if place.get("location"):
+                loc = place["location"]
+                parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
+                location = clean_ws(" ".join(p for p in parts if p)) or location
+
+            if not title or not start_dt:
+                continue
+
+            events.append(
+                {
+                    "title": title,
+                    "start_dt": start_dt,
+                    "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+                    "location": location,
+                    "url": f"https://www.facebook.com/events/{item.get('id')}" if item.get("id") else "",
+                    "source": source["name"],
+                }
+            )
+
+        paging = payload.get("paging", {})
+        url = paging.get("next")
+        params = None
+
+    return events
+
+
 # -------------------------
 # Normalize + filter + store
 # -------------------------
@@ -521,7 +571,6 @@ def find_or_create_subfolder(drive, parent_id: str, folder_name: str) -> str:
         fields="files(id, name)",
         **drive_list_kwargs(),
     ).execute()
-    response = drive.files().list(q=query, fields="files(id, name)").execute()
     files = response.get("files", [])
     if files:
         return files[0]["id"]
@@ -532,7 +581,6 @@ def find_or_create_subfolder(drive, parent_id: str, folder_name: str) -> str:
         "parents": [parent_id],
     }
     created = drive.files().create(body=metadata, fields="id", supportsAllDrives=True).execute()
-    created = drive.files().create(body=metadata, fields="id").execute()
     return created["id"]
 
 
@@ -548,7 +596,6 @@ def find_or_create_spreadsheet(drive, parent_id: str, name: str) -> str:
         fields="files(id, name)",
         **drive_list_kwargs(),
     ).execute()
-    response = drive.files().list(q=query, fields="files(id, name)").execute()
     files = response.get("files", [])
     if files:
         return files[0]["id"]
@@ -591,12 +638,6 @@ def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
         spreadsheetId=spreadsheet_id,
         includeGridData=False,
     ).execute()
-    created = drive.files().create(body=metadata, fields="id").execute()
-    return created["id"]
-
-
-def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
-    sheet_info = sheets.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
     titles = {sheet["properties"]["title"] for sheet in sheet_info.get("sheets", [])}
     if title in titles:
         return
@@ -613,12 +654,12 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
     if getattr(creds, "service_account_email", None):
         print(f"   Using Google service account: {creds.service_account_email}")
 
-    drive = build("drive", "v3", credentials=creds)
-    sheets = build("sheets", "v4", credentials=creds)
-
     parent_id = resolve_parent_folder_id()
     if parent_id != APEX_PARENT_FOLDER_ID:
         print(f"   Using Apex folder from URL: {parent_id}")
+
+    drive = build("drive", "v3", credentials=creds)
+    sheets = build("sheets", "v4", credentials=creds)
 
     if not verify_parent_access(drive, parent_id):
         return
@@ -641,13 +682,6 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
             print(f"   Shared sheet with: {APEX_SHARE_WITH_EMAIL}")
         except Exception as ex:
             print(f"⚠️ Unable to share sheet with {APEX_SHARE_WITH_EMAIL}: {ex}")
-    drive = build("drive", "v3", credentials=creds)
-    sheets = build("sheets", "v4", credentials=creds)
-
-    subfolder_id = find_or_create_subfolder(drive, APEX_PARENT_FOLDER_ID, APEX_SUBFOLDER_NAME)
-    spreadsheet_id = find_or_create_spreadsheet(drive, subfolder_id, APEX_SPREADSHEET_NAME)
-    ensure_sheet_tab(sheets, spreadsheet_id, "Events")
-
     headers = [
         "title",
         "start_iso",
@@ -711,6 +745,8 @@ def main():
                 raw_events.extend(collect_wordpress_events_series(s))
             elif stype == "ics":
                 raw_events.extend(collect_ics(s))
+            elif stype == "facebook_page_events":
+                raw_events.extend(collect_facebook_page_events(s))
             else:
                 print(f"Skipping unknown source type: {stype} ({s.get('name')})")
         except Exception as ex:

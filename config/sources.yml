@@ -5,10 +5,10 @@ home:
 
 filters:
   # Approx driving-time proxies (edit freely)
-  local_max_miles: 120      # ~2 hours
-  rally_max_miles: 360      # ~6 hours
-  lookahead_days: 365       # how far into the future to keep
-  drop_past_days: 2         # keep very recent past to avoid missing late posts
+  local_max_miles: 200      # ~3.5 hours
+  rally_max_miles: 600      # ~9-10 hours
+  lookahead_days: 540       # how far into the future to keep
+  drop_past_days: 7         # keep recent past to avoid missing late posts
 
 categorization:
   rally_keywords:
@@ -49,3 +49,8 @@ sources:
   # - type: ics
   #   name: "Another club calendar"
   #   url: "https://example.com/calendar.ics"
+
+  # Facebook page events (requires FACEBOOK_ACCESS_TOKEN in the environment).
+  # - type: facebook_page_events
+  #   name: "Local Cars & Coffee FB Page"
+  #   page_id: "1234567890"
