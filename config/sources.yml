@@ -51,6 +51,6 @@ sources:
   #   url: "https://example.com/calendar.ics"
 
   # Facebook page events (requires FACEBOOK_ACCESS_TOKEN in the environment).
-  # - type: facebook_page_events
-  #   name: "Local Cars & Coffee FB Page"
-  #   page_id: "1234567890"
+  - type: facebook_page_events
+    name: "Facebook Page Events (set FACEBOOK_PAGE_ID)"
+    page_id_env: "FACEBOOK_PAGE_ID"
