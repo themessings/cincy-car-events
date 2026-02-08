@@ -29,6 +29,22 @@ jobs:
         run: |
           python scripts/events_collector.py
 
+      - name: Inspect output files
+        run: |
+          ls -la data
+          ls -la data/runs || true
+
+      - name: Upload output artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: car-events-output
+          path: |
+            data/events.csv
+            data/events.json
+            data/geocode_cache.json
+            data/runs/*.json
+          if-no-files-found: warn
+
       - name: Commit changes (if any)
         run: |
           git config user.name "car-events-bot"
