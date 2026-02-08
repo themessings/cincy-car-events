@@ -49,3 +49,8 @@ sources:
   # - type: ics
   #   name: "Another club calendar"
   #   url: "https://example.com/calendar.ics"
+
+  # Facebook page events (requires FACEBOOK_ACCESS_TOKEN in the environment).
+  # - type: facebook_page_events
+  #   name: "Local Cars & Coffee FB Page"
+  #   page_id: "1234567890"

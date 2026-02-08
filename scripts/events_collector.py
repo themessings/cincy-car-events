@@ -39,6 +39,7 @@ APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
 APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
 APEX_SHARED_DRIVE_ID = os.getenv("APEX_SHARED_DRIVE_ID")
 APEX_SHARE_WITH_EMAIL = os.getenv("APEX_SHARE_WITH_EMAIL")
+FACEBOOK_ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
 
 
 def drive_list_kwargs() -> dict:
@@ -350,6 +351,58 @@ def collect_ics(source: dict) -> List[dict]:
         )
 
     return out
+
+
+def collect_facebook_page_events(source: dict) -> List[dict]:
+    page_id = source.get("page_id")
+    if not page_id:
+        raise ValueError("facebook_page_events source requires page_id")
+    if not FACEBOOK_ACCESS_TOKEN:
+        print("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
+        return []
+
+    url = f"https://graph.facebook.com/v18.0/{page_id}/events"
+    params = {
+        "access_token": FACEBOOK_ACCESS_TOKEN,
+        "fields": "name,start_time,end_time,place,timezone,description",
+        "limit": 100,
+    }
+
+    events: List[dict] = []
+    while url:
+        r = requests.get(url, params=params, timeout=30)
+        r.raise_for_status()
+        payload = r.json()
+        for item in payload.get("data", []):
+            title = clean_ws(item.get("name", ""))
+            start_dt = parse_dt(item.get("start_time"))
+            end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
+            place = item.get("place") or {}
+            location = clean_ws(place.get("name", ""))
+            if place.get("location"):
+                loc = place["location"]
+                parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
+                location = clean_ws(" ".join(p for p in parts if p)) or location
+
+            if not title or not start_dt:
+                continue
+
+            events.append(
+                {
+                    "title": title,
+                    "start_dt": start_dt,
+                    "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+                    "location": location,
+                    "url": f"https://www.facebook.com/events/{item.get('id')}" if item.get("id") else "",
+                    "source": source["name"],
+                }
+            )
+
+        paging = payload.get("paging", {})
+        url = paging.get("next")
+        params = None
+
+    return events
 
 
 # -------------------------
@@ -692,6 +745,8 @@ def main():
                 raw_events.extend(collect_wordpress_events_series(s))
             elif stype == "ics":
                 raw_events.extend(collect_ics(s))
+            elif stype == "facebook_page_events":
+                raw_events.extend(collect_facebook_page_events(s))
             else:
                 print(f"Skipping unknown source type: {stype} ({s.get('name')})")
         except Exception as ex:
