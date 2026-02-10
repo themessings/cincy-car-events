@@ -1,5 +1,5 @@
 {
-  "generated_at_iso": "2026-02-09T06:44:27.326751-05:00",
+  "generated_at_iso": "2026-02-10T06:50:44.084721-05:00",
   "count": 13,
   "events": [
     {
@@ -56,7 +56,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-09T06:44:27.324707-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.082625-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Fridays",
@@ -70,7 +70,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-09T06:44:27.324828-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.082744-05:00"
     },
     {
       "title": "Cincinnati Cars and Coffee",
@@ -84,7 +84,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-09T06:44:27.324941-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.082860-05:00"
     },
     {
       "title": "Columbus Cars & Coffee",
@@ -98,7 +98,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-09T06:44:27.325067-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.082991-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
@@ -112,7 +112,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-09T06:44:27.325176-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.083118-05:00"
     },
     {
       "title": "Destination Cars and Coffee",
@@ -126,7 +126,7 @@
       "miles_from_cincy": 63.3,
       "lat": 39.6536719,
       "lon": -83.5638094,
-      "last_seen_iso": "2026-02-09T06:44:27.325284-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.083229-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -140,7 +140,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-09T06:44:27.325394-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.083341-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -154,7 +154,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-09T06:44:27.325518-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.083448-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -168,7 +168,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-02-09T06:44:27.325619-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.083551-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Fridays",
@@ -182,7 +182,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-09T06:44:27.325738-05:00"
+      "last_seen_iso": "2026-02-10T06:50:44.083670-05:00"
     }
   ]
 }
