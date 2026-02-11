@@ -40,6 +40,7 @@ APEX_SUBFOLDER_NAME = os.getenv("APEX_SUBFOLDER_NAME", "Apex events")
 APEX_SPREADSHEET_NAME = os.getenv("APEX_SPREADSHEET_NAME", "Apex Events")
 APEX_SHARED_DRIVE_ID = os.getenv("APEX_SHARED_DRIVE_ID")
 APEX_SHARE_WITH_EMAIL = os.getenv("APEX_SHARE_WITH_EMAIL")
+APEX_SPREADSHEET_ID = os.getenv("APEX_SPREADSHEET_ID")
 
 FACEBOOK_ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
 
@@ -830,11 +831,20 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
     drive = build("drive", "v3", credentials=creds)
     sheets = build("sheets", "v4", credentials=creds)
 
+    # Verify we can access the parent folder (helps catch permission issues early)
     if not verify_parent_access(drive, parent_id):
         return
 
-    subfolder_id = find_or_create_subfolder(drive, parent_id, APEX_SUBFOLDER_NAME)
-    spreadsheet_id = find_or_create_spreadsheet(drive, subfolder_id, APEX_SPREADSHEET_NAME)
+    # If you provided a spreadsheet ID, use it directly (no create = no quota failure)
+    spreadsheet_id = APEX_SPREADSHEET_ID
+    if spreadsheet_id:
+        log(f"   Using existing spreadsheet ID from env: {spreadsheet_id}")
+    else:
+        # Fall back to prior behavior: use a subfolder and find/create the sheet by name
+        subfolder_id = find_or_create_subfolder(drive, parent_id, APEX_SUBFOLDER_NAME)
+        spreadsheet_id = find_or_create_spreadsheet(drive, subfolder_id, APEX_SPREADSHEET_NAME)
+
+    # Ensure the Events tab exists
     ensure_sheet_tab(sheets, spreadsheet_id, "Events")
 
     headers = [
@@ -851,6 +861,7 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
         "lon",
         "last_seen_iso",
     ]
+
     values = [headers]
     for ev in events:
         values.append(
@@ -877,10 +888,8 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
         body={"values": values},
     ).execute()
 
-    log(f"   Updated Google Sheet: {APEX_SPREADSHEET_NAME} ({spreadsheet_id})")
+    log(f"   Updated Google Sheet ({spreadsheet_id})")
     log(f"   Sheet URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
-    log(f"   Folder URL: https://drive.google.com/drive/folders/{subfolder_id}")
-
 
 # -------------------------
 # Main
