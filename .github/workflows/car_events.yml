@@ -26,6 +26,12 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run collector
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+          APEX_PARENT_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          # SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}  # uncomment if you added this secret
+          # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }} # uncomment if using a Shared Drive
         run: |
           python scripts/events_collector.py
 
@@ -42,6 +48,7 @@ jobs:
             data/events.csv
             data/events.json
             data/geocode_cache.json
+            data/url_cache.json
             data/runs/*.json
           if-no-files-found: warn
 
@@ -49,6 +56,6 @@ jobs:
         run: |
           git config user.name "car-events-bot"
           git config user.email "car-events-bot@users.noreply.github.com"
-          git add data/events.csv data/events.json data/runs data/geocode_cache.json
+          git add data/events.csv data/events.json data/runs data/geocode_cache.json data/url_cache.json
           git diff --staged --quiet || git commit -m "Update Cincinnati-area car events"
           git push
