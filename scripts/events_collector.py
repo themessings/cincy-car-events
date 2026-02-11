@@ -827,24 +827,17 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
         log("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON.")
         return
 
-    parent_id = resolve_parent_folder_id()
-    drive = build("drive", "v3", credentials=creds)
-    sheets = build("sheets", "v4", credentials=creds)
-
-    # Verify we can access the parent folder (helps catch permission issues early)
-    if not verify_parent_access(drive, parent_id):
+    spreadsheet_id = os.getenv("APEX_SPREADSHEET_ID")
+    if not spreadsheet_id:
+        log("⚠️ Skipping Google Sheets update: missing APEX_SPREADSHEET_ID.")
         return
 
-    # If you provided a spreadsheet ID, use it directly (no create = no quota failure)
-    spreadsheet_id = APEX_SPREADSHEET_ID
-    if spreadsheet_id:
-        log(f"   Using existing spreadsheet ID from env: {spreadsheet_id}")
-    else:
-        # Fall back to prior behavior: use a subfolder and find/create the sheet by name
-        subfolder_id = find_or_create_subfolder(drive, parent_id, APEX_SUBFOLDER_NAME)
-        spreadsheet_id = find_or_create_spreadsheet(drive, subfolder_id, APEX_SPREADSHEET_NAME)
+    sheets = build("sheets", "v4", credentials=creds)
 
-    # Ensure the Events tab exists
+    log(f"   Using spreadsheet ID: {spreadsheet_id}")
+    log(f"   Sheet URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
+
+    # Ensure tab exists
     ensure_sheet_tab(sheets, spreadsheet_id, "Events")
 
     headers = [
@@ -881,6 +874,14 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
             ]
         )
 
+    # 1) Clear the sheet range first (prevents leftovers if list shrinks)
+    sheets.spreadsheets().values().clear(
+        spreadsheetId=spreadsheet_id,
+        range="Events!A1:K",
+        body={}
+    ).execute()
+
+    # 2) Write data
     sheets.spreadsheets().values().update(
         spreadsheetId=spreadsheet_id,
         range="Events!A1",
@@ -888,8 +889,24 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
         body={"values": values},
     ).execute()
 
-    log(f"   Updated Google Sheet ({spreadsheet_id})")
-    log(f"   Sheet URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
+    # 3) Write a visible update stamp (column M is outside your table)
+    stamp = f"Updated by bot: {now_et_iso()} | rows={len(values)-1}"
+    sheets.spreadsheets().values().update(
+        spreadsheetId=spreadsheet_id,
+        range="Events!M1",
+        valueInputOption="RAW",
+        body={"values": [[stamp]]},
+    ).execute()
+
+    # 4) Read back first few rows to prove it wrote
+    preview = sheets.spreadsheets().values().get(
+        spreadsheetId=spreadsheet_id,
+        range="Events!A1:C5",
+    ).execute()
+    got = preview.get("values", [])
+    log(f"   Wrote {len(values)-1} events to Events!A1")
+    log(f"   Preview A1:C5 = {got}")
+    log(f"   Stamp written to Events!M1 = {stamp}")
 
 # -------------------------
 # Main
