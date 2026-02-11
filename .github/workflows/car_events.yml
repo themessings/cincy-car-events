@@ -30,6 +30,7 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
           APEX_PARENT_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
           # SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}  # uncomment if you added this secret
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }} # uncomment if using a Shared Drive
         run: |
