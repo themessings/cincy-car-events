@@ -1667,10 +1667,13 @@ def main():
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
 
     raw_events: List[dict] = []
+    source_run_stats: List[dict] = []
 
     # 1) Config-based sources
     for s in cfg.get("sources", []):
         stype = s.get("type")
+        sname = s.get("name", "(unnamed source)")
+        before_count = len(raw_events)
         try:
             if stype == "html_carsandcoffeeevents_ohio":
                 raw_events.extend(collect_carsandcoffeeevents_ohio(s))
@@ -1692,10 +1695,15 @@ def main():
                 raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache))
 
             else:
-                log(f"Skipping unknown source type: {stype} ({s.get('name')})")
+                log(f"Skipping unknown source type: {stype} ({sname})")
+
+            collected = len(raw_events) - before_count
+            source_run_stats.append({"name": sname, "type": stype, "status": "ok", "collected": collected})
+            log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events")
 
         except Exception as ex:
-            log(f"⚠️ Source failed: {s.get('name')} :: {ex}")
+            source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
+            log(f"⚠️ Source failed: {sname} :: {ex}")
 
     # 2) Facebook Pages sheet (single source of truth)
     # IMPORTANT: ensure you only have ONE definition of this loader in your file
@@ -1714,6 +1722,9 @@ def main():
         log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
 
     log(f"📦 Raw events collected (pre-filter): {len(raw_events)}")
+    ok_sources = [x for x in source_run_stats if x.get("status") == "ok"]
+    failed_sources = [x for x in source_run_stats if x.get("status") == "failed"]
+    log(f"🔎 Source summary: ok={len(ok_sources)} failed={len(failed_sources)}")
 
     # Normalize + filter + geo
     incoming = to_event_items(raw_events, cfg, geocache)
@@ -1756,3 +1767,8 @@ def main():
     log(f"   Wrote: {EVENTS_CSV_PATH}")
     log(f"   Wrote: {run_path}")
     log(f"⏱️ Total runtime seconds: {round(_time.time() - t0, 1)}")
+
+
+if __name__ == "__main__":
+    main()
+
