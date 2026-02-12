@@ -2,7 +2,7 @@ name: Cincinnati Car Events Collector
 
 on:
   schedule:
-    - cron: "0 11 * * *"  # Daily 11:00 UTC (~6am ET standard)
+    - cron: "0 11 * * *" # Daily 11:00 UTC (~6am ET standard)
   workflow_dispatch: {}
 
 permissions:
@@ -27,12 +27,26 @@ jobs:
 
       - name: Run collector
         env:
+          # Google auth (service account json string)
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+
+          # Where to write the main Events output sheet
+          APEX_SPREADSHEET_ID: ${{ secrets.APEX_SPREADSHEET_ID }}
+
+          # Where to read the Facebook pages/groups list (Pages tab)
+          APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
+
+          # Optional: used if any code still verifies/uses parent folder operations
           APEX_PARENT_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+
+          # Facebook Graph token (required for facebook_page_events + pages-sheet collection)
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
-          APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
-          # SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}  # uncomment if you added this secret
-          # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }} # uncomment if using a Shared Drive
+
+          # Optional web search expansion (SerpAPI)
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+
+          # Optional: if you’re using a Shared Drive
+          APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
         run: |
           python scripts/events_collector.py
 
