@@ -60,6 +60,10 @@ jobs:
             echo "⚠️ APEX_FACEBOOK_PAGES_SHEET_ID is empty; FB Pages sheet collection will be skipped."
           fi
 
+          echo "ℹ️ SERPAPI_API_KEY is optional; discovery sources will self-skip when unset."
+
+          if [ "$missing" -ne 0 ]; then
+            echo "Failing early so required spreadsheet update inputs are fixed."
           if [ "$missing" -ne 0 ]; then
             echo "Failing early so required search/update inputs are fixed."
             exit 1
@@ -80,7 +84,6 @@ jobs:
           APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
 
           # NEW: SerpAPI for broader discovery
-          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
 
           # Optional (only if using a Shared Drive)
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
@@ -116,6 +119,15 @@ jobs:
           git config user.name "car-events-bot"
           git config user.email "car-events-bot@users.noreply.github.com"
           git add data/events.csv data/events.json data/runs data/geocode_cache.json data/url_cache.json
+
+          if git diff --staged --quiet; then
+            echo "No data changes detected; skipping commit and push."
+            exit 0
+          fi
+
+          git commit -m "Update Cincinnati-area car events"
+          git pull --rebase origin "${GITHUB_REF_NAME:-main}"
+          git push origin "HEAD:${GITHUB_REF_NAME:-main}"
           if git diff --staged --quiet; then
             echo "No data changes detected; skipping commit and push."
           else
