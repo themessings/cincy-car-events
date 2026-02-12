@@ -347,12 +347,9 @@ def haversine_miles(lat1, lon1, lat2, lon2) -> float:
 
 def load_facebook_pages_from_sheet() -> List[dict]:
     """
-    REPLACE your existing load_facebook_pages_from_sheet() with this.
-
     Tab: Pages
-    Headers (row 1): page_name | page_id | enabled | link
-    Reads rows starting at row 2.
-    Returns: [{"page_name":..., "page_id":..., "link":...}, ...] for enabled rows only.
+    Headers: page_name | page_id | enabled | link
+    Returns enabled rows only.
     """
     sheet_id = os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID")
     if not sheet_id:
@@ -366,14 +363,10 @@ def load_facebook_pages_from_sheet() -> List[dict]:
 
     sheets = build("sheets", "v4", credentials=creds)
 
-    try:
-        resp = sheets.spreadsheets().values().get(
-            spreadsheetId=sheet_id,
-            range="Pages!A1:D2000",
-        ).execute()
-    except Exception as ex:
-        log(f"❌ Failed reading Pages tab from sheet {sheet_id}: {ex}")
-        return []
+    resp = sheets.spreadsheets().values().get(
+        spreadsheetId=sheet_id,
+        range="Pages!A1:D2000",
+    ).execute()
 
     rows = resp.get("values", [])
     if not rows or len(rows) < 2:
@@ -390,50 +383,24 @@ def load_facebook_pages_from_sheet() -> List[dict]:
         return clean_ws(r[i])
 
     out: List[dict] = []
-    skipped_disabled = 0
-    skipped_missing_id = 0
-
     for r in rows[1:]:
         page_name = cell(r, "page_name")
         page_id = cell(r, "page_id")
-        enabled_raw = cell(r, "enabled").upper()
+        enabled = cell(r, "enabled").upper() in ("TRUE", "YES", "Y", "1")
         link = cell(r, "link")
 
-        enabled = enabled_raw in ("TRUE", "YES", "Y", "1")
-
-        if not enabled:
-            skipped_disabled += 1
-            continue
-        if not page_id:
-            skipped_missing_id += 1
+        if not enabled or not page_id:
             continue
 
-        out.append(
-            {
-                "page_name": page_name or page_id,
-                "page_id": page_id,
-                "link": link,
-            }
-        )
+        out.append({"page_name": page_name or page_id, "page_id": page_id, "link": link})
 
-    log(
-        f"✅ Pages tab loaded: enabled={len(out)} "
-        f"(skipped disabled={skipped_disabled}, missing_id={skipped_missing_id})"
-    )
-    if out:
-        log(f"   Sample enabled rows: {out[:3]}")
-
+    log(f"✅ Pages tab loaded: enabled={len(out)}")
     return out
 
 
 def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
     """
-    REPLACE your existing collect_facebook_events_from_pages() with this.
-
-    Pulls events from Facebook entities by ID via Graph API:
-      GET https://graph.facebook.com/v18.0/{id}/events
-
-    Adds strong logging so you can see per-ID counts and permission failures.
+    Graph API pull for /{id}/events (page/group IDs that your token can access).
     """
     if not FACEBOOK_ACCESS_TOKEN:
         log("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
@@ -444,17 +411,13 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
         return []
 
     out: List[dict] = []
-    total_entities = 0
-    total_items = 0
 
     for p in pages:
         page_id = (p.get("page_id") or "").strip()
-        page_name = clean_ws(p.get("page_name") or p.get("name") or page_id)
-
+        page_name = clean_ws(p.get("page_name") or page_id)
         if not page_id:
             continue
 
-        total_entities += 1
         log(f"--- Facebook pull start: {page_name} ({page_id})")
 
         url = f"https://graph.facebook.com/v18.0/{page_id}/events"
@@ -465,29 +428,13 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
         }
 
         entity_count = 0
-        page_num = 0
-
         while url:
-            page_num += 1
-            try:
-                r = requests.get(url, params=params, timeout=30)
-            except Exception as ex:
-                log(f"⚠️ FB request error for {page_name} ({page_id}): {ex}")
-                break
-
+            r = requests.get(url, params=params, timeout=30)
             if r.status_code != 200:
-                txt = (r.text or "").replace("\n", " ")
-                log(
-                    f"⚠️ FB non-200 for {page_name} ({page_id}) page={page_num}: "
-                    f"{r.status_code} :: {txt[:350]}"
-                )
+                log(f"⚠️ FB non-200 for {page_name} ({page_id}): {r.status_code} :: {(r.text or '')[:250]}")
                 break
 
-            try:
-                payload = r.json()
-            except Exception:
-                log(f"⚠️ FB invalid JSON for {page_name} ({page_id}) page={page_num}: {r.text[:200]}")
-                break
+            payload = r.json()
 
             for item in payload.get("data", []) or []:
                 title = clean_ws(item.get("name", ""))
@@ -506,30 +453,25 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
                     continue
 
                 event_id = item.get("id")
-                event_url = f"https://www.facebook.com/events/{event_id}" if event_id else ""
-
                 out.append(
                     {
                         "title": title,
                         "start_dt": start_dt,
                         "end_dt": end_dt or (start_dt + timedelta(hours=2)),
                         "location": location,
-                        "url": event_url,
+                        "url": f"https://www.facebook.com/events/{event_id}" if event_id else "",
                         "source": f"Facebook: {page_name}",
                     }
                 )
                 entity_count += 1
-                total_items += 1
 
             paging = payload.get("paging", {}) or {}
-            url = paging.get("next")  # full URL includes cursor
-            params = None  # next already includes params
-
+            url = paging.get("next")
+            params = None
             time.sleep(0.2)
 
         log(f"--- Facebook pull done: {page_name} ({page_id}) events={entity_count}")
 
-    log(f"✅ Facebook total entities processed={total_entities} total events collected={total_items}")
     return out
 
 
@@ -1700,6 +1642,7 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
 # -------------------------
 def main():
     import time as _time
+
     t0 = _time.time()
 
     log("🚀 Collector starting…")
@@ -1709,16 +1652,14 @@ def main():
     log(f"   APEX_FACEBOOK_PAGES_SHEET_ID set? {'YES' if bool(os.getenv('APEX_FACEBOOK_PAGES_SHEET_ID')) else 'NO'}")
     log(f"   APEX_SPREADSHEET_ID set? {'YES' if bool(os.getenv('APEX_SPREADSHEET_ID')) else 'NO'}")
 
+    # Load config
     cfg = load_yaml(CONFIG_PATH)
     log("===== DEBUG START =====")
     log(f"CONFIG_PATH: {CONFIG_PATH} exists={os.path.exists(CONFIG_PATH)}")
-    log(f"APEX_SPREADSHEET_ID set={bool(os.getenv('APEX_SPREADSHEET_ID'))}")
-    log(f"APEX_FACEBOOK_PAGES_SHEET_ID set={bool(os.getenv('APEX_FACEBOOK_PAGES_SHEET_ID'))}")
-    log(f"FACEBOOK_ACCESS_TOKEN set={bool(os.getenv('FACEBOOK_ACCESS_TOKEN'))}")
-    log(f"SERPAPI_API_KEY set={bool(os.getenv('SERPAPI_API_KEY'))}")
     log(f"Sources in config: {len(cfg.get('sources', []))}")
     log("===== DEBUG END =====")
 
+    # Load caches + existing
     geocache = load_json(GEOCODE_CACHE_PATH, {})
     url_cache = load_json(URL_CACHE_PATH, {})
 
@@ -1733,27 +1674,39 @@ def main():
         try:
             if stype == "html_carsandcoffeeevents_ohio":
                 raw_events.extend(collect_carsandcoffeeevents_ohio(s))
+
             elif stype == "html_wordpress_events_list":
                 raw_events.extend(collect_wordpress_events_series(s))
+
             elif stype == "ics":
                 raw_events.extend(collect_ics(s))
+
             elif stype == "facebook_page_events":
                 raw_events.extend(collect_facebook_page_events(s))
+
             elif stype == "web_search_serpapi":
                 raw_events.extend(collect_web_search_serpapi(s, url_cache))
+
+            elif stype == "web_search_facebook_events_serpapi":
+                # SerpAPI discovers FB event URLs, then Graph/HTML parse each
+                raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache))
+
             else:
                 log(f"Skipping unknown source type: {stype} ({s.get('name')})")
+
         except Exception as ex:
-            log(f"Source failed: {s.get('name')} :: {ex}")
+            log(f"⚠️ Source failed: {s.get('name')} :: {ex}")
 
-    # 2) Facebook pages list sheet (your Pages tab)
+    # 2) Facebook Pages sheet (single source of truth)
+    # IMPORTANT: ensure you only have ONE definition of this loader in your file
     try:
-        raw_events.extend(collect_facebook_from_pages_sheet())
-
+        fb_pages = load_facebook_pages_from_sheet()
+        if fb_pages:
+            raw_events.extend(collect_facebook_events_from_pages(fb_pages))
     except Exception as ex:
-        log(f"⚠️ Facebook pages sheet collection failed: {ex}")
+        log(f"⚠️ Facebook Pages sheet collection failed: {ex}")
 
-    # 3) NEW: Facebook event discovery via SerpAPI (beyond your list)
+    # 3) Broad FB event discovery via SerpAPI (beyond your curated list)
     try:
         discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
         raw_events.extend(discovered)
@@ -1762,14 +1715,18 @@ def main():
 
     log(f"📦 Raw events collected (pre-filter): {len(raw_events)}")
 
+    # Normalize + filter + geo
     incoming = to_event_items(raw_events, cfg, geocache)
     log(f"✅ Incoming after filters: {len(incoming)}")
 
+    # Merge with existing
     merged = dedupe_merge(existing, incoming)
 
+    # Save caches
     save_json(GEOCODE_CACHE_PATH, geocache)
     save_json(URL_CACHE_PATH, url_cache)
 
+    # Persist outputs
     payload = {
         "generated_at_iso": now_et_iso(),
         "count": len(merged),
@@ -1777,8 +1734,11 @@ def main():
     }
     save_json(EVENTS_JSON_PATH, payload)
     write_csv(merged, EVENTS_CSV_PATH)
+
+    # Export to Google Sheets
     update_apex_spreadsheet(merged)
 
+    # Write run snapshot
     run_stamp = datetime.now(tz=tz.gettz("America/New_York")).strftime("%Y-%m-%d_%H%M%S")
     run_path = os.path.join(RUNS_DIR, f"run_{run_stamp}.json")
     save_json(
