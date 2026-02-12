@@ -1378,6 +1378,8 @@ def main():
                 raw_events.extend(collect_facebook_page_events(s))
             elif stype == "web_search_serpapi":
                 raw_events.extend(collect_web_search_serpapi(s, url_cache))
+            elif stype == "web_search_facebook_events_serpapi":
+                raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache))
             else:
                 log(f"Skipping unknown source type: {stype} ({s.get('name')})")
         except Exception as ex:
