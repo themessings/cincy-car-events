@@ -980,9 +980,16 @@ def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, di
                 last = datetime.fromisoformat(cached.get("fetched_at_iso"))
                 if (now - last) < timedelta(hours=24) and cached.get("event"):
                     e = cached["event"]
-                    e["start_dt"] = datetime.fromisoformat(e["start_iso"])
-                    e["end_dt"] = datetime.fromisoformat(e["end_iso"])
-                    out.append(e)
+                    out.append(
+                        {
+                            "title": e.get("title", ""),
+                            "start_dt": datetime.fromisoformat(e["start_iso"]),
+                            "end_dt": datetime.fromisoformat(e["end_iso"]),
+                            "location": e.get("location", ""),
+                            "url": e.get("url", u),
+                            "source": e.get("source", "facebook:discovered"),
+                        }
+                    )
                     continue
             except Exception:
                 pass
@@ -1181,11 +1188,17 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
                 last = datetime.fromisoformat(cached.get("fetched_at_iso"))
                 if (now - last) < timedelta(hours=24) and cached.get("events"):
                     for e in cached["events"]:
-                        # restore datetimes
-                        e["start_dt"] = datetime.fromisoformat(e["start_iso"])
-                        e["end_dt"] = datetime.fromisoformat(e["end_iso"])
-                        e["source"] = source["name"]
-                        out.append(e)
+                        # restore datetimes without mutating cached payload
+                        out.append(
+                            {
+                                "title": e.get("title", ""),
+                                "start_dt": datetime.fromisoformat(e["start_iso"]),
+                                "end_dt": datetime.fromisoformat(e["end_iso"]),
+                                "location": e.get("location", ""),
+                                "url": e.get("url", u),
+                                "source": source["name"],
+                            }
+                        )
                     continue
             except Exception:
                 pass
@@ -1235,8 +1248,10 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
 
     lookahead_days = int(cfg["filters"]["lookahead_days"])
     drop_past_days = int(cfg["filters"]["drop_past_days"])
-    window_start = datetime.now(tz=tz.gettz("America/New_York")) - timedelta(days=drop_past_days)
-    window_end = datetime.now(tz=tz.gettz("America/New_York")) + timedelta(days=lookahead_days)
+    now_et = datetime.now(tz=tz.gettz("America/New_York"))
+    window_start = now_et - timedelta(days=drop_past_days)
+    # Set lookahead_days to a negative value to include all future events.
+    window_end = None if lookahead_days < 0 else (now_et + timedelta(days=lookahead_days))
 
     local_max = float(cfg["filters"]["local_max_miles"])
     rally_max = float(cfg["filters"]["rally_max_miles"])
@@ -1254,7 +1269,9 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
         if not title or not start_dt:
             continue
 
-        if start_dt < window_start or start_dt > window_end:
+        if start_dt < window_start:
+            continue
+        if window_end is not None and start_dt > window_end:
             continue
 
         city_state = guess_city_state(location)
