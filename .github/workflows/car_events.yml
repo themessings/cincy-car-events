@@ -2,7 +2,7 @@ name: Cincinnati Car Events Collector
 
 on:
   schedule:
-    - cron: "0 11 * * *"  # Daily 11:00 UTC (~6am ET standard)
+    - cron: "0 11 * * *" # Daily 11:00 UTC (~6am ET standard)
   workflow_dispatch: {}
 
 permissions:
@@ -48,8 +48,7 @@ jobs:
           fi
 
           if [ -z "${SERPAPI_API_KEY:-}" ]; then
-            echo "❌ Missing SERPAPI_API_KEY; web/FB search discovery cannot run."
-            missing=1
+            echo "⚠️ Missing SERPAPI_API_KEY; SerpAPI discovery will be skipped."
           fi
 
           if [ -z "${FACEBOOK_ACCESS_TOKEN:-}" ]; then
@@ -60,10 +59,6 @@ jobs:
             echo "⚠️ APEX_FACEBOOK_PAGES_SHEET_ID is empty; FB Pages sheet collection will be skipped."
           fi
 
-          echo "ℹ️ SERPAPI_API_KEY is optional; discovery sources will self-skip when unset."
-
-          if [ "$missing" -ne 0 ]; then
-            echo "Failing early so required spreadsheet update inputs are fixed."
           if [ "$missing" -ne 0 ]; then
             echo "Failing early so required search/update inputs are fixed."
             exit 1
@@ -73,26 +68,19 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
           APEX_PARENT_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
-
-          # Output events sheet (your existing one)
           APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
-
-          # FB access token for Graph API calls
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
-
-          # NEW: Sheet that stores Pages tab (page_name/page_id/enabled/link)
           APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
-
-          # NEW: SerpAPI for broader discovery
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
 
           # Optional (only if using a Shared Drive)
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
-
         run: |
           python -u scripts/events_collector.py | tee data/collector.log
 
           # Ensure collector actually ran and produced summary output
           grep -q "🚀 Collector starting…" data/collector.log
+          grep -Eq "✅ SERPAPI_API_KEY verified|⚠️ SERPAPI_API_KEY" data/collector.log
           grep -q "🔎 Source summary:" data/collector.log
           grep -q "✅ Done." data/collector.log
 
@@ -128,9 +116,3 @@ jobs:
           git commit -m "Update Cincinnati-area car events"
           git pull --rebase origin "${GITHUB_REF_NAME:-main}"
           git push origin "HEAD:${GITHUB_REF_NAME:-main}"
-          if git diff --staged --quiet; then
-            echo "No data changes detected; skipping commit and push."
-          else
-            git commit -m "Update Cincinnati-area car events"
-            git push
-          fi
