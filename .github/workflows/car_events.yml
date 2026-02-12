@@ -116,12 +116,9 @@ jobs:
           git config user.name "car-events-bot"
           git config user.email "car-events-bot@users.noreply.github.com"
           git add data/events.csv data/events.json data/runs data/geocode_cache.json data/url_cache.json
-
           if git diff --staged --quiet; then
             echo "No data changes detected; skipping commit and push."
-            exit 0
+          else
+            git commit -m "Update Cincinnati-area car events"
+            git push
           fi
-
-          git commit -m "Update Cincinnati-area car events"
-          git pull --rebase origin "${GITHUB_REF_NAME:-main}"
-          git push origin "HEAD:${GITHUB_REF_NAME:-main}"
