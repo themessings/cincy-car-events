@@ -11,6 +11,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,11 +30,22 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
           APEX_PARENT_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
-          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
-          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+
+          # Output events sheet (your existing one)
           APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
-          # APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }} # optional, if you keep the Pages sheet approach too
-          # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }} # optional
+
+          # FB access token for Graph API calls
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+
+          # NEW: Sheet that stores Pages tab (page_name/page_id/enabled/link)
+          APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
+
+          # NEW: SerpAPI for broader discovery
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+
+          # Optional (only if using a Shared Drive)
+          # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
+
         run: |
           python -u scripts/events_collector.py
 
