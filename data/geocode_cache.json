@@ -19,5 +19,92 @@
   "Jeffersonville, OH": {
     "lat": "39.6536719",
     "lon": "-83.5638094"
-  }
+  },
+  "Richmond, VA": {
+    "lat": "37.5385087",
+    "lon": "-77.4342800"
+  },
+  "Paoli, PA": {
+    "lat": "40.0405675",
+    "lon": "-75.4927891"
+  },
+  "Raleigh, NC": {
+    "lat": "35.7803977",
+    "lon": "-78.6390989"
+  },
+  "Clarksville, VA": {
+    "lat": "36.6240321",
+    "lon": "-78.5569437"
+  },
+  "Oakton, VA": {
+    "lat": "38.8967950",
+    "lon": "-77.2987377"
+  },
+  "Washington, DC": {
+    "lat": "38.8950368",
+    "lon": "-77.0365427"
+  },
+  "Randolph, VA": {
+    "lat": "37.5430072",
+    "lon": "-77.4639590"
+  },
+  "Knoxville, TN": {
+    "lat": "35.9603948",
+    "lon": "-83.9210261"
+  },
+  "Camden, DE": {
+    "lat": "39.1134251",
+    "lon": "-75.5419230"
+  },
+  "Rockville, MD": {
+    "lat": "39.0817985",
+    "lon": "-77.1516844"
+  },
+  "Ellicott City, MD": {
+    "lat": "39.2757359",
+    "lon": "-76.8317417"
+  },
+  "Trade Roots 5852 Washington Blvd, Arlington, va 22205 Arlington va 22205": null,
+  "Vienna, VA": {
+    "lat": "38.9013729",
+    "lon": "-77.2651762"
+  },
+  "Alexandria, VA": {
+    "lat": "38.8051095",
+    "lon": "-77.0470229"
+  },
+  "silver spring, MD": {
+    "lat": "38.9997621",
+    "lon": "-77.0240371"
+  },
+  "Bethesda, MD": {
+    "lat": "38.9812726",
+    "lon": "-77.1233587"
+  },
+  "Arlington, VA": {
+    "lat": "38.8769326",
+    "lon": "-77.0893094"
+  },
+  "Gaithersburg, MD": {
+    "lat": "39.1399187",
+    "lon": "-77.1929215"
+  },
+  "McLean, VA": {
+    "lat": "38.9342888",
+    "lon": "-77.1776327"
+  },
+  "Herndon, VA": {
+    "lat": "38.9695316",
+    "lon": "-77.3859479"
+  },
+  "Calverton, MD": {
+    "lat": "39.0576091",
+    "lon": "-76.9358082"
+  },
+  "Florence, KY": {
+    "lat": "38.9989499",
+    "lon": "-84.6266111"
+  },
+  "[{'@type': 'VirtualLocation', 'url': 'https://www.meetup.com/producttank-wilmington/events/313191136/'}, {'@type': 'Place', 'address': {'@type': 'PostalAddress', 'addressLocality': '', 'addressRegion': '', 'addressCountry': ''}}]": null,
+  "[{'@type': 'VirtualLocation', 'url': 'https://www.meetup.com/en-AU/producttank-wilmington/events/313191136/'}, {'@type': 'Place', 'address': {'@type': 'PostalAddress', 'addressLocality': '', 'addressRegion': '', 'addressCountry': ''}}]": null
 }
