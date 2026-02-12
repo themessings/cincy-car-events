@@ -525,6 +525,39 @@ def categorize(title: str, location: str, cfg: dict) -> str:
     return "local"
 
 
+def _keyword_matches_text(keyword: str, text: str) -> bool:
+    """
+    Match keyword/phrase with loose boundaries so "car" won't match "scarcity".
+    """
+    kw = clean_ws(keyword).lower()
+    if not kw:
+        return False
+
+    pattern = re.escape(kw).replace(r"\ ", r"\s+")
+    return re.search(rf"(?<![a-z0-9]){pattern}(?![a-z0-9])", text) is not None
+
+
+def is_automotive_event(title: str, location: str, cfg: dict) -> bool:
+    """
+    Keep only events that clearly look automotive/car focused.
+    """
+    title_text = clean_ws(title).lower()
+    full_text = clean_ws(f"{title} {location}").lower()
+
+    required_keywords = cfg.get("filters", {}).get("automotive_focus_keywords", [])
+    excluded_keywords = cfg.get("filters", {}).get("non_automotive_exclude_keywords", [])
+    require_title_match = bool(cfg.get("filters", {}).get("require_automotive_keyword_in_title", True))
+
+    if excluded_keywords and any(_keyword_matches_text(kw, full_text) for kw in excluded_keywords):
+        return False
+
+    if not required_keywords:
+        return True
+
+    haystack = title_text if require_title_match else full_text
+    return any(_keyword_matches_text(kw, haystack) for kw in required_keywords)
+
+
 def log(msg: str) -> None:
     print(msg, flush=True)
 
@@ -1269,6 +1302,9 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
         if not title or not start_dt:
             continue
 
+        if not is_automotive_event(title, location, cfg):
+            continue
+
         if start_dt < window_start:
             continue
         if window_end is not None and start_dt > window_end:
@@ -1560,6 +1596,11 @@ def main():
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
+    existing_before_focus_filter = len(existing)
+    existing = [e for e in existing if is_automotive_event(e.title, e.location, cfg)]
+    dropped_existing_non_automotive = existing_before_focus_filter - len(existing)
+    if dropped_existing_non_automotive:
+        log(f"🧹 Removed non-automotive legacy events from existing set: {dropped_existing_non_automotive}")
 
     raw_events: List[dict] = []
     source_run_stats: List[dict] = []
@@ -1626,6 +1667,11 @@ def main():
     log(f"✅ Incoming after filters: {len(incoming)}")
 
     merged = dedupe_merge(existing, incoming)
+    merged_before_focus_filter = len(merged)
+    merged = [ev for ev in merged if is_automotive_event(ev.title, ev.location, cfg)]
+    dropped_merged_non_automotive = merged_before_focus_filter - len(merged)
+    if dropped_merged_non_automotive:
+        log(f"🧹 Removed non-automotive events after merge: {dropped_merged_non_automotive}")
     log(f"✅ Merged total events: {len(merged)}")
 
     save_json(GEOCODE_CACHE_PATH, geocache)
