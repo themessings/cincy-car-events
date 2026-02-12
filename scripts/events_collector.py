@@ -1530,7 +1530,6 @@ def main():
     log(f"   now_et_iso={now_et_iso()}")
     serpapi_enabled = bool(SERPAPI_API_KEY)
     log(f"   SERPAPI_API_KEY set? {'YES' if serpapi_enabled else 'NO'}")
-    verify_serpapi_or_raise()
     log(f"   FACEBOOK_ACCESS_TOKEN set? {'YES' if bool(FACEBOOK_ACCESS_TOKEN) else 'NO'}")
     log(f"   APEX_FACEBOOK_PAGES_SHEET_ID set? {'YES' if bool(os.getenv('APEX_FACEBOOK_PAGES_SHEET_ID')) else 'NO'}")
     log(f"   APEX_SPREADSHEET_ID set? {'YES' if bool(os.getenv('APEX_SPREADSHEET_ID')) else 'NO'}")
@@ -1548,11 +1547,17 @@ def main():
     raw_events: List[dict] = []
     source_run_stats: List[dict] = []
 
+    serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi"}
 
     # 1) Config-based sources from config/sources.yml
     for s in sources:
         stype = s.get("type")
         sname = s.get("name", "(unnamed source)")
+
+        if stype in serpapi_source_types and not serpapi_enabled:
+            log(f"⚠️ Skipping SerpAPI source (missing key): {sname} [{stype}]")
+            source_run_stats.append({"name": sname, "type": stype, "status": "skipped", "collected": 0})
+            continue
 
         before_count = len(raw_events)
         try:
@@ -1587,13 +1592,16 @@ def main():
     except Exception as ex:
         log(f"⚠️ Facebook Pages sheet collection failed: {ex}")
 
-    # 3) Broad discovery via SerpAPI
-    try:
-        discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
-        raw_events.extend(discovered)
-        log(f"🔎 Source complete: SerpAPI FB discovery -> {len(discovered)} events")
-    except Exception as ex:
-        log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
+    # 3) Broad discovery via SerpAPI (auto-enabled only when key exists)
+    if serpapi_enabled:
+        try:
+            discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
+            raw_events.extend(discovered)
+            log(f"🔎 Source complete: SerpAPI FB discovery -> {len(discovered)} events")
+        except Exception as ex:
+            log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
+    else:
+        log("⚠️ SERPAPI_API_KEY missing; skipping broad web discovery collectors.")
 
     log(f"📦 Raw events collected (pre-filter): {len(raw_events)}")
 
@@ -1633,8 +1641,9 @@ def main():
     )
 
     ok_sources = [x for x in source_run_stats if x.get("status") == "ok"]
+    skipped_sources = [x for x in source_run_stats if x.get("status") == "skipped"]
     failed_sources = [x for x in source_run_stats if x.get("status") == "failed"]
-    log(f"🔎 Source summary: ok={len(ok_sources)} failed={len(failed_sources)}")
+    log(f"🔎 Source summary: ok={len(ok_sources)} skipped={len(skipped_sources)} failed={len(failed_sources)}")
 
     log(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged)}")
     log(f"   Wrote: {EVENTS_JSON_PATH}")
