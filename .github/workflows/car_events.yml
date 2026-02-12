@@ -48,7 +48,8 @@ jobs:
           fi
 
           if [ -z "${SERPAPI_API_KEY:-}" ]; then
-            echo "⚠️ SERPAPI_API_KEY is empty; SerpAPI discovery sources will be skipped."
+            echo "❌ Missing SERPAPI_API_KEY; web/FB search discovery cannot run."
+            missing=1
           fi
 
           if [ -z "${FACEBOOK_ACCESS_TOKEN:-}" ]; then
@@ -60,7 +61,7 @@ jobs:
           fi
 
           if [ "$missing" -ne 0 ]; then
-            echo "Failing early so required spreadsheet update inputs are fixed."
+            echo "Failing early so required search/update inputs are fixed."
             exit 1
           fi
 
@@ -115,12 +116,9 @@ jobs:
           git config user.name "car-events-bot"
           git config user.email "car-events-bot@users.noreply.github.com"
           git add data/events.csv data/events.json data/runs data/geocode_cache.json data/url_cache.json
-
           if git diff --staged --quiet; then
             echo "No data changes detected; skipping commit and push."
-            exit 0
+          else
+            git commit -m "Update Cincinnati-area car events"
+            git push
           fi
-
-          git commit -m "Update Cincinnati-area car events"
-          git pull --rebase origin "${GITHUB_REF_NAME:-main}"
-          git push origin "HEAD:${GITHUB_REF_NAME:-main}"
