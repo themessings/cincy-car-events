@@ -1581,6 +1581,11 @@ def main():
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
+    existing_before_focus_filter = len(existing)
+    existing = [e for e in existing if is_automotive_event(e.title, e.location, cfg)]
+    dropped_existing_non_automotive = existing_before_focus_filter - len(existing)
+    if dropped_existing_non_automotive:
+        log(f"🧹 Removed non-automotive legacy events from existing set: {dropped_existing_non_automotive}")
 
     raw_events: List[dict] = []
     source_run_stats: List[dict] = []
@@ -1647,6 +1652,11 @@ def main():
     log(f"✅ Incoming after filters: {len(incoming)}")
 
     merged = dedupe_merge(existing, incoming)
+    merged_before_focus_filter = len(merged)
+    merged = [ev for ev in merged if is_automotive_event(ev.title, ev.location, cfg)]
+    dropped_merged_non_automotive = merged_before_focus_filter - len(merged)
+    if dropped_merged_non_automotive:
+        log(f"🧹 Removed non-automotive events after merge: {dropped_merged_non_automotive}")
     log(f"✅ Merged total events: {len(merged)}")
 
     save_json(GEOCODE_CACHE_PATH, geocache)
