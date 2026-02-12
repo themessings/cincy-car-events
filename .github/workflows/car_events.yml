@@ -30,6 +30,7 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
           APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
           APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
         run: |
@@ -46,6 +47,11 @@ jobs:
             missing=1
           fi
 
+          if [ -z "${SERPAPI_API_KEY:-}" ]; then
+            echo "❌ Missing SERPAPI_API_KEY; web/FB search discovery cannot run."
+            missing=1
+          fi
+
           if [ -z "${FACEBOOK_ACCESS_TOKEN:-}" ]; then
             echo "⚠️ FACEBOOK_ACCESS_TOKEN is empty; FB Graph collection paths will be limited."
           fi
@@ -58,6 +64,8 @@ jobs:
 
           if [ "$missing" -ne 0 ]; then
             echo "Failing early so required spreadsheet update inputs are fixed."
+          if [ "$missing" -ne 0 ]; then
+            echo "Failing early so required search/update inputs are fixed."
             exit 1
           fi
 
@@ -120,3 +128,9 @@ jobs:
           git commit -m "Update Cincinnati-area car events"
           git pull --rebase origin "${GITHUB_REF_NAME:-main}"
           git push origin "HEAD:${GITHUB_REF_NAME:-main}"
+          if git diff --staged --quiet; then
+            echo "No data changes detected; skipping commit and push."
+          else
+            git commit -m "Update Cincinnati-area car events"
+            git push
+          fi
