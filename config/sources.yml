@@ -7,7 +7,7 @@ filters:
   # Approx driving-time proxies (edit freely)
   local_max_miles: 200      # ~3.5 hours
   rally_max_miles: 600      # ~9-10 hours
-  lookahead_days: 540       # how far into the future to keep
+  lookahead_days: -1        # negative means include all future events
   drop_past_days: 7         # keep recent past to avoid missing late posts
 
 categorization:
@@ -48,6 +48,12 @@ sources:
   - type: ics
     name: "OVR PCA Social Events (ICS)"
     url: "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+
+
+  # User-curated rally calendar (iCloud published iCal)
+  - type: ics
+    name: "Community Rally Calendar (iCloud)"
+    url: "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
 
   # Facebook page events (requires FACEBOOK_ACCESS_TOKEN + FACEBOOK_PAGE_ID in the environment)
   - type: facebook_page_events
