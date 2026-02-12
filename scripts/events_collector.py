@@ -526,10 +526,34 @@ def fetch_html(url: str) -> BeautifulSoup:
 
 
 def fetch_text(url: str) -> str:
-    headers = {"User-Agent": "cincy-car-events-bot/1.0 (github actions)"}
-    r = requests.get(url, headers=headers, timeout=30)
-    r.raise_for_status()
-    return r.text
+    """
+    Fetch page text with basic retries and a real browser-ish UA.
+    This helps when sites rate limit or return transient 403/429/5xx.
+    """
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        )
+    }
+
+    last_err = None
+    for attempt in range(1, 4):
+        try:
+            r = requests.get(url, headers=headers, timeout=35)
+            # Some sites return 429/403 transiently; retry
+            if r.status_code in (429, 500, 502, 503, 504):
+                time.sleep(1.0 * attempt)
+                continue
+            r.raise_for_status()
+            return r.text
+        except Exception as ex:
+            last_err = ex
+            time.sleep(1.0 * attempt)
+
+    raise last_err
+
 
 
 # -------------------------
@@ -730,6 +754,9 @@ def collect_facebook_page_events(source: dict) -> List[dict]:
 # NEW: Search the web (SerpAPI) + parse schema.org Event
 # -------------------------
 def serpapi_search(query: str, max_results: int = 20) -> List[str]:
+    """
+    Returns a list of organic result links using SerpAPI (Google engine).
+    """
     if not SERPAPI_API_KEY:
         log("⚠️ Skipping SerpAPI search: missing SERPAPI_API_KEY.")
         return []
@@ -740,19 +767,230 @@ def serpapi_search(query: str, max_results: int = 20) -> List[str]:
         "q": query,
         "api_key": SERPAPI_API_KEY,
         "num": min(max_results, 100),
+        "hl": "en",
+        "gl": "us",
     }
-    r = requests.get(url, params=params, timeout=40)
+
+    r = requests.get(url, params=params, timeout=45)
     r.raise_for_status()
     data = r.json()
 
     links: List[str] = []
-    for item in data.get("organic_results", []):
+    for item in data.get("organic_results", []) or []:
         link = item.get("link")
         if link:
-            links.append(link)
+            links.append(clean_ws(link))
 
-    return links[:max_results]
+    # Dedup while preserving order
+    seen = set()
+    out = []
+    for u in links:
+        if u in seen:
+            continue
+        seen.add(u)
+        out.append(u)
 
+    return out[:max_results]
+def parse_facebook_event_page(event_url: str) -> Optional[dict]:
+    """
+    Best-effort parse of a public Facebook event page (HTML).
+    Facebook markup changes often; this function tries multiple strategies:
+      - JSON-LD blocks (rare on FB)
+      - OpenGraph meta tags
+      - Text heuristics (limited)
+
+    Returns raw event dict {title,start_dt,end_dt,location,url,source} or None.
+    """
+    try:
+        html = fetch_text(event_url)
+    except Exception as ex:
+        log(f"⚠️ FB event fetch failed: {event_url} :: {ex}")
+        return None
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Strategy 1: OpenGraph (usually present)
+    og_title = soup.select_one('meta[property="og:title"]')
+    title = clean_ws(og_title.get("content", "")) if og_title else ""
+
+    # Often FB pages have og:url
+    og_url = soup.select_one('meta[property="og:url"]')
+    canonical = clean_ws(og_url.get("content", "")) if og_url else event_url
+
+    # Strategy 2: attempt to find date/time in meta description
+    og_desc = soup.select_one('meta[property="og:description"]')
+    desc = clean_ws(og_desc.get("content", "")) if og_desc else ""
+
+    # Heuristic: parse a datetime from description if present
+    # This is imperfect but catches many public pages like "Saturday, March 9, 2026 at 6:00 PM"
+    start_dt = parse_dt(desc)
+    end_dt = None
+
+    # Strategy 3: scan for time-like strings in visible text (fallback)
+    if not start_dt:
+        text = clean_ws(soup.get_text(" "))
+        # Look for something like "at 6:00 PM" with a nearby month/day/year
+        # We'll just try parsing the first big match
+        m = re.search(
+            r"((January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}.*?(AM|PM))",
+            text,
+            flags=re.IGNORECASE,
+        )
+        if m:
+            start_dt = parse_dt(m.group(1))
+
+    # Location: try OG site name / description + some heuristics
+    location = ""
+    # Some FB event pages include "Location" in text blocks; grab a short snippet around it
+    if "Location" in soup.get_text(" "):
+        t = soup.get_text(" ")
+        idx = t.find("Location")
+        if idx >= 0:
+            snippet = clean_ws(t[idx : idx + 220])
+            # Remove the word "Location" and trim
+            snippet = clean_ws(snippet.replace("Location", ""))
+            location = snippet
+
+    # If still blank, leave it blank and let geocoder use city filters elsewhere
+    if not title:
+        # sometimes title missing because FB served a consent page
+        if "cookie" in html.lower() or "consent" in html.lower():
+            log(f"⚠️ FB returned consent/login page (no title): {event_url}")
+        return None
+
+    if not start_dt:
+        # Can't use it without a date
+        return None
+
+    return {
+        "title": title,
+        "start_dt": start_dt,
+        "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+        "location": location,
+        "url": canonical or event_url,
+        "source": "facebook:discovered",
+    }
+def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, dict]) -> List[dict]:
+    """
+    Discovers FB event URLs via SerpAPI, then parses each event page.
+    Uses url_cache to avoid re-fetching within 24h.
+    """
+    event_urls = collect_facebook_event_urls_serpapi(cfg)
+    if not event_urls:
+        return []
+
+    out: List[dict] = []
+    now = datetime.now(tz=tz.gettz("America/New_York"))
+
+    for u in event_urls:
+        u = clean_ws(u)
+        if not u:
+            continue
+
+        cached = url_cache.get(u)
+        if cached:
+            try:
+                last = datetime.fromisoformat(cached.get("fetched_at_iso"))
+                if (now - last) < timedelta(hours=24) and cached.get("event"):
+                    e = cached["event"]
+                    e["start_dt"] = datetime.fromisoformat(e["start_iso"])
+                    e["end_dt"] = datetime.fromisoformat(e["end_iso"])
+                    out.append(e)
+                    continue
+            except Exception:
+                pass
+
+        ev = parse_facebook_event_page(u)
+        if ev:
+            out.append(ev)
+            url_cache[u] = {
+                "fetched_at_iso": now.isoformat(),
+                "event": {
+                    "title": ev["title"],
+                    "start_iso": ev["start_dt"].isoformat(),
+                    "end_iso": ev["end_dt"].isoformat(),
+                    "location": ev.get("location", ""),
+                    "url": ev.get("url", u),
+                    "source": ev.get("source", "facebook:discovered"),
+                },
+            }
+        else:
+            url_cache[u] = {"fetched_at_iso": now.isoformat(), "event": None}
+
+        time.sleep(0.4)
+
+    log(f"   Discovered+parsed {len(out)} Facebook events from SerpAPI URLs.")
+    return out
+
+def collect_facebook_event_urls_serpapi(cfg: dict) -> List[str]:
+    """
+    Uses SerpAPI to discover public Facebook event URLs beyond your curated page list.
+    Returns a list of https://www.facebook.com/events/<id> URLs.
+    """
+    if not SERPAPI_API_KEY:
+        log("⚠️ Skipping FB event discovery via SerpAPI: missing SERPAPI_API_KEY.")
+        return []
+
+    # You can tune these in config later; keeping defaults here:
+    lookahead_days = int(cfg["filters"]["lookahead_days"])
+    city_terms = [
+        "Cincinnati",
+        "Northern Kentucky",
+        "NKY",
+        "Mason OH",
+        "West Chester OH",
+        "Loveland OH",
+        "Dayton OH",
+    ]
+    topic_terms = [
+        "cars and coffee",
+        "car meet",
+        "car show",
+        "cars & coffee",
+        "supercar",
+        "exotic car",
+        "cruise-in",
+        "rally",
+        "track day",
+        "autocross",
+    ]
+
+    # Narrow to FB event URLs
+    # Note: FB blocks a lot, but SerpAPI will still find public event pages and offsite pages linking to them.
+    queries = []
+    for c in city_terms:
+        for t in topic_terms:
+            queries.append(f'site:facebook.com/events "{c}" "{t}"')
+
+    # Keep the number sane so you don’t burn SerpAPI credits
+    queries = queries[:18]
+
+    found = []
+    for q in queries:
+        links = serpapi_search(q, max_results=15)
+        found.extend(links)
+        time.sleep(0.25)
+
+    # Normalize only real /events/ links
+    event_urls = []
+    for u in found:
+        u = clean_ws(u)
+        # accept /events/<id> or /events/<id>/
+        m = re.search(r"(https?://(www\.)?facebook\.com/events/\d+)", u)
+        if m:
+            event_urls.append(m.group(1))
+
+    # Dedup while preserving order
+    seen = set()
+    out = []
+    for u in event_urls:
+        if u in seen:
+            continue
+        seen.add(u)
+        out.append(u)
+
+    log(f"   SerpAPI found {len(out)} Facebook event URLs (pre-parse).")
+    return out
 
 def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
     """
@@ -1353,6 +1591,16 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
 # Main
 # -------------------------
 def main():
+    import time as _time
+    t0 = _time.time()
+
+    log("🚀 Collector starting…")
+    log(f"   now_et_iso={now_et_iso()}")
+    log(f"   SERPAPI_API_KEY set? {'YES' if bool(SERPAPI_API_KEY) else 'NO'}")
+    log(f"   FACEBOOK_ACCESS_TOKEN set? {'YES' if bool(FACEBOOK_ACCESS_TOKEN) else 'NO'}")
+    log(f"   APEX_FACEBOOK_PAGES_SHEET_ID set? {'YES' if bool(os.getenv('APEX_FACEBOOK_PAGES_SHEET_ID')) else 'NO'}")
+    log(f"   APEX_SPREADSHEET_ID set? {'YES' if bool(os.getenv('APEX_SPREADSHEET_ID')) else 'NO'}")
+
     cfg = load_yaml(CONFIG_PATH)
 
     geocache = load_json(GEOCODE_CACHE_PATH, {})
@@ -1361,10 +1609,9 @@ def main():
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
 
-    # ✅ MUST exist before any .extend() calls
     raw_events: List[dict] = []
 
-    # --- 1) Config-based sources (existing behavior)
+    # 1) Config-based sources
     for s in cfg.get("sources", []):
         stype = s.get("type")
         try:
@@ -1378,22 +1625,31 @@ def main():
                 raw_events.extend(collect_facebook_page_events(s))
             elif stype == "web_search_serpapi":
                 raw_events.extend(collect_web_search_serpapi(s, url_cache))
-            elif stype == "web_search_facebook_events_serpapi":
-                raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache))
             else:
                 log(f"Skipping unknown source type: {stype} ({s.get('name')})")
         except Exception as ex:
             log(f"Source failed: {s.get('name')} :: {ex}")
 
-    # --- 2) Facebook pages list sheet (new behavior)
-    fb_pages = read_facebook_pages_sheet()
-    if fb_pages:
-        try:
+    # 2) Facebook pages list sheet (your Pages tab)
+    try:
+        fb_pages = read_facebook_pages_sheet()
+        if fb_pages:
             raw_events.extend(collect_facebook_events_from_pages(fb_pages))
-        except Exception as ex:
-            log(f"⚠️ Facebook pages sheet collection failed: {ex}")
+    except Exception as ex:
+        log(f"⚠️ Facebook pages sheet collection failed: {ex}")
+
+    # 3) NEW: Facebook event discovery via SerpAPI (beyond your list)
+    try:
+        discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
+        raw_events.extend(discovered)
+    except Exception as ex:
+        log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
+
+    log(f"📦 Raw events collected (pre-filter): {len(raw_events)}")
 
     incoming = to_event_items(raw_events, cfg, geocache)
+    log(f"✅ Incoming after filters: {len(incoming)}")
+
     merged = dedupe_merge(existing, incoming)
 
     save_json(GEOCODE_CACHE_PATH, geocache)
@@ -1424,3 +1680,4 @@ def main():
     log(f"   Wrote: {EVENTS_JSON_PATH}")
     log(f"   Wrote: {EVENTS_CSV_PATH}")
     log(f"   Wrote: {run_path}")
+    log(f"⏱️ Total runtime seconds: {round(_time.time() - t0, 1)}")
