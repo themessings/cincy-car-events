@@ -9,7 +9,6 @@ filters:
   rally_max_miles: 600      # ~9-10 hours
   lookahead_days: -1        # negative means include all future events
   drop_past_days: 7         # keep recent past to avoid missing late posts
-  require_automotive_keyword_in_title: true
   automotive_focus_keywords:
     - car
     - cars
@@ -33,13 +32,6 @@ filters:
     - farmers market
     - wine tasting
     - networking breakfast
-    - run/walk
-    - trail run
-    - hiking
-    - book club
-    - tarot
-    - soccer
-    - podcast
 
 categorization:
   rally_keywords:
