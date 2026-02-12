@@ -908,6 +908,135 @@ def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
     requests_body = {"requests": [{"addSheet": {"properties": {"title": title}}}]}
     sheets.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id, body=requests_body).execute()
 
+def read_facebook_pages_sheet() -> List[dict]:
+    """
+    Reads a Google Sheet containing Facebook pages/groups to collect events from.
+    Expected tab: "Pages"
+    Expected header columns:
+      page_name | page_id | enabled | Link
+
+    Returns list of dicts: [{"page_name":..., "page_id":..., "enabled": True/False, "link":...}, ...]
+    """
+    sheet_id = os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID")
+    if not sheet_id:
+        log("⚠️ Missing APEX_FACEBOOK_PAGES_SHEET_ID.")
+        return []
+
+    creds = get_google_credentials()
+    if not creds:
+        log("⚠️ Missing Google credentials; cannot read Facebook pages sheet.")
+        return []
+
+    sheets = build("sheets", "v4", credentials=creds)
+
+    # Read the whole tab (adjust range if you want)
+    resp = sheets.spreadsheets().values().get(
+        spreadsheetId=sheet_id,
+        range="Pages!A1:D500",
+    ).execute()
+
+    rows = resp.get("values", [])
+    if not rows or len(rows) < 2:
+        log("⚠️ Facebook pages sheet is empty (need headers + at least 1 row).")
+        return []
+
+    headers = [clean_ws(h).lower() for h in rows[0]]
+    idx = {h: i for i, h in enumerate(headers)}
+
+    def get_cell(r: List[str], key: str) -> str:
+        i = idx.get(key)
+        if i is None or i >= len(r):
+            return ""
+        return clean_ws(r[i])
+
+    out = []
+    for r in rows[1:]:
+        page_name = get_cell(r, "page_name")
+        page_id = get_cell(r, "page_id")
+        enabled = get_cell(r, "enabled").upper() in ("TRUE", "YES", "1", "Y")
+        link = get_cell(r, "link")
+
+        if not enabled:
+            continue
+        if not page_id:
+            continue
+
+        out.append(
+            {
+                "page_name": page_name or page_id,
+                "page_id": page_id,
+                "link": link,
+            }
+        )
+
+    log(f"   Loaded {len(out)} enabled Facebook page/group IDs from Pages tab.")
+    return out
+def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
+    """
+    Pulls events from a list of Facebook pages/groups (by ID) using Graph API.
+    Requires FACEBOOK_ACCESS_TOKEN.
+    Returns list of normalized raw events dicts with title/start_dt/end_dt/location/url/source.
+    """
+    if not FACEBOOK_ACCESS_TOKEN:
+        log("⚠️ Skipping Facebook pages sheet events: missing FACEBOOK_ACCESS_TOKEN.")
+        return []
+
+    out: List[dict] = []
+    for p in pages:
+        page_id = p.get("page_id")
+        page_name = p.get("page_name", page_id)
+        if not page_id:
+            continue
+
+        try:
+            url = f"https://graph.facebook.com/v18.0/{page_id}/events"
+            params = {
+                "access_token": FACEBOOK_ACCESS_TOKEN,
+                "fields": "name,start_time,end_time,place,timezone,description",
+                "limit": 100,
+            }
+
+            while url:
+                r = requests.get(url, params=params, timeout=30)
+                r.raise_for_status()
+                payload = r.json()
+
+                for item in payload.get("data", []):
+                    title = clean_ws(item.get("name", ""))
+                    start_dt = parse_dt(item.get("start_time"))
+                    end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
+
+                    place = item.get("place") or {}
+                    location = clean_ws(place.get("name", ""))
+
+                    if place.get("location"):
+                        loc = place["location"]
+                        parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
+                        location = clean_ws(" ".join(x for x in parts if x)) or location
+
+                    if not title or not start_dt:
+                        continue
+
+                    out.append(
+                        {
+                            "title": title,
+                            "start_dt": start_dt,
+                            "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+                            "location": location,
+                            "url": f"https://www.facebook.com/events/{item.get('id')}" if item.get("id") else "",
+                            "source": f"facebook:{page_name}",
+                        }
+                    )
+
+                paging = payload.get("paging", {})
+                url = paging.get("next")
+                params = None
+
+            log(f"   Facebook events pulled for: {page_name} ({page_id})")
+        except Exception as ex:
+            log(f"⚠️ Facebook events failed for {page_name} ({page_id}): {ex}")
+
+    return out
 
 def update_apex_spreadsheet(events: List[EventItem]) -> None:
     creds = get_google_credentials()
@@ -1008,11 +1137,10 @@ def main():
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
 
-        # --- Facebook pages from sheet ---
-    fb_pages = load_facebook_pages_from_sheet()
-    raw_events.extend(collect_facebook_events_from_pages(fb_pages))
+    # ✅ MUST exist before any .extend() calls
+    raw_events: List[dict] = []
 
-
+    # --- 1) Config-based sources (existing behavior)
     for s in cfg.get("sources", []):
         stype = s.get("type")
         try:
@@ -1030,6 +1158,14 @@ def main():
                 log(f"Skipping unknown source type: {stype} ({s.get('name')})")
         except Exception as ex:
             log(f"Source failed: {s.get('name')} :: {ex}")
+
+    # --- 2) Facebook pages list sheet (new behavior)
+    fb_pages = read_facebook_pages_sheet()
+    if fb_pages:
+        try:
+            raw_events.extend(collect_facebook_events_from_pages(fb_pages))
+        except Exception as ex:
+            log(f"⚠️ Facebook pages sheet collection failed: {ex}")
 
     incoming = to_event_items(raw_events, cfg, geocache)
     merged = dedupe_merge(existing, incoming)
@@ -1062,7 +1198,3 @@ def main():
     log(f"   Wrote: {EVENTS_JSON_PATH}")
     log(f"   Wrote: {EVENTS_CSV_PATH}")
     log(f"   Wrote: {run_path}")
-
-
-if __name__ == "__main__":
-    main()
