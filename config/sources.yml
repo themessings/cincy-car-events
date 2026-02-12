@@ -13,9 +13,13 @@ filters:
 categorization:
   rally_keywords:
     - rally
+    - roadrally
+    - rallycross
+    - stage rally
     - tour
     - road rally
     - driving tour
+    - road trip
     - poker run
     - cruise
   local_keywords:
@@ -74,5 +78,22 @@ sources:
 
   - name: "Regional rallies"
     type: web_search_serpapi
-    query: '("rally" OR "drive" OR "tour") (ohio OR kentucky OR indiana) ("car" OR "supercar") 2026'
+    query: '("rally" OR "road rally" OR roadrally OR rallycross OR "stage rally" OR "driving tour" OR "road trip") (ohio OR kentucky OR indiana OR tennessee OR michigan OR georgia OR north carolina) ("car" OR "supercar" OR automotive) (2026 OR 2027)'
     max_results: 80
+
+  # SCCA / ARA rally ecosystems (single-day + stage rally)
+  - name: "SCCA RoadRally + RallyCross"
+    type: web_search_serpapi
+    query: '(site:scca.com OR site:cincyscca.com) ("road rally" OR roadrally OR rallycross OR "rally cross") (ohio OR indiana OR kentucky) (2026 OR 2027)'
+    max_results: 80
+
+  - name: "American Rally Association (SOFR + regional)"
+    type: web_search_serpapi
+    query: '(site:americanrallyassociation.org OR site:sneakattackrally.com) ("southern ohio forest rally" OR "stage rally" OR "rally") (ohio OR kentucky OR indiana) (2026 OR 2027)'
+    max_results: 80
+
+  # Touring/exotic rally organizers that often run OH/KY/IN-connected routes
+  - name: "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)"
+    type: web_search_serpapi
+    query: '(site:corsarally.com OR site:dynastyautoevents.com OR site:therechargerally.com OR site:rallynorthamerica.com OR site:grid.life OR site:gravityrally.com OR site:kingoftheroads.events OR site:ridewithrandy.org) (rally OR "driving tour" OR "road trip") (ohio OR cincinnati OR kentucky OR indiana) (2026 OR 2027)'
+    max_results: 100

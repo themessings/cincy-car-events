@@ -980,9 +980,16 @@ def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, di
                 last = datetime.fromisoformat(cached.get("fetched_at_iso"))
                 if (now - last) < timedelta(hours=24) and cached.get("event"):
                     e = cached["event"]
-                    e["start_dt"] = datetime.fromisoformat(e["start_iso"])
-                    e["end_dt"] = datetime.fromisoformat(e["end_iso"])
-                    out.append(e)
+                    out.append(
+                        {
+                            "title": e.get("title", ""),
+                            "start_dt": datetime.fromisoformat(e["start_iso"]),
+                            "end_dt": datetime.fromisoformat(e["end_iso"]),
+                            "location": e.get("location", ""),
+                            "url": e.get("url", u),
+                            "source": e.get("source", "facebook:discovered"),
+                        }
+                    )
                     continue
             except Exception:
                 pass
@@ -1181,11 +1188,17 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
                 last = datetime.fromisoformat(cached.get("fetched_at_iso"))
                 if (now - last) < timedelta(hours=24) and cached.get("events"):
                     for e in cached["events"]:
-                        # restore datetimes
-                        e["start_dt"] = datetime.fromisoformat(e["start_iso"])
-                        e["end_dt"] = datetime.fromisoformat(e["end_iso"])
-                        e["source"] = source["name"]
-                        out.append(e)
+                        # restore datetimes without mutating cached payload
+                        out.append(
+                            {
+                                "title": e.get("title", ""),
+                                "start_dt": datetime.fromisoformat(e["start_iso"]),
+                                "end_dt": datetime.fromisoformat(e["end_iso"]),
+                                "location": e.get("location", ""),
+                                "url": e.get("url", u),
+                                "source": source["name"],
+                            }
+                        )
                     continue
             except Exception:
                 pass
