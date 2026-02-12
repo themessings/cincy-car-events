@@ -525,6 +525,24 @@ def categorize(title: str, location: str, cfg: dict) -> str:
     return "local"
 
 
+def is_automotive_event(title: str, location: str, source: str, cfg: dict) -> bool:
+    """
+    Keep only events that clearly look automotive/car focused.
+    """
+    text = f"{title} {location} {source}".lower()
+
+    required_keywords = cfg.get("filters", {}).get("automotive_focus_keywords", [])
+    excluded_keywords = cfg.get("filters", {}).get("non_automotive_exclude_keywords", [])
+
+    if required_keywords and not any(kw.lower() in text for kw in required_keywords):
+        return False
+
+    if excluded_keywords and any(kw.lower() in text for kw in excluded_keywords):
+        return False
+
+    return True
+
+
 def log(msg: str) -> None:
     print(msg, flush=True)
 
@@ -1267,6 +1285,9 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
         end_dt: datetime = e["end_dt"]
 
         if not title or not start_dt:
+            continue
+
+        if not is_automotive_event(title, location, source, cfg):
             continue
 
         if start_dt < window_start:
