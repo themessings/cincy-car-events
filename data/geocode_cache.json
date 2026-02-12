@@ -106,5 +106,74 @@
     "lon": "-84.6266111"
   },
   "[{'@type': 'VirtualLocation', 'url': 'https://www.meetup.com/producttank-wilmington/events/313191136/'}, {'@type': 'Place', 'address': {'@type': 'PostalAddress', 'addressLocality': '', 'addressRegion': '', 'addressCountry': ''}}]": null,
-  "[{'@type': 'VirtualLocation', 'url': 'https://www.meetup.com/en-AU/producttank-wilmington/events/313191136/'}, {'@type': 'Place', 'address': {'@type': 'PostalAddress', 'addressLocality': '', 'addressRegion': '', 'addressCountry': ''}}]": null
+  "[{'@type': 'VirtualLocation', 'url': 'https://www.meetup.com/en-AU/producttank-wilmington/events/313191136/'}, {'@type': 'Place', 'address': {'@type': 'PostalAddress', 'addressLocality': '', 'addressRegion': '', 'addressCountry': ''}}]": null,
+  "Circuit Cafe / Cincinnati Cars & Coffee": null,
+  "Lawrenceburg, IN": {
+    "lat": "39.0908910",
+    "lon": "-84.8499504"
+  },
+  "Painesville, OH": {
+    "lat": "41.7244885",
+    "lon": "-81.2456570"
+  },
+  "Xenia, OH": {
+    "lat": "39.6847822",
+    "lon": "-83.9296526"
+  },
+  "Duke Energy Convention Center": {
+    "lat": "39.1011925",
+    "lon": "-84.5180259"
+  },
+  "Destination Outlets (formerly Jeffersonville Outlets) *Off I-71, Jeffersonville, Ohio": null,
+  "Ohio Expo Center & State Fairgrounds": {
+    "lat": "40.0029556",
+    "lon": "-82.9913182"
+  },
+  "Kentucky Exposition Center": {
+    "lat": "38.1988841",
+    "lon": "-85.7390427"
+  },
+  "Concord, CA": {
+    "lat": "37.9768525",
+    "lon": "-122.0335624"
+  },
+  "san francisco, CA": {
+    "lat": "37.7879363",
+    "lon": "-122.4075201"
+  },
+  "San Mateo, CA": {
+    "lat": "37.4969040",
+    "lon": "-122.3330573"
+  },
+  "San Francisco, CA": {
+    "lat": "37.7879363",
+    "lon": "-122.4075201"
+  },
+  "Oakland, CA": {
+    "lat": "37.8044557",
+    "lon": "-122.2713560"
+  },
+  "Outdoor Patio of Marina Branch Library 1890 Chestnut Street, San Francisco, ca 94123 San Francisco ca 94123": null,
+  "Belmont, CA": {
+    "lat": "37.5164926",
+    "lon": "-122.2941914"
+  },
+  "larkspur, CA": {
+    "lat": "37.9340915",
+    "lon": "-122.5352539"
+  },
+  "270 7th St 270 7th St, San Francisco, Ca 94103 San Francisco Ca 94103": null,
+  "1000 Van Ness Ave 1000 Van Ness Ave, San Francisco, Ca 94109 San Francisco Ca 94109": null,
+  "Walnut Creek, CA": {
+    "lat": "37.9020731",
+    "lon": "-122.0618702"
+  },
+  "SAN FRANCISCO, CA": {
+    "lat": "37.7879363",
+    "lon": "-122.4075201"
+  },
+  "Taraval St., SF": {
+    "lat": "37.7420680",
+    "lon": "-122.4998122"
+  }
 }
