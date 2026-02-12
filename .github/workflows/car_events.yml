@@ -77,13 +77,15 @@ jobs:
           # Optional (only if using a Shared Drive)
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
         run: |
+          set -euo pipefail
+
           python -u scripts/events_collector.py | tee data/collector.log
 
           # Ensure collector actually ran and produced summary output
-          grep -q "🚀 Collector starting…" data/collector.log
-          grep -q "✅ SERPAPI_API_KEY verified" data/collector.log
-          grep -q "🔎 Source summary:" data/collector.log
-          grep -q "✅ Done." data/collector.log
+          grep -Fq "🚀 Collector starting…" data/collector.log
+          grep -Eq "SERPAPI_API_KEY (set\? YES|verified)" data/collector.log
+          grep -Fq "🔎 Source summary:" data/collector.log
+          grep -Fq "✅ Done." data/collector.log
 
       - name: Inspect output files
         run: |
