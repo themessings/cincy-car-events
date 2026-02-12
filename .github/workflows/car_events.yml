@@ -26,6 +26,45 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Validate required runtime secrets
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+          APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
+        run: |
+          set -euo pipefail
+
+          missing=0
+          if [ -z "${GOOGLE_SERVICE_ACCOUNT_JSON:-}" ]; then
+            echo "❌ Missing GDRIVE_SERVICE_ACCOUNT_JSON secret; spreadsheet update cannot run."
+            missing=1
+          fi
+
+          if [ -z "${APEX_SPREADSHEET_ID:-}" ]; then
+            echo "❌ Missing APEX_SPREADSHEET_ID; spreadsheet destination is undefined."
+            missing=1
+          fi
+
+          if [ -z "${SERPAPI_API_KEY:-}" ]; then
+            echo "❌ Missing SERPAPI_API_KEY; web/FB search discovery cannot run."
+            missing=1
+          fi
+
+          if [ -z "${FACEBOOK_ACCESS_TOKEN:-}" ]; then
+            echo "⚠️ FACEBOOK_ACCESS_TOKEN is empty; FB Graph collection paths will be limited."
+          fi
+
+          if [ -z "${APEX_FACEBOOK_PAGES_SHEET_ID:-}" ]; then
+            echo "⚠️ APEX_FACEBOOK_PAGES_SHEET_ID is empty; FB Pages sheet collection will be skipped."
+          fi
+
+          if [ "$missing" -ne 0 ]; then
+            echo "Failing early so required search/update inputs are fixed."
+            exit 1
+          fi
+
       - name: Run collector
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
@@ -47,7 +86,12 @@ jobs:
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
 
         run: |
-          python -u scripts/events_collector.py
+          python -u scripts/events_collector.py | tee data/collector.log
+
+          # Ensure collector actually ran and produced summary output
+          grep -q "🚀 Collector starting…" data/collector.log
+          grep -q "🔎 Source summary:" data/collector.log
+          grep -q "✅ Done." data/collector.log
 
       - name: Inspect output files
         run: |
@@ -64,6 +108,7 @@ jobs:
             data/geocode_cache.json
             data/url_cache.json
             data/runs/*.json
+            data/collector.log
           if-no-files-found: warn
 
       - name: Commit changes (if any)
