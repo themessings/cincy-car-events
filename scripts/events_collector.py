@@ -46,6 +46,230 @@ FACEBOOK_ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
 
 SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
 
+def extract_facebook_event_id(url: str) -> Optional[str]:
+    """
+    Accepts URLs like:
+      https://www.facebook.com/events/1234567890/
+      https://m.facebook.com/events/1234567890/?ref=...
+    Returns event_id as string.
+    """
+    if not url:
+        return None
+    m = re.search(r"facebook\.com/events/(\d+)", url)
+    if m:
+        return m.group(1)
+    m = re.search(r"m\.facebook\.com/events/(\d+)", url)
+    if m:
+        return m.group(1)
+    return None
+
+
+def normalize_facebook_event_url(url: str) -> str:
+    url = clean_ws(url)
+    # Strip tracking params
+    url = re.sub(r"\?.*$", "", url)
+    # Ensure canonical www
+    url = url.replace("m.facebook.com", "www.facebook.com")
+    return url
+
+
+def parse_facebook_event_from_html(event_url: str, html: str) -> Optional[dict]:
+    """
+    Best-effort extraction when Graph API can’t be used.
+    Facebook pages are JS-heavy; sometimes HTML contains usable timestamps.
+    Returns dict with: title, start_dt, end_dt, location, url
+    """
+    if not html:
+        return None
+
+    # Title: try <title> or og:title
+    title = ""
+    m = re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"', html)
+    if m:
+        title = clean_ws(m.group(1))
+    if not title:
+        m = re.search(r"<title>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
+        if m:
+            title = clean_ws(re.sub(r"\s*\|\s*Facebook\s*$", "", m.group(1)))
+
+    # Location: og:description sometimes includes place; also try og:location
+    location = ""
+    m = re.search(r'<meta[^>]+property="og:description"[^>]+content="([^"]+)"', html)
+    if m:
+        # This is noisy, but sometimes includes location text
+        location = clean_ws(m.group(1))[:300]
+
+    # Start time: look for epoch timestamps commonly embedded
+    # Try patterns seen in FB payloads (best-effort; may fail)
+    start_dt = None
+    end_dt = None
+
+    # Examples of patterns:
+    # "start_timestamp": 1711234567
+    m = re.search(r'"start_timestamp"\s*:\s*(\d{9,13})', html)
+    if m:
+        ts = int(m.group(1))
+        if ts > 10_000_000_000:  # ms
+            ts = ts // 1000
+        start_dt = datetime.fromtimestamp(ts, tz=tz.gettz("America/New_York"))
+
+    m = re.search(r'"end_timestamp"\s*:\s*(\d{9,13})', html)
+    if m:
+        ts = int(m.group(1))
+        if ts > 10_000_000_000:
+            ts = ts // 1000
+        end_dt = datetime.fromtimestamp(ts, tz=tz.gettz("America/New_York"))
+
+    if not title or not start_dt:
+        return None
+
+    return {
+        "title": title,
+        "start_dt": start_dt,
+        "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+        "location": location,
+        "url": event_url,
+    }
+
+
+def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
+    """
+    Uses Graph API to fetch a public event by ID (best case).
+    Returns normalized raw event dict with title/start_dt/end_dt/location/url.
+    """
+    if not FACEBOOK_ACCESS_TOKEN:
+        return None
+
+    url = f"https://graph.facebook.com/v18.0/{event_id}"
+    params = {
+        "access_token": FACEBOOK_ACCESS_TOKEN,
+        "fields": "name,start_time,end_time,place,timezone,description",
+    }
+
+    r = requests.get(url, params=params, timeout=30)
+    if r.status_code != 200:
+        return None
+    item = r.json()
+
+    title = clean_ws(item.get("name", ""))
+    start_dt = parse_dt(item.get("start_time"))
+    end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
+
+    place = item.get("place") or {}
+    location = clean_ws(place.get("name", ""))
+
+    if place.get("location"):
+        loc = place["location"]
+        parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
+        location = clean_ws(" ".join(p for p in parts if p)) or location
+
+    if not title or not start_dt:
+        return None
+
+    return {
+        "title": title,
+        "start_dt": start_dt,
+        "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+        "location": location,
+        "url": f"https://www.facebook.com/events/{event_id}",
+    }
+
+
+def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str, dict]) -> List[dict]:
+    """
+    1) SerpAPI discovers facebook.com/events/<id> URLs
+    2) For each, try Graph API by event_id
+    3) If Graph fails, fallback to best-effort HTML parsing
+    """
+    query = source.get("query", "")
+    max_results = int(source.get("max_results", 50))
+    if not query:
+        log(f"⚠️ Skipping web_search_facebook_events_serpapi: missing query for source {source.get('name')}")
+        return []
+
+    links = serpapi_search(query, max_results=max_results)
+    if not links:
+        return []
+
+    out: List[dict] = []
+    now = datetime.now(tz=tz.gettz("America/New_York"))
+
+    # Keep only fb event links
+    fb_links = []
+    for u in links:
+        u = clean_ws(u)
+        if "facebook.com/events/" in u:
+            fb_links.append(normalize_facebook_event_url(u))
+
+    # Dedup URLs
+    fb_links = list(dict.fromkeys(fb_links))
+
+    for event_url in fb_links:
+        # Cache: don’t refetch same URL more than once every 24h
+        cached = url_cache.get(event_url)
+        if cached:
+            try:
+                last = datetime.fromisoformat(cached.get("fetched_at_iso"))
+                if (now - last) < timedelta(hours=24) and cached.get("event"):
+                    e = cached["event"]
+                    e["start_dt"] = datetime.fromisoformat(e["start_iso"])
+                    e["end_dt"] = datetime.fromisoformat(e["end_iso"])
+                    e["source"] = source["name"]
+                    out.append(e)
+                    continue
+            except Exception:
+                pass
+
+        ev = None
+        event_id = extract_facebook_event_id(event_url)
+
+        # 1) Prefer Graph API if possible
+        if event_id:
+            try:
+                g = fetch_facebook_event_via_graph(event_id)
+                if g:
+                    ev = g
+            except Exception:
+                ev = None
+
+        # 2) Fallback: try HTML parse
+        if not ev:
+            try:
+                html = fetch_text(event_url)
+                parsed = parse_facebook_event_from_html(event_url, html)
+                if parsed:
+                    ev = parsed
+            except Exception:
+                ev = None
+
+        if not ev:
+            url_cache[event_url] = {"fetched_at_iso": now.isoformat(), "event": None}
+            continue
+
+        raw = {
+            "title": ev["title"],
+            "start_dt": ev["start_dt"],
+            "end_dt": ev["end_dt"],
+            "location": ev.get("location", ""),
+            "url": ev.get("url", event_url),
+            "source": source["name"],
+        }
+        out.append(raw)
+
+        url_cache[event_url] = {
+            "fetched_at_iso": now.isoformat(),
+            "event": {
+                "title": raw["title"],
+                "start_iso": raw["start_dt"].isoformat(),
+                "end_iso": raw["end_dt"].isoformat(),
+                "location": raw.get("location", ""),
+                "url": raw.get("url", event_url),
+            },
+        }
+
+        time.sleep(0.6)
+
+    return out
 
 def drive_list_kwargs() -> dict:
     if APEX_SHARED_DRIVE_ID:
