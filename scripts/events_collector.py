@@ -844,6 +844,40 @@ def serpapi_search(query: str, max_results: int = 20) -> List[str]:
         out.append(u)
 
     return out[:max_results]
+
+
+def verify_serpapi_or_raise() -> None:
+    """
+    Fail fast if SERPAPI_API_KEY is missing or invalid.
+    Runs a lightweight validation query to confirm key usability.
+    """
+    if not SERPAPI_API_KEY:
+        raise RuntimeError("SERPAPI_API_KEY is required but missing.")
+
+    url = "https://serpapi.com/search.json"
+    params = {
+        "engine": "google",
+        "q": "cincinnati cars and coffee",
+        "api_key": SERPAPI_API_KEY,
+        "num": 3,
+        "hl": "en",
+        "gl": "us",
+    }
+
+    r = requests.get(url, params=params, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f"SERPAPI_API_KEY validation failed: HTTP {r.status_code} :: {(r.text or '')[:250]}")
+
+    data = r.json()
+    err = data.get("error")
+    if err:
+        raise RuntimeError(f"SERPAPI_API_KEY validation failed: {err}")
+
+    organic = data.get("organic_results") or []
+    if not isinstance(organic, list):
+        raise RuntimeError("SERPAPI validation failed: unexpected response payload.")
+
+    log(f"✅ SERPAPI_API_KEY verified; validation returned {len(organic)} organic results.")
 def parse_facebook_event_page(event_url: str) -> Optional[dict]:
     """
     Best-effort parse of a public Facebook event page (HTML).
@@ -1622,4 +1656,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
