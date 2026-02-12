@@ -121,6 +121,94 @@ def haversine_miles(lat1, lon1, lat2, lon2) -> float:
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return R * c
 
+def load_facebook_pages_from_sheet() -> List[dict]:
+    creds = get_google_credentials()
+    if not creds:
+        log("⚠️ Cannot load Facebook pages: missing Google credentials.")
+        return []
+
+    sheets = build("sheets", "v4", credentials=creds)
+
+    spreadsheet_id = os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID")
+    if not spreadsheet_id:
+        log("⚠️ Missing APEX_FACEBOOK_PAGES_SHEET_ID.")
+        return []
+
+    resp = sheets.spreadsheets().values().get(
+        spreadsheetId=spreadsheet_id,
+        range="Pages!A2:C",
+    ).execute()
+
+    rows = resp.get("values", [])
+    pages = []
+
+    for r in rows:
+        name = r[0].strip() if len(r) > 0 else ""
+        page_id = r[1].strip() if len(r) > 1 else ""
+        enabled = (r[2].strip().upper() == "TRUE") if len(r) > 2 else False
+
+        if page_id and enabled:
+            pages.append({
+                "name": name or page_id,
+                "page_id": page_id
+            })
+
+    log(f"   Loaded {len(pages)} Facebook pages from sheet")
+    return pages
+
+def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
+    if not FACEBOOK_ACCESS_TOKEN:
+        log("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
+        return []
+
+    all_events = []
+
+    for p in pages:
+        page_id = p["page_id"]
+        source_name = p["name"]
+
+        url = f"https://graph.facebook.com/v18.0/{page_id}/events"
+        params = {
+            "access_token": FACEBOOK_ACCESS_TOKEN,
+            "fields": "name,start_time,end_time,place",
+            "limit": 100,
+        }
+
+        while url:
+            r = requests.get(url, params=params, timeout=30)
+            r.raise_for_status()
+            payload = r.json()
+
+            for item in payload.get("data", []):
+                title = clean_ws(item.get("name", ""))
+                start_dt = parse_dt(item.get("start_time"))
+                end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
+
+                place = item.get("place") or {}
+                location = clean_ws(place.get("name", ""))
+
+                if place.get("location"):
+                    loc = place["location"]
+                    parts = [loc.get("street"), loc.get("city"), loc.get("state")]
+                    location = clean_ws(" ".join(p for p in parts if p)) or location
+
+                if not title or not start_dt:
+                    continue
+
+                all_events.append({
+                    "title": title,
+                    "start_dt": start_dt,
+                    "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+                    "location": location,
+                    "url": f"https://www.facebook.com/events/{item.get('id')}",
+                    "source": f"Facebook: {source_name}",
+                })
+
+            paging = payload.get("paging", {})
+            url = paging.get("next")
+            params = None
+
+    return all_events
 
 def load_yaml(path: str) -> dict:
     with open(path, "r", encoding="utf-8") as f:
@@ -920,7 +1008,10 @@ def main():
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
 
-    raw_events: List[dict] = []
+        # --- Facebook pages from sheet ---
+    fb_pages = load_facebook_pages_from_sheet()
+    raw_events.extend(collect_facebook_events_from_pages(fb_pages))
+
 
     for s in cfg.get("sources", []):
         stype = s.get("type")
