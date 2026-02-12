@@ -35,7 +35,7 @@ jobs:
           # APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }} # optional, if you keep the Pages sheet approach too
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }} # optional
         run: |
-          python scripts/events_collector.py
+          python -u scripts/events_collector.py
 
       - name: Inspect output files
         run: |
