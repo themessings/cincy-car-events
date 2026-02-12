@@ -846,14 +846,13 @@ def serpapi_search(query: str, max_results: int = 20) -> List[str]:
     return out[:max_results]
 
 
-def verify_serpapi() -> bool:
+def verify_serpapi_or_raise() -> None:
     """
-    Validate SERPAPI_API_KEY when present.
-    Returns True when usable, False when missing/invalid.
+    Fail fast if SERPAPI_API_KEY is missing or invalid.
+    Runs a lightweight validation query to confirm key usability.
     """
     if not SERPAPI_API_KEY:
-        log("⚠️ SERPAPI_API_KEY is not set; SerpAPI discovery sources will be skipped.")
-        return False
+        raise RuntimeError("SERPAPI_API_KEY is required but missing.")
 
     url = "https://serpapi.com/search.json"
     params = {
@@ -865,28 +864,20 @@ def verify_serpapi() -> bool:
         "gl": "us",
     }
 
-    try:
-        r = requests.get(url, params=params, timeout=30)
-        if r.status_code != 200:
-            log(f"⚠️ SERPAPI_API_KEY validation failed: HTTP {r.status_code}; SerpAPI sources will be skipped.")
-            return False
+    r = requests.get(url, params=params, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f"SERPAPI_API_KEY validation failed: HTTP {r.status_code} :: {(r.text or '')[:250]}")
 
-        data = r.json()
-        err = data.get("error")
-        if err:
-            log(f"⚠️ SERPAPI_API_KEY validation failed: {err}; SerpAPI sources will be skipped.")
-            return False
+    data = r.json()
+    err = data.get("error")
+    if err:
+        raise RuntimeError(f"SERPAPI_API_KEY validation failed: {err}")
 
-        organic = data.get("organic_results") or []
-        if not isinstance(organic, list):
-            log("⚠️ SERPAPI validation returned unexpected payload; SerpAPI sources will be skipped.")
-            return False
+    organic = data.get("organic_results") or []
+    if not isinstance(organic, list):
+        raise RuntimeError("SERPAPI validation failed: unexpected response payload.")
 
-        log(f"✅ SERPAPI_API_KEY verified; validation returned {len(organic)} organic results.")
-        return True
-    except Exception as ex:
-        log(f"⚠️ SERPAPI_API_KEY validation request failed: {ex}; SerpAPI sources will be skipped.")
-        return False
+    log(f"✅ SERPAPI_API_KEY verified; validation returned {len(organic)} organic results.")
 def parse_facebook_event_page(event_url: str) -> Optional[dict]:
     """
     Best-effort parse of a public Facebook event page (HTML).
@@ -1537,8 +1528,8 @@ def main():
 
     log("🚀 Collector starting…")
     log(f"   now_et_iso={now_et_iso()}")
-    serpapi_enabled = verify_serpapi()
-    log(f"   SERPAPI_API_KEY usable? {'YES' if serpapi_enabled else 'NO'}")
+    serpapi_enabled = bool(SERPAPI_API_KEY)
+    log(f"   SERPAPI_API_KEY set? {'YES' if serpapi_enabled else 'NO'}")
     log(f"   FACEBOOK_ACCESS_TOKEN set? {'YES' if bool(FACEBOOK_ACCESS_TOKEN) else 'NO'}")
     log(f"   APEX_FACEBOOK_PAGES_SHEET_ID set? {'YES' if bool(os.getenv('APEX_FACEBOOK_PAGES_SHEET_ID')) else 'NO'}")
     log(f"   APEX_SPREADSHEET_ID set? {'YES' if bool(os.getenv('APEX_SPREADSHEET_ID')) else 'NO'}")
@@ -1556,14 +1547,15 @@ def main():
     raw_events: List[dict] = []
     source_run_stats: List[dict] = []
 
+    serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi"}
 
     # 1) Config-based sources from config/sources.yml
     for s in sources:
         stype = s.get("type")
         sname = s.get("name", "(unnamed source)")
 
-        if stype in {"web_search_serpapi", "web_search_facebook_events_serpapi"} and not serpapi_enabled:
-            log(f"⚠️ Skipping SerpAPI source (key unavailable/invalid): {sname} [{stype}]")
+        if stype in serpapi_source_types and not serpapi_enabled:
+            log(f"⚠️ Skipping SerpAPI source (missing key): {sname} [{stype}]")
             source_run_stats.append({"name": sname, "type": stype, "status": "skipped", "collected": 0})
             continue
 
@@ -1600,7 +1592,7 @@ def main():
     except Exception as ex:
         log(f"⚠️ Facebook Pages sheet collection failed: {ex}")
 
-    # 3) Broad discovery via SerpAPI
+    # 3) Broad discovery via SerpAPI (auto-enabled only when key exists)
     if serpapi_enabled:
         try:
             discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
@@ -1609,7 +1601,7 @@ def main():
         except Exception as ex:
             log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
     else:
-        log("⚠️ SerpAPI broad discovery skipped because key is unavailable/invalid.")
+        log("⚠️ SERPAPI_API_KEY missing; skipping broad web discovery collectors.")
 
     log(f"📦 Raw events collected (pre-filter): {len(raw_events)}")
 

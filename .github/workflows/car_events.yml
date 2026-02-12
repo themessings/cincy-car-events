@@ -48,7 +48,8 @@ jobs:
           fi
 
           if [ -z "${SERPAPI_API_KEY:-}" ]; then
-            echo "⚠️ Missing SERPAPI_API_KEY; SerpAPI discovery will be skipped."
+            echo "❌ Missing SERPAPI_API_KEY; discovery is required."
+            missing=1
           fi
 
           if [ -z "${FACEBOOK_ACCESS_TOKEN:-}" ]; then
@@ -80,7 +81,7 @@ jobs:
 
           # Ensure collector actually ran and produced summary output
           grep -q "🚀 Collector starting…" data/collector.log
-          grep -Eq "✅ SERPAPI_API_KEY verified|⚠️ SERPAPI_API_KEY" data/collector.log
+          grep -q "✅ SERPAPI_API_KEY verified" data/collector.log
           grep -q "🔎 Source summary:" data/collector.log
           grep -q "✅ Done." data/collector.log
 
