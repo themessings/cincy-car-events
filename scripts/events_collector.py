@@ -1647,6 +1647,9 @@ def main():
         log("⚠️ SERPAPI_API_KEY missing; skipping broad web discovery collectors.")
 
     log(f"📦 Raw events collected (pre-filter): {len(raw_events)}")
+    ok_sources = [x for x in source_run_stats if x.get("status") == "ok"]
+    failed_sources = [x for x in source_run_stats if x.get("status") == "failed"]
+    log(f"🔎 Source summary: ok={len(ok_sources)} failed={len(failed_sources)}")
 
     incoming = to_event_items(raw_events, cfg, geocache)
     log(f"✅ Incoming after filters: {len(incoming)}")
