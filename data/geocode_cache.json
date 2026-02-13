@@ -175,5 +175,34 @@
   "Taraval St., SF": {
     "lat": "37.7420680",
     "lon": "-122.4998122"
+  },
+  "Kettering, OH": {
+    "lat": "39.6895036",
+    "lon": "-84.1688274"
+  },
+  "Grant Park Nature Nook 6588 McEwen Road, Dayton, oh Dayton oh": null,
+  "Dayton, OH": {
+    "lat": "39.7589478",
+    "lon": "-84.1916069"
+  },
+  "Germantown, OH": {
+    "lat": "39.6261682",
+    "lon": "-84.3693882"
+  },
+  "South San Francisco, CA": {
+    "lat": "37.6535403",
+    "lon": "-122.4168664"
+  },
+  "San Carlos, CA": {
+    "lat": "37.5049360",
+    "lon": "-122.2618230"
+  },
+  "Redwood City, CA": {
+    "lat": "37.4863239",
+    "lon": "-122.2325230"
+  },
+  "Berkeley, CA": {
+    "lat": "37.8708393",
+    "lon": "-122.2728630"
   }
 }
