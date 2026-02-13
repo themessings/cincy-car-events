@@ -588,7 +588,7 @@ def filter_existing_automotive_events(existing: List[EventItem], cfg: dict) -> L
     if dropped:
         log(f"🧹 Filtered out {dropped} non-automotive persisted events before merge.")
     return filtered
-def is_automotive_focus_event(title: str, location: str, source: str, cfg: dict) -> bool:
+def is_automotive_focus_event(title: str, location: str, source: str, url: str, cfg: dict) -> bool:
     """
     Strong automotive gate: include if focus keyword matches OR trusted source/platform,
     and exclude common non-automotive false positives.
@@ -1343,7 +1343,7 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
         if not title or not start_dt:
             continue
 
-        if not is_automotive_focus_event(title, location, source, cfg):
+        if not is_automotive_focus_event(title, location, source, url, cfg):
             continue
 
         if start_dt < window_start:
