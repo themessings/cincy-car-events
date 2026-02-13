@@ -2,7 +2,7 @@ name: Cincinnati Car Events Collector
 
 on:
   schedule:
-    - cron: "0 11 * * *"  # Daily 11:00 UTC (~6am ET standard)
+    - cron: "0 11 * * *" # Daily 11:00 UTC (~6am ET standard)
   workflow_dispatch: {}
 
 permissions:
@@ -26,28 +26,62 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Keep a single validation step to avoid duplicate `run:` keys in this job.
+      - name: Validate required runtime secrets
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+          APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          import sys
+
+          missing = []
+
+          if not os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON"):
+              missing.append("GDRIVE_SERVICE_ACCOUNT_JSON")
+
+          if not os.getenv("APEX_SPREADSHEET_ID"):
+              missing.append("APEX_SPREADSHEET_ID")
+
+          if not os.getenv("FACEBOOK_ACCESS_TOKEN"):
+              print("⚠️ FACEBOOK_ACCESS_TOKEN is empty; FB Graph collection paths will be limited.")
+
+          if not os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID"):
+              print("⚠️ APEX_FACEBOOK_PAGES_SHEET_ID is empty; FB Pages sheet collection will be skipped.")
+
+          if not os.getenv("SERPAPI_API_KEY"):
+              print("ℹ️ SERPAPI_API_KEY is optional; discovery sources will self-skip when unset.")
+
+          if missing:
+              for key in missing:
+                  if key == "GDRIVE_SERVICE_ACCOUNT_JSON":
+                      print("❌ Missing GDRIVE_SERVICE_ACCOUNT_JSON secret; spreadsheet update cannot run.")
+                  if key == "APEX_SPREADSHEET_ID":
+                      print("❌ Missing APEX_SPREADSHEET_ID; spreadsheet destination is undefined.")
+              print("Failing early so required spreadsheet update inputs are fixed.")
+              sys.exit(1)
+          PY
+
       - name: Run collector
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
           APEX_PARENT_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
-
-          # Output events sheet (your existing one)
           APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
-
-          # FB access token for Graph API calls
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
-
-          # NEW: Sheet that stores Pages tab (page_name/page_id/enabled/link)
           APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
-
-          # NEW: SerpAPI for broader discovery
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
-
           # Optional (only if using a Shared Drive)
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
-
         run: |
-          python -u scripts/events_collector.py
+          set -euo pipefail
+          python -u scripts/events_collector.py | tee data/collector.log
+          grep -Fq "🚀 Collector starting…" data/collector.log
+          grep -Fq "🔎 Source summary:" data/collector.log
+          grep -Fq "✅ Done." data/collector.log
 
       - name: Inspect output files
         run: |
@@ -64,6 +98,7 @@ jobs:
             data/geocode_cache.json
             data/url_cache.json
             data/runs/*.json
+            data/collector.log
           if-no-files-found: warn
 
       - name: Commit changes (if any)
@@ -71,5 +106,12 @@ jobs:
           git config user.name "car-events-bot"
           git config user.email "car-events-bot@users.noreply.github.com"
           git add data/events.csv data/events.json data/runs data/geocode_cache.json data/url_cache.json
-          git diff --staged --quiet || git commit -m "Update Cincinnati-area car events"
-          git push
+
+          if git diff --staged --quiet; then
+            echo "No data changes detected; skipping commit and push."
+            exit 0
+          fi
+
+          git commit -m "Update Cincinnati-area car events"
+          git pull --rebase origin "${GITHUB_REF_NAME:-main}"
+          git push origin "HEAD:${GITHUB_REF_NAME:-main}"
