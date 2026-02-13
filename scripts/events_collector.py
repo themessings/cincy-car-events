@@ -522,6 +522,49 @@ def categorize(title: str, location: str, cfg: dict) -> str:
     return "local"
 
 
+def is_automotive_event(
+    title: str,
+    location: str = "",
+    cfg: Optional[dict] = None,
+    *_unused,
+    **_unused_kw,
+) -> bool:
+    """Best-effort keyword gate with backwards-compatible signature."""
+    text = clean_ws(f"{title} {location}").lower()
+    if not text:
+        return False
+
+    if not cfg:
+        return True
+
+    categorization = cfg.get("categorization", {})
+    keywords = [
+        *(categorization.get("local_keywords", []) or []),
+        *(categorization.get("rally_keywords", []) or []),
+    ]
+    if not keywords:
+        return True
+
+    return any(clean_ws(k).lower() in text for k in keywords if clean_ws(k))
+
+
+def is_automotive_event_safe(title: str, location: str, cfg: dict) -> bool:
+    """Deterministic automotive keyword check used by main() filtering."""
+    text = clean_ws(f"{title} {location}").lower()
+    if not text:
+        return False
+
+    categorization = (cfg or {}).get("categorization", {})
+    keywords = [
+        *(categorization.get("local_keywords", []) or []),
+        *(categorization.get("rally_keywords", []) or []),
+    ]
+    if not keywords:
+        return True
+
+    return any(clean_ws(k).lower() in text for k in keywords if clean_ws(k))
+
+
 def log(msg: str) -> None:
     print(msg, flush=True)
 
@@ -1665,12 +1708,16 @@ def main():
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
+    existing = [e for e in existing if is_automotive_event_safe(e.title, e.location, cfg)]
 
     raw_events: List[dict] = []
+    source_run_stats: List[dict] = []
 
     # 1) Config-based sources
     for s in cfg.get("sources", []):
         stype = s.get("type")
+        sname = s.get("name", "(unnamed source)")
+        before_count = len(raw_events)
         try:
             if stype == "html_carsandcoffeeevents_ohio":
                 raw_events.extend(collect_carsandcoffeeevents_ohio(s))
@@ -1692,10 +1739,15 @@ def main():
                 raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache))
 
             else:
-                log(f"Skipping unknown source type: {stype} ({s.get('name')})")
+                log(f"Skipping unknown source type: {stype} ({sname})")
+
+            collected = len(raw_events) - before_count
+            source_run_stats.append({"name": sname, "type": stype, "status": "ok", "collected": collected})
+            log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events")
 
         except Exception as ex:
-            log(f"⚠️ Source failed: {s.get('name')} :: {ex}")
+            source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
+            log(f"⚠️ Source failed: {sname} :: {ex}")
 
     # 2) Facebook Pages sheet (single source of truth)
     # IMPORTANT: ensure you only have ONE definition of this loader in your file
@@ -1714,6 +1766,9 @@ def main():
         log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
 
     log(f"📦 Raw events collected (pre-filter): {len(raw_events)}")
+    ok_sources = [x for x in source_run_stats if x.get("status") == "ok"]
+    failed_sources = [x for x in source_run_stats if x.get("status") == "failed"]
+    log(f"🔎 Source summary: ok={len(ok_sources)} failed={len(failed_sources)}")
 
     # Normalize + filter + geo
     incoming = to_event_items(raw_events, cfg, geocache)
@@ -1756,3 +1811,8 @@ def main():
     log(f"   Wrote: {EVENTS_CSV_PATH}")
     log(f"   Wrote: {run_path}")
     log(f"⏱️ Total runtime seconds: {round(_time.time() - t0, 1)}")
+
+
+if __name__ == "__main__":
+    main()
+
