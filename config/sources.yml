@@ -45,63 +45,34 @@ sources:
     name: "OVR PCA Social Events (ICS)"
     url: "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
 
-  # Add more ICS feeds here as you find them:
-  # - type: ics
-  #   name: "Another club calendar"
-  #   url: "https://example.com/calendar.ics"
-
-  # Facebook page events (requires FACEBOOK_ACCESS_TOKEN in the environment).
+  # Facebook page events (requires FACEBOOK_ACCESS_TOKEN + FACEBOOK_PAGE_ID in the environment)
   - type: facebook_page_events
     name: "Facebook Page Events (set FACEBOOK_PAGE_ID)"
     page_id_env: "FACEBOOK_PAGE_ID"
 
-  home:
-  lat: 39.1031
-  lon: -84.5120
-
-filters:
-  # IMPORTANT: widen this or you’ll “discover” events but drop them
-  lookahead_days: 365
-  drop_past_days: 14
-  local_max_miles: 140
-  rally_max_miles: 420
-
-categorization:
-  rally_keywords:
-    - rally
-    - tour
-    - run
-    - drive
-    - caravan
-    - road trip
-    - poker run
-    - track day
-
-sources:
-  # --- Facebook event discovery (no page list needed)
+  # --- Facebook event discovery (requires SERPAPI_API_KEY)
   - name: "FB Events (Cincy keywords)"
-    type: "web_search_facebook_events_serpapi"
+    type: web_search_facebook_events_serpapi
     query: 'site:facebook.com/events cincinnati ("car meet" OR "cars and coffee" OR "car show" OR "cruise in")'
     max_results: 80
 
   - name: "FB Events (Ohio + NKY)"
-    type: "web_search_facebook_events_serpapi"
+    type: web_search_facebook_events_serpapi
     query: 'site:facebook.com/events ("Cincinnati" OR "Northern Kentucky" OR "Newport" OR "Florence") ("cars and coffee" OR "car show" OR "car meet")'
     max_results: 80
 
-  # --- Broader discovery (your existing schema.org parser already works here)
+  # --- Broader discovery (schema.org parser)
   - name: "Eventbrite Cincy"
-    type: "web_search_serpapi"
+    type: web_search_serpapi
     query: 'site:eventbrite.com cincinnati ("car show" OR "cars and coffee" OR "car meet" OR "cruise in")'
     max_results: 80
 
   - name: "Meetup Cincy Cars"
-    type: "web_search_serpapi"
+    type: web_search_serpapi
     query: 'site:meetup.com cincinnati (cars OR automotive OR "cars and coffee")'
     max_results: 60
 
   - name: "Regional rallies"
-    type: "web_search_serpapi"
+    type: web_search_serpapi
     query: '("rally" OR "drive" OR "tour") (ohio OR kentucky OR indiana) ("car" OR "supercar") 2026'
     max_results: 80
-  
