@@ -1,0 +1,122 @@
+{
+  "generated_at_iso": "2026-02-13T17:20:29.801725-05:00",
+  "raw_events": 463,
+  "incoming_after_filters": 94,
+  "merged_total": 23,
+  "source_stats": [
+    {
+      "name": "CarsAndCoffeeEvents - Ohio",
+      "type": "html_carsandcoffeeevents_ohio",
+      "status": "ok",
+      "collected": 40
+    },
+    {
+      "name": "Cincinnati Cars and Coffee (Series)",
+      "type": "html_wordpress_events_list",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "OVR PCA Social Events (ICS)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 75
+    },
+    {
+      "name": "Community Rally Calendar (iCloud)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 195
+    },
+    {
+      "name": "Facebook Page Events (Graph API sheet/env IDs)",
+      "type": "facebook_page_events",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "FB Events (Cincy keywords)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "FB Events (Ohio + NKY)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "Eventbrite Cincy",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 8
+    },
+    {
+      "name": "Meetup Cincy Cars",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 140
+    },
+    {
+      "name": "Regional rallies",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 1
+    },
+    {
+      "name": "SCCA RoadRally + RallyCross",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "American Rally Association (SOFR + regional)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 4
+    },
+    {
+      "name": "Eventbrite regional autos (SerpAPI)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "MotorsportReg regional autos",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "TrackRabbit + SCCA calendar discovery",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0
+    }
+  ],
+  "serpapi_enabled": true,
+  "dry_run": false,
+  "pipeline_metrics": {
+    "normalize_drop_reasons": {
+      "outside_window_past": 261,
+      "non_automotive:exclude_keyword:wine tasting": 2,
+      "location_too_far_local": 105,
+      "non_automotive:hard_exclusion:marathon": 1
+    },
+    "non_automotive_examples": [
+      "OVR PCA Wine Tasting Summer 2024 - Presented by Porsche of the Village (exclude_keyword:wine tasting)",
+      "OVR PCA Wine Tasting (exclude_keyword:wine tasting)",
+      "2/14 Mesa Marathon Sustainability Volunteering (hard_exclusion:marathon)"
+    ],
+    "dedupe_drop_reasons": {
+      "duplicate_signature_match": 55
+    }
+  }
+}
