@@ -4,6 +4,7 @@ import json
 import os
 import re
 import time
+from collections import Counter
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
@@ -17,6 +18,7 @@ from dateutil import tz
 from icalendar import Calendar
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 
 # -------------------------
 # Paths
@@ -257,13 +259,7 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
             except Exception:
                 ev = None
 
-        if not ev:
-            try:
-                html = fetch_text(event_url)
-                ev = parse_facebook_event_from_html(event_url, html)
-            except Exception:
-                ev = None
-
+        # HTML scraping intentionally disabled for Facebook event URLs; Graph API only.
         if not ev:
             url_cache[event_url] = {"fetched_at_iso": now.isoformat(), "event": None}
             continue
@@ -358,36 +354,66 @@ def haversine_miles(lat1, lon1, lat2, lon2) -> float:
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return R * c
 
+def parse_facebook_pages_from_env() -> List[dict]:
+    raw = clean_ws(os.getenv("FACEBOOK_PAGE_IDS", ""))
+    if not raw:
+        return []
+
+    out: List[dict] = []
+    for token in raw.split(","):
+        page_id = clean_ws(token)
+        if page_id:
+            out.append({"page_name": page_id, "page_id": page_id, "link": "", "origin": "env"})
+    if out:
+        log(f"✅ Loaded Facebook page IDs from FACEBOOK_PAGE_IDS: {len(out)}")
+    return out
+
+
 def load_facebook_pages_from_sheet() -> List[dict]:
-    """
-    Tab: Pages
-    Headers: page_name | page_id | enabled | link
-    Returns enabled rows only.
-    """
-    sheet_id = os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID")
+    """Load page ids from a Google Sheet tab named Pages with headers: page_name,page_id,enabled,link."""
+    sheet_id = clean_ws(os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID", ""))
     if not sheet_id:
-        log("⚠️ Missing APEX_FACEBOOK_PAGES_SHEET_ID.")
+        log("⚠️ Missing APEX_FACEBOOK_PAGES_SHEET_ID; Pages sheet source disabled.")
+        return []
+
+    if not re.fullmatch(r"[a-zA-Z0-9-_]{20,}", sheet_id):
+        log(f"⚠️ Invalid APEX_FACEBOOK_PAGES_SHEET_ID format: '{sheet_id}'. Expected spreadsheet ID, not URL.")
         return []
 
     creds = get_google_credentials()
     if not creds:
-        log("⚠️ Cannot load Facebook pages: missing Google credentials.")
+        log("⚠️ Cannot load Facebook pages sheet: missing Google credentials.")
         return []
 
     sheets = build("sheets", "v4", credentials=creds)
 
-    resp = sheets.spreadsheets().values().get(
-        spreadsheetId=sheet_id,
-        range="Pages!A1:D2000",
-    ).execute()
+    try:
+        resp = sheets.spreadsheets().values().get(
+            spreadsheetId=sheet_id,
+            range="Pages!A1:D2000",
+        ).execute()
+    except HttpError as ex:
+        status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
+        if status == 404:
+            log(
+                "⚠️ Facebook Pages sheet not found (HTTP 404). "
+                "Confirm APEX_FACEBOOK_PAGES_SHEET_ID is the spreadsheet ID and that the service account has access."
+            )
+        else:
+            log(f"⚠️ Failed reading Pages!A1:D2000 from APEX_FACEBOOK_PAGES_SHEET_ID={sheet_id}: {ex}")
+        return []
 
     rows = resp.get("values", [])
     if not rows or len(rows) < 2:
-        log("⚠️ Pages tab is empty (need headers + at least 1 row).")
+        log("⚠️ Facebook Pages sheet tab 'Pages' is empty (need headers + rows).")
         return []
 
     headers = [clean_ws(h).lower() for h in rows[0]]
     idx = {h: i for i, h in enumerate(headers)}
+    required = {"page_id", "enabled"}
+    if not required.issubset(set(idx.keys())):
+        log(f"⚠️ Pages tab headers missing required fields {sorted(required)}; found={headers}")
+        return []
 
     def cell(r: List[str], key: str) -> str:
         i = idx.get(key)
@@ -405,98 +431,115 @@ def load_facebook_pages_from_sheet() -> List[dict]:
         if not enabled or not page_id:
             continue
 
-        out.append({"page_name": page_name or page_id, "page_id": page_id, "link": link})
+        out.append({"page_name": page_name or page_id, "page_id": page_id, "link": link, "origin": "sheet"})
 
-    log(f"✅ Pages tab loaded: enabled={len(out)}")
+    log(f"✅ Facebook Pages sheet loaded: enabled={len(out)}")
     return out
 
 
+def load_facebook_pages() -> List[dict]:
+    pages = load_facebook_pages_from_sheet()
+    if pages:
+        return pages
+    env_pages = parse_facebook_pages_from_env()
+    if env_pages:
+        log("ℹ️ Using FACEBOOK_PAGE_IDS fallback because sheet source yielded no pages.")
+    return env_pages
+
+
+def normalize_facebook_page_event(item: dict, page_name: str) -> Optional[dict]:
+    title = clean_ws(item.get("name", ""))
+    start_dt = parse_dt(item.get("start_time"))
+    end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
+
+    place = item.get("place") or {}
+    location = clean_ws(place.get("name", ""))
+    if isinstance(place, dict) and place.get("location"):
+        loc = place["location"] or {}
+        parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
+        location = clean_ws(" ".join(x for x in parts if x)) or location
+
+    if not title or not start_dt:
+        return None
+
+    event_id = item.get("id")
+    return {
+        "title": title,
+        "start_dt": start_dt,
+        "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+        "location": location,
+        "url": f"https://www.facebook.com/events/{event_id}" if event_id else "",
+        "source": f"Facebook: {page_name}",
+    }
+
+
 def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
-    """
-    Graph API pull for /{id}/events (page/group IDs that your token can access).
-    """
+    """Graph API pull for /{page_id}/events. Requires a token with pages_read_engagement."""
     if not FACEBOOK_ACCESS_TOKEN:
-        log("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
+        log("⚠️ Skipping Facebook page events: missing FACEBOOK_ACCESS_TOKEN.")
         return []
 
     if not pages:
-        log("ℹ️ No enabled Facebook IDs provided; skipping FB events.")
+        log("ℹ️ No Facebook pages configured; skipping page-events collector.")
         return []
 
     out: List[dict] = []
 
     for p in pages:
-        page_id = (p.get("page_id") or "").strip()
+        page_id = clean_ws(p.get("page_id") or "")
         page_name = clean_ws(p.get("page_name") or page_id)
         if not page_id:
             continue
 
         log(f"--- Facebook pull start: {page_name} ({page_id})")
+        url = f"https://graph.facebook.com/v18.0/{page_id}/events"
+        params = {
+            "access_token": FACEBOOK_ACCESS_TOKEN,
+            "fields": "id,name,start_time,end_time,place,timezone,description",
+            "limit": 100,
+            "since": int(time.time()),
+        }
 
-        try:
-            url = f"https://graph.facebook.com/v18.0/{page_id}/events"
-            params = {
-                "access_token": FACEBOOK_ACCESS_TOKEN,
-                "fields": "name,start_time,end_time,place,timezone,description",
-                "limit": 100,
-            }
-
-            entity_count = 0
-            while url:
+        page_event_count = 0
+        while url:
+            try:
                 r = requests.get(url, params=params, timeout=30)
-                if r.status_code != 200:
-                    log(f"⚠️ FB non-200 for {page_name} ({page_id}): {r.status_code} :: {(r.text or '')[:250]}")
-                    break
+            except Exception as ex:
+                log(f"⚠️ Facebook request failed for {page_name} ({page_id}): {ex}")
+                break
 
-                payload = r.json()
-
-                for item in payload.get("data", []) or []:
-                    title = clean_ws(item.get("name", ""))
-                    start_dt = parse_dt(item.get("start_time"))
-                    end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
-
-                    place = item.get("place") or {}
-                    location = clean_ws(place.get("name", ""))
-
-                    if isinstance(place, dict) and place.get("location"):
-                        loc = place["location"] or {}
-                        parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
-                        location = clean_ws(" ".join(x for x in parts if x)) or location
-
-                    if not title or not start_dt:
-                        continue
-
-                    event_id = item.get("id")
-                    out.append(
-                        {
-                            "title": title,
-                            "start_dt": start_dt,
-                            "end_dt": end_dt or (start_dt + timedelta(hours=2)),
-                            "location": location,
-                            "url": f"https://www.facebook.com/events/{event_id}" if event_id else "",
-                            "source": f"Facebook: {page_name}",
-                        }
+            if r.status_code != 200:
+                detail = (r.text or "")[:300]
+                if r.status_code in (400, 403):
+                    log(
+                        f"⚠️ Facebook Graph access denied for page {page_id}. "
+                        "Required: a valid user/page token with pages_read_engagement and access to that page. "
+                        f"HTTP {r.status_code}: {detail}"
                     )
-                    entity_count += 1
+                else:
+                    log(f"⚠️ FB non-200 for {page_name} ({page_id}): {r.status_code} :: {detail}")
+                break
 
-                paging = payload.get("paging", {}) or {}
-                url = paging.get("next")
-                params = None
-                time.sleep(0.2)
+            payload = r.json() or {}
+            for item in payload.get("data", []) or []:
+                normalized = normalize_facebook_page_event(item, page_name)
+                if not normalized:
+                    continue
+                out.append(normalized)
+                page_event_count += 1
 
-            log(f"--- Facebook pull done: {page_name} ({page_id}) events={entity_count}")
-        except Exception as ex:
-            log(f"⚠️ Facebook events failed for {page_name} ({page_id}): {ex}")
+            paging = payload.get("paging", {}) or {}
+            url = paging.get("next")
+            params = None
+            time.sleep(0.2)
+
+        log(f"--- Facebook pull done: {page_name} ({page_id}) events={page_event_count}")
 
     return out
 
 
 def collect_facebook_from_pages_sheet() -> List[dict]:
-    """
-    Reads Pages tab then pulls events for those IDs.
-    Use this in main() instead of calling read_facebook_pages_sheet() directly.
-    """
-    pages = load_facebook_pages_from_sheet()
+    pages = load_facebook_pages()
     return collect_facebook_events_from_pages(pages)
 
 
@@ -588,15 +631,12 @@ def filter_existing_automotive_events(existing: List[EventItem], cfg: dict) -> L
     if dropped:
         log(f"🧹 Filtered out {dropped} non-automotive persisted events before merge.")
     return filtered
-def is_automotive_focus_event(title: str, location: str, source: str, url: str, cfg: dict) -> bool:
-    """
-    Strong automotive gate: include if focus keyword matches OR trusted source/platform,
-    and exclude common non-automotive false positives.
-    """
+def evaluate_automotive_focus_event(title: str, location: str, source: str, url: str, cfg: dict) -> Tuple[bool, str]:
+    """Returns (is_allowed, reason) for automotive filtering transparency."""
     filters = (cfg or {}).get("filters", {})
     text = clean_ws(f"{title} {location} {source} {url}").lower()
     if not text:
-        return False
+        return False, "empty_text"
 
     focus_keywords = [clean_ws(k).lower() for k in (filters.get("automotive_focus_keywords", []) or []) if clean_ws(k)]
     exclude_keywords = [clean_ws(k).lower() for k in (filters.get("non_automotive_exclude_keywords", []) or []) if clean_ws(k)]
@@ -619,15 +659,29 @@ def is_automotive_focus_event(title: str, location: str, source: str, url: str, 
         "church service", "yoga", "kids camp", "food pantry",
     ]
 
-    if any(x in text for x in hard_exclusions):
-        return False
-    if exclude_keywords and any(x in text for x in exclude_keywords):
-        return False
+    for x in hard_exclusions:
+        if x in text:
+            return False, f"hard_exclusion:{x}"
 
-    has_focus = any(k in text for k in focus_keywords) if focus_keywords else False
-    is_trusted = any(k in text for k in trusted_platforms)
+    for x in exclude_keywords:
+        if x in text:
+            return False, f"exclude_keyword:{x}"
 
-    return has_focus or is_trusted
+    for k in focus_keywords:
+        if k in text:
+            return True, f"focus_keyword:{k}"
+
+    for k in trusted_platforms:
+        if k in text:
+            return True, f"trusted_platform:{k}"
+
+    return False, "no_automotive_keyword_match"
+
+
+def is_automotive_focus_event(title: str, location: str, source: str, url: str, cfg: dict) -> bool:
+    ok, _reason = evaluate_automotive_focus_event(title, location, source, url, cfg)
+    return ok
+
 
 def log(msg: str) -> None:
     print(msg, flush=True)
@@ -848,106 +902,72 @@ def collect_ics(source: dict) -> List[dict]:
 
 
 def collect_facebook_page_events(source: dict) -> List[dict]:
-    page_id = source.get("page_id")
-    if not page_id:
-        page_id_env = source.get("page_id_env")
-        if page_id_env:
-            page_id = os.getenv(page_id_env)
-    if not page_id:
-        log("⚠️ Skipping Facebook events: missing page_id/page_id_env.")
-        return []
-    if not FACEBOOK_ACCESS_TOKEN:
-        log("⚠️ Skipping Facebook events: missing FACEBOOK_ACCESS_TOKEN.")
-        return []
-
-    url = f"https://graph.facebook.com/v18.0/{page_id}/events"
-    params = {
-        "access_token": FACEBOOK_ACCESS_TOKEN,
-        "fields": "name,start_time,end_time,place,timezone,description",
-        "limit": 100,
-    }
-
-    events: List[dict] = []
-    while url:
-        r = requests.get(url, params=params, timeout=30)
-        r.raise_for_status()
-        payload = r.json()
-
-        for item in payload.get("data", []):
-            title = clean_ws(item.get("name", ""))
-            start_dt = parse_dt(item.get("start_time"))
-            end_dt = parse_dt(item.get("end_time")) if item.get("end_time") else None
-
-            place = item.get("place") or {}
-            location = clean_ws(place.get("name", ""))
-
-            if place.get("location"):
-                loc = place["location"]
-                parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
-                location = clean_ws(" ".join(p for p in parts if p)) or location
-
-            if not title or not start_dt:
-                continue
-
-            events.append(
-                {
-                    "title": title,
-                    "start_dt": start_dt,
-                    "end_dt": end_dt or (start_dt + timedelta(hours=2)),
-                    "location": location,
-                    "url": f"https://www.facebook.com/events/{item.get('id')}" if item.get("id") else "",
-                    "source": source["name"],
-                }
-            )
-
-        paging = payload.get("paging", {})
-        url = paging.get("next")
-        params = None
-
+    pages = load_facebook_pages()
+    events = collect_facebook_events_from_pages(pages)
+    source_name = source.get("name", "Facebook Page Events")
+    for e in events:
+        e["source"] = source_name
     return events
 
 
 # -------------------------
 # NEW: Search the web (SerpAPI) + parse schema.org Event
 # -------------------------
-def serpapi_search(query: str, max_results: int = 20) -> List[str]:
-    """
-    Returns a list of organic result links using SerpAPI (Google engine).
-    """
+def serpapi_search(query: str, max_results: int = 20, page_size: int = 20) -> List[str]:
+    """Return organic links from SerpAPI Google results with pagination and retry/backoff."""
     if not SERPAPI_API_KEY:
         log("⚠️ Skipping SerpAPI search: missing SERPAPI_API_KEY.")
         return []
 
     url = "https://serpapi.com/search.json"
-    params = {
-        "engine": "google",
-        "q": query,
-        "api_key": SERPAPI_API_KEY,
-        "num": min(max_results, 100),
-        "hl": "en",
-        "gl": "us",
-    }
-
-    r = requests.get(url, params=params, timeout=45)
-    r.raise_for_status()
-    data = r.json()
+    page_size = max(10, min(page_size, 100))
+    target = max(1, max_results)
 
     links: List[str] = []
-    for item in data.get("organic_results", []) or []:
-        link = item.get("link")
-        if link:
-            links.append(clean_ws(link))
+    start = 0
+    while len(links) < target:
+        params = {
+            "engine": "google",
+            "q": query,
+            "api_key": SERPAPI_API_KEY,
+            "num": min(page_size, target - len(links)),
+            "start": start,
+            "hl": "en",
+            "gl": "us",
+        }
+        data = None
+        for attempt in range(3):
+            try:
+                r = requests.get(url, params=params, timeout=45)
+                if r.status_code in (429, 500, 502, 503, 504):
+                    time.sleep((2 ** attempt) * 0.8)
+                    continue
+                r.raise_for_status()
+                data = r.json()
+                break
+            except Exception:
+                if attempt == 2:
+                    raise
+                time.sleep((2 ** attempt) * 0.8)
 
-    # Dedup while preserving order
-    seen = set()
-    out = []
-    for u in links:
-        if u in seen:
-            continue
-        seen.add(u)
-        out.append(u)
+        if not data:
+            break
+        organic = data.get("organic_results", []) or []
+        if not organic:
+            break
 
-    return out[:max_results]
+        for item in organic:
+            link = clean_ws(item.get("link") or "")
+            if link:
+                links.append(link)
+
+        if len(organic) < params["num"]:
+            break
+        start += params["num"]
+        time.sleep(0.2)
+
+    out = list(dict.fromkeys(links))
+    return out[:target]
 
 
 
@@ -960,12 +980,13 @@ def build_serpapi_discovery_queries(cfg: dict, for_facebook: bool = False, limit
     next_month_name = (now + timedelta(days=32)).strftime("%B")
 
     geos = [
-        "Cincinnati", "Northern Kentucky", "NKY", "Mason OH", "West Chester OH", "Loveland OH",
-        "Dayton OH", "Columbus OH", "Louisville KY", "Indianapolis IN",
+        "Cincinnati OH", "Northern Kentucky", "NKY", "Mason OH", "West Chester OH", "Loveland OH",
+        "Dayton OH", "Columbus OH", "Louisville KY", "Indianapolis IN", "Lexington KY", "Springfield OH"
     ]
     event_types = [
-        '"cars and coffee"', '"cars & coffee"', '"car meet"', '"car meetup"', '"cruise-in"',
-        '"car show"', 'autocross', '"track day"', 'HPDE', 'rally', '"driving tour"', '"road rally"',
+        '"cars and coffee"', '"cars & coffee"', '"car meet"', '"car meetup"', '"cruise-in"', '"cruise night"',
+        '"car show"', 'autocross', '"track day"', 'HPDE', 'rally', '"driving tour"', '"road rally"', 'concourse',
+        '"supercar"', '"exotic car"', '"test and tune"', '"dyno day"'
     ]
     keywords = ["JDM", "Euro", "muscle", "tuner", '"Porsche Club"', '"BMW CCA"', '"Corvette club"', '"Mustang club"']
     times = [str(y), "this weekend", f"{month_name} {y}", f"{next_month_name} {y}"]
@@ -1060,32 +1081,18 @@ def verify_serpapi_or_raise() -> None:
 
     log(f"✅ SERPAPI_API_KEY verified; validation returned {len(organic)} organic results.")
 def parse_facebook_event_page(event_url: str) -> Optional[dict]:
-    """Parse public Facebook event page: Graph first (if ID+token), then HTML fallback."""
+    """Parse discovered Facebook event URL by Graph API event-id only (no HTML scraping)."""
     event_id = extract_facebook_event_id(event_url)
-    if event_id:
-        try:
-            g = fetch_facebook_event_via_graph(event_id)
-            if g:
-                g["source"] = "facebook:discovered"
-                return g
-        except Exception:
-            pass
-
+    if not event_id:
+        return None
     try:
-        html = fetch_text(event_url)
+        g = fetch_facebook_event_via_graph(event_id)
+        if g:
+            g["source"] = "facebook:discovered"
+            return g
     except Exception as ex:
-        log(f"⚠️ FB event fetch failed: {event_url} :: {ex}")
-        return None
-
-    if any(x in html.lower() for x in ["log in to facebook", "login_form", "consent", "accept all cookies"]):
-        log(f"⚠️ FB returned consent/login page: {event_url}")
-        return None
-
-    parsed = parse_facebook_event_from_html(event_url, html)
-    if not parsed:
-        return None
-    parsed["source"] = "facebook:discovered"
-    return parsed
+        log(f"⚠️ FB Graph parse failed for {event_url}: {ex}")
+    return None
 
 def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, dict]) -> List[dict]:
     """
@@ -1292,6 +1299,9 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
                 pass
 
         try:
+            if "eventbrite.com" in u and ("/d/" in u or "/e/" not in u):
+                url_cache[u] = {"fetched_at_iso": now.isoformat(), "events": []}
+                continue
             html = fetch_text(u)
             events = parse_schema_org_events_from_html(u, html)
             packed = []
@@ -1313,10 +1323,29 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
 
     return out
 
+
+
+def event_signature(ev: EventItem) -> str:
+    title = re.sub(r"\s+", " ", clean_ws(ev.title).lower()).strip()
+    when = clean_ws(ev.start_iso)[:16]
+    place = re.sub(r"\s+", " ", clean_ws(ev.city_state or ev.location).lower()).strip()
+    return f"{title}||{when}||{place}"
+
+
+def log_counter_top(title: str, counter: Counter, top_n: int = 8) -> None:
+    if not counter:
+        return
+    top = ", ".join(f"{k}={v}" for k, v in counter.most_common(top_n))
+    log(f"📊 {title}: {top}")
 # -------------------------
 # Normalize + filter + store
 # -------------------------
-def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict]) -> List[EventItem]:
+def to_event_items(
+    raw_events: List[dict],
+    cfg: dict,
+    geocache: Dict[str, dict],
+    metrics: Optional[dict] = None,
+) -> List[EventItem]:
     home_lat = cfg["home"]["lat"]
     home_lon = cfg["home"]["lon"]
 
@@ -1324,35 +1353,47 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
     drop_past_days = int(cfg["filters"]["drop_past_days"])
     now_et = datetime.now(tz=tz.gettz("America/New_York"))
     window_start = now_et - timedelta(days=drop_past_days)
-    # Set lookahead_days to a negative value to include all future events.
     window_end = None if lookahead_days < 0 else (now_et + timedelta(days=lookahead_days))
 
     local_max = float(cfg["filters"]["local_max_miles"])
     rally_max = float(cfg["filters"]["rally_max_miles"])
 
     out: List[EventItem] = []
+    drop_reasons: Counter = Counter()
+    non_auto_examples: List[str] = []
 
     for e in raw_events:
         title = clean_ws(e.get("title", ""))
         location = clean_ws(e.get("location", ""))
         url = clean_ws(e.get("url", ""))
         source = clean_ws(e.get("source", ""))
-        start_dt: datetime = e["start_dt"]
-        end_dt: datetime = e["end_dt"]
+        start_dt: Optional[datetime] = e.get("start_dt")
+        end_dt: Optional[datetime] = e.get("end_dt")
 
-        if not title or not start_dt:
+        if not title:
+            drop_reasons["missing_title"] += 1
             continue
+        if not start_dt:
+            drop_reasons["missing_start_dt"] += 1
+            continue
+        if not end_dt:
+            end_dt = start_dt + timedelta(hours=2)
 
-        if not is_automotive_focus_event(title, location, source, url, cfg):
+        allowed, auto_reason = evaluate_automotive_focus_event(title, location, source, url, cfg)
+        if not allowed:
+            drop_reasons[f"non_automotive:{auto_reason}"] += 1
+            if len(non_auto_examples) < 5:
+                non_auto_examples.append(f"{title[:80]} ({auto_reason})")
             continue
 
         if start_dt < window_start:
+            drop_reasons["outside_window_past"] += 1
             continue
         if window_end is not None and start_dt > window_end:
+            drop_reasons["outside_window_future"] += 1
             continue
 
         city_state = guess_city_state(location)
-
         query = city_state or location
         latlon = geocode(query, geocache) if query else None
         lat = lon = None
@@ -1365,8 +1406,10 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
 
         if miles is not None:
             if cat == "local" and miles > local_max:
+                drop_reasons["location_too_far_local"] += 1
                 continue
             if cat == "rally" and miles > rally_max:
+                drop_reasons["location_too_far_rally"] += 1
                 continue
 
         out.append(
@@ -1386,22 +1429,28 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
             )
         )
 
+    if metrics is not None:
+        metrics["normalize_drop_reasons"] = dict(drop_reasons)
+        metrics["non_automotive_examples"] = non_auto_examples
+    log_counter_top("Normalize/filter drop reasons", drop_reasons)
+    if non_auto_examples:
+        log(f"📊 Non-automotive removed examples: {non_auto_examples}")
     return out
 
 
-def dedupe_merge(existing: List[EventItem], incoming: List[EventItem]) -> List[EventItem]:
-    def key(ev: EventItem) -> str:
-        t = re.sub(r"\s+", " ", ev.title.lower()).strip()
-        s = ev.start_iso[:16]
-        u = ev.url or ""
-        return f"{t}||{s}||{u}"
-
-    merged: Dict[str, EventItem] = {key(e): e for e in existing}
+def dedupe_merge(
+    existing: List[EventItem],
+    incoming: List[EventItem],
+    metrics: Optional[dict] = None,
+) -> List[EventItem]:
+    merged: Dict[str, EventItem] = {event_signature(e): e for e in existing}
+    dedupe_reasons: Counter = Counter()
 
     for ev in incoming:
-        k = key(ev)
+        k = event_signature(ev)
         if k in merged:
             cur = merged[k]
+            dedupe_reasons["duplicate_signature_match"] += 1
             cur.last_seen_iso = ev.last_seen_iso
             if (cur.miles_from_cincy is None) and (ev.miles_from_cincy is not None):
                 cur.miles_from_cincy = ev.miles_from_cincy
@@ -1411,11 +1460,15 @@ def dedupe_merge(existing: List[EventItem], incoming: List[EventItem]) -> List[E
                 cur.location = ev.location
             if not cur.city_state and ev.city_state:
                 cur.city_state = ev.city_state
-            if not cur.source and ev.source:
-                cur.source = ev.source
+            if ev.source and ev.source not in cur.source:
+                cur.source = clean_ws(f"{cur.source}; {ev.source}")
             merged[k] = cur
         else:
             merged[k] = ev
+
+    if metrics is not None:
+        metrics["dedupe_drop_reasons"] = dict(dedupe_reasons)
+    log_counter_top("Dedupe merge reasons", dedupe_reasons)
 
     def sort_key(ev: EventItem):
         try:
@@ -1526,6 +1579,11 @@ def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
     sheets.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id, body=requests_body).execute()
 
 def update_apex_spreadsheet(events: List[EventItem]) -> None:
+    dry_run = clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y")
+    if dry_run:
+        log("ℹ️ COLLECTOR_DRY_RUN enabled: skipping Google Sheets write.")
+        return
+
     creds = get_google_credentials()
     if not creds:
         log("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON.")
@@ -1581,7 +1639,7 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
-        range="Events!A1:K",
+        range="Events!A1:L",
         body={}
     ).execute()
 
@@ -1648,6 +1706,7 @@ def main():
 
     raw_events: List[dict] = []
     source_run_stats: List[dict] = []
+    pipeline_metrics: Dict[str, dict] = {}
 
     serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi"}
 
@@ -1684,21 +1743,16 @@ def main():
             source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
             log(f"⚠️ Source failed: {sname} [{stype}] :: {ex}")
 
-    try:
-        fb_pages = load_facebook_pages_from_sheet()
-        fb_events = collect_facebook_events_from_pages(fb_pages)
-        raw_events.extend(fb_events)
-        log(f"🔎 Source complete: Facebook Pages Sheet -> {len(fb_events)} events")
-    except Exception as ex:
-        log(f"⚠️ Facebook Pages sheet collection failed: {ex}")
-
-    if serpapi_enabled:
+    enable_fb_discovery = clean_ws(os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "")).lower() in ("1", "true", "yes")
+    if serpapi_enabled and enable_fb_discovery:
         try:
             discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
             raw_events.extend(discovered)
-            log(f"🔎 Source complete: SerpAPI FB discovery -> {len(discovered)} events")
+            log(f"🔎 Source complete: SerpAPI FB discovery (optional) -> {len(discovered)} events")
         except Exception as ex:
             log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
+    elif serpapi_enabled:
+        log("ℹ️ Facebook event URL discovery is optional and disabled (ENABLE_FACEBOOK_SERP_DISCOVERY not true).")
     else:
         log("⚠️ SERPAPI_API_KEY missing; skipping broad web discovery collectors.")
 
@@ -1707,10 +1761,10 @@ def main():
     failed_sources = [x for x in source_run_stats if x.get("status") == "failed"]
     log(f"🔎 Source summary: ok={len(ok_sources)} failed={len(failed_sources)}")
 
-    incoming = to_event_items(raw_events, cfg, geocache)
+    incoming = to_event_items(raw_events, cfg, geocache, metrics=pipeline_metrics)
     log(f"✅ Incoming after filters: {len(incoming)}")
 
-    merged = dedupe_merge(existing, incoming)
+    merged = dedupe_merge(existing, incoming, metrics=pipeline_metrics)
     merged_before_focus_filter = len(merged)
     merged = [ev for ev in merged if is_automotive_event_safe(ev.title, ev.location, cfg)]
     dropped_merged_non_automotive = merged_before_focus_filter - len(merged)
@@ -1741,6 +1795,8 @@ def main():
         "merged_total": len(merged),
         "source_stats": source_run_stats,
         "serpapi_enabled": serpapi_enabled,
+        "dry_run": clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y"),
+        "pipeline_metrics": pipeline_metrics,
     }
     run_path = os.path.join(RUNS_DIR, f"run_{datetime.now().strftime('%Y-%m-%d_%H%M%S')}.json")
     save_json(run_path, run_report)

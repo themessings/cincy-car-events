@@ -21,10 +21,16 @@ def main() -> int:
         )
 
     if not os.getenv("FACEBOOK_ACCESS_TOKEN"):
-        print("⚠️ FACEBOOK_ACCESS_TOKEN is empty; FB Graph collection paths will be limited.")
+        print("⚠️ FACEBOOK_ACCESS_TOKEN is empty; Facebook Graph API collection will be skipped.")
 
-    if not os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID"):
-        print("⚠️ APEX_FACEBOOK_PAGES_SHEET_ID is empty; FB Pages sheet collection will be skipped.")
+    if not os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID") and not os.getenv("FACEBOOK_PAGE_IDS"):
+        print("⚠️ Neither APEX_FACEBOOK_PAGES_SHEET_ID nor FACEBOOK_PAGE_IDS is set; FB page events source has no IDs.")
+
+    if os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID") and "docs.google.com" in os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID", ""):
+        print("⚠️ APEX_FACEBOOK_PAGES_SHEET_ID appears to be a URL; use only the spreadsheet ID.")
+
+    if os.getenv("COLLECTOR_DRY_RUN"):
+        print("ℹ️ COLLECTOR_DRY_RUN is set; collector will skip Google Sheets writes.")
 
     if not os.getenv("SERPAPI_API_KEY"):
         print("ℹ️ SERPAPI_API_KEY is optional; discovery sources will self-skip when unset.")
