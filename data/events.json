@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-02-12T21:54:52.659450-05:00",
-  "count": 18,
+  "generated_at_iso": "2026-02-13T06:38:42.985308-05:00",
+  "count": 19,
   "events": [
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -70,7 +70,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-12T21:54:39.592563-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.680900-05:00"
     },
     {
       "title": "Cincinnati Cars and Coffee",
@@ -84,7 +84,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-12T21:54:39.592665-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.680995-05:00"
     },
     {
       "title": "Columbus Cars & Coffee",
@@ -98,7 +98,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-12T21:54:39.592803-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.681103-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
@@ -112,7 +112,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-12T21:54:39.592903-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.681195-05:00"
     },
     {
       "title": "Destination Cars and Coffee",
@@ -126,7 +126,7 @@
       "miles_from_cincy": 63.3,
       "lat": 39.6536719,
       "lon": -83.5638094,
-      "last_seen_iso": "2026-02-12T21:54:39.593004-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.681288-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -140,7 +140,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-12T21:54:39.593103-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.681379-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -154,7 +154,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-12T21:54:39.593197-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.681465-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -168,7 +168,21 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-02-12T21:54:39.593288-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.681562-05:00"
+    },
+    {
+      "title": "Desert Ridge Monthly Meet-up",
+      "start_iso": "2026-02-18T19:30:00-05:00",
+      "end_iso": "2026-02-18T21:00:00-05:00",
+      "location": "",
+      "city_state": "",
+      "url": "https://www.meetup.com/meetup-group-emhilhod/events/313286398/",
+      "source": "Meetup Cincy Cars",
+      "category": "local",
+      "miles_from_cincy": null,
+      "lat": null,
+      "lon": null,
+      "last_seen_iso": "2026-02-13T06:38:42.979051-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Fridays",
@@ -182,7 +196,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-12T21:54:39.593397-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.681663-05:00"
     },
     {
       "title": "Cincinnati Cars and Coffee",
@@ -196,7 +210,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-12T21:54:39.593497-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.681756-05:00"
     },
     {
       "title": "ProductTank Wilmington Coming Soon",
@@ -210,7 +224,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-12T21:54:45.866142-05:00"
+      "last_seen_iso": "2026-02-13T06:38:28.215806-05:00"
     },
     {
       "title": "ProductTank Wilmington Coming Soon",
@@ -238,7 +252,7 @@
       "miles_from_cincy": 18.1,
       "lat": 39.090891,
       "lon": -84.8499504,
-      "last_seen_iso": "2026-02-12T21:54:39.595121-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.683292-05:00"
     },
     {
       "title": "Dynasty Rally 2026",
@@ -252,7 +266,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-12T21:54:39.595442-05:00"
+      "last_seen_iso": "2026-02-13T06:38:21.683590-05:00"
     }
   ]
 }

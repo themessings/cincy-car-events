@@ -204,5 +204,51 @@
   "Berkeley, CA": {
     "lat": "37.8708393",
     "lon": "-122.2728630"
+  },
+  "Phoenix, AZ": {
+    "lat": "33.4484367",
+    "lon": "-112.0741410"
+  },
+  "Mesa, AZ": {
+    "lat": "33.4151005",
+    "lon": "-111.8314550"
+  },
+  "Tempe, AZ": {
+    "lat": "33.4255117",
+    "lon": "-111.9400160"
+  },
+  "Scottsdale, AZ": {
+    "lat": "33.4942189",
+    "lon": "-111.9260180"
+  },
+  "Scott's Generations Deli 742 E Glendale Ave #142, Phoenix, az 85020 Phoenix az 85020": null,
+  "970 E University Dr 970 E University Dr, Tempe, Ar 85281 Tempe Ar 85281": null,
+  "Chandler, AZ": {
+    "lat": "33.3062031",
+    "lon": "-111.8411850"
+  },
+  "Fountain Hills, AZ": {
+    "lat": "33.6117105",
+    "lon": "-111.7173610"
+  },
+  "Gilbert, AZ": {
+    "lat": "33.3527632",
+    "lon": "-111.7890370"
+  },
+  "Chantilly, VA": {
+    "lat": "38.8852190",
+    "lon": "-77.4486772"
+  },
+  "Woodbridge, VA": {
+    "lat": "38.6364470",
+    "lon": "-77.2676335"
+  },
+  "Silver Spring, MD": {
+    "lat": "38.9997621",
+    "lon": "-77.0240371"
+  },
+  "Falls Church, VA": {
+    "lat": "38.8823340",
+    "lon": "-77.1710914"
   }
 }
