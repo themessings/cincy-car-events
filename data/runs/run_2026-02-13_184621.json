@@ -1,0 +1,87 @@
+{
+  "generated_at_iso": "2026-02-13T13:46:21.805249-05:00",
+  "raw_events": 433,
+  "incoming_after_filters": 80,
+  "merged_total": 19,
+  "source_stats": [
+    {
+      "name": "CarsAndCoffeeEvents - Ohio",
+      "type": "html_carsandcoffeeevents_ohio",
+      "status": "ok",
+      "collected": 40
+    },
+    {
+      "name": "Cincinnati Cars and Coffee (Series)",
+      "type": "html_wordpress_events_list",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "OVR PCA Social Events (ICS)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 75
+    },
+    {
+      "name": "Community Rally Calendar (iCloud)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 195
+    },
+    {
+      "name": "Facebook Page Events (set FACEBOOK_PAGE_ID)",
+      "type": "facebook_page_events",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "FB Events (Cincy keywords)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "FB Events (Ohio + NKY)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "Eventbrite Cincy",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 8
+    },
+    {
+      "name": "Meetup Cincy Cars",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 112
+    },
+    {
+      "name": "Regional rallies",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "SCCA RoadRally + RallyCross",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "American Rally Association (SOFR + regional)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0
+    },
+    {
+      "name": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 3
+    }
+  ],
+  "serpapi_enabled": true
+}
