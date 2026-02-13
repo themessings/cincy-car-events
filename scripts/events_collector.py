@@ -1337,6 +1337,32 @@ def log_counter_top(title: str, counter: Counter, top_n: int = 8) -> None:
         return
     top = ", ".join(f"{k}={v}" for k, v in counter.most_common(top_n))
     log(f"📊 {title}: {top}")
+
+
+def log_source_health_summary(source_run_stats: List[dict]) -> None:
+    """Human-readable summary of what worked vs what did not."""
+    working = [s for s in source_run_stats if s.get("status") == "ok" and int(s.get("collected", 0)) > 0]
+    no_results = [s for s in source_run_stats if s.get("status") == "ok" and int(s.get("collected", 0)) == 0]
+    skipped = [s for s in source_run_stats if s.get("status") == "skipped"]
+    failed = [s for s in source_run_stats if s.get("status") == "failed"]
+
+    if working:
+        msg = ", ".join(f"{s['name']}={s['collected']}" for s in working)
+        log(f"🟢 Working (returned events): {msg}")
+    else:
+        log("🟢 Working (returned events): none")
+
+    if no_results:
+        msg = ", ".join(s["name"] for s in no_results)
+        log(f"🟡 Working but returned 0 events: {msg}")
+
+    if failed:
+        msg = ", ".join(f"{s['name']} ({s.get('error', 'unknown error')})" for s in failed)
+        log(f"🔴 Failed sources: {msg}")
+
+    if skipped:
+        msg = ", ".join(s["name"] for s in skipped)
+        log(f"⚪ Skipped sources: {msg}")
 # -------------------------
 # Normalize + filter + store
 # -------------------------
@@ -1804,6 +1830,7 @@ def main():
     skipped_sources = [x for x in source_run_stats if x.get("status") == "skipped"]
     log(f"📄 Sheets rows written (excluding header): {len(merged)}")
     log(f"🔎 Source summary: ok={len(ok_sources)} skipped={len(skipped_sources)} failed={len(failed_sources)}")
+    log_source_health_summary(source_run_stats)
     log(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged)}")
     log(f"   Wrote: {EVENTS_JSON_PATH}")
     log(f"   Wrote: {EVENTS_CSV_PATH}")
