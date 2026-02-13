@@ -111,8 +111,7 @@ sources:
   name: Community Rally Calendar (iCloud)
   url: https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk
 - type: facebook_page_events
-  name: Facebook Page Events (set FACEBOOK_PAGE_ID)
-  page_id_env: FACEBOOK_PAGE_ID
+  name: Facebook Page Events (Graph API sheet/env IDs)
 - name: FB Events (Cincy keywords)
   type: web_search_facebook_events_serpapi
   query: site:facebook.com/events cincinnati ("car meet" OR "cars and coffee" OR "car
@@ -155,4 +154,20 @@ sources:
     OR site:rallynorthamerica.com OR site:grid.life OR site:gravityrally.com OR site:kingoftheroads.events
     OR site:ridewithrandy.org) (rally OR "driving tour" OR "road trip") (ohio OR cincinnati
     OR kentucky OR indiana) (2026 OR 2027)
+  max_results: 100
+- name: Eventbrite regional autos (SerpAPI)
+  type: web_search_serpapi
+  query: site:eventbrite.com ("car show" OR "cars and coffee" OR "cruise in" OR autocross
+    OR "track day") (Cincinnati OR Dayton OR Columbus OR Indianapolis OR Louisville
+    OR "Northern Kentucky")
+  max_results: 120
+- name: MotorsportReg regional autos
+  type: web_search_serpapi
+  query: site:motorsportreg.com (autocross OR "track day" OR rally OR hpde OR "cars
+    and coffee") (Ohio OR Kentucky OR Indiana)
+  max_results: 100
+- name: TrackRabbit + SCCA calendar discovery
+  type: web_search_serpapi
+  query: (site:trackrabbit.com OR site:scca.com) (autocross OR "track day" OR "time
+    trial" OR rallycross) (Ohio OR Kentucky OR Indiana)
   max_results: 100
