@@ -107,6 +107,8 @@ sources:
 
   - name: "Regional rallies"
     type: web_search_serpapi
+    query: '("rally" OR "drive" OR "tour") (ohio OR kentucky OR indiana) ("car" OR "supercar") 2026'
+    max_results: 80
     query: '("rally" OR "road rally" OR roadrally OR rallycross OR "stage rally" OR "driving tour" OR "road trip") (ohio OR kentucky OR indiana OR tennessee OR michigan OR georgia OR north carolina) ("car" OR "supercar" OR automotive) (2026 OR 2027)'
     max_results: 80
 

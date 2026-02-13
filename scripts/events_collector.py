@@ -525,6 +525,56 @@ def categorize(title: str, location: str, cfg: dict) -> str:
     return "local"
 
 
+def is_automotive_event(
+    title: str,
+    location: str = "",
+    cfg: Optional[dict] = None,
+    *_unused,
+    **_unused_kw,
+) -> bool:
+    """Best-effort keyword gate with backwards-compatible signature."""
+    text = clean_ws(f"{title} {location}").lower()
+    if not text:
+        return False
+
+    if not cfg:
+        return True
+
+    categorization = cfg.get("categorization", {})
+    keywords = [
+        *(categorization.get("local_keywords", []) or []),
+        *(categorization.get("rally_keywords", []) or []),
+    ]
+    if not keywords:
+        return True
+
+    return any(clean_ws(k).lower() in text for k in keywords if clean_ws(k))
+
+
+def is_automotive_event_safe(title: str, location: str, cfg: dict) -> bool:
+    """Deterministic automotive keyword check used by main() filtering."""
+    text = clean_ws(f"{title} {location}").lower()
+    if not text:
+        return False
+
+    categorization = (cfg or {}).get("categorization", {})
+    keywords = [
+        *(categorization.get("local_keywords", []) or []),
+        *(categorization.get("rally_keywords", []) or []),
+    ]
+    if not keywords:
+        return True
+
+    return any(clean_ws(k).lower() in text for k in keywords if clean_ws(k))
+
+
+def filter_existing_automotive_events(existing: List[EventItem], cfg: dict) -> List[EventItem]:
+    """Filter persisted events to automotive-only without relying on call-signature-sensitive paths."""
+    filtered = [e for e in existing if is_automotive_event_safe(e.title, e.location, cfg)]
+    dropped = len(existing) - len(filtered)
+    if dropped:
+        log(f"🧹 Filtered out {dropped} non-automotive persisted events before merge.")
+    return filtered
 def is_automotive_event(title: str, location: str, source: str, cfg: dict) -> bool:
     """
     Keep only events that clearly look automotive/car focused.
@@ -1581,6 +1631,7 @@ def main():
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
+    existing = filter_existing_automotive_events(existing, cfg)
     existing_before_focus_filter = len(existing)
     existing = [e for e in existing if is_automotive_event(e.title, e.location, cfg)]
     dropped_existing_non_automotive = existing_before_focus_filter - len(existing)
@@ -1622,8 +1673,13 @@ def main():
             collected = len(raw_events) - before_count
             source_run_stats.append({"name": sname, "type": stype, "status": "ok", "collected": collected})
             log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events")
+
+            collected = len(raw_events) - before_count
+            source_run_stats.append({"name": sname, "type": stype, "status": "ok", "collected": collected})
+            log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events")
         except Exception as ex:
             source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
+            log(f"⚠️ Source failed: {sname} :: {ex}")
             log(f"⚠️ Source failed: {sname} [{stype}] :: {ex}")
 
     # 2) Facebook Pages sheet is curated source of truth
@@ -1707,3 +1763,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
