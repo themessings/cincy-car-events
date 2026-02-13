@@ -76,49 +76,70 @@ def normalize_facebook_event_url(url: str) -> str:
 def parse_facebook_event_from_html(event_url: str, html: str) -> Optional[dict]:
     """
     Best-effort extraction when Graph API can’t be used.
-    Facebook pages are JS-heavy; sometimes HTML contains usable timestamps.
-    Returns dict with: title, start_dt, end_dt, location, url
+    Facebook pages are JS-heavy; this parser handles common embedded payload patterns.
+    Returns dict with: title, start_dt, end_dt, location, url.
     """
     if not html:
         return None
 
-    # Title: try <title> or og:title
+    lower_html = html.lower()
+    if any(x in lower_html for x in ["log in to facebook", "login_form", "consent", "accept all cookies"]):
+        return None
+
+    def _epoch_to_dt(ts_raw: str) -> Optional[datetime]:
+        try:
+            ts = int(ts_raw)
+            if ts > 10_000_000_000:
+                ts //= 1000
+            return datetime.fromtimestamp(ts, tz=tz.gettz("America/New_York"))
+        except Exception:
+            return None
+
     title = ""
-    m = re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"', html)
+    m = re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"', html, re.IGNORECASE)
     if m:
         title = clean_ws(m.group(1))
     if not title:
         m = re.search(r"<title>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
         if m:
-            title = clean_ws(re.sub(r"\s*\|\s*Facebook\s*$", "", m.group(1)))
+            title = clean_ws(re.sub(r"\s*\|\s*Facebook\s*$", "", m.group(1), flags=re.IGNORECASE))
 
-    # Location: og:description sometimes includes place; also try og:location
     location = ""
-    m = re.search(r'<meta[^>]+property="og:description"[^>]+content="([^"]+)"', html)
-    if m:
-        # This is noisy, but sometimes includes location text
-        location = clean_ws(m.group(1))[:300]
+    for patt in [
+        r'"event_place"\s*:\s*\{[^{}]*?"name"\s*:\s*"([^"]+)"',
+        r'"place"\s*:\s*\{[^{}]*?"name"\s*:\s*"([^"]+)"',
+        r'<meta[^>]+property="og:description"[^>]+content="([^"]+)"',
+    ]:
+        m = re.search(patt, html, re.IGNORECASE | re.DOTALL)
+        if m:
+            location = clean_ws(m.group(1))[:300]
+            if location:
+                break
 
-    # Start time: look for epoch timestamps commonly embedded
-    # Try patterns seen in FB payloads (best-effort; may fail)
     start_dt = None
     end_dt = None
+    for patt in [r'"start_timestamp"\s*:\s*(\d{9,13})', r'"event_start_time"\s*:\s*(\d{9,13})']:
+        m = re.search(patt, html)
+        if m:
+            start_dt = _epoch_to_dt(m.group(1))
+            if start_dt:
+                break
 
-    # Examples of patterns:
-    # "start_timestamp": 1711234567
-    m = re.search(r'"start_timestamp"\s*:\s*(\d{9,13})', html)
-    if m:
-        ts = int(m.group(1))
-        if ts > 10_000_000_000:  # ms
-            ts = ts // 1000
-        start_dt = datetime.fromtimestamp(ts, tz=tz.gettz("America/New_York"))
+    for patt in [r'"end_timestamp"\s*:\s*(\d{9,13})', r'"event_end_time"\s*:\s*(\d{9,13})']:
+        m = re.search(patt, html)
+        if m:
+            end_dt = _epoch_to_dt(m.group(1))
+            if end_dt:
+                break
 
-    m = re.search(r'"end_timestamp"\s*:\s*(\d{9,13})', html)
-    if m:
-        ts = int(m.group(1))
-        if ts > 10_000_000_000:
-            ts = ts // 1000
-        end_dt = datetime.fromtimestamp(ts, tz=tz.gettz("America/New_York"))
+    if not start_dt:
+        # ISO date fallback inside embedded JSON payloads
+        for patt in [r'"start_time"\s*:\s*"([^"]+)"', r'"event_start_time"\s*:\s*"([^"]+)"']:
+            m = re.search(patt, html)
+            if m:
+                start_dt = parse_dt(m.group(1))
+                if start_dt:
+                    break
 
     if not title or not start_dt:
         return None
@@ -130,7 +151,6 @@ def parse_facebook_event_from_html(event_url: str, html: str) -> Optional[dict]:
         "location": location,
         "url": event_url,
     }
-
 
 def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
     """
@@ -179,66 +199,68 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
     """
     1) SerpAPI discovers facebook.com/events/<id> URLs
     2) For each, try Graph API by event_id
-    3) If Graph fails, fallback to best-effort HTML parsing
+    3) If Graph fails, fallback to HTML parsing
     """
     query = source.get("query", "")
     max_results = int(source.get("max_results", 50))
-    if not query:
-        log(f"⚠️ Skipping web_search_facebook_events_serpapi: missing query for source {source.get('name')}")
+    source_name = source.get("name", "facebook:serpapi")
+
+    links: List[str] = []
+    if clean_ws(query):
+        links = serpapi_search(query, max_results=max_results)
+    elif SERPAPI_API_KEY:
+        cfg = load_yaml(CONFIG_PATH)
+        for q in build_serpapi_discovery_queries(cfg, for_facebook=True, limit=10):
+            links.extend(serpapi_search(q, max_results=min(max_results, 25)))
+            time.sleep(0.2)
+    else:
+        log(f"ℹ️ SerpAPI disabled; skipping {source_name}.")
         return []
 
-    links = serpapi_search(query, max_results=max_results)
     if not links:
         return []
 
     out: List[dict] = []
     now = datetime.now(tz=tz.gettz("America/New_York"))
 
-    # Keep only fb event links
     fb_links = []
     for u in links:
         u = clean_ws(u)
         if "facebook.com/events/" in u:
             fb_links.append(normalize_facebook_event_url(u))
-
-    # Dedup URLs
     fb_links = list(dict.fromkeys(fb_links))
 
     for event_url in fb_links:
-        # Cache: don’t refetch same URL more than once every 24h
         cached = url_cache.get(event_url)
         if cached:
             try:
                 last = datetime.fromisoformat(cached.get("fetched_at_iso"))
                 if (now - last) < timedelta(hours=24) and cached.get("event"):
                     e = cached["event"]
-                    e["start_dt"] = datetime.fromisoformat(e["start_iso"])
-                    e["end_dt"] = datetime.fromisoformat(e["end_iso"])
-                    e["source"] = source["name"]
-                    out.append(e)
+                    out.append({
+                        "title": e.get("title", ""),
+                        "start_dt": datetime.fromisoformat(e["start_iso"]),
+                        "end_dt": datetime.fromisoformat(e["end_iso"]),
+                        "location": e.get("location", ""),
+                        "url": e.get("url", event_url),
+                        "source": source_name,
+                    })
                     continue
             except Exception:
                 pass
 
         ev = None
         event_id = extract_facebook_event_id(event_url)
-
-        # 1) Prefer Graph API if possible
         if event_id:
             try:
-                g = fetch_facebook_event_via_graph(event_id)
-                if g:
-                    ev = g
+                ev = fetch_facebook_event_via_graph(event_id)
             except Exception:
                 ev = None
 
-        # 2) Fallback: try HTML parse
         if not ev:
             try:
                 html = fetch_text(event_url)
-                parsed = parse_facebook_event_from_html(event_url, html)
-                if parsed:
-                    ev = parsed
+                ev = parse_facebook_event_from_html(event_url, html)
             except Exception:
                 ev = None
 
@@ -247,27 +269,18 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
             continue
 
         raw = {
-            "title": ev["title"],
-            "start_dt": ev["start_dt"],
-            "end_dt": ev["end_dt"],
-            "location": ev.get("location", ""),
-            "url": ev.get("url", event_url),
-            "source": source["name"],
+            "title": ev["title"], "start_dt": ev["start_dt"], "end_dt": ev["end_dt"],
+            "location": ev.get("location", ""), "url": ev.get("url", event_url), "source": source_name,
         }
         out.append(raw)
-
         url_cache[event_url] = {
             "fetched_at_iso": now.isoformat(),
             "event": {
-                "title": raw["title"],
-                "start_iso": raw["start_dt"].isoformat(),
-                "end_iso": raw["end_dt"].isoformat(),
-                "location": raw.get("location", ""),
-                "url": raw.get("url", event_url),
+                "title": raw["title"], "start_iso": raw["start_dt"].isoformat(), "end_iso": raw["end_dt"].isoformat(),
+                "location": raw.get("location", ""), "url": raw.get("url", event_url),
             },
         }
-
-        time.sleep(0.6)
+        time.sleep(0.4)
 
     return out
 
@@ -577,21 +590,44 @@ def filter_existing_automotive_events(existing: List[EventItem], cfg: dict) -> L
     return filtered
 def is_automotive_focus_event(title: str, location: str, source: str, cfg: dict) -> bool:
     """
-    Keep only events that clearly look automotive/car focused.
+    Strong automotive gate: include if focus keyword matches OR trusted source/platform,
+    and exclude common non-automotive false positives.
     """
-    text = f"{title} {location} {source}".lower()
-
-    required_keywords = cfg.get("filters", {}).get("automotive_focus_keywords", [])
-    excluded_keywords = cfg.get("filters", {}).get("non_automotive_exclude_keywords", [])
-
-    if required_keywords and not any(kw.lower() in text for kw in required_keywords):
+    filters = (cfg or {}).get("filters", {})
+    text = clean_ws(f"{title} {location} {source} {url}").lower()
+    if not text:
         return False
 
-    if excluded_keywords and any(kw.lower() in text for kw in excluded_keywords):
+    focus_keywords = [clean_ws(k).lower() for k in (filters.get("automotive_focus_keywords", []) or []) if clean_ws(k)]
+    exclude_keywords = [clean_ws(k).lower() for k in (filters.get("non_automotive_exclude_keywords", []) or []) if clean_ws(k)]
+
+    default_trusted = [
+        "facebook.com/events",
+        "eventbrite.com",
+        "motorsportreg.com",
+        "trackrabbit.com",
+        "scca.com",
+        "carsandcoffeeevents.com",
+        "pca.org",
+    ]
+    trusted_platforms = [
+        clean_ws(k).lower() for k in (filters.get("trusted_event_platforms", default_trusted) or []) if clean_ws(k)
+    ]
+
+    hard_exclusions = [
+        "5k", "10k", "half marathon", "marathon", "music track", "spotify track", "job fair", "hiring event",
+        "church service", "yoga", "kids camp", "food pantry",
+    ]
+
+    if any(x in text for x in hard_exclusions):
+        return False
+    if exclude_keywords and any(x in text for x in exclude_keywords):
         return False
 
-    return True
+    has_focus = any(k in text for k in focus_keywords) if focus_keywords else False
+    is_trusted = any(k in text for k in trusted_platforms)
 
+    return has_focus or is_trusted
 
 def log(msg: str) -> None:
     print(msg, flush=True)
@@ -914,6 +950,83 @@ def serpapi_search(query: str, max_results: int = 20) -> List[str]:
     return out[:max_results]
 
 
+
+
+def build_serpapi_discovery_queries(cfg: dict, for_facebook: bool = False, limit: int = 16) -> List[str]:
+    """Build rotating car-focused SerpAPI queries across geos, time windows, and event types."""
+    now = datetime.now(tz=tz.gettz("America/New_York"))
+    y = now.year
+    month_name = now.strftime("%B")
+    next_month_name = (now + timedelta(days=32)).strftime("%B")
+
+    geos = [
+        "Cincinnati", "Northern Kentucky", "NKY", "Mason OH", "West Chester OH", "Loveland OH",
+        "Dayton OH", "Columbus OH", "Louisville KY", "Indianapolis IN",
+    ]
+    event_types = [
+        '"cars and coffee"', '"cars & coffee"', '"car meet"', '"car meetup"', '"cruise-in"',
+        '"car show"', 'autocross', '"track day"', 'HPDE', 'rally', '"driving tour"', '"road rally"',
+    ]
+    keywords = ["JDM", "Euro", "muscle", "tuner", '"Porsche Club"', '"BMW CCA"', '"Corvette club"', '"Mustang club"']
+    times = [str(y), "this weekend", f"{month_name} {y}", f"{next_month_name} {y}"]
+
+    platform_sites = [
+        "eventbrite.com", "motorsportreg.com", "trackrabbit.com", "scca.com", "meetup.com", "facebook.com/events"
+    ]
+
+    out = []
+    idx = 0
+    while len(out) < limit:
+        geo = geos[idx % len(geos)]
+        et = event_types[idx % len(event_types)]
+        kw = keywords[idx % len(keywords)]
+        tv = times[idx % len(times)]
+        site = platform_sites[idx % len(platform_sites)]
+        base = f'site:{site} ({geo}) ({et} OR {kw}) ({tv})'
+        if for_facebook:
+            base = f'site:facebook.com/events ({geo}) ({et} OR {kw}) ({tv})'
+        out.append(base)
+        idx += 1
+
+    configured = cfg.get("discovery", {}).get("facebook_event_queries" if for_facebook else "web_discovery_queries", []) or []
+    configured = [clean_ws(q) for q in configured if clean_ws(q)]
+    merged = configured + out
+    deduped = list(dict.fromkeys(merged))
+    return deduped[:limit]
+
+
+def parse_event_platform_fallback(page_url: str, html: str) -> List[dict]:
+    """Lightweight fallback parser for pages where schema.org Event is missing/incomplete."""
+    soup = BeautifulSoup(html, "html.parser")
+    title = clean_ws((soup.title.get_text(" ") if soup.title else "") or "")
+    text = clean_ws(soup.get_text(" "))
+    if not title and not text:
+        return []
+
+    if not any(k in (title + " " + text).lower() for k in ["car", "cars and coffee", "autocross", "track day", "rally"]):
+        return []
+
+    dt = None
+    m = re.search(r"(\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}[^.]{0,60})", text, re.IGNORECASE)
+    if m:
+        dt = parse_dt(m.group(1))
+    if not dt:
+        return []
+
+    loc = ""
+    for patt in [r"\b(Cincinnati|Northern Kentucky|NKY|Mason|West Chester|Loveland|Dayton|Columbus|Louisville|Indianapolis)\b"]:
+        m2 = re.search(patt, text, re.IGNORECASE)
+        if m2:
+            loc = m2.group(1)
+            break
+
+    return [{
+        "title": title[:180] or "Car Event",
+        "start_dt": dt,
+        "end_dt": dt + timedelta(hours=2),
+        "location": loc,
+        "url": page_url,
+    }]
 def verify_serpapi_or_raise() -> None:
     """
     Fail fast if SERPAPI_API_KEY is missing or invalid.
@@ -947,84 +1060,33 @@ def verify_serpapi_or_raise() -> None:
 
     log(f"✅ SERPAPI_API_KEY verified; validation returned {len(organic)} organic results.")
 def parse_facebook_event_page(event_url: str) -> Optional[dict]:
-    """
-    Best-effort parse of a public Facebook event page (HTML).
-    Facebook markup changes often; this function tries multiple strategies:
-      - JSON-LD blocks (rare on FB)
-      - OpenGraph meta tags
-      - Text heuristics (limited)
+    """Parse public Facebook event page: Graph first (if ID+token), then HTML fallback."""
+    event_id = extract_facebook_event_id(event_url)
+    if event_id:
+        try:
+            g = fetch_facebook_event_via_graph(event_id)
+            if g:
+                g["source"] = "facebook:discovered"
+                return g
+        except Exception:
+            pass
 
-    Returns raw event dict {title,start_dt,end_dt,location,url,source} or None.
-    """
     try:
         html = fetch_text(event_url)
     except Exception as ex:
         log(f"⚠️ FB event fetch failed: {event_url} :: {ex}")
         return None
 
-    soup = BeautifulSoup(html, "html.parser")
-
-    # Strategy 1: OpenGraph (usually present)
-    og_title = soup.select_one('meta[property="og:title"]')
-    title = clean_ws(og_title.get("content", "")) if og_title else ""
-
-    # Often FB pages have og:url
-    og_url = soup.select_one('meta[property="og:url"]')
-    canonical = clean_ws(og_url.get("content", "")) if og_url else event_url
-
-    # Strategy 2: attempt to find date/time in meta description
-    og_desc = soup.select_one('meta[property="og:description"]')
-    desc = clean_ws(og_desc.get("content", "")) if og_desc else ""
-
-    # Heuristic: parse a datetime from description if present
-    # This is imperfect but catches many public pages like "Saturday, March 9, 2026 at 6:00 PM"
-    start_dt = parse_dt(desc)
-    end_dt = None
-
-    # Strategy 3: scan for time-like strings in visible text (fallback)
-    if not start_dt:
-        text = clean_ws(soup.get_text(" "))
-        # Look for something like "at 6:00 PM" with a nearby month/day/year
-        # We'll just try parsing the first big match
-        m = re.search(
-            r"((January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}.*?(AM|PM))",
-            text,
-            flags=re.IGNORECASE,
-        )
-        if m:
-            start_dt = parse_dt(m.group(1))
-
-    # Location: try OG site name / description + some heuristics
-    location = ""
-    # Some FB event pages include "Location" in text blocks; grab a short snippet around it
-    if "Location" in soup.get_text(" "):
-        t = soup.get_text(" ")
-        idx = t.find("Location")
-        if idx >= 0:
-            snippet = clean_ws(t[idx : idx + 220])
-            # Remove the word "Location" and trim
-            snippet = clean_ws(snippet.replace("Location", ""))
-            location = snippet
-
-    # If still blank, leave it blank and let geocoder use city filters elsewhere
-    if not title:
-        # sometimes title missing because FB served a consent page
-        if "cookie" in html.lower() or "consent" in html.lower():
-            log(f"⚠️ FB returned consent/login page (no title): {event_url}")
+    if any(x in html.lower() for x in ["log in to facebook", "login_form", "consent", "accept all cookies"]):
+        log(f"⚠️ FB returned consent/login page: {event_url}")
         return None
 
-    if not start_dt:
-        # Can't use it without a date
+    parsed = parse_facebook_event_from_html(event_url, html)
+    if not parsed:
         return None
+    parsed["source"] = "facebook:discovered"
+    return parsed
 
-    return {
-        "title": title,
-        "start_dt": start_dt,
-        "end_dt": end_dt or (start_dt + timedelta(hours=2)),
-        "location": location,
-        "url": canonical or event_url,
-        "source": "facebook:discovered",
-    }
 def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, dict]) -> List[dict]:
     """
     Discovers FB event URLs via SerpAPI, then parses each event page.
@@ -1085,110 +1147,61 @@ def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, di
     return out
 
 def collect_facebook_event_urls_serpapi(cfg: dict) -> List[str]:
-    """
-    Uses SerpAPI to discover public Facebook event URLs beyond curated page lists.
-    Query list can be supplied from config at discovery.facebook_event_queries.
-    """
+    """Discover public FB event URLs via dynamic SerpAPI queries."""
     if not SERPAPI_API_KEY:
-        log("⚠️ Skipping FB event discovery via SerpAPI: missing SERPAPI_API_KEY.")
+        log("ℹ️ SerpAPI disabled (missing SERPAPI_API_KEY); skipping FB URL discovery.")
         return []
 
-    default_queries = [
-        'site:facebook.com/events cincinnati ("car meet" OR "cars and coffee" OR "car show" OR "cruise in" OR rally OR autocross OR "track day")',
-        'site:facebook.com/events ("Northern Kentucky" OR NKY OR "Mason OH" OR "West Chester OH" OR "Loveland OH") ("car meet" OR "car show" OR "cars and coffee")',
-        'site:facebook.com/events ("Dayton OH" OR "Columbus OH" OR "Louisville KY" OR "Indianapolis IN") (rally OR "driving tour" OR "track day" OR autocross) car',
-    ]
-    configured = cfg.get("discovery", {}).get("facebook_event_queries", []) or []
-    queries = [clean_ws(q) for q in configured if clean_ws(q)] or default_queries
-
+    queries = build_serpapi_discovery_queries(cfg, for_facebook=True, limit=12)
     found: List[str] = []
     for q in queries:
         try:
-            links = serpapi_search(q, max_results=20)
-            found.extend(links)
+            found.extend(serpapi_search(q, max_results=25))
         except Exception as ex:
             log(f"⚠️ SerpAPI discovery query failed: {q} :: {ex}")
-        time.sleep(0.25)
+        time.sleep(0.2)
 
     event_urls = []
     for u in found:
-        u = clean_ws(u)
+        u = normalize_facebook_event_url(u)
         m = re.search(r"(https?://(www\.)?facebook\.com/events/\d+)", u)
         if m:
             event_urls.append(m.group(1))
 
-    seen = set()
-    out = []
-    for u in event_urls:
-        if u in seen:
-            continue
-        seen.add(u)
-        out.append(u)
-
+    out = list(dict.fromkeys(event_urls))
     log(f"   SerpAPI found {len(out)} Facebook event URLs (pre-parse).")
     return out
 
 def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
-    """
-    Extract schema.org Event(s) from JSON-LD blocks.
-    Returns raw event dicts with title/start/end/location/url/source (source filled by caller).
-    """
+    """Extract schema.org Event objects from JSON-LD, including nested @graph/list payloads."""
     soup = BeautifulSoup(html, "html.parser")
+    canonical_tag = soup.select_one('link[rel="canonical"]')
+    canonical_url = clean_ws(canonical_tag.get("href", "")) if canonical_tag else page_url
     scripts = soup.select('script[type="application/ld+json"]')
     out: List[dict] = []
 
-    def normalize_event(obj: dict) -> Optional[dict]:
-        if not isinstance(obj, dict):
-            return None
+    def iter_dict_nodes(node):
+        if isinstance(node, dict):
+            yield node
+            for v in node.values():
+                yield from iter_dict_nodes(v)
+        elif isinstance(node, list):
+            for item in node:
+                yield from iter_dict_nodes(item)
 
-        t = obj.get("@type")
-        # Sometimes @type is a list
-        if isinstance(t, list):
-            is_event = any(str(x).lower() == "event" for x in t)
-        else:
-            is_event = str(t).lower() == "event"
-
-        if not is_event:
-            return None
-
-        name = clean_ws(obj.get("name") or obj.get("summary") or "")
-        start = clean_ws(obj.get("startDate") or "")
-        end = clean_ws(obj.get("endDate") or "")
-        loc = obj.get("location") or {}
-
-        location_str = ""
+    def location_from_obj(loc) -> str:
+        if isinstance(loc, list):
+            return clean_ws(" | ".join(location_from_obj(x) for x in loc if location_from_obj(x)))
         if isinstance(loc, dict):
-            # location.name + address
             loc_name = clean_ws(loc.get("name") or "")
             addr = loc.get("address") or {}
             if isinstance(addr, dict):
-                parts = [
-                    addr.get("streetAddress"),
-                    addr.get("addressLocality"),
-                    addr.get("addressRegion"),
-                    addr.get("postalCode"),
-                ]
+                parts = [addr.get("streetAddress"), addr.get("addressLocality"), addr.get("addressRegion"), addr.get("postalCode")]
                 addr_str = clean_ws(" ".join(p for p in parts if p))
             else:
                 addr_str = clean_ws(str(addr))
-            location_str = clean_ws(" ".join(x for x in [loc_name, addr_str] if x))
-        else:
-            location_str = clean_ws(str(loc))
-
-        event_url = clean_ws(obj.get("url") or page_url)
-
-        start_dt = parse_dt(start)
-        end_dt = parse_dt(end) if end else None
-        if not name or not start_dt:
-            return None
-
-        return {
-            "title": name,
-            "start_dt": start_dt,
-            "end_dt": end_dt or (start_dt + timedelta(hours=2)),
-            "location": location_str,
-            "url": event_url,
-        }
+            return clean_ws(" ".join(x for x in [loc_name, addr_str] if x))
+        return clean_ws(str(loc))
 
     for s in scripts:
         txt = s.get_text(strip=True)
@@ -1199,45 +1212,60 @@ def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
         except Exception:
             continue
 
-        candidates: List[dict] = []
-        if isinstance(data, dict):
-            candidates.append(data)
-            # graph style
-            if "@graph" in data and isinstance(data["@graph"], list):
-                candidates.extend([x for x in data["@graph"] if isinstance(x, dict)])
-        elif isinstance(data, list):
-            candidates.extend([x for x in data if isinstance(x, dict)])
+        for obj in iter_dict_nodes(data):
+            t = obj.get("@type")
+            types = [str(x).lower() for x in t] if isinstance(t, list) else [str(t).lower()]
+            if "event" not in types:
+                continue
 
-        for obj in candidates:
-            ev = normalize_event(obj)
-            if ev:
-                out.append(ev)
+            name = clean_ws(obj.get("name") or obj.get("summary") or "")
+            start_dt = parse_dt(clean_ws(obj.get("startDate") or ""))
+            end_raw = clean_ws(obj.get("endDate") or "")
+            end_dt = parse_dt(end_raw) if end_raw else None
+            if not name or not start_dt:
+                continue
 
-    # Dedup within page (title + start)
+            out.append({
+                "title": name,
+                "start_dt": start_dt,
+                "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+                "location": location_from_obj(obj.get("location") or {}),
+                "url": clean_ws(obj.get("url") or canonical_url or page_url),
+            })
+
+    if not out:
+        out = parse_event_platform_fallback(canonical_url or page_url, html)
+
     seen = set()
     deduped = []
     for e in out:
-        k = (e["title"].lower().strip(), e["start_dt"].isoformat()[:16])
+        k = (e["title"].lower().strip(), e["start_dt"].isoformat()[:16], clean_ws(e.get("url", "")))
         if k in seen:
             continue
         seen.add(k)
         deduped.append(e)
-
     return deduped
 
-
 def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List[dict]:
-    """
-    Discovers event pages via SerpAPI search, then extracts schema.org Event objects.
-    Uses a URL cache to avoid re-fetching the same page too often.
-    """
-    query = source.get("query", "")
+    """SerpAPI discovery -> URL dedupe -> schema/fallback parse with caching."""
     max_results = int(source.get("max_results", 20))
-    if not query:
-        log(f"⚠️ Skipping web_search_serpapi: missing query for source {source.get('name')}")
+    source_name = source.get("name", "web_search_serpapi")
+
+    queries = [clean_ws(source.get("query", ""))] if clean_ws(source.get("query", "")) else []
+    if not queries:
+        cfg = load_yaml(CONFIG_PATH)
+        queries = build_serpapi_discovery_queries(cfg, for_facebook=False, limit=12)
+
+    if not SERPAPI_API_KEY:
+        log(f"ℹ️ SerpAPI disabled; skipping {source_name}.")
         return []
 
-    links = serpapi_search(query, max_results=max_results)
+    links: List[str] = []
+    for q in queries[:20]:
+        links.extend(serpapi_search(q, max_results=max_results))
+        time.sleep(0.2)
+
+    links = list(dict.fromkeys(clean_ws(u) for u in links if clean_ws(u)))
     if not links:
         return []
 
@@ -1245,28 +1273,20 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
     now = datetime.now(tz=tz.gettz("America/New_York"))
 
     for u in links:
-        u = clean_ws(u)
-        if not u:
-            continue
-
-        # Cache: don’t refetch same URL more than once every 24h
         cached = url_cache.get(u)
         if cached:
             try:
                 last = datetime.fromisoformat(cached.get("fetched_at_iso"))
                 if (now - last) < timedelta(hours=24) and cached.get("events"):
                     for e in cached["events"]:
-                        # restore datetimes without mutating cached payload
-                        out.append(
-                            {
-                                "title": e.get("title", ""),
-                                "start_dt": datetime.fromisoformat(e["start_iso"]),
-                                "end_dt": datetime.fromisoformat(e["end_iso"]),
-                                "location": e.get("location", ""),
-                                "url": e.get("url", u),
-                                "source": source["name"],
-                            }
-                        )
+                        out.append({
+                            "title": e.get("title", ""),
+                            "start_dt": datetime.fromisoformat(e["start_iso"]),
+                            "end_dt": datetime.fromisoformat(e["end_iso"]),
+                            "location": e.get("location", ""),
+                            "url": e.get("url", u),
+                            "source": source_name,
+                        })
                     continue
             except Exception:
                 pass
@@ -1277,35 +1297,21 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
             packed = []
             for e in events:
                 e2 = {
-                    "title": e["title"],
-                    "start_dt": e["start_dt"],
-                    "end_dt": e["end_dt"],
-                    "location": e.get("location", ""),
-                    "url": e.get("url", u),
-                    "source": source["name"],
+                    "title": e["title"], "start_dt": e["start_dt"], "end_dt": e["end_dt"],
+                    "location": e.get("location", ""), "url": e.get("url", u), "source": source_name,
                 }
                 out.append(e2)
-                packed.append(
-                    {
-                        "title": e2["title"],
-                        "start_iso": e2["start_dt"].isoformat(),
-                        "end_iso": e2["end_dt"].isoformat(),
-                        "location": e2["location"],
-                        "url": e2["url"],
-                    }
-                )
-
-            url_cache[u] = {
-                "fetched_at_iso": now.isoformat(),
-                "events": packed,
-            }
-            time.sleep(0.6)
+                packed.append({
+                    "title": e2["title"], "start_iso": e2["start_dt"].isoformat(), "end_iso": e2["end_dt"].isoformat(),
+                    "location": e2["location"], "url": e2["url"],
+                })
+            url_cache[u] = {"fetched_at_iso": now.isoformat(), "events": packed}
+            time.sleep(0.35)
         except Exception as ex:
             log(f"⚠️ Web page parse failed: {u} :: {ex}")
             url_cache[u] = {"fetched_at_iso": now.isoformat(), "events": []}
 
     return out
-
 
 # -------------------------
 # Normalize + filter + store
@@ -1618,6 +1624,8 @@ def main():
     log(f"   now_et_iso={now_et_iso()}")
     serpapi_enabled = bool(SERPAPI_API_KEY)
     log(f"   SERPAPI_API_KEY set? {'YES' if serpapi_enabled else 'NO'}")
+    if not serpapi_enabled:
+        log("ℹ️ SerpAPI disabled; continuing with configured collectors.")
     log(f"   FACEBOOK_ACCESS_TOKEN set? {'YES' if bool(FACEBOOK_ACCESS_TOKEN) else 'NO'}")
     log(f"   APEX_FACEBOOK_PAGES_SHEET_ID set? {'YES' if bool(os.getenv('APEX_FACEBOOK_PAGES_SHEET_ID')) else 'NO'}")
     log(f"   APEX_SPREADSHEET_ID set? {'YES' if bool(os.getenv('APEX_SPREADSHEET_ID')) else 'NO'}")
@@ -1643,7 +1651,6 @@ def main():
 
     serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi"}
 
-    # 1) Config-based sources from config/sources.yml
     for s in sources:
         stype = s.get("type")
         sname = s.get("name", "(unnamed source)")
@@ -1673,16 +1680,10 @@ def main():
             collected = len(raw_events) - before_count
             source_run_stats.append({"name": sname, "type": stype, "status": "ok", "collected": collected})
             log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events")
-
-            collected = len(raw_events) - before_count
-            source_run_stats.append({"name": sname, "type": stype, "status": "ok", "collected": collected})
-            log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events")
         except Exception as ex:
             source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
-            log(f"⚠️ Source failed: {sname} :: {ex}")
             log(f"⚠️ Source failed: {sname} [{stype}] :: {ex}")
 
-    # 2) Facebook Pages sheet is curated source of truth
     try:
         fb_pages = load_facebook_pages_from_sheet()
         fb_events = collect_facebook_events_from_pages(fb_pages)
@@ -1691,7 +1692,6 @@ def main():
     except Exception as ex:
         log(f"⚠️ Facebook Pages sheet collection failed: {ex}")
 
-    # 3) Broad discovery via SerpAPI (auto-enabled only when key exists)
     if serpapi_enabled:
         try:
             discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
@@ -1733,25 +1733,21 @@ def main():
     spreadsheet_id = os.getenv("APEX_SPREADSHEET_ID")
     if spreadsheet_id:
         log(f"📄 Sheets URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
-    log(f"📄 Sheets rows written (excluding header): {len(merged)}")
 
-    run_stamp = datetime.now(tz=tz.gettz("America/New_York")).strftime("%Y-%m-%d_%H%M%S")
-    run_path = os.path.join(RUNS_DIR, f"run_{run_stamp}.json")
-    save_json(
-        run_path,
-        {
-            "generated_at_iso": payload["generated_at_iso"],
-            "incoming_count": len(incoming),
-            "merged_count": len(merged),
-            "incoming_sample": [asdict(e) for e in incoming[:50]],
-        },
-    )
+    run_report = {
+        "generated_at_iso": now_et_iso(),
+        "raw_events": len(raw_events),
+        "incoming_after_filters": len(incoming),
+        "merged_total": len(merged),
+        "source_stats": source_run_stats,
+        "serpapi_enabled": serpapi_enabled,
+    }
+    run_path = os.path.join(RUNS_DIR, f"run_{datetime.now().strftime('%Y-%m-%d_%H%M%S')}.json")
+    save_json(run_path, run_report)
 
-    ok_sources = [x for x in source_run_stats if x.get("status") == "ok"]
     skipped_sources = [x for x in source_run_stats if x.get("status") == "skipped"]
-    failed_sources = [x for x in source_run_stats if x.get("status") == "failed"]
+    log(f"📄 Sheets rows written (excluding header): {len(merged)}")
     log(f"🔎 Source summary: ok={len(ok_sources)} skipped={len(skipped_sources)} failed={len(failed_sources)}")
-
     log(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged)}")
     log(f"   Wrote: {EVENTS_JSON_PATH}")
     log(f"   Wrote: {EVENTS_CSV_PATH}")
@@ -1759,6 +1755,7 @@ def main():
     log(f"   Wrote: {URL_CACHE_PATH}")
     log(f"   Wrote: {run_path}")
     log(f"⏱️ Total runtime seconds: {round(_time.time() - t0, 1)}")
+
 
 
 if __name__ == "__main__":

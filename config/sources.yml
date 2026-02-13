@@ -1,130 +1,158 @@
 home:
-  name: "Cincinnati, OH"
+  name: Cincinnati, OH
   lat: 39.1031
-  lon: -84.5120
-
+  lon: -84.512
 filters:
-  # Approx driving-time proxies (edit freely)
-  local_max_miles: 200      # ~3.5 hours
-  rally_max_miles: 600      # ~9-10 hours
-  lookahead_days: -1        # negative means include all future events
-  drop_past_days: 7         # keep recent past to avoid missing late posts
+  local_max_miles: 200
+  rally_max_miles: 600
+  lookahead_days: -1
+  drop_past_days: 7
   automotive_focus_keywords:
-    - car
-    - cars
-    - automotive
-    - autocross
-    - rally
-    - motorsport
-    - track day
-    - cruise-in
-    - cars and coffee
-    - concours
-    - pca
-    - scca
+  - car
+  - cars
+  - automotive
+  - autocross
+  - rally
+  - motorsport
+  - track day
+  - cruise-in
+  - cars and coffee
+  - concours
+  - pca
+  - scca
+  - cars & coffee
+  - car meetup
+  - meet-up
+  - cruise in
+  - cruise night
+  - vehicle show
+  - exotic car
+  - supercar
+  - hypercar
+  - jdm
+  - euro
+  - muscle
+  - tuner
+  - solo
+  - hpde
+  - lapping day
+  - driving tour
+  - road rally
+  - poker run
+  - drag strip
+  - drag racing
+  - test & tune
+  - dyno day
+  - car club
+  - porsche club
+  - bmw cca
+  - corvette club
+  - mustang club
   non_automotive_exclude_keywords:
-    - job fair
-    - hiring event
-    - real estate
-    - yoga
-    - church service
-    - food pantry
-    - farmers market
-    - wine tasting
-    - networking breakfast
-
+  - job fair
+  - hiring event
+  - real estate
+  - yoga
+  - church service
+  - food pantry
+  - farmers market
+  - wine tasting
+  - networking breakfast
+  - 5k
+  - 10k
+  - half marathon
+  - marathon
+  - music track
+  - spotify track
+  - dance class
+  - kids camp
+  - school fundraiser
+  trusted_event_platforms:
+  - facebook.com/events
+  - eventbrite.com
+  - motorsportreg.com
+  - trackrabbit.com
+  - scca.com
+  - carsandcoffeeevents.com
+  - pca.org
 categorization:
   rally_keywords:
-    - rally
-    - roadrally
-    - rallycross
-    - stage rally
-    - tour
-    - road rally
-    - driving tour
-    - road trip
-    - poker run
-    - cruise
+  - rally
+  - roadrally
+  - rallycross
+  - stage rally
+  - tour
+  - road rally
+  - driving tour
+  - road trip
+  - poker run
+  - cruise
   local_keywords:
-    - cars and coffee
-    - car show
-    - meet
-    - meetup
-    - cruise-in
-    - cars & coffee
-    - autocross
-    - track day
-    - concours
-
+  - cars and coffee
+  - car show
+  - meet
+  - meetup
+  - cruise-in
+  - cars & coffee
+  - autocross
+  - track day
+  - concours
 sources:
-  # CarsAndCoffeeEvents: Ohio events listing (good aggregator)
-  - type: html_carsandcoffeeevents_ohio
-    name: "CarsAndCoffeeEvents - Ohio"
-    url: "https://carsandcoffeeevents.com/ohio-car-and-bike-events/"
-
-  # Cincinnati Cars and Coffee series page
-  - type: html_wordpress_events_list
-    name: "Cincinnati Cars and Coffee (Series)"
-    url: "https://carsandcoffeeevents.com/series/cincinnati-cars-and-coffee-2/"
-
-  # OVR PCA public Google Calendar ICS link (public feed)
-  - type: ics
-    name: "OVR PCA Social Events (ICS)"
-    url: "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-
-
-  # User-curated rally calendar (iCloud published iCal)
-  - type: ics
-    name: "Community Rally Calendar (iCloud)"
-    url: "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-
-  # Facebook page events (requires FACEBOOK_ACCESS_TOKEN + FACEBOOK_PAGE_ID in the environment)
-  - type: facebook_page_events
-    name: "Facebook Page Events (set FACEBOOK_PAGE_ID)"
-    page_id_env: "FACEBOOK_PAGE_ID"
-
-  # --- Facebook event discovery (requires SERPAPI_API_KEY)
-  - name: "FB Events (Cincy keywords)"
-    type: web_search_facebook_events_serpapi
-    query: 'site:facebook.com/events cincinnati ("car meet" OR "cars and coffee" OR "car show" OR "cruise in")'
-    max_results: 80
-
-  - name: "FB Events (Ohio + NKY)"
-    type: web_search_facebook_events_serpapi
-    query: 'site:facebook.com/events ("Cincinnati" OR "Northern Kentucky" OR "Newport" OR "Florence") ("cars and coffee" OR "car show" OR "car meet")'
-    max_results: 80
-
-  # --- Broader discovery (schema.org parser)
-  - name: "Eventbrite Cincy"
-    type: web_search_serpapi
-    query: 'site:eventbrite.com cincinnati ("car show" OR "cars and coffee" OR "car meet" OR "cruise in")'
-    max_results: 80
-
-  - name: "Meetup Cincy Cars"
-    type: web_search_serpapi
-    query: 'site:meetup.com cincinnati (cars OR automotive OR "cars and coffee")'
-    max_results: 60
-
-  - name: "Regional rallies"
-    type: web_search_serpapi
-    query: '("rally" OR "drive" OR "tour") (ohio OR kentucky OR indiana) ("car" OR "supercar") 2026'
-    max_results: 80
-    query: '("rally" OR "road rally" OR roadrally OR rallycross OR "stage rally" OR "driving tour" OR "road trip") (ohio OR kentucky OR indiana OR tennessee OR michigan OR georgia OR north carolina) ("car" OR "supercar" OR automotive) (2026 OR 2027)'
-    max_results: 80
-
-  # SCCA / ARA rally ecosystems (single-day + stage rally)
-  - name: "SCCA RoadRally + RallyCross"
-    type: web_search_serpapi
-    query: '(site:scca.com OR site:cincyscca.com) ("road rally" OR roadrally OR rallycross OR "rally cross") (ohio OR indiana OR kentucky) (2026 OR 2027)'
-    max_results: 80
-
-  - name: "American Rally Association (SOFR + regional)"
-    type: web_search_serpapi
-    query: '(site:americanrallyassociation.org OR site:sneakattackrally.com) ("southern ohio forest rally" OR "stage rally" OR "rally") (ohio OR kentucky OR indiana) (2026 OR 2027)'
-    max_results: 80
-
-  # Touring/exotic rally organizers that often run OH/KY/IN-connected routes
-  - name: "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)"
-    type: web_search_serpapi
-    query: '(site:corsarally.com OR site:dynastyautoevents.com OR site:therechargerally.com OR site:rallynorthamerica.com OR site:grid.life OR site:gravityrally.com OR site:kingoftheroads.events OR site:ridewithrandy.org) (rally OR "driving tour" OR "road trip") (ohio OR cincinnati OR kentucky OR indiana) (2026 OR 2027)'
-    max_results: 100
+- type: html_carsandcoffeeevents_ohio
+  name: CarsAndCoffeeEvents - Ohio
+  url: https://carsandcoffeeevents.com/ohio-car-and-bike-events/
+- type: html_wordpress_events_list
+  name: Cincinnati Cars and Coffee (Series)
+  url: https://carsandcoffeeevents.com/series/cincinnati-cars-and-coffee-2/
+- type: ics
+  name: OVR PCA Social Events (ICS)
+  url: https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics
+- type: ics
+  name: Community Rally Calendar (iCloud)
+  url: https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk
+- type: facebook_page_events
+  name: Facebook Page Events (set FACEBOOK_PAGE_ID)
+  page_id_env: FACEBOOK_PAGE_ID
+- name: FB Events (Cincy keywords)
+  type: web_search_facebook_events_serpapi
+  query: site:facebook.com/events cincinnati ("car meet" OR "cars and coffee" OR "car
+    show" OR "cruise in")
+  max_results: 80
+- name: FB Events (Ohio + NKY)
+  type: web_search_facebook_events_serpapi
+  query: site:facebook.com/events ("Cincinnati" OR "Northern Kentucky" OR "Newport"
+    OR "Florence") ("cars and coffee" OR "car show" OR "car meet")
+  max_results: 80
+- name: Eventbrite Cincy
+  type: web_search_serpapi
+  query: site:eventbrite.com cincinnati ("car show" OR "cars and coffee" OR "car meet"
+    OR "cruise in")
+  max_results: 80
+- name: Meetup Cincy Cars
+  type: web_search_serpapi
+  query: site:meetup.com cincinnati (cars OR automotive OR "cars and coffee")
+  max_results: 60
+- name: Regional rallies
+  type: web_search_serpapi
+  query: ("rally" OR "road rally" OR roadrally OR rallycross OR "stage rally" OR "driving
+    tour" OR "road trip") (ohio OR kentucky OR indiana OR tennessee OR michigan OR
+    georgia OR north carolina) ("car" OR "supercar" OR automotive) (2026 OR 2027)
+  max_results: 80
+- name: SCCA RoadRally + RallyCross
+  type: web_search_serpapi
+  query: (site:scca.com OR site:cincyscca.com) ("road rally" OR roadrally OR rallycross
+    OR "rally cross") (ohio OR indiana OR kentucky) (2026 OR 2027)
+  max_results: 80
+- name: American Rally Association (SOFR + regional)
+  type: web_search_serpapi
+  query: (site:americanrallyassociation.org OR site:sneakattackrally.com) ("southern
+    ohio forest rally" OR "stage rally" OR "rally") (ohio OR kentucky OR indiana)
+    (2026 OR 2027)
+  max_results: 80
+- name: Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)
+  type: web_search_serpapi
+  query: (site:corsarally.com OR site:dynastyautoevents.com OR site:therechargerally.com
+    OR site:rallynorthamerica.com OR site:grid.life OR site:gravityrally.com OR site:kingoftheroads.events
+    OR site:ridewithrandy.org) (rally OR "driving tour" OR "road trip") (ohio OR cincinnati
+    OR kentucky OR indiana) (2026 OR 2027)
+  max_results: 100
