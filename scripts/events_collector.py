@@ -588,13 +588,12 @@ def filter_existing_automotive_events(existing: List[EventItem], cfg: dict) -> L
     if dropped:
         log(f"🧹 Filtered out {dropped} non-automotive persisted events before merge.")
     return filtered
-def is_automotive_focus_event(title: str, location: str, source: str, cfg: dict, **kwargs) -> bool:
+def is_automotive_focus_event(title: str, location: str, source: str, cfg: dict) -> bool:
     """
     Strong automotive gate: include if focus keyword matches OR trusted source/platform,
     and exclude common non-automotive false positives.
     """
     filters = (cfg or {}).get("filters", {})
-    url = clean_ws(str(kwargs.get("url", "")))
     text = clean_ws(f"{title} {location} {source} {url}").lower()
     if not text:
         return False
@@ -1344,7 +1343,7 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
         if not title or not start_dt:
             continue
 
-        if not is_automotive_focus_event(title, location, source, cfg, url=url):
+        if not is_automotive_focus_event(title, location, source, cfg):
             continue
 
         if start_dt < window_start:
@@ -1641,6 +1640,11 @@ def main():
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
     existing = filter_existing_automotive_events(existing, cfg)
+    existing_before_focus_filter = len(existing)
+    existing = [e for e in existing if is_automotive_event_safe(e.title, e.location, cfg)]
+    dropped_existing_non_automotive = existing_before_focus_filter - len(existing)
+    if dropped_existing_non_automotive:
+        log(f"🧹 Removed non-automotive legacy events from existing set: {dropped_existing_non_automotive}")
 
     raw_events: List[dict] = []
     source_run_stats: List[dict] = []
