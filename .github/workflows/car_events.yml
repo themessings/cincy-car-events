@@ -107,7 +107,6 @@ jobs:
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
           APEX_FACEBOOK_PAGES_SHEET_ID: ${{ secrets.APEX_FACEBOOK_PAGES_SHEET_ID }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
-
           # Optional (only if using a Shared Drive)
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
         run: |
