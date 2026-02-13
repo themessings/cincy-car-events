@@ -354,6 +354,28 @@ def haversine_miles(lat1, lon1, lat2, lon2) -> float:
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return R * c
 
+def extract_facebook_page_identifier(page_url: str) -> str:
+    """Extract a canonical Facebook page identifier (username or numeric ID) from a URL-ish value."""
+    raw = clean_ws(page_url)
+    if not raw:
+        return ""
+
+    raw = re.sub(r"\?.*$", "", raw).strip("/")
+    raw = raw.replace("m.facebook.com", "www.facebook.com")
+
+    m = re.search(r"facebook\.com/(?:pg/)?([A-Za-z0-9.\-_%]+)$", raw, re.IGNORECASE)
+    if m:
+        ident = clean_ws(m.group(1))
+        if ident.lower() in {"events", "pages"}:
+            return ""
+        return ident
+
+    if re.fullmatch(r"[A-Za-z0-9.\-_%]{3,}", raw):
+        return raw
+
+    return ""
+
+
 def parse_facebook_pages_from_env() -> List[dict]:
     raw = clean_ws(os.getenv("FACEBOOK_PAGE_IDS", ""))
     if not raw:
@@ -361,16 +383,25 @@ def parse_facebook_pages_from_env() -> List[dict]:
 
     out: List[dict] = []
     for token in raw.split(","):
-        page_id = clean_ws(token)
-        if page_id:
-            out.append({"page_name": page_id, "page_id": page_id, "link": "", "origin": "env"})
+        page_url = clean_ws(token)
+        if not page_url:
+            continue
+        identifier = extract_facebook_page_identifier(page_url)
+        if not identifier:
+            log(f"⚠️ Ignoring FACEBOOK_PAGE_IDS entry; unable to parse page identifier: {page_url}")
+            continue
+        out.append({
+            "page_url": page_url,
+            "page_identifier": identifier,
+            "origin": "env",
+        })
     if out:
-        log(f"✅ Loaded Facebook page IDs from FACEBOOK_PAGE_IDS: {len(out)}")
+        log(f"✅ Loaded Facebook pages from FACEBOOK_PAGE_IDS: {len(out)}")
     return out
 
 
 def load_facebook_pages_from_sheet() -> List[dict]:
-    """Load page ids from a Google Sheet tab named Pages with headers: page_name,page_id,enabled,link."""
+    """Load page URLs from Pages!A where A1=page_url and A2+=facebook page URLs."""
     sheet_id = clean_ws(os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID", ""))
     if not sheet_id:
         log("⚠️ Missing APEX_FACEBOOK_PAGES_SHEET_ID; Pages sheet source disabled.")
@@ -390,7 +421,7 @@ def load_facebook_pages_from_sheet() -> List[dict]:
     try:
         resp = sheets.spreadsheets().values().get(
             spreadsheetId=sheet_id,
-            range="Pages!A1:D2000",
+            range="Pages!A1:A2000",
         ).execute()
     except HttpError as ex:
         status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
@@ -400,40 +431,34 @@ def load_facebook_pages_from_sheet() -> List[dict]:
                 "Confirm APEX_FACEBOOK_PAGES_SHEET_ID is the spreadsheet ID and that the service account has access."
             )
         else:
-            log(f"⚠️ Failed reading Pages!A1:D2000 from APEX_FACEBOOK_PAGES_SHEET_ID={sheet_id}: {ex}")
+            log(f"⚠️ Failed reading Pages!A1:A2000 from APEX_FACEBOOK_PAGES_SHEET_ID={sheet_id}: {ex}")
         return []
 
     rows = resp.get("values", [])
-    if not rows or len(rows) < 2:
-        log("⚠️ Facebook Pages sheet tab 'Pages' is empty (need headers + rows).")
+    if not rows:
+        log("⚠️ Facebook Pages tab is missing or empty. Expected A1 header 'page_url'.")
         return []
 
-    headers = [clean_ws(h).lower() for h in rows[0]]
-    idx = {h: i for i, h in enumerate(headers)}
-    required = {"page_id", "enabled"}
-    if not required.issubset(set(idx.keys())):
-        log(f"⚠️ Pages tab headers missing required fields {sorted(required)}; found={headers}")
-        return []
-
-    def cell(r: List[str], key: str) -> str:
-        i = idx.get(key)
-        if i is None or i >= len(r):
-            return ""
-        return clean_ws(r[i])
+    header = clean_ws(rows[0][0] if rows[0] else "").lower()
+    if header != "page_url":
+        log(f"⚠️ Pages!A1 header should be 'page_url'; found '{header or '(empty)'}'.")
 
     out: List[dict] = []
-    for r in rows[1:]:
-        page_name = cell(r, "page_name")
-        page_id = cell(r, "page_id")
-        enabled = cell(r, "enabled").upper() in ("TRUE", "YES", "Y", "1")
-        link = cell(r, "link")
-
-        if not enabled or not page_id:
+    for idx, r in enumerate(rows[1:], start=2):
+        page_url = clean_ws(r[0] if r else "")
+        if not page_url:
             continue
+        identifier = extract_facebook_page_identifier(page_url)
+        if not identifier:
+            log(f"⚠️ Pages!A{idx} ignored; invalid Facebook page URL: {page_url}")
+            continue
+        out.append({
+            "page_url": page_url,
+            "page_identifier": identifier,
+            "origin": "sheet",
+        })
 
-        out.append({"page_name": page_name or page_id, "page_id": page_id, "link": link, "origin": "sheet"})
-
-    log(f"✅ Facebook Pages sheet loaded: enabled={len(out)}")
+    log(f"✅ Facebook Pages sheet loaded: rows={len(out)}")
     return out
 
 
@@ -473,8 +498,49 @@ def normalize_facebook_page_event(item: dict, page_name: str) -> Optional[dict]:
     }
 
 
+def resolve_facebook_page(page_identifier: str) -> Optional[dict]:
+    """Resolve page username/ID to Graph page metadata containing numeric id + display name."""
+    if not FACEBOOK_ACCESS_TOKEN:
+        return None
+
+    url = f"https://graph.facebook.com/v18.0/{page_identifier}"
+    params = {
+        "access_token": FACEBOOK_ACCESS_TOKEN,
+        "fields": "id,name,link",
+    }
+
+    try:
+        r = requests.get(url, params=params, timeout=30)
+    except Exception as ex:
+        log(f"⚠️ Failed resolving Facebook page '{page_identifier}': {ex}")
+        return None
+
+    if r.status_code != 200:
+        detail = (r.text or "")[:300]
+        if r.status_code in (400, 401, 403):
+            log(
+                f"⚠️ Facebook page resolve denied for '{page_identifier}'. "
+                f"Check token validity/permissions. HTTP {r.status_code}: {detail}"
+            )
+        else:
+            log(f"⚠️ Facebook page resolve failed for '{page_identifier}': HTTP {r.status_code}: {detail}")
+        return None
+
+    data = r.json() or {}
+    resolved_id = clean_ws(str(data.get("id", "")))
+    if not resolved_id:
+        log(f"⚠️ Facebook page '{page_identifier}' resolved without an id; skipping.")
+        return None
+
+    return {
+        "page_id": resolved_id,
+        "page_name": clean_ws(data.get("name", "")) or page_identifier,
+        "page_link": clean_ws(data.get("link", "")),
+    }
+
+
 def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
-    """Graph API pull for /{page_id}/events. Requires a token with pages_read_engagement."""
+    """Graph API pull for page URLs/identifiers via /{page}/events (no HTML scraping)."""
     if not FACEBOOK_ACCESS_TOKEN:
         log("⚠️ Skipping Facebook page events: missing FACEBOOK_ACCESS_TOKEN.")
         return []
@@ -486,12 +552,20 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
     out: List[dict] = []
 
     for p in pages:
-        page_id = clean_ws(p.get("page_id") or "")
-        page_name = clean_ws(p.get("page_name") or page_id)
-        if not page_id:
+        page_identifier = clean_ws(p.get("page_identifier") or "")
+        page_url = clean_ws(p.get("page_url") or page_identifier)
+        if not page_identifier:
             continue
 
-        log(f"--- Facebook pull start: {page_name} ({page_id})")
+        resolved = resolve_facebook_page(page_identifier)
+        if not resolved:
+            log(f"⚠️ Skipping page; could not resolve via Graph API: {page_url}")
+            continue
+
+        page_id = resolved["page_id"]
+        page_name = resolved["page_name"]
+
+        log(f"--- Facebook pull start: {page_name} ({page_id}) from {page_url}")
         url = f"https://graph.facebook.com/v18.0/{page_id}/events"
         params = {
             "access_token": FACEBOOK_ACCESS_TOKEN,
@@ -510,10 +584,10 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
 
             if r.status_code != 200:
                 detail = (r.text or "")[:300]
-                if r.status_code in (400, 403):
+                if r.status_code in (400, 401, 403):
                     log(
                         f"⚠️ Facebook Graph access denied for page {page_id}. "
-                        "Required: a valid user/page token with pages_read_engagement and access to that page. "
+                        "Required: valid token with access to the page's events. "
                         f"HTTP {r.status_code}: {detail}"
                     )
                 else:
@@ -1337,6 +1411,32 @@ def log_counter_top(title: str, counter: Counter, top_n: int = 8) -> None:
         return
     top = ", ".join(f"{k}={v}" for k, v in counter.most_common(top_n))
     log(f"📊 {title}: {top}")
+
+
+def log_source_health_summary(source_run_stats: List[dict]) -> None:
+    """Human-readable summary of what worked vs what did not."""
+    working = [s for s in source_run_stats if s.get("status") == "ok" and int(s.get("collected", 0)) > 0]
+    no_results = [s for s in source_run_stats if s.get("status") == "ok" and int(s.get("collected", 0)) == 0]
+    skipped = [s for s in source_run_stats if s.get("status") == "skipped"]
+    failed = [s for s in source_run_stats if s.get("status") == "failed"]
+
+    if working:
+        msg = ", ".join(f"{s['name']}={s['collected']}" for s in working)
+        log(f"🟢 Working (returned events): {msg}")
+    else:
+        log("🟢 Working (returned events): none")
+
+    if no_results:
+        msg = ", ".join(s["name"] for s in no_results)
+        log(f"🟡 Working but returned 0 events: {msg}")
+
+    if failed:
+        msg = ", ".join(f"{s['name']} ({s.get('error', 'unknown error')})" for s in failed)
+        log(f"🔴 Failed sources: {msg}")
+
+    if skipped:
+        msg = ", ".join(s["name"] for s in skipped)
+        log(f"⚪ Skipped sources: {msg}")
 # -------------------------
 # Normalize + filter + store
 # -------------------------
@@ -1804,6 +1904,7 @@ def main():
     skipped_sources = [x for x in source_run_stats if x.get("status") == "skipped"]
     log(f"📄 Sheets rows written (excluding header): {len(merged)}")
     log(f"🔎 Source summary: ok={len(ok_sources)} skipped={len(skipped_sources)} failed={len(failed_sources)}")
+    log_source_health_summary(source_run_stats)
     log(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged)}")
     log(f"   Wrote: {EVENTS_JSON_PATH}")
     log(f"   Wrote: {EVENTS_CSV_PATH}")
