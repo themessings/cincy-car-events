@@ -259,5 +259,33 @@
   },
   "Connersville Airport - Mettel Field 500 Airport Drive Connersville IN 47331": null,
   "Roberts Centre 123 Gano Road Wilmington OH 45177": null,
-  "St. Elizabeth Healthcare - Edgewood: Conference Room F& G 1 Medical Village Drive Edgewood KY 41017": null
+  "St. Elizabeth Healthcare - Edgewood: Conference Room F& G 1 Medical Village Drive Edgewood KY 41017": null,
+  "Boulder, CO": {
+    "lat": "40.0149856",
+    "lon": "-105.2705450"
+  },
+  "Cheyenne, WY": {
+    "lat": "41.1399810",
+    "lon": "-104.8202460"
+  },
+  "Reston, VA": {
+    "lat": "38.9532820",
+    "lon": "-77.3464516"
+  },
+  "Westminster, CO": {
+    "lat": "39.8366528",
+    "lon": "-105.0372046"
+  },
+  "Springfield, VA": {
+    "lat": "38.7749935",
+    "lon": "-77.1803819"
+  },
+  "Greenbelt, MD": {
+    "lat": "39.0046070",
+    "lon": "-76.8756838"
+  },
+  "Dumfries, VA": {
+    "lat": "38.5674096",
+    "lon": "-77.3267652"
+  }
 }
