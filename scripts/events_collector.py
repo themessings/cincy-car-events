@@ -575,7 +575,7 @@ def filter_existing_automotive_events(existing: List[EventItem], cfg: dict) -> L
     if dropped:
         log(f"🧹 Filtered out {dropped} non-automotive persisted events before merge.")
     return filtered
-def is_automotive_event(title: str, location: str, source: str, cfg: dict) -> bool:
+def is_automotive_focus_event(title: str, location: str, source: str, cfg: dict) -> bool:
     """
     Keep only events that clearly look automotive/car focused.
     """
@@ -1337,7 +1337,7 @@ def to_event_items(raw_events: List[dict], cfg: dict, geocache: Dict[str, dict])
         if not title or not start_dt:
             continue
 
-        if not is_automotive_event(title, location, source, cfg):
+        if not is_automotive_focus_event(title, location, source, cfg):
             continue
 
         if start_dt < window_start:
@@ -1633,7 +1633,7 @@ def main():
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
     existing = filter_existing_automotive_events(existing, cfg)
     existing_before_focus_filter = len(existing)
-    existing = [e for e in existing if is_automotive_event(e.title, e.location, cfg)]
+    existing = [e for e in existing if is_automotive_event_safe(e.title, e.location, cfg)]
     dropped_existing_non_automotive = existing_before_focus_filter - len(existing)
     if dropped_existing_non_automotive:
         log(f"🧹 Removed non-automotive legacy events from existing set: {dropped_existing_non_automotive}")
@@ -1712,7 +1712,7 @@ def main():
 
     merged = dedupe_merge(existing, incoming)
     merged_before_focus_filter = len(merged)
-    merged = [ev for ev in merged if is_automotive_event(ev.title, ev.location, cfg)]
+    merged = [ev for ev in merged if is_automotive_event_safe(ev.title, ev.location, cfg)]
     dropped_merged_non_automotive = merged_before_focus_filter - len(merged)
     if dropped_merged_non_automotive:
         log(f"🧹 Removed non-automotive events after merge: {dropped_merged_non_automotive}")
@@ -1763,4 +1763,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
