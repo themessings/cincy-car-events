@@ -8,7 +8,7 @@ from collections import Counter
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
-from urllib.parse import urljoin
+from urllib.parse import parse_qs, urljoin, urlparse
 
 import dateparser
 import requests
@@ -47,6 +47,35 @@ APEX_SPREADSHEET_ID = os.getenv("APEX_SPREADSHEET_ID")
 FACEBOOK_ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
 
 SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
+
+FACEBOOK_GRAPH_VERSION = "v18.0"
+DEFAULT_FACEBOOK_PAGES_TAB = os.getenv("APEX_FACEBOOK_PAGES_TAB", "Pages")
+
+
+def extract_google_spreadsheet_id(value: str) -> str:
+    raw = clean_ws(value)
+    if not raw:
+        return ""
+    if "docs.google.com/spreadsheets" in raw:
+        m = re.search(r"/spreadsheets/d/([a-zA-Z0-9-_]+)", raw)
+        if m:
+            return m.group(1)
+    return raw
+
+
+def normalize_facebook_pages_sheet_id(raw_value: str, context: str = "collector") -> str:
+    normalized = extract_google_spreadsheet_id(raw_value)
+    if raw_value and normalized and raw_value != normalized:
+        log(f"ℹ️ {context}: APEX_FACEBOOK_PAGES_SHEET_ID provided as URL; using ID '{normalized}'.")
+    if normalized and re.fullmatch(r"[a-zA-Z0-9-_]{20,}", normalized):
+        log(f"ℹ️ {context}: Facebook pages spreadsheet ID resolved to '{normalized}'.")
+        return normalized
+    if raw_value:
+        log(
+            f"⚠️ {context}: Could not parse APEX_FACEBOOK_PAGES_SHEET_ID='{raw_value}' into a valid spreadsheet ID."
+        )
+    return ""
+
 
 def extract_facebook_event_id(url: str) -> Optional[str]:
     """
@@ -360,20 +389,32 @@ def extract_facebook_page_identifier(page_url: str) -> str:
     if not raw:
         return ""
 
-    raw = re.sub(r"\?.*$", "", raw).strip("/")
-    raw = raw.replace("m.facebook.com", "www.facebook.com")
+    if raw.isdigit():
+        return raw
 
-    m = re.search(r"facebook\.com/(?:pg/)?([A-Za-z0-9.\-_%]+)$", raw, re.IGNORECASE)
-    if m:
-        ident = clean_ws(m.group(1))
-        if ident.lower() in {"events", "pages"}:
+    parsed = urlparse(raw if "://" in raw else f"https://{raw}")
+    host = (parsed.netloc or "").lower().replace("m.facebook.com", "www.facebook.com")
+    path = clean_ws(parsed.path).strip("/")
+
+    if "facebook.com" in host:
+        if path.lower() == "profile.php":
+            profile_id = clean_ws((parse_qs(parsed.query).get("id") or [""])[0])
+            return profile_id if profile_id.isdigit() else ""
+
+        segments = [clean_ws(seg) for seg in path.split("/") if clean_ws(seg)]
+        if segments and segments[0].lower() == "pg" and len(segments) > 1:
+            ident = segments[1]
+        elif segments:
+            ident = segments[0]
+        else:
+            ident = ""
+
+        if ident.lower() in {"events", "pages", "profile.php"}:
             return ""
         return ident
 
-    if re.fullmatch(r"[A-Za-z0-9.\-_%]{3,}", raw):
-        return raw
-
-    return ""
+    cleaned = re.sub(r"\?.*$", "", raw).strip("/")
+    return cleaned if re.fullmatch(r"[A-Za-z0-9.\-_%]{3,}", cleaned) else ""
 
 
 def parse_facebook_pages_from_env() -> List[dict]:
@@ -393,6 +434,9 @@ def parse_facebook_pages_from_env() -> List[dict]:
         out.append({
             "page_url": page_url,
             "page_identifier": identifier,
+            "enabled": True,
+            "label": "",
+            "notes": "",
             "origin": "env",
         })
     if out:
@@ -401,15 +445,13 @@ def parse_facebook_pages_from_env() -> List[dict]:
 
 
 def load_facebook_pages_from_sheet() -> List[dict]:
-    """Load page URLs from Pages!A where A1=page_url and A2+=facebook page URLs."""
-    sheet_id = clean_ws(os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID", ""))
+    """Load page URLs from a configurable tab with page_url/enabled/label/notes columns."""
+    sheet_id = normalize_facebook_pages_sheet_id(clean_ws(os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID", "")))
     if not sheet_id:
         log("⚠️ Missing APEX_FACEBOOK_PAGES_SHEET_ID; Pages sheet source disabled.")
         return []
 
-    if not re.fullmatch(r"[a-zA-Z0-9-_]{20,}", sheet_id):
-        log(f"⚠️ Invalid APEX_FACEBOOK_PAGES_SHEET_ID format: '{sheet_id}'. Expected spreadsheet ID, not URL.")
-        return []
+    tab_name = clean_ws(os.getenv("APEX_FACEBOOK_PAGES_TAB", "")) or DEFAULT_FACEBOOK_PAGES_TAB
 
     creds = get_google_credentials()
     if not creds:
@@ -421,7 +463,7 @@ def load_facebook_pages_from_sheet() -> List[dict]:
     try:
         resp = sheets.spreadsheets().values().get(
             spreadsheetId=sheet_id,
-            range="Pages!A1:A2000",
+            range=f"{tab_name}!A1:D2000",
         ).execute()
     except HttpError as ex:
         status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
@@ -431,34 +473,48 @@ def load_facebook_pages_from_sheet() -> List[dict]:
                 "Confirm APEX_FACEBOOK_PAGES_SHEET_ID is the spreadsheet ID and that the service account has access."
             )
         else:
-            log(f"⚠️ Failed reading Pages!A1:A2000 from APEX_FACEBOOK_PAGES_SHEET_ID={sheet_id}: {ex}")
+            log(f"⚠️ Failed reading {tab_name}!A1:D2000 from APEX_FACEBOOK_PAGES_SHEET_ID={sheet_id}: {ex}")
         return []
 
     rows = resp.get("values", [])
     if not rows:
-        log("⚠️ Facebook Pages tab is missing or empty. Expected A1 header 'page_url'.")
+        log(f"⚠️ Facebook Pages tab '{tab_name}' is missing or empty; continuing with no configured pages.")
         return []
 
-    header = clean_ws(rows[0][0] if rows[0] else "").lower()
-    if header != "page_url":
-        log(f"⚠️ Pages!A1 header should be 'page_url'; found '{header or '(empty)'}'.")
+    headers = [clean_ws(c).lower() for c in rows[0]]
+    header_idx = {h: i for i, h in enumerate(headers) if h}
+    if "page_url" not in header_idx:
+        log(f"⚠️ {tab_name}!A1 header row missing required column 'page_url'; found headers={headers}")
+        return []
 
     out: List[dict] = []
     for idx, r in enumerate(rows[1:], start=2):
-        page_url = clean_ws(r[0] if r else "")
+        page_url = clean_ws(r[header_idx["page_url"]] if len(r) > header_idx["page_url"] else "")
         if not page_url:
             continue
+
+        enabled_raw = ""
+        if "enabled" in header_idx and len(r) > header_idx["enabled"]:
+            enabled_raw = clean_ws(r[header_idx["enabled"]]).lower()
+        enabled = enabled_raw not in {"0", "false", "no", "n", "off", "disabled"}
+
+        label = clean_ws(r[header_idx["label"]] if "label" in header_idx and len(r) > header_idx["label"] else "")
+        notes = clean_ws(r[header_idx["notes"]] if "notes" in header_idx and len(r) > header_idx["notes"] else "")
+
         identifier = extract_facebook_page_identifier(page_url)
         if not identifier:
-            log(f"⚠️ Pages!A{idx} ignored; invalid Facebook page URL: {page_url}")
+            log(f"⚠️ {tab_name}!{idx} ignored; invalid Facebook page URL: {page_url}")
             continue
         out.append({
             "page_url": page_url,
             "page_identifier": identifier,
+            "enabled": enabled,
+            "label": label,
+            "notes": notes,
             "origin": "sheet",
         })
 
-    log(f"✅ Facebook Pages sheet loaded: rows={len(out)}")
+    log(f"✅ Facebook Pages sheet loaded: rows={len(out)} tab={tab_name}")
     return out
 
 
@@ -488,13 +544,29 @@ def normalize_facebook_page_event(item: dict, page_name: str) -> Optional[dict]:
         return None
 
     event_id = item.get("id")
+    location_bits = []
+    city = ""
+    state = ""
+    if isinstance(place, dict):
+        ploc = place.get("location") or {}
+        if isinstance(ploc, dict):
+            city = clean_ws(ploc.get("city", ""))
+            state = clean_ws(ploc.get("state", ""))
+            if city:
+                location_bits.append(city)
+            if state:
+                location_bits.append(state)
+    city_state = ", ".join([x for x in [city, state] if x])
     return {
         "title": title,
         "start_dt": start_dt,
         "end_dt": end_dt or (start_dt + timedelta(hours=2)),
         "location": location,
+        "city_state": city_state or guess_city_state(location),
         "url": f"https://www.facebook.com/events/{event_id}" if event_id else "",
         "source": f"Facebook: {page_name}",
+        "event_type": "facebook_page",
+        "cost": "",
     }
 
 
@@ -503,7 +575,10 @@ def resolve_facebook_page(page_identifier: str) -> Optional[dict]:
     if not FACEBOOK_ACCESS_TOKEN:
         return None
 
-    url = f"https://graph.facebook.com/v18.0/{page_identifier}"
+    if page_identifier.isdigit():
+        return {"page_id": page_identifier, "page_name": page_identifier, "page_link": ""}
+
+    url = f"https://graph.facebook.com/{FACEBOOK_GRAPH_VERSION}/{page_identifier}"
     params = {
         "access_token": FACEBOOK_ACCESS_TOKEN,
         "fields": "id,name,link",
@@ -550,26 +625,35 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
         return []
 
     out: List[dict] = []
+    enabled_pages = [p for p in pages if p.get("enabled", True)]
+    page_errors: List[Tuple[str, str]] = []
+    queried_pages = 0
+    total_page_events = 0
+    log("ℹ️ Facebook pages configured; running page-events collector.")
 
-    for p in pages:
+    for p in enabled_pages:
         page_identifier = clean_ws(p.get("page_identifier") or "")
         page_url = clean_ws(p.get("page_url") or page_identifier)
+        page_label = clean_ws(p.get("label") or page_identifier or page_url)
         if not page_identifier:
             continue
 
         resolved = resolve_facebook_page(page_identifier)
         if not resolved:
-            log(f"⚠️ Skipping page; could not resolve via Graph API: {page_url}")
+            msg = "could not resolve via Graph API"
+            log(f"⚠️ Skipping page; {msg}: {page_url}")
+            page_errors.append((page_url, msg))
             continue
 
         page_id = resolved["page_id"]
         page_name = resolved["page_name"]
 
+        queried_pages += 1
         log(f"--- Facebook pull start: {page_name} ({page_id}) from {page_url}")
-        url = f"https://graph.facebook.com/v18.0/{page_id}/events"
+        url = f"https://graph.facebook.com/{FACEBOOK_GRAPH_VERSION}/{page_id}/events"
         params = {
             "access_token": FACEBOOK_ACCESS_TOKEN,
-            "fields": "id,name,start_time,end_time,place,timezone,description",
+            "fields": "id,name,description,start_time,end_time,place,event_times,timezone,is_online,ticket_uri,cover",
             "limit": 100,
             "since": int(time.time()),
         }
@@ -579,19 +663,24 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
             try:
                 r = requests.get(url, params=params, timeout=30)
             except Exception as ex:
+                err = f"request error: {ex}"
                 log(f"⚠️ Facebook request failed for {page_name} ({page_id}): {ex}")
+                page_errors.append((page_url, err))
                 break
 
             if r.status_code != 200:
                 detail = (r.text or "")[:300]
+                err = f"HTTP {r.status_code}: {detail}"
                 if r.status_code in (400, 401, 403):
                     log(
-                        f"⚠️ Facebook Graph access denied for page {page_id}. "
-                        "Required: valid token with access to the page's events. "
-                        f"HTTP {r.status_code}: {detail}"
+                        f"⚠️ Facebook page events query failed for label='{page_label}' url='{page_url}'. "
+                        "Likely permissions/endpoint restrictions. "
+                        f"HTTP {r.status_code}: {detail}. "
+                        "Next actions: verify FACEBOOK_ACCESS_TOKEN, app permissions, and page visibility."
                     )
                 else:
                     log(f"⚠️ FB non-200 for {page_name} ({page_id}): {r.status_code} :: {detail}")
+                page_errors.append((page_url, err))
                 break
 
             payload = r.json() or {}
@@ -601,13 +690,31 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
                     continue
                 out.append(normalized)
                 page_event_count += 1
+                total_page_events += 1
 
             paging = payload.get("paging", {}) or {}
             url = paging.get("next")
             params = None
             time.sleep(0.2)
 
+        if page_event_count == 0:
+            log(
+                f"⚠️ Facebook page returned 0 events for label='{page_label}' url='{page_url}'. "
+                "This may be normal if events edge is restricted or no upcoming events exist."
+            )
         log(f"--- Facebook pull done: {page_name} ({page_id}) events={page_event_count}")
+
+    log("📘 Facebook page collector summary:")
+    log(f"   Facebook pages configured: {len(pages)}")
+    log(f"   Facebook pages enabled: {len(enabled_pages)}")
+    log(f"   Pages successfully queried: {queried_pages}")
+    log(f"   Total Facebook page events returned: {total_page_events}")
+    if page_errors:
+        log("   Pages with errors:")
+        for page_url, err in page_errors:
+            log(f"    - {page_url} :: {err}")
+    else:
+        log("   Pages with errors: none")
 
     return out
 

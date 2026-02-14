@@ -5,6 +5,7 @@ from scripts.events_collector import (
     EventItem,
     dedupe_merge,
     evaluate_automotive_focus_event,
+    extract_facebook_page_identifier,
     normalize_facebook_page_event,
 )
 
@@ -61,6 +62,20 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(norm["title"], "Cars & Coffee - Spring")
         self.assertIn("facebook.com/events/12345", norm["url"])
         self.assertIsInstance(norm["start_dt"], datetime)
+
+    def test_extract_facebook_page_identifier_variants(self):
+        self.assertEqual(
+            extract_facebook_page_identifier("https://www.facebook.com/Carscoffeewestchester1/"),
+            "Carscoffeewestchester1",
+        )
+        self.assertEqual(
+            extract_facebook_page_identifier("https://facebook.com/zakirasgarage?ref=bookmarks"),
+            "zakirasgarage",
+        )
+        self.assertEqual(
+            extract_facebook_page_identifier("https://www.facebook.com/profile.php?id=123456789012345"),
+            "123456789012345",
+        )
 
 
 if __name__ == "__main__":
