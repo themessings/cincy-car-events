@@ -422,5 +422,22 @@
     "lon": "-84.4970393"
   },
   "news! Our Self": null,
-  "4:30PM – 7:30PM EDT": null
+  "4:30PM – 7:30PM EDT": null,
+  "Cleveland, OH": {
+    "lat": "41.4996574",
+    "lon": "-81.6936772"
+  },
+  "Urbandale, IA": {
+    "lat": "41.6274511",
+    "lon": "-93.7380243"
+  },
+  "Des Moines, IA": {
+    "lat": "41.5868654",
+    "lon": "-93.6249494"
+  },
+  "Johnston, IA": {
+    "lat": "41.6731523",
+    "lon": "-93.6973395"
+  },
+  "Ironside Axe Club 2700 University Ave Suite 100, West Des Moines, ia 50266 West Des Moines ia 50266": null
 }
