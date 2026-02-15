@@ -60,6 +60,13 @@ def main() -> int:
     if not os.getenv("SERPAPI_API_KEY"):
         print("ℹ️ SERPAPI_API_KEY is optional; discovery sources will self-skip when unset.")
 
+    fb_discovery_enabled = os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "1").strip().lower() not in {"0", "false", "no"}
+    print(
+        "ℹ️ ENABLE_FACEBOOK_SERP_DISCOVERY is "
+        + ("enabled" if fb_discovery_enabled else "disabled")
+        + " (default: enabled)."
+    )
+
     if missing_required:
         for msg in missing_required:
             print(msg)
