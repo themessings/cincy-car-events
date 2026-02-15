@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-02-15T06:26:31.575921-05:00",
-  "count": 27,
+  "generated_at_iso": "2026-02-15T12:51:32.424856-05:00",
+  "count": 28,
   "events": [
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -168,7 +168,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T06:26:10.274414-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.895874-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -182,7 +182,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T06:26:10.274763-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.896236-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -196,7 +196,21 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-02-15T06:26:10.275128-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.896580-05:00"
+    },
+    {
+      "title": "⛪🔔 Bells, Stone & Sky: Rockefeller Memorial Chapel Carillon Tower Tour 🏛️✨",
+      "start_iso": "2026-02-15T14:00:00-05:00",
+      "end_iso": "2026-02-15T16:00:00-05:00",
+      "location": "Rockefeller Memorial Chapel 5850 South Woodlawn Avenue, Chicago, IL 60637 Chicago IL 60637",
+      "city_state": "Chicago, IL",
+      "url": "https://www.meetup.com/iwanttodothatchicago/events/313283189/",
+      "source": "Meetup Cincy Cars",
+      "category": "rally",
+      "miles_from_cincy": 251.8,
+      "lat": 41.8755616,
+      "lon": -87.6244212,
+      "last_seen_iso": "2026-02-15T12:51:21.077222-05:00"
     },
     {
       "title": "Desert Ridge Monthly Meet-up",
@@ -224,7 +238,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-15T06:26:10.275490-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.896942-05:00"
     },
     {
       "title": "Star Trek the Cruise IX",
@@ -252,7 +266,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-15T06:26:10.275862-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.897316-05:00"
     },
     {
       "title": "Columbus Cars & Coffee",
@@ -266,7 +280,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-15T06:26:10.276239-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.897687-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
@@ -280,7 +294,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-15T06:26:10.276593-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.898040-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -294,7 +308,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T06:26:10.276959-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.898423-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -308,7 +322,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T06:26:10.277308-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.898772-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -322,7 +336,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-02-15T06:26:10.277647-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.899132-05:00"
     },
     {
       "title": "ProductTank Wilmington Coming Soon",
@@ -364,7 +378,7 @@
       "miles_from_cincy": 18.1,
       "lat": 39.090891,
       "lon": -84.8499504,
-      "last_seen_iso": "2026-02-15T06:26:10.295670-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.917538-05:00"
     },
     {
       "title": "Dynasty Rally 2026",
@@ -378,7 +392,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-15T06:26:10.299112-05:00"
+      "last_seen_iso": "2026-02-15T12:51:04.921021-05:00"
     }
   ]
 }
