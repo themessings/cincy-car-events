@@ -50,6 +50,15 @@ SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
 
 FACEBOOK_GRAPH_VERSION = "v18.0"
 DEFAULT_FACEBOOK_PAGES_TAB = os.getenv("APEX_FACEBOOK_PAGES_TAB", "Pages")
+DEFAULT_HTTP_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+}
+SOURCE_DIAGNOSTICS: Dict[str, dict] = {}
 
 
 def extract_google_spreadsheet_id(value: str) -> str:
@@ -226,42 +235,69 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
     }
 
 
-def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str, dict]) -> List[dict]:
+def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
     """
-    1) SerpAPI discovers facebook.com/events/<id> URLs
-    2) For each, try Graph API by event_id
-    3) If Graph fails, fallback to HTML parsing
+    SerpAPI discovers facebook.com/events/<id> URLs.
+    Parse metadata from SerpAPI payload (no facebook.com fetch).
+    Optional Graph enrichment can be enabled via ENABLE_FACEBOOK_GRAPH_ENRICH=1.
     """
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("parse_failures", 0)
+
     query = source.get("query", "")
     max_results = int(source.get("max_results", 50))
     source_name = source.get("name", "facebook:serpapi")
 
-    links: List[str] = []
+    rows: List[dict] = []
     if clean_ws(query):
-        links = serpapi_search(query, max_results=max_results)
+        links, payload_rows = serpapi_search(query, max_results=max_results, return_payload=True)
+        for link, row in zip(links, payload_rows):
+            rows.append({"url": link, "result": row, "query": query})
     elif SERPAPI_API_KEY:
         cfg = load_yaml(CONFIG_PATH)
         for q in build_serpapi_discovery_queries(cfg, for_facebook=True, limit=10):
-            links.extend(serpapi_search(q, max_results=min(max_results, 25)))
+            links, payload_rows = serpapi_search(q, max_results=min(max_results, 25), return_payload=True)
+            for link, row in zip(links, payload_rows):
+                rows.append({"url": link, "result": row, "query": q})
             time.sleep(0.2)
     else:
+        diagnostics["reason"] = "no_results_from_search"
         log(f"ℹ️ SerpAPI disabled; skipping {source_name}.")
         return []
 
-    if not links:
+    if not rows:
+        diagnostics["reason"] = "no_results_from_search"
         return []
 
     out: List[dict] = []
     now = datetime.now(tz=tz.gettz("America/New_York"))
+    graph_state = {"token_expired": False}
 
-    fb_links = []
-    for u in links:
-        u = clean_ws(u)
-        if "facebook.com/events/" in u:
-            fb_links.append(normalize_facebook_event_url(u))
-    fb_links = list(dict.fromkeys(fb_links))
+    fb_rows = []
+    seen = set()
+    for row in rows:
+        u = normalize_facebook_event_url(clean_ws(row.get("url", "")))
+        if "facebook.com/events/" not in u:
+            continue
+        m = re.search(r"(https?://(www\.)?facebook\.com/events/\d+)", u)
+        if not m:
+            continue
+        nu = m.group(1)
+        if nu in seen:
+            continue
+        seen.add(nu)
+        item = dict(row)
+        item["url"] = nu
+        fb_rows.append(item)
 
-    for event_url in fb_links:
+    if not fb_rows:
+        diagnostics["reason"] = "no_results_from_search"
+        return []
+
+    for row in fb_rows:
+        event_url = row["url"]
+        diagnostics["raw_candidates"] += 1
         cached = url_cache.get(event_url)
         if cached:
             try:
@@ -275,39 +311,37 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
                         "location": e.get("location", ""),
                         "url": e.get("url", event_url),
                         "source": source_name,
+                        "facebook_event_id": e.get("facebook_event_id", ""),
                     })
                     continue
             except Exception:
                 pass
 
-        ev = None
-        event_id = extract_facebook_event_id(event_url)
-        if event_id:
-            try:
-                ev = fetch_facebook_event_via_graph(event_id)
-            except Exception:
-                ev = None
-
-        # HTML scraping intentionally disabled for Facebook event URLs; Graph API only.
+        ev = parse_facebook_serpapi_result(row.get("result", {}), source_name=source_name)
         if not ev:
+            diagnostics["parse_failures"] += 1
             url_cache[event_url] = {"fetched_at_iso": now.isoformat(), "event": None}
             continue
 
-        raw = {
-            "title": ev["title"], "start_dt": ev["start_dt"], "end_dt": ev["end_dt"],
-            "location": ev.get("location", ""), "url": ev.get("url", event_url), "source": source_name,
-        }
-        out.append(raw)
+        ev = maybe_enrich_facebook_event_via_graph(ev, graph_state=graph_state)
+        out.append(ev)
         url_cache[event_url] = {
             "fetched_at_iso": now.isoformat(),
             "event": {
-                "title": raw["title"], "start_iso": raw["start_dt"].isoformat(), "end_iso": raw["end_dt"].isoformat(),
-                "location": raw.get("location", ""), "url": raw.get("url", event_url),
+                "title": ev["title"],
+                "start_iso": ev["start_dt"].isoformat(),
+                "end_iso": ev["end_dt"].isoformat(),
+                "location": ev.get("location", ""),
+                "url": ev.get("url", event_url),
+                "facebook_event_id": ev.get("facebook_event_id", ""),
             },
         }
-        time.sleep(0.4)
+
+    if diagnostics.get("reason") is None and not out:
+        diagnostics["reason"] = "parsing_schema_changed"
 
     return out
+
 
 def drive_list_kwargs() -> dict:
     if APEX_SHARED_DRIVE_ID:
@@ -348,6 +382,24 @@ class EventItem:
     lat: Optional[float]
     lon: Optional[float]
     last_seen_iso: str
+
+
+class FacebookGraphTokenExpiredError(RuntimeError):
+    """Raised when the Facebook Graph access token is expired/invalid."""
+
+
+class SourceDisabledError(RuntimeError):
+    """Raised when a source is intentionally disabled for the remainder of a run."""
+
+    def __init__(self, reason: str, message: str):
+        super().__init__(message)
+        self.reason = reason
+
+
+def record_source_diagnostics(source_name: str, **kwargs) -> None:
+    current = SOURCE_DIAGNOSTICS.get(source_name, {}).copy()
+    current.update({k: v for k, v in kwargs.items() if v is not None})
+    SOURCE_DIAGNOSTICS[source_name] = current
 
 
 # -------------------------
@@ -570,10 +622,35 @@ def normalize_facebook_page_event(item: dict, page_name: str) -> Optional[dict]:
     }
 
 
-def resolve_facebook_page(page_identifier: str) -> Optional[dict]:
+def is_facebook_group_url(page_url: str) -> bool:
+    raw = clean_ws(page_url).lower()
+    return "/groups/" in raw
+
+
+def parse_facebook_graph_error(resp: requests.Response) -> dict:
+    try:
+        payload = resp.json() or {}
+    except Exception:
+        return {}
+    err = payload.get("error") if isinstance(payload, dict) else {}
+    return err if isinstance(err, dict) else {}
+
+
+def is_facebook_token_expired_error(resp: requests.Response) -> bool:
+    err = parse_facebook_graph_error(resp)
+    code = str(err.get("code", ""))
+    subcode = str(err.get("error_subcode", ""))
+    message = clean_ws(str(err.get("message", ""))).lower()
+    return code == "190" or subcode == "463" or "session has expired" in message
+
+
+def resolve_facebook_page(page_identifier: str, graph_state: Optional[dict] = None) -> Optional[dict]:
     """Resolve page username/ID to Graph page metadata containing numeric id + display name."""
     if not FACEBOOK_ACCESS_TOKEN:
         return None
+
+    if graph_state and graph_state.get("token_expired"):
+        raise SourceDisabledError("token_expired", "Facebook Graph source disabled after token expiry.")
 
     if page_identifier.isdigit():
         return {"page_id": page_identifier, "page_name": page_identifier, "page_link": ""}
@@ -585,13 +662,20 @@ def resolve_facebook_page(page_identifier: str) -> Optional[dict]:
     }
 
     try:
-        r = requests.get(url, params=params, timeout=30)
+        r = requests.get(url, params=params, headers=DEFAULT_HTTP_HEADERS, timeout=30)
     except Exception as ex:
         log(f"⚠️ Failed resolving Facebook page '{page_identifier}': {ex}")
         return None
 
     if r.status_code != 200:
         detail = (r.text or "")[:300]
+        if is_facebook_token_expired_error(r):
+            if graph_state is not None:
+                graph_state["token_expired"] = True
+                if not graph_state.get("token_message_logged"):
+                    log("⚠️ FACEBOOK_ACCESS_TOKEN expired; refresh token and update GitHub secret.")
+                    graph_state["token_message_logged"] = True
+            raise FacebookGraphTokenExpiredError("FACEBOOK_ACCESS_TOKEN expired")
         if r.status_code in (400, 401, 403):
             log(
                 f"⚠️ Facebook page resolve denied for '{page_identifier}'. "
@@ -614,13 +698,20 @@ def resolve_facebook_page(page_identifier: str) -> Optional[dict]:
     }
 
 
-def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
+def collect_facebook_events_from_pages(pages: List[dict], diagnostics: Optional[dict] = None) -> List[dict]:
     """Graph API pull for page URLs/identifiers via /{page}/events (no HTML scraping)."""
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("blocked_http", 0)
+    diagnostics.setdefault("group_urls_skipped", 0)
+
     if not FACEBOOK_ACCESS_TOKEN:
+        diagnostics["reason"] = "disabled_missing_token"
         log("⚠️ Skipping Facebook page events: missing FACEBOOK_ACCESS_TOKEN.")
         return []
 
     if not pages:
+        diagnostics["reason"] = "disabled_no_pages_configured"
         log("ℹ️ No Facebook pages configured; skipping page-events collector.")
         return []
 
@@ -629,6 +720,7 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
     page_errors: List[Tuple[str, str]] = []
     queried_pages = 0
     total_page_events = 0
+    graph_state = {"token_expired": False, "token_message_logged": False}
     log("ℹ️ Facebook pages configured; running page-events collector.")
 
     for p in enabled_pages:
@@ -638,7 +730,17 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
         if not page_identifier:
             continue
 
-        resolved = resolve_facebook_page(page_identifier)
+        if is_facebook_group_url(page_url):
+            diagnostics["group_urls_skipped"] += 1
+            log(f"ℹ️ skipping group URL; Graph Page Events requires Page ID + permissions: {page_url}")
+            continue
+
+        try:
+            resolved = resolve_facebook_page(page_identifier, graph_state=graph_state)
+        except FacebookGraphTokenExpiredError:
+            diagnostics["reason"] = "disabled_token_expired"
+            raise SourceDisabledError("disabled_token_expired", "Facebook Graph disabled due to expired token.")
+
         if not resolved:
             msg = "could not resolve via Graph API"
             log(f"⚠️ Skipping page; {msg}: {page_url}")
@@ -661,7 +763,7 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
         page_event_count = 0
         while url:
             try:
-                r = requests.get(url, params=params, timeout=30)
+                r = requests.get(url, params=params, headers=DEFAULT_HTTP_HEADERS, timeout=30)
             except Exception as ex:
                 err = f"request error: {ex}"
                 log(f"⚠️ Facebook request failed for {page_name} ({page_id}): {ex}")
@@ -671,7 +773,15 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
             if r.status_code != 200:
                 detail = (r.text or "")[:300]
                 err = f"HTTP {r.status_code}: {detail}"
+                if is_facebook_token_expired_error(r):
+                    graph_state["token_expired"] = True
+                    if not graph_state.get("token_message_logged"):
+                        log("⚠️ FACEBOOK_ACCESS_TOKEN expired; refresh token and update GitHub secret.")
+                        graph_state["token_message_logged"] = True
+                    diagnostics["reason"] = "disabled_token_expired"
+                    raise SourceDisabledError("disabled_token_expired", "Facebook Graph disabled due to expired token.")
                 if r.status_code in (400, 401, 403):
+                    diagnostics["blocked_http"] += 1
                     log(
                         f"⚠️ Facebook page events query failed for label='{page_label}' url='{page_url}'. "
                         "Likely permissions/endpoint restrictions. "
@@ -684,7 +794,9 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
                 break
 
             payload = r.json() or {}
-            for item in payload.get("data", []) or []:
+            data_rows = payload.get("data", []) or []
+            diagnostics["raw_candidates"] += len(data_rows)
+            for item in data_rows:
                 normalized = normalize_facebook_page_event(item, page_name)
                 if not normalized:
                     continue
@@ -715,6 +827,9 @@ def collect_facebook_events_from_pages(pages: List[dict]) -> List[dict]:
             log(f"    - {page_url} :: {err}")
     else:
         log("   Pages with errors: none")
+
+    if diagnostics.get("reason") is None and total_page_events == 0:
+        diagnostics["reason"] = "no_results_from_search"
 
     return out
 
@@ -911,8 +1026,7 @@ def miles_from_home(lat: float, lon: float, home_lat: float, home_lon: float) ->
 # HTTP fetching
 # -------------------------
 def fetch_html(url: str) -> BeautifulSoup:
-    headers = {"User-Agent": "cincy-car-events-bot/1.0 (github actions)"}
-    r = requests.get(url, headers=headers, timeout=30)
+    r = requests.get(url, headers=DEFAULT_HTTP_HEADERS, timeout=30)
     r.raise_for_status()
     return BeautifulSoup(r.text, "html.parser")
 
@@ -922,19 +1036,10 @@ def fetch_text(url: str) -> str:
     Fetch page text with basic retries and a real browser-ish UA.
     This helps when sites rate limit or return transient 403/429/5xx.
     """
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/120.0.0.0 Safari/537.36"
-        )
-    }
-
     last_err = None
     for attempt in range(1, 4):
         try:
-            r = requests.get(url, headers=headers, timeout=35)
-            # Some sites return 429/403 transiently; retry
+            r = requests.get(url, headers=DEFAULT_HTTP_HEADERS, timeout=35)
             if r.status_code in (429, 500, 502, 503, 504):
                 time.sleep(1.0 * attempt)
                 continue
@@ -945,7 +1050,6 @@ def fetch_text(url: str) -> str:
             time.sleep(1.0 * attempt)
 
     raise last_err
-
 
 
 # -------------------------
@@ -1082,9 +1186,9 @@ def collect_ics(source: dict) -> List[dict]:
     return out
 
 
-def collect_facebook_page_events(source: dict) -> List[dict]:
+def collect_facebook_page_events(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
     pages = load_facebook_pages()
-    events = collect_facebook_events_from_pages(pages)
+    events = collect_facebook_events_from_pages(pages, diagnostics=diagnostics)
     source_name = source.get("name", "Facebook Page Events")
     for e in events:
         e["source"] = source_name
@@ -1094,17 +1198,18 @@ def collect_facebook_page_events(source: dict) -> List[dict]:
 # -------------------------
 # NEW: Search the web (SerpAPI) + parse schema.org Event
 # -------------------------
-def serpapi_search(query: str, max_results: int = 20, page_size: int = 20) -> List[str]:
-    """Return organic links from SerpAPI Google results with pagination and retry/backoff."""
+def serpapi_search(query: str, max_results: int = 20, page_size: int = 20, return_payload: bool = False):
+    """Return SerpAPI organic links (and optionally payload rows) with pagination and retry/backoff."""
     if not SERPAPI_API_KEY:
         log("⚠️ Skipping SerpAPI search: missing SERPAPI_API_KEY.")
-        return []
+        return ([], []) if return_payload else []
 
     url = "https://serpapi.com/search.json"
     page_size = max(10, min(page_size, 100))
     target = max(1, max_results)
 
     links: List[str] = []
+    payload_rows: List[dict] = []
     start = 0
     while len(links) < target:
         params = {
@@ -1119,7 +1224,7 @@ def serpapi_search(query: str, max_results: int = 20, page_size: int = 20) -> Li
         data = None
         for attempt in range(3):
             try:
-                r = requests.get(url, params=params, timeout=45)
+                r = requests.get(url, params=params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
                 if r.status_code in (429, 500, 502, 503, 504):
                     time.sleep((2 ** attempt) * 0.8)
                     continue
@@ -1141,15 +1246,28 @@ def serpapi_search(query: str, max_results: int = 20, page_size: int = 20) -> Li
             link = clean_ws(item.get("link") or "")
             if link:
                 links.append(link)
+                payload_rows.append(item)
 
         if len(organic) < params["num"]:
             break
         start += params["num"]
         time.sleep(0.2)
 
-    out = list(dict.fromkeys(links))
-    return out[:target]
+    dedup_links = []
+    dedup_rows = []
+    seen = set()
+    for link, item in zip(links, payload_rows):
+        if link in seen:
+            continue
+        seen.add(link)
+        dedup_links.append(link)
+        dedup_rows.append(item)
+        if len(dedup_links) >= target:
+            break
 
+    if return_payload:
+        return dedup_links, dedup_rows
+    return dedup_links
 
 
 
@@ -1261,36 +1379,95 @@ def verify_serpapi_or_raise() -> None:
         raise RuntimeError("SERPAPI validation failed: unexpected response payload.")
 
     log(f"✅ SERPAPI_API_KEY verified; validation returned {len(organic)} organic results.")
-def parse_facebook_event_page(event_url: str) -> Optional[dict]:
-    """Parse discovered Facebook event URL by Graph API event-id only (no HTML scraping)."""
-    event_id = extract_facebook_event_id(event_url)
-    if not event_id:
+def parse_date_from_text(text: str) -> Optional[datetime]:
+    raw = clean_ws(text)
+    if not raw:
         return None
+    m = re.search(
+        r"((?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{1,2}(?:,\s*\d{4})?)",
+        raw,
+        re.IGNORECASE,
+    )
+    if m:
+        return parse_dt(m.group(1))
+    return parse_dt(raw)
+
+
+def parse_facebook_serpapi_result(item: dict, source_name: str = "facebook:discovered") -> Optional[dict]:
+    link = normalize_facebook_event_url(clean_ws(item.get("link") or ""))
+    if "facebook.com/events/" not in link:
+        return None
+
+    title = clean_ws(item.get("title") or "")
+    snippet = clean_ws(item.get("snippet") or "")
+    text_blob = clean_ws(f"{title} {snippet}")
+    start_dt = parse_date_from_text(text_blob)
+    if not start_dt:
+        return None
+
+    location = ""
+    loc_match = re.search(r"(?:at|in)\s+([^|·\-]{3,80})", snippet, re.IGNORECASE)
+    if loc_match:
+        location = clean_ws(loc_match.group(1))
+
+    event_id = extract_facebook_event_id(link)
+    return {
+        "title": title or "Facebook Event",
+        "start_dt": start_dt,
+        "end_dt": start_dt + timedelta(hours=2),
+        "location": location,
+        "url": link,
+        "source": source_name,
+        "facebook_event_id": event_id or "",
+    }
+
+
+def maybe_enrich_facebook_event_via_graph(ev: dict, graph_state: Optional[dict] = None) -> dict:
+    enrich_enabled = clean_ws(os.getenv("ENABLE_FACEBOOK_GRAPH_ENRICH", "")).lower() in ("1", "true", "yes")
+    event_id = clean_ws(ev.get("facebook_event_id", ""))
+    if not enrich_enabled or not event_id or not FACEBOOK_ACCESS_TOKEN:
+        return ev
+    if graph_state and graph_state.get("token_expired"):
+        return ev
     try:
         g = fetch_facebook_event_via_graph(event_id)
-        if g:
-            g["source"] = "facebook:discovered"
-            return g
-    except Exception as ex:
-        log(f"⚠️ FB Graph parse failed for {event_url}: {ex}")
-    return None
+    except Exception:
+        return ev
+    if not g:
+        return ev
+    ev.update({
+        "title": g.get("title", ev.get("title", "")),
+        "start_dt": g.get("start_dt", ev.get("start_dt")),
+        "end_dt": g.get("end_dt", ev.get("end_dt")),
+        "location": g.get("location", ev.get("location", "")),
+        "url": g.get("url", ev.get("url", "")),
+    })
+    return ev
 
-def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, dict]) -> List[dict]:
+
+def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
     """
-    Discovers FB event URLs via SerpAPI, then parses each event page.
-    Uses url_cache to avoid re-fetching within 24h.
+    Discover FB event URLs via SerpAPI and parse metadata from SerpAPI payload.
+    Optional Graph enrichment is controlled by ENABLE_FACEBOOK_GRAPH_ENRICH=1.
     """
-    event_urls = collect_facebook_event_urls_serpapi(cfg)
-    if not event_urls:
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("parse_failures", 0)
+
+    event_rows = collect_facebook_event_urls_serpapi(cfg)
+    if not event_rows:
+        diagnostics["reason"] = "no_results_from_search"
         return []
 
     out: List[dict] = []
     now = datetime.now(tz=tz.gettz("America/New_York"))
+    graph_state = {"token_expired": False}
 
-    for u in event_urls:
-        u = clean_ws(u)
+    for row in event_rows:
+        u = clean_ws(row.get("url", ""))
         if not u:
             continue
+        diagnostics["raw_candidates"] += 1
 
         cached = url_cache.get(u)
         if cached:
@@ -1306,59 +1483,76 @@ def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, di
                             "location": e.get("location", ""),
                             "url": e.get("url", u),
                             "source": e.get("source", "facebook:discovered"),
+                            "facebook_event_id": e.get("facebook_event_id", ""),
                         }
                     )
                     continue
             except Exception:
                 pass
 
-        ev = parse_facebook_event_page(u)
-        if ev:
-            out.append(ev)
-            url_cache[u] = {
-                "fetched_at_iso": now.isoformat(),
-                "event": {
-                    "title": ev["title"],
-                    "start_iso": ev["start_dt"].isoformat(),
-                    "end_iso": ev["end_dt"].isoformat(),
-                    "location": ev.get("location", ""),
-                    "url": ev.get("url", u),
-                    "source": ev.get("source", "facebook:discovered"),
-                },
-            }
-        else:
+        ev = parse_facebook_serpapi_result(row.get("result", {}), source_name="facebook:discovered")
+        if not ev:
+            diagnostics["parse_failures"] += 1
             url_cache[u] = {"fetched_at_iso": now.isoformat(), "event": None}
+            continue
 
-        time.sleep(0.4)
+        ev = maybe_enrich_facebook_event_via_graph(ev, graph_state=graph_state)
+        out.append(ev)
+        url_cache[u] = {
+            "fetched_at_iso": now.isoformat(),
+            "event": {
+                "title": ev["title"],
+                "start_iso": ev["start_dt"].isoformat(),
+                "end_iso": ev["end_dt"].isoformat(),
+                "location": ev.get("location", ""),
+                "url": ev.get("url", u),
+                "source": ev.get("source", "facebook:discovered"),
+                "facebook_event_id": ev.get("facebook_event_id", ""),
+            },
+        }
+
+    if diagnostics.get("reason") is None and not out:
+        diagnostics["reason"] = "parsing_schema_changed"
 
     log(f"   Discovered+parsed {len(out)} Facebook events from SerpAPI URLs.")
     return out
 
-def collect_facebook_event_urls_serpapi(cfg: dict) -> List[str]:
-    """Discover public FB event URLs via dynamic SerpAPI queries."""
+
+def collect_facebook_event_urls_serpapi(cfg: dict) -> List[dict]:
+    """Discover public FB event URLs via dynamic SerpAPI queries and keep raw rows."""
     if not SERPAPI_API_KEY:
         log("ℹ️ SerpAPI disabled (missing SERPAPI_API_KEY); skipping FB URL discovery.")
         return []
 
     queries = build_serpapi_discovery_queries(cfg, for_facebook=True, limit=12)
-    found: List[str] = []
+    found_rows: List[dict] = []
     for q in queries:
         try:
-            found.extend(serpapi_search(q, max_results=25))
+            links, payload_rows = serpapi_search(q, max_results=25, return_payload=True)
+            for link, row in zip(links, payload_rows):
+                found_rows.append({"url": link, "result": row, "query": q})
         except Exception as ex:
             log(f"⚠️ SerpAPI discovery query failed: {q} :: {ex}")
         time.sleep(0.2)
 
-    event_urls = []
-    for u in found:
-        u = normalize_facebook_event_url(u)
+    event_rows = []
+    seen = set()
+    for r in found_rows:
+        u = normalize_facebook_event_url(r.get("url", ""))
         m = re.search(r"(https?://(www\.)?facebook\.com/events/\d+)", u)
-        if m:
-            event_urls.append(m.group(1))
+        if not m:
+            continue
+        normalized = m.group(1)
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        item = dict(r)
+        item["url"] = normalized
+        event_rows.append(item)
 
-    out = list(dict.fromkeys(event_urls))
-    log(f"   SerpAPI found {len(out)} Facebook event URLs (pre-parse).")
-    return out
+    log(f"   SerpAPI found {len(event_rows)} Facebook event URLs (pre-parse).")
+    return event_rows
+
 
 def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
     """Extract schema.org Event objects from JSON-LD, including nested @graph/list payloads."""
@@ -1434,8 +1628,13 @@ def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
         deduped.append(e)
     return deduped
 
-def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List[dict]:
+def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
     """SerpAPI discovery -> URL dedupe -> schema/fallback parse with caching."""
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("parse_failures", 0)
+    diagnostics.setdefault("blocked_http", 0)
+
     max_results = int(source.get("max_results", 20))
     source_name = source.get("name", "web_search_serpapi")
 
@@ -1445,6 +1644,7 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
         queries = build_serpapi_discovery_queries(cfg, for_facebook=False, limit=12)
 
     if not SERPAPI_API_KEY:
+        diagnostics["reason"] = "no_results_from_search"
         log(f"ℹ️ SerpAPI disabled; skipping {source_name}.")
         return []
 
@@ -1454,7 +1654,9 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
         time.sleep(0.2)
 
     links = list(dict.fromkeys(clean_ws(u) for u in links if clean_ws(u)))
+    diagnostics["raw_candidates"] = len(links)
     if not links:
+        diagnostics["reason"] = "no_results_from_search"
         return []
 
     out: List[dict] = []
@@ -1485,6 +1687,8 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
                 continue
             html = fetch_text(u)
             events = parse_schema_org_events_from_html(u, html)
+            if not events:
+                diagnostics["parse_failures"] += 1
             packed = []
             for e in events:
                 e2 = {
@@ -1498,12 +1702,27 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict]) -> List
                 })
             url_cache[u] = {"fetched_at_iso": now.isoformat(), "events": packed}
             time.sleep(0.35)
+        except requests.HTTPError as ex:
+            code = getattr(getattr(ex, "response", None), "status_code", None)
+            if code in (400, 403):
+                diagnostics["blocked_http"] += 1
+            diagnostics["parse_failures"] += 1
+            log(f"⚠️ Web page parse failed: {u} :: {ex}")
+            url_cache[u] = {"fetched_at_iso": now.isoformat(), "events": []}
         except Exception as ex:
+            diagnostics["parse_failures"] += 1
             log(f"⚠️ Web page parse failed: {u} :: {ex}")
             url_cache[u] = {"fetched_at_iso": now.isoformat(), "events": []}
 
-    return out
+    if diagnostics.get("reason") is None and not out:
+        if diagnostics.get("blocked_http", 0) > 0:
+            diagnostics["reason"] = "blocked_http_403/400"
+        elif diagnostics.get("parse_failures", 0) > 0:
+            diagnostics["reason"] = "parsing_schema_changed"
+        else:
+            diagnostics["reason"] = "no_results_from_search"
 
+    return out
 
 
 def event_signature(ev: EventItem) -> str:
@@ -1525,6 +1744,7 @@ def log_source_health_summary(source_run_stats: List[dict]) -> None:
     working = [s for s in source_run_stats if s.get("status") == "ok" and int(s.get("collected", 0)) > 0]
     no_results = [s for s in source_run_stats if s.get("status") == "ok" and int(s.get("collected", 0)) == 0]
     skipped = [s for s in source_run_stats if s.get("status") == "skipped"]
+    disabled = [s for s in source_run_stats if s.get("status") == "disabled"]
     failed = [s for s in source_run_stats if s.get("status") == "failed"]
 
     if working:
@@ -1534,12 +1754,19 @@ def log_source_health_summary(source_run_stats: List[dict]) -> None:
         log("🟢 Working (returned events): none")
 
     if no_results:
-        msg = ", ".join(s["name"] for s in no_results)
+        msg = ", ".join(
+            f"{s['name']}[{s.get('reason', 'no_results_from_search')}]"
+            for s in no_results
+        )
         log(f"🟡 Working but returned 0 events: {msg}")
 
     if failed:
         msg = ", ".join(f"{s['name']} ({s.get('error', 'unknown error')})" for s in failed)
         log(f"🔴 Failed sources: {msg}")
+
+    if disabled:
+        msg = ", ".join(f"{s['name']} ({s.get('reason', 'disabled')})" for s in disabled)
+        log(f"⚫ Disabled sources: {msg}")
 
     if skipped:
         msg = ", ".join(s["name"] for s in skipped)
@@ -1547,11 +1774,30 @@ def log_source_health_summary(source_run_stats: List[dict]) -> None:
 # -------------------------
 # Normalize + filter + store
 # -------------------------
+
+
+def derive_zero_yield_reason(source_name: str, diagnostics: dict, source_drop_reasons: Counter) -> str:
+    if diagnostics.get("reason"):
+        return diagnostics["reason"]
+    if diagnostics.get("blocked_http", 0) > 0:
+        return "blocked_http_403/400"
+    if source_drop_reasons.get("outside_window_past", 0) + source_drop_reasons.get("outside_window_future", 0) > 0:
+        return "filtered_out_by_window"
+    if source_drop_reasons.get("location_too_far_local", 0) + source_drop_reasons.get("location_too_far_rally", 0) > 0:
+        return "filtered_out_by_distance"
+    if any(k.startswith("non_automotive:") for k in source_drop_reasons):
+        return "filtered_out_by_keywords"
+    if diagnostics.get("parse_failures", 0) > 0:
+        return "parsing_schema_changed"
+    return "no_results_from_search"
+
+
 def to_event_items(
     raw_events: List[dict],
     cfg: dict,
     geocache: Dict[str, dict],
     metrics: Optional[dict] = None,
+    source_filter_stats: Optional[Dict[str, Counter]] = None,
 ) -> List[EventItem]:
     home_lat = cfg["home"]["lat"]
     home_lon = cfg["home"]["lon"]
@@ -1577,11 +1823,17 @@ def to_event_items(
         start_dt: Optional[datetime] = e.get("start_dt")
         end_dt: Optional[datetime] = e.get("end_dt")
 
+        source_counter = source_filter_stats.setdefault(source or "(unknown)", Counter()) if source_filter_stats is not None else None
+
         if not title:
             drop_reasons["missing_title"] += 1
+            if source_counter is not None:
+                source_counter["missing_title"] += 1
             continue
         if not start_dt:
             drop_reasons["missing_start_dt"] += 1
+            if source_counter is not None:
+                source_counter["missing_start_dt"] += 1
             continue
         if not end_dt:
             end_dt = start_dt + timedelta(hours=2)
@@ -1589,15 +1841,21 @@ def to_event_items(
         allowed, auto_reason = evaluate_automotive_focus_event(title, location, source, url, cfg)
         if not allowed:
             drop_reasons[f"non_automotive:{auto_reason}"] += 1
+            if source_counter is not None:
+                source_counter[f"non_automotive:{auto_reason}"] += 1
             if len(non_auto_examples) < 5:
                 non_auto_examples.append(f"{title[:80]} ({auto_reason})")
             continue
 
         if start_dt < window_start:
             drop_reasons["outside_window_past"] += 1
+            if source_counter is not None:
+                source_counter["outside_window_past"] += 1
             continue
         if window_end is not None and start_dt > window_end:
             drop_reasons["outside_window_future"] += 1
+            if source_counter is not None:
+                source_counter["outside_window_future"] += 1
             continue
 
         city_state = guess_city_state(location)
@@ -1614,9 +1872,13 @@ def to_event_items(
         if miles is not None:
             if cat == "local" and miles > local_max:
                 drop_reasons["location_too_far_local"] += 1
+                if source_counter is not None:
+                    source_counter["location_too_far_local"] += 1
                 continue
             if cat == "rally" and miles > rally_max:
                 drop_reasons["location_too_far_rally"] += 1
+                if source_counter is not None:
+                    source_counter["location_too_far_rally"] += 1
                 continue
 
         out.append(
@@ -1914,6 +2176,7 @@ def main():
     raw_events: List[dict] = []
     source_run_stats: List[dict] = []
     pipeline_metrics: Dict[str, dict] = {}
+    source_filter_stats: Dict[str, Counter] = {}
 
     serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi"}
 
@@ -1928,6 +2191,7 @@ def main():
 
         before_count = len(raw_events)
         try:
+            diagnostics: dict = {}
             if stype == "html_carsandcoffeeevents_ohio":
                 raw_events.extend(collect_carsandcoffeeevents_ohio(s))
             elif stype == "html_wordpress_events_list":
@@ -1935,17 +2199,25 @@ def main():
             elif stype == "ics":
                 raw_events.extend(collect_ics(s))
             elif stype == "facebook_page_events":
-                raw_events.extend(collect_facebook_page_events(s))
+                raw_events.extend(collect_facebook_page_events(s, diagnostics=diagnostics))
             elif stype == "web_search_serpapi":
-                raw_events.extend(collect_web_search_serpapi(s, url_cache))
+                raw_events.extend(collect_web_search_serpapi(s, url_cache, diagnostics=diagnostics))
             elif stype == "web_search_facebook_events_serpapi":
-                raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache))
+                raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache, diagnostics=diagnostics))
             else:
                 log(f"Skipping unknown source type: {stype} ({sname})")
 
+            SOURCE_DIAGNOSTICS[sname] = diagnostics
             collected = len(raw_events) - before_count
-            source_run_stats.append({"name": sname, "type": stype, "status": "ok", "collected": collected})
+            stat = {"name": sname, "type": stype, "status": "ok", "collected": collected}
+            diag = SOURCE_DIAGNOSTICS.get(sname, {})
+            if collected == 0:
+                stat["reason"] = diag.get("reason", "no_results_from_search")
+            source_run_stats.append(stat)
             log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events")
+        except SourceDisabledError as ex:
+            source_run_stats.append({"name": sname, "type": stype, "status": "disabled", "collected": 0, "reason": ex.reason, "error": str(ex)})
+            log(f"⚪ Source disabled: {sname} [{stype}] :: {ex}")
         except Exception as ex:
             source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
             log(f"⚠️ Source failed: {sname} [{stype}] :: {ex}")
@@ -1953,7 +2225,9 @@ def main():
     enable_fb_discovery = clean_ws(os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "1")).lower() not in ("0", "false", "no")
     if serpapi_enabled and enable_fb_discovery:
         try:
-            discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
+            fb_discovery_diag: dict = {}
+            discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache, diagnostics=fb_discovery_diag)
+            SOURCE_DIAGNOSTICS["SerpAPI FB discovery (optional)"] = fb_discovery_diag
             raw_events.extend(discovered)
             log(f"🔎 Source complete: SerpAPI FB discovery (optional) -> {len(discovered)} events")
         except Exception as ex:
@@ -1968,8 +2242,14 @@ def main():
     failed_sources = [x for x in source_run_stats if x.get("status") == "failed"]
     log(f"🔎 Source summary: ok={len(ok_sources)} failed={len(failed_sources)}")
 
-    incoming = to_event_items(raw_events, cfg, geocache, metrics=pipeline_metrics)
+    incoming = to_event_items(raw_events, cfg, geocache, metrics=pipeline_metrics, source_filter_stats=source_filter_stats)
     log(f"✅ Incoming after filters: {len(incoming)}")
+
+    for stat in source_run_stats:
+        if stat.get("status") == "ok" and int(stat.get("collected", 0)) == 0:
+            source_name = stat.get("name", "")
+            diag = SOURCE_DIAGNOSTICS.get(source_name, {})
+            stat["reason"] = derive_zero_yield_reason(source_name, diag, source_filter_stats.get(source_name, Counter()))
 
     merged = dedupe_merge(existing, incoming, metrics=pipeline_metrics)
     merged_before_focus_filter = len(merged)

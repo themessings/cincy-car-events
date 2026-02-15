@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "url": "https://www.facebook.com/events/123456789012345/",
+      "result": {
+        "link": "https://www.facebook.com/events/123456789012345/",
+        "title": "Cars and Coffee Cincinnati - March Meetup",
+        "snippet": "Sat, Mar 21 at 9:00 AM at Ault Park, Cincinnati"
+      }
+    },
+    {
+      "url": "https://www.facebook.com/events/987654321098765/",
+      "result": {
+        "link": "https://www.facebook.com/events/987654321098765/",
+        "title": "NKY Autocross Test Day",
+        "snippet": "Apr 5 at 10:00 AM in Florence KY"
+      }
+    }
+  ]
+}
