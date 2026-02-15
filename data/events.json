@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-02-15T13:15:01.953301-05:00",
-  "count": 28,
+  "generated_at_iso": "2026-02-15T13:34:09.476973-05:00",
+  "count": 30,
   "events": [
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -168,7 +168,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T13:15:01.884261-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.958826-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -182,7 +182,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T13:15:01.884601-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.959215-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -196,7 +196,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-02-15T13:15:01.884959-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.959573-05:00"
     },
     {
       "title": "⛪🔔 Bells, Stone & Sky: Rockefeller Memorial Chapel Carillon Tower Tour 🏛️✨",
@@ -210,7 +210,7 @@
       "miles_from_cincy": 251.8,
       "lat": 41.8755616,
       "lon": -87.6244212,
-      "last_seen_iso": "2026-02-15T13:15:01.936125-05:00"
+      "last_seen_iso": "2026-02-15T13:33:50.013958-05:00"
     },
     {
       "title": "Desert Ridge Monthly Meet-up",
@@ -238,7 +238,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-15T13:15:01.885330-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.959946-05:00"
     },
     {
       "title": "Star Trek the Cruise IX",
@@ -266,7 +266,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-15T13:15:01.885726-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.960339-05:00"
     },
     {
       "title": "Columbus Cars & Coffee",
@@ -280,7 +280,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-15T13:15:01.886111-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.960720-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
@@ -294,7 +294,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-15T13:15:01.886511-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.961078-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -308,7 +308,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T13:15:01.886862-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.961492-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -322,7 +322,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T13:15:01.887229-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.961851-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -336,7 +336,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-02-15T13:15:01.887568-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.962222-05:00"
     },
     {
       "title": "ProductTank Wilmington Coming Soon",
@@ -378,7 +378,21 @@
       "miles_from_cincy": 18.1,
       "lat": 39.090891,
       "lon": -84.8499504,
-      "last_seen_iso": "2026-02-15T13:15:01.905720-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.980567-05:00"
+    },
+    {
+      "title": "Cars and Coffee June 29",
+      "start_iso": "2026-06-29T00:00:00-04:00",
+      "end_iso": "2026-06-29T02:00:00-04:00",
+      "location": "The Upside Brew! Start your Engines and your morning with us! Join us for Cars a",
+      "city_state": "",
+      "url": "https://www.facebook.com/events/329-ludlow-avenue-cincinnati-oh/cars-and-coffee-june-29/1396164504862230/",
+      "source": "facebook:discovered",
+      "category": "local",
+      "miles_from_cincy": null,
+      "lat": null,
+      "lon": null,
+      "last_seen_iso": "2026-02-15T13:33:51.570348-05:00"
     },
     {
       "title": "Dynasty Rally 2026",
@@ -392,7 +406,21 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-15T13:15:01.909105-05:00"
+      "last_seen_iso": "2026-02-15T13:33:49.984104-05:00"
+    },
+    {
+      "title": "Frisch's Court Street Car Show/Cruise-In",
+      "start_iso": "2026-08-14T00:00:00-04:00",
+      "end_iso": "2026-08-14T02:00:00-04:00",
+      "location": "Cincinnati, OH, United States by Alexandria Mangas on Sunday, August 14 2022. ..",
+      "city_state": "Cincinnati, OH",
+      "url": "https://www.facebook.com/events/1-e-court-st-cincinnati-oh-45202-1103-united-states/frischs-court-street-car-showcruise-in/582845909876607/",
+      "source": "FB Events (Cincy keywords)",
+      "category": "rally",
+      "miles_from_cincy": 0.1,
+      "lat": 39.1014537,
+      "lon": -84.5124602,
+      "last_seen_iso": "2026-02-15T13:33:50.000338-05:00"
     }
   ]
 }
