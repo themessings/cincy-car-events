@@ -1,5 +1,9 @@
+import json
 import unittest
+from collections import Counter
 from datetime import datetime
+from pathlib import Path
+from unittest.mock import patch
 
 from scripts.events_collector import (
     EventItem,
@@ -7,6 +11,10 @@ from scripts.events_collector import (
     evaluate_automotive_focus_event,
     extract_facebook_page_identifier,
     normalize_facebook_page_event,
+    collect_facebook_events_from_pages,
+    collect_facebook_events_serpapi_discovery,
+    SourceDisabledError,
+    derive_zero_yield_reason,
 )
 
 
@@ -80,3 +88,54 @@ class CollectorTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class _FakeResponse:
+    def __init__(self, status_code: int, payload: dict):
+        self.status_code = status_code
+        self._payload = payload
+        self.text = json.dumps(payload)
+
+    def json(self):
+        return self._payload
+
+
+class FacebookDiagnosticsTests(unittest.TestCase):
+    def test_token_expired_disables_graph_source_without_spam(self):
+        pages = [
+            {"page_identifier": "carsandcoffeecincy", "page_url": "https://facebook.com/carsandcoffeecincy", "enabled": True},
+            {"page_identifier": "anotherpage", "page_url": "https://facebook.com/anotherpage", "enabled": True},
+        ]
+        calls = {"count": 0}
+
+        def fake_get(*args, **kwargs):
+            calls["count"] += 1
+            return _FakeResponse(400, {"error": {"code": 190, "error_subcode": 463, "message": "Session has expired"}})
+
+        diagnostics = {}
+        with patch("scripts.events_collector.FACEBOOK_ACCESS_TOKEN", "fake-token"), patch("scripts.events_collector.requests.get", side_effect=fake_get):
+            with self.assertRaises(SourceDisabledError):
+                collect_facebook_events_from_pages(pages, diagnostics=diagnostics)
+
+        self.assertEqual(calls["count"], 1)
+        self.assertEqual(diagnostics.get("reason"), "disabled_token_expired")
+
+    def test_serpapi_facebook_discovery_parses_fixture_without_facebook_http_fetch(self):
+        fixture = json.loads(Path("tests/fixtures/serpapi_facebook_events_sample.json").read_text())
+        rows = fixture["rows"]
+
+        with patch("scripts.events_collector.collect_facebook_event_urls_serpapi", return_value=rows), patch(
+            "scripts.events_collector.fetch_facebook_event_via_graph", side_effect=AssertionError("Graph enrichment should be skipped")
+        ):
+            out = collect_facebook_events_serpapi_discovery(cfg={}, url_cache={}, diagnostics={})
+
+        self.assertGreater(len(out), 0)
+        self.assertTrue(any("facebook.com/events/" in e.get("url", "") for e in out))
+
+    def test_zero_yield_reason_prefers_filter_diagnostics(self):
+        reason = derive_zero_yield_reason(
+            "Eventbrite Cincy",
+            diagnostics={"raw_candidates": 5, "parse_failures": 0},
+            source_drop_reasons=Counter({"outside_window_future": 3}),
+        )
+        self.assertEqual(reason, "filtered_out_by_window")
+

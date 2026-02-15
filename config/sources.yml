@@ -124,8 +124,7 @@ sources:
   max_results: 80
 - name: Eventbrite Cincy
   type: web_search_serpapi
-  query: site:eventbrite.com cincinnati ("car show" OR "cars and coffee" OR "car meet"
-    OR "cruise in")
+  query: site:eventbrite.com ("Cincinnati" OR "Northern Kentucky") ("cars and coffee" OR "car show" OR "cruise in" OR rally OR "track day" OR autocross) ("within 150 miles" OR Ohio OR Kentucky OR Indiana)
   max_results: 80
 - name: Meetup Cincy Cars
   type: web_search_serpapi

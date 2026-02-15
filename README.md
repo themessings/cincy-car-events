@@ -6,6 +6,7 @@
   - You may also provide a full Google Sheets URL; runtime validation/collector will auto-extract the spreadsheet ID.
 - Share the Facebook Pages sheet with the Google service account email from `GDRIVE_SERVICE_ACCOUNT_JSON` / `GOOGLE_SERVICE_ACCOUNT_JSON`.
 - `FACEBOOK_ACCESS_TOKEN` must be present for Graph API page-event collection.
+- `ENABLE_FACEBOOK_SERP_DISCOVERY` controls optional Facebook event URL discovery via SerpAPI. It is **enabled by default**; set to `0`, `false`, or `no` to disable.
 
 ## Facebook Pages sheet format
 
