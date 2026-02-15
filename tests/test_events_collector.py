@@ -10,9 +10,12 @@ from scripts.events_collector import (
     dedupe_merge,
     evaluate_automotive_focus_event,
     extract_facebook_page_identifier,
+    extract_facebook_group_key,
+    classify_facebook_pages_url,
     normalize_facebook_page_event,
     collect_facebook_events_from_pages,
     collect_facebook_events_serpapi_discovery,
+    collect_facebook_group_events_serpapi,
     SourceDisabledError,
     derive_zero_yield_reason,
 )
@@ -85,6 +88,15 @@ class CollectorTests(unittest.TestCase):
             "123456789012345",
         )
 
+    def test_classify_facebook_pages_url_and_group_key(self):
+        self.assertEqual(classify_facebook_pages_url("https://www.facebook.com/groups/cincycarsclub/"), "group")
+        self.assertEqual(classify_facebook_pages_url("https://www.facebook.com/carsandcoffeecincy/"), "page")
+        self.assertEqual(classify_facebook_pages_url("https://example.com/community"), "non_facebook")
+        self.assertEqual(
+            extract_facebook_group_key("https://www.facebook.com/groups/cincycarsclub/?ref=share"),
+            "cincycarsclub",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
@@ -139,3 +151,35 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         )
         self.assertEqual(reason, "filtered_out_by_window")
 
+    def test_facebook_group_serpapi_collector_adds_group_metadata(self):
+        pages = [
+            {
+                "page_url": "https://www.facebook.com/groups/cincycarsclub/",
+                "enabled": True,
+                "page_type": "group",
+            }
+        ]
+        rows = [
+            {
+                "url": "https://www.facebook.com/events/1234567890/",
+                "result": {
+                    "link": "https://www.facebook.com/events/1234567890/",
+                    "title": "Cars and Coffee Meetup",
+                    "snippet": "Saturday, March 2 at 9 AM · Cincinnati",
+                },
+            }
+        ]
+
+        with patch("scripts.events_collector.SERPAPI_API_KEY", "fake-serpapi-key"), patch(
+            "scripts.events_collector.load_facebook_targets", return_value={"group": pages, "page": [], "non_facebook": []}
+        ), patch(
+            "scripts.events_collector.collect_facebook_group_event_urls_serpapi", return_value=(rows, None)
+        ), patch(
+            "scripts.events_collector.fetch_facebook_event_via_graph", side_effect=AssertionError("Graph enrichment should be skipped")
+        ):
+            out = collect_facebook_group_events_serpapi(cfg={}, url_cache={}, diagnostics={})
+
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0].get("source"), "facebook_group_serpapi")
+        self.assertEqual(out[0].get("source_group_key"), "cincycarsclub")
+        self.assertIn("facebook.com/groups/cincycarsclub", out[0].get("source_group_url", ""))
