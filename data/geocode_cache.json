@@ -300,5 +300,41 @@
   "Yellow Springs, OH": {
     "lat": "39.8045432",
     "lon": "-83.8925234"
+  },
+  "Marina Blvd & Marina Green Dr Marina Blvd & Marina Green Dr, San Francisco, Ca 94123 San Francisco Ca 94123": null,
+  "Woodside, CA": {
+    "lat": "37.4280637",
+    "lon": "-122.2507435"
+  },
+  "San Francisco San Francisco, CA": {
+    "lat": "37.7765470",
+    "lon": "-122.3948371"
+  },
+  "Broadway Oakland, CA": {
+    "lat": "37.8030878",
+    "lon": "-122.2714688"
+  },
+  "oakland, CA": {
+    "lat": "37.8044557",
+    "lon": "-122.2713560"
+  },
+  "Palo Alto, CA": {
+    "lat": "37.4443293",
+    "lon": "-122.1598465"
+  },
+  "Los Altos, CA": {
+    "lat": "37.3790629",
+    "lon": "-122.1165780"
+  },
+  "The Commonwealth Club 110 The Embarcadero, 94105, CA 94105 CA": null,
+  "Grandview Av South San Francisco, CA": null,
+  "Refer Eventbrite Ticket Link Refer Eventbrite Ticket Link, Washington, dc 20001 Washington dc 20001": null,
+  "Fremont, CA": {
+    "lat": "37.5482697",
+    "lon": "-121.9885710"
+  },
+  "Bay Area, CA": {
+    "lat": "37.7884969",
+    "lon": "-122.3558473"
   }
 }
