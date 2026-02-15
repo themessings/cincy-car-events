@@ -1950,7 +1950,7 @@ def main():
             source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
             log(f"⚠️ Source failed: {sname} [{stype}] :: {ex}")
 
-    enable_fb_discovery = clean_ws(os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "")).lower() in ("1", "true", "yes")
+    enable_fb_discovery = clean_ws(os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "1")).lower() not in ("0", "false", "no")
     if serpapi_enabled and enable_fb_discovery:
         try:
             discovered = collect_facebook_events_serpapi_discovery(cfg, url_cache)
@@ -1959,7 +1959,7 @@ def main():
         except Exception as ex:
             log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
     elif serpapi_enabled:
-        log("ℹ️ Facebook event URL discovery is optional and disabled (ENABLE_FACEBOOK_SERP_DISCOVERY not true).")
+        log("ℹ️ Facebook event URL discovery disabled via ENABLE_FACEBOOK_SERP_DISCOVERY.")
     else:
         log("⚠️ SERPAPI_API_KEY missing; skipping broad web discovery collectors.")
 
