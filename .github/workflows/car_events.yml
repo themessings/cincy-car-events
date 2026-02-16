@@ -26,6 +26,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Syntax check collector scripts
+        run: |
+          python -m py_compile scripts/events_collector.py scripts/validate_runtime_env.py
+
       - name: Validate required runtime secrets
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
