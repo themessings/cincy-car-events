@@ -4,6 +4,7 @@ import json
 import os
 import re
 import time
+import traceback
 from collections import Counter
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta, timezone
@@ -740,16 +741,6 @@ def load_facebook_targets(force_reload: bool = False) -> Dict[str, List[dict]]:
     return grouped
 
 
-def load_facebook_targets() -> Dict[str, List[dict]]:
-    pages = load_facebook_pages()
-    grouped = {"page": [], "group": [], "non_facebook": []}
-    for row in pages:
-        page_type = row.get("page_type") or classify_facebook_pages_url(row.get("page_url", ""))
-        row["page_type"] = page_type
-        grouped.setdefault(page_type, []).append(row)
-    return grouped
-
-
 def normalize_facebook_page_event(item: dict, page_name: str) -> Optional[dict]:
     title = clean_ws(item.get("name", ""))
     start_dt = parse_dt(item.get("start_time"))
@@ -1203,6 +1194,13 @@ def is_automotive_focus_event(title: str, location: str, source: str, url: str, 
 
 def log(msg: str) -> None:
     print(msg, flush=True)
+
+
+def log_exception_context(context: str, ex: Exception) -> str:
+    tb = traceback.format_exc()
+    log(f"⚠️ {context}: {ex}")
+    log(tb.rstrip())
+    return tb
 
 
 # -------------------------
@@ -1841,9 +1839,10 @@ def build_facebook_group_serpapi_queries(group_key: str) -> List[str]:
     ]
 
 
-def collect_facebook_group_event_urls_serpapi(group_url: str, group_key: str, cfg: dict) -> Tuple[List[dict], Optional[str]]:
+def collect_facebook_group_event_urls_serpapi(group_url: str, group_key: str, cfg: dict) -> Tuple[List[dict], Optional[str], dict]:
     max_results = int(cfg.get("discovery", {}).get("facebook_group_serpapi_max_results", 20) or 20)
     queries = build_facebook_group_serpapi_queries(group_key)
+    enrich = {"group_name": clean_ws(group_key.replace("-", " ")).title() if group_key else "", "serp_urls": 0}
 
     found_rows: List[dict] = []
     for q in queries:
@@ -1881,22 +1880,6 @@ def collect_facebook_group_event_urls_serpapi(group_url: str, group_key: str, cf
 
 
 def collect_facebook_group_events_serpapi(source: dict, cfg: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
-    event_rows: List[dict] = []
-    seen_urls = set()
-    for row in found_rows:
-        normalized = normalize_facebook_event_url(row.get("url", ""))
-        if not re.fullmatch(r"https://www\.facebook\.com/events/\d+/", normalized):
-            continue
-        if normalized in seen_urls:
-            continue
-        seen_urls.add(normalized)
-        item = dict(row)
-        item["url"] = normalized
-        event_rows.append(item)
-    return event_rows, None
-
-
-def collect_facebook_group_events_serpapi(cfg: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
     diagnostics = diagnostics if diagnostics is not None else {}
     diagnostics.setdefault("raw_candidates", 0)
     diagnostics.setdefault("parse_failures", 0)
@@ -1952,11 +1935,6 @@ def collect_facebook_group_events_serpapi(cfg: dict, url_cache: Dict[str, dict],
             serp_urls_count = int(enrich.get("serp_urls", 0))
             group_name = clean_ws(enrich.get("group_name", ""))
             total_serp_urls += serp_urls_count
-        try:
-            event_rows, _ = collect_facebook_group_event_urls_serpapi(group_url, group_key, cfg)
-            groups_queried += 1
-            serp_urls_count = len(event_rows)
-            total_event_urls_discovered += len(event_rows)
 
             for row in event_rows:
                 u = clean_ws(row.get("url", ""))
@@ -2016,11 +1994,10 @@ def collect_facebook_group_events_serpapi(cfg: dict, url_cache: Dict[str, dict],
                         "facebook_event_id": ev.get("facebook_event_id", ""),
                     },
                 }
-
             total_event_urls_discovered += event_urls_count
         except Exception as ex:
             groups_with_errors.append(group_key)
-            log(f"⚠️ Group discovery failed for {group_key}: {ex}")
+            log_exception_context(f"Group discovery failed for {group_key}", ex)
 
         log(f"🔎 Group discovery: {group_key} -> serp_urls={serp_urls_count} event_urls={event_urls_count} parsed={parsed_count}")
 
@@ -2787,6 +2764,7 @@ def main():
 
     raw_events: List[dict] = []
     source_run_stats: List[dict] = []
+    source_failures: List[dict] = []
     pipeline_metrics: Dict[str, dict] = {}
     source_filter_stats: Dict[str, Counter] = {}
 
@@ -2821,9 +2799,6 @@ def main():
                 raw_events.extend(collect_web_search_facebook_events_serpapi(source_with_context, url_cache, diagnostics=diagnostics))
             elif stype == "facebook_group_events_serpapi":
                 raw_events.extend(collect_facebook_group_events_serpapi(source_with_context, cfg, url_cache, diagnostics=diagnostics))
-                raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache, diagnostics=diagnostics))
-            elif stype == "facebook_group_events_serpapi":
-                raw_events.extend(collect_facebook_group_events_serpapi(cfg, url_cache, diagnostics=diagnostics))
             else:
                 log(f"Skipping unknown source type: {stype} ({sname})")
 
@@ -2840,7 +2815,7 @@ def main():
             log(f"⚪ Source disabled: {sname} [{stype}] :: {ex}")
         except Exception as ex:
             source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
-            log(f"⚠️ Source failed: {sname} [{stype}] :: {ex}")
+            source_failures.append({"name": sname, "type": stype, "error": str(ex), "traceback": log_exception_context(f"Source failed: {sname} [{stype}]", ex)})
 
     enable_fb_discovery = clean_ws(os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "1")).lower() not in ("0", "false", "no")
     if serpapi_enabled and enable_fb_discovery:
@@ -2851,7 +2826,12 @@ def main():
             raw_events.extend(discovered)
             log(f"🔎 Source complete: SerpAPI FB discovery (optional) -> {len(discovered)} events")
         except Exception as ex:
-            log(f"⚠️ Facebook SerpAPI discovery failed: {ex}")
+            source_failures.append({
+                "name": "SerpAPI FB discovery (optional)",
+                "type": "web_search_facebook_events_serpapi_discovery",
+                "error": str(ex),
+                "traceback": log_exception_context("Facebook SerpAPI discovery failed", ex),
+            })
     elif serpapi_enabled:
         log("ℹ️ Facebook event URL discovery disabled via ENABLE_FACEBOOK_SERP_DISCOVERY.")
     else:
@@ -2895,18 +2875,27 @@ def main():
     if spreadsheet_id:
         log(f"📄 Sheets URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
 
+    run_timestamp = datetime.now().strftime('%Y-%m-%d_%H%M%S')
+    run_dir = os.path.join(RUNS_DIR, run_timestamp)
+    os.makedirs(run_dir, exist_ok=True)
+
     run_report = {
         "generated_at_iso": now_et_iso(),
         "raw_events": len(raw_events),
         "incoming_after_filters": len(incoming),
         "merged_total": len(merged),
         "source_stats": source_run_stats,
+        "source_failures": source_failures,
         "serpapi_enabled": serpapi_enabled,
         "dry_run": clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y"),
         "pipeline_metrics": pipeline_metrics,
     }
-    run_path = os.path.join(RUNS_DIR, f"run_{datetime.now().strftime('%Y-%m-%d_%H%M%S')}.json")
+    run_path = os.path.join(run_dir, "run.json")
     save_json(run_path, run_report)
+    failures_path = ""
+    if source_failures:
+        failures_path = os.path.join(run_dir, "failures.json")
+        save_json(failures_path, {"generated_at_iso": now_et_iso(), "count": len(source_failures), "failures": source_failures})
 
     skipped_sources = [x for x in source_run_stats if x.get("status") == "skipped"]
     log(f"📄 Sheets rows written (excluding header): {len(merged)}")
@@ -2918,6 +2907,16 @@ def main():
     log(f"   Wrote: {GEOCODE_CACHE_PATH}")
     log(f"   Wrote: {URL_CACHE_PATH}")
     log(f"   Wrote: {run_path}")
+    if failures_path:
+        log(f"   Wrote: {failures_path}")
+    log(
+        f"📊 Final summary: sources_attempted={len(sources)} sources_failed={len(source_failures)} "
+        f"events_collected={len(raw_events)}"
+    )
+    log(
+        f"📁 Output summary: events_json={EVENTS_JSON_PATH} events_csv={EVENTS_CSV_PATH} "
+        f"run_report={run_path}{' failures=' + failures_path if failures_path else ''}"
+    )
     log(f"⏱️ Total runtime seconds: {round(_time.time() - t0, 1)}")
 
 
