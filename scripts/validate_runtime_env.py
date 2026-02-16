@@ -7,7 +7,12 @@ import os
 import re
 import sys
 
-import requests
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+if REPO_ROOT not in sys.path:
+    sys.path.insert(0, REPO_ROOT)
+
+from scripts.facebook_token_manager import TokenManager
 
 
 def extract_spreadsheet_id(value: str) -> str:
@@ -21,50 +26,14 @@ def extract_spreadsheet_id(value: str) -> str:
     return raw
 
 
-
-
-def fb_graph_token_status() -> tuple[str, str]:
-    token = os.getenv("FACEBOOK_ACCESS_TOKEN", "").strip()
-    if not token:
-        return "no", "missing"
-    try:
-        r = requests.get(
-            "https://graph.facebook.com/v18.0/me",
-            params={"access_token": token, "fields": "id"},
-            timeout=10,
-        )
-        if r.status_code == 200:
-            return "yes", "ok"
-        try:
-            err = (r.json() or {}).get("error", {})
-        except Exception:
-            err = {}
-        code = str(err.get("code", ""))
-        subcode = str(err.get("error_subcode", ""))
-        msg = str(err.get("message", "")).lower()
-        if code == "190" or subcode == "463" or "session has expired" in msg:
-            return "no", "expired"
-        if "access token" in msg and "invalid" in msg:
-            return "no", "malformed"
-        if r.status_code in (400, 401, 403):
-            return "no", "permissions"
-        return "no", f"http_{r.status_code}"
-    except Exception:
-        return "no", "unverified"
-
-
 def main() -> int:
     missing_required = []
 
     if not os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON"):
-        missing_required.append(
-            "❌ Missing GDRIVE_SERVICE_ACCOUNT_JSON secret; spreadsheet update cannot run."
-        )
+        missing_required.append("❌ Missing GDRIVE_SERVICE_ACCOUNT_JSON secret; spreadsheet update cannot run.")
 
     if not os.getenv("APEX_SPREADSHEET_ID"):
-        missing_required.append(
-            "❌ Missing APEX_SPREADSHEET_ID; spreadsheet destination is undefined."
-        )
+        missing_required.append("❌ Missing APEX_SPREADSHEET_ID; spreadsheet destination is undefined.")
 
     token_env_name = "FACEBOOK_ACCESS_TOKEN"
     token_present = bool(os.getenv(token_env_name))
@@ -74,8 +43,24 @@ def main() -> int:
     if not token_present:
         print("⚠️ FACEBOOK_ACCESS_TOKEN is empty; Facebook Graph API collection will be skipped.")
 
-    token_valid, token_reason = fb_graph_token_status()
-    print(f"ℹ️ FACEBOOK_GRAPH token_valid: {token_valid} (reason: {token_reason})")
+    app_id = bool((os.getenv("FACEBOOK_APP_ID") or "").strip())
+    app_secret = bool((os.getenv("FACEBOOK_APP_SECRET") or "").strip())
+    print(f"ℹ️ FACEBOOK_APP_ID set: {'yes' if app_id else 'no'}")
+    print(f"ℹ️ FACEBOOK_APP_SECRET set: {'yes' if app_secret else 'no'}")
+    if token_present and (not app_id or not app_secret):
+        print("⚠️ FACEBOOK_APP_ID / FACEBOOK_APP_SECRET missing; token auto-refresh may not work reliably.")
+
+    manager = TokenManager(print)
+    token_status = manager.ensure_valid_user_token(refresh_days_threshold=7)
+    print(
+        "ℹ️ FACEBOOK_GRAPH token_valid: "
+        f"{token_status.get('valid', 'no')} "
+        f"(reason: {token_status.get('reason', 'unknown')}, "
+        f"expires_at_et: {token_status.get('expires_at_et', 'unknown')})"
+    )
+
+    if token_status.get("refresh_attempted") and not token_status.get("refresh_succeeded"):
+        print(f"⚠️ FACEBOOK token refresh attempt failed: {token_status.get('refresh_error')}")
 
     if not os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID") and not os.getenv("FACEBOOK_PAGE_IDS"):
         print("⚠️ Neither APEX_FACEBOOK_PAGES_SHEET_ID nor FACEBOOK_PAGE_IDS is set; FB page events source has no IDs.")
@@ -84,10 +69,7 @@ def main() -> int:
     normalized_pages_sheet = extract_spreadsheet_id(raw_pages_sheet)
     if raw_pages_sheet:
         if raw_pages_sheet != normalized_pages_sheet:
-            print(
-                "ℹ️ APEX_FACEBOOK_PAGES_SHEET_ID provided as URL; "
-                f"extracted spreadsheet ID: {normalized_pages_sheet}"
-            )
+            print("ℹ️ APEX_FACEBOOK_PAGES_SHEET_ID provided as URL; " f"extracted spreadsheet ID: {normalized_pages_sheet}")
         if re.fullmatch(r"[a-zA-Z0-9-_]{20,}", normalized_pages_sheet):
             print(f"✅ APEX_FACEBOOK_PAGES_SHEET_ID will use spreadsheet ID: {normalized_pages_sheet}")
         else:
@@ -103,11 +85,7 @@ def main() -> int:
         print("ℹ️ SERPAPI_API_KEY is optional; discovery sources will self-skip when unset.")
 
     fb_discovery_enabled = os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "1").strip().lower() not in {"0", "false", "no"}
-    print(
-        "ℹ️ ENABLE_FACEBOOK_SERP_DISCOVERY is "
-        + ("enabled" if fb_discovery_enabled else "disabled")
-        + " (default: enabled)."
-    )
+    print("ℹ️ ENABLE_FACEBOOK_SERP_DISCOVERY is " + ("enabled" if fb_discovery_enabled else "disabled") + " (default: enabled).")
 
     if missing_required:
         for msg in missing_required:
