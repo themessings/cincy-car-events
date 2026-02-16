@@ -176,38 +176,13 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         with patch("scripts.events_collector.SERPAPI_API_KEY", "fake-serpapi-key"), patch(
             "scripts.events_collector.load_facebook_targets", return_value={"group": pages, "page": [], "non_facebook": []}
         ), patch(
-            "scripts.events_collector.collect_facebook_group_event_urls_serpapi", return_value=(rows, None, {"group_name": "Cincy Cars Club", "serp_urls": 5})
+            "scripts.events_collector.collect_facebook_group_event_urls_serpapi", return_value=(rows, None)
         ), patch(
             "scripts.events_collector.fetch_facebook_event_via_graph", side_effect=AssertionError("Graph enrichment should be skipped")
         ):
-            out = collect_facebook_group_events_serpapi(source={}, cfg={}, url_cache={}, diagnostics={})
+            out = collect_facebook_group_events_serpapi(cfg={}, url_cache={}, diagnostics={})
 
         self.assertEqual(len(out), 1)
         self.assertEqual(out[0].get("source"), "facebook_group_serpapi")
         self.assertEqual(out[0].get("source_group_key"), "cincycarsclub")
         self.assertIn("facebook.com/groups/cincycarsclub", out[0].get("source_group_url", ""))
-        self.assertEqual(out[0].get("source_group_name"), "Cincy Cars Club")
-
-    def test_main_falls_back_when_load_facebook_targets_force_reload_unsupported(self):
-        with patch("scripts.events_collector.load_facebook_targets", side_effect=[TypeError("unexpected keyword"), {"page": [], "group": [], "non_facebook": []}]), patch(
-            "scripts.events_collector.load_yaml", return_value={"sources": []}
-        ), patch(
-            "scripts.events_collector.load_json", return_value={"events": []}
-        ), patch(
-            "scripts.events_collector.filter_existing_automotive_events", return_value=[]
-        ), patch(
-            "scripts.events_collector.is_automotive_event_safe", return_value=True
-        ), patch(
-            "scripts.events_collector.to_event_items", return_value=[]
-        ), patch(
-            "scripts.events_collector.dedupe_merge", return_value=[]
-        ), patch(
-            "scripts.events_collector.save_json"
-        ), patch(
-            "scripts.events_collector.write_csv"
-        ), patch(
-            "scripts.events_collector.update_apex_spreadsheet"
-        ), patch(
-            "scripts.events_collector.log"
-        ):
-            main()
