@@ -10,11 +10,16 @@ from scripts.events_collector import (
     dedupe_merge,
     evaluate_automotive_focus_event,
     extract_facebook_page_identifier,
+    extract_facebook_group_key,
+    classify_facebook_pages_url,
     normalize_facebook_page_event,
     collect_facebook_events_from_pages,
     collect_facebook_events_serpapi_discovery,
+    collect_facebook_group_events_serpapi,
     SourceDisabledError,
     derive_zero_yield_reason,
+    main,
+    load_facebook_targets,
 )
 
 
@@ -85,6 +90,15 @@ class CollectorTests(unittest.TestCase):
             "123456789012345",
         )
 
+    def test_classify_facebook_pages_url_and_group_key(self):
+        self.assertEqual(classify_facebook_pages_url("https://www.facebook.com/groups/cincycarsclub/"), "group")
+        self.assertEqual(classify_facebook_pages_url("https://www.facebook.com/carsandcoffeecincy/"), "page")
+        self.assertEqual(classify_facebook_pages_url("https://example.com/community"), "non_facebook")
+        self.assertEqual(
+            extract_facebook_group_key("https://www.facebook.com/groups/cincycarsclub/?ref=share"),
+            "cincycarsclub",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
@@ -112,7 +126,9 @@ class FacebookDiagnosticsTests(unittest.TestCase):
             return _FakeResponse(400, {"error": {"code": 190, "error_subcode": 463, "message": "Session has expired"}})
 
         diagnostics = {}
-        with patch("scripts.events_collector.FACEBOOK_ACCESS_TOKEN", "fake-token"), patch("scripts.events_collector.requests.get", side_effect=fake_get):
+        with patch("scripts.events_collector.FACEBOOK_ACCESS_TOKEN", "fake-token"), patch(
+            "scripts.events_collector.FACEBOOK_GRAPH_RUNTIME", {"checked": True, "valid": True, "reason": "ok"}
+        ), patch("scripts.events_collector.requests.get", side_effect=fake_get):
             with self.assertRaises(SourceDisabledError):
                 collect_facebook_events_from_pages(pages, diagnostics=diagnostics)
 
@@ -139,3 +155,66 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         )
         self.assertEqual(reason, "filtered_out_by_window")
 
+    def test_facebook_group_serpapi_collector_adds_group_metadata(self):
+        pages = [
+            {
+                "page_url": "https://www.facebook.com/groups/cincycarsclub/",
+                "enabled": True,
+                "page_type": "group",
+            }
+        ]
+        rows = [
+            {
+                "url": "https://www.facebook.com/events/1234567890/",
+                "result": {
+                    "link": "https://www.facebook.com/events/1234567890/",
+                    "title": "Cars and Coffee Meetup",
+                    "snippet": "Saturday, March 2 at 9 AM · Cincinnati",
+                },
+            }
+        ]
+
+        with patch("scripts.events_collector.SERPAPI_API_KEY", "fake-serpapi-key"), patch(
+            "scripts.events_collector.load_facebook_targets", return_value={"group": pages, "page": [], "non_facebook": []}
+        ), patch(
+            "scripts.events_collector.collect_facebook_group_event_urls_serpapi", return_value=(rows, None, {"group_name": "Cincy Cars Club", "serp_urls": 5})
+        ), patch(
+            "scripts.events_collector.fetch_facebook_event_via_graph", side_effect=AssertionError("Graph enrichment should be skipped")
+        ):
+            out = collect_facebook_group_events_serpapi(source={}, cfg={}, url_cache={}, diagnostics={})
+
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0].get("source"), "facebook_group_serpapi")
+        self.assertEqual(out[0].get("source_group_key"), "cincycarsclub")
+        self.assertIn("facebook.com/groups/cincycarsclub", out[0].get("source_group_url", ""))
+        self.assertEqual(out[0].get("source_group_name"), "Cincy Cars Club")
+
+    def test_main_calls_load_facebook_targets_with_force_reload(self):
+        with patch("scripts.events_collector.load_facebook_targets", return_value={"page": [], "group": [], "non_facebook": []}) as mock_targets, patch(
+            "scripts.events_collector.load_yaml", return_value={"sources": []}
+        ), patch(
+            "scripts.events_collector.load_json", return_value={"events": []}
+        ), patch(
+            "scripts.events_collector.filter_existing_automotive_events", return_value=[]
+        ), patch(
+            "scripts.events_collector.is_automotive_event_safe", return_value=True
+        ), patch(
+            "scripts.events_collector.to_event_items", return_value=[]
+        ), patch(
+            "scripts.events_collector.dedupe_merge", return_value=[]
+        ), patch(
+            "scripts.events_collector.save_json"
+        ), patch(
+            "scripts.events_collector.write_csv"
+        ), patch(
+            "scripts.events_collector.update_apex_spreadsheet"
+        ), patch(
+            "scripts.events_collector.log"
+        ):
+            main()
+        mock_targets.assert_called_once_with(force_reload=True)
+
+    def test_load_facebook_targets_accepts_force_reload(self):
+        with patch("scripts.events_collector.load_facebook_pages", return_value=[]):
+            out = load_facebook_targets(force_reload=True)
+        self.assertEqual(out, {"page": [], "group": [], "non_facebook": []})

@@ -26,6 +26,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Syntax check collector scripts
+        run: |
+          python -m py_compile scripts/events_collector.py scripts/validate_runtime_env.py
+
       - name: Validate required runtime secrets
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
@@ -33,7 +37,14 @@ jobs:
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
           APEX_FACEBOOK_PAGES_SHEET_ID: 1pol-GLdo3ylizOJ0DG3cDwo9TVClEJ23To7ber0waik
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
-        run: python -u scripts/validate_runtime_env.py
+        run: |
+          echo "ℹ️ Facebook token env var name: FACEBOOK_ACCESS_TOKEN"
+          if [ -n "${FACEBOOK_ACCESS_TOKEN:-}" ]; then
+            echo "ℹ️ FACEBOOK_ACCESS_TOKEN non-empty: yes"
+          else
+            echo "ℹ️ FACEBOOK_ACCESS_TOKEN non-empty: no"
+          fi
+          python -u scripts/validate_runtime_env.py
 
       - name: Run collector
         env:
