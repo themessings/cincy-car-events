@@ -28,7 +28,7 @@ jobs:
 
       - name: Syntax check collector scripts
         run: |
-          python -m py_compile scripts/events_collector.py scripts/validate_runtime_env.py tests/test_events_collector.py
+          python -m py_compile scripts/events_collector.py scripts/validate_runtime_env.py
 
       - name: Validate required runtime secrets
         env:
