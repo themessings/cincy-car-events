@@ -8,7 +8,7 @@ from collections import Counter
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
-from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.parse import parse_qs, unquote, urljoin, urlparse
 
 import dateparser
 import requests
@@ -59,6 +59,7 @@ DEFAULT_HTTP_HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 SOURCE_DIAGNOSTICS: Dict[str, dict] = {}
+FACEBOOK_TARGETS_CACHE: Optional[List[dict]] = None
 
 
 def extract_google_spreadsheet_id(value: str) -> str:
@@ -86,19 +87,50 @@ def normalize_facebook_pages_sheet_id(raw_value: str, context: str = "collector"
     return ""
 
 
+def decode_serpapi_candidate_url(url: str) -> str:
+    """Decode common Google/FB redirect wrappers down to a direct target URL when possible."""
+    raw = clean_ws(url)
+    if not raw:
+        return ""
+
+    parsed = urlparse(raw if "://" in raw else f"https://{raw}")
+    host = (parsed.netloc or "").lower()
+
+    if host.endswith("google.com") and parsed.path == "/url":
+        q_target = clean_ws((parse_qs(parsed.query).get("q") or [""])[0])
+        if q_target:
+            return decode_serpapi_candidate_url(unquote(q_target))
+
+    if host in {"l.facebook.com", "lm.facebook.com"} and parsed.path.startswith("/l.php"):
+        u_target = clean_ws((parse_qs(parsed.query).get("u") or [""])[0])
+        if u_target:
+            return decode_serpapi_candidate_url(unquote(u_target))
+
+    return raw
+
+
 def extract_facebook_event_id(url: str) -> Optional[str]:
-    """
-    Accepts URLs like:
-      https://www.facebook.com/events/1234567890/
-      https://m.facebook.com/events/1234567890/?ref=...
-    Returns event_id as string.
-    """
+    """Extract event ID from facebook events/event.php URLs."""
     if not url:
         return None
-    m = re.search(r"facebook\.com/events/(\d+)", url)
+
+    decoded = decode_serpapi_candidate_url(url)
+    parsed = urlparse(decoded if "://" in decoded else f"https://{decoded}")
+    host = (parsed.netloc or "").lower()
+    if "facebook.com" not in host:
+        return None
+
+    path = clean_ws(parsed.path or "")
+    m = re.search(r"/events/(\d+)", path)
     if m:
         return m.group(1)
-    m = re.search(r"m\.facebook\.com/events/(\d+)", url)
+
+    if path.rstrip("/").lower().endswith("/event.php"):
+        eid = clean_ws((parse_qs(parsed.query).get("eid") or [""])[0])
+        if eid.isdigit():
+            return eid
+
+    m = re.search(r"facebook\.com/events/(\d+)", decoded)
     if m:
         return m.group(1)
     return None
@@ -309,19 +341,18 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
     fb_rows = []
     seen = set()
     for row in rows:
-        u = normalize_facebook_event_url(clean_ws(row.get("url", "")))
-        if "facebook.com/events/" not in u:
-            continue
-        m = re.search(r"(https?://(www\.)?facebook\.com/events/\d+)", u)
-        if not m:
-            continue
-        nu = m.group(1)
-        if nu in seen:
-            continue
-        seen.add(nu)
-        item = dict(row)
-        item["url"] = nu
-        fb_rows.append(item)
+        result_item = row.get("result", {}) if isinstance(row, dict) else {}
+        candidate_urls = extract_facebook_event_urls_from_serpapi_result(result_item)
+        if not candidate_urls:
+            fallback = normalize_facebook_event_url(clean_ws(row.get("url", "")))
+            candidate_urls = [fallback] if fallback else []
+        for nu in candidate_urls:
+            if nu in seen:
+                continue
+            seen.add(nu)
+            item = dict(row)
+            item["url"] = nu
+            fb_rows.append(item)
 
     if not fb_rows:
         diagnostics["reason"] = "no_results_from_search"
@@ -507,14 +538,19 @@ def parse_facebook_pages_from_env() -> List[dict]:
         return []
 
     out: List[dict] = []
+    seen_urls = set()
     for token in raw.split(","):
-        page_url = clean_ws(token)
-        if not page_url:
+        page_url = normalize_facebook_target_url(token)
+        if not page_url or page_url in seen_urls:
             continue
-        identifier = extract_facebook_page_identifier(page_url)
-        if not identifier:
-            log(f"⚠️ Ignoring FACEBOOK_PAGE_IDS entry; unable to parse page identifier: {page_url}")
+        seen_urls.add(page_url)
+
+        page_type = classify_facebook_pages_url(page_url)
+        identifier = extract_facebook_page_identifier(page_url) if page_type in {"page", "group"} else ""
+        if page_type in {"page", "group"} and not identifier:
+            log(f"⚠️ Ignoring FACEBOOK_PAGE_IDS entry; unable to parse facebook URL: {token}")
             continue
+
         out.append({
             "page_url": page_url,
             "page_identifier": identifier,
@@ -525,12 +561,12 @@ def parse_facebook_pages_from_env() -> List[dict]:
             "origin": "env",
         })
     if out:
-        log(f"✅ Loaded Facebook pages from FACEBOOK_PAGE_IDS: {len(out)}")
+        log(f"✅ Loaded Facebook targets from FACEBOOK_PAGE_IDS: {len(out)}")
     return out
 
 
 def load_facebook_pages_from_sheet() -> List[dict]:
-    """Load page URLs from a configurable tab with page_url/enabled/label/notes columns."""
+    """Load URLs from the Pages tab and classify as page/group/non_facebook."""
     sheet_id = normalize_facebook_pages_sheet_id(clean_ws(os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID", "")))
     if not sheet_id:
         log("⚠️ Missing APEX_FACEBOOK_PAGES_SHEET_ID; Pages sheet source disabled.")
@@ -573,10 +609,23 @@ def load_facebook_pages_from_sheet() -> List[dict]:
         return []
 
     out: List[dict] = []
+    seen_urls = set()
+    malformed_facebook_rows = 0
+    non_facebook_rows = 0
+    duplicate_rows = 0
+
     for idx, r in enumerate(rows[1:], start=2):
-        page_url = clean_ws(r[header_idx["page_url"]] if len(r) > header_idx["page_url"] else "")
+        page_url_raw = clean_ws(r[header_idx["page_url"]] if len(r) > header_idx["page_url"] else "")
+        if not page_url_raw:
+            continue
+
+        page_url = normalize_facebook_target_url(page_url_raw)
         if not page_url:
             continue
+        if page_url in seen_urls:
+            duplicate_rows += 1
+            continue
+        seen_urls.add(page_url)
 
         enabled_raw = ""
         if "enabled" in header_idx and len(r) > header_idx["enabled"]:
@@ -601,18 +650,38 @@ def load_facebook_pages_from_sheet() -> List[dict]:
             "origin": "sheet",
         })
 
-    log(f"✅ Facebook Pages sheet loaded: rows={len(out)} tab={tab_name}")
+    log(
+        f"✅ Facebook Pages sheet loaded: rows={len(out)} tab={tab_name} "
+        f"(non_facebook={non_facebook_rows} deduped={duplicate_rows} malformed={malformed_facebook_rows})"
+    )
     return out
 
 
-def load_facebook_pages() -> List[dict]:
+def load_facebook_pages(force_reload: bool = False) -> List[dict]:
+    global FACEBOOK_TARGETS_CACHE
+
+    if FACEBOOK_TARGETS_CACHE is not None and not force_reload:
+        return FACEBOOK_TARGETS_CACHE
+
     pages = load_facebook_pages_from_sheet()
-    if pages:
-        return pages
-    env_pages = parse_facebook_pages_from_env()
-    if env_pages:
-        log("ℹ️ Using FACEBOOK_PAGE_IDS fallback because sheet source yielded no pages.")
-    return env_pages
+    if not pages:
+        env_pages = parse_facebook_pages_from_env()
+        if env_pages:
+            log("ℹ️ Using FACEBOOK_PAGE_IDS fallback because sheet source yielded no pages.")
+        pages = env_pages
+
+    FACEBOOK_TARGETS_CACHE = pages
+    return pages
+
+
+def load_facebook_targets(force_reload: bool = False) -> Dict[str, List[dict]]:
+    pages = load_facebook_pages(force_reload=force_reload)
+    grouped = {"page": [], "group": [], "non_facebook": []}
+    for row in pages:
+        page_type = row.get("page_type") or classify_facebook_pages_url(row.get("page_url", ""))
+        row["page_type"] = page_type
+        grouped.setdefault(page_type, []).append(row)
+    return grouped
 
 
 def load_facebook_targets() -> Dict[str, List[dict]]:
@@ -1236,7 +1305,8 @@ def collect_ics(source: dict) -> List[dict]:
 
 
 def collect_facebook_page_events(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
-    pages = load_facebook_pages()
+    targets = source.get("_facebook_targets") or load_facebook_targets()
+    pages = targets.get("page", [])
     events = collect_facebook_events_from_pages(pages, diagnostics=diagnostics)
     source_name = source.get("name", "Facebook Page Events")
     for e in events:
@@ -1247,8 +1317,14 @@ def collect_facebook_page_events(source: dict, diagnostics: Optional[dict] = Non
 # -------------------------
 # NEW: Search the web (SerpAPI) + parse schema.org Event
 # -------------------------
-def serpapi_search(query: str, max_results: int = 20, page_size: int = 20, return_payload: bool = False):
-    """Return SerpAPI organic links (and optionally payload rows) with pagination and retry/backoff."""
+def serpapi_search(
+    query: str,
+    max_results: int = 20,
+    page_size: int = 20,
+    return_payload: bool = False,
+    max_pages: int = 1,
+):
+    """Return SerpAPI links (and payload rows) with bounded pagination and retry/backoff."""
     if not SERPAPI_API_KEY:
         log("⚠️ Skipping SerpAPI search: missing SERPAPI_API_KEY.")
         return ([], []) if return_payload else []
@@ -1256,11 +1332,13 @@ def serpapi_search(query: str, max_results: int = 20, page_size: int = 20, retur
     url = "https://serpapi.com/search.json"
     page_size = max(10, min(page_size, 100))
     target = max(1, max_results)
+    max_pages = max(1, max_pages)
 
     links: List[str] = []
     payload_rows: List[dict] = []
     start = 0
-    while len(links) < target:
+    page_count = 0
+    while len(links) < target and page_count < max_pages:
         params = {
             "engine": "google",
             "q": query,
@@ -1287,6 +1365,7 @@ def serpapi_search(query: str, max_results: int = 20, page_size: int = 20, retur
 
         if not data:
             break
+
         organic = data.get("organic_results", []) or []
         if not organic:
             break
@@ -1297,6 +1376,7 @@ def serpapi_search(query: str, max_results: int = 20, page_size: int = 20, retur
                 links.append(link)
                 payload_rows.append(item)
 
+        page_count += 1
         if len(organic) < params["num"]:
             break
         start += params["num"]
@@ -1318,6 +1398,57 @@ def serpapi_search(query: str, max_results: int = 20, page_size: int = 20, retur
         return dedup_links, dedup_rows
     return dedup_links
 
+
+def collect_serpapi_candidate_urls(result_item: dict) -> List[str]:
+    """Extract candidate URLs from known SerpAPI item fields."""
+    if not isinstance(result_item, dict):
+        return []
+
+    out: List[str] = []
+
+    def _append_url(value):
+        if isinstance(value, str):
+            u = clean_ws(value)
+            if u:
+                out.append(u)
+        elif isinstance(value, dict):
+            for k in ("link", "redirect_link", "source", "url"):
+                _append_url(value.get(k))
+        elif isinstance(value, list):
+            for v in value:
+                _append_url(v)
+
+    for key in ("link", "redirect_link", "source", "url"):
+        _append_url(result_item.get(key))
+
+    for key in ("inline_images", "sitelinks", "rich_snippet", "about_this_result"):
+        _append_url(result_item.get(key))
+
+    deduped = []
+    seen = set()
+    for u in out:
+        nu = decode_serpapi_candidate_url(u)
+        if not nu or nu in seen:
+            continue
+        seen.add(nu)
+        deduped.append(nu)
+    return deduped
+
+
+def extract_facebook_event_urls_from_serpapi_result(result_item: dict) -> List[str]:
+    urls = []
+    seen = set()
+    for candidate in collect_serpapi_candidate_urls(result_item):
+        normalized = normalize_facebook_event_url(candidate)
+        if not normalized:
+            continue
+        if not re.fullmatch(r"https://www\.facebook\.com/events/\d+/", normalized):
+            continue
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        urls.append(normalized)
+    return urls
 
 
 def build_serpapi_discovery_queries(cfg: dict, for_facebook: bool = False, limit: int = 16) -> List[str]:
@@ -1746,17 +1877,18 @@ def collect_facebook_event_urls_serpapi(cfg: dict) -> List[dict]:
     event_rows = []
     seen = set()
     for r in found_rows:
-        u = normalize_facebook_event_url(r.get("url", ""))
-        m = re.search(r"(https?://(www\.)?facebook\.com/events/\d+)", u)
-        if not m:
-            continue
-        normalized = m.group(1)
-        if normalized in seen:
-            continue
-        seen.add(normalized)
-        item = dict(r)
-        item["url"] = normalized
-        event_rows.append(item)
+        result_item = r.get("result", {}) if isinstance(r, dict) else {}
+        candidate_urls = extract_facebook_event_urls_from_serpapi_result(result_item)
+        if not candidate_urls:
+            fallback = normalize_facebook_event_url(r.get("url", ""))
+            candidate_urls = [fallback] if fallback else []
+        for normalized in candidate_urls:
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+            item = dict(r)
+            item["url"] = normalized
+            event_rows.append(item)
 
     log(f"   SerpAPI found {len(event_rows)} Facebook event URLs (pre-parse).")
     return event_rows
@@ -2369,6 +2501,8 @@ def main():
     sources = cfg.get("sources", [])
     log(f"   Config sources loaded: {len(sources)}")
 
+    facebook_targets = load_facebook_targets(force_reload=True)
+
     geocache = load_json(GEOCODE_CACHE_PATH, {})
     url_cache = load_json(URL_CACHE_PATH, {})
 
@@ -2397,19 +2531,22 @@ def main():
             source_run_stats.append({"name": sname, "type": stype, "status": "skipped", "collected": 0})
             continue
 
+        source_with_context = dict(s)
+        source_with_context["_facebook_targets"] = facebook_targets
+
         before_count = len(raw_events)
         try:
             diagnostics: dict = {}
             if stype == "html_carsandcoffeeevents_ohio":
-                raw_events.extend(collect_carsandcoffeeevents_ohio(s))
+                raw_events.extend(collect_carsandcoffeeevents_ohio(source_with_context))
             elif stype == "html_wordpress_events_list":
-                raw_events.extend(collect_wordpress_events_series(s))
+                raw_events.extend(collect_wordpress_events_series(source_with_context))
             elif stype == "ics":
-                raw_events.extend(collect_ics(s))
+                raw_events.extend(collect_ics(source_with_context))
             elif stype == "facebook_page_events":
-                raw_events.extend(collect_facebook_page_events(s, diagnostics=diagnostics))
+                raw_events.extend(collect_facebook_page_events(source_with_context, diagnostics=diagnostics))
             elif stype == "web_search_serpapi":
-                raw_events.extend(collect_web_search_serpapi(s, url_cache, diagnostics=diagnostics))
+                raw_events.extend(collect_web_search_serpapi(source_with_context, url_cache, diagnostics=diagnostics))
             elif stype == "web_search_facebook_events_serpapi":
                 raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache, diagnostics=diagnostics))
             elif stype == "facebook_group_events_serpapi":
