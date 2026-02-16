@@ -18,6 +18,7 @@ from scripts.events_collector import (
     collect_facebook_group_events_serpapi,
     SourceDisabledError,
     derive_zero_yield_reason,
+    main,
 )
 
 
