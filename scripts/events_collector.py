@@ -79,7 +79,6 @@ FACEBOOK_TARGETS_CACHE: Optional[List[dict]] = None
 FACEBOOK_GRAPH_RUNTIME: Dict[str, object] = {"checked": False, "valid": None, "reason": "unchecked"}
 FACEBOOK_COVERAGE: Dict[str, object] = {"token": {}, "serp_queries": [], "urls_discovered": 0, "urls_parsed": 0, "urls_failed": 0, "failure_reasons": Counter(), "page_events": 0}
 TOKEN_MANAGER: Optional[TokenManager] = None
-RUN_ARTIFACT_DIR: Optional[str] = None
 
 
 def get_token_manager() -> TokenManager:
