@@ -1,0 +1,263 @@
+{
+  "generated_at_iso": "2026-02-16T17:56:13.073728-05:00",
+  "raw_events": 310,
+  "incoming_after_filters": 47,
+  "merged_total": 35,
+  "source_stats": [
+    {
+      "name": "CarsAndCoffeeEvents - Ohio",
+      "type": "html_carsandcoffeeevents_ohio",
+      "status": "ok",
+      "collected": 40
+    },
+    {
+      "name": "Cincinnati Cars and Coffee (Series)",
+      "type": "html_wordpress_events_list",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "OVR PCA Social Events (ICS)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 75
+    },
+    {
+      "name": "Community Rally Calendar (iCloud)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 195
+    },
+    {
+      "name": "Facebook Page Events (Graph API sheet/env IDs)",
+      "type": "facebook_page_events",
+      "status": "ok",
+      "collected": 0,
+      "reason": "disabled_invalid_token"
+    },
+    {
+      "name": "Facebook Group Events (SerpAPI)",
+      "type": "facebook_group_events_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "FB Events (Cincy keywords)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "FB Events (Ohio + NKY)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Eventbrite Cincy",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Meetup Cincy Cars",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Regional rallies",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "SCCA RoadRally + RallyCross",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "American Rally Association (SOFR + regional)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Eventbrite regional autos (SerpAPI)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "MotorsportReg regional autos",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "TrackRabbit + SCCA calendar discovery",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    }
+  ],
+  "source_failures": [],
+  "serpapi_enabled": true,
+  "dry_run": false,
+  "pipeline_metrics": {
+    "normalize_drop_reasons": {
+      "location_too_far_local": 5,
+      "outside_window_past": 256,
+      "non_automotive:exclude_keyword:wine tasting": 2
+    },
+    "non_automotive_examples": [
+      "OVR PCA Wine Tasting (exclude_keyword:wine tasting)",
+      "OVR PCA Wine Tasting Summer 2024 - Presented by Porsche of the Village (exclude_keyword:wine tasting)"
+    ],
+    "dedupe_drop_reasons": {
+      "duplicate_signature_match": 41
+    }
+  },
+  "facebook_coverage": {
+    "token": {
+      "valid": "no",
+      "reason": "http_400",
+      "expires_at": null,
+      "expires_at_et": "unknown",
+      "refresh_attempted": true,
+      "refresh_succeeded": false,
+      "refresh_error": "missing_app_credentials"
+    },
+    "serp_queries": [
+      {
+        "query": "site:facebook.com/events cincinnati (\"car meet\" OR \"cars and coffee\" OR \"car show\" OR \"cruise in\")",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (\"Cincinnati\" OR \"Northern Kentucky\" OR \"Newport\" OR \"Florence\") (\"cars and coffee\" OR \"car show\" OR \"car meet\")",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (cincinnati OR \"Cincinnati, OH\") (cars OR \"car show\" OR \"cars and coffee\" OR rally OR meet)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (Ohio OR \"Northern Kentucky\" OR NKY) (cars OR \"car show\" OR \"cars and coffee\" OR rally)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (regional rally OR \"driving tour\") (ohio OR kentucky OR indiana OR tennessee OR michigan)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (regional rally OR driving tour) (ohio OR kentucky OR indiana OR tennessee OR michigan)",
+        "result_count": 0
+      },
+      {
+        "query": "(scca.com) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(corsarally.com) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(cincyscca.com) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(americanrallyassociation.org) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(dynastyautoevents.com) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(kingoftheroads.events) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(rallynorthamerica.com) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(therechargerally.com) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(ridewithrandy.org) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(grid.life) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "(gravityrally.com) site:facebook.com/events",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (Cincinnati OH) (\"cars and coffee\" OR JDM) (2026)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (Northern Kentucky) (\"cars & coffee\" OR Euro) (this weekend)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (NKY) (\"car meet\" OR muscle) (February 2026)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (Mason OH) (\"car meetup\" OR tuner) (March 2026)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (West Chester OH) (\"cruise-in\" OR \"Porsche Club\") (2026)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (Loveland OH) (\"cruise night\" OR \"BMW CCA\") (this weekend)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (Dayton OH) (\"car show\" OR \"Corvette club\") (February 2026)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (Columbus OH) (autocross OR \"Mustang club\") (March 2026)",
+        "result_count": 0
+      },
+      {
+        "query": "site:facebook.com/events (Louisville KY) (\"track day\" OR JDM) (2026)",
+        "result_count": 0
+      }
+    ],
+    "urls_discovered": 0,
+    "urls_parsed": 0,
+    "urls_failed": 0,
+    "page_events": 0,
+    "failure_reasons": {}
+  }
+}
