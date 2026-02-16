@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-02-15T17:26:57.188771-05:00",
-  "count": 34,
+  "generated_at_iso": "2026-02-15T18:53:13.988326-05:00",
+  "count": 35,
   "events": [
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -238,7 +238,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-15T17:26:50.724049-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.206866-05:00"
     },
     {
       "title": "Star Trek the Cruise IX",
@@ -266,7 +266,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-15T17:26:50.724412-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.207234-05:00"
     },
     {
       "title": "Columbus Cars & Coffee",
@@ -280,7 +280,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-15T17:26:50.724807-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.207618-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
@@ -294,7 +294,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-15T17:26:50.725162-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.208003-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -308,7 +308,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T17:26:50.725515-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.208369-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -322,7 +322,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-15T17:26:50.725882-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.208729-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -336,7 +336,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-02-15T17:26:50.726229-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.209104-05:00"
     },
     {
       "title": "Drinking Liberally Weekly Meetup",
@@ -364,7 +364,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-15T17:26:50.726586-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.209476-05:00"
     },
     {
       "title": "Cincinnati Cars and Coffee",
@@ -378,7 +378,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-15T17:26:50.727278-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.210256-05:00"
     },
     {
       "title": "ProductTank Wilmington Coming Soon",
@@ -423,6 +423,20 @@
       "last_seen_iso": "2026-02-15T17:26:57.177268-05:00"
     },
     {
+      "title": "Quaker Steak & Lube Classic Car Show & Cruise In",
+      "start_iso": "2026-05-24T00:00:00-04:00",
+      "end_iso": "2026-05-24T02:00:00-04:00",
+      "location": "9:00AM until 3:00PM",
+      "city_state": "",
+      "url": "https://www.facebook.com/events/590/",
+      "source": "facebook_group_serpapi",
+      "category": "rally",
+      "miles_from_cincy": null,
+      "lat": null,
+      "lon": null,
+      "last_seen_iso": "2026-02-15T18:53:13.980915-05:00"
+    },
+    {
       "title": "Annual Car Show & Chicken Dinner",
       "start_iso": "2026-06-28T11:00:00-04:00",
       "end_iso": "2026-06-28T14:30:00-04:00",
@@ -434,7 +448,7 @@
       "miles_from_cincy": 18.1,
       "lat": 39.090891,
       "lon": -84.8499504,
-      "last_seen_iso": "2026-02-15T17:26:50.745217-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.229136-05:00"
     },
     {
       "title": "Cars and Coffee June 29",
@@ -462,7 +476,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-15T17:26:50.748673-05:00"
+      "last_seen_iso": "2026-02-15T18:53:12.232673-05:00"
     },
     {
       "title": "Frisch's Court Street Car Show/Cruise-In",

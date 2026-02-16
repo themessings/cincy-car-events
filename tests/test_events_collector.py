@@ -182,6 +182,11 @@ class FacebookDiagnosticsTests(unittest.TestCase):
             "scripts.events_collector.fetch_facebook_event_via_graph", side_effect=AssertionError("Graph enrichment should be skipped")
         ):
             out = collect_facebook_group_events_serpapi(source={}, cfg={}, url_cache={}, diagnostics={})
+            "scripts.events_collector.collect_facebook_group_event_urls_serpapi", return_value=(rows, None)
+        ), patch(
+            "scripts.events_collector.fetch_facebook_event_via_graph", side_effect=AssertionError("Graph enrichment should be skipped")
+        ):
+            out = collect_facebook_group_events_serpapi(cfg={}, url_cache={}, diagnostics={})
 
         self.assertEqual(len(out), 1)
         self.assertEqual(out[0].get("source"), "facebook_group_serpapi")
