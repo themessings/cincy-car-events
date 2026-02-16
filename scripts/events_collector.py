@@ -157,6 +157,21 @@ def normalize_facebook_event_url(url: str) -> str:
     if not cleaned_host:
         return ""
     return f"https://{cleaned_host}{cleaned_path}"
+    url = clean_ws(url)
+    if not url:
+        return ""
+
+    parsed = urlparse(url if "://" in url else f"https://{url}")
+    host = (parsed.netloc or "").lower().replace("m.facebook.com", "www.facebook.com")
+    path = clean_ws(parsed.path or "")
+
+    if "facebook.com" in host:
+        event_id = extract_facebook_event_id(f"https://{host}{path}")
+        if event_id:
+            return f"https://www.facebook.com/events/{event_id}/"
+
+    normalized_path = path if path.startswith("/") else f"/{path}" if path else ""
+    return f"https://{host}{normalized_path}" if host else clean_ws(url)
 
 
 def classify_facebook_pages_url(page_url: str) -> str:
@@ -178,6 +193,11 @@ def normalize_facebook_target_url(url: str) -> str:
     if not host:
         return ""
     return f"https://{host}/{path}/" if path else f"https://{host}/"
+    if "facebook.com/" not in raw:
+        return "non_facebook"
+    if "/groups/" in raw:
+        return "group"
+    return "page"
 
 
 def extract_facebook_group_key(group_url: str) -> str:
@@ -192,6 +212,7 @@ def extract_facebook_group_key(group_url: str) -> str:
         if segment.lower() == "groups" and idx + 1 < len(segments):
             key = clean_ws(segments[idx + 1])
             return re.sub(r"[^A-Za-z0-9._-]", "", key)
+            return clean_ws(segments[idx + 1])
     return ""
 
 
@@ -573,6 +594,7 @@ def parse_facebook_pages_from_env() -> List[dict]:
             "page_url": page_url,
             "page_identifier": identifier,
             "page_type": page_type,
+            "page_type": classify_facebook_pages_url(page_url),
             "enabled": True,
             "label": "",
             "notes": "",
@@ -664,6 +686,11 @@ def load_facebook_pages_from_sheet() -> List[dict]:
         else:
             non_facebook_rows += 1
 
+        identifier = extract_facebook_page_identifier(page_url)
+        if not identifier:
+            log(f"⚠️ {tab_name}!{idx} ignored; invalid Facebook page URL: {page_url}")
+            continue
+        page_type = classify_facebook_pages_url(page_url)
         out.append({
             "page_url": page_url,
             "page_identifier": identifier,
@@ -705,6 +732,16 @@ def load_facebook_targets(force_reload: bool = False) -> Dict[str, List[dict]]:
         force_reload: When True, bypass in-memory cache and re-read source-of-truth inputs.
     """
     pages = load_facebook_pages(force_reload=force_reload)
+    grouped = {"page": [], "group": [], "non_facebook": []}
+    for row in pages:
+        page_type = row.get("page_type") or classify_facebook_pages_url(row.get("page_url", ""))
+        row["page_type"] = page_type
+        grouped.setdefault(page_type, []).append(row)
+    return grouped
+
+
+def load_facebook_targets() -> Dict[str, List[dict]]:
+    pages = load_facebook_pages()
     grouped = {"page": [], "group": [], "non_facebook": []}
     for row in pages:
         page_type = row.get("page_type") or classify_facebook_pages_url(row.get("page_url", ""))
@@ -1796,6 +1833,21 @@ def collect_facebook_group_event_urls_serpapi(group_url: str, group_key: str, cf
     found_rows: List[dict] = []
     for q in queries:
         links, payload_rows = serpapi_search(q, max_results=max_results, return_payload=True, max_pages=max_pages)
+def build_facebook_group_serpapi_queries(group_key: str) -> List[str]:
+    return [
+        f'site:facebook.com/events "groups/{group_key}"',
+        f'site:facebook.com/events "{group_key}"',
+        f'site:facebook.com "{group_key}" "event"',
+    ]
+
+
+def collect_facebook_group_event_urls_serpapi(group_url: str, group_key: str, cfg: dict) -> Tuple[List[dict], Optional[str]]:
+    max_results = int(cfg.get("discovery", {}).get("facebook_group_serpapi_max_results", 20) or 20)
+    queries = build_facebook_group_serpapi_queries(group_key)
+
+    found_rows: List[dict] = []
+    for q in queries:
+        links, payload_rows = serpapi_search(q, max_results=max_results, return_payload=True)
         for link, row in zip(links, payload_rows):
             found_rows.append({"url": link, "result": row, "query": q, "group_url": group_url, "group_key": group_key})
         time.sleep(0.2)
@@ -1829,6 +1881,22 @@ def collect_facebook_group_event_urls_serpapi(group_url: str, group_key: str, cf
 
 
 def collect_facebook_group_events_serpapi(source: dict, cfg: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
+    event_rows: List[dict] = []
+    seen_urls = set()
+    for row in found_rows:
+        normalized = normalize_facebook_event_url(row.get("url", ""))
+        if not re.fullmatch(r"https://www\.facebook\.com/events/\d+/", normalized):
+            continue
+        if normalized in seen_urls:
+            continue
+        seen_urls.add(normalized)
+        item = dict(row)
+        item["url"] = normalized
+        event_rows.append(item)
+    return event_rows, None
+
+
+def collect_facebook_group_events_serpapi(cfg: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
     diagnostics = diagnostics if diagnostics is not None else {}
     diagnostics.setdefault("raw_candidates", 0)
     diagnostics.setdefault("parse_failures", 0)
@@ -1844,6 +1912,12 @@ def collect_facebook_group_events_serpapi(source: dict, cfg: dict, url_cache: Di
     groups_max = parse_int_env("FACEBOOK_GROUPS_MAX", 0)
     if groups_max > 0:
         groups = groups[:groups_max]
+    targets = load_facebook_targets()
+    groups = [g for g in targets.get("group", []) if g.get("enabled", True)]
+    limit_raw = clean_ws(os.getenv("FACEBOOK_GROUP_SERPAPI_DEBUG_LIMIT", ""))
+    limit = int(limit_raw) if limit_raw.isdigit() else 0
+    if limit > 0:
+        groups = groups[:limit]
 
     if not groups:
         diagnostics["reason"] = "disabled_no_groups_configured"
@@ -1878,6 +1952,11 @@ def collect_facebook_group_events_serpapi(source: dict, cfg: dict, url_cache: Di
             serp_urls_count = int(enrich.get("serp_urls", 0))
             group_name = clean_ws(enrich.get("group_name", ""))
             total_serp_urls += serp_urls_count
+        try:
+            event_rows, _ = collect_facebook_group_event_urls_serpapi(group_url, group_key, cfg)
+            groups_queried += 1
+            serp_urls_count = len(event_rows)
+            total_event_urls_discovered += len(event_rows)
 
             for row in event_rows:
                 u = clean_ws(row.get("url", ""))
@@ -1951,8 +2030,10 @@ def collect_facebook_group_events_serpapi(source: dict, cfg: dict, url_cache: Di
     log(f"   total serp urls: {total_serp_urls}")
     log(f"   total event urls discovered: {total_event_urls_discovered}")
     log(f"   total events parsed: {len(out)}")
-    groups_error_summary = groups_with_errors if groups_with_errors else "none"
-    log(f"   groups with errors: {groups_error_summary}")
+    if groups_with_errors:
+        log(f"   groups with errors: {groups_with_errors}")
+    else:
+        log("   groups with errors: none")
 
     if diagnostics.get("reason") is None and not out:
         diagnostics["reason"] = "no_results_from_search"
@@ -2693,6 +2774,7 @@ def main():
     else:
         log(f"⚠️ FACEBOOK_GRAPH token_valid: no ({FACEBOOK_GRAPH_RUNTIME['reason']})")
         log(f"⚠️ Facebook discovery skipped: {FACEBOOK_GRAPH_RUNTIME['reason']}")
+        log("ℹ️ Facebook Graph sources will be skipped; continuing with non-Graph collectors.")
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
@@ -2739,6 +2821,9 @@ def main():
                 raw_events.extend(collect_web_search_facebook_events_serpapi(source_with_context, url_cache, diagnostics=diagnostics))
             elif stype == "facebook_group_events_serpapi":
                 raw_events.extend(collect_facebook_group_events_serpapi(source_with_context, cfg, url_cache, diagnostics=diagnostics))
+                raw_events.extend(collect_web_search_facebook_events_serpapi(s, url_cache, diagnostics=diagnostics))
+            elif stype == "facebook_group_events_serpapi":
+                raw_events.extend(collect_facebook_group_events_serpapi(cfg, url_cache, diagnostics=diagnostics))
             else:
                 log(f"Skipping unknown source type: {stype} ({sname})")
 
