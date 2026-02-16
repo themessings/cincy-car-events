@@ -97,6 +97,11 @@ categorization:
   - autocross
   - track day
   - concours
+discovery:
+  facebook_event_queries:
+  - site:facebook.com/events (cincinnati OR "Cincinnati, OH") (cars OR "car show" OR "cars and coffee" OR rally OR meet)
+  - site:facebook.com/events (Ohio OR "Northern Kentucky" OR NKY) (cars OR "car show" OR "cars and coffee" OR rally)
+  - site:facebook.com/events (regional rally OR "driving tour") (ohio OR kentucky OR indiana OR tennessee OR michigan)
 sources:
 - type: html_carsandcoffeeevents_ohio
   name: CarsAndCoffeeEvents - Ohio
