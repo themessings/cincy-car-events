@@ -23,10 +23,10 @@ def extract_spreadsheet_id(value: str) -> str:
 
 
 
-def fb_graph_token_status() -> str:
+def fb_graph_token_status() -> tuple[str, str]:
     token = os.getenv("FACEBOOK_ACCESS_TOKEN", "").strip()
     if not token:
-        return "no (missing)"
+        return "no", "missing"
     try:
         r = requests.get(
             "https://graph.facebook.com/v18.0/me",
@@ -34,7 +34,7 @@ def fb_graph_token_status() -> str:
             timeout=10,
         )
         if r.status_code == 200:
-            return "yes"
+            return "yes", "ok"
         try:
             err = (r.json() or {}).get("error", {})
         except Exception:
@@ -43,10 +43,14 @@ def fb_graph_token_status() -> str:
         subcode = str(err.get("error_subcode", ""))
         msg = str(err.get("message", "")).lower()
         if code == "190" or subcode == "463" or "session has expired" in msg:
-            return "no (expired)"
-        return f"no (http {r.status_code})"
+            return "no", "expired"
+        if "access token" in msg and "invalid" in msg:
+            return "no", "malformed"
+        if r.status_code in (400, 401, 403):
+            return "no", "permissions"
+        return "no", f"http_{r.status_code}"
     except Exception:
-        return "no (unverified)"
+        return "no", "unverified"
 
 
 def main() -> int:
@@ -62,10 +66,16 @@ def main() -> int:
             "❌ Missing APEX_SPREADSHEET_ID; spreadsheet destination is undefined."
         )
 
-    if not os.getenv("FACEBOOK_ACCESS_TOKEN"):
+    token_env_name = "FACEBOOK_ACCESS_TOKEN"
+    token_present = bool(os.getenv(token_env_name))
+    print(f"ℹ️ FACEBOOK token env var name: {token_env_name}")
+    print(f"ℹ️ FACEBOOK token env var non-empty: {'yes' if token_present else 'no'}")
+
+    if not token_present:
         print("⚠️ FACEBOOK_ACCESS_TOKEN is empty; Facebook Graph API collection will be skipped.")
 
-    print(f"ℹ️ FACEBOOK_GRAPH token_valid: {fb_graph_token_status()}")
+    token_valid, token_reason = fb_graph_token_status()
+    print(f"ℹ️ FACEBOOK_GRAPH token_valid: {token_valid} (reason: {token_reason})")
 
     if not os.getenv("APEX_FACEBOOK_PAGES_SHEET_ID") and not os.getenv("FACEBOOK_PAGE_IDS"):
         print("⚠️ Neither APEX_FACEBOOK_PAGES_SHEET_ID nor FACEBOOK_PAGE_IDS is set; FB page events source has no IDs.")
