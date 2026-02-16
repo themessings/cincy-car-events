@@ -125,7 +125,9 @@ class FacebookDiagnosticsTests(unittest.TestCase):
             return _FakeResponse(400, {"error": {"code": 190, "error_subcode": 463, "message": "Session has expired"}})
 
         diagnostics = {}
-        with patch("scripts.events_collector.FACEBOOK_ACCESS_TOKEN", "fake-token"), patch("scripts.events_collector.requests.get", side_effect=fake_get):
+        with patch("scripts.events_collector.FACEBOOK_ACCESS_TOKEN", "fake-token"), patch(
+            "scripts.events_collector.FACEBOOK_GRAPH_RUNTIME", {"checked": True, "valid": True, "reason": "ok"}
+        ), patch("scripts.events_collector.requests.get", side_effect=fake_get):
             with self.assertRaises(SourceDisabledError):
                 collect_facebook_events_from_pages(pages, diagnostics=diagnostics)
 

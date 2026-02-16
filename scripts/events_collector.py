@@ -261,7 +261,7 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
     Uses Graph API to fetch a public event by ID (best case).
     Returns normalized raw event dict with title/start_dt/end_dt/location/url.
     """
-    if not FACEBOOK_ACCESS_TOKEN:
+    if not facebook_graph_usable():
         return None
 
     url = f"https://graph.facebook.com/v18.0/{event_id}"
@@ -750,6 +750,20 @@ def parse_facebook_graph_error(resp: requests.Response) -> dict:
     return err if isinstance(err, dict) else {}
 
 
+def classify_facebook_graph_token_failure(resp: requests.Response) -> str:
+    err = parse_facebook_graph_error(resp)
+    code = str(err.get("code", ""))
+    subcode = str(err.get("error_subcode", ""))
+    message = clean_ws(str(err.get("message", ""))).lower()
+    if code == "190" or subcode == "463" or "session has expired" in message:
+        return "expired"
+    if "access token" in message and "invalid" in message:
+        return "malformed"
+    if resp.status_code in (400, 401, 403):
+        return "permissions"
+    return f"http_{resp.status_code}"
+
+
 def is_facebook_token_expired_error(resp: requests.Response) -> bool:
     err = parse_facebook_graph_error(resp)
     code = str(err.get("code", ""))
@@ -758,9 +772,37 @@ def is_facebook_token_expired_error(resp: requests.Response) -> bool:
     return code == "190" or subcode == "463" or "session has expired" in message
 
 
+def validate_facebook_graph_token() -> Dict[str, str]:
+    token = clean_ws(FACEBOOK_ACCESS_TOKEN or "")
+    if not token:
+        return {"valid": "no", "reason": "missing"}
+    try:
+        r = requests.get(
+            f"https://graph.facebook.com/{FACEBOOK_GRAPH_VERSION}/me",
+            params={"access_token": token, "fields": "id"},
+            headers=DEFAULT_HTTP_HEADERS,
+            timeout=15,
+        )
+        if r.status_code == 200:
+            return {"valid": "yes", "reason": "ok"}
+        return {"valid": "no", "reason": classify_facebook_graph_token_failure(r)}
+    except Exception:
+        return {"valid": "no", "reason": "unverified"}
+
+
+def facebook_graph_usable() -> bool:
+    token = clean_ws(FACEBOOK_ACCESS_TOKEN or "")
+    if not token:
+        return False
+    valid = FACEBOOK_GRAPH_RUNTIME.get("valid")
+    if valid is None:
+        return True
+    return bool(valid)
+
+
 def resolve_facebook_page(page_identifier: str, graph_state: Optional[dict] = None) -> Optional[dict]:
     """Resolve page username/ID to Graph page metadata containing numeric id + display name."""
-    if not FACEBOOK_ACCESS_TOKEN:
+    if not facebook_graph_usable():
         return None
 
     if graph_state and graph_state.get("token_expired"):
@@ -819,9 +861,15 @@ def collect_facebook_events_from_pages(pages: List[dict], diagnostics: Optional[
     diagnostics.setdefault("blocked_http", 0)
     diagnostics.setdefault("group_urls_skipped", 0)
 
-    if not FACEBOOK_ACCESS_TOKEN:
+    if not clean_ws(FACEBOOK_ACCESS_TOKEN or ""):
         diagnostics["reason"] = "disabled_missing_token"
         log("⚠️ Skipping Facebook page events: missing FACEBOOK_ACCESS_TOKEN.")
+        return []
+
+    if not facebook_graph_usable():
+        diagnostics["reason"] = "disabled_invalid_token"
+        reason = clean_ws(str(FACEBOOK_GRAPH_RUNTIME.get("reason", "invalid")))
+        log(f"⚠️ Skipping Facebook page events: FACEBOOK_ACCESS_TOKEN invalid ({reason}).")
         return []
 
     if not pages:
@@ -1605,7 +1653,7 @@ def parse_facebook_serpapi_result(item: dict, source_name: str = "facebook:disco
 def maybe_enrich_facebook_event_via_graph(ev: dict, graph_state: Optional[dict] = None) -> dict:
     enrich_enabled = clean_ws(os.getenv("ENABLE_FACEBOOK_GRAPH_ENRICH", "")).lower() in ("1", "true", "yes")
     event_id = clean_ws(ev.get("facebook_event_id", ""))
-    if not enrich_enabled or not event_id or not FACEBOOK_ACCESS_TOKEN:
+    if not enrich_enabled or not event_id or not facebook_graph_usable():
         return ev
     if graph_state and graph_state.get("token_expired"):
         return ev
@@ -2493,7 +2541,9 @@ def main():
     log(f"   SERPAPI_API_KEY set? {'YES' if serpapi_enabled else 'NO'}")
     if not serpapi_enabled:
         log("ℹ️ SerpAPI disabled; continuing with configured collectors.")
-    log(f"   FACEBOOK_ACCESS_TOKEN set? {'YES' if bool(FACEBOOK_ACCESS_TOKEN) else 'NO'}")
+    token_present = bool(clean_ws(FACEBOOK_ACCESS_TOKEN or ""))
+    log("   FACEBOOK_ACCESS_TOKEN env var read: FACEBOOK_ACCESS_TOKEN")
+    log(f"   FACEBOOK_ACCESS_TOKEN non-empty? {'YES' if token_present else 'NO'}")
     log(f"   APEX_FACEBOOK_PAGES_SHEET_ID set? {'YES' if bool(os.getenv('APEX_FACEBOOK_PAGES_SHEET_ID')) else 'NO'}")
     log(f"   APEX_SPREADSHEET_ID set? {'YES' if bool(os.getenv('APEX_SPREADSHEET_ID')) else 'NO'}")
 
@@ -2505,6 +2555,16 @@ def main():
 
     geocache = load_json(GEOCODE_CACHE_PATH, {})
     url_cache = load_json(URL_CACHE_PATH, {})
+
+    fb_token_status = validate_facebook_graph_token()
+    FACEBOOK_GRAPH_RUNTIME["checked"] = True
+    FACEBOOK_GRAPH_RUNTIME["valid"] = fb_token_status.get("valid") == "yes"
+    FACEBOOK_GRAPH_RUNTIME["reason"] = fb_token_status.get("reason", "unknown")
+    if FACEBOOK_GRAPH_RUNTIME["valid"]:
+        log("ℹ️ FACEBOOK_GRAPH token_valid: yes")
+    else:
+        log(f"⚠️ FACEBOOK_GRAPH token_valid: no ({FACEBOOK_GRAPH_RUNTIME['reason']})")
+        log("ℹ️ Facebook Graph sources will be skipped; continuing with non-Graph collectors.")
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
@@ -2650,4 +2710,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as ex:
+        log(f"❌ Fatal: {ex}")
+        raise
