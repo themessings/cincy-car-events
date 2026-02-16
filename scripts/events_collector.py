@@ -3,6 +3,7 @@ import csv
 import json
 import os
 import re
+import sys
 import time
 import traceback
 from collections import Counter
@@ -10,6 +11,11 @@ from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import parse_qs, unquote, urljoin, urlparse
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+if REPO_ROOT not in sys.path:
+    sys.path.insert(0, REPO_ROOT)
 
 import dateparser
 import requests
@@ -20,6 +26,9 @@ from icalendar import Calendar
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+
+from scripts.facebook_event_parser import parse_facebook_event_page
+from scripts.facebook_token_manager import TokenManager
 
 # -------------------------
 # Paths
@@ -46,8 +55,14 @@ APEX_SHARE_WITH_EMAIL = os.getenv("APEX_SHARE_WITH_EMAIL")
 APEX_SPREADSHEET_ID = os.getenv("APEX_SPREADSHEET_ID")
 
 FACEBOOK_ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
+FACEBOOK_APP_ID = os.getenv("FACEBOOK_APP_ID")
+FACEBOOK_APP_SECRET = os.getenv("FACEBOOK_APP_SECRET")
 
 SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
+SERPAPI_LOCATION = (os.getenv("SERPAPI_LOCATION", "Cincinnati, OH") or "").strip()
+SERPAPI_GL = (os.getenv("SERPAPI_GL", "us") or "").strip()
+SERPAPI_HL = (os.getenv("SERPAPI_HL", "en") or "").strip()
+SERPAPI_EVENTS_DATE_FILTER = (os.getenv("SERPAPI_EVENTS_DATE_FILTER", "date:month") or "").strip()
 
 FACEBOOK_GRAPH_VERSION = "v18.0"
 DEFAULT_FACEBOOK_PAGES_TAB = os.getenv("APEX_FACEBOOK_PAGES_TAB", "Pages")
@@ -62,6 +77,20 @@ DEFAULT_HTTP_HEADERS = {
 SOURCE_DIAGNOSTICS: Dict[str, dict] = {}
 FACEBOOK_TARGETS_CACHE: Optional[List[dict]] = None
 FACEBOOK_GRAPH_RUNTIME: Dict[str, object] = {"checked": False, "valid": None, "reason": "unchecked"}
+FACEBOOK_COVERAGE: Dict[str, object] = {"token": {}, "serp_queries": [], "urls_discovered": 0, "urls_parsed": 0, "urls_failed": 0, "failure_reasons": Counter(), "page_events": 0}
+TOKEN_MANAGER: Optional[TokenManager] = None
+RUN_ARTIFACT_DIR: Optional[str] = None
+
+
+def get_token_manager() -> TokenManager:
+    global TOKEN_MANAGER
+    if TOKEN_MANAGER is None:
+        TOKEN_MANAGER = TokenManager(log)
+    return TOKEN_MANAGER
+
+
+def get_facebook_access_token() -> str:
+    return clean_ws(os.getenv("FACEBOOK_ACCESS_TOKEN") or FACEBOOK_ACCESS_TOKEN or "")
 
 
 def extract_google_spreadsheet_id(value: str) -> str:
@@ -306,7 +335,7 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
 
     url = f"https://graph.facebook.com/v18.0/{event_id}"
     params = {
-        "access_token": FACEBOOK_ACCESS_TOKEN,
+        "access_token": get_facebook_access_token(),
         "fields": "name,start_time,end_time,place,timezone,description",
     }
 
@@ -356,12 +385,16 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
     rows: List[dict] = []
     if clean_ws(query):
         links, payload_rows = serpapi_search(query, max_results=max_results, return_payload=True)
+        FACEBOOK_COVERAGE.setdefault("serp_queries", []).append({"query": query, "result_count": len(links)})
+        log(f"ℹ️ SerpAPI FB query results: count={len(links)} query={query}")
         for link, row in zip(links, payload_rows):
             rows.append({"url": link, "result": row, "query": query})
     elif SERPAPI_API_KEY:
         cfg = load_yaml(CONFIG_PATH)
-        for q in build_serpapi_discovery_queries(cfg, for_facebook=True, limit=10):
+        for q in build_serpapi_discovery_queries(cfg, for_facebook=True, limit=10, organizer_terms=build_organizer_seed_terms(load_facebook_targets())):
             links, payload_rows = serpapi_search(q, max_results=min(max_results, 25), return_payload=True)
+            FACEBOOK_COVERAGE.setdefault("serp_queries", []).append({"query": q, "result_count": len(links)})
+            log(f"ℹ️ SerpAPI FB query results: count={len(links)} query={q}")
             for link, row in zip(links, payload_rows):
                 rows.append({"url": link, "result": row, "query": q})
             time.sleep(0.2)
@@ -422,12 +455,27 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
 
         ev = parse_facebook_serpapi_result(row.get("result", {}), source_name=source_name)
         if not ev:
-            diagnostics["parse_failures"] += 1
-            url_cache[event_url] = {"fetched_at_iso": now.isoformat(), "event": None}
-            continue
+            parsed_page, fail_reason = parse_facebook_event_page(event_url, log)
+            if parsed_page:
+                ev = {
+                    "title": parsed_page.get("title", ""),
+                    "start_dt": parsed_page.get("start_dt"),
+                    "end_dt": parsed_page.get("end_dt"),
+                    "location": clean_ws(f"{parsed_page.get('location', '')} {parsed_page.get('address', '')}"),
+                    "url": parsed_page.get("canonical_url") or parsed_page.get("url") or event_url,
+                    "source": source_name,
+                    "host": parsed_page.get("host", ""),
+                }
+            else:
+                diagnostics["parse_failures"] += 1
+                FACEBOOK_COVERAGE["urls_failed"] = int(FACEBOOK_COVERAGE.get("urls_failed", 0) or 0) + 1
+                FACEBOOK_COVERAGE["failure_reasons"][fail_reason] += 1
+                url_cache[event_url] = {"fetched_at_iso": now.isoformat(), "event": None, "failure_reason": fail_reason}
+                continue
 
         ev = maybe_enrich_facebook_event_via_graph(ev, graph_state=graph_state)
         out.append(ev)
+        FACEBOOK_COVERAGE["urls_parsed"] = int(FACEBOOK_COVERAGE.get("urls_parsed", 0) or 0) + 1
         url_cache[event_url] = {
             "fetched_at_iso": now.isoformat(),
             "event": {
@@ -443,6 +491,7 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
     if diagnostics.get("reason") is None and not out:
         diagnostics["reason"] = "parsing_schema_changed"
 
+    FACEBOOK_COVERAGE["urls_discovered"] = int(FACEBOOK_COVERAGE.get("urls_discovered", 0) or 0) + len(fb_rows)
     return out
 
 
@@ -678,6 +727,8 @@ def load_facebook_pages_from_sheet() -> List[dict]:
 
         page_type = classify_facebook_pages_url(page_url)
         identifier = ""
+        organizer_domain = ""
+
         if page_type in {"page", "group"}:
             identifier = extract_facebook_page_identifier(page_url)
             if not identifier:
@@ -686,12 +737,9 @@ def load_facebook_pages_from_sheet() -> List[dict]:
                 continue
         else:
             non_facebook_rows += 1
+            parsed = urlparse(page_url)
+            organizer_domain = clean_ws(parsed.netloc.replace("www.", ""))
 
-        identifier = extract_facebook_page_identifier(page_url)
-        if not identifier:
-            log(f"⚠️ {tab_name}!{idx} ignored; invalid Facebook page URL: {page_url}")
-            continue
-        page_type = classify_facebook_pages_url(page_url)
         out.append({
             "page_url": page_url,
             "page_identifier": identifier,
@@ -699,6 +747,7 @@ def load_facebook_pages_from_sheet() -> List[dict]:
             "enabled": enabled,
             "label": label,
             "notes": notes,
+            "organizer_domain": organizer_domain,
             "origin": "sheet",
         })
 
@@ -820,25 +869,12 @@ def is_facebook_token_expired_error(resp: requests.Response) -> bool:
 
 
 def validate_facebook_graph_token() -> Dict[str, str]:
-    token = clean_ws(FACEBOOK_ACCESS_TOKEN or "")
-    if not token:
-        return {"valid": "no", "reason": "missing"}
-    try:
-        r = requests.get(
-            f"https://graph.facebook.com/{FACEBOOK_GRAPH_VERSION}/me",
-            params={"access_token": token, "fields": "id"},
-            headers=DEFAULT_HTTP_HEADERS,
-            timeout=15,
-        )
-        if r.status_code == 200:
-            return {"valid": "yes", "reason": "ok"}
-        return {"valid": "no", "reason": classify_facebook_graph_token_failure(r)}
-    except Exception:
-        return {"valid": "no", "reason": "unverified"}
+    status = get_token_manager().ensure_valid_user_token(refresh_days_threshold=7)
+    return {"valid": status.get("valid", "no"), "reason": status.get("reason", "unknown")}
 
 
 def facebook_graph_usable() -> bool:
-    token = clean_ws(FACEBOOK_ACCESS_TOKEN or "")
+    token = get_facebook_access_token()
     if not token:
         return False
     valid = FACEBOOK_GRAPH_RUNTIME.get("valid")
@@ -860,7 +896,7 @@ def resolve_facebook_page(page_identifier: str, graph_state: Optional[dict] = No
 
     url = f"https://graph.facebook.com/{FACEBOOK_GRAPH_VERSION}/{page_identifier}"
     params = {
-        "access_token": FACEBOOK_ACCESS_TOKEN,
+        "access_token": get_facebook_access_token(),
         "fields": "id,name,link",
     }
 
@@ -908,7 +944,7 @@ def collect_facebook_events_from_pages(pages: List[dict], diagnostics: Optional[
     diagnostics.setdefault("blocked_http", 0)
     diagnostics.setdefault("group_urls_skipped", 0)
 
-    if not clean_ws(FACEBOOK_ACCESS_TOKEN or ""):
+    if not get_facebook_access_token():
         diagnostics["reason"] = "disabled_missing_token"
         log("⚠️ Skipping Facebook page events: missing FACEBOOK_ACCESS_TOKEN.")
         return []
@@ -965,9 +1001,16 @@ def collect_facebook_events_from_pages(pages: List[dict], diagnostics: Optional[
 
         queried_pages += 1
         log(f"--- Facebook pull start: {page_name} ({page_id}) from {page_url}")
+        page_access_token, token_reason = get_token_manager().get_page_access_token(page_id)
+        if page_access_token:
+            log(f"ℹ️ Using page access token for {page_name} ({page_id}).")
+        else:
+            page_access_token = get_facebook_access_token()
+            log(f"⚠️ Page token unavailable for {page_name} ({page_id}); fallback to user token ({token_reason}).")
+
         url = f"https://graph.facebook.com/{FACEBOOK_GRAPH_VERSION}/{page_id}/events"
         params = {
-            "access_token": FACEBOOK_ACCESS_TOKEN,
+            "access_token": page_access_token,
             "fields": "id,name,description,start_time,end_time,place,event_times,timezone,is_online,ticket_uri,cover",
             "limit": 100,
             "since": int(time.time()),
@@ -1044,6 +1087,7 @@ def collect_facebook_events_from_pages(pages: List[dict], diagnostics: Optional[
     if diagnostics.get("reason") is None and total_page_events == 0:
         diagnostics["reason"] = "no_results_from_search"
 
+    FACEBOOK_COVERAGE["page_events"] = int(FACEBOOK_COVERAGE.get("page_events", 0) or 0) + total_page_events
     return out
 
 
@@ -1419,19 +1463,101 @@ def collect_facebook_page_events(source: dict, diagnostics: Optional[dict] = Non
 # -------------------------
 # NEW: Search the web (SerpAPI) + parse schema.org Event
 # -------------------------
+def serpapi_debug_slug(value: str) -> str:
+    raw = clean_ws(value).lower()
+    raw = re.sub(r"[^a-z0-9]+", "-", raw).strip("-")
+    return raw[:80] or "query"
+
+
+def save_serpapi_debug_artifact(slug: str, content: str) -> Optional[str]:
+    if not RUN_ARTIFACT_DIR:
+        return None
+    try:
+        os.makedirs(RUN_ARTIFACT_DIR, exist_ok=True)
+        path = os.path.join(RUN_ARTIFACT_DIR, f"serpapi_debug_{slug}.txt")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+        return path
+    except Exception as ex:
+        log(f"⚠️ Failed writing SerpAPI debug artifact for slug={slug}: {ex}")
+        return None
+
+
+def log_serpapi_request_meta(
+    *,
+    query_name: str,
+    q: str,
+    engine: str,
+    location: str,
+    htichips: str,
+    start: int,
+    payload: Optional[dict] = None,
+) -> None:
+    payload = payload or {}
+    meta = payload.get("search_metadata") if isinstance(payload, dict) else {}
+    status = clean_ws(str((meta or {}).get("status", "")))
+    error_value = clean_ws(str(payload.get("serpapi_error") or payload.get("error") or "")) if isinstance(payload, dict) else ""
+    log(
+        "ℹ️ SerpAPI request: "
+        f"query_name={query_name} q={q} location={location} engine={engine} "
+        f"htichips={htichips} start={start} status={status or 'unknown'} "
+        f"error={error_value or 'none'}"
+    )
+
+
+def serpapi_request_with_retry(
+    params: dict,
+    *,
+    query_name: str,
+    q: str,
+    engine: str,
+    location: str,
+    htichips: str,
+    start: int,
+    output_mode: str = "json",
+) -> Optional[requests.Response]:
+    url = "https://serpapi.com/search"
+    req_params = dict(params)
+    if output_mode == "html":
+        req_params["output"] = "html"
+
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, params=req_params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
+            if resp.status_code in (429, 500, 502, 503, 504):
+                time.sleep((2 ** attempt) * 0.8)
+                continue
+            return resp
+        except Exception as ex:
+            if attempt == 2:
+                log(
+                    f"⚠️ SerpAPI request failed permanently: query_name={query_name} "
+                    f"start={start} error={ex}"
+                )
+                return None
+            time.sleep((2 ** attempt) * 0.8)
+    return None
+
+
 def serpapi_search(
     query: str,
     max_results: int = 20,
     page_size: int = 20,
     return_payload: bool = False,
     max_pages: int = 1,
+    *,
+    engine: str = "google",
+    query_name: str = "serpapi",
+    location: Optional[str] = None,
+    gl: Optional[str] = None,
+    hl: Optional[str] = None,
+    htichips: Optional[str] = None,
 ):
     """Return SerpAPI links (and payload rows) with bounded pagination and retry/backoff."""
     if not SERPAPI_API_KEY:
         log("⚠️ Skipping SerpAPI search: missing SERPAPI_API_KEY.")
         return ([], []) if return_payload else []
 
-    url = "https://serpapi.com/search.json"
     page_size = max(10, min(page_size, 100))
     target = max(1, max_results)
     max_pages = max(1, max_pages)
@@ -1440,60 +1566,125 @@ def serpapi_search(
     payload_rows: List[dict] = []
     start = 0
     page_count = 0
+
+    req_location = clean_ws(location or SERPAPI_LOCATION)
+    req_gl = clean_ws(gl or SERPAPI_GL or "us")
+    req_hl = clean_ws(hl or SERPAPI_HL or "en")
+    req_htichips = clean_ws(htichips or "")
+
     while len(links) < target and page_count < max_pages:
         params = {
-            "engine": "google",
+            "engine": engine,
             "q": query,
             "api_key": SERPAPI_API_KEY,
             "num": min(page_size, target - len(links)),
             "start": start,
-            "hl": "en",
-            "gl": "us",
+            "hl": req_hl,
+            "gl": req_gl,
         }
-        data = None
-        for attempt in range(3):
-            try:
-                r = requests.get(url, params=params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
-                if r.status_code in (429, 500, 502, 503, 504):
-                    time.sleep((2 ** attempt) * 0.8)
-                    continue
-                r.raise_for_status()
-                data = r.json()
-                break
-            except Exception:
-                if attempt == 2:
-                    raise
-                time.sleep((2 ** attempt) * 0.8)
+        if req_location:
+            params["location"] = req_location
+        if req_htichips:
+            params["htichips"] = req_htichips
 
-        if not data:
+        response = serpapi_request_with_retry(
+            params,
+            query_name=query_name,
+            q=query,
+            engine=engine,
+            location=req_location,
+            htichips=req_htichips,
+            start=start,
+            output_mode="json",
+        )
+        if response is None:
             break
 
-        organic = data.get("organic_results", []) or []
-        if not organic:
+        if response.status_code != 200:
+            log(
+                f"⚠️ SerpAPI non-200: query_name={query_name} q={query} "
+                f"engine={engine} status={response.status_code} detail={(response.text or '')[:220]}"
+            )
             break
 
-        for item in organic:
-            link = clean_ws(item.get("link") or "")
-            if link:
-                links.append(link)
-                payload_rows.append(item)
+        data = {}
+        try:
+            data = response.json() or {}
+        except Exception as ex:
+            log(f"⚠️ SerpAPI JSON decode failed for query_name={query_name} q={query}: {ex}")
+            data = {}
+
+        log_serpapi_request_meta(
+            query_name=query_name,
+            q=query,
+            engine=engine,
+            location=req_location,
+            htichips=req_htichips,
+            start=start,
+            payload=data,
+        )
+
+        if engine == "google_events":
+            rows = data.get("events_results") or []
+        else:
+            rows = data.get("organic_results") or []
+
+        if not rows:
+            # One-time debug capture for zero-result responses.
+            debug_resp = serpapi_request_with_retry(
+                params,
+                query_name=query_name,
+                q=query,
+                engine=engine,
+                location=req_location,
+                htichips=req_htichips,
+                start=start,
+                output_mode="html",
+            )
+            debug_text = ""
+            if debug_resp is not None:
+                raw_html_url = clean_ws(debug_resp.url)
+                debug_text = (
+                    f"query_name={query_name}\nq={query}\nengine={engine}\nlocation={req_location}\n"
+                    f"htichips={req_htichips}\nstart={start}\nstatus={debug_resp.status_code}\n"
+                    f"raw_html_file_url={raw_html_url}\n\n"
+                    f"body_head={(debug_resp.text or '')[:5000]}"
+                )
+            else:
+                debug_text = (
+                    f"query_name={query_name}\nq={query}\nengine={engine}\nlocation={req_location}\n"
+                    f"htichips={req_htichips}\nstart={start}\nraw_html_file_url=unavailable"
+                )
+            debug_path = save_serpapi_debug_artifact(serpapi_debug_slug(f"{query_name}-{query}"), debug_text)
+            if debug_path:
+                log(f"ℹ️ SerpAPI zero-result debug saved: {debug_path}")
+            break
+
+        for item in rows:
+            if engine == "google_events":
+                link = clean_ws(item.get("link") or item.get("event_link") or item.get("website") or "")
+            else:
+                link = clean_ws(item.get("link") or "")
+            links.append(link)
+            payload_rows.append(item)
 
         page_count += 1
-        if len(organic) < params["num"]:
+        if len(rows) < params["num"]:
             break
-        start += params["num"]
+        start += 10
         time.sleep(0.2)
 
     dedup_links = []
     dedup_rows = []
     seen = set()
     for link, item in zip(links, payload_rows):
-        if link in seen:
+        dedupe_key = link or clean_ws(str(item.get("title") or item.get("name") or ""))
+        if dedupe_key in seen:
             continue
-        seen.add(link)
+        seen.add(dedupe_key)
         dedup_links.append(link)
         dedup_rows.append(item)
-        if len(dedup_links) >= target:
+        if len(dedup_rows) >= target:
             break
 
     if return_payload:
@@ -1553,7 +1744,25 @@ def extract_facebook_event_urls_from_serpapi_result(result_item: dict) -> List[s
     return urls
 
 
-def build_serpapi_discovery_queries(cfg: dict, for_facebook: bool = False, limit: int = 16) -> List[str]:
+def build_organizer_seed_terms(facebook_targets: Optional[Dict[str, List[dict]]] = None) -> List[str]:
+    targets = facebook_targets or load_facebook_targets()
+    seeds: List[str] = []
+    for row in targets.get("non_facebook", []):
+        if not row.get("enabled", True):
+            continue
+        label = clean_ws(row.get("label", ""))
+        domain = clean_ws(row.get("organizer_domain", ""))
+        url = clean_ws(row.get("page_url", ""))
+        if not domain and url:
+            domain = clean_ws(urlparse(url).netloc.replace("www.", ""))
+        if label:
+            seeds.append(label)
+        if domain:
+            seeds.append(domain)
+    return list(dict.fromkeys([s for s in seeds if s]))
+
+
+def build_serpapi_discovery_queries(cfg: dict, for_facebook: bool = False, limit: int = 16, organizer_terms: Optional[List[str]] = None) -> List[str]:
     """Build rotating car-focused SerpAPI queries across geos, time windows, and event types."""
     now = datetime.now(tz=tz.gettz("America/New_York"))
     y = now.year
@@ -1592,8 +1801,19 @@ def build_serpapi_discovery_queries(cfg: dict, for_facebook: bool = False, limit
 
     configured = cfg.get("discovery", {}).get("facebook_event_queries" if for_facebook else "web_discovery_queries", []) or []
     configured = [clean_ws(q) for q in configured if clean_ws(q)]
-    merged = configured + out
-    deduped = list(dict.fromkeys(merged))
+    organizer_terms = organizer_terms or []
+    organizer_queries: List[str] = []
+    if for_facebook:
+        organizer_queries.extend([
+            "site:facebook.com/events (cincinnati OR \"Cincinnati, OH\") (cars OR \"car show\" OR \"cars and coffee\" OR rally OR meet)",
+            "site:facebook.com/events (Ohio OR \"Northern Kentucky\" OR NKY) (cars OR \"car show\" OR \"cars and coffee\" OR rally)",
+            "site:facebook.com/events (regional rally OR driving tour) (ohio OR kentucky OR indiana OR tennessee OR michigan)",
+        ])
+        for term in organizer_terms[:40]:
+            organizer_queries.append(f"({term}) site:facebook.com/events")
+
+    merged = configured + organizer_queries + out
+    deduped = list(dict.fromkeys([clean_ws(q) for q in merged if clean_ws(q)]))
     return deduped[:limit]
 
 
@@ -2065,11 +2285,26 @@ def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, di
 
         ev = parse_facebook_serpapi_result(row.get("result", {}), source_name="facebook:discovered")
         if not ev:
-            diagnostics["parse_failures"] += 1
-            url_cache[u] = {"fetched_at_iso": now.isoformat(), "event": None}
-            continue
+            parsed_page, fail_reason = parse_facebook_event_page(u, log)
+            if parsed_page:
+                ev = {
+                    "title": parsed_page.get("title", ""),
+                    "start_dt": parsed_page.get("start_dt"),
+                    "end_dt": parsed_page.get("end_dt"),
+                    "location": clean_ws(f"{parsed_page.get('location', '')} {parsed_page.get('address', '')}"),
+                    "url": parsed_page.get("canonical_url") or parsed_page.get("url") or u,
+                    "source": "facebook:discovered",
+                    "host": parsed_page.get("host", ""),
+                }
+            else:
+                diagnostics["parse_failures"] += 1
+                FACEBOOK_COVERAGE["urls_failed"] = int(FACEBOOK_COVERAGE.get("urls_failed", 0) or 0) + 1
+                FACEBOOK_COVERAGE["failure_reasons"][fail_reason] += 1
+                url_cache[u] = {"fetched_at_iso": now.isoformat(), "event": None, "failure_reason": fail_reason}
+                continue
 
         ev = maybe_enrich_facebook_event_via_graph(ev, graph_state=graph_state)
+        FACEBOOK_COVERAGE["urls_parsed"] = int(FACEBOOK_COVERAGE.get("urls_parsed", 0) or 0) + 1
         out.append(ev)
         url_cache[u] = {
             "fetched_at_iso": now.isoformat(),
@@ -2097,15 +2332,25 @@ def collect_facebook_event_urls_serpapi(cfg: dict) -> List[dict]:
         log("ℹ️ SerpAPI disabled (missing SERPAPI_API_KEY); skipping FB URL discovery.")
         return []
 
-    queries = build_serpapi_discovery_queries(cfg, for_facebook=True, limit=12)
+    organizer_terms = build_organizer_seed_terms(load_facebook_targets())
+    queries = build_serpapi_discovery_queries(cfg, for_facebook=True, limit=24, organizer_terms=organizer_terms)
     found_rows: List[dict] = []
+
     for q in queries:
-        try:
-            links, payload_rows = serpapi_search(q, max_results=25, return_payload=True)
-            for link, row in zip(links, payload_rows):
-                found_rows.append({"url": link, "result": row, "query": q})
-        except Exception as ex:
-            log(f"⚠️ SerpAPI discovery query failed: {q} :: {ex}")
+        links = []
+        payload_rows = []
+        for attempt in range(3):
+            try:
+                links, payload_rows = serpapi_search(q, max_results=25, return_payload=True)
+                break
+            except Exception as ex:
+                if attempt == 2:
+                    log(f"⚠️ SerpAPI discovery query failed: {q} :: {ex}")
+                time.sleep((2 ** attempt) * 0.8)
+        FACEBOOK_COVERAGE.setdefault("serp_queries", []).append({"query": q, "result_count": len(links)})
+        log(f"ℹ️ SerpAPI FB query results: count={len(links)} query={q}")
+        for link, row in zip(links, payload_rows):
+            found_rows.append({"url": link, "result": row, "query": q})
         time.sleep(0.2)
 
     event_rows = []
@@ -2124,6 +2369,7 @@ def collect_facebook_event_urls_serpapi(cfg: dict) -> List[dict]:
             item["url"] = normalized
             event_rows.append(item)
 
+    FACEBOOK_COVERAGE["urls_discovered"] = int(FACEBOOK_COVERAGE.get("urls_discovered", 0) or 0) + len(event_rows)
     log(f"   SerpAPI found {len(event_rows)} Facebook event URLs (pre-parse).")
     return event_rows
 
@@ -2201,6 +2447,110 @@ def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
         seen.add(k)
         deduped.append(e)
     return deduped
+
+def parse_google_events_date_best_effort(date_text: str) -> Tuple[Optional[datetime], bool]:
+    raw = clean_ws(date_text)
+    if not raw:
+        return None, True
+
+    parsed = parse_dt(raw)
+    if not parsed:
+        return None, True
+
+    estimated = bool(re.search(r"\b(today|tomorrow|this|next|weekend|week|month|am|pm|\d:\d)\b", raw.lower()) is None)
+    if parsed.hour == 0 and parsed.minute == 0:
+        parsed = parsed.replace(hour=9, minute=0, second=0, microsecond=0)
+        estimated = True
+    return parsed, estimated
+
+
+def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("parse_failures", 0)
+
+    if not SERPAPI_API_KEY:
+        diagnostics["reason"] = "no_results_from_search"
+        log("ℹ️ SerpAPI disabled; skipping google_events collector.")
+        return []
+
+    location = clean_ws(os.getenv("SERPAPI_LOCATION", SERPAPI_LOCATION or "Cincinnati, OH")) or "Cincinnati, OH"
+    gl = clean_ws(os.getenv("SERPAPI_GL", SERPAPI_GL or "us")) or "us"
+    hl = clean_ws(os.getenv("SERPAPI_HL", SERPAPI_HL or "en")) or "en"
+    htichips = clean_ws(os.getenv("SERPAPI_EVENTS_DATE_FILTER", SERPAPI_EVENTS_DATE_FILTER or "date:month")) or "date:month"
+
+    query_phrases = [
+        "car show in Cincinnati OH",
+        "cars and coffee in Cincinnati OH",
+        "cruise in in Cincinnati OH",
+        "autocross in Cincinnati OH",
+        "rally in Ohio",
+    ]
+
+    out: List[dict] = []
+    seen = set()
+
+    for query in query_phrases:
+        links, rows = serpapi_search(
+            query,
+            max_results=50,
+            page_size=10,
+            return_payload=True,
+            max_pages=6,
+            engine="google_events",
+            query_name="serpapi_google_events",
+            location=location,
+            gl=gl,
+            hl=hl,
+            htichips=htichips,
+        )
+
+        diagnostics["raw_candidates"] += len(rows)
+
+        for row in rows:
+            title = clean_ws(row.get("title") or row.get("name") or "")
+            date_text = clean_ws(row.get("date") or row.get("start_date") or row.get("when") or "")
+            start_dt, time_is_estimated = parse_google_events_date_best_effort(date_text)
+            if not title or not start_dt:
+                diagnostics["parse_failures"] += 1
+                continue
+
+            end_dt = start_dt + timedelta(hours=2)
+            venue = clean_ws(row.get("venue") or row.get("event_location") or "")
+            address = clean_ws(row.get("address") or row.get("location") or "")
+            location_text = clean_ws(" ".join([venue, address]))
+            url = clean_ws(row.get("link") or row.get("event_link") or row.get("website") or "")
+            ticket_info = row.get("ticket_info")
+            thumbnail = clean_ws(row.get("thumbnail") or "")
+
+            dedupe_key = (
+                title.lower(),
+                start_dt.isoformat()[:16],
+                location_text.lower(),
+            )
+            if dedupe_key in seen:
+                continue
+            seen.add(dedupe_key)
+
+            out.append(
+                {
+                    "title": title,
+                    "start_dt": start_dt,
+                    "end_dt": end_dt,
+                    "location": location_text,
+                    "url": url,
+                    "source": source.get("name", "Google Events (SerpAPI) [serpapi_google_events]"),
+                    "time_is_estimated": time_is_estimated,
+                    "ticket_info": ticket_info,
+                    "thumbnail": thumbnail,
+                }
+            )
+
+    if diagnostics.get("reason") is None and not out:
+        diagnostics["reason"] = "no_results_from_search"
+
+    return out
+
 
 def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
     """SerpAPI discovery -> URL dedupe -> schema/fallback parse with caching."""
@@ -2727,7 +3077,7 @@ def main():
     log(f"   SERPAPI_API_KEY set? {'YES' if serpapi_enabled else 'NO'}")
     if not serpapi_enabled:
         log("ℹ️ SerpAPI disabled; continuing with configured collectors.")
-    token_present = bool(clean_ws(FACEBOOK_ACCESS_TOKEN or ""))
+    token_present = bool(get_facebook_access_token())
     log("   FACEBOOK_ACCESS_TOKEN env var read: FACEBOOK_ACCESS_TOKEN")
     log(f"   FACEBOOK_ACCESS_TOKEN non-empty? {'YES' if token_present else 'NO'}")
     log(f"   APEX_FACEBOOK_PAGES_SHEET_ID set? {'YES' if bool(os.getenv('APEX_FACEBOOK_PAGES_SHEET_ID')) else 'NO'}")
@@ -2737,21 +3087,27 @@ def main():
     sources = cfg.get("sources", [])
     log(f"   Config sources loaded: {len(sources)}")
 
+    global RUN_ARTIFACT_DIR
+    run_timestamp = datetime.now().strftime('%Y-%m-%d_%H%M%S')
+    RUN_ARTIFACT_DIR = os.path.join(RUNS_DIR, run_timestamp)
+    os.makedirs(RUN_ARTIFACT_DIR, exist_ok=True)
+
     facebook_targets = load_facebook_targets(force_reload=True)
 
     geocache = load_json(GEOCODE_CACHE_PATH, {})
     url_cache = load_json(URL_CACHE_PATH, {})
 
-    fb_token_status = validate_facebook_graph_token()
+    fb_token_status = get_token_manager().ensure_valid_user_token(refresh_days_threshold=7)
+    FACEBOOK_COVERAGE["token"] = fb_token_status
     FACEBOOK_GRAPH_RUNTIME["checked"] = True
     FACEBOOK_GRAPH_RUNTIME["valid"] = fb_token_status.get("valid") == "yes"
     FACEBOOK_GRAPH_RUNTIME["reason"] = fb_token_status.get("reason", "unknown")
     if FACEBOOK_GRAPH_RUNTIME["valid"]:
-        log("ℹ️ FACEBOOK_GRAPH token_valid: yes")
+        log(f"ℹ️ FACEBOOK_GRAPH token_valid: yes (expires_at_et={fb_token_status.get('expires_at_et', 'unknown')})")
     else:
         log(f"⚠️ FACEBOOK_GRAPH token_valid: no ({FACEBOOK_GRAPH_RUNTIME['reason']})")
-        log(f"⚠️ Facebook discovery skipped: {FACEBOOK_GRAPH_RUNTIME['reason']}")
-        log("ℹ️ Facebook Graph sources will be skipped; continuing with non-Graph collectors.")
+        log(f"⚠️ Facebook Graph refresh/error detail: {fb_token_status.get('refresh_error') or fb_token_status.get('reason')}")
+        log("ℹ️ Facebook Graph sources may skip; continuing with non-Graph collectors.")
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
@@ -2768,7 +3124,7 @@ def main():
     pipeline_metrics: Dict[str, dict] = {}
     source_filter_stats: Dict[str, Counter] = {}
 
-    serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi", "facebook_group_events_serpapi"}
+    serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi", "facebook_group_events_serpapi", "serpapi_google_events"}
 
     for s in sources:
         stype = s.get("type")
@@ -2799,6 +3155,8 @@ def main():
                 raw_events.extend(collect_web_search_facebook_events_serpapi(source_with_context, url_cache, diagnostics=diagnostics))
             elif stype == "facebook_group_events_serpapi":
                 raw_events.extend(collect_facebook_group_events_serpapi(source_with_context, cfg, url_cache, diagnostics=diagnostics))
+            elif stype == "serpapi_google_events":
+                raw_events.extend(collect_serpapi_google_events(source_with_context, diagnostics=diagnostics))
             else:
                 log(f"Skipping unknown source type: {stype} ({sname})")
 
@@ -2875,8 +3233,7 @@ def main():
     if spreadsheet_id:
         log(f"📄 Sheets URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
 
-    run_timestamp = datetime.now().strftime('%Y-%m-%d_%H%M%S')
-    run_dir = os.path.join(RUNS_DIR, run_timestamp)
+    run_dir = RUN_ARTIFACT_DIR or os.path.join(RUNS_DIR, datetime.now().strftime('%Y-%m-%d_%H%M%S'))
     os.makedirs(run_dir, exist_ok=True)
 
     run_report = {
@@ -2889,6 +3246,10 @@ def main():
         "serpapi_enabled": serpapi_enabled,
         "dry_run": clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y"),
         "pipeline_metrics": pipeline_metrics,
+        "facebook_coverage": {
+            **{k: v for k, v in FACEBOOK_COVERAGE.items() if k != "failure_reasons"},
+            "failure_reasons": dict(FACEBOOK_COVERAGE.get("failure_reasons", {})),
+        },
     }
     run_path = os.path.join(run_dir, "run.json")
     save_json(run_path, run_report)
@@ -2901,6 +3262,33 @@ def main():
     log(f"📄 Sheets rows written (excluding header): {len(merged)}")
     log(f"🔎 Source summary: ok={len(ok_sources)} skipped={len(skipped_sources)} failed={len(failed_sources)}")
     log_source_health_summary(source_run_stats)
+    failure_top = []
+    if isinstance(FACEBOOK_COVERAGE.get("failure_reasons"), Counter):
+        failure_top = FACEBOOK_COVERAGE["failure_reasons"].most_common(10)
+    elif isinstance(FACEBOOK_COVERAGE.get("failure_reasons"), dict):
+        failure_top = Counter(FACEBOOK_COVERAGE["failure_reasons"]).most_common(10)
+
+    log("📘 Facebook coverage report:")
+    token_cov = FACEBOOK_COVERAGE.get("token", {}) or {}
+    log(
+        "   token_status="
+        f"{token_cov.get('valid', 'unknown')} "
+        f"expires_at_et={token_cov.get('expires_at_et', 'unknown')} "
+        f"refresh_attempted={token_cov.get('refresh_attempted', False)} "
+        f"refresh_succeeded={token_cov.get('refresh_succeeded', False)}"
+    )
+    log(f"   page_events_pulled={FACEBOOK_COVERAGE.get('page_events', 0)}")
+    log(f"   serp_queries_executed={len(FACEBOOK_COVERAGE.get('serp_queries', []))}")
+    for item in (FACEBOOK_COVERAGE.get("serp_queries", []) or [])[:30]:
+        log(f"      - count={item.get('result_count', 0)} query={item.get('query', '')}")
+    log(
+        f"   event_urls discovered={FACEBOOK_COVERAGE.get('urls_discovered', 0)} "
+        f"parsed={FACEBOOK_COVERAGE.get('urls_parsed', 0)} failed={FACEBOOK_COVERAGE.get('urls_failed', 0)}"
+    )
+    if failure_top:
+        log("   top_failure_reasons:")
+        for reason, cnt in failure_top:
+            log(f"      - {reason}: {cnt}")
     log(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged)}")
     log(f"   Wrote: {EVENTS_JSON_PATH}")
     log(f"   Wrote: {EVENTS_CSV_PATH}")
