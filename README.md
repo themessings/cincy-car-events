@@ -9,6 +9,7 @@
 - `FACEBOOK_APP_ID` and `FACEBOOK_APP_SECRET` should be set to enable automatic `/debug_token` validation and long-lived token refresh (`fb_exchange_token`).
 - Optional: `ENABLE_PLAYWRIGHT_FB=1` enables JS-rendered Facebook event-page parsing fallback if static HTML is insufficient.
 - `ENABLE_FACEBOOK_SERP_DISCOVERY` controls optional Facebook event URL discovery via SerpAPI. It is **enabled by default**; set to `0`, `false`, or `no` to disable.
+- Optional SerpAPI Google Events tuning: `SERPAPI_LOCATION` (default `Cincinnati, OH`), `SERPAPI_GL` (default `us`), `SERPAPI_HL` (default `en`), `SERPAPI_EVENTS_DATE_FILTER` (default `date:month`, sent as `htichips`).
 
 ## Facebook Pages sheet format
 

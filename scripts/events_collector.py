@@ -59,6 +59,10 @@ FACEBOOK_APP_ID = os.getenv("FACEBOOK_APP_ID")
 FACEBOOK_APP_SECRET = os.getenv("FACEBOOK_APP_SECRET")
 
 SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
+SERPAPI_LOCATION = (os.getenv("SERPAPI_LOCATION", "Cincinnati, OH") or "").strip()
+SERPAPI_GL = (os.getenv("SERPAPI_GL", "us") or "").strip()
+SERPAPI_HL = (os.getenv("SERPAPI_HL", "en") or "").strip()
+SERPAPI_EVENTS_DATE_FILTER = (os.getenv("SERPAPI_EVENTS_DATE_FILTER", "date:month") or "").strip()
 
 FACEBOOK_GRAPH_VERSION = "v18.0"
 DEFAULT_FACEBOOK_PAGES_TAB = os.getenv("APEX_FACEBOOK_PAGES_TAB", "Pages")
@@ -1458,19 +1462,101 @@ def collect_facebook_page_events(source: dict, diagnostics: Optional[dict] = Non
 # -------------------------
 # NEW: Search the web (SerpAPI) + parse schema.org Event
 # -------------------------
+def serpapi_debug_slug(value: str) -> str:
+    raw = clean_ws(value).lower()
+    raw = re.sub(r"[^a-z0-9]+", "-", raw).strip("-")
+    return raw[:80] or "query"
+
+
+def save_serpapi_debug_artifact(slug: str, content: str) -> Optional[str]:
+    if not RUN_ARTIFACT_DIR:
+        return None
+    try:
+        os.makedirs(RUN_ARTIFACT_DIR, exist_ok=True)
+        path = os.path.join(RUN_ARTIFACT_DIR, f"serpapi_debug_{slug}.txt")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+        return path
+    except Exception as ex:
+        log(f"⚠️ Failed writing SerpAPI debug artifact for slug={slug}: {ex}")
+        return None
+
+
+def log_serpapi_request_meta(
+    *,
+    query_name: str,
+    q: str,
+    engine: str,
+    location: str,
+    htichips: str,
+    start: int,
+    payload: Optional[dict] = None,
+) -> None:
+    payload = payload or {}
+    meta = payload.get("search_metadata") if isinstance(payload, dict) else {}
+    status = clean_ws(str((meta or {}).get("status", "")))
+    error_value = clean_ws(str(payload.get("serpapi_error") or payload.get("error") or "")) if isinstance(payload, dict) else ""
+    log(
+        "ℹ️ SerpAPI request: "
+        f"query_name={query_name} q={q} location={location} engine={engine} "
+        f"htichips={htichips} start={start} status={status or 'unknown'} "
+        f"error={error_value or 'none'}"
+    )
+
+
+def serpapi_request_with_retry(
+    params: dict,
+    *,
+    query_name: str,
+    q: str,
+    engine: str,
+    location: str,
+    htichips: str,
+    start: int,
+    output_mode: str = "json",
+) -> Optional[requests.Response]:
+    url = "https://serpapi.com/search"
+    req_params = dict(params)
+    if output_mode == "html":
+        req_params["output"] = "html"
+
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, params=req_params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
+            if resp.status_code in (429, 500, 502, 503, 504):
+                time.sleep((2 ** attempt) * 0.8)
+                continue
+            return resp
+        except Exception as ex:
+            if attempt == 2:
+                log(
+                    f"⚠️ SerpAPI request failed permanently: query_name={query_name} "
+                    f"start={start} error={ex}"
+                )
+                return None
+            time.sleep((2 ** attempt) * 0.8)
+    return None
+
+
 def serpapi_search(
     query: str,
     max_results: int = 20,
     page_size: int = 20,
     return_payload: bool = False,
     max_pages: int = 1,
+    *,
+    engine: str = "google",
+    query_name: str = "serpapi",
+    location: Optional[str] = None,
+    gl: Optional[str] = None,
+    hl: Optional[str] = None,
+    htichips: Optional[str] = None,
 ):
     """Return SerpAPI links (and payload rows) with bounded pagination and retry/backoff."""
     if not SERPAPI_API_KEY:
         log("⚠️ Skipping SerpAPI search: missing SERPAPI_API_KEY.")
         return ([], []) if return_payload else []
 
-    url = "https://serpapi.com/search.json"
     page_size = max(10, min(page_size, 100))
     target = max(1, max_results)
     max_pages = max(1, max_pages)
@@ -1479,60 +1565,125 @@ def serpapi_search(
     payload_rows: List[dict] = []
     start = 0
     page_count = 0
+
+    req_location = clean_ws(location or SERPAPI_LOCATION)
+    req_gl = clean_ws(gl or SERPAPI_GL or "us")
+    req_hl = clean_ws(hl or SERPAPI_HL or "en")
+    req_htichips = clean_ws(htichips or "")
+
     while len(links) < target and page_count < max_pages:
         params = {
-            "engine": "google",
+            "engine": engine,
             "q": query,
             "api_key": SERPAPI_API_KEY,
             "num": min(page_size, target - len(links)),
             "start": start,
-            "hl": "en",
-            "gl": "us",
+            "hl": req_hl,
+            "gl": req_gl,
         }
-        data = None
-        for attempt in range(3):
-            try:
-                r = requests.get(url, params=params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
-                if r.status_code in (429, 500, 502, 503, 504):
-                    time.sleep((2 ** attempt) * 0.8)
-                    continue
-                r.raise_for_status()
-                data = r.json()
-                break
-            except Exception:
-                if attempt == 2:
-                    raise
-                time.sleep((2 ** attempt) * 0.8)
+        if req_location:
+            params["location"] = req_location
+        if req_htichips:
+            params["htichips"] = req_htichips
 
-        if not data:
+        response = serpapi_request_with_retry(
+            params,
+            query_name=query_name,
+            q=query,
+            engine=engine,
+            location=req_location,
+            htichips=req_htichips,
+            start=start,
+            output_mode="json",
+        )
+        if response is None:
             break
 
-        organic = data.get("organic_results", []) or []
-        if not organic:
+        if response.status_code != 200:
+            log(
+                f"⚠️ SerpAPI non-200: query_name={query_name} q={query} "
+                f"engine={engine} status={response.status_code} detail={(response.text or '')[:220]}"
+            )
             break
 
-        for item in organic:
-            link = clean_ws(item.get("link") or "")
-            if link:
-                links.append(link)
-                payload_rows.append(item)
+        data = {}
+        try:
+            data = response.json() or {}
+        except Exception as ex:
+            log(f"⚠️ SerpAPI JSON decode failed for query_name={query_name} q={query}: {ex}")
+            data = {}
+
+        log_serpapi_request_meta(
+            query_name=query_name,
+            q=query,
+            engine=engine,
+            location=req_location,
+            htichips=req_htichips,
+            start=start,
+            payload=data,
+        )
+
+        if engine == "google_events":
+            rows = data.get("events_results") or []
+        else:
+            rows = data.get("organic_results") or []
+
+        if not rows:
+            # One-time debug capture for zero-result responses.
+            debug_resp = serpapi_request_with_retry(
+                params,
+                query_name=query_name,
+                q=query,
+                engine=engine,
+                location=req_location,
+                htichips=req_htichips,
+                start=start,
+                output_mode="html",
+            )
+            debug_text = ""
+            if debug_resp is not None:
+                raw_html_url = clean_ws(debug_resp.url)
+                debug_text = (
+                    f"query_name={query_name}\nq={query}\nengine={engine}\nlocation={req_location}\n"
+                    f"htichips={req_htichips}\nstart={start}\nstatus={debug_resp.status_code}\n"
+                    f"raw_html_file_url={raw_html_url}\n\n"
+                    f"body_head={(debug_resp.text or '')[:5000]}"
+                )
+            else:
+                debug_text = (
+                    f"query_name={query_name}\nq={query}\nengine={engine}\nlocation={req_location}\n"
+                    f"htichips={req_htichips}\nstart={start}\nraw_html_file_url=unavailable"
+                )
+            debug_path = save_serpapi_debug_artifact(serpapi_debug_slug(f"{query_name}-{query}"), debug_text)
+            if debug_path:
+                log(f"ℹ️ SerpAPI zero-result debug saved: {debug_path}")
+            break
+
+        for item in rows:
+            if engine == "google_events":
+                link = clean_ws(item.get("link") or item.get("event_link") or item.get("website") or "")
+            else:
+                link = clean_ws(item.get("link") or "")
+            links.append(link)
+            payload_rows.append(item)
 
         page_count += 1
-        if len(organic) < params["num"]:
+        if len(rows) < params["num"]:
             break
-        start += params["num"]
+        start += 10
         time.sleep(0.2)
 
     dedup_links = []
     dedup_rows = []
     seen = set()
     for link, item in zip(links, payload_rows):
-        if link in seen:
+        dedupe_key = link or clean_ws(str(item.get("title") or item.get("name") or ""))
+        if dedupe_key in seen:
             continue
-        seen.add(link)
+        seen.add(dedupe_key)
         dedup_links.append(link)
         dedup_rows.append(item)
-        if len(dedup_links) >= target:
+        if len(dedup_rows) >= target:
             break
 
     if return_payload:
@@ -2296,6 +2447,110 @@ def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
         deduped.append(e)
     return deduped
 
+def parse_google_events_date_best_effort(date_text: str) -> Tuple[Optional[datetime], bool]:
+    raw = clean_ws(date_text)
+    if not raw:
+        return None, True
+
+    parsed = parse_dt(raw)
+    if not parsed:
+        return None, True
+
+    estimated = bool(re.search(r"\b(today|tomorrow|this|next|weekend|week|month|am|pm|\d:\d)\b", raw.lower()) is None)
+    if parsed.hour == 0 and parsed.minute == 0:
+        parsed = parsed.replace(hour=9, minute=0, second=0, microsecond=0)
+        estimated = True
+    return parsed, estimated
+
+
+def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("parse_failures", 0)
+
+    if not SERPAPI_API_KEY:
+        diagnostics["reason"] = "no_results_from_search"
+        log("ℹ️ SerpAPI disabled; skipping google_events collector.")
+        return []
+
+    location = clean_ws(os.getenv("SERPAPI_LOCATION", SERPAPI_LOCATION or "Cincinnati, OH")) or "Cincinnati, OH"
+    gl = clean_ws(os.getenv("SERPAPI_GL", SERPAPI_GL or "us")) or "us"
+    hl = clean_ws(os.getenv("SERPAPI_HL", SERPAPI_HL or "en")) or "en"
+    htichips = clean_ws(os.getenv("SERPAPI_EVENTS_DATE_FILTER", SERPAPI_EVENTS_DATE_FILTER or "date:month")) or "date:month"
+
+    query_phrases = [
+        "car show in Cincinnati OH",
+        "cars and coffee in Cincinnati OH",
+        "cruise in in Cincinnati OH",
+        "autocross in Cincinnati OH",
+        "rally in Ohio",
+    ]
+
+    out: List[dict] = []
+    seen = set()
+
+    for query in query_phrases:
+        links, rows = serpapi_search(
+            query,
+            max_results=50,
+            page_size=10,
+            return_payload=True,
+            max_pages=6,
+            engine="google_events",
+            query_name="serpapi_google_events",
+            location=location,
+            gl=gl,
+            hl=hl,
+            htichips=htichips,
+        )
+
+        diagnostics["raw_candidates"] += len(rows)
+
+        for row in rows:
+            title = clean_ws(row.get("title") or row.get("name") or "")
+            date_text = clean_ws(row.get("date") or row.get("start_date") or row.get("when") or "")
+            start_dt, time_is_estimated = parse_google_events_date_best_effort(date_text)
+            if not title or not start_dt:
+                diagnostics["parse_failures"] += 1
+                continue
+
+            end_dt = start_dt + timedelta(hours=2)
+            venue = clean_ws(row.get("venue") or row.get("event_location") or "")
+            address = clean_ws(row.get("address") or row.get("location") or "")
+            location_text = clean_ws(" ".join([venue, address]))
+            url = clean_ws(row.get("link") or row.get("event_link") or row.get("website") or "")
+            ticket_info = row.get("ticket_info")
+            thumbnail = clean_ws(row.get("thumbnail") or "")
+
+            dedupe_key = (
+                title.lower(),
+                start_dt.isoformat()[:16],
+                location_text.lower(),
+            )
+            if dedupe_key in seen:
+                continue
+            seen.add(dedupe_key)
+
+            out.append(
+                {
+                    "title": title,
+                    "start_dt": start_dt,
+                    "end_dt": end_dt,
+                    "location": location_text,
+                    "url": url,
+                    "source": source.get("name", "Google Events (SerpAPI) [serpapi_google_events]"),
+                    "time_is_estimated": time_is_estimated,
+                    "ticket_info": ticket_info,
+                    "thumbnail": thumbnail,
+                }
+            )
+
+    if diagnostics.get("reason") is None and not out:
+        diagnostics["reason"] = "no_results_from_search"
+
+    return out
+
+
 def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
     """SerpAPI discovery -> URL dedupe -> schema/fallback parse with caching."""
     diagnostics = diagnostics if diagnostics is not None else {}
@@ -2831,6 +3086,11 @@ def main():
     sources = cfg.get("sources", [])
     log(f"   Config sources loaded: {len(sources)}")
 
+    global RUN_ARTIFACT_DIR
+    run_timestamp = datetime.now().strftime('%Y-%m-%d_%H%M%S')
+    RUN_ARTIFACT_DIR = os.path.join(RUNS_DIR, run_timestamp)
+    os.makedirs(RUN_ARTIFACT_DIR, exist_ok=True)
+
     facebook_targets = load_facebook_targets(force_reload=True)
 
     geocache = load_json(GEOCODE_CACHE_PATH, {})
@@ -2863,7 +3123,7 @@ def main():
     pipeline_metrics: Dict[str, dict] = {}
     source_filter_stats: Dict[str, Counter] = {}
 
-    serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi", "facebook_group_events_serpapi"}
+    serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi", "facebook_group_events_serpapi", "serpapi_google_events"}
 
     for s in sources:
         stype = s.get("type")
@@ -2894,6 +3154,8 @@ def main():
                 raw_events.extend(collect_web_search_facebook_events_serpapi(source_with_context, url_cache, diagnostics=diagnostics))
             elif stype == "facebook_group_events_serpapi":
                 raw_events.extend(collect_facebook_group_events_serpapi(source_with_context, cfg, url_cache, diagnostics=diagnostics))
+            elif stype == "serpapi_google_events":
+                raw_events.extend(collect_serpapi_google_events(source_with_context, diagnostics=diagnostics))
             else:
                 log(f"Skipping unknown source type: {stype} ({sname})")
 
@@ -2970,8 +3232,7 @@ def main():
     if spreadsheet_id:
         log(f"📄 Sheets URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
 
-    run_timestamp = datetime.now().strftime('%Y-%m-%d_%H%M%S')
-    run_dir = os.path.join(RUNS_DIR, run_timestamp)
+    run_dir = RUN_ARTIFACT_DIR or os.path.join(RUNS_DIR, datetime.now().strftime('%Y-%m-%d_%H%M%S'))
     os.makedirs(run_dir, exist_ok=True)
 
     run_report = {

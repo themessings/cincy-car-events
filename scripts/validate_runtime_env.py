@@ -83,6 +83,10 @@ def main() -> int:
 
     if not os.getenv("SERPAPI_API_KEY"):
         print("ℹ️ SERPAPI_API_KEY is optional; discovery sources will self-skip when unset.")
+    print(f"ℹ️ SERPAPI_LOCATION: {(os.getenv('SERPAPI_LOCATION') or 'Cincinnati, OH').strip() or 'Cincinnati, OH'}")
+    print(f"ℹ️ SERPAPI_GL: {(os.getenv('SERPAPI_GL') or 'us').strip() or 'us'}")
+    print(f"ℹ️ SERPAPI_HL: {(os.getenv('SERPAPI_HL') or 'en').strip() or 'en'}")
+    print(f"ℹ️ SERPAPI_EVENTS_DATE_FILTER: {(os.getenv('SERPAPI_EVENTS_DATE_FILTER') or 'date:month').strip() or 'date:month'}")
 
     fb_discovery_enabled = os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "1").strip().lower() not in {"0", "false", "no"}
     print("ℹ️ ENABLE_FACEBOOK_SERP_DISCOVERY is " + ("enabled" if fb_discovery_enabled else "disabled") + " (default: enabled).")
