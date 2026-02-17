@@ -37,6 +37,7 @@ jobs:
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
           APEX_FACEBOOK_PAGES_SHEET_ID: 1pol-GLdo3ylizOJ0DG3cDwo9TVClEJ23To7ber0waik
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          APEX_IMPORT_SPREADSHEET_ID: 1xlIu0QIhyNSB1ptnLM6QvSKKYFwFcuVZBl26NMERczk
         run: |
           echo "ℹ️ Facebook token env var name: FACEBOOK_ACCESS_TOKEN"
           if [ -n "${FACEBOOK_ACCESS_TOKEN:-}" ]; then
@@ -54,6 +55,7 @@ jobs:
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
           APEX_FACEBOOK_PAGES_SHEET_ID: 1pol-GLdo3ylizOJ0DG3cDwo9TVClEJ23To7ber0waik
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          APEX_IMPORT_SPREADSHEET_ID: 1xlIu0QIhyNSB1ptnLM6QvSKKYFwFcuVZBl26NMERczk
           # Optional (only if using a Shared Drive)
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
         run: |

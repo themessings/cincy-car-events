@@ -113,8 +113,12 @@ sources:
   name: OVR PCA Social Events (ICS)
   url: https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics
 - type: ics
-  name: Community Rally Calendar (iCloud)
-  url: https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk
+  name: iCloud Published Calendar (ICS)
+  url: webcal://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk
+  future_only: true
+- type: google_sheet_events_import
+  name: Google Sheet Events Import
+  tab: Events
 - type: facebook_page_events
   name: Facebook Page Events (Graph API sheet/env IDs)
 - type: serpapi_google_events

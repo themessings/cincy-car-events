@@ -78,6 +78,19 @@ def main() -> int:
                 f"spreadsheet ID after normalization: '{normalized_pages_sheet or raw_pages_sheet}'."
             )
 
+
+    raw_import_sheet = os.getenv("APEX_IMPORT_SPREADSHEET_ID", "1xlIu0QIhyNSB1ptnLM6QvSKKYFwFcuVZBl26NMERczk")
+    normalized_import_sheet = extract_spreadsheet_id(raw_import_sheet)
+    if raw_import_sheet != normalized_import_sheet:
+        print("ℹ️ APEX_IMPORT_SPREADSHEET_ID provided as URL; " f"extracted spreadsheet ID: {normalized_import_sheet}")
+    if re.fullmatch(r"[a-zA-Z0-9-_]{20,}", normalized_import_sheet):
+        print(f"✅ APEX_IMPORT_SPREADSHEET_ID will use spreadsheet ID: {normalized_import_sheet}")
+    else:
+        print(
+            "⚠️ APEX_IMPORT_SPREADSHEET_ID is set but could not be parsed as a valid "
+            f"spreadsheet ID after normalization: '{normalized_import_sheet or raw_import_sheet}'."
+        )
+
     if os.getenv("COLLECTOR_DRY_RUN"):
         print("ℹ️ COLLECTOR_DRY_RUN is set; collector will skip Google Sheets writes.")
 
