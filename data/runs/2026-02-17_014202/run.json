@@ -1,0 +1,165 @@
+{
+  "generated_at_iso": "2026-02-16T20:43:34.542250-05:00",
+  "raw_events": 310,
+  "incoming_after_filters": 47,
+  "merged_total": 35,
+  "source_stats": [
+    {
+      "name": "CarsAndCoffeeEvents - Ohio",
+      "type": "html_carsandcoffeeevents_ohio",
+      "status": "ok",
+      "collected": 40
+    },
+    {
+      "name": "Cincinnati Cars and Coffee (Series)",
+      "type": "html_wordpress_events_list",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "OVR PCA Social Events (ICS)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 75
+    },
+    {
+      "name": "Community Rally Calendar (iCloud)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 195
+    },
+    {
+      "name": "Facebook Page Events (Graph API sheet/env IDs)",
+      "type": "facebook_page_events",
+      "status": "ok",
+      "collected": 0,
+      "reason": "disabled_invalid_token"
+    },
+    {
+      "name": "Google Events (SerpAPI) [serpapi_google_events]",
+      "type": "serpapi_google_events",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Facebook Group Events (SerpAPI)",
+      "type": "facebook_group_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "FB Events (Cincy keywords)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "FB Events (Ohio + NKY)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "Eventbrite Cincy",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Meetup Cincy Cars",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Regional rallies",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "SCCA RoadRally + RallyCross",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "American Rally Association (SOFR + regional)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "Eventbrite regional autos (SerpAPI)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "MotorsportReg regional autos",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "TrackRabbit + SCCA calendar discovery",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    }
+  ],
+  "source_failures": [],
+  "serpapi_enabled": true,
+  "dry_run": false,
+  "pipeline_metrics": {
+    "normalize_drop_reasons": {
+      "location_too_far_local": 5,
+      "outside_window_past": 256,
+      "non_automotive:exclude_keyword:wine tasting": 2
+    },
+    "non_automotive_examples": [
+      "OVR PCA Wine Tasting Summer 2024 - Presented by Porsche of the Village (exclude_keyword:wine tasting)",
+      "OVR PCA Wine Tasting (exclude_keyword:wine tasting)"
+    ],
+    "dedupe_drop_reasons": {
+      "duplicate_signature_match": 41
+    }
+  },
+  "facebook_coverage": {
+    "token": {
+      "valid": "no",
+      "reason": "http_400",
+      "expires_at": null,
+      "expires_at_et": "unknown",
+      "refresh_attempted": true,
+      "refresh_succeeded": false,
+      "refresh_error": "missing_app_credentials"
+    },
+    "serp_queries": [],
+    "urls_discovered": 0,
+    "urls_parsed": 0,
+    "urls_failed": 0,
+    "page_events": 0,
+    "failure_reasons": {}
+  }
+}
