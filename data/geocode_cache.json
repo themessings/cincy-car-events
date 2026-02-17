@@ -519,5 +519,47 @@
   "Atlanta, GA": {
     "lat": "33.7544657",
     "lon": "-84.3898151"
+  },
+  "City of Lawrenceburg": {
+    "lat": "38.0373264",
+    "lon": "-84.8960027"
+  },
+  "Paristown - Louisville, KY": {
+    "lat": "38.2426635",
+    "lon": "-85.7349755"
+  },
+  "Madison High School": {
+    "lat": "40.7711072",
+    "lon": "-74.4091314"
+  },
+  "National Museum of the U.S. Air Force": {
+    "lat": "39.7802236",
+    "lon": "-84.1080722"
+  },
+  "Oxford Masonic Lodge car show": null,
+  "Quaker Steak and Lube Colerain, OH": null,
+  "Calderwood Hwy Maryville, TN": null,
+  "Voss Used Vehicles": null,
+  "Greene County Fairgrounds & Expo Center": {
+    "lat": "39.6988578",
+    "lon": "-83.9373506"
+  },
+  "VFW Post 7570": {
+    "lat": "40.7599396",
+    "lon": "-73.9169418"
+  },
+  "Quaker Steak and Lube": null,
+  "Fontana Village Resort & Marina": null,
+  "Hollywood Gaming at Dayton Raceway": {
+    "lat": "39.8164250",
+    "lon": "-84.1711083"
+  },
+  "Milford, OH": {
+    "lat": "39.1746250",
+    "lon": "-84.2958988"
+  },
+  "Beckett Ridge": {
+    "lat": "39.3439305",
+    "lon": "-84.4388476"
   }
 }
