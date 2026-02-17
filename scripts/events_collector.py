@@ -22,6 +22,7 @@ import requests
 import yaml
 from bs4 import BeautifulSoup
 from dateutil import tz
+from dateutil import parser as dateutil_parser
 from icalendar import Calendar
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -577,6 +578,102 @@ def parse_dt(text: str) -> Optional[datetime]:
         },
     )
     return dt
+
+
+
+
+def parse_iso_datetime_safe(raw_value: str, et_tz=None) -> Optional[datetime]:
+    raw = clean_ws(raw_value or "")
+    if not raw:
+        return None
+
+    et_tz = et_tz or tz.gettz("America/New_York")
+    dt: Optional[datetime] = None
+    try:
+        dt = datetime.fromisoformat(raw)
+    except Exception:
+        try:
+            dt = dateutil_parser.parse(raw)
+        except Exception:
+            return None
+
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=et_tz)
+    return dt.astimezone(et_tz)
+
+
+def prune_past_events(events: List[dict], now: datetime) -> List[dict]:
+    mode = clean_ws(os.getenv("EVENT_PRUNE_MODE", "end_before_now")).lower() or "end_before_now"
+    if mode not in {"end_before_now", "start_before_now"}:
+        log(f"⚠️ Unknown EVENT_PRUNE_MODE='{mode}', defaulting to end_before_now")
+        mode = "end_before_now"
+
+    et_tz = tz.gettz("America/New_York")
+    if now.tzinfo is None:
+        now_et = now.replace(tzinfo=et_tz)
+    else:
+        now_et = now.astimezone(et_tz)
+
+    kept: List[dict] = []
+    removed: List[dict] = []
+
+    for ev in events:
+        start_dt = parse_iso_datetime_safe(ev.get("start_iso", ""), et_tz=et_tz)
+        end_dt = parse_iso_datetime_safe(ev.get("end_iso", ""), et_tz=et_tz) or start_dt
+
+        cmp_dt = start_dt if mode == "start_before_now" else end_dt
+        if cmp_dt is None:
+            kept.append(ev)
+            continue
+
+        if cmp_dt < now_et:
+            removed.append(ev)
+            continue
+
+        kept.append(ev)
+
+    log(
+        f"🧹 Pruned past events: removed={len(removed)} kept={len(kept)} now_et_iso={now_et.isoformat()}"
+    )
+    if removed:
+        sample_titles = [clean_ws(ev.get("title", "")) or "(untitled)" for ev in removed[:3]]
+        log(f"   Removed examples: {sample_titles}")
+
+    return kept
+
+
+def prune_cache_by_age(cache_obj, now: datetime, days: int = 180, label: str = "cache"):
+    if not isinstance(cache_obj, dict):
+        return cache_obj
+
+    et_tz = tz.gettz("America/New_York")
+    now_et = now if now.tzinfo else now.replace(tzinfo=et_tz)
+    now_et = now_et.astimezone(et_tz)
+    cutoff = now_et - timedelta(days=days)
+
+    kept = {}
+    removed = 0
+    missing_ts = 0
+    for key, value in cache_obj.items():
+        if not isinstance(value, dict):
+            kept[key] = value
+            continue
+        fetched = parse_iso_datetime_safe(value.get("fetched_at_iso", ""), et_tz=et_tz)
+        if fetched is None:
+            missing_ts += 1
+            kept[key] = value
+            continue
+        if fetched < cutoff:
+            removed += 1
+            continue
+        kept[key] = value
+
+    if removed:
+        log(f"🧹 Pruned {label}: removed={removed} kept={len(kept)} cutoff_et_iso={cutoff.isoformat()}")
+    elif missing_ts:
+        log(f"ℹ️ Skipped age prune for {label} entries without fetched_at_iso: {missing_ts}")
+
+    return kept
 
 
 def haversine_miles(lat1, lon1, lat2, lon2) -> float:
@@ -3259,7 +3356,7 @@ def dedupe_merge(
     return sorted(merged.values(), key=sort_key)
 
 
-def write_csv(events: List[EventItem], path: str) -> None:
+def write_csv(events: List[dict], path: str) -> None:
     fields = [
         "title",
         "start_iso",
@@ -3278,7 +3375,7 @@ def write_csv(events: List[EventItem], path: str) -> None:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         for ev in events:
-            w.writerow(asdict(ev))
+            w.writerow(ev)
 
 
 # -------------------------
@@ -3358,7 +3455,7 @@ def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
     requests_body = {"requests": [{"addSheet": {"properties": {"title": title}}}]}
     sheets.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id, body=requests_body).execute()
 
-def update_apex_spreadsheet(events: List[EventItem]) -> None:
+def update_apex_spreadsheet(events: List[dict]) -> None:
     dry_run = clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y")
     if dry_run:
         log("ℹ️ COLLECTOR_DRY_RUN enabled: skipping Google Sheets write.")
@@ -3401,25 +3498,26 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
     for ev in events:
         values.append(
             [
-                ev.title,
-                ev.start_iso,
-                ev.end_iso,
-                ev.category,
-                ev.miles_from_cincy,
-                ev.location,
-                ev.city_state,
-                ev.url,
-                ev.source,
-                ev.lat,
-                ev.lon,
-                ev.last_seen_iso,
+                ev.get("title", ""),
+                ev.get("start_iso", ""),
+                ev.get("end_iso", ""),
+                ev.get("category", ""),
+                ev.get("miles_from_cincy"),
+                ev.get("location", ""),
+                ev.get("city_state", ""),
+                ev.get("url", ""),
+                ev.get("source", ""),
+                ev.get("lat"),
+                ev.get("lon"),
+                ev.get("last_seen_iso", ""),
             ]
         )
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
+    clear_range = "Events!A1:L"
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
-        range="Events!A1:L",
+        range=clear_range,
         body={}
     ).execute()
 
@@ -3446,9 +3544,46 @@ def update_apex_spreadsheet(events: List[EventItem]) -> None:
         range="Events!A1:C5",
     ).execute()
     got = preview.get("values", [])
+    log(f"🧽 Cleared Events sheet range {clear_range} then wrote {len(values)-1} rows")
     log(f"   Wrote {len(values)-1} events to Events!A1")
     log(f"   Preview A1:C5 = {got}")
     log(f"   Stamp written to Events!M1 = {stamp}")
+
+
+
+def run_prune_self_test() -> None:
+    now_et = datetime.now(tz=tz.gettz("America/New_York"))
+    dummy_events = [
+        {
+            "title": "Past Event",
+            "start_iso": (now_et - timedelta(days=2)).isoformat(),
+            "end_iso": (now_et - timedelta(days=1)).isoformat(),
+        },
+        {
+            "title": "Ongoing Event",
+            "start_iso": (now_et - timedelta(hours=1)).isoformat(),
+            "end_iso": (now_et + timedelta(hours=1)).isoformat(),
+        },
+        {
+            "title": "Future Event",
+            "start_iso": (now_et + timedelta(days=1)).isoformat(),
+            "end_iso": (now_et + timedelta(days=1, hours=2)).isoformat(),
+        },
+    ]
+
+    old_mode = os.getenv("EVENT_PRUNE_MODE")
+    os.environ["EVENT_PRUNE_MODE"] = "end_before_now"
+    try:
+        kept = prune_past_events(dummy_events, now_et)
+    finally:
+        if old_mode is None:
+            os.environ.pop("EVENT_PRUNE_MODE", None)
+        else:
+            os.environ["EVENT_PRUNE_MODE"] = old_mode
+
+    kept_titles = [e.get("title") for e in kept]
+    assert kept_titles == ["Ongoing Event", "Future Event"], f"Unexpected kept titles: {kept_titles}"
+    print("✅ prune self-test passed", flush=True)
 
 # -------------------------
 # Main
@@ -3623,20 +3758,26 @@ def main():
     dropped_merged_non_automotive = merged_before_focus_filter - len(merged)
     if dropped_merged_non_automotive:
         log(f"🧹 Removed non-automotive events after merge: {dropped_merged_non_automotive}")
-    log(f"✅ Merged total events: {len(merged)}")
+    log(f"✅ Merged total events before prune: {len(merged)}")
 
+    now_et = datetime.now(tz=tz.gettz("America/New_York"))
+    merged_dicts = [asdict(e) for e in merged]
+    merged_dicts = prune_past_events(merged_dicts, now_et)
+
+    geocache = prune_cache_by_age(geocache, now_et, days=180, label="geocode_cache")
+    url_cache = prune_cache_by_age(url_cache, now_et, days=180, label="url_cache")
     save_json(GEOCODE_CACHE_PATH, geocache)
     save_json(URL_CACHE_PATH, url_cache)
 
     payload = {
         "generated_at_iso": now_et_iso(),
-        "count": len(merged),
-        "events": [asdict(e) for e in merged],
+        "count": len(merged_dicts),
+        "events": merged_dicts,
     }
     save_json(EVENTS_JSON_PATH, payload)
-    write_csv(merged, EVENTS_CSV_PATH)
+    write_csv(merged_dicts, EVENTS_CSV_PATH)
 
-    update_apex_spreadsheet(merged)
+    update_apex_spreadsheet(merged_dicts)
     spreadsheet_id = os.getenv("APEX_SPREADSHEET_ID")
     if spreadsheet_id:
         log(f"📄 Sheets URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
@@ -3648,7 +3789,7 @@ def main():
         "generated_at_iso": now_et_iso(),
         "raw_events": len(raw_events),
         "incoming_after_filters": len(incoming),
-        "merged_total": len(merged),
+        "merged_total": len(merged_dicts),
         "source_stats": source_run_stats,
         "source_failures": source_failures,
         "serpapi_enabled": serpapi_enabled,
@@ -3667,7 +3808,7 @@ def main():
         save_json(failures_path, {"generated_at_iso": now_et_iso(), "count": len(source_failures), "failures": source_failures})
 
     skipped_sources = [x for x in source_run_stats if x.get("status") == "skipped"]
-    log(f"📄 Sheets rows written (excluding header): {len(merged)}")
+    log(f"📄 Sheets rows written (excluding header): {len(merged_dicts)}")
     log(f"🔎 Source summary: ok={len(ok_sources)} skipped={len(skipped_sources)} failed={len(failed_sources)}")
     log_source_health_summary(source_run_stats)
     sheet_skip_totals: Counter = Counter()
@@ -3704,7 +3845,7 @@ def main():
         log("   top_failure_reasons:")
         for reason, cnt in failure_top:
             log(f"      - {reason}: {cnt}")
-    log(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged)}")
+    log(f"✅ Done. Incoming: {len(incoming)} | Total: {len(merged_dicts)}")
     log(f"   Wrote: {EVENTS_JSON_PATH}")
     log(f"   Wrote: {EVENTS_CSV_PATH}")
     log(f"   Wrote: {GEOCODE_CACHE_PATH}")
@@ -3726,6 +3867,9 @@ def main():
 
 if __name__ == "__main__":
     try:
+        if "--self-test-prune" in sys.argv:
+            run_prune_self_test()
+            sys.exit(0)
         main()
     except Exception as ex:
         log(f"❌ Fatal: {ex}")
