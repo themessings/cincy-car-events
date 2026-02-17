@@ -20,6 +20,8 @@ from scripts.events_collector import (
     derive_zero_yield_reason,
     main,
     load_facebook_targets,
+    collect_ics,
+    _parse_google_sheet_events_rows,
 )
 
 
@@ -182,11 +184,6 @@ class FacebookDiagnosticsTests(unittest.TestCase):
             "scripts.events_collector.fetch_facebook_event_via_graph", side_effect=AssertionError("Graph enrichment should be skipped")
         ):
             out = collect_facebook_group_events_serpapi(source={}, cfg={}, url_cache={}, diagnostics={})
-            "scripts.events_collector.collect_facebook_group_event_urls_serpapi", return_value=(rows, None)
-        ), patch(
-            "scripts.events_collector.fetch_facebook_event_via_graph", side_effect=AssertionError("Graph enrichment should be skipped")
-        ):
-            out = collect_facebook_group_events_serpapi(cfg={}, url_cache={}, diagnostics={})
 
         self.assertEqual(len(out), 1)
         self.assertEqual(out[0].get("source"), "facebook_group_serpapi")
@@ -223,3 +220,52 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         with patch("scripts.events_collector.load_facebook_pages", return_value=[]):
             out = load_facebook_targets(force_reload=True)
         self.assertEqual(out, {"page": [], "group": [], "non_facebook": []})
+
+
+class NewSourceIngestionTests(unittest.TestCase):
+    def test_collect_ics_converts_webcal_and_applies_future_only(self):
+        ics = """BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Past Cars Meetup
+DTSTART:20200101T120000Z
+DTEND:20200101T140000Z
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Future Cars Meetup
+DTSTART:20990101T120000Z
+DTEND:20990101T140000Z
+END:VEVENT
+END:VCALENDAR
+"""
+
+        class _Resp:
+            status_code = 200
+            content = ics.encode("utf-8")
+
+            def raise_for_status(self):
+                return None
+
+        with patch("scripts.events_collector.requests.get", return_value=_Resp()) as mock_get:
+            out = collect_ics({
+                "name": "iCloud Published Calendar (ICS)",
+                "url": "webcal://example.com/calendar.ics",
+                "future_only": True,
+            })
+
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0]["title"], "Future Cars Meetup")
+        self.assertEqual(mock_get.call_args.args[0], "https://example.com/calendar.ics")
+
+    def test_parse_google_sheet_rows_maps_columns_and_defaults_date_only_time(self):
+        rows = [
+            ["Name", "Start Date", "Location", "City", "URL"],
+            ["Cars & Coffee", "2099-05-01", "123 Main St", "Cincinnati", "https://example.com/event"],
+        ]
+        out = _parse_google_sheet_events_rows(rows, "Google Sheet Events Import", "Events")
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0]["title"], "Cars & Coffee")
+        self.assertEqual(out[0]["start_dt"].hour, 9)
+        self.assertEqual(out[0]["end_dt"].hour, 11)
+        self.assertIn("Cincinnati", out[0]["location"])
+

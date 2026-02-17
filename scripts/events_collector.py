@@ -8,7 +8,7 @@ import time
 import traceback
 from collections import Counter
 from dataclasses import dataclass, asdict
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import parse_qs, unquote, urljoin, urlparse
 
@@ -93,7 +93,7 @@ def get_facebook_access_token() -> str:
 
 
 def extract_google_spreadsheet_id(value: str) -> str:
-    raw = clean_ws(value)
+    raw = re.sub(r"\s+", " ", (value or "")).strip()
     if not raw:
         return ""
     if "docs.google.com/spreadsheets" in raw:
@@ -101,6 +101,11 @@ def extract_google_spreadsheet_id(value: str) -> str:
         if m:
             return m.group(1)
     return raw
+
+
+APEX_IMPORT_SPREADSHEET_ID = extract_google_spreadsheet_id(
+    os.getenv("APEX_IMPORT_SPREADSHEET_ID", "1xlIu0QIhyNSB1ptnLM6QvSKKYFwFcuVZBl26NMERczk")
+)
 
 
 def normalize_facebook_pages_sheet_id(raw_value: str, context: str = "collector") -> str:
@@ -1396,8 +1401,15 @@ def collect_wordpress_events_series(source: dict) -> List[dict]:
 
 
 def collect_ics(source: dict) -> List[dict]:
+    source_url = clean_ws(source.get("url", ""))
+    if source_url.startswith("webcal://"):
+        source_url = "https://" + source_url[len("webcal://") :]
+
+    now_et = datetime.now(tz=tz.gettz("America/New_York"))
+    future_only = clean_ws(str(source.get("future_only", ""))).lower() in {"1", "true", "yes", "y"}
+
     headers = {"User-Agent": "cincy-car-events-bot/1.0 (github actions)"}
-    r = requests.get(source["url"], headers=headers, timeout=30)
+    r = requests.get(source_url, headers=headers, timeout=30)
     r.raise_for_status()
 
     cal = Calendar.from_ical(r.content)
@@ -1409,7 +1421,7 @@ def collect_ics(source: dict) -> List[dict]:
 
         title = clean_ws(str(component.get("summary", "")))
         loc = clean_ws(str(component.get("location", "")))
-        url = clean_ws(str(component.get("url", ""))) or source["url"]
+        url = clean_ws(str(component.get("url", ""))) or source_url
 
         dtstart = component.get("dtstart")
         dtend = component.get("dtend")
@@ -1420,20 +1432,26 @@ def collect_ics(source: dict) -> List[dict]:
         start_dt = dtstart.dt
         end_dt = dtend.dt if dtend else None
 
-        if isinstance(start_dt, datetime) and start_dt.tzinfo is None:
-            start_dt = start_dt.replace(tzinfo=timezone.utc).astimezone(tz.gettz("America/New_York"))
-        elif isinstance(start_dt, datetime):
-            start_dt = start_dt.astimezone(tz.gettz("America/New_York"))
+        if isinstance(start_dt, datetime):
+            if start_dt.tzinfo is None:
+                start_dt = start_dt.replace(tzinfo=tz.gettz("America/New_York"))
+            else:
+                start_dt = start_dt.astimezone(tz.gettz("America/New_York"))
         else:
             start_dt = datetime.combine(start_dt, datetime.min.time()).replace(tzinfo=tz.gettz("America/New_York"))
 
         if end_dt:
             if isinstance(end_dt, datetime) and end_dt.tzinfo is None:
-                end_dt = end_dt.replace(tzinfo=timezone.utc).astimezone(tz.gettz("America/New_York"))
+                end_dt = end_dt.replace(tzinfo=tz.gettz("America/New_York"))
             elif isinstance(end_dt, datetime):
                 end_dt = end_dt.astimezone(tz.gettz("America/New_York"))
+            else:
+                end_dt = datetime.combine(end_dt, datetime.min.time()).replace(tzinfo=tz.gettz("America/New_York"))
         else:
             end_dt = start_dt + timedelta(hours=2)
+
+        if future_only and start_dt < now_et:
+            continue
 
         out.append(
             {
@@ -1447,6 +1465,169 @@ def collect_ics(source: dict) -> List[dict]:
         )
 
     return out
+
+
+def _sheet_header_key(header: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", clean_ws(header).lower())
+
+
+def _sheet_value(row: List[str], header_map: Dict[str, int], *keys: str) -> str:
+    for key in keys:
+        idx = header_map.get(key)
+        if idx is not None and idx < len(row):
+            value = clean_ws(row[idx])
+            if value:
+                return value
+    return ""
+
+
+def _parse_sheet_event_datetime(value: str, *, default_hour: int) -> Optional[datetime]:
+    raw = clean_ws(value)
+    if not raw:
+        return None
+
+    dt = parse_dt(raw)
+    if dt:
+        return dt
+
+    try:
+        date_only = datetime.fromisoformat(raw).date()
+    except Exception:
+        return None
+
+    return datetime.combine(date_only, datetime.min.time().replace(hour=default_hour)).replace(tzinfo=tz.gettz("America/New_York"))
+
+
+def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab_name: str) -> List[dict]:
+    if not rows:
+        return []
+
+    headers = [_sheet_header_key(c) for c in rows[0]]
+    header_map = {h: i for i, h in enumerate(headers) if h}
+    now_et = datetime.now(tz=tz.gettz("America/New_York"))
+
+    out: List[dict] = []
+    for row in rows[1:]:
+        title = _sheet_value(row, header_map, "title", "name")
+        start_raw = _sheet_value(row, header_map, "startiso", "startdate", "start")
+        end_raw = _sheet_value(row, header_map, "endiso", "enddate", "end")
+        if not title or not start_raw:
+            continue
+
+        has_start_time = bool(re.search(r"\d{1,2}:\d{2}", start_raw)) or "t" in start_raw.lower()
+        has_end_time = bool(re.search(r"\d{1,2}:\d{2}", end_raw)) or "t" in end_raw.lower()
+
+        start_dt = _parse_sheet_event_datetime(start_raw, default_hour=9)
+        if start_dt and not has_start_time:
+            start_dt = start_dt.replace(hour=9, minute=0, second=0, microsecond=0)
+        end_dt = _parse_sheet_event_datetime(end_raw, default_hour=11) if end_raw else None
+        if end_dt and not has_end_time:
+            end_dt = end_dt.replace(hour=11, minute=0, second=0, microsecond=0)
+
+        if not start_dt:
+            continue
+        if not end_dt:
+            end_dt = start_dt + timedelta(hours=2)
+        if start_dt < now_et:
+            continue
+
+        city = _sheet_value(row, header_map, "city")
+        location = _sheet_value(row, header_map, "location", "address", "locationaddress")
+        location_text = clean_ws(" ".join([location, city]))
+        url = _sheet_value(row, header_map, "link", "url")
+
+        out.append(
+            {
+                "title": title,
+                "start_dt": start_dt,
+                "end_dt": end_dt,
+                "location": location_text,
+                "url": url,
+                "source": source_name,
+                "source_tab": tab_name,
+            }
+        )
+    return out
+
+
+def _fetch_public_sheet_rows_csv(sheet_id: str, tab_name: str) -> Optional[List[List[str]]]:
+    if tab_name:
+        csv_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={tab_name}"
+    else:
+        csv_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
+    try:
+        resp = requests.get(csv_url, headers=DEFAULT_HTTP_HEADERS, timeout=30)
+        if resp.status_code in (401, 403):
+            return None
+        resp.raise_for_status()
+        parsed = list(csv.reader(resp.text.splitlines()))
+        return parsed if parsed else None
+    except Exception:
+        return None
+
+
+def _fetch_sheet_rows_via_api(sheet_id: str, preferred_tab: str) -> Tuple[List[List[str]], str]:
+    creds = get_google_credentials()
+    if not creds:
+        return [], ""
+    sheets = build("sheets", "v4", credentials=creds)
+
+    metadata = sheets.spreadsheets().get(spreadsheetId=sheet_id, includeGridData=False).execute()
+    sheet_entries = metadata.get("sheets", []) or []
+    tab_name = ""
+    for entry in sheet_entries:
+        props = entry.get("properties") or {}
+        if clean_ws(props.get("title", "")) == preferred_tab:
+            tab_name = preferred_tab
+            break
+    if not tab_name and sheet_entries:
+        tab_name = clean_ws((sheet_entries[0].get("properties") or {}).get("title", ""))
+    if not tab_name:
+        return [], ""
+
+    resp = sheets.spreadsheets().values().get(spreadsheetId=sheet_id, range=f"{tab_name}!A1:Z2000").execute()
+    return resp.get("values", []), tab_name
+
+
+def collect_google_sheet_events_import(source: dict) -> List[dict]:
+    sheet_id = extract_google_spreadsheet_id(clean_ws(source.get("spreadsheet_id") or APEX_IMPORT_SPREADSHEET_ID))
+    preferred_tab = clean_ws(source.get("tab") or "Events")
+    source_name = source.get("name", "Google Sheet Events Import")
+    if not sheet_id:
+        log("⚠️ Sheet import skipped: missing APEX_IMPORT_SPREADSHEET_ID.")
+        return []
+
+    rows: List[List[str]] = []
+    tab_name = preferred_tab
+
+    rows = _fetch_public_sheet_rows_csv(sheet_id, preferred_tab) or []
+    if not rows:
+        rows = _fetch_public_sheet_rows_csv(sheet_id, "") or []
+
+    if not rows:
+        try:
+            rows, tab_name = _fetch_sheet_rows_via_api(sheet_id, preferred_tab)
+        except HttpError as ex:
+            status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
+            if status in (401, 403):
+                log(f"⚠️ Sheet import unauthorized (HTTP {status}) for spreadsheet={sheet_id}; continuing without import.")
+                return []
+            log(f"⚠️ Sheet import API error for spreadsheet={sheet_id}: {ex}")
+            return []
+        except Exception as ex:
+            log(f"⚠️ Sheet import failed for spreadsheet={sheet_id}: {ex}")
+            return []
+
+    if not rows:
+        log(f"⚠️ Sheet import returned no rows for spreadsheet={sheet_id}; continuing.")
+        return []
+
+    parsed = _parse_google_sheet_events_rows(rows, source_name, tab_name or preferred_tab)
+    log(
+        f"✅ Sheet import loaded: rows={max(len(rows) - 1, 0)} tab={tab_name or preferred_tab} "
+        f"parsed_events={len(parsed)} future_only=yes"
+    )
+    return parsed
 
 
 def collect_facebook_page_events(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
@@ -3213,6 +3394,8 @@ def main():
                 raw_events.extend(collect_wordpress_events_series(source_with_context))
             elif stype == "ics":
                 raw_events.extend(collect_ics(source_with_context))
+            elif stype == "google_sheet_events_import":
+                raw_events.extend(collect_google_sheet_events_import(source_with_context))
             elif stype == "facebook_page_events":
                 raw_events.extend(collect_facebook_page_events(source_with_context, diagnostics=diagnostics))
             elif stype == "web_search_serpapi":
@@ -3233,7 +3416,12 @@ def main():
             if collected == 0:
                 stat["reason"] = diag.get("reason", "no_results_from_search")
             source_run_stats.append(stat)
-            log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events")
+            extra_log = ""
+            if stype == "ics" and clean_ws(str(source_with_context.get("future_only", ""))).lower() in {"1", "true", "yes", "y"}:
+                extra_log = " future_only_applied=yes"
+            if stype == "google_sheet_events_import":
+                extra_log = " future_only_applied=yes"
+            log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events{extra_log}")
         except SourceDisabledError as ex:
             source_run_stats.append({"name": sname, "type": stype, "status": "disabled", "collected": 0, "reason": ex.reason, "error": str(ex)})
             log(f"⚪ Source disabled: {sname} [{stype}] :: {ex}")
