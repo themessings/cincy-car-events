@@ -440,5 +440,84 @@
     "lon": "-93.6973395"
   },
   "Ironside Axe Club 2700 University Ave Suite 100, West Des Moines, ia 50266 West Des Moines ia 50266": null,
-  "9:00AM until 3:00PM": null
+  "9:00AM until 3:00PM": null,
+  "Indianapolis, IN": {
+    "lat": "39.7683331",
+    "lon": "-86.1583502"
+  },
+  "Smoky Mountains, TN": {
+    "lat": "35.6342201",
+    "lon": "-83.4023660"
+  },
+  "Asheville, NC": {
+    "lat": "35.5953630",
+    "lon": "-82.5508407"
+  },
+  "Blue Ridge, GA": {
+    "lat": "34.8639720",
+    "lon": "-84.3240870"
+  },
+  "Lexington, OH": {
+    "lat": "40.6787196",
+    "lon": "-82.5827749"
+  },
+  "Wilmington, OH": {
+    "lat": "39.4453393",
+    "lon": "-83.8285375"
+  },
+  "Chillicothe, OH": {
+    "lat": "39.3331197",
+    "lon": "-82.9824019"
+  },
+  "Launch Cincinnati, OH": {
+    "lat": "39.0882425",
+    "lon": "-84.4287215"
+  },
+  "Southern Ohio / KY Backroads": null,
+  "Tennessee / Appalachia Region": null,
+  "Louisville, KY": {
+    "lat": "38.2542376",
+    "lon": "-85.7594070"
+  },
+  "Athens, OH": {
+    "lat": "39.3575616",
+    "lon": "-82.0609557"
+  },
+  "Marquette, MI": {
+    "lat": "46.4481521",
+    "lon": "-87.6305899"
+  },
+  "Traverse City, MI": {
+    "lat": "44.7606481",
+    "lon": "-85.6165976"
+  },
+  "Frankenmuth, MI": {
+    "lat": "43.3323684",
+    "lon": "-83.7392288"
+  },
+  "Chattanooga, TN": {
+    "lat": "35.0457219",
+    "lon": "-85.3094883"
+  },
+  "Greenville, SC": {
+    "lat": "34.8513540",
+    "lon": "-82.3984882"
+  },
+  "Charlotte, NC": {
+    "lat": "35.2272086",
+    "lon": "-80.8430827"
+  },
+  "Launch Washington, DC": null,
+  "Bristol, TN": {
+    "lat": "36.5945034",
+    "lon": "-82.1885212"
+  },
+  "Nashville, TN": {
+    "lat": "36.1622767",
+    "lon": "-86.7742984"
+  },
+  "Atlanta, GA": {
+    "lat": "33.7544657",
+    "lon": "-84.3898151"
+  }
 }

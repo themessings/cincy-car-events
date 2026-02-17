@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-02-16T20:59:45.661165-05:00",
-  "count": 35,
+  "generated_at_iso": "2026-02-16T21:20:38.783541-05:00",
+  "count": 71,
   "events": [
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -238,7 +238,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-16T20:59:45.638311-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.043482-05:00"
     },
     {
       "title": "Star Trek the Cruise IX",
@@ -266,7 +266,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-16T20:59:45.638676-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.043847-05:00"
     },
     {
       "title": "Columbus Cars & Coffee",
@@ -280,7 +280,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-16T20:59:45.639076-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.044247-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
@@ -294,7 +294,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-02-16T20:59:45.639436-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.044600-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -308,7 +308,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-16T20:59:45.639810-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.044951-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -322,7 +322,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-02-16T20:59:45.640173-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.045322-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -336,7 +336,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-02-16T20:59:45.640524-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.045665-05:00"
     },
     {
       "title": "Drinking Liberally Weekly Meetup",
@@ -364,7 +364,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-16T20:59:45.640905-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.046045-05:00"
     },
     {
       "title": "Cincinnati Cars and Coffee",
@@ -378,7 +378,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-02-16T20:59:45.641646-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.046729-05:00"
     },
     {
       "title": "ProductTank Wilmington Coming Soon",
@@ -423,6 +423,104 @@
       "last_seen_iso": "2026-02-15T17:26:57.177268-05:00"
     },
     {
+      "title": "Ohio Challenge RoadRally (SCCA)",
+      "start_iso": "2026-03-28T09:00:00-04:00",
+      "end_iso": "2026-03-28T11:00:00-04:00",
+      "location": "Columbus, OH",
+      "city_state": "Columbus, OH",
+      "url": "https://www.scca.com/pages/road-rally",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 100.0,
+      "lat": 39.9622601,
+      "lon": -83.0007065,
+      "last_seen_iso": "2026-02-16T21:20:05.059413-05:00"
+    },
+    {
+      "title": "Hoosier Rally (SCCA)",
+      "start_iso": "2026-04-18T09:00:00-04:00",
+      "end_iso": "2026-04-18T11:00:00-04:00",
+      "location": "Indianapolis, IN",
+      "city_state": "Indianapolis, IN",
+      "url": "https://www.scca.com/pages/road-rally",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 99.1,
+      "lat": 39.7683331,
+      "lon": -86.1583502,
+      "last_seen_iso": "2026-02-16T21:20:06.674622-05:00"
+    },
+    {
+      "title": "Buckeye RoadRally (SCCA)",
+      "start_iso": "2026-05-02T09:00:00-04:00",
+      "end_iso": "2026-05-02T11:00:00-04:00",
+      "location": "Dayton, OH",
+      "city_state": "Dayton, OH",
+      "url": "https://www.scca.com/pages/road-rally",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 48.4,
+      "lat": 39.7589478,
+      "lon": -84.1916069,
+      "last_seen_iso": "2026-02-16T21:20:06.674908-05:00"
+    },
+    {
+      "title": "Corsa America Spring Rally – Day 1",
+      "start_iso": "2026-05-05T09:00:00-04:00",
+      "end_iso": "2026-05-05T11:00:00-04:00",
+      "location": "Smoky Mountains, TN (Launch)",
+      "city_state": "Smoky Mountains, TN",
+      "url": "https://corsarally.com/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 247.3,
+      "lat": 35.6342201,
+      "lon": -83.402366,
+      "last_seen_iso": "2026-02-16T21:20:08.240404-05:00"
+    },
+    {
+      "title": "Corsa America Spring Rally – Day 2",
+      "start_iso": "2026-05-06T09:00:00-04:00",
+      "end_iso": "2026-05-06T11:00:00-04:00",
+      "location": "Asheville, NC",
+      "city_state": "Asheville, NC",
+      "url": "https://corsarally.com/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 265.2,
+      "lat": 35.595363,
+      "lon": -82.5508407,
+      "last_seen_iso": "2026-02-16T21:20:09.527837-05:00"
+    },
+    {
+      "title": "Corsa America Spring Rally – Day 3",
+      "start_iso": "2026-05-07T09:00:00-04:00",
+      "end_iso": "2026-05-07T11:00:00-04:00",
+      "location": "Blue Ridge, GA",
+      "city_state": "Blue Ridge, GA",
+      "url": "https://corsarally.com/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 293.1,
+      "lat": 34.863972,
+      "lon": -84.324087,
+      "last_seen_iso": "2026-02-16T21:20:11.050795-05:00"
+    },
+    {
+      "title": "Mid-Ohio RoadRally (SCCA)",
+      "start_iso": "2026-05-16T09:00:00-04:00",
+      "end_iso": "2026-05-16T11:00:00-04:00",
+      "location": "Lexington, OH",
+      "city_state": "Lexington, OH",
+      "url": "https://www.scca.com/pages/road-rally",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 149.4,
+      "lat": 40.6787196,
+      "lon": -82.5827749,
+      "last_seen_iso": "2026-02-16T21:20:12.651760-05:00"
+    },
+    {
       "title": "Quaker Steak & Lube Classic Car Show & Cruise In",
       "start_iso": "2026-05-24T00:00:00-04:00",
       "end_iso": "2026-05-24T02:00:00-04:00",
@@ -437,6 +535,104 @@
       "last_seen_iso": "2026-02-15T18:53:13.980915-05:00"
     },
     {
+      "title": "RallyCross – Edgewater",
+      "start_iso": "2026-06-06T09:00:00-04:00",
+      "end_iso": "2026-06-06T11:00:00-04:00",
+      "location": "Wilmington, OH",
+      "city_state": "Wilmington, OH",
+      "url": "https://cincyscca.com/rally-cross/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 43.5,
+      "lat": 39.4453393,
+      "lon": -83.8285375,
+      "last_seen_iso": "2026-02-16T21:20:14.232401-05:00"
+    },
+    {
+      "title": "Southern Ohio Forest Rally – Day 1",
+      "start_iso": "2026-06-11T09:00:00-04:00",
+      "end_iso": "2026-06-11T11:00:00-04:00",
+      "location": "Chillicothe, OH",
+      "city_state": "Chillicothe, OH",
+      "url": "https://www.americanrallyassociation.org/sofr",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 83.4,
+      "lat": 39.3331197,
+      "lon": -82.9824019,
+      "last_seen_iso": "2026-02-16T21:20:15.688823-05:00"
+    },
+    {
+      "title": "Southern Ohio Forest Rally – Day 2",
+      "start_iso": "2026-06-12T09:00:00-04:00",
+      "end_iso": "2026-06-12T11:00:00-04:00",
+      "location": "Chillicothe, OH",
+      "city_state": "Chillicothe, OH",
+      "url": "https://www.americanrallyassociation.org/sofr",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 83.4,
+      "lat": 39.3331197,
+      "lon": -82.9824019,
+      "last_seen_iso": "2026-02-16T21:20:15.689185-05:00"
+    },
+    {
+      "title": "Southern Ohio Forest Rally – Day 3",
+      "start_iso": "2026-06-13T09:00:00-04:00",
+      "end_iso": "2026-06-13T11:00:00-04:00",
+      "location": "Chillicothe, OH",
+      "city_state": "Chillicothe, OH",
+      "url": "https://www.americanrallyassociation.org/sofr",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 83.4,
+      "lat": 39.3331197,
+      "lon": -82.9824019,
+      "last_seen_iso": "2026-02-16T21:20:15.689412-05:00"
+    },
+    {
+      "title": "Dynasty Rally 2026 – Day 1",
+      "start_iso": "2026-06-18T09:00:00-04:00",
+      "end_iso": "2026-06-18T11:00:00-04:00",
+      "location": "Launch Cincinnati, OH",
+      "city_state": "Launch Cincinnati, OH",
+      "url": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 4.6,
+      "lat": 39.0882425,
+      "lon": -84.4287215,
+      "last_seen_iso": "2026-02-16T21:20:17.287040-05:00"
+    },
+    {
+      "title": "Dynasty Rally 2026 – Day 2",
+      "start_iso": "2026-06-19T09:00:00-04:00",
+      "end_iso": "2026-06-19T11:00:00-04:00",
+      "location": "Southern Ohio / KY Backroads",
+      "city_state": "",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": null,
+      "lat": null,
+      "lon": null,
+      "last_seen_iso": "2026-02-16T21:20:18.814250-05:00"
+    },
+    {
+      "title": "Dynasty Rally 2026 – Day 3",
+      "start_iso": "2026-06-20T09:00:00-04:00",
+      "end_iso": "2026-06-20T11:00:00-04:00",
+      "location": "Tennessee / Appalachia Region",
+      "city_state": "",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": null,
+      "lat": null,
+      "lon": null,
+      "last_seen_iso": "2026-02-16T21:20:20.339611-05:00"
+    },
+    {
       "title": "Annual Car Show & Chicken Dinner",
       "start_iso": "2026-06-28T11:00:00-04:00",
       "end_iso": "2026-06-28T14:30:00-04:00",
@@ -448,7 +644,7 @@
       "miles_from_cincy": 18.1,
       "lat": 39.090891,
       "lon": -84.8499504,
-      "last_seen_iso": "2026-02-16T20:59:45.652725-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.057608-05:00"
     },
     {
       "title": "Cars and Coffee June 29",
@@ -465,6 +661,76 @@
       "last_seen_iso": "2026-02-15T17:26:57.177080-05:00"
     },
     {
+      "title": "King of the Roads Rally",
+      "start_iso": "2026-07-04T09:00:00-04:00",
+      "end_iso": "2026-07-04T11:00:00-04:00",
+      "location": "Louisville, KY",
+      "city_state": "Louisville, KY",
+      "url": "https://kingoftheroads.events/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 89.3,
+      "lat": 38.2542376,
+      "lon": -85.759407,
+      "last_seen_iso": "2026-02-16T21:20:21.635968-05:00"
+    },
+    {
+      "title": "Rally North America – Ohio Valley 1200 – Day 1",
+      "start_iso": "2026-07-12T09:00:00-04:00",
+      "end_iso": "2026-07-12T11:00:00-04:00",
+      "location": "Athens, OH (Launch)",
+      "city_state": "Athens, OH",
+      "url": "https://rallynorthamerica.com/rally-events/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 132.3,
+      "lat": 39.3575616,
+      "lon": -82.0609557,
+      "last_seen_iso": "2026-02-16T21:20:23.255808-05:00"
+    },
+    {
+      "title": "Rally North America – Day 2",
+      "start_iso": "2026-07-13T09:00:00-04:00",
+      "end_iso": "2026-07-13T11:00:00-04:00",
+      "location": "Marquette, MI",
+      "city_state": "Marquette, MI",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 531.5,
+      "lat": 46.4481521,
+      "lon": -87.6305899,
+      "last_seen_iso": "2026-02-16T21:20:24.769831-05:00"
+    },
+    {
+      "title": "Rally North America – Day 3",
+      "start_iso": "2026-07-14T09:00:00-04:00",
+      "end_iso": "2026-07-14T11:00:00-04:00",
+      "location": "Traverse City, MI",
+      "city_state": "Traverse City, MI",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 395.0,
+      "lat": 44.7606481,
+      "lon": -85.6165976,
+      "last_seen_iso": "2026-02-16T21:20:26.214886-05:00"
+    },
+    {
+      "title": "Rally North America – Day 4",
+      "start_iso": "2026-07-15T09:00:00-04:00",
+      "end_iso": "2026-07-15T11:00:00-04:00",
+      "location": "Frankenmuth, MI",
+      "city_state": "Frankenmuth, MI",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 295.0,
+      "lat": 43.3323684,
+      "lon": -83.7392288,
+      "last_seen_iso": "2026-02-16T21:20:27.503771-05:00"
+    },
+    {
       "title": "Dynasty Rally 2026",
       "start_iso": "2026-07-18T09:00:00-04:00",
       "end_iso": "2026-07-20T18:00:00-04:00",
@@ -476,7 +742,91 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-02-16T20:59:45.653067-05:00"
+      "last_seen_iso": "2026-02-16T21:20:05.057929-05:00"
+    },
+    {
+      "title": "Cincy Car Cruise Rally",
+      "start_iso": "2026-07-25T09:00:00-04:00",
+      "end_iso": "2026-07-25T11:00:00-04:00",
+      "location": "Cincinnati, OH",
+      "city_state": "Cincinnati, OH",
+      "url": "—",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 0.1,
+      "lat": 39.1014537,
+      "lon": -84.5124602,
+      "last_seen_iso": "2026-02-16T21:20:27.504064-05:00"
+    },
+    {
+      "title": "Recharge Rally – Day 1",
+      "start_iso": "2026-07-30T09:00:00-04:00",
+      "end_iso": "2026-07-30T11:00:00-04:00",
+      "location": "Launch Cincinnati, OH",
+      "city_state": "Launch Cincinnati, OH",
+      "url": "https://www.therechargerally.com/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 4.6,
+      "lat": 39.0882425,
+      "lon": -84.4287215,
+      "last_seen_iso": "2026-02-16T21:20:27.504257-05:00"
+    },
+    {
+      "title": "Recharge Rally – Day 2",
+      "start_iso": "2026-07-31T09:00:00-04:00",
+      "end_iso": "2026-07-31T11:00:00-04:00",
+      "location": "Chattanooga, TN",
+      "city_state": "Chattanooga, TN",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 283.8,
+      "lat": 35.0457219,
+      "lon": -85.3094883,
+      "last_seen_iso": "2026-02-16T21:20:29.254629-05:00"
+    },
+    {
+      "title": "Recharge Rally – Day 3",
+      "start_iso": "2026-08-01T09:00:00-04:00",
+      "end_iso": "2026-08-01T11:00:00-04:00",
+      "location": "Greenville, SC",
+      "city_state": "Greenville, SC",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 316.1,
+      "lat": 34.851354,
+      "lon": -82.3984882,
+      "last_seen_iso": "2026-02-16T21:20:30.575888-05:00"
+    },
+    {
+      "title": "Recharge Rally – Day 4",
+      "start_iso": "2026-08-02T09:00:00-04:00",
+      "end_iso": "2026-08-02T11:00:00-04:00",
+      "location": "Charlotte, NC",
+      "city_state": "Charlotte, NC",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 335.4,
+      "lat": 35.2272086,
+      "lon": -80.8430827,
+      "last_seen_iso": "2026-02-16T21:20:32.207334-05:00"
+    },
+    {
+      "title": "RallyCross – Edgewater",
+      "start_iso": "2026-08-08T09:00:00-04:00",
+      "end_iso": "2026-08-08T11:00:00-04:00",
+      "location": "Wilmington, OH",
+      "city_state": "Wilmington, OH",
+      "url": "https://cincyscca.com/rally-cross/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 43.5,
+      "lat": 39.4453393,
+      "lon": -83.8285375,
+      "last_seen_iso": "2026-02-16T21:20:32.207624-05:00"
     },
     {
       "title": "Frisch's Court Street Car Show/Cruise-In",
@@ -491,6 +841,160 @@
       "lat": 39.1014537,
       "lon": -84.5124602,
       "last_seen_iso": "2026-02-15T17:26:50.764566-05:00"
+    },
+    {
+      "title": "Ride With Randy Rally",
+      "start_iso": "2026-09-12T09:00:00-04:00",
+      "end_iso": "2026-09-12T11:00:00-04:00",
+      "location": "Louisville, KY",
+      "city_state": "Louisville, KY",
+      "url": "https://ridewithrandy.org/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 89.3,
+      "lat": 38.2542376,
+      "lon": -85.759407,
+      "last_seen_iso": "2026-02-16T21:20:32.207844-05:00"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 1",
+      "start_iso": "2026-10-18T00:00:00-04:00",
+      "end_iso": "2026-10-18T02:00:00-04:00",
+      "location": "Launch Washington, DC",
+      "city_state": "Launch Washington, DC",
+      "url": "https://gravityrally.com/pages/2026-cancer-awareness-rally",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": null,
+      "lat": null,
+      "lon": null,
+      "last_seen_iso": "2026-02-16T21:20:33.748086-05:00"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 2",
+      "start_iso": "2026-10-19T00:00:00-04:00",
+      "end_iso": "2026-10-19T02:00:00-04:00",
+      "location": "Washington, DC",
+      "city_state": "Washington, DC",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 401.5,
+      "lat": 38.8950368,
+      "lon": -77.0365427,
+      "last_seen_iso": "2026-02-16T21:20:33.748351-05:00"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 3",
+      "start_iso": "2026-10-20T00:00:00-04:00",
+      "end_iso": "2026-10-20T02:00:00-04:00",
+      "location": "Bristol, TN",
+      "city_state": "Bristol, TN",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 214.7,
+      "lat": 36.5945034,
+      "lon": -82.1885212,
+      "last_seen_iso": "2026-02-16T21:20:35.509727-05:00"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 4",
+      "start_iso": "2026-10-21T00:00:00-04:00",
+      "end_iso": "2026-10-21T02:00:00-04:00",
+      "location": "Knoxville, TN",
+      "city_state": "Knoxville, TN",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 219.5,
+      "lat": 35.9603948,
+      "lon": -83.9210261,
+      "last_seen_iso": "2026-02-16T21:20:35.510070-05:00"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 5",
+      "start_iso": "2026-10-22T00:00:00-04:00",
+      "end_iso": "2026-10-22T02:00:00-04:00",
+      "location": "Nashville, TN",
+      "city_state": "Nashville, TN",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 237.9,
+      "lat": 36.1622767,
+      "lon": -86.7742984,
+      "last_seen_iso": "2026-02-16T21:20:37.148171-05:00"
+    },
+    {
+      "title": "Corsa Dragon Rally – Day 1",
+      "start_iso": "2026-11-06T09:00:00-05:00",
+      "end_iso": "2026-11-06T11:00:00-05:00",
+      "location": "Atlanta, GA",
+      "city_state": "Atlanta, GA",
+      "url": "https://corsarally.com/events/dragon/",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 369.6,
+      "lat": 33.7544657,
+      "lon": -84.3898151,
+      "last_seen_iso": "2026-02-16T21:20:38.774298-05:00"
+    },
+    {
+      "title": "Corsa Dragon Rally – Day 2",
+      "start_iso": "2026-11-07T09:00:00-05:00",
+      "end_iso": "2026-11-07T11:00:00-05:00",
+      "location": "Atlanta, GA",
+      "city_state": "Atlanta, GA",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 369.6,
+      "lat": 33.7544657,
+      "lon": -84.3898151,
+      "last_seen_iso": "2026-02-16T21:20:38.774550-05:00"
+    },
+    {
+      "title": "Corsa Dragon Rally – Day 3",
+      "start_iso": "2026-11-08T09:00:00-05:00",
+      "end_iso": "2026-11-08T11:00:00-05:00",
+      "location": "Asheville, NC",
+      "city_state": "Asheville, NC",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 265.2,
+      "lat": 35.595363,
+      "lon": -82.5508407,
+      "last_seen_iso": "2026-02-16T21:20:38.774734-05:00"
+    },
+    {
+      "title": "Corsa Dragon Rally – Day 4",
+      "start_iso": "2026-11-09T09:00:00-05:00",
+      "end_iso": "2026-11-09T11:00:00-05:00",
+      "location": "Knoxville, TN",
+      "city_state": "Knoxville, TN",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 219.5,
+      "lat": 35.9603948,
+      "lon": -83.9210261,
+      "last_seen_iso": "2026-02-16T21:20:38.774908-05:00"
+    },
+    {
+      "title": "Corsa Dragon Rally – Day 5",
+      "start_iso": "2026-11-10T09:00:00-05:00",
+      "end_iso": "2026-11-10T11:00:00-05:00",
+      "location": "Knoxville, TN",
+      "city_state": "Knoxville, TN",
+      "url": "Same as above",
+      "source": "Google Sheet Events Import",
+      "category": "rally",
+      "miles_from_cincy": 219.5,
+      "lat": 35.9603948,
+      "lon": -83.9210261,
+      "last_seen_iso": "2026-02-16T21:20:38.775137-05:00"
     }
   ]
 }
