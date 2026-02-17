@@ -1515,7 +1515,7 @@ def serpapi_request_with_retry(
     start: int,
     output_mode: str = "json",
 ) -> Optional[requests.Response]:
-    url = "https://serpapi.com/search"
+    url = "https://serpapi.com/search.json"
     req_params = dict(params)
     if output_mode == "html":
         req_params["output"] = "html"
@@ -1613,19 +1613,32 @@ def serpapi_search(
             log(f"⚠️ SerpAPI JSON decode failed for query_name={query_name} q={query}: {ex}")
             data = {}
 
-        log_serpapi_request_meta(
-            query_name=query_name,
-            q=query,
-            engine=engine,
-            location=req_location,
-            htichips=req_htichips,
-            start=start,
-            payload=data,
-        )
-
         if engine == "google_events":
-            rows = data.get("events_results") or []
+            rows, rows_key, payload_keys = extract_google_events_rows(data)
+            meta = data.get("search_metadata") if isinstance(data, dict) else {}
+            meta_status = clean_ws(str((meta or {}).get("status", ""))) or "unknown"
+            error_value = clean_ws(str(data.get("serpapi_error") or data.get("error") or "")) if isinstance(data, dict) else ""
+            log(
+                f'ℹ️ SerpAPI google_events: status={response.status_code} '
+                f'meta_status={meta_status} count={len(rows)} q="{query}" location="{req_location}"'
+            )
+            if error_value:
+                log(f"⚠️ SerpAPI google_events error: q={query} error={error_value}")
+            if not rows_key:
+                log(
+                    f"⚠️ SerpAPI google_events missing expected event key for q={query}; "
+                    f"available_keys={payload_keys or '(none)'}"
+                )
         else:
+            log_serpapi_request_meta(
+                query_name=query_name,
+                q=query,
+                engine=engine,
+                location=req_location,
+                htichips=req_htichips,
+                start=start,
+                payload=data,
+            )
             rows = data.get("organic_results") or []
 
         if not rows:
@@ -1689,6 +1702,19 @@ def serpapi_search(
     if return_payload:
         return dedup_links, dedup_rows
     return dedup_links
+
+
+def extract_google_events_rows(payload: dict) -> Tuple[List[dict], Optional[str], str]:
+    """Return rows + selected key + available keys for google_events payload."""
+    if not isinstance(payload, dict):
+        return [], None, ""
+
+    for key in ("events_results", "events", "event_results"):
+        rows = payload.get(key)
+        if isinstance(rows, list):
+            return rows, key, ", ".join(sorted(payload.keys()))
+
+    return [], None, ", ".join(sorted(payload.keys()))
 
 
 def collect_serpapi_candidate_urls(result_item: dict) -> List[str]:
@@ -2467,6 +2493,7 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
     diagnostics = diagnostics if diagnostics is not None else {}
     diagnostics.setdefault("raw_candidates", 0)
     diagnostics.setdefault("parse_failures", 0)
+    diagnostics.setdefault("query_errors", 0)
 
     if not SERPAPI_API_KEY:
         diagnostics["reason"] = "no_results_from_search"
@@ -2505,10 +2532,28 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
         )
 
         diagnostics["raw_candidates"] += len(rows)
+        if not rows:
+            diagnostics["query_errors"] += 1
+
+        sample_lines: List[str] = []
 
         for row in rows:
+            if not isinstance(row, dict):
+                diagnostics["parse_failures"] += 1
+                continue
+
             title = clean_ws(row.get("title") or row.get("name") or "")
-            date_text = clean_ws(row.get("date") or row.get("start_date") or row.get("when") or "")
+            date_entry = row.get("date")
+            date_text = ""
+            if isinstance(date_entry, dict):
+                date_text = clean_ws(
+                    date_entry.get("start_date")
+                    or date_entry.get("when")
+                    or date_entry.get("date")
+                    or date_entry.get("text")
+                    or ""
+                )
+            date_text = date_text or clean_ws(row.get("start_date") or row.get("when") or clean_ws(str(date_entry or "")))
             start_dt, time_is_estimated = parse_google_events_date_best_effort(date_text)
             if not title or not start_dt:
                 diagnostics["parse_failures"] += 1
@@ -2516,9 +2561,20 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
 
             end_dt = start_dt + timedelta(hours=2)
             venue = clean_ws(row.get("venue") or row.get("event_location") or "")
-            address = clean_ws(row.get("address") or row.get("location") or "")
+            address = ""
+            location_entry = row.get("address") or row.get("location")
+            if isinstance(location_entry, dict):
+                address = clean_ws(
+                    location_entry.get("street")
+                    or location_entry.get("address")
+                    or location_entry.get("city")
+                    or location_entry.get("name")
+                    or ""
+                )
+            else:
+                address = clean_ws(str(location_entry or ""))
             location_text = clean_ws(" ".join([venue, address]))
-            url = clean_ws(row.get("link") or row.get("event_link") or row.get("website") or "")
+            url = clean_ws(row.get("link") or row.get("event_link") or row.get("website") or row.get("url") or "")
             ticket_info = row.get("ticket_info")
             thumbnail = clean_ws(row.get("thumbnail") or "")
 
@@ -2544,6 +2600,11 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
                     "thumbnail": thumbnail,
                 }
             )
+            if len(sample_lines) < 3:
+                sample_lines.append(f"{title} | {start_dt.strftime('%Y-%m-%d %H:%M')}")
+
+        if sample_lines:
+            log(f"ℹ️ SerpAPI google_events samples: q={query} :: " + " ; ".join(sample_lines))
 
     if diagnostics.get("reason") is None and not out:
         diagnostics["reason"] = "no_results_from_search"
@@ -3124,6 +3185,7 @@ def main():
     source_filter_stats: Dict[str, Counter] = {}
 
     serpapi_source_types = {"web_search_serpapi", "web_search_facebook_events_serpapi", "facebook_group_events_serpapi", "serpapi_google_events"}
+    enable_fb_site_discovery = clean_ws(os.getenv("ENABLE_FACEBOOK_SERPAPI_SITE_DISCOVERY", "0")).lower() not in ("0", "false", "no")
 
     for s in sources:
         stype = s.get("type")
@@ -3132,6 +3194,11 @@ def main():
         if stype in serpapi_source_types and not serpapi_enabled:
             log(f"⚠️ Skipping SerpAPI source (missing key): {sname} [{stype}]")
             source_run_stats.append({"name": sname, "type": stype, "status": "skipped", "collected": 0})
+            continue
+
+        if stype in {"web_search_facebook_events_serpapi", "facebook_group_events_serpapi"} and not enable_fb_site_discovery:
+            log(f"ℹ️ Skipping Facebook site-search SerpAPI source (disabled): {sname} [{stype}]")
+            source_run_stats.append({"name": sname, "type": stype, "status": "skipped", "collected": 0, "reason": "disabled_fb_site_discovery"})
             continue
 
         source_with_context = dict(s)
@@ -3174,7 +3241,10 @@ def main():
             source_run_stats.append({"name": sname, "type": stype, "status": "failed", "collected": 0, "error": str(ex)})
             source_failures.append({"name": sname, "type": stype, "error": str(ex), "traceback": log_exception_context(f"Source failed: {sname} [{stype}]", ex)})
 
-    enable_fb_discovery = clean_ws(os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "1")).lower() not in ("0", "false", "no")
+    if serpapi_enabled and not enable_fb_site_discovery:
+        log("ℹ️ Facebook SerpAPI site:facebook.com/events discovery is disabled (ENABLE_FACEBOOK_SERPAPI_SITE_DISCOVERY=0).")
+
+    enable_fb_discovery = clean_ws(os.getenv("ENABLE_FACEBOOK_SERP_DISCOVERY", "0")).lower() not in ("0", "false", "no")
     if serpapi_enabled and enable_fb_discovery:
         try:
             fb_discovery_diag: dict = {}
