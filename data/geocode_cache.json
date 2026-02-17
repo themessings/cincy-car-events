@@ -561,5 +561,20 @@
   "Beckett Ridge": {
     "lat": "39.3439305",
     "lon": "-84.4388476"
+  },
+  "Ohio Expo Center - Lausche Building": null,
+  "DNA Computers & Electronics Repair": null,
+  "Eclipse Window Tinting, Cincinnati Ohio": null,
+  "Meijer": {
+    "lat": "53.2882577",
+    "lon": "5.5993782"
+  },
+  "Main Event": {
+    "lat": "45.3296237",
+    "lon": "-89.5878564"
+  },
+  "Liberty Collective": {
+    "lat": "40.7495351",
+    "lon": "-111.8805790"
   }
 }
