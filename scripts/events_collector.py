@@ -1400,8 +1400,11 @@ def collect_wordpress_events_series(source: dict) -> List[dict]:
     return events
 
 
-def collect_ics(source: dict) -> List[dict]:
-    source_url = clean_ws(source.get("url", ""))
+def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
+    diagnostics = diagnostics if diagnostics is not None else {}
+    source_name = source.get("name", "ICS")
+    source_url_raw = clean_ws(source.get("url", ""))
+    source_url = source_url_raw
     if source_url.startswith("webcal://"):
         source_url = "https://" + source_url[len("webcal://") :]
 
@@ -1409,15 +1412,28 @@ def collect_ics(source: dict) -> List[dict]:
     future_only = clean_ws(str(source.get("future_only", ""))).lower() in {"1", "true", "yes", "y"}
 
     headers = {"User-Agent": "cincy-car-events-bot/1.0 (github actions)"}
-    r = requests.get(source_url, headers=headers, timeout=30)
+    try:
+        r = requests.get(source_url, headers=headers, timeout=45)
+    except Exception as ex:
+        log(f"⚠️ ICS download failed: source={source_name} url={source_url} error={ex}")
+        diagnostics["reason"] = "parse_failed"
+        raise
+
+    log(
+        f"ℹ️ ICS fetch: source={source_name} original_url_scheme={'webcal' if source_url_raw.startswith('webcal://') else 'http'} "
+        f"resolved_url={source_url} http_status={r.status_code} bytes_downloaded={len(r.content or b'')}"
+    )
     r.raise_for_status()
 
     cal = Calendar.from_ical(r.content)
     out = []
+    total_vevents = 0
+    skipped_past = 0
 
     for component in cal.walk():
         if component.name != "VEVENT":
             continue
+        total_vevents += 1
 
         title = clean_ws(str(component.get("summary", "")))
         loc = clean_ws(str(component.get("location", "")))
@@ -1451,6 +1467,7 @@ def collect_ics(source: dict) -> List[dict]:
             end_dt = start_dt + timedelta(hours=2)
 
         if future_only and start_dt < now_et:
+            skipped_past += 1
             continue
 
         out.append(
@@ -1460,10 +1477,18 @@ def collect_ics(source: dict) -> List[dict]:
                 "end_dt": end_dt,
                 "location": loc,
                 "url": url,
-                "source": source["name"],
+                "source": source_name,
             }
         )
 
+    log(
+        f"ℹ️ ICS parse: source={source_name} total_vevents={total_vevents} "
+        f"future_only={'yes' if future_only else 'no'} skipped_past={skipped_past} kept_future={len(out)}"
+    )
+    diagnostics["total_vevents"] = total_vevents
+    diagnostics["skipped_past"] = skipped_past
+    if not out:
+        diagnostics["reason"] = "no_results_from_search"
     return out
 
 
@@ -1481,73 +1506,143 @@ def _sheet_value(row: List[str], header_map: Dict[str, int], *keys: str) -> str:
     return ""
 
 
-def _parse_sheet_event_datetime(value: str, *, default_hour: int) -> Optional[datetime]:
-    raw = clean_ws(value)
-    if not raw:
-        return None
+def _parse_sheet_date_value(raw_value, now_et: datetime) -> Tuple[Optional[datetime], Optional[str]]:
+    et_tz = tz.gettz("America/New_York")
+    if raw_value is None:
+        return None, "empty"
 
-    dt = parse_dt(raw)
-    if dt:
-        return dt
+    raw = clean_ws(str(raw_value))
+    if not raw:
+        return None, "empty"
+
+    def _normalize(dt: Optional[datetime]) -> Optional[datetime]:
+        if not dt:
+            return None
+        if dt.tzinfo is None:
+            return dt.replace(tzinfo=et_tz)
+        return dt.astimezone(et_tz)
+
+    parsed = parse_dt(raw)
+    parsed = _normalize(parsed)
+    if parsed:
+        if re.search(r"\b\d{4}\b", raw) is None:
+            parsed = parsed.replace(year=now_et.year)
+            if parsed < now_et:
+                parsed = parsed.replace(year=now_et.year + 1)
+        return parsed, None
 
     try:
-        date_only = datetime.fromisoformat(raw).date()
+        numeric = float(raw)
+        if numeric > 20000:
+            dt = datetime(1899, 12, 30) + timedelta(days=numeric)
+            dt = dt.replace(tzinfo=et_tz)
+            if dt < now_et:
+                dt = dt.replace(year=dt.year + 1)
+            return dt, None
     except Exception:
-        return None
+        pass
 
-    return datetime.combine(date_only, datetime.min.time().replace(hour=default_hour)).replace(tzinfo=tz.gettz("America/New_York"))
+    for fmt in ("%d-%b", "%d %b", "%b %d", "%d/%m", "%m/%d"):
+        try:
+            dt = datetime.strptime(raw, fmt).replace(year=now_et.year, tzinfo=et_tz)
+            if dt < now_et:
+                dt = dt.replace(year=now_et.year + 1)
+            return dt, None
+        except Exception:
+            continue
+
+    return None, "unrecognized_date_format"
 
 
-def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab_name: str) -> List[dict]:
+def _find_sheet_header_row(rows: List[List[str]], required_header_keys: List[str]) -> Tuple[Optional[int], Dict[str, int], List[str]]:
+    for idx, row in enumerate(rows[:25]):
+        normalized_row = [_sheet_header_key(c) for c in row]
+        header_map = {key: i for i, key in enumerate(normalized_row) if key}
+        if all(req in header_map for req in required_header_keys):
+            return idx, header_map, normalized_row
+    return None, {}, []
+
+
+def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab_name: str) -> Tuple[List[dict], Dict[str, int]]:
     if not rows:
-        return []
+        return [], {"rows_read": 0, "parsed_events": 0}
 
-    headers = [_sheet_header_key(c) for c in rows[0]]
-    header_map = {h: i for i, h in enumerate(headers) if h}
     now_et = datetime.now(tz=tz.gettz("America/New_York"))
+    required_headers = [_sheet_header_key("Date"), _sheet_header_key("Name")]
+    header_idx, header_map, normalized_headers = _find_sheet_header_row(rows, required_headers)
+    if header_idx is None:
+        stats = {
+            "rows_read": max(len(rows) - 1, 0),
+            "parsed_events": 0,
+            "skipped_missing_title": 0,
+            "skipped_parse_failed": 0,
+            "skipped_past": 0,
+            "bad_sheet_headers": 1,
+            "skip_reasons": {"bad_sheet_headers": 1},
+            "header_keys_present": [_sheet_header_key(c) for c in (rows[0] if rows else [])],
+        }
+        return [], stats
 
+    stats_counter: Counter = Counter()
     out: List[dict] = []
-    for row in rows[1:]:
-        title = _sheet_value(row, header_map, "title", "name")
-        start_raw = _sheet_value(row, header_map, "startiso", "startdate", "start")
-        end_raw = _sheet_value(row, header_map, "endiso", "enddate", "end")
-        if not title or not start_raw:
+    data_rows = rows[header_idx + 1 :]
+
+    for row_offset, row in enumerate(data_rows, start=header_idx + 2):
+        title = _sheet_value(row, header_map, _sheet_header_key("Name"))
+        date_raw = _sheet_value(row, header_map, _sheet_header_key("Date"))
+        if not title:
+            stats_counter["missing_title"] += 1
+            continue
+        if not date_raw:
+            stats_counter["missing_date"] += 1
             continue
 
-        has_start_time = bool(re.search(r"\d{1,2}:\d{2}", start_raw)) or "t" in start_raw.lower()
-        has_end_time = bool(re.search(r"\d{1,2}:\d{2}", end_raw)) or "t" in end_raw.lower()
-
-        start_dt = _parse_sheet_event_datetime(start_raw, default_hour=9)
-        if start_dt and not has_start_time:
-            start_dt = start_dt.replace(hour=9, minute=0, second=0, microsecond=0)
-        end_dt = _parse_sheet_event_datetime(end_raw, default_hour=11) if end_raw else None
-        if end_dt and not has_end_time:
-            end_dt = end_dt.replace(hour=11, minute=0, second=0, microsecond=0)
-
+        start_dt, parse_reason = _parse_sheet_date_value(date_raw, now_et)
         if not start_dt:
-            continue
-        if not end_dt:
-            end_dt = start_dt + timedelta(hours=2)
-        if start_dt < now_et:
+            stats_counter["parse_failure"] += 1
+            log(f"⚠️ Sheet row skipped: row={row_offset} raw_date='{date_raw}' reason={parse_reason}")
             continue
 
-        city = _sheet_value(row, header_map, "city")
-        location = _sheet_value(row, header_map, "location", "address", "locationaddress")
-        location_text = clean_ws(" ".join([location, city]))
-        url = _sheet_value(row, header_map, "link", "url")
+        has_explicit_time = bool(re.search(r"\d{1,2}:\d{2}", date_raw)) or "t" in date_raw.lower()
+        if not has_explicit_time:
+            start_dt = start_dt.replace(hour=9, minute=0, second=0, microsecond=0)
+        end_dt = start_dt + timedelta(hours=2)
+
+        if start_dt < now_et:
+            stats_counter["past_event"] += 1
+            continue
+
+        location = _sheet_value(row, header_map, _sheet_header_key("City / Where You’d Be"), _sheet_header_key("City / Where You'd Be"))
+        url = _sheet_value(row, header_map, _sheet_header_key("Link"))
+        event_type = _sheet_value(row, header_map, _sheet_header_key("Event Type"))
+        cost = _sheet_value(row, header_map, _sheet_header_key("Cost"))
 
         out.append(
             {
                 "title": title,
                 "start_dt": start_dt,
                 "end_dt": end_dt,
-                "location": location_text,
+                "location": location,
                 "url": url,
                 "source": source_name,
                 "source_tab": tab_name,
+                "event_type": event_type,
+                "cost": cost,
             }
         )
-    return out
+
+    stats = {
+        "rows_read": len(data_rows),
+        "parsed_events": len(out),
+        "skipped_missing_title": stats_counter.get("missing_title", 0),
+        "skipped_missing_date": stats_counter.get("missing_date", 0),
+        "skipped_parse_failed": stats_counter.get("parse_failure", 0),
+        "skipped_past": stats_counter.get("past_event", 0),
+        "bad_sheet_headers": 0,
+        "skip_reasons": dict(stats_counter),
+        "header_keys_present": normalized_headers,
+    }
+    return out, stats
 
 
 def _fetch_public_sheet_rows_csv(sheet_id: str, tab_name: str) -> Optional[List[List[str]]]:
@@ -1566,7 +1661,7 @@ def _fetch_public_sheet_rows_csv(sheet_id: str, tab_name: str) -> Optional[List[
         return None
 
 
-def _fetch_sheet_rows_via_api(sheet_id: str, preferred_tab: str) -> Tuple[List[List[str]], str]:
+def _fetch_sheet_rows_via_api(sheet_id: str, tab_name_candidates: List[str]) -> Tuple[List[List[str]], str]:
     creds = get_google_credentials()
     if not creds:
         return [], ""
@@ -1574,59 +1669,90 @@ def _fetch_sheet_rows_via_api(sheet_id: str, preferred_tab: str) -> Tuple[List[L
 
     metadata = sheets.spreadsheets().get(spreadsheetId=sheet_id, includeGridData=False).execute()
     sheet_entries = metadata.get("sheets", []) or []
-    tab_name = ""
-    for entry in sheet_entries:
-        props = entry.get("properties") or {}
-        if clean_ws(props.get("title", "")) == preferred_tab:
-            tab_name = preferred_tab
+    available_tabs = [clean_ws((entry.get("properties") or {}).get("title", "")) for entry in sheet_entries]
+
+    selected_tab = ""
+    for tab in tab_name_candidates:
+        if tab in available_tabs:
+            selected_tab = tab
             break
-    if not tab_name and sheet_entries:
-        tab_name = clean_ws((sheet_entries[0].get("properties") or {}).get("title", ""))
-    if not tab_name:
+    if not selected_tab and available_tabs:
+        selected_tab = available_tabs[0]
+    if not selected_tab:
         return [], ""
 
-    resp = sheets.spreadsheets().values().get(spreadsheetId=sheet_id, range=f"{tab_name}!A1:Z2000").execute()
-    return resp.get("values", []), tab_name
+    resp = sheets.spreadsheets().values().get(spreadsheetId=sheet_id, range=f"{selected_tab}!A1:Z4000").execute()
+    return resp.get("values", []), selected_tab
 
 
-def collect_google_sheet_events_import(source: dict) -> List[dict]:
+def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
+    diagnostics = diagnostics if diagnostics is not None else {}
     sheet_id = extract_google_spreadsheet_id(clean_ws(source.get("spreadsheet_id") or APEX_IMPORT_SPREADSHEET_ID))
-    preferred_tab = clean_ws(source.get("tab") or "Events")
     source_name = source.get("name", "Google Sheet Events Import")
+    tab_candidates = ["Rallies", "Events", "Sheet1"]
+    preferred_tab = clean_ws(source.get("tab") or "")
+    if preferred_tab:
+        tab_candidates = [preferred_tab] + [t for t in tab_candidates if t != preferred_tab]
+
     if not sheet_id:
         log("⚠️ Sheet import skipped: missing APEX_IMPORT_SPREADSHEET_ID.")
+        diagnostics["reason"] = "missing_env"
         return []
 
     rows: List[List[str]] = []
-    tab_name = preferred_tab
+    tab_name = ""
+    tried_tabs = []
 
-    rows = _fetch_public_sheet_rows_csv(sheet_id, preferred_tab) or []
-    if not rows:
-        rows = _fetch_public_sheet_rows_csv(sheet_id, "") or []
+    for tab in tab_candidates:
+        tried_tabs.append(tab)
+        rows = _fetch_public_sheet_rows_csv(sheet_id, tab) or []
+        if rows:
+            tab_name = tab
+            break
 
     if not rows:
         try:
-            rows, tab_name = _fetch_sheet_rows_via_api(sheet_id, preferred_tab)
+            rows, tab_name = _fetch_sheet_rows_via_api(sheet_id, tab_candidates)
         except HttpError as ex:
             status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
-            if status in (401, 403):
-                log(f"⚠️ Sheet import unauthorized (HTTP {status}) for spreadsheet={sheet_id}; continuing without import.")
-                return []
+            reason = f"http_error_{status}" if status else "http_error"
             log(f"⚠️ Sheet import API error for spreadsheet={sheet_id}: {ex}")
+            diagnostics["reason"] = reason
             return []
         except Exception as ex:
             log(f"⚠️ Sheet import failed for spreadsheet={sheet_id}: {ex}")
+            diagnostics["reason"] = "parse_failed"
             return []
 
     if not rows:
         log(f"⚠️ Sheet import returned no rows for spreadsheet={sheet_id}; continuing.")
+        diagnostics["reason"] = "no_results_from_search"
         return []
 
-    parsed = _parse_google_sheet_events_rows(rows, source_name, tab_name or preferred_tab)
+    parsed, stats = _parse_google_sheet_events_rows(rows, source_name, tab_name or tried_tabs[0])
+
+    reason = ""
+    if stats.get("bad_sheet_headers"):
+        reason = "bad_sheet_headers"
+    elif stats.get("parsed_events", 0) == 0:
+        reason = "parse_failed" if stats.get("skipped_parse_failed", 0) > 0 else "no_results_from_search"
+
+    top_skip_reasons = Counter(stats.get("skip_reasons") or {}).most_common(5)
     log(
-        f"✅ Sheet import loaded: rows={max(len(rows) - 1, 0)} tab={tab_name or preferred_tab} "
-        f"parsed_events={len(parsed)} future_only=yes"
+        f"✅ Sheet import loaded: rows={stats.get('rows_read', 0)} tab={tab_name or tried_tabs[0]} "
+        f"parsed_events={stats.get('parsed_events', 0)} future_only=yes "
+        f"skipped_past={stats.get('skipped_past', 0)} skipped_parse_failed={stats.get('skipped_parse_failed', 0)}"
     )
+    if top_skip_reasons:
+        log("ℹ️ Sheet import top skip reasons: " + ", ".join(f"{k}={v}" for k, v in top_skip_reasons))
+
+    diagnostics["reason"] = reason
+    diagnostics["sheet_rows_read"] = stats.get("rows_read", 0)
+    diagnostics["parsed_events"] = stats.get("parsed_events", 0)
+    diagnostics["sheet_skip_reasons"] = stats.get("skip_reasons", {})
+    diagnostics["sheet_headers"] = stats.get("header_keys_present", [])
+    diagnostics["sheet_tab"] = tab_name or tried_tabs[0]
+    diagnostics["tab_candidates"] = tab_candidates
     return parsed
 
 
@@ -1890,10 +2016,9 @@ def extract_google_events_rows(payload: dict) -> Tuple[List[dict], Optional[str]
     if not isinstance(payload, dict):
         return [], None, ""
 
-    for key in ("events_results", "events", "event_results"):
-        rows = payload.get(key)
-        if isinstance(rows, list):
-            return rows, key, ", ".join(sorted(payload.keys()))
+    rows = payload.get("events_results")
+    if isinstance(rows, list):
+        return rows, "events_results", ", ".join(sorted(payload.keys()))
 
     return [], None, ", ".join(sorted(payload.keys()))
 
@@ -2677,33 +2802,32 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
     diagnostics.setdefault("query_errors", 0)
 
     if not SERPAPI_API_KEY:
-        diagnostics["reason"] = "no_results_from_search"
+        diagnostics["reason"] = "missing_env"
         log("ℹ️ SerpAPI disabled; skipping google_events collector.")
         return []
 
+    source_name = source.get("name", "Google Events (SerpAPI) [serpapi_google_events]")
     location = clean_ws(os.getenv("SERPAPI_LOCATION", SERPAPI_LOCATION or "Cincinnati, OH")) or "Cincinnati, OH"
     gl = clean_ws(os.getenv("SERPAPI_GL", SERPAPI_GL or "us")) or "us"
     hl = clean_ws(os.getenv("SERPAPI_HL", SERPAPI_HL or "en")) or "en"
-    htichips = clean_ws(os.getenv("SERPAPI_EVENTS_DATE_FILTER", SERPAPI_EVENTS_DATE_FILTER or "date:month")) or "date:month"
+    base_filter = clean_ws(os.getenv("SERPAPI_EVENTS_DATE_FILTER", SERPAPI_EVENTS_DATE_FILTER or "date:month")) or "date:month"
 
-    query_phrases = [
-        "car show in Cincinnati OH",
-        "cars and coffee in Cincinnati OH",
-        "cruise in in Cincinnati OH",
-        "autocross in Cincinnati OH",
-        "rally in Ohio",
-    ]
+    query = clean_ws(source.get("query") or f"car events in {location}") or f"car events in {location}"
+    htichips_attempts = [base_filter]
+    if base_filter == "date:month":
+        htichips_attempts.append("date:next_month")
 
     out: List[dict] = []
     seen = set()
+    et_tz = tz.gettz("America/New_York")
 
-    for query in query_phrases:
-        links, rows = serpapi_search(
+    for idx, htichips in enumerate(htichips_attempts):
+        _, rows = serpapi_search(
             query,
-            max_results=50,
+            max_results=60,
             page_size=10,
             return_payload=True,
-            max_pages=6,
+            max_pages=4,
             engine="google_events",
             query_name="serpapi_google_events",
             location=location,
@@ -2712,58 +2836,82 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
             htichips=htichips,
         )
 
+        # Pull one direct payload for explicit metadata visibility in logs.
+        params = {
+            "api_key": SERPAPI_API_KEY,
+            "engine": "google_events",
+            "q": query,
+            "location": location,
+            "gl": gl,
+            "hl": hl,
+            "htichips": htichips,
+            "start": 0,
+            "num": 10,
+        }
+        payload = {}
+        try:
+            probe_resp = requests.get("https://serpapi.com/search.json", params=params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
+            if probe_resp.ok:
+                payload = probe_resp.json() if probe_resp.text else {}
+            else:
+                payload = {"error": f"http_{probe_resp.status_code}"}
+        except Exception as ex:
+            payload = {"error": str(ex)}
+
+        meta = payload.get("search_metadata") if isinstance(payload, dict) else {}
+        status = clean_ws(str((meta or {}).get("status", "")))
+        top_level_keys = sorted(payload.keys()) if isinstance(payload, dict) else []
+        payload_rows, payload_key, _ = extract_google_events_rows(payload if isinstance(payload, dict) else {})
+
+        log(
+            f"ℹ️ SerpAPI google_events meta: status={status or 'unknown'} keys={top_level_keys} "
+            f"parsed_key={payload_key or 'missing'} len(events_results)={len(payload_rows)}"
+        )
+        if status != "Success":
+            log(
+                f"⚠️ SerpAPI google_events non-success: status={status or 'unknown'} "
+                f"error={clean_ws(str((payload or {}).get('error') or (payload or {}).get('serpapi_error') or 'none'))} "
+                f"search_parameters={json.dumps((payload or {}).get('search_parameters') or params, sort_keys=True)}"
+            )
+
         diagnostics["raw_candidates"] += len(rows)
-        if not rows:
-            diagnostics["query_errors"] += 1
+        diagnostics["search_status"] = status or "unknown"
+        diagnostics["events_results_len"] = len(payload_rows)
+        diagnostics["top_level_keys"] = top_level_keys
 
-        sample_lines: List[str] = []
-
-        for row in rows:
-            if not isinstance(row, dict):
+        for item in rows:
+            if not isinstance(item, dict):
                 diagnostics["parse_failures"] += 1
                 continue
 
-            title = clean_ws(row.get("title") or row.get("name") or "")
-            date_entry = row.get("date")
-            date_text = ""
+            title = clean_ws(item.get("title") or item.get("name") or "")
+            when = ""
+            date_entry = item.get("date")
             if isinstance(date_entry, dict):
-                date_text = clean_ws(
-                    date_entry.get("start_date")
-                    or date_entry.get("when")
-                    or date_entry.get("date")
-                    or date_entry.get("text")
-                    or ""
-                )
-            date_text = date_text or clean_ws(row.get("start_date") or row.get("when") or clean_ws(str(date_entry or "")))
-            start_dt, time_is_estimated = parse_google_events_date_best_effort(date_text)
-            if not title or not start_dt:
+                when = clean_ws(date_entry.get("when") or date_entry.get("start_date") or date_entry.get("date") or "")
+            when = when or clean_ws(item.get("when") or "")
+
+            if not title:
                 diagnostics["parse_failures"] += 1
+                continue
+
+            start_dt = parse_dt(when) if when else None
+            if start_dt and start_dt.tzinfo is None:
+                start_dt = start_dt.replace(tzinfo=et_tz)
+            elif start_dt:
+                start_dt = start_dt.astimezone(et_tz)
+            if not start_dt:
+                diagnostics["parse_failures"] += 1
+                log(f"⚠️ SerpAPI google_events date parse failed: title='{title[:80]}' when='{when}'")
                 continue
 
             end_dt = start_dt + timedelta(hours=2)
-            venue = clean_ws(row.get("venue") or row.get("event_location") or "")
-            address = ""
-            location_entry = row.get("address") or row.get("location")
-            if isinstance(location_entry, dict):
-                address = clean_ws(
-                    location_entry.get("street")
-                    or location_entry.get("address")
-                    or location_entry.get("city")
-                    or location_entry.get("name")
-                    or ""
-                )
-            else:
-                address = clean_ws(str(location_entry or ""))
+            venue = clean_ws(item.get("venue") or item.get("event_location") or "")
+            address = clean_ws(str(item.get("address") or item.get("location") or ""))
             location_text = clean_ws(" ".join([venue, address]))
-            url = clean_ws(row.get("link") or row.get("event_link") or row.get("website") or row.get("url") or "")
-            ticket_info = row.get("ticket_info")
-            thumbnail = clean_ws(row.get("thumbnail") or "")
+            url = clean_ws(item.get("link") or item.get("event_link") or item.get("website") or item.get("url") or "")
 
-            dedupe_key = (
-                title.lower(),
-                start_dt.isoformat()[:16],
-                location_text.lower(),
-            )
+            dedupe_key = (title.lower(), start_dt.isoformat()[:16], location_text.lower())
             if dedupe_key in seen:
                 continue
             seen.add(dedupe_key)
@@ -2775,20 +2923,17 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
                     "end_dt": end_dt,
                     "location": location_text,
                     "url": url,
-                    "source": source.get("name", "Google Events (SerpAPI) [serpapi_google_events]"),
-                    "time_is_estimated": time_is_estimated,
-                    "ticket_info": ticket_info,
-                    "thumbnail": thumbnail,
+                    "source": source_name,
                 }
             )
-            if len(sample_lines) < 3:
-                sample_lines.append(f"{title} | {start_dt.strftime('%Y-%m-%d %H:%M')}")
 
-        if sample_lines:
-            log(f"ℹ️ SerpAPI google_events samples: q={query} :: " + " ; ".join(sample_lines))
+        if out:
+            break
+        if idx == 0 and len(htichips_attempts) > 1:
+            log(f"ℹ️ SerpAPI google_events fallback: widening htichips from {htichips_attempts[0]} to {htichips_attempts[1]}")
 
     if diagnostics.get("reason") is None and not out:
-        diagnostics["reason"] = "no_results_from_search"
+        diagnostics["reason"] = "parse_failed" if diagnostics.get("parse_failures", 0) > 0 else "no_results_from_search"
 
     return out
 
@@ -2906,6 +3051,7 @@ def log_counter_top(title: str, counter: Counter, top_n: int = 8) -> None:
 
 def log_source_health_summary(source_run_stats: List[dict]) -> None:
     """Human-readable summary of what worked vs what did not."""
+    log("📋 Collector health summary:")
     working = [s for s in source_run_stats if s.get("status") == "ok" and int(s.get("collected", 0)) > 0]
     no_results = [s for s in source_run_stats if s.get("status") == "ok" and int(s.get("collected", 0)) == 0]
     skipped = [s for s in source_run_stats if s.get("status") == "skipped"]
@@ -3393,9 +3539,9 @@ def main():
             elif stype == "html_wordpress_events_list":
                 raw_events.extend(collect_wordpress_events_series(source_with_context))
             elif stype == "ics":
-                raw_events.extend(collect_ics(source_with_context))
+                raw_events.extend(collect_ics(source_with_context, diagnostics=diagnostics))
             elif stype == "google_sheet_events_import":
-                raw_events.extend(collect_google_sheet_events_import(source_with_context))
+                raw_events.extend(collect_google_sheet_events_import(source_with_context, diagnostics=diagnostics))
             elif stype == "facebook_page_events":
                 raw_events.extend(collect_facebook_page_events(source_with_context, diagnostics=diagnostics))
             elif stype == "web_search_serpapi":
@@ -3413,15 +3559,20 @@ def main():
             collected = len(raw_events) - before_count
             stat = {"name": sname, "type": stype, "status": "ok", "collected": collected}
             diag = SOURCE_DIAGNOSTICS.get(sname, {})
+            reason_tag = ""
             if collected == 0:
-                stat["reason"] = diag.get("reason", "no_results_from_search")
+                reason_tag = diag.get("reason", "no_results_from_search")
+                stat["reason"] = reason_tag
             source_run_stats.append(stat)
             extra_log = ""
             if stype == "ics" and clean_ws(str(source_with_context.get("future_only", ""))).lower() in {"1", "true", "yes", "y"}:
                 extra_log = " future_only_applied=yes"
             if stype == "google_sheet_events_import":
                 extra_log = " future_only_applied=yes"
-            log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events{extra_log}")
+            if collected == 0:
+                log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events (reasons_if_0={reason_tag}){extra_log}")
+            else:
+                log(f"🔎 Source complete: {sname} [{stype}] -> {collected} events{extra_log}")
         except SourceDisabledError as ex:
             source_run_stats.append({"name": sname, "type": stype, "status": "disabled", "collected": 0, "reason": ex.reason, "error": str(ex)})
             log(f"⚪ Source disabled: {sname} [{stype}] :: {ex}")
@@ -3519,6 +3670,13 @@ def main():
     log(f"📄 Sheets rows written (excluding header): {len(merged)}")
     log(f"🔎 Source summary: ok={len(ok_sources)} skipped={len(skipped_sources)} failed={len(failed_sources)}")
     log_source_health_summary(source_run_stats)
+    sheet_skip_totals: Counter = Counter()
+    for stat in source_run_stats:
+        diag = SOURCE_DIAGNOSTICS.get(stat.get("name", ""), {})
+        if isinstance(diag.get("sheet_skip_reasons"), dict):
+            sheet_skip_totals.update(diag.get("sheet_skip_reasons") or {})
+    if sheet_skip_totals:
+        log("📋 Top sheet skip reasons: " + ", ".join(f"{k}={v}" for k, v in sheet_skip_totals.most_common(5)))
     failure_top = []
     if isinstance(FACEBOOK_COVERAGE.get("failure_reasons"), Counter):
         failure_top = FACEBOOK_COVERAGE["failure_reasons"].most_common(10)
