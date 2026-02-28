@@ -580,5 +580,27 @@
   "Macedonia, OH": {
     "lat": "41.3136670",
     "lon": "-81.5084500"
+  },
+  "West Des Moines, IA": {
+    "lat": "41.5644476",
+    "lon": "-93.7594059"
+  },
+  "Brightside Aleworks 480 Center Pl, Altoona, ia 50009 Altoona ia 50009": null,
+  "Area515 108 Jefferson Ave, Des Moines, ia 50314 Des Moines ia 50314": null,
+  "Ankeny, IA": {
+    "lat": "41.7320796",
+    "lon": "-93.6050920"
+  },
+  "Minburn, IA": {
+    "lat": "41.7554458",
+    "lon": "-94.0294955"
+  },
+  "Great Falls, VA": {
+    "lat": "39.0116538",
+    "lon": "-77.3083988"
+  },
+  "Glover Rd., NW": {
+    "lat": "-34.5816638",
+    "lon": "146.4088782"
   }
 }
