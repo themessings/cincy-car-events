@@ -602,5 +602,23 @@
   "Glover Rd., NW": {
     "lat": "-34.5816638",
     "lon": "146.4088782"
-  }
+  },
+  "Monroe, OH": {
+    "lat": "39.7157533",
+    "lon": "-81.1078783"
+  },
+  "Krieger Ford": {
+    "lat": "40.0611732",
+    "lon": "-82.9704462"
+  },
+  "Loudoun, VA": {
+    "lat": "39.0984586",
+    "lon": "-77.6705008"
+  },
+  "Occoneechee State Park 1192 Occoneechee Park Rd, Clarksville, Vi 23927 Clarksville Vi 23927": null,
+  "Suitland, MD": {
+    "lat": "38.8501136",
+    "lon": "-76.9255846"
+  },
+  "7001 Little River Turnpike 7001 Little River Turnpike, Annandale, Vi 22003 Annandale Vi 22003": null
 }
