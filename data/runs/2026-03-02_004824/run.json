@@ -1,0 +1,182 @@
+{
+  "generated_at_iso": "2026-03-01T19:50:49.157572-05:00",
+  "raw_events": 250,
+  "incoming_after_filters": 133,
+  "merged_total": 71,
+  "source_stats": [
+    {
+      "name": "CarsAndCoffeeEvents - Ohio",
+      "type": "html_carsandcoffeeevents_ohio",
+      "status": "ok",
+      "collected": 40
+    },
+    {
+      "name": "Cincinnati Cars and Coffee (Series)",
+      "type": "html_wordpress_events_list",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "OVR PCA Social Events (ICS)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 75
+    },
+    {
+      "name": "iCloud Published Calendar (ICS)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 51
+    },
+    {
+      "name": "Google Sheet Events Import",
+      "type": "google_sheet_events_import",
+      "status": "ok",
+      "collected": 39
+    },
+    {
+      "name": "Facebook Page Events (Graph API sheet/env IDs)",
+      "type": "facebook_page_events",
+      "status": "ok",
+      "collected": 0,
+      "reason": "disabled_invalid_token"
+    },
+    {
+      "name": "Google Events (SerpAPI) [serpapi_google_events]",
+      "type": "serpapi_google_events",
+      "status": "failed",
+      "collected": 0,
+      "error": "expected string or bytes-like object, got 'dict'"
+    },
+    {
+      "name": "Facebook Group Events (SerpAPI)",
+      "type": "facebook_group_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "FB Events (Cincy keywords)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "FB Events (Ohio + NKY)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "Eventbrite Cincy",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "Meetup Cincy Cars",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 42
+    },
+    {
+      "name": "Regional rallies",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "blocked_http_403/400"
+    },
+    {
+      "name": "SCCA RoadRally + RallyCross",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "American Rally Association (SOFR + regional)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 3
+    },
+    {
+      "name": "Eventbrite regional autos (SerpAPI)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "MotorsportReg regional autos",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "TrackRabbit + SCCA calendar discovery",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    }
+  ],
+  "source_failures": [
+    {
+      "name": "Google Events (SerpAPI) [serpapi_google_events]",
+      "type": "serpapi_google_events",
+      "error": "expected string or bytes-like object, got 'dict'",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 3740, in main\n    raw_events.extend(collect_serpapi_google_events(source_with_context, diagnostics=diagnostics))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 3057, in collect_serpapi_google_events\n    venue = clean_ws(item.get(\"venue\") or item.get(\"event_location\") or \"\")\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 1221, in clean_ws\n    return re.sub(r\"\\s+\", \" \", (s or \"\")).strip()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/re/__init__.py\", line 185, in sub\n    return _compile(pattern, flags).sub(repl, string, count)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: expected string or bytes-like object, got 'dict'\n"
+    }
+  ],
+  "serpapi_enabled": true,
+  "dry_run": false,
+  "pipeline_metrics": {
+    "normalize_drop_reasons": {
+      "outside_window_past": 76,
+      "non_automotive:exclude_keyword:wine tasting": 2,
+      "location_too_far_local": 33,
+      "non_automotive:no_automotive_keyword_match": 3,
+      "non_automotive:hard_exclusion:yoga": 2,
+      "non_automotive:exclude_keyword:real estate": 1
+    },
+    "non_automotive_examples": [
+      "OVR PCA Wine Tasting (exclude_keyword:wine tasting)",
+      "OVR PCA Wine Tasting Summer 2024 - Presented by Porsche of the Village (exclude_keyword:wine tasting)",
+      "Gridlife Touring Midwest – Day 1 (no_automotive_keyword_match)",
+      "Gridlife Touring Midwest – Day 2 (no_automotive_keyword_match)",
+      "Gridlife Touring Midwest – Day 3 (no_automotive_keyword_match)"
+    ],
+    "dedupe_drop_reasons": {
+      "duplicate_signature_match": 104
+    }
+  },
+  "facebook_coverage": {
+    "token": {
+      "valid": "no",
+      "reason": "http_400",
+      "expires_at": null,
+      "expires_at_et": "unknown",
+      "refresh_attempted": true,
+      "refresh_succeeded": false,
+      "refresh_error": "missing_app_credentials"
+    },
+    "serp_queries": [],
+    "urls_discovered": 0,
+    "urls_parsed": 0,
+    "urls_failed": 0,
+    "page_events": 0,
+    "failure_reasons": {}
+  }
+}

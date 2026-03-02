@@ -1,5 +1,5 @@
 {
-  "generated_at_iso": "2026-03-01T19:42:44.736349-05:00",
+  "generated_at_iso": "2026-03-01T19:50:46.916518-05:00",
   "count": 71,
   "events": [
     {
@@ -28,7 +28,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.682196-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.863807-05:00"
     },
     {
       "title": "Cincinnati Cars and Coffee",
@@ -42,7 +42,7 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-03-01T19:42:44.682597-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.864163-05:00"
     },
     {
       "title": "Cars and Coffee Saturday at Horsepower Farm",
@@ -56,7 +56,7 @@
       "miles_from_cincy": 186.6,
       "lat": 39.7157533,
       "lon": -81.1078783,
-      "last_seen_iso": "2026-03-01T19:42:44.683009-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.864555-05:00"
     },
     {
       "title": "Columbus Cars & Coffee",
@@ -70,7 +70,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-03-01T19:42:44.683397-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.864925-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
@@ -84,7 +84,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-03-01T19:42:44.683795-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.865298-05:00"
     },
     {
       "title": "Downtown runnaz meet #2",
@@ -98,7 +98,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.704440-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.885322-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
@@ -112,7 +112,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-03-01T19:42:44.684164-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.865694-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
@@ -126,7 +126,7 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-03-01T19:42:44.684524-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.866142-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
@@ -140,7 +140,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-03-01T19:42:44.684898-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.866598-05:00"
     },
     {
       "title": "Columbus Cafe Racers Monthly Lunch Cruise In",
@@ -154,7 +154,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-03-01T19:42:44.685270-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.867060-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Fridays",
@@ -168,7 +168,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.685662-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.867458-05:00"
     },
     {
       "title": "Endless Car Culture, Cincinnati / Meet #4.1",
@@ -182,7 +182,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.701838-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.882833-05:00"
     },
     {
       "title": "UC Cars and Coffee Meet #1",
@@ -210,7 +210,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.702193-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.883171-05:00"
     },
     {
       "title": "Ohio Challenge RoadRally (SCCA)",
@@ -224,7 +224,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-03-01T19:42:44.705740-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.886556-05:00"
     },
     {
       "title": "Hoosier Rally (SCCA)",
@@ -238,7 +238,7 @@
       "miles_from_cincy": 99.1,
       "lat": 39.7683331,
       "lon": -86.1583502,
-      "last_seen_iso": "2026-03-01T19:42:44.705913-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.886720-05:00"
     },
     {
       "title": "Fairfield Cars and Coffee 2026 #1",
@@ -252,7 +252,7 @@
       "miles_from_cincy": 16.7,
       "lat": 39.3448195,
       "lon": -84.5123659,
-      "last_seen_iso": "2026-03-01T19:42:44.700740-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.881787-05:00"
     },
     {
       "title": "Buckeye RoadRally (SCCA)",
@@ -266,7 +266,7 @@
       "miles_from_cincy": 48.4,
       "lat": 39.7589478,
       "lon": -84.1916069,
-      "last_seen_iso": "2026-03-01T19:42:44.706082-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.886884-05:00"
     },
     {
       "title": "10th Annual Cruisin to A Cure for ALS Car Show",
@@ -280,7 +280,7 @@
       "miles_from_cincy": 76.5,
       "lat": 38.0373264,
       "lon": -84.8960027,
-      "last_seen_iso": "2026-03-01T19:42:44.696743-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.878006-05:00"
     },
     {
       "title": "Slammedenuff Ohio Car Show 2026",
@@ -294,7 +294,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.699617-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.880741-05:00"
     },
     {
       "title": "Corsa America Spring Rally – Day 1",
@@ -308,7 +308,7 @@
       "miles_from_cincy": 247.3,
       "lat": 35.6342201,
       "lon": -83.402366,
-      "last_seen_iso": "2026-03-01T19:42:44.706261-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.887056-05:00"
     },
     {
       "title": "Corsa America Spring Rally – Day 2",
@@ -322,7 +322,7 @@
       "miles_from_cincy": 265.2,
       "lat": 35.595363,
       "lon": -82.5508407,
-      "last_seen_iso": "2026-03-01T19:42:44.706437-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.887225-05:00"
     },
     {
       "title": "Corsa America Spring Rally – Day 3",
@@ -336,7 +336,7 @@
       "miles_from_cincy": 293.1,
       "lat": 34.863972,
       "lon": -84.324087,
-      "last_seen_iso": "2026-03-01T19:42:44.706613-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.887407-05:00"
     },
     {
       "title": "Mid-Ohio RoadRally (SCCA)",
@@ -350,7 +350,7 @@
       "miles_from_cincy": 149.4,
       "lat": 40.6787196,
       "lon": -82.5827749,
-      "last_seen_iso": "2026-03-01T19:42:44.706889-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.887573-05:00"
     },
     {
       "title": "Valley High Car Show",
@@ -364,7 +364,7 @@
       "miles_from_cincy": 89.3,
       "lat": 38.2542376,
       "lon": -85.759407,
-      "last_seen_iso": "2026-03-01T19:42:44.703055-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.883983-05:00"
     },
     {
       "title": "Rumble on the River Car Show 2026",
@@ -378,7 +378,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.698196-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.879396-05:00"
     },
     {
       "title": "Quaker Steak & Lube Classic Car Show & Cruise In",
@@ -406,7 +406,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.703773-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.884669-05:00"
     },
     {
       "title": "Open House & Car Show",
@@ -420,7 +420,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.705191-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.886029-05:00"
     },
     {
       "title": "4th Annual 20th Century All GM Car Show and Swap Meet",
@@ -434,7 +434,7 @@
       "miles_from_cincy": 12.6,
       "lat": 39.174625,
       "lon": -84.2958988,
-      "last_seen_iso": "2026-03-01T19:42:44.705373-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.886204-05:00"
     },
     {
       "title": "RallyCross – Edgewater",
@@ -448,7 +448,7 @@
       "miles_from_cincy": 43.5,
       "lat": 39.4453393,
       "lon": -83.8285375,
-      "last_seen_iso": "2026-03-01T19:42:44.707070-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.887742-05:00"
     },
     {
       "title": "Oxford Masonic Lodge Annual Charity Car and Bike show",
@@ -462,7 +462,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.700543-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.881614-05:00"
     },
     {
       "title": "Southern Ohio Forest Rally – Day 1",
@@ -476,7 +476,7 @@
       "miles_from_cincy": 83.4,
       "lat": 39.3331197,
       "lon": -82.9824019,
-      "last_seen_iso": "2026-03-01T19:42:44.707248-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.887917-05:00"
     },
     {
       "title": "Southern Ohio Forest Rally – Day 2",
@@ -490,7 +490,7 @@
       "miles_from_cincy": 83.4,
       "lat": 39.3331197,
       "lon": -82.9824019,
-      "last_seen_iso": "2026-03-01T19:42:44.707422-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.888087-05:00"
     },
     {
       "title": "Southern Ohio Forest Rally – Day 3",
@@ -504,7 +504,7 @@
       "miles_from_cincy": 83.4,
       "lat": 39.3331197,
       "lon": -82.9824019,
-      "last_seen_iso": "2026-03-01T19:42:44.707594-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.888267-05:00"
     },
     {
       "title": "Dynasty Rally 2026 – Day 1",
@@ -518,7 +518,7 @@
       "miles_from_cincy": 4.6,
       "lat": 39.0882425,
       "lon": -84.4287215,
-      "last_seen_iso": "2026-03-01T19:42:44.707791-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.888447-05:00"
     },
     {
       "title": "Dynasty Rally 2026 – Day 2",
@@ -532,7 +532,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.707974-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.888616-05:00"
     },
     {
       "title": "Voss Hoss Cruise-in 2026",
@@ -546,7 +546,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.702366-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.883349-05:00"
     },
     {
       "title": "Dynasty Rally 2026 – Day 3",
@@ -560,7 +560,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.708152-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.888865-05:00"
     },
     {
       "title": "GDCC Annual all Corvette Car Show",
@@ -574,7 +574,7 @@
       "miles_from_cincy": 52.5,
       "lat": 39.816425,
       "lon": -84.1711083,
-      "last_seen_iso": "2026-03-01T19:42:44.704829-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.885679-05:00"
     },
     {
       "title": "Whiskey Row Car Show - June 20th 2026",
@@ -588,7 +588,7 @@
       "miles_from_cincy": 89.3,
       "lat": 38.2542376,
       "lon": -85.759407,
-      "last_seen_iso": "2026-03-01T19:42:44.698021-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.879215-05:00"
     },
     {
       "title": "Annual Car Show & Chicken Dinner",
@@ -602,7 +602,7 @@
       "miles_from_cincy": 18.1,
       "lat": 39.090891,
       "lon": -84.8499504,
-      "last_seen_iso": "2026-03-01T19:42:44.698905-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.880053-05:00"
     },
     {
       "title": "Cars and Coffee June 29",
@@ -630,7 +630,7 @@
       "miles_from_cincy": 89.3,
       "lat": 38.2542376,
       "lon": -85.759407,
-      "last_seen_iso": "2026-03-01T19:42:44.708326-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.889034-05:00"
     },
     {
       "title": "Cincy Cool Cars Club Car Show",
@@ -644,7 +644,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.702015-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.883001-05:00"
     },
     {
       "title": "Rally North America – Ohio Valley 1200 – Day 1",
@@ -658,7 +658,7 @@
       "miles_from_cincy": 132.3,
       "lat": 39.3575616,
       "lon": -82.0609557,
-      "last_seen_iso": "2026-03-01T19:42:44.708508-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.889207-05:00"
     },
     {
       "title": "Rally North America – Day 2",
@@ -672,7 +672,7 @@
       "miles_from_cincy": 531.5,
       "lat": 46.4481521,
       "lon": -87.6305899,
-      "last_seen_iso": "2026-03-01T19:42:44.708698-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.889394-05:00"
     },
     {
       "title": "Rally North America – Day 3",
@@ -686,7 +686,7 @@
       "miles_from_cincy": 395.0,
       "lat": 44.7606481,
       "lon": -85.6165976,
-      "last_seen_iso": "2026-03-01T19:42:44.708875-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.889564-05:00"
     },
     {
       "title": "Rally North America – Day 4",
@@ -700,7 +700,7 @@
       "miles_from_cincy": 295.0,
       "lat": 43.3323684,
       "lon": -83.7392288,
-      "last_seen_iso": "2026-03-01T19:42:44.709049-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.889732-05:00"
     },
     {
       "title": "Dynasty Rally 2026",
@@ -714,7 +714,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.698369-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.879561-05:00"
     },
     {
       "title": "Cincy Car Cruise Rally",
@@ -728,7 +728,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-03-01T19:42:44.709220-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.889897-05:00"
     },
     {
       "title": "Recharge Rally – Day 1",
@@ -742,7 +742,7 @@
       "miles_from_cincy": 4.6,
       "lat": 39.0882425,
       "lon": -84.4287215,
-      "last_seen_iso": "2026-03-01T19:42:44.709397-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.890068-05:00"
     },
     {
       "title": "Recharge Rally – Day 2",
@@ -756,7 +756,7 @@
       "miles_from_cincy": 283.8,
       "lat": 35.0457219,
       "lon": -85.3094883,
-      "last_seen_iso": "2026-03-01T19:42:44.709575-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.890237-05:00"
     },
     {
       "title": "Recharge Rally – Day 3",
@@ -770,7 +770,7 @@
       "miles_from_cincy": 316.1,
       "lat": 34.851354,
       "lon": -82.3984882,
-      "last_seen_iso": "2026-03-01T19:42:44.709764-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.890420-05:00"
     },
     {
       "title": "Recharge Rally – Day 4",
@@ -784,7 +784,7 @@
       "miles_from_cincy": 335.4,
       "lat": 35.2272086,
       "lon": -80.8430827,
-      "last_seen_iso": "2026-03-01T19:42:44.709938-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.890586-05:00"
     },
     {
       "title": "RallyCross – Edgewater",
@@ -798,7 +798,7 @@
       "miles_from_cincy": 43.5,
       "lat": 39.4453393,
       "lon": -83.8285375,
-      "last_seen_iso": "2026-03-01T19:42:44.710111-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.890751-05:00"
     },
     {
       "title": "Frisch's Court Street Car Show/Cruise-In",
@@ -826,7 +826,7 @@
       "miles_from_cincy": 89.3,
       "lat": 38.2542376,
       "lon": -85.759407,
-      "last_seen_iso": "2026-03-01T19:42:44.710281-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.890913-05:00"
     },
     {
       "title": "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event",
@@ -840,7 +840,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-03-01T19:42:44.703241-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.884160-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 1",
@@ -854,7 +854,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.710909-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.891512-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 2",
@@ -868,7 +868,7 @@
       "miles_from_cincy": 401.5,
       "lat": 38.8950368,
       "lon": -77.0365427,
-      "last_seen_iso": "2026-03-01T19:42:44.711086-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.891680-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 3",
@@ -882,7 +882,7 @@
       "miles_from_cincy": 214.7,
       "lat": 36.5945034,
       "lon": -82.1885212,
-      "last_seen_iso": "2026-03-01T19:42:44.711259-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.891848-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 4",
@@ -896,7 +896,7 @@
       "miles_from_cincy": 219.5,
       "lat": 35.9603948,
       "lon": -83.9210261,
-      "last_seen_iso": "2026-03-01T19:42:44.711433-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.892013-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 5",
@@ -910,7 +910,7 @@
       "miles_from_cincy": 237.9,
       "lat": 36.1622767,
       "lon": -86.7742984,
-      "last_seen_iso": "2026-03-01T19:42:44.711605-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.892179-05:00"
     },
     {
       "title": "Fall 2026 Rennsport Dragon Rally®",
@@ -924,7 +924,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-01T19:42:44.703953-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.884842-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 1",
@@ -938,7 +938,7 @@
       "miles_from_cincy": 369.6,
       "lat": 33.7544657,
       "lon": -84.3898151,
-      "last_seen_iso": "2026-03-01T19:42:44.711802-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.892361-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 2",
@@ -952,7 +952,7 @@
       "miles_from_cincy": 369.6,
       "lat": 33.7544657,
       "lon": -84.3898151,
-      "last_seen_iso": "2026-03-01T19:42:44.711976-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.892527-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 3",
@@ -966,7 +966,7 @@
       "miles_from_cincy": 265.2,
       "lat": 35.595363,
       "lon": -82.5508407,
-      "last_seen_iso": "2026-03-01T19:42:44.712149-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.892692-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 4",
@@ -980,7 +980,7 @@
       "miles_from_cincy": 219.5,
       "lat": 35.9603948,
       "lon": -83.9210261,
-      "last_seen_iso": "2026-03-01T19:42:44.712320-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.892855-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 5",
@@ -994,7 +994,7 @@
       "miles_from_cincy": 219.5,
       "lat": 35.9603948,
       "lon": -83.9210261,
-      "last_seen_iso": "2026-03-01T19:42:44.712491-05:00"
+      "last_seen_iso": "2026-03-01T19:50:46.893019-05:00"
     }
   ]
 }
