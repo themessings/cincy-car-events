@@ -3687,9 +3687,20 @@ def main():
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
-    existing = filter_existing_automotive_events(existing, cfg)
+
+    source_bypass_automotive = {
+        clean_ws(str(src.get("name", "")))
+        for src in (sources or [])
+        if clean_ws(str(src.get("name", "")))
+        and clean_ws(str(src.get("bypass_automotive_filter", ""))).lower() in {"1", "true", "yes", "y"}
+    }
+
     existing_before_focus_filter = len(existing)
-    existing = [e for e in existing if is_automotive_event_safe(e.title, e.location, cfg)]
+    existing = [
+        e
+        for e in existing
+        if (e.source in source_bypass_automotive) or is_automotive_event_safe(e.title, e.location, cfg)
+    ]
     dropped_existing_non_automotive = existing_before_focus_filter - len(existing)
     if dropped_existing_non_automotive:
         log(f"🧹 Removed non-automotive legacy events from existing set: {dropped_existing_non_automotive}")
@@ -3808,7 +3819,11 @@ def main():
 
     merged = dedupe_merge(existing, incoming, metrics=pipeline_metrics)
     merged_before_focus_filter = len(merged)
-    merged = [ev for ev in merged if is_automotive_event_safe(ev.title, ev.location, cfg)]
+    merged = [
+        ev
+        for ev in merged
+        if (ev.source in source_bypass_automotive) or is_automotive_event_safe(ev.title, ev.location, cfg)
+    ]
     dropped_merged_non_automotive = merged_before_focus_filter - len(merged)
     if dropped_merged_non_automotive:
         log(f"🧹 Removed non-automotive events after merge: {dropped_merged_non_automotive}")

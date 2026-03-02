@@ -236,8 +236,6 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         ), patch(
             "scripts.events_collector.load_json", return_value={"events": []}
         ), patch(
-            "scripts.events_collector.filter_existing_automotive_events", return_value=[]
-        ), patch(
             "scripts.events_collector.is_automotive_event_safe", return_value=True
         ), patch(
             "scripts.events_collector.to_event_items", return_value=[]
@@ -255,6 +253,69 @@ class FacebookDiagnosticsTests(unittest.TestCase):
             main()
         mock_targets.assert_called_once_with(force_reload=True)
 
+
+
+    def test_main_preserves_bypass_source_events_through_final_filter(self):
+        cfg = {
+            "home": {"lat": 39.1031, "lon": -84.512},
+            "filters": {
+                "lookahead_days": -1,
+                "drop_past_days": 7,
+                "local_max_miles": 200,
+                "rally_max_miles": 600,
+                "automotive_focus_keywords": ["car"],
+                "non_automotive_exclude_keywords": [],
+                "trusted_event_platforms": [],
+            },
+            "categorization": {"local_keywords": ["cars and coffee"], "rally_keywords": ["rally"]},
+            "sources": [{"type": "ics", "name": "iCloud Published Calendar (ICS)", "bypass_automotive_filter": True}],
+        }
+
+        kept_event = EventItem(
+            title="Downtown runnaz meet #2",
+            start_iso="2099-03-07T14:00:00-05:00",
+            end_iso="2099-03-07T16:00:00-05:00",
+            location="",
+            city_state="",
+            url="https://p147-caldav.icloud.com/calendar",
+            source="iCloud Published Calendar (ICS)",
+            category="local",
+            miles_from_cincy=None,
+            lat=None,
+            lon=None,
+            last_seen_iso="2099-03-01T00:00:00-05:00",
+        )
+
+        def fake_load_json(path, default=None):
+            if str(path).endswith("events.json"):
+                return {"events": []}
+            return {}
+
+        with patch("scripts.events_collector.load_facebook_targets", return_value={"page": [], "group": [], "non_facebook": []}), patch(
+            "scripts.events_collector.load_yaml", return_value=cfg
+        ), patch(
+            "scripts.events_collector.load_json", side_effect=fake_load_json
+        ), patch(
+            "scripts.events_collector.to_event_items", return_value=[kept_event]
+        ), patch(
+            "scripts.events_collector.dedupe_merge", side_effect=lambda existing, incoming, metrics=None: list(incoming)
+        ), patch(
+            "scripts.events_collector.prune_past_events", side_effect=lambda rows, now: rows
+        ), patch(
+            "scripts.events_collector.save_json"
+        ) as mock_save, patch(
+            "scripts.events_collector.write_csv"
+        ), patch(
+            "scripts.events_collector.update_apex_spreadsheet"
+        ), patch(
+            "scripts.events_collector.log"
+        ):
+            main()
+
+        payload_call = next(call for call in mock_save.call_args_list if str(call.args[0]).endswith("events.json"))
+        payload = payload_call.args[1]
+        self.assertEqual(payload["count"], 1)
+        self.assertEqual(payload["events"][0]["title"], "Downtown runnaz meet #2")
     def test_load_facebook_targets_accepts_force_reload(self):
         with patch("scripts.events_collector.load_facebook_pages", return_value=[]):
             out = load_facebook_targets(force_reload=True)
