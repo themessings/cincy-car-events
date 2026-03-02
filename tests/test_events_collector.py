@@ -2,6 +2,7 @@ import json
 import unittest
 from collections import Counter
 from datetime import datetime
+from dateutil import tz
 from pathlib import Path
 from unittest.mock import patch
 
@@ -22,6 +23,7 @@ from scripts.events_collector import (
     load_facebook_targets,
     collect_ics,
     _parse_google_sheet_events_rows,
+    to_event_items,
 )
 
 
@@ -100,6 +102,43 @@ class CollectorTests(unittest.TestCase):
             extract_facebook_group_key("https://www.facebook.com/groups/cincycarsclub/?ref=share"),
             "cincycarsclub",
         )
+
+
+class AutomotiveBypassTests(unittest.TestCase):
+    def test_to_event_items_allows_source_bypass_automotive_filter(self):
+        cfg = {
+            "home": {"lat": 39.1031, "lon": -84.512},
+            "filters": {
+                "lookahead_days": -1,
+                "drop_past_days": 7,
+                "local_max_miles": 200,
+                "rally_max_miles": 600,
+                "automotive_focus_keywords": ["car", "cars and coffee"],
+                "non_automotive_exclude_keywords": ["job fair"],
+                "trusted_event_platforms": ["facebook.com/events"],
+            },
+            "categorization": {
+                "local_keywords": ["cars and coffee"],
+                "rally_keywords": ["rally"],
+            },
+        }
+
+        start_dt = datetime(2099, 3, 7, 14, 0, tzinfo=tz.gettz("America/New_York"))
+        raw_events = [
+            {
+                "title": "Downtown runnaz meet #2",
+                "start_dt": start_dt,
+                "end_dt": start_dt.replace(hour=16),
+                "location": "",
+                "url": "https://p147-caldav.icloud.com/calendar",
+                "source": "iCloud Published Calendar (ICS)",
+                "bypass_automotive_filter": True,
+            }
+        ]
+
+        out = to_event_items(raw_events, cfg, geocache={})
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0].title, "Downtown runnaz meet #2")
 
 
 if __name__ == "__main__":
@@ -197,8 +236,6 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         ), patch(
             "scripts.events_collector.load_json", return_value={"events": []}
         ), patch(
-            "scripts.events_collector.filter_existing_automotive_events", return_value=[]
-        ), patch(
             "scripts.events_collector.is_automotive_event_safe", return_value=True
         ), patch(
             "scripts.events_collector.to_event_items", return_value=[]
@@ -216,6 +253,69 @@ class FacebookDiagnosticsTests(unittest.TestCase):
             main()
         mock_targets.assert_called_once_with(force_reload=True)
 
+
+
+    def test_main_preserves_bypass_source_events_through_final_filter(self):
+        cfg = {
+            "home": {"lat": 39.1031, "lon": -84.512},
+            "filters": {
+                "lookahead_days": -1,
+                "drop_past_days": 7,
+                "local_max_miles": 200,
+                "rally_max_miles": 600,
+                "automotive_focus_keywords": ["car"],
+                "non_automotive_exclude_keywords": [],
+                "trusted_event_platforms": [],
+            },
+            "categorization": {"local_keywords": ["cars and coffee"], "rally_keywords": ["rally"]},
+            "sources": [{"type": "ics", "name": "iCloud Published Calendar (ICS)", "bypass_automotive_filter": True}],
+        }
+
+        kept_event = EventItem(
+            title="Downtown runnaz meet #2",
+            start_iso="2099-03-07T14:00:00-05:00",
+            end_iso="2099-03-07T16:00:00-05:00",
+            location="",
+            city_state="",
+            url="https://p147-caldav.icloud.com/calendar",
+            source="iCloud Published Calendar (ICS)",
+            category="local",
+            miles_from_cincy=None,
+            lat=None,
+            lon=None,
+            last_seen_iso="2099-03-01T00:00:00-05:00",
+        )
+
+        def fake_load_json(path, default=None):
+            if str(path).endswith("events.json"):
+                return {"events": []}
+            return {}
+
+        with patch("scripts.events_collector.load_facebook_targets", return_value={"page": [], "group": [], "non_facebook": []}), patch(
+            "scripts.events_collector.load_yaml", return_value=cfg
+        ), patch(
+            "scripts.events_collector.load_json", side_effect=fake_load_json
+        ), patch(
+            "scripts.events_collector.to_event_items", return_value=[kept_event]
+        ), patch(
+            "scripts.events_collector.dedupe_merge", side_effect=lambda existing, incoming, metrics=None: list(incoming)
+        ), patch(
+            "scripts.events_collector.prune_past_events", side_effect=lambda rows, now: rows
+        ), patch(
+            "scripts.events_collector.save_json"
+        ) as mock_save, patch(
+            "scripts.events_collector.write_csv"
+        ), patch(
+            "scripts.events_collector.update_apex_spreadsheet"
+        ), patch(
+            "scripts.events_collector.log"
+        ):
+            main()
+
+        payload_call = next(call for call in mock_save.call_args_list if str(call.args[0]).endswith("events.json"))
+        payload = payload_call.args[1]
+        self.assertEqual(payload["count"], 1)
+        self.assertEqual(payload["events"][0]["title"], "Downtown runnaz meet #2")
     def test_load_facebook_targets_accepts_force_reload(self):
         with patch("scripts.events_collector.load_facebook_pages", return_value=[]):
             out = load_facebook_targets(force_reload=True)
@@ -257,15 +357,79 @@ END:VCALENDAR
         self.assertEqual(out[0]["title"], "Future Cars Meetup")
         self.assertEqual(mock_get.call_args.args[0], "https://example.com/calendar.ics")
 
+    def test_collect_ics_expands_rrule_occurrences(self):
+        ics = """BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Recurring Cars Meetup
+DTSTART:20990101T120000Z
+DTEND:20990101T140000Z
+RRULE:FREQ=DAILY;COUNT=3
+END:VEVENT
+END:VCALENDAR
+"""
+
+        class _Resp:
+            status_code = 200
+            content = ics.encode("utf-8")
+
+            def raise_for_status(self):
+                return None
+
+        with patch("scripts.events_collector.requests.get", return_value=_Resp()):
+            out = collect_ics(
+                {
+                    "name": "Recurring ICS",
+                    "url": "https://example.com/recurring.ics",
+                    "future_only": True,
+                }
+            )
+
+        self.assertEqual(len(out), 3)
+        self.assertEqual([e["start_dt"].day for e in out], [1, 2, 3])
+
+    def test_collect_ics_rrule_honors_exdate_and_rdate(self):
+        ics = """BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Cars Meetup with Exceptions
+DTSTART:20990101T120000Z
+DTEND:20990101T140000Z
+RRULE:FREQ=DAILY;COUNT=2
+EXDATE:20990102T120000Z
+RDATE:20990105T120000Z
+END:VEVENT
+END:VCALENDAR
+"""
+
+        class _Resp:
+            status_code = 200
+            content = ics.encode("utf-8")
+
+            def raise_for_status(self):
+                return None
+
+        with patch("scripts.events_collector.requests.get", return_value=_Resp()):
+            out = collect_ics(
+                {
+                    "name": "Recurring ICS",
+                    "url": "https://example.com/recurring.ics",
+                    "future_only": True,
+                }
+            )
+
+        self.assertEqual(len(out), 2)
+        self.assertEqual([e["start_dt"].day for e in out], [1, 5])
+
     def test_parse_google_sheet_rows_maps_columns_and_defaults_date_only_time(self):
         rows = [
-            ["Name", "Start Date", "Location", "City", "URL"],
-            ["Cars & Coffee", "2099-05-01", "123 Main St", "Cincinnati", "https://example.com/event"],
+            ["Date", "Name", "City / Where You'd Be", "Link"],
+            ["2099-05-01", "Cars & Coffee", "Cincinnati", "https://example.com/event"],
         ]
-        out = _parse_google_sheet_events_rows(rows, "Google Sheet Events Import", "Events")
+        out, stats = _parse_google_sheet_events_rows(rows, "Google Sheet Events Import", "Events")
         self.assertEqual(len(out), 1)
+        self.assertEqual(stats["parsed_events"], 1)
         self.assertEqual(out[0]["title"], "Cars & Coffee")
         self.assertEqual(out[0]["start_dt"].hour, 9)
         self.assertEqual(out[0]["end_dt"].hour, 11)
         self.assertIn("Cincinnati", out[0]["location"])
-
