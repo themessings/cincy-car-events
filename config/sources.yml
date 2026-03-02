@@ -116,6 +116,7 @@ sources:
   name: iCloud Published Calendar (ICS)
   url: webcal://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk
   future_only: true
+  bypass_automotive_filter: true
 - type: google_sheet_events_import
   name: Google Sheet Events Import
   tab: Events

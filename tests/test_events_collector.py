@@ -2,6 +2,7 @@ import json
 import unittest
 from collections import Counter
 from datetime import datetime
+from dateutil import tz
 from pathlib import Path
 from unittest.mock import patch
 
@@ -22,6 +23,7 @@ from scripts.events_collector import (
     load_facebook_targets,
     collect_ics,
     _parse_google_sheet_events_rows,
+    to_event_items,
 )
 
 
@@ -100,6 +102,43 @@ class CollectorTests(unittest.TestCase):
             extract_facebook_group_key("https://www.facebook.com/groups/cincycarsclub/?ref=share"),
             "cincycarsclub",
         )
+
+
+class AutomotiveBypassTests(unittest.TestCase):
+    def test_to_event_items_allows_source_bypass_automotive_filter(self):
+        cfg = {
+            "home": {"lat": 39.1031, "lon": -84.512},
+            "filters": {
+                "lookahead_days": -1,
+                "drop_past_days": 7,
+                "local_max_miles": 200,
+                "rally_max_miles": 600,
+                "automotive_focus_keywords": ["car", "cars and coffee"],
+                "non_automotive_exclude_keywords": ["job fair"],
+                "trusted_event_platforms": ["facebook.com/events"],
+            },
+            "categorization": {
+                "local_keywords": ["cars and coffee"],
+                "rally_keywords": ["rally"],
+            },
+        }
+
+        start_dt = datetime(2099, 3, 7, 14, 0, tzinfo=tz.gettz("America/New_York"))
+        raw_events = [
+            {
+                "title": "Downtown runnaz meet #2",
+                "start_dt": start_dt,
+                "end_dt": start_dt.replace(hour=16),
+                "location": "",
+                "url": "https://p147-caldav.icloud.com/calendar",
+                "source": "iCloud Published Calendar (ICS)",
+                "bypass_automotive_filter": True,
+            }
+        ]
+
+        out = to_event_items(raw_events, cfg, geocache={})
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0].title, "Downtown runnaz meet #2")
 
 
 if __name__ == "__main__":

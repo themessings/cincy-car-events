@@ -3072,6 +3072,7 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
                     "location": location_text,
                     "url": url,
                     "source": source_name,
+                    "bypass_automotive_filter": bool(source.get("bypass_automotive_filter", False)),
                 }
             )
 
@@ -3297,14 +3298,16 @@ def to_event_items(
         if not end_dt:
             end_dt = start_dt + timedelta(hours=2)
 
-        allowed, auto_reason = evaluate_automotive_focus_event(title, location, source, url, cfg)
-        if not allowed:
-            drop_reasons[f"non_automotive:{auto_reason}"] += 1
-            if source_counter is not None:
-                source_counter[f"non_automotive:{auto_reason}"] += 1
-            if len(non_auto_examples) < 5:
-                non_auto_examples.append(f"{title[:80]} ({auto_reason})")
-            continue
+        bypass_automotive_filter = bool(e.get("bypass_automotive_filter"))
+        if not bypass_automotive_filter:
+            allowed, auto_reason = evaluate_automotive_focus_event(title, location, source, url, cfg)
+            if not allowed:
+                drop_reasons[f"non_automotive:{auto_reason}"] += 1
+                if source_counter is not None:
+                    source_counter[f"non_automotive:{auto_reason}"] += 1
+                if len(non_auto_examples) < 5:
+                    non_auto_examples.append(f"{title[:80]} ({auto_reason})")
+                continue
 
         if start_dt < window_start:
             drop_reasons["outside_window_past"] += 1
