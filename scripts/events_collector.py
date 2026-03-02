@@ -1634,6 +1634,7 @@ def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
     )
     diagnostics["total_vevents"] = total_vevents
     diagnostics["skipped_past"] = skipped_past
+    diagnostics["expanded_recurring"] = expanded_recurring
     if not out:
         diagnostics["reason"] = "no_results_from_search"
     return out
