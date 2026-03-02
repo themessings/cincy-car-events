@@ -257,15 +257,79 @@ END:VCALENDAR
         self.assertEqual(out[0]["title"], "Future Cars Meetup")
         self.assertEqual(mock_get.call_args.args[0], "https://example.com/calendar.ics")
 
+    def test_collect_ics_expands_rrule_occurrences(self):
+        ics = """BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Recurring Cars Meetup
+DTSTART:20990101T120000Z
+DTEND:20990101T140000Z
+RRULE:FREQ=DAILY;COUNT=3
+END:VEVENT
+END:VCALENDAR
+"""
+
+        class _Resp:
+            status_code = 200
+            content = ics.encode("utf-8")
+
+            def raise_for_status(self):
+                return None
+
+        with patch("scripts.events_collector.requests.get", return_value=_Resp()):
+            out = collect_ics(
+                {
+                    "name": "Recurring ICS",
+                    "url": "https://example.com/recurring.ics",
+                    "future_only": True,
+                }
+            )
+
+        self.assertEqual(len(out), 3)
+        self.assertEqual([e["start_dt"].day for e in out], [1, 2, 3])
+
+    def test_collect_ics_rrule_honors_exdate_and_rdate(self):
+        ics = """BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Cars Meetup with Exceptions
+DTSTART:20990101T120000Z
+DTEND:20990101T140000Z
+RRULE:FREQ=DAILY;COUNT=2
+EXDATE:20990102T120000Z
+RDATE:20990105T120000Z
+END:VEVENT
+END:VCALENDAR
+"""
+
+        class _Resp:
+            status_code = 200
+            content = ics.encode("utf-8")
+
+            def raise_for_status(self):
+                return None
+
+        with patch("scripts.events_collector.requests.get", return_value=_Resp()):
+            out = collect_ics(
+                {
+                    "name": "Recurring ICS",
+                    "url": "https://example.com/recurring.ics",
+                    "future_only": True,
+                }
+            )
+
+        self.assertEqual(len(out), 2)
+        self.assertEqual([e["start_dt"].day for e in out], [1, 5])
+
     def test_parse_google_sheet_rows_maps_columns_and_defaults_date_only_time(self):
         rows = [
-            ["Name", "Start Date", "Location", "City", "URL"],
-            ["Cars & Coffee", "2099-05-01", "123 Main St", "Cincinnati", "https://example.com/event"],
+            ["Date", "Name", "City / Where You'd Be", "Link"],
+            ["2099-05-01", "Cars & Coffee", "Cincinnati", "https://example.com/event"],
         ]
-        out = _parse_google_sheet_events_rows(rows, "Google Sheet Events Import", "Events")
+        out, stats = _parse_google_sheet_events_rows(rows, "Google Sheet Events Import", "Events")
         self.assertEqual(len(out), 1)
+        self.assertEqual(stats["parsed_events"], 1)
         self.assertEqual(out[0]["title"], "Cars & Coffee")
         self.assertEqual(out[0]["start_dt"].hour, 9)
         self.assertEqual(out[0]["end_dt"].hour, 11)
         self.assertIn("Cincinnati", out[0]["location"])
-
