@@ -23,6 +23,7 @@ import yaml
 from bs4 import BeautifulSoup
 from dateutil import tz
 from dateutil import parser as dateutil_parser
+from dateutil.rrule import rrulestr
 from icalendar import Calendar
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -1526,6 +1527,42 @@ def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
     out = []
     total_vevents = 0
     skipped_past = 0
+    expanded_recurring = 0
+
+    def _normalize_ics_dt(value) -> Optional[datetime]:
+        if not value:
+            return None
+        if isinstance(value, datetime):
+            if value.tzinfo is None:
+                return value.replace(tzinfo=tz.gettz("America/New_York"))
+            return value.astimezone(tz.gettz("America/New_York"))
+        return datetime.combine(value, datetime.min.time()).replace(tzinfo=tz.gettz("America/New_York"))
+
+    def _collect_rdate_datetimes(component) -> List[datetime]:
+        result = []
+        rdate_prop = component.get("rdate")
+        if not rdate_prop:
+            return result
+        props = rdate_prop if isinstance(rdate_prop, list) else [rdate_prop]
+        for prop in props:
+            for dt_val in getattr(prop, "dts", []):
+                normalized = _normalize_ics_dt(getattr(dt_val, "dt", None))
+                if normalized:
+                    result.append(normalized)
+        return result
+
+    def _collect_exdate_datetimes(component) -> set:
+        result = set()
+        exdate_prop = component.get("exdate")
+        if not exdate_prop:
+            return result
+        props = exdate_prop if isinstance(exdate_prop, list) else [exdate_prop]
+        for prop in props:
+            for dt_val in getattr(prop, "dts", []):
+                normalized = _normalize_ics_dt(getattr(dt_val, "dt", None))
+                if normalized:
+                    result.add(normalized)
+        return result
 
     for component in cal.walk():
         if component.name != "VEVENT":
@@ -1542,48 +1579,63 @@ def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
         if not title or not dtstart:
             continue
 
-        start_dt = dtstart.dt
-        end_dt = dtend.dt if dtend else None
-
-        if isinstance(start_dt, datetime):
-            if start_dt.tzinfo is None:
-                start_dt = start_dt.replace(tzinfo=tz.gettz("America/New_York"))
-            else:
-                start_dt = start_dt.astimezone(tz.gettz("America/New_York"))
-        else:
-            start_dt = datetime.combine(start_dt, datetime.min.time()).replace(tzinfo=tz.gettz("America/New_York"))
-
-        if end_dt:
-            if isinstance(end_dt, datetime) and end_dt.tzinfo is None:
-                end_dt = end_dt.replace(tzinfo=tz.gettz("America/New_York"))
-            elif isinstance(end_dt, datetime):
-                end_dt = end_dt.astimezone(tz.gettz("America/New_York"))
-            else:
-                end_dt = datetime.combine(end_dt, datetime.min.time()).replace(tzinfo=tz.gettz("America/New_York"))
-        else:
+        start_dt = _normalize_ics_dt(dtstart.dt)
+        end_dt = _normalize_ics_dt(dtend.dt if dtend else None)
+        if not start_dt:
+            continue
+        if not end_dt:
             end_dt = start_dt + timedelta(hours=2)
 
-        if future_only and start_dt < now_et:
-            skipped_past += 1
-            continue
+        duration = end_dt - start_dt
+        if duration.total_seconds() <= 0:
+            duration = timedelta(hours=2)
 
-        out.append(
-            {
-                "title": title,
-                "start_dt": start_dt,
-                "end_dt": end_dt,
-                "location": loc,
-                "url": url,
-                "source": source_name,
-            }
-        )
+        event_starts: List[datetime] = [start_dt]
+        rrule_prop = component.get("rrule")
+        if rrule_prop:
+            recurrence_window_days = max(30, int(os.getenv("ICS_RECURRENCE_WINDOW_DAYS", "3650")))
+            window_start = now_et - timedelta(days=1)
+            window_end = now_et + timedelta(days=recurrence_window_days)
+            try:
+                rule_text = rrule_prop.to_ical().decode("utf-8")
+                rule = rrulestr(rule_text, dtstart=start_dt)
+                has_finite_bound = "COUNT=" in rule_text.upper() or "UNTIL=" in rule_text.upper()
+                if has_finite_bound:
+                    event_starts = list(rule)
+                else:
+                    event_starts = list(rule.between(window_start, window_end, inc=True))
+                expanded_recurring += max(0, len(event_starts) - 1)
+            except Exception:
+                event_starts = [start_dt]
+
+        event_starts.extend(_collect_rdate_datetimes(component))
+        exdates = _collect_exdate_datetimes(component)
+        unique_starts = sorted({dt for dt in event_starts if dt not in exdates})
+
+        for occurrence_start in unique_starts:
+            if future_only and occurrence_start < now_et:
+                skipped_past += 1
+                continue
+
+            out.append(
+                {
+                    "title": title,
+                    "start_dt": occurrence_start,
+                    "end_dt": occurrence_start + duration,
+                    "location": loc,
+                    "url": url,
+                    "source": source_name,
+                }
+            )
 
     log(
         f"ℹ️ ICS parse: source={source_name} total_vevents={total_vevents} "
-        f"future_only={'yes' if future_only else 'no'} skipped_past={skipped_past} kept_future={len(out)}"
+        f"future_only={'yes' if future_only else 'no'} skipped_past={skipped_past} "
+        f"expanded_recurring={expanded_recurring} kept_future={len(out)}"
     )
     diagnostics["total_vevents"] = total_vevents
     diagnostics["skipped_past"] = skipped_past
+    diagnostics["expanded_recurring"] = expanded_recurring
     if not out:
         diagnostics["reason"] = "no_results_from_search"
     return out
