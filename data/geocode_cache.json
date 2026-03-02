@@ -649,5 +649,43 @@
   "Lexington KY": {
     "lat": "38.0464066",
     "lon": "-84.4970393"
+  },
+  "Horsepower Farm Middletown": null,
+  "Asheville and the Western North Carolina": null,
+  "Asheville East": {
+    "lat": "36.0155780",
+    "lon": "-83.8290951"
+  },
+  "Bellbrook, OH": {
+    "lat": "39.6358399",
+    "lon": "-84.0701766"
+  },
+  "Vandalia, OH": {
+    "lat": "39.8906122",
+    "lon": "-84.1988308"
+  },
+  "Springboro, OH": {
+    "lat": "39.5522815",
+    "lon": "-84.2332718"
+  },
+  "Independence, OH": {
+    "lat": "41.3816571",
+    "lon": "-81.6406872"
+  },
+  "New york, NY": {
+    "lat": "40.7127281",
+    "lon": "-74.0060152"
+  },
+  "Dublin, OH": {
+    "lat": "40.0996009",
+    "lon": "-83.1135563"
+  },
+  "Washington D.C., DC": {
+    "lat": "38.8950368",
+    "lon": "-77.0365427"
+  },
+  "Wheaton, MD": {
+    "lat": "39.0497933",
+    "lon": "-77.0522851"
   }
 }
