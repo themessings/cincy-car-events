@@ -1593,15 +1593,14 @@ def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
         event_starts: List[datetime] = [start_dt]
         rrule_prop = component.get("rrule")
         if rrule_prop:
-            recurrence_window_days = max(30, int(os.getenv("ICS_RECURRENCE_WINDOW_DAYS", "3650")))
             window_start = now_et - timedelta(days=1)
-            window_end = now_et + timedelta(days=recurrence_window_days)
+            window_end = now_et + timedelta(days=730)
             try:
                 rule_text = rrule_prop.to_ical().decode("utf-8")
                 rule = rrulestr(rule_text, dtstart=start_dt)
                 has_finite_bound = "COUNT=" in rule_text.upper() or "UNTIL=" in rule_text.upper()
                 if has_finite_bound:
-                    event_starts = list(rule)
+                    event_starts = list(rule)[:1000]
                 else:
                     event_starts = list(rule.between(window_start, window_end, inc=True))
                 expanded_recurring += max(0, len(event_starts) - 1)
@@ -1625,7 +1624,6 @@ def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
                     "location": loc,
                     "url": url,
                     "source": source_name,
-                    "bypass_automotive_filter": bool(source.get("bypass_automotive_filter", False)),
                 }
             )
 
