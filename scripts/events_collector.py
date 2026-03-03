@@ -3334,7 +3334,7 @@ def to_event_items(
 
     for e in raw_events:
         title = clean_ws(e.get("title", ""))
-        location = clean_ws(e.get("location", ""))
+        location = normalize_location_for_output(e.get("location", ""), e.get("city_state", ""))
         url = clean_ws(e.get("url", ""))
         source = clean_ws(e.get("source", ""))
         start_dt: Optional[datetime] = e.get("start_dt")
@@ -3744,6 +3744,8 @@ def main():
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
     existing = [EventItem(**e) for e in existing_raw.get("events", [])]
+    for ev in existing:
+        ev.location = normalize_location_for_output(ev.location, ev.city_state)
 
     source_bypass_automotive = {
         clean_ws(str(src.get("name", "")))
@@ -3889,6 +3891,8 @@ def main():
     now_et = datetime.now(tz=tz.gettz("America/New_York"))
     merged_dicts = [asdict(e) for e in merged]
     merged_dicts = prune_past_events(merged_dicts, now_et)
+    for ev in merged_dicts:
+        ev["location"] = normalize_location_for_output(ev.get("location", ""), ev.get("city_state", ""))
 
     geocache = prune_cache_by_age(geocache, now_et, days=180, label="geocode_cache")
     url_cache = prune_cache_by_age(url_cache, now_et, days=180, label="url_cache")
