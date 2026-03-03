@@ -82,6 +82,7 @@ FACEBOOK_TARGETS_CACHE: Optional[List[dict]] = None
 FACEBOOK_GRAPH_RUNTIME: Dict[str, object] = {"checked": False, "valid": None, "reason": "unchecked"}
 FACEBOOK_COVERAGE: Dict[str, object] = {"token": {}, "serp_queries": [], "urls_discovered": 0, "urls_parsed": 0, "urls_failed": 0, "failure_reasons": Counter(), "page_events": 0}
 TOKEN_MANAGER: Optional[TokenManager] = None
+EST_TZ = tz.tzoffset("EST", -5 * 60 * 60)
 
 
 def get_token_manager() -> TokenManager:
@@ -606,7 +607,7 @@ def parse_iso_datetime_safe(raw_value: str, et_tz=None) -> Optional[datetime]:
     if not raw:
         return None
 
-    et_tz = et_tz or tz.gettz("America/New_York")
+    et_tz = et_tz or EST_TZ
     dt: Optional[datetime] = None
     try:
         dt = datetime.fromisoformat(raw)
@@ -627,7 +628,7 @@ def prune_past_events(events: List[dict], now: datetime) -> List[dict]:
         log(f"⚠️ Unknown EVENT_PRUNE_MODE='{mode}', defaulting to end_before_now")
         mode = "end_before_now"
 
-    et_tz = tz.gettz("America/New_York")
+    et_tz = EST_TZ
     if now.tzinfo is None:
         now_et = now.replace(tzinfo=et_tz)
     else:
@@ -665,7 +666,7 @@ def prune_cache_by_age(cache_obj, now: datetime, days: int = 180, label: str = "
     if not isinstance(cache_obj, dict):
         return cache_obj
 
-    et_tz = tz.gettz("America/New_York")
+    et_tz = EST_TZ
     now_et = now if now.tzinfo else now.replace(tzinfo=et_tz)
     now_et = now_et.astimezone(et_tz)
     cutoff = now_et - timedelta(days=days)
@@ -1704,7 +1705,7 @@ def _sheet_value(row: List[str], header_map: Dict[str, int], *keys: str) -> str:
 
 
 def _parse_sheet_date_value(raw_value, now_et: datetime) -> Tuple[Optional[datetime], Optional[str]]:
-    et_tz = tz.gettz("America/New_York")
+    et_tz = EST_TZ
     if raw_value is None:
         return None, "empty"
 
@@ -3016,7 +3017,7 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
 
     out: List[dict] = []
     seen = set()
-    et_tz = tz.gettz("America/New_York")
+    et_tz = EST_TZ
 
     for idx, htichips in enumerate(htichips_attempts):
         _, rows = serpapi_search(

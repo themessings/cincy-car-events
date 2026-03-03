@@ -14,6 +14,8 @@ import requests
 from bs4 import BeautifulSoup
 from dateutil import tz
 
+EST_TZ = tz.tzoffset("EST", -5 * 60 * 60)
+
 
 def parse_dt(text: str) -> Optional[datetime]:
     if not text:
@@ -210,4 +212,4 @@ def parse_facebook_event_page(event_url: str, logger: Callable[[str], None]) -> 
 def format_timestamp_et(ts: Optional[int]) -> str:
     if not ts:
         return "unknown"
-    return datetime.fromtimestamp(ts, tz=tz.gettz("America/New_York")).isoformat()
+    return datetime.fromtimestamp(ts, tz=EST_TZ).isoformat()
