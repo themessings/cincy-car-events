@@ -24,6 +24,8 @@ from scripts.events_collector import (
     collect_ics,
     _parse_google_sheet_events_rows,
     to_event_items,
+    simplify_location,
+    parse_dt,
 )
 
 
@@ -79,6 +81,20 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(norm["title"], "Cars & Coffee - Spring")
         self.assertIn("facebook.com/events/12345", norm["url"])
         self.assertIsInstance(norm["start_dt"], datetime)
+
+
+    def test_simplify_location_keeps_venue_and_simple_address(self):
+        location = "Circuit Cafe"
+        address = "2726 Riverside Drive, Cincinnati, OH, United States"
+        self.assertEqual(
+            simplify_location(location, address),
+            "Circuit Cafe, 2726 Riverside Drive, Cincinnati, OH, United States",
+        )
+
+    def test_parse_dt_converts_utc_to_eastern(self):
+        dt = parse_dt("2026-04-10T14:00:00+0000")
+        self.assertIsNotNone(dt)
+        self.assertEqual(dt.isoformat(), "2026-04-10T10:00:00-04:00")
 
     def test_extract_facebook_page_identifier_variants(self):
         self.assertEqual(

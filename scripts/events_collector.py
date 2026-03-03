@@ -360,7 +360,8 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
     if place.get("location"):
         loc = place["location"]
         parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
-        location = clean_ws(" ".join(p for p in parts if p)) or location
+        normalized_address = ", ".join(clean_ws(str(p)) for p in parts if clean_ws(str(p)))
+        location = simplify_location(location, normalized_address) or location
 
     if not title or not start_dt:
         return None
@@ -467,7 +468,7 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
                     "title": parsed_page.get("title", ""),
                     "start_dt": parsed_page.get("start_dt"),
                     "end_dt": parsed_page.get("end_dt"),
-                    "location": clean_ws(f"{parsed_page.get('location', '')} {parsed_page.get('address', '')}"),
+                    "location": simplify_location(parsed_page.get('location', ''), parsed_page.get('address', '')),
                     "url": parsed_page.get("canonical_url") or parsed_page.get("url") or event_url,
                     "source": source_name,
                     "host": parsed_page.get("host", ""),
@@ -570,15 +571,31 @@ def now_et_iso() -> str:
 def parse_dt(text: str) -> Optional[datetime]:
     if not text:
         return None
-    dt = dateparser.parse(
-        text,
-        settings={
-            "RETURN_AS_TIMEZONE_AWARE": True,
-            "TIMEZONE": "America/New_York",
-            "TO_TIMEZONE": "America/New_York",
-        },
-    )
-    return dt
+
+    raw = clean_ws(text)
+    dt: Optional[datetime] = None
+    try:
+        dt = dateutil_parser.parse(raw)
+    except Exception:
+        dt = None
+
+    if dt is None:
+        dt = dateparser.parse(
+            raw,
+            settings={
+                "RETURN_AS_TIMEZONE_AWARE": True,
+                "TIMEZONE": "America/New_York",
+                "TO_TIMEZONE": "America/New_York",
+            },
+        )
+
+    if dt is None:
+        return None
+
+    et_tz = tz.gettz("America/New_York")
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=et_tz)
+    return dt.astimezone(et_tz)
 
 
 
@@ -902,7 +919,8 @@ def normalize_facebook_page_event(item: dict, page_name: str) -> Optional[dict]:
     if isinstance(place, dict) and place.get("location"):
         loc = place["location"] or {}
         parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
-        location = clean_ws(" ".join(x for x in parts if x)) or location
+        normalized_address = ", ".join(clean_ws(str(p)) for p in parts if clean_ws(str(p)))
+        location = simplify_location(location, normalized_address) or location
 
     if not title or not start_dt:
         return None
@@ -1219,6 +1237,36 @@ def save_json(path: str, data) -> None:
 
 def clean_ws(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
+
+
+def simplify_location(location: str, address: str = "") -> str:
+    """Return a simple, de-duplicated address string.
+
+    - keeps venue name when present
+    - normalizes address to comma-separated segments
+    - removes duplicated trailing address text when location already contains it
+    """
+    raw_location = clean_ws(location)
+    raw_address = clean_ws(address)
+
+    if not raw_address:
+        return raw_location
+
+    address_csv = re.sub(r"\s+", " ", raw_address)
+    address_csv = re.sub(r"\s*,\s*", ", ", address_csv)
+    address_csv = address_csv.strip(" ,")
+
+    address_plain = re.sub(r",", "", address_csv)
+    address_plain = clean_ws(address_plain)
+
+    if not raw_location:
+        return address_csv
+
+    lower_location = raw_location.lower()
+    if address_csv.lower() in lower_location or address_plain.lower() in lower_location:
+        return raw_location
+
+    return clean_ws(f"{raw_location}, {address_csv}")
 
 
 def guess_city_state(location: str) -> str:
@@ -2770,7 +2818,7 @@ def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, di
                     "title": parsed_page.get("title", ""),
                     "start_dt": parsed_page.get("start_dt"),
                     "end_dt": parsed_page.get("end_dt"),
-                    "location": clean_ws(f"{parsed_page.get('location', '')} {parsed_page.get('address', '')}"),
+                    "location": simplify_location(parsed_page.get('location', ''), parsed_page.get('address', '')),
                     "url": parsed_page.get("canonical_url") or parsed_page.get("url") or u,
                     "source": "facebook:discovered",
                     "host": parsed_page.get("host", ""),
