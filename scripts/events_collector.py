@@ -586,15 +586,15 @@ def parse_dt(text: str) -> Optional[datetime]:
             raw,
             settings={
                 "RETURN_AS_TIMEZONE_AWARE": True,
-                "TIMEZONE": "EST",
-                "TO_TIMEZONE": "EST",
+                "TIMEZONE": "America/New_York",
+                "TO_TIMEZONE": "America/New_York",
             },
         )
 
     if dt is None:
         return None
 
-    et_tz = EST_TZ
+    et_tz = tz.gettz("America/New_York")
     if dt.tzinfo is None:
         return dt.replace(tzinfo=et_tz)
     return dt.astimezone(et_tz)
@@ -1241,191 +1241,35 @@ def clean_ws(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
 
 
-def _normalize_us_address_text(raw: str) -> str:
-    text = clean_ws(html.unescape(raw))
-    if not text:
-        return ""
-
-    text = re.sub(r"\bUnited States(?: of America)?\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\bUSA\b", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\s*,\s*", ", ", text)
-    text = re.sub(r",\s*,+", ", ", text)
-    text = clean_ws(text.strip(" ,"))
-
-    m = re.match(r"^(?P<prefix>.*),\s*(?P<state>[A-Z]{2})\s*,\s*[A-Za-z .'-]+\s+(?P<zip>\d{5}(?:-\d{4})?)$", text)
-    if m:
-        text = f"{clean_ws(m.group('prefix'))}, {m.group('state')} {m.group('zip')}"
-
-    m = re.match(
-        r"^(?P<street>\d{1,6}.*\b(?:St|Street|Ave|Avenue|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Pkwy|Parkway|Hwy|Highway|Ct|Court|Cir|Circle|Way)\b)\s+(?P<city>[A-Za-z .'-]+),\s*(?P<statezip>[A-Z]{2}\s+\d{5}(?:-\d{4})?)$",
-        text,
-    )
-    if m:
-        text = f"{clean_ws(m.group('street'))}, {clean_ws(m.group('city'))} {m.group('statezip')}"
-
-    # Collapse exact duplicated whole tails.
-    text = re.sub(r"^(?P<x>.+?)\s+(?P=x)$", r"\g<x>", text, flags=re.IGNORECASE)
-
-    # Keep substring that starts at the first street number if a venue prefix exists.
-    m_first_num = re.search(r"\d{1,6}\s+[A-Za-z0-9]", text)
-    if m_first_num and m_first_num.start() > 0:
-        text = clean_ws(text[m_first_num.start():])
-
-    # If two address-like fragments are concatenated, keep the last one.
-    addr_frag = r"\d{1,6}[^,]+,\s*[A-Za-z .'-]+(?:,\s*[A-Za-z]{2})?(?:\s+\d{5}(?:-\d{4})?)?"
-    matches = list(re.finditer(addr_frag, text))
-    if len(matches) >= 2:
-        text = clean_ws(matches[-1].group(0))
-
-    patterns = [
-        r"^(?P<street>\d{1,6}[^,]+),\s*(?P<city>[A-Za-z .'-]+),\s*(?P<state>[A-Za-z]{2})(?:,\s*|\s+)?(?P<zip>\d{5}(?:-\d{4})?)?$",
-        r"^(?P<street>\d{1,6}[^,]+),\s*(?P<city>[A-Za-z .'-]+)\s+(?P<state>[A-Za-z]{2})\s*(?P<zip>\d{5}(?:-\d{4})?)?$",
-        r"^(?P<street>\d{1,6}.*\b(?:St|Street|Ave|Avenue|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Pkwy|Parkway|Hwy|Highway|Ct|Court|Cir|Circle|Way)\b),\s*(?P<city>[A-Za-z .'-]+)\s+(?P<state>[A-Za-z]{2})\s+(?P<zip>\d{5}(?:-\d{4})?)$",
-    ]
-    for patt in patterns:
-        m = re.match(patt, text)
-        if not m:
-            continue
-        street = clean_ws(m.group("street"))
-        city = clean_ws(m.group("city"))
-        state = (m.group("state") or "").upper()
-        zipcode = clean_ws(m.groupdict().get("zip") or "")
-        return clean_ws(f"{street}, {city} {state} {zipcode}")
-
-    return text
-
-
-def normalize_location_for_output(location: str, city_state: str = "") -> str:
-    text = clean_ws(html.unescape(location))
-    if not text:
-        return ""
-
-    # Drop exact duplicated full-string tails.
-    dup = re.match(r"^(?P<x>.+?)\s+(?P=x)$", text, flags=re.IGNORECASE)
-    if dup:
-        text = clean_ws(dup.group("x"))
-
-    # Drop duplicated plain address tails (without state/zip), common in noisy feeds.
-    text = re.sub(
-        r"^(?P<a>\d{1,6}[^,]+,\s*[A-Za-z .'-]+)(?:,\s*|\s+)(?P=a)$",
-        r"\g<a>",
-        text,
-        flags=re.IGNORECASE,
-    )
-
-    # If venue prefix exists, prefer content beginning at first street number.
-    m_street = re.search(r"\d{1,6}\s+[A-Za-z0-9]", text)
-    if m_street and m_street.start() > 0:
-        text = clean_ws(text[m_street.start():])
-
-    normalized = _normalize_us_address_text(text)
-
-    normalized = re.sub(
-        r"^(?P<a>\d{1,6}[^,]+,\s*[A-Za-z .'-]+)(?:,\s*|\s+)(?P=a)$",
-        r"\g<a>",
-        normalized,
-        flags=re.IGNORECASE,
-    )
-
-    # If state is missing but city_state has one, fill it.
-    cs = clean_ws(city_state)
-    m_cs = re.match(r"(?P<city>.+),\s*(?P<state>[A-Z]{2})$", cs)
-    if m_cs:
-        city = clean_ws(m_cs.group("city"))
-        state = m_cs.group("state")
-        m_no_state = re.match(rf"^(?P<street>\d{{1,6}}[^,]+),\s*{re.escape(city)}\s+(?P<zip>\d{{5}}(?:-\d{{4}})?)$", normalized)
-        if m_no_state:
-            normalized = f"{clean_ws(m_no_state.group('street'))}, {city} {state} {m_no_state.group('zip')}"
-        m_city_only = re.match(rf"^(?P<street>\d{{1,6}}[^,]+),\s*{re.escape(city)}$", normalized)
-        if m_city_only:
-            normalized = f"{clean_ws(m_city_only.group('street'))}, {city} {state}"
-
-    return clean_ws(normalized)
-
 def simplify_location(location: str, address: str = "") -> str:
-    """Return location as normalized US address only (no venue name)."""
-    raw_location = clean_ws(html.unescape(location))
-    raw_address = clean_ws(html.unescape(address))
+    """Return a simple, de-duplicated address string.
 
-    if raw_address:
-        normalized = _normalize_us_address_text(raw_address)
-        if normalized:
-            return normalized
+    - keeps venue name when present
+    - normalizes address to comma-separated segments
+    - removes duplicated trailing address text when location already contains it
+    """
+    raw_location = clean_ws(location)
+    raw_address = clean_ws(address)
 
-    return _normalize_us_address_text(raw_location)
+    if not raw_address:
+        return raw_location
 
+    address_csv = re.sub(r"\s+", " ", raw_address)
+    address_csv = re.sub(r"\s*,\s*", ", ", address_csv)
+    address_csv = address_csv.strip(" ,")
 
+    address_plain = re.sub(r",", "", address_csv)
+    address_plain = clean_ws(address_plain)
 
+    if not raw_location:
+        return address_csv
 
-def extract_event_details_from_jsonld(html_text: str) -> Optional[dict]:
-    """Extract start/end/location from schema.org Event JSON-LD payloads."""
-    if not html_text:
-        return None
+    lower_location = raw_location.lower()
+    if address_csv.lower() in lower_location or address_plain.lower() in lower_location:
+        return raw_location
 
-    soup = BeautifulSoup(html_text, "html.parser")
-    for script in soup.select('script[type="application/ld+json"]'):
-        raw = script.get_text(" ", strip=True)
-        if not raw:
-            continue
-        try:
-            payload = json.loads(raw)
-        except Exception:
-            continue
+    return clean_ws(f"{raw_location}, {address_csv}")
 
-        nodes = payload if isinstance(payload, list) else [payload]
-        for node in nodes:
-            if not isinstance(node, dict):
-                continue
-            node_type = node.get("@type")
-            types = [str(t).lower() for t in node_type] if isinstance(node_type, list) else [str(node_type).lower()]
-            if "event" not in types:
-                continue
-
-            start_dt = parse_dt(clean_ws(node.get("startDate", "")))
-            if not start_dt:
-                continue
-            end_dt = parse_dt(clean_ws(node.get("endDate", ""))) if clean_ws(node.get("endDate", "")) else (start_dt + timedelta(hours=2))
-
-            loc = node.get("location") or {}
-            venue = ""
-            addr = ""
-            if isinstance(loc, dict):
-                venue = clean_ws(html.unescape(str(loc.get("name") or "")))
-                addr_obj = loc.get("address") or {}
-                if isinstance(addr_obj, dict):
-                    parts = [
-                        clean_ws(html.unescape(str(addr_obj.get("streetAddress") or ""))),
-                        clean_ws(html.unescape(str(addr_obj.get("addressLocality") or ""))),
-                        clean_ws(html.unescape(str(addr_obj.get("addressRegion") or ""))),
-                        clean_ws(html.unescape(str(addr_obj.get("postalCode") or ""))),
-                    ]
-                    addr = ", ".join(p for p in parts if p)
-
-            return {
-                "title": clean_ws(html.unescape(str(node.get("name") or ""))),
-                "start_dt": start_dt,
-                "end_dt": end_dt,
-                "location": simplify_location("", addr or venue),
-            }
-    return None
-
-
-def enrich_event_from_source_url(url: str) -> Optional[dict]:
-    parsed = urlparse(clean_ws(url))
-    host = (parsed.netloc or "").lower()
-    if not host:
-        return None
-
-    if "carsandcoffeeevents.com" not in host:
-        return None
-
-    try:
-        r = requests.get(url, headers=DEFAULT_HTTP_HEADERS, timeout=30)
-        if r.status_code != 200:
-            return None
-        return extract_event_details_from_jsonld(r.text)
-    except Exception:
-        return None
 
 def guess_city_state(location: str) -> str:
     m = re.search(r"([A-Za-z .'-]+),\s*([A-Z]{2})\b", location or "")

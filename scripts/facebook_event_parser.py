@@ -33,15 +33,15 @@ def parse_dt(text: str) -> Optional[datetime]:
             raw,
             settings={
                 "RETURN_AS_TIMEZONE_AWARE": True,
-                "TIMEZONE": "EST",
-                "TO_TIMEZONE": "EST",
+                "TIMEZONE": "America/New_York",
+                "TO_TIMEZONE": "America/New_York",
             },
         )
 
     if dt is None:
         return None
 
-    et_tz = EST_TZ
+    et_tz = tz.gettz("America/New_York")
     if dt.tzinfo is None:
         return dt.replace(tzinfo=et_tz)
     return dt.astimezone(et_tz)
