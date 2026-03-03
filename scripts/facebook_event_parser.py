@@ -14,18 +14,37 @@ import requests
 from bs4 import BeautifulSoup
 from dateutil import tz
 
+EST_TZ = tz.tzoffset("EST", -5 * 60 * 60)
+
 
 def parse_dt(text: str) -> Optional[datetime]:
     if not text:
         return None
-    return dateparser.parse(
-        text,
-        settings={
-            "RETURN_AS_TIMEZONE_AWARE": True,
-            "TIMEZONE": "America/New_York",
-            "TO_TIMEZONE": "America/New_York",
-        },
-    )
+
+    raw = _clean_ws(text)
+    dt: Optional[datetime] = None
+    try:
+        dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except Exception:
+        dt = None
+
+    if dt is None:
+        dt = dateparser.parse(
+            raw,
+            settings={
+                "RETURN_AS_TIMEZONE_AWARE": True,
+                "TIMEZONE": "EST",
+                "TO_TIMEZONE": "EST",
+            },
+        )
+
+    if dt is None:
+        return None
+
+    et_tz = EST_TZ
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=et_tz)
+    return dt.astimezone(et_tz)
 
 
 def _clean_ws(text: str) -> str:
@@ -193,4 +212,4 @@ def parse_facebook_event_page(event_url: str, logger: Callable[[str], None]) -> 
 def format_timestamp_et(ts: Optional[int]) -> str:
     if not ts:
         return "unknown"
-    return datetime.fromtimestamp(ts, tz=tz.gettz("America/New_York")).isoformat()
+    return datetime.fromtimestamp(ts, tz=EST_TZ).isoformat()

@@ -24,6 +24,10 @@ from scripts.events_collector import (
     collect_ics,
     _parse_google_sheet_events_rows,
     to_event_items,
+    simplify_location,
+    parse_dt,
+    extract_event_details_from_jsonld,
+    normalize_location_for_output,
 )
 
 
@@ -79,6 +83,56 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(norm["title"], "Cars & Coffee - Spring")
         self.assertIn("facebook.com/events/12345", norm["url"])
         self.assertIsInstance(norm["start_dt"], datetime)
+
+
+    def test_simplify_location_returns_address_only_in_us_format(self):
+        location = "Circuit Cafe"
+        address = "2726 Riverside Drive, Cincinnati, OH, United States, Ohio 45202"
+        self.assertEqual(
+            simplify_location(location, address),
+            "2726 Riverside Drive, Cincinnati OH 45202",
+        )
+
+
+    def test_normalize_location_for_output_dedupes_and_formats(self):
+        raw = "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, United States 2812 Fishinger Rd, Upper Arlington, United States"
+        out = normalize_location_for_output(raw, "Upper Arlington, OH")
+        self.assertEqual(out, "2812 Fishinger Rd, Upper Arlington OH")
+
+    def test_parse_dt_converts_utc_to_eastern(self):
+        dt = parse_dt("2026-04-10T14:00:00+0000")
+        self.assertIsNotNone(dt)
+        self.assertEqual(dt.isoformat(), "2026-04-10T09:00:00-05:00")
+
+
+
+    def test_extract_event_details_from_jsonld(self):
+        html_doc = """
+        <html><head><script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "Cincinnati Cars and Coffee",
+          "startDate": "2026-03-07T08:00:00-05:00",
+          "endDate": "2026-03-07T10:30:00-05:00",
+          "location": {
+            "@type": "Place",
+            "name": "Crestview Hills Town Center",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "2791 Town Center Blvd",
+              "addressLocality": "Crestview Hills",
+              "addressRegion": "KY",
+              "postalCode": "41017"
+            }
+          }
+        }
+        </script></head><body></body></html>
+        """
+        out = extract_event_details_from_jsonld(html_doc)
+        self.assertIsNotNone(out)
+        self.assertEqual(out["start_dt"].isoformat(), "2026-03-07T08:00:00-05:00")
+        self.assertEqual(out["location"], "2791 Town Center Blvd, Crestview Hills KY 41017")
 
     def test_extract_facebook_page_identifier_variants(self):
         self.assertEqual(
