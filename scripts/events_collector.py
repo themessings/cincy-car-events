@@ -1271,6 +1271,37 @@ def simplify_location(location: str, address: str = "") -> str:
     return clean_ws(f"{raw_location}, {address_csv}")
 
 
+def normalize_location_for_output(location: str, city_state: str = "") -> str:
+    """Normalize final location field for event exports.
+
+    - collapses whitespace and duplicate commas
+    - appends city/state when location is blank
+    - appends city/state to venue-only location when it's missing
+    - avoids repeating city/state when already included in location text
+    """
+    normalized_location = clean_ws(location)
+    normalized_location = re.sub(r"\s*,\s*", ", ", normalized_location).strip(" ,")
+
+    normalized_city_state = clean_ws(city_state)
+    normalized_city_state = re.sub(r"\s*,\s*", ", ", normalized_city_state).strip(" ,")
+
+    if not normalized_location:
+        return normalized_city_state
+    if not normalized_city_state:
+        return normalized_location
+
+    location_lower = normalized_location.lower()
+    city_state_lower = normalized_city_state.lower()
+    city_only = clean_ws(normalized_city_state.split(",", 1)[0]).lower()
+
+    if city_state_lower in location_lower:
+        return normalized_location
+    if city_only and re.search(rf"\b{re.escape(city_only)}\b", location_lower):
+        return normalized_location
+
+    return f"{normalized_location}, {normalized_city_state}"
+
+
 def guess_city_state(location: str) -> str:
     m = re.search(r"([A-Za-z .'-]+),\s*([A-Z]{2})\b", location or "")
     if m:
