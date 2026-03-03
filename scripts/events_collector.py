@@ -1241,16 +1241,14 @@ def clean_ws(s: str) -> str:
 
 
 def simplify_location(location: str, address: str = "") -> str:
-    """Return a simple, de-duplicated address string."""
-    raw_location = clean_ws(html.unescape(location))
-    raw_address = clean_ws(html.unescape(address))
+    """Return a simple, de-duplicated address string.
 
-    # If address isn't provided, still try to collapse repeated text patterns in location.
-    if not raw_address and raw_location:
-        parts = [clean_ws(x) for x in re.split(r"\s{2,}|\s(?=\d{2,6}\s)|\s(?=[A-Z][a-z]+,\s*[A-Z]{2})", raw_location) if clean_ws(x)]
-        if len(parts) >= 2 and parts[-1].lower() in raw_location.lower() and raw_location.lower().count(parts[-1].lower()) > 1:
-            raw_location = clean_ws(raw_location[: raw_location.lower().rfind(parts[-1].lower())])
-        return raw_location
+    - keeps venue name when present
+    - normalizes address to comma-separated segments
+    - removes duplicated trailing address text when location already contains it
+    """
+    raw_location = clean_ws(location)
+    raw_address = clean_ws(address)
 
     if not raw_address:
         return raw_location
@@ -1271,78 +1269,6 @@ def simplify_location(location: str, address: str = "") -> str:
 
     return clean_ws(f"{raw_location}, {address_csv}")
 
-
-
-
-def extract_event_details_from_jsonld(html_text: str) -> Optional[dict]:
-    """Extract start/end/location from schema.org Event JSON-LD payloads."""
-    if not html_text:
-        return None
-
-    soup = BeautifulSoup(html_text, "html.parser")
-    for script in soup.select('script[type="application/ld+json"]'):
-        raw = script.get_text(" ", strip=True)
-        if not raw:
-            continue
-        try:
-            payload = json.loads(raw)
-        except Exception:
-            continue
-
-        nodes = payload if isinstance(payload, list) else [payload]
-        for node in nodes:
-            if not isinstance(node, dict):
-                continue
-            node_type = node.get("@type")
-            types = [str(t).lower() for t in node_type] if isinstance(node_type, list) else [str(node_type).lower()]
-            if "event" not in types:
-                continue
-
-            start_dt = parse_dt(clean_ws(node.get("startDate", "")))
-            if not start_dt:
-                continue
-            end_dt = parse_dt(clean_ws(node.get("endDate", ""))) if clean_ws(node.get("endDate", "")) else (start_dt + timedelta(hours=2))
-
-            loc = node.get("location") or {}
-            venue = ""
-            addr = ""
-            if isinstance(loc, dict):
-                venue = clean_ws(html.unescape(str(loc.get("name") or "")))
-                addr_obj = loc.get("address") or {}
-                if isinstance(addr_obj, dict):
-                    parts = [
-                        clean_ws(html.unescape(str(addr_obj.get("streetAddress") or ""))),
-                        clean_ws(html.unescape(str(addr_obj.get("addressLocality") or ""))),
-                        clean_ws(html.unescape(str(addr_obj.get("addressRegion") or ""))),
-                        clean_ws(html.unescape(str(addr_obj.get("postalCode") or ""))),
-                    ]
-                    addr = ", ".join(p for p in parts if p)
-
-            return {
-                "title": clean_ws(html.unescape(str(node.get("name") or ""))),
-                "start_dt": start_dt,
-                "end_dt": end_dt,
-                "location": simplify_location(venue, addr),
-            }
-    return None
-
-
-def enrich_event_from_source_url(url: str) -> Optional[dict]:
-    parsed = urlparse(clean_ws(url))
-    host = (parsed.netloc or "").lower()
-    if not host:
-        return None
-
-    if "carsandcoffeeevents.com" not in host:
-        return None
-
-    try:
-        r = requests.get(url, headers=DEFAULT_HTTP_HEADERS, timeout=30)
-        if r.status_code != 200:
-            return None
-        return extract_event_details_from_jsonld(r.text)
-    except Exception:
-        return None
 
 def guess_city_state(location: str) -> str:
     m = re.search(r"([A-Za-z .'-]+),\s*([A-Z]{2})\b", location or "")
