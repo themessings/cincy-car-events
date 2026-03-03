@@ -1241,36 +1241,62 @@ def clean_ws(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
 
 
+def _normalize_us_address_text(raw: str) -> str:
+    text = clean_ws(html.unescape(raw))
+    if not text:
+        return ""
+
+    text = re.sub(r"\bUnited States(?: of America)?\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bUSA\b", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*,\s*", ", ", text)
+    text = re.sub(r",\s*,+", ", ", text)
+    text = clean_ws(text.strip(" ,"))
+
+    text = re.sub(r",\s*([A-Z]{2}),\s*[A-Za-z .'-]{3,}\s+(\d{5}(?:-\d{4})?)$", r", \1 \2", text)
+
+    # Collapse duplicated tail like: "..., Des Moines, IA 50312 Des Moines IA 50312".
+    text = re.sub(
+        r"^(?P<addr>.+?,\s*[A-Za-z .'-]+,\s*[A-Z]{2}\s+\d{5}(?:-\d{4})?)\s+[A-Za-z .'-]+\s+[A-Z]{2}\s+\d{5}(?:-\d{4})?$",
+        r"\g<addr>",
+        text,
+    )
+
+    # Drop venue prefix if the street number appears later in the string.
+    first_num = re.search(r"\d{1,6}\s+[A-Za-z0-9]", text)
+    if first_num and first_num.start() > 0:
+        text = clean_ws(text[first_num.start():])
+
+    patterns = [
+        r"^(?P<street>\d{1,6}[^,]+?),\s*(?P<city>[A-Za-z .'-]+),\s*(?P<state>[A-Z]{2})(?:,\s*|\s+)(?P<zip>\d{5}(?:-\d{4})?)$",
+        r"^(?P<street>\d{1,6}[^,]+?),\s*(?P<city>[A-Za-z .'-]+)\s+(?P<state>[A-Z]{2})\s+(?P<zip>\d{5}(?:-\d{4})?)$",
+        r"^(?P<street>\d{1,6}[^,]+?)\s+(?P<city>[A-Za-z .'-]+),\s*(?P<state>[A-Z]{2})\s+(?P<zip>\d{5}(?:-\d{4})?)$",
+        r"^(?P<street>\d{1,6}[^,]+?)\s+(?P<city>[A-Za-z .'-]+)\s+(?P<state>[A-Z]{2})\s+(?P<zip>\d{5}(?:-\d{4})?)$",
+        r"^(?P<street>\d{1,6}[^,]+?),\s*(?P<city>[A-Za-z .'-]+),\s*(?P<state>[A-Z]{2})$",
+    ]
+    for patt in patterns:
+        m = re.match(patt, text)
+        if not m:
+            continue
+        street = clean_ws(m.group("street"))
+        city = clean_ws(m.group("city"))
+        state = m.group("state")
+        zipcode = clean_ws(m.groupdict().get("zip") or "")
+        return f"{street}, {city} {state} {zipcode}".strip()
+
+    return text
+
+
 def simplify_location(location: str, address: str = "") -> str:
-    """Return a simple, de-duplicated address string."""
+    """Return location as normalized US address only (no venue name)."""
     raw_location = clean_ws(html.unescape(location))
     raw_address = clean_ws(html.unescape(address))
 
-    # If address isn't provided, still try to collapse repeated text patterns in location.
-    if not raw_address and raw_location:
-        parts = [clean_ws(x) for x in re.split(r"\s{2,}|\s(?=\d{2,6}\s)|\s(?=[A-Z][a-z]+,\s*[A-Z]{2})", raw_location) if clean_ws(x)]
-        if len(parts) >= 2 and parts[-1].lower() in raw_location.lower() and raw_location.lower().count(parts[-1].lower()) > 1:
-            raw_location = clean_ws(raw_location[: raw_location.lower().rfind(parts[-1].lower())])
-        return raw_location
+    if raw_address:
+        normalized = _normalize_us_address_text(raw_address)
+        if normalized:
+            return normalized
 
-    if not raw_address:
-        return raw_location
-
-    address_csv = re.sub(r"\s+", " ", raw_address)
-    address_csv = re.sub(r"\s*,\s*", ", ", address_csv)
-    address_csv = address_csv.strip(" ,")
-
-    address_plain = re.sub(r",", "", address_csv)
-    address_plain = clean_ws(address_plain)
-
-    if not raw_location:
-        return address_csv
-
-    lower_location = raw_location.lower()
-    if address_csv.lower() in lower_location or address_plain.lower() in lower_location:
-        return raw_location
-
-    return clean_ws(f"{raw_location}, {address_csv}")
+    return _normalize_us_address_text(raw_location)
 
 
 
@@ -1323,7 +1349,7 @@ def extract_event_details_from_jsonld(html_text: str) -> Optional[dict]:
                 "title": clean_ws(html.unescape(str(node.get("name") or ""))),
                 "start_dt": start_dt,
                 "end_dt": end_dt,
-                "location": simplify_location(venue, addr),
+                "location": simplify_location("", addr or venue),
             }
     return None
 

@@ -84,12 +84,12 @@ class CollectorTests(unittest.TestCase):
         self.assertIsInstance(norm["start_dt"], datetime)
 
 
-    def test_simplify_location_keeps_venue_and_simple_address(self):
+    def test_simplify_location_returns_address_only_in_us_format(self):
         location = "Circuit Cafe"
-        address = "2726 Riverside Drive, Cincinnati, OH, United States"
+        address = "2726 Riverside Drive, Cincinnati, OH, United States, Ohio 45202"
         self.assertEqual(
             simplify_location(location, address),
-            "Circuit Cafe, 2726 Riverside Drive, Cincinnati, OH, United States",
+            "2726 Riverside Drive, Cincinnati OH 45202",
         )
 
     def test_parse_dt_converts_utc_to_eastern(self):
@@ -125,7 +125,7 @@ class CollectorTests(unittest.TestCase):
         out = extract_event_details_from_jsonld(html_doc)
         self.assertIsNotNone(out)
         self.assertEqual(out["start_dt"].isoformat(), "2026-03-07T08:00:00-05:00")
-        self.assertEqual(out["location"], "Crestview Hills Town Center, 2791 Town Center Blvd, Crestview Hills, KY, 41017")
+        self.assertEqual(out["location"], "2791 Town Center Blvd, Crestview Hills KY 41017")
 
     def test_extract_facebook_page_identifier_variants(self):
         self.assertEqual(
