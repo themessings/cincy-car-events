@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import csv
+import html
 import json
 import os
 import re
@@ -360,7 +361,8 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
     if place.get("location"):
         loc = place["location"]
         parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
-        location = clean_ws(" ".join(p for p in parts if p)) or location
+        normalized_address = ", ".join(clean_ws(str(p)) for p in parts if clean_ws(str(p)))
+        location = simplify_location(location, normalized_address) or location
 
     if not title or not start_dt:
         return None
@@ -467,7 +469,7 @@ def collect_web_search_facebook_events_serpapi(source: dict, url_cache: Dict[str
                     "title": parsed_page.get("title", ""),
                     "start_dt": parsed_page.get("start_dt"),
                     "end_dt": parsed_page.get("end_dt"),
-                    "location": clean_ws(f"{parsed_page.get('location', '')} {parsed_page.get('address', '')}"),
+                    "location": simplify_location(parsed_page.get('location', ''), parsed_page.get('address', '')),
                     "url": parsed_page.get("canonical_url") or parsed_page.get("url") or event_url,
                     "source": source_name,
                     "host": parsed_page.get("host", ""),
@@ -570,15 +572,31 @@ def now_et_iso() -> str:
 def parse_dt(text: str) -> Optional[datetime]:
     if not text:
         return None
-    dt = dateparser.parse(
-        text,
-        settings={
-            "RETURN_AS_TIMEZONE_AWARE": True,
-            "TIMEZONE": "America/New_York",
-            "TO_TIMEZONE": "America/New_York",
-        },
-    )
-    return dt
+
+    raw = clean_ws(text)
+    dt: Optional[datetime] = None
+    try:
+        dt = dateutil_parser.parse(raw)
+    except Exception:
+        dt = None
+
+    if dt is None:
+        dt = dateparser.parse(
+            raw,
+            settings={
+                "RETURN_AS_TIMEZONE_AWARE": True,
+                "TIMEZONE": "America/New_York",
+                "TO_TIMEZONE": "America/New_York",
+            },
+        )
+
+    if dt is None:
+        return None
+
+    et_tz = tz.gettz("America/New_York")
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=et_tz)
+    return dt.astimezone(et_tz)
 
 
 
@@ -902,7 +920,8 @@ def normalize_facebook_page_event(item: dict, page_name: str) -> Optional[dict]:
     if isinstance(place, dict) and place.get("location"):
         loc = place["location"] or {}
         parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
-        location = clean_ws(" ".join(x for x in parts if x)) or location
+        normalized_address = ", ".join(clean_ws(str(p)) for p in parts if clean_ws(str(p)))
+        location = simplify_location(location, normalized_address) or location
 
     if not title or not start_dt:
         return None
@@ -1220,6 +1239,110 @@ def save_json(path: str, data) -> None:
 def clean_ws(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
 
+
+def simplify_location(location: str, address: str = "") -> str:
+    """Return a simple, de-duplicated address string."""
+    raw_location = clean_ws(html.unescape(location))
+    raw_address = clean_ws(html.unescape(address))
+
+    # If address isn't provided, still try to collapse repeated text patterns in location.
+    if not raw_address and raw_location:
+        parts = [clean_ws(x) for x in re.split(r"\s{2,}|\s(?=\d{2,6}\s)|\s(?=[A-Z][a-z]+,\s*[A-Z]{2})", raw_location) if clean_ws(x)]
+        if len(parts) >= 2 and parts[-1].lower() in raw_location.lower() and raw_location.lower().count(parts[-1].lower()) > 1:
+            raw_location = clean_ws(raw_location[: raw_location.lower().rfind(parts[-1].lower())])
+        return raw_location
+
+    if not raw_address:
+        return raw_location
+
+    address_csv = re.sub(r"\s+", " ", raw_address)
+    address_csv = re.sub(r"\s*,\s*", ", ", address_csv)
+    address_csv = address_csv.strip(" ,")
+
+    address_plain = re.sub(r",", "", address_csv)
+    address_plain = clean_ws(address_plain)
+
+    if not raw_location:
+        return address_csv
+
+    lower_location = raw_location.lower()
+    if address_csv.lower() in lower_location or address_plain.lower() in lower_location:
+        return raw_location
+
+    return clean_ws(f"{raw_location}, {address_csv}")
+
+
+
+
+def extract_event_details_from_jsonld(html_text: str) -> Optional[dict]:
+    """Extract start/end/location from schema.org Event JSON-LD payloads."""
+    if not html_text:
+        return None
+
+    soup = BeautifulSoup(html_text, "html.parser")
+    for script in soup.select('script[type="application/ld+json"]'):
+        raw = script.get_text(" ", strip=True)
+        if not raw:
+            continue
+        try:
+            payload = json.loads(raw)
+        except Exception:
+            continue
+
+        nodes = payload if isinstance(payload, list) else [payload]
+        for node in nodes:
+            if not isinstance(node, dict):
+                continue
+            node_type = node.get("@type")
+            types = [str(t).lower() for t in node_type] if isinstance(node_type, list) else [str(node_type).lower()]
+            if "event" not in types:
+                continue
+
+            start_dt = parse_dt(clean_ws(node.get("startDate", "")))
+            if not start_dt:
+                continue
+            end_dt = parse_dt(clean_ws(node.get("endDate", ""))) if clean_ws(node.get("endDate", "")) else (start_dt + timedelta(hours=2))
+
+            loc = node.get("location") or {}
+            venue = ""
+            addr = ""
+            if isinstance(loc, dict):
+                venue = clean_ws(html.unescape(str(loc.get("name") or "")))
+                addr_obj = loc.get("address") or {}
+                if isinstance(addr_obj, dict):
+                    parts = [
+                        clean_ws(html.unescape(str(addr_obj.get("streetAddress") or ""))),
+                        clean_ws(html.unescape(str(addr_obj.get("addressLocality") or ""))),
+                        clean_ws(html.unescape(str(addr_obj.get("addressRegion") or ""))),
+                        clean_ws(html.unescape(str(addr_obj.get("postalCode") or ""))),
+                    ]
+                    addr = ", ".join(p for p in parts if p)
+
+            return {
+                "title": clean_ws(html.unescape(str(node.get("name") or ""))),
+                "start_dt": start_dt,
+                "end_dt": end_dt,
+                "location": simplify_location(venue, addr),
+            }
+    return None
+
+
+def enrich_event_from_source_url(url: str) -> Optional[dict]:
+    parsed = urlparse(clean_ws(url))
+    host = (parsed.netloc or "").lower()
+    if not host:
+        return None
+
+    if "carsandcoffeeevents.com" not in host:
+        return None
+
+    try:
+        r = requests.get(url, headers=DEFAULT_HTTP_HEADERS, timeout=30)
+        if r.status_code != 200:
+            return None
+        return extract_event_details_from_jsonld(r.text)
+    except Exception:
+        return None
 
 def guess_city_state(location: str) -> str:
     m = re.search(r"([A-Za-z .'-]+),\s*([A-Z]{2})\b", location or "")
@@ -2770,7 +2893,7 @@ def collect_facebook_events_serpapi_discovery(cfg: dict, url_cache: Dict[str, di
                     "title": parsed_page.get("title", ""),
                     "start_dt": parsed_page.get("start_dt"),
                     "end_dt": parsed_page.get("end_dt"),
-                    "location": clean_ws(f"{parsed_page.get('location', '')} {parsed_page.get('address', '')}"),
+                    "location": simplify_location(parsed_page.get('location', ''), parsed_page.get('address', '')),
                     "url": parsed_page.get("canonical_url") or parsed_page.get("url") or u,
                     "source": "facebook:discovered",
                     "host": parsed_page.get("host", ""),
@@ -3056,8 +3179,15 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
             end_dt = start_dt + timedelta(hours=2)
             venue = clean_ws(item.get("venue") or item.get("event_location") or "")
             address = clean_ws(str(item.get("address") or item.get("location") or ""))
-            location_text = clean_ws(" ".join([venue, address]))
+            location_text = simplify_location(venue, address)
             url = clean_ws(item.get("link") or item.get("event_link") or item.get("website") or item.get("url") or "")
+
+            enriched = enrich_event_from_source_url(url) if url else None
+            if enriched:
+                title = clean_ws(enriched.get("title") or title)
+                start_dt = enriched.get("start_dt") or start_dt
+                end_dt = enriched.get("end_dt") or end_dt
+                location_text = clean_ws(enriched.get("location") or location_text)
 
             dedupe_key = (title.lower(), start_dt.isoformat()[:16], location_text.lower())
             if dedupe_key in seen:
