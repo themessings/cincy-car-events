@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import csv
+import html
 import json
 import os
 import re
@@ -3104,8 +3105,15 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
             end_dt = start_dt + timedelta(hours=2)
             venue = clean_ws(item.get("venue") or item.get("event_location") or "")
             address = clean_ws(str(item.get("address") or item.get("location") or ""))
-            location_text = clean_ws(" ".join([venue, address]))
+            location_text = simplify_location(venue, address)
             url = clean_ws(item.get("link") or item.get("event_link") or item.get("website") or item.get("url") or "")
+
+            enriched = enrich_event_from_source_url(url) if url else None
+            if enriched:
+                title = clean_ws(enriched.get("title") or title)
+                start_dt = enriched.get("start_dt") or start_dt
+                end_dt = enriched.get("end_dt") or end_dt
+                location_text = clean_ws(enriched.get("location") or location_text)
 
             dedupe_key = (title.lower(), start_dt.isoformat()[:16], location_text.lower())
             if dedupe_key in seen:
