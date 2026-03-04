@@ -710,5 +710,10 @@
   "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington": {
     "lat": "40.0306913",
     "lon": "-83.0910774"
-  }
+  },
+  "Ste. F, PA": {
+    "lat": "43.4903185",
+    "lon": "5.3443110"
+  },
+  "1 Gateway Road, Rm 224, RI": null
 }
