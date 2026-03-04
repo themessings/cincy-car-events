@@ -7,6 +7,7 @@ import re
 import sys
 import time
 import traceback
+import xml.etree.ElementTree as ET
 from collections import Counter
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta
@@ -3634,10 +3635,26 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         "lat",
         "lon",
         "last_seen_iso",
+        "usps_verification_status",
+        "address_street",
+        "address_city",
+        "address_state",
+        "address_zip5",
+        "address_zip4",
+        "address_usps_formatted",
+        "address_verification_error",
     ]
 
+    verification_cache: Dict[Tuple[str, str], Dict[str, str]] = {}
     values = [headers]
     for ev in events:
+        location_text = clean_ws(ev.get("location", ""))
+        city_state_text = clean_ws(ev.get("city_state", ""))
+        cache_key = (location_text.lower(), city_state_text.lower())
+        if cache_key not in verification_cache:
+            verification_cache[cache_key] = verify_usps_address(location_text, city_state_text)
+        verified = verification_cache[cache_key]
+
         values.append(
             [
                 ev.get("title", ""),
@@ -3645,18 +3662,26 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
                 ev.get("end_iso", ""),
                 ev.get("category", ""),
                 ev.get("miles_from_cincy"),
-                ev.get("location", ""),
-                ev.get("city_state", ""),
+                location_text,
+                city_state_text,
                 ev.get("url", ""),
                 ev.get("source", ""),
                 ev.get("lat"),
                 ev.get("lon"),
                 ev.get("last_seen_iso", ""),
+                verified.get("status", ""),
+                verified.get("street", ""),
+                verified.get("city", ""),
+                verified.get("state", ""),
+                verified.get("zip5", ""),
+                verified.get("zip4", ""),
+                verified.get("formatted", ""),
+                verified.get("error", ""),
             ]
         )
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
-    clear_range = "Events!A1:L"
+    clear_range = "Events!A1:T"
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
         range=clear_range,
@@ -3671,11 +3696,11 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         body={"values": values},
     ).execute()
 
-    # 3) Write a visible update stamp (column M is outside your table)
+    # 3) Write a visible update stamp (column U is outside your table)
     stamp = f"Updated by bot: {now_et_iso()} | rows={len(values)-1}"
     sheets.spreadsheets().values().update(
         spreadsheetId=spreadsheet_id,
-        range="Events!M1",
+        range="Events!U1",
         valueInputOption="RAW",
         body={"values": [[stamp]]},
     ).execute()
@@ -3689,7 +3714,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
     log(f"🧽 Cleared Events sheet range {clear_range} then wrote {len(values)-1} rows")
     log(f"   Wrote {len(values)-1} events to Events!A1")
     log(f"   Preview A1:C5 = {got}")
-    log(f"   Stamp written to Events!M1 = {stamp}")
+    log(f"   Stamp written to Events!U1 = {stamp}")
 
 
 
