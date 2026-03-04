@@ -1922,6 +1922,7 @@ def collect_carsandcoffeeevents_ohio(source: dict) -> List[dict]:
         time_el = b.select_one("time")
         start_txt = clean_ws(time_el.get("datetime") or time_el.get_text()) if time_el else ""
         start_dt = parse_dt(start_txt) if start_txt else None
+        start_dt, end_dt = _extract_wordpress_event_datetimes(b, start_dt)
 
         loc_el = b.select_one(".tribe-events-calendar-list__event-venue-title, .tribe-events-calendar-list__event-venue")
         addr_el = b.select_one(".tribe-events-calendar-list__event-venue-address, .tribe-events-venue-details")
@@ -1934,7 +1935,7 @@ def collect_carsandcoffeeevents_ohio(source: dict) -> List[dict]:
             {
                 "title": title,
                 "start_dt": start_dt,
-                "end_dt": start_dt + timedelta(hours=2),
+                "end_dt": end_dt or (start_dt + timedelta(hours=2)),
                 "location": location,
                 "url": url,
                 "source": source["name"],
@@ -1962,6 +1963,7 @@ def collect_wordpress_events_series(source: dict) -> List[dict]:
         time_el = r.select_one("time")
         start_txt = clean_ws(time_el.get("datetime") or time_el.get_text()) if time_el else ""
         start_dt = parse_dt(start_txt) if start_txt else None
+        start_dt, end_dt = _extract_wordpress_event_datetimes(r, start_dt)
 
         loc_el = r.select_one(".tribe-events-calendar-list__event-venue-title, .tribe-events-calendar-list__event-venue")
         addr_el = r.select_one(".tribe-events-calendar-list__event-venue-address, .tribe-events-venue-details")
@@ -1974,13 +1976,56 @@ def collect_wordpress_events_series(source: dict) -> List[dict]:
             {
                 "title": title,
                 "start_dt": start_dt,
-                "end_dt": start_dt + timedelta(hours=2),
+                "end_dt": end_dt or (start_dt + timedelta(hours=2)),
                 "location": location,
                 "url": url,
                 "source": source["name"],
             }
         )
     return events
+
+
+def _extract_wordpress_event_datetimes(row, fallback_start_dt: Optional[datetime]) -> Tuple[Optional[datetime], Optional[datetime]]:
+    """
+    Extract start/end datetimes from WordPress/The Events Calendar list rows.
+    These rows often expose a <time datetime="YYYY-MM-DD"> value (date-only)
+    while the visible text contains the true time range.
+    """
+    time_text = ""
+    dt_block = row.select_one(".tribe-events-calendar-list__event-datetime") if row else None
+    if dt_block:
+        time_text = clean_ws(dt_block.get_text(" ", strip=True))
+
+    if not time_text and row:
+        time_el = row.select_one("time")
+        if time_el:
+            time_text = clean_ws(time_el.get_text(" ", strip=True))
+
+    start_dt = fallback_start_dt
+    end_dt = None
+    if not start_dt or not time_text:
+        return start_dt, end_dt
+
+    # Look for ranges such as "8:00 am - 12:00 pm".
+    match = re.search(
+        r"(\d{1,2}(?::\d{2})?\s*[AaPp]\.?[Mm]\.?)\s*(?:-|–|—|to)\s*(\d{1,2}(?::\d{2})?\s*[AaPp]\.?[Mm]\.?)",
+        time_text,
+    )
+    if not match:
+        return start_dt, end_dt
+
+    date_prefix = start_dt.strftime("%Y-%m-%d")
+    parsed_start = parse_dt(f"{date_prefix} {match.group(1)}")
+    parsed_end = parse_dt(f"{date_prefix} {match.group(2)}")
+
+    # Use parsed clock times when they are available; this prevents date-only
+    # <time datetime="YYYY-MM-DD"> values from becoming midnight defaults.
+    if parsed_start:
+        start_dt = parsed_start
+    if parsed_end:
+        end_dt = parsed_end
+
+    return start_dt, end_dt
 
 
 def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
