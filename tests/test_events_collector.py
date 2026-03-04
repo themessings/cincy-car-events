@@ -26,6 +26,8 @@ from scripts.events_collector import (
     to_event_items,
     simplify_location,
     parse_dt,
+    _extract_address_components,
+    verify_usps_address,
 )
 
 
@@ -449,3 +451,39 @@ END:VCALENDAR
         self.assertEqual(out[0]["start_dt"].hour, 9)
         self.assertEqual(out[0]["end_dt"].hour, 11)
         self.assertIn("Cincinnati", out[0]["location"])
+
+
+class AddressVerificationTests(unittest.TestCase):
+    def test_extract_address_components_uses_city_state_hint(self):
+        street, city, state = _extract_address_components(
+            "Cars & Coffee HQ, 2726 Riverside Drive, Cincinnati, OH, United States",
+            "Cincinnati, OH",
+        )
+        self.assertEqual(street, "2726 Riverside Drive")
+        self.assertEqual(city, "Cincinnati")
+        self.assertEqual(state, "OH")
+
+    def test_verify_usps_address_missing_credentials(self):
+        with patch("scripts.events_collector.os.getenv", return_value=""):
+            out = verify_usps_address("2726 Riverside Drive, Cincinnati, OH", "Cincinnati, OH")
+        self.assertEqual(out["status"], "unverified_missing_usps_user_id")
+
+    def test_verify_usps_address_success(self):
+        class _Resp:
+            text = (
+                "<AddressValidateResponse><Address ID='0'><Address2>2726 RIVERSIDE DR</Address2>"
+                "<City>CINCINNATI</City><State>OH</State><Zip5>45202</Zip5><Zip4>1234</Zip4>"
+                "</Address></AddressValidateResponse>"
+            )
+
+            def raise_for_status(self):
+                return None
+
+        with patch("scripts.events_collector.os.getenv", return_value="USPS-USER"), patch(
+            "scripts.events_collector.requests.get", return_value=_Resp()
+        ):
+            out = verify_usps_address("2726 Riverside Drive, Cincinnati, OH", "Cincinnati, OH")
+
+        self.assertEqual(out["status"], "verified")
+        self.assertEqual(out["zip5"], "45202")
+        self.assertIn("CINCINNATI", out["formatted"])

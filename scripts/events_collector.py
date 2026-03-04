@@ -7,6 +7,7 @@ import re
 import sys
 import time
 import traceback
+import xml.etree.ElementTree as ET
 from collections import Counter
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta
@@ -1269,6 +1270,172 @@ def simplify_location(location: str, address: str = "") -> str:
         return raw_location
 
     return clean_ws(f"{raw_location}, {address_csv}")
+
+
+def normalize_location_for_output(location: str, city_state: str = "") -> str:
+    """Normalize final location field for event exports.
+
+    - collapses whitespace and duplicate commas
+    - appends city/state when location is blank
+    - appends city/state to venue-only location when it's missing
+    - avoids repeating city/state when already included in location text
+    """
+    normalized_location = clean_ws(location)
+    normalized_location = re.sub(r"\s*,\s*", ", ", normalized_location).strip(" ,")
+
+    normalized_city_state = clean_ws(city_state)
+    normalized_city_state = re.sub(r"\s*,\s*", ", ", normalized_city_state).strip(" ,")
+
+    if not normalized_location:
+        return normalized_city_state
+    if not normalized_city_state:
+        return normalized_location
+
+    location_lower = normalized_location.lower()
+    city_state_lower = normalized_city_state.lower()
+    city_only = clean_ws(normalized_city_state.split(",", 1)[0]).lower()
+
+    if city_state_lower in location_lower:
+        return normalized_location
+    if city_only and re.search(rf"\b{re.escape(city_only)}\b", location_lower):
+        return normalized_location
+
+    return f"{normalized_location}, {normalized_city_state}"
+
+
+
+
+def _extract_address_components(location: str, city_state: str = "") -> Tuple[str, str, str]:
+    """Best-effort parse of street/city/state from normalized location text."""
+    normalized_location = re.sub(r"\s*,\s*", ", ", clean_ws(location)).strip(" ,")
+    normalized_city_state = re.sub(r"\s*,\s*", ", ", clean_ws(city_state)).strip(" ,")
+
+    city = ""
+    state = ""
+    m_city_state = re.match(r"^(.*?),\s*([A-Z]{2})$", normalized_city_state)
+    if m_city_state:
+        city = clean_ws(m_city_state.group(1))
+        state = m_city_state.group(2)
+
+    if (not city or not state) and normalized_location:
+        m_tail = re.search(r"([A-Za-z .'-]+),\s*([A-Z]{2})(?:\s+\d{5}(?:-\d{4})?)?\b", normalized_location)
+        if m_tail:
+            city = city or clean_ws(m_tail.group(1))
+            state = state or clean_ws(m_tail.group(2))
+
+    street = ""
+    if normalized_location and city and state:
+        prefix = normalized_location
+        location_lower = normalized_location.lower()
+        city_state_token = f", {city}, {state}".lower()
+        marker_idx = location_lower.find(city_state_token)
+        if marker_idx >= 0:
+            prefix = normalized_location[:marker_idx].strip(" ,")
+
+        segments = [clean_ws(seg) for seg in prefix.split(",") if clean_ws(seg)]
+        if segments:
+            numbered = [seg for seg in segments if re.search(r"\d", seg)]
+            street = numbered[-1] if numbered else segments[-1]
+
+    return street, city, state
+
+
+def verify_usps_address(location: str, city_state: str = "") -> Dict[str, str]:
+    """Verify an address through USPS Address Validate API (when configured)."""
+    street, city, state = _extract_address_components(location, city_state)
+
+    if not street or not city or not state:
+        return {
+            "status": "unverified_parse_failed",
+            "street": street,
+            "city": city,
+            "state": state,
+            "zip5": "",
+            "zip4": "",
+            "formatted": "",
+            "error": "insufficient_address_components",
+        }
+
+    user_id = clean_ws(os.getenv("USPS_USER_ID", ""))
+    if not user_id:
+        return {
+            "status": "unverified_missing_usps_user_id",
+            "street": street,
+            "city": city,
+            "state": state,
+            "zip5": "",
+            "zip4": "",
+            "formatted": "",
+            "error": "missing_usps_user_id",
+        }
+
+    xml = (
+        f'<AddressValidateRequest USERID="{html.escape(user_id)}">'
+        '<Revision>1</Revision>'
+        '<Address ID="0">'
+        '<Address1></Address1>'
+        f'<Address2>{html.escape(street)}</Address2>'
+        f'<City>{html.escape(city)}</City>'
+        f'<State>{html.escape(state)}</State>'
+        '<Zip5></Zip5>'
+        '<Zip4></Zip4>'
+        '</Address>'
+        '</AddressValidateRequest>'
+    )
+
+    try:
+        resp = requests.get(
+            "https://secure.shippingapis.com/ShippingAPI.dll",
+            params={"API": "Verify", "XML": xml},
+            headers=DEFAULT_HTTP_HEADERS,
+            timeout=25,
+        )
+        resp.raise_for_status()
+        root = ET.fromstring(resp.text)
+    except Exception as ex:
+        return {
+            "status": "unverified_api_error",
+            "street": street,
+            "city": city,
+            "state": state,
+            "zip5": "",
+            "zip4": "",
+            "formatted": "",
+            "error": clean_ws(str(ex))[:300],
+        }
+
+    error_node = root.find(".//Error")
+    if error_node is not None:
+        desc = clean_ws(error_node.findtext("Description") or error_node.findtext("Number") or "usps_error")
+        return {
+            "status": "unverified_usps_rejected",
+            "street": street,
+            "city": city,
+            "state": state,
+            "zip5": "",
+            "zip4": "",
+            "formatted": "",
+            "error": desc,
+        }
+
+    out_street = clean_ws(root.findtext(".//Address2") or street)
+    out_city = clean_ws(root.findtext(".//City") or city)
+    out_state = clean_ws(root.findtext(".//State") or state)
+    zip5 = clean_ws(root.findtext(".//Zip5") or "")
+    zip4 = clean_ws(root.findtext(".//Zip4") or "")
+    zip_full = f"{zip5}-{zip4}" if zip5 and zip4 else zip5
+    formatted = clean_ws(f"{out_street}, {out_city}, {out_state} {zip_full}")
+
+    return {
+        "status": "verified" if zip5 else "unverified_incomplete_response",
+        "street": out_street,
+        "city": out_city,
+        "state": out_state,
+        "zip5": zip5,
+        "zip4": zip4,
+        "formatted": formatted,
+        "error": "",
+    }
 
 
 def guess_city_state(location: str) -> str:
@@ -3603,10 +3770,26 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         "lat",
         "lon",
         "last_seen_iso",
+        "usps_verification_status",
+        "address_street",
+        "address_city",
+        "address_state",
+        "address_zip5",
+        "address_zip4",
+        "address_usps_formatted",
+        "address_verification_error",
     ]
 
+    verification_cache: Dict[Tuple[str, str], Dict[str, str]] = {}
     values = [headers]
     for ev in events:
+        location_text = clean_ws(ev.get("location", ""))
+        city_state_text = clean_ws(ev.get("city_state", ""))
+        cache_key = (location_text.lower(), city_state_text.lower())
+        if cache_key not in verification_cache:
+            verification_cache[cache_key] = verify_usps_address(location_text, city_state_text)
+        verified = verification_cache[cache_key]
+
         values.append(
             [
                 ev.get("title", ""),
@@ -3614,18 +3797,26 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
                 ev.get("end_iso", ""),
                 ev.get("category", ""),
                 ev.get("miles_from_cincy"),
-                ev.get("location", ""),
-                ev.get("city_state", ""),
+                location_text,
+                city_state_text,
                 ev.get("url", ""),
                 ev.get("source", ""),
                 ev.get("lat"),
                 ev.get("lon"),
                 ev.get("last_seen_iso", ""),
+                verified.get("status", ""),
+                verified.get("street", ""),
+                verified.get("city", ""),
+                verified.get("state", ""),
+                verified.get("zip5", ""),
+                verified.get("zip4", ""),
+                verified.get("formatted", ""),
+                verified.get("error", ""),
             ]
         )
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
-    clear_range = "Events!A1:L"
+    clear_range = "Events!A1:T"
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
         range=clear_range,
@@ -3640,11 +3831,11 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         body={"values": values},
     ).execute()
 
-    # 3) Write a visible update stamp (column M is outside your table)
+    # 3) Write a visible update stamp (column U is outside your table)
     stamp = f"Updated by bot: {now_et_iso()} | rows={len(values)-1}"
     sheets.spreadsheets().values().update(
         spreadsheetId=spreadsheet_id,
-        range="Events!M1",
+        range="Events!U1",
         valueInputOption="RAW",
         body={"values": [[stamp]]},
     ).execute()
@@ -3658,7 +3849,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
     log(f"🧽 Cleared Events sheet range {clear_range} then wrote {len(values)-1} rows")
     log(f"   Wrote {len(values)-1} events to Events!A1")
     log(f"   Preview A1:C5 = {got}")
-    log(f"   Stamp written to Events!M1 = {stamp}")
+    log(f"   Stamp written to Events!U1 = {stamp}")
 
 
 
