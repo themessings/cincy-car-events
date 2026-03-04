@@ -715,5 +715,22 @@
     "lat": "43.4903185",
     "lon": "5.3443110"
   },
-  "1 Gateway Road, Rm 224, RI": null
+  "1 Gateway Road, Rm 224, RI": null,
+  "Renew and Recharge Teleconference Online, Silver Spring, md 20910 Silver Spring md 20910": null,
+  "Temple Hills, MD": {
+    "lat": "38.8105035",
+    "lon": "-76.9500060"
+  },
+  "North Bethesda, MD": {
+    "lat": "39.0461292",
+    "lon": "-77.1130097"
+  },
+  "Luray, VA": {
+    "lat": "38.6654653",
+    "lon": "-78.4600202"
+  },
+  "New York, NY": {
+    "lat": "40.7127281",
+    "lon": "-74.0060152"
+  }
 }
