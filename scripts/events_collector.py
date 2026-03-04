@@ -749,6 +749,64 @@ class EventItem:
     last_seen_iso: str
 
 
+def event_item_from_stored_row(row: dict) -> Optional[EventItem]:
+    """Best-effort adapter for legacy events.json rows.
+
+    Supports both the current EventItem JSON schema and older export-oriented
+    rows that only contained date/start_time/end_time/link fields.
+    """
+
+    def pick(*keys: str) -> str:
+        for key in keys:
+            if key in row:
+                return clean_ws(str(row.get(key, "")))
+        return ""
+
+    def parse_float(raw: str) -> Optional[float]:
+        text = clean_ws(raw)
+        if not text:
+            return None
+        try:
+            return float(text)
+        except Exception:
+            return None
+
+    start_iso = pick("start_iso", "iso", "start", "start_datetime", "startdatetime")
+    end_iso = pick("end_iso", "end", "end_datetime", "enddatetime")
+
+    start_dt = parse_iso_datetime_safe(start_iso)
+    if start_dt is None:
+        start_dt = parse_dt(f"{pick('date', 'event_date')} {pick('start_time', 'time', 'starttime')}")
+    if start_dt is None:
+        start_dt = parse_dt(pick("date", "event_date"))
+    if start_dt is None:
+        return None
+
+    end_dt = parse_iso_datetime_safe(end_iso)
+    if end_dt is None:
+        end_dt = parse_dt(f"{pick('date', 'event_date')} {pick('end_time', 'endtime')}")
+    if end_dt is None:
+        end_dt = start_dt
+
+    location = pick("location", "venue", "address")
+    city_state = pick("city_state") or guess_city_state(location)
+
+    return EventItem(
+        title=pick("title", "event_title", "name") or "(untitled event)",
+        start_iso=start_dt.isoformat(),
+        end_iso=end_dt.isoformat(),
+        location=location,
+        city_state=city_state,
+        url=pick("url", "link", "event_url", "eventlink"),
+        source=pick("source") or "legacy_import",
+        category=pick("category", "categ", "type") or "local",
+        miles_from_cincy=parse_float(pick("miles_from_cincy", "miles_from_c", "miles", "distance", "mileage")),
+        lat=parse_float(pick("lat", "latitude")),
+        lon=parse_float(pick("lon", "lng", "longitude")),
+        last_seen_iso=pick("last_seen_iso", "last_seen") or now_et_iso(),
+    )
+
+
 class FacebookGraphTokenExpiredError(RuntimeError):
     """Raised when the Facebook Graph access token is expired/invalid."""
 
@@ -4289,7 +4347,16 @@ def main():
         log("ℹ️ Facebook Graph sources may skip; continuing with non-Graph collectors.")
 
     existing_raw = load_json(EVENTS_JSON_PATH, {"events": []})
-    existing = [EventItem(**e) for e in existing_raw.get("events", [])]
+    existing = []
+    skipped_existing_rows = 0
+    for e in existing_raw.get("events", []):
+        ev = event_item_from_stored_row(e)
+        if ev is None:
+            skipped_existing_rows += 1
+            continue
+        existing.append(ev)
+    if skipped_existing_rows:
+        log(f"⚠️ Skipped unreadable legacy existing events: {skipped_existing_rows}")
     for ev in existing:
         ev.location = normalize_location_for_output(ev.location, ev.city_state)
 
