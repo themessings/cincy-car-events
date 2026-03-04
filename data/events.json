@@ -1,5 +1,5 @@
 {
-  "generated_at_iso": "2026-03-03T21:16:05.461285-05:00",
+  "generated_at_iso": "2026-03-03T21:27:06.897447-05:00",
   "count": 172,
   "events": [
     {
@@ -20,15 +20,15 @@
       "title": "Columbus Cars & Coffee Fridays",
       "start_iso": "2026-03-06T00:00:00-05:00",
       "end_iso": "2026-03-06T02:00:00-05:00",
-      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, United States 2812 Fishinger Rd, Upper Arlington, United States",
+      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
       "city_state": "",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-06/",
       "source": "CarsAndCoffeeEvents - Ohio",
       "category": "local",
-      "miles_from_cincy": null,
-      "lat": null,
-      "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.838901-05:00"
+      "miles_from_cincy": 99.2,
+      "lat": 40.0306913,
+      "lon": -83.0910774,
+      "last_seen_iso": "2026-03-03T21:27:06.845663-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Fridays",
@@ -48,7 +48,7 @@
       "title": "Columbus Cars & Coffee Fridays",
       "start_iso": "2026-03-06T07:30:00-05:00",
       "end_iso": "2026-03-06T09:30:00-05:00",
-      "location": "Colin's Coffee, 2812 Fishinger Rd, Upper Arlington, OH 43220",
+      "location": "2812 Fishinger Rd, Upper Arlington, OH 43220",
       "city_state": "",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-06/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -62,7 +62,7 @@
       "title": "Cincinnati Cars and Coffee",
       "start_iso": "2026-03-07T00:00:00-05:00",
       "end_iso": "2026-03-07T02:00:00-05:00",
-      "location": "Crestview Hills Town Center 2791 Town Center Blvd, Crestview Hills, KY, United States 2791 Town Center Blvd, Crestview Hills, KY, United States",
+      "location": "2791 Town Center Blvd, Crestview Hills, KY",
       "city_state": "Crestview Hills, KY",
       "url": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-03-07/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -70,13 +70,13 @@
       "miles_from_cincy": 6.5,
       "lat": 39.0272829,
       "lon": -84.5849438,
-      "last_seen_iso": "2026-03-03T21:16:01.839300-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.846084-05:00"
     },
     {
       "title": "Cars and Coffee Saturday at Horsepower Farm",
       "start_iso": "2026-03-07T00:00:00-05:00",
       "end_iso": "2026-03-07T02:00:00-05:00",
-      "location": "Horsepower Farm Middletown 2227 Trinity Dr, Monroe, OH, United States 2227 Trinity Dr, Monroe, OH, United States",
+      "location": "2227 Trinity Dr, Monroe, OH",
       "city_state": "Monroe, OH",
       "url": "https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-03-07/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -84,13 +84,13 @@
       "miles_from_cincy": 186.6,
       "lat": 39.7157533,
       "lon": -81.1078783,
-      "last_seen_iso": "2026-03-03T21:16:01.839682-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.846498-05:00"
     },
     {
       "title": "Columbus Cars & Coffee",
       "start_iso": "2026-03-07T00:00:00-05:00",
       "end_iso": "2026-03-07T02:00:00-05:00",
-      "location": "The Ohio State University Wexner Medical Center 3650 Olentangy River Rd, Columbus, OH, United States 3650 Olentangy River Rd, Columbus, OH, United States",
+      "location": "3650 Olentangy River Rd, Columbus, OH",
       "city_state": "Columbus, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-03-07/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -98,13 +98,13 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-03-03T21:16:01.840109-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.846909-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
       "start_iso": "2026-03-07T00:00:00-05:00",
       "end_iso": "2026-03-07T02:00:00-05:00",
-      "location": "The City Apartments 2875 Olentangy River Road, Columbus, OH, United States 2875 Olentangy River Road, Columbus, OH, United States",
+      "location": "2875 Olentangy River Road, Columbus, OH",
       "city_state": "Columbus, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-03-07/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -112,13 +112,13 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-03-03T21:16:01.840490-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.847327-05:00"
     },
     {
       "title": "Cincinnati Cars and Coffee",
       "start_iso": "2026-03-07T08:00:00-05:00",
       "end_iso": "2026-03-07T10:30:00-05:00",
-      "location": "Crestview Hills Town Center, 2791 Town Center Blvd, Crestview Hills, KY 41017",
+      "location": "2791 Town Center Blvd, Crestview Hills, KY 41017",
       "city_state": "Crestview Hills, KY",
       "url": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-03-07/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -132,7 +132,7 @@
       "title": "Cars and Coffee Saturday at Horsepower Farm",
       "start_iso": "2026-03-07T08:00:00-05:00",
       "end_iso": "2026-03-07T12:00:00-05:00",
-      "location": "Horsepower Farm Middletown, 2227 Trinity Dr, Monroe, OH 45044",
+      "location": "2227 Trinity Dr, Monroe, OH 45044",
       "city_state": "Monroe, OH",
       "url": "https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-03-07/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -146,7 +146,7 @@
       "title": "Columbus Cars & Coffee",
       "start_iso": "2026-03-07T08:00:00-05:00",
       "end_iso": "2026-03-07T12:00:00-05:00",
-      "location": "The Ohio State University Wexner Medical Center, 3650 Olentangy River Rd, Columbus, OH 43214",
+      "location": "3650 Olentangy River Rd, Columbus, OH 43214",
       "city_state": "Columbus, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-03-07/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -168,13 +168,13 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.427964-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.863864-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ The City",
       "start_iso": "2026-03-07T09:00:00-05:00",
       "end_iso": "2026-03-07T12:00:00-05:00",
-      "location": "The City Apartments, 2875 Olentangy River Road, Columbus, OH 43202",
+      "location": "2875 Olentangy River Road, Columbus, OH 43202",
       "city_state": "Columbus, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-03-07/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -196,7 +196,7 @@
       "miles_from_cincy": 75.0,
       "lat": 38.0178078,
       "lon": -84.4605929,
-      "last_seen_iso": "2026-03-03T21:16:05.427570-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.863706-05:00"
     },
     {
       "title": "No Limits 937 Team® at Cyan Tattoo Invitational",
@@ -210,13 +210,13 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.856922-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.863044-05:00"
     },
     {
       "title": "Downtown runnaz meet #2",
       "start_iso": "2026-03-07T14:00:00-05:00",
       "end_iso": "2026-03-07T19:30:00-05:00",
-      "location": "8540 Gander, Creek Dr Miamisburg OH 45342, Gander Creek Dr Miamisburg, OH",
+      "location": "8540 Gander, Creek Dr Miamisburg OH 45342, GA, Gander Creek Dr Miamisburg, OH",
       "city_state": "Gander Creek Dr Miamisburg, OH",
       "url": "https://facebook.com/events/s/downtown-runnaz-meet-2/1212624344360403/",
       "source": "iCloud Published Calendar (ICS)",
@@ -224,13 +224,13 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.434976-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.870399-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
       "start_iso": "2026-03-08T00:00:00-05:00",
       "end_iso": "2026-03-08T02:00:00-04:00",
-      "location": "Starbucks in Westerville 691 N. Cleveland Ave, Westerville, OH, United States 691 N. Cleveland Ave, Westerville, OH, United States",
+      "location": "691 N. Cleveland Ave, Westerville, OH",
       "city_state": "Westerville, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-sundays/2026-03-08/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -238,13 +238,13 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-03-03T21:16:01.840883-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.847733-05:00"
     },
     {
       "title": "Columbus Cars & Coffee @ Starbucks",
       "start_iso": "2026-03-08T00:00:00-05:00",
       "end_iso": "2026-03-08T02:00:00-04:00",
-      "location": "Starbucks (Westerville) 691 N. Cleveland Ave, Westerville, OH, United States 691 N. Cleveland Ave, Westerville, OH, United States",
+      "location": "691 N. Cleveland Ave, Westerville, OH",
       "city_state": "Westerville, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-starbucks/2026-03-08/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -252,13 +252,13 @@
       "miles_from_cincy": 110.0,
       "lat": 40.126139,
       "lon": -82.9295287,
-      "last_seen_iso": "2026-03-03T21:16:01.841262-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.848137-05:00"
     },
     {
       "title": "ACKY Cars and Coffee",
       "start_iso": "2026-03-08T00:00:00-05:00",
       "end_iso": "2026-03-08T02:00:00-04:00",
-      "location": "Circuit Cafe 2726 Riverside Drive, Cincinnati, OH, United States 2726 Riverside Drive, Cincinnati, OH, United States",
+      "location": "2726 Riverside Drive, Cincinnati, OH",
       "city_state": "Cincinnati, OH",
       "url": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-03-08/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -266,13 +266,13 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-03-03T21:16:01.841628-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.848554-05:00"
     },
     {
       "title": "Columbus Cars & Coffee Sundays",
       "start_iso": "2026-03-08T08:00:00-04:00",
       "end_iso": "2026-03-08T11:00:00-04:00",
-      "location": "Starbucks in Westerville, 691 N. Cleveland Ave, Westerville, OH 43081",
+      "location": "691 N. Cleveland Ave, Westerville, OH 43081",
       "city_state": "Westerville, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-sundays/2026-03-08/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -286,7 +286,7 @@
       "title": "Columbus Cars & Coffee @ Starbucks",
       "start_iso": "2026-03-08T09:00:00-04:00",
       "end_iso": "2026-03-08T12:00:00-04:00",
-      "location": "Starbucks (Westerville), 691 N. Cleveland Ave, Westerville, OH 43081",
+      "location": "691 N. Cleveland Ave, Westerville, OH 43081",
       "city_state": "Westerville, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-starbucks/2026-03-08/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -300,7 +300,7 @@
       "title": "ACKY Cars and Coffee",
       "start_iso": "2026-03-08T10:00:00-04:00",
       "end_iso": "2026-03-08T12:00:00-04:00",
-      "location": "Circuit Cafe, 2726 Riverside Drive, Cincinnati, OH 45202",
+      "location": "2726 Riverside Drive, Cincinnati, OH 45202",
       "city_state": "Cincinnati, OH",
       "url": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-03-08/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -314,7 +314,7 @@
       "title": "Columbus Cafe Racers Monthly Lunch Cruise In",
       "start_iso": "2026-03-11T00:00:00-04:00",
       "end_iso": "2026-03-11T02:00:00-04:00",
-      "location": "Twin Peaks Polaris 1611 Polaris Parkway, Columbus, OH, United States 1611 Polaris Parkway, Columbus, OH, United States",
+      "location": "1611 Polaris Parkway, Columbus, OH",
       "city_state": "Columbus, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cafe-racers-monthly-luch-cruise-in/2026-03-11/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -322,7 +322,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-03-03T21:16:01.842020-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.848964-05:00"
     },
     {
       "title": "Columbus Cafe Racers Monthly Lunch Cruise In",
@@ -342,7 +342,7 @@
       "title": "Columbus Cafe Racers Monthly Lunch Cruise In",
       "start_iso": "2026-03-11T11:00:00-04:00",
       "end_iso": "2026-03-11T13:00:00-04:00",
-      "location": "Twin Peaks Polaris, 1611 Polaris Parkway, Columbus, OH 43240",
+      "location": "1611 Polaris Parkway, Columbus, OH 43240",
       "city_state": "Columbus, OH",
       "url": "https://carsandcoffeeevents.com/event/columbus-cafe-racers-monthly-luch-cruise-in/2026-03-11/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -370,15 +370,15 @@
       "title": "Columbus Cars & Coffee Fridays",
       "start_iso": "2026-03-13T00:00:00-04:00",
       "end_iso": "2026-03-13T02:00:00-04:00",
-      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, United States 2812 Fishinger Rd, Upper Arlington, United States",
+      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
       "city_state": "",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-13/",
       "source": "CarsAndCoffeeEvents - Ohio",
       "category": "local",
-      "miles_from_cincy": null,
-      "lat": null,
-      "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.842405-05:00"
+      "miles_from_cincy": 99.2,
+      "lat": 40.0306913,
+      "lon": -83.0910774,
+      "last_seen_iso": "2026-03-03T21:27:06.849390-05:00"
     },
     {
       "title": "Cavalcade Of Customs",
@@ -392,7 +392,7 @@
       "miles_from_cincy": 17.1,
       "lat": 39.3439305,
       "lon": -84.4388476,
-      "last_seen_iso": "2026-03-03T21:16:05.436243-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.871605-05:00"
     },
     {
       "title": "Three Legs of Mann Rally 2026 &#8211; Isle of Man",
@@ -426,7 +426,7 @@
       "title": "Columbus Cars & Coffee Fridays",
       "start_iso": "2026-03-13T07:30:00-04:00",
       "end_iso": "2026-03-13T09:30:00-04:00",
-      "location": "Colin's Coffee, 2812 Fishinger Rd, Upper Arlington, OH 43220",
+      "location": "2812 Fishinger Rd, Upper Arlington, OH 43220",
       "city_state": "",
       "url": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-13/",
       "source": "CarsAndCoffeeEvents - Ohio",
@@ -462,7 +462,7 @@
       "miles_from_cincy": 0.3,
       "lat": 39.1011925,
       "lon": -84.5180259,
-      "last_seen_iso": "2026-03-03T21:16:05.432065-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.867599-05:00"
     },
     {
       "title": "Euro Cars and Cocoa",
@@ -490,7 +490,7 @@
       "miles_from_cincy": 17.5,
       "lat": 39.2694845,
       "lon": -84.2661659,
-      "last_seen_iso": "2026-03-03T21:16:01.856327-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.862476-05:00"
     },
     {
       "title": "Endless Car Culture, Cincinnati / Meet #4.1",
@@ -518,7 +518,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.434136-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.869601-05:00"
     },
     {
       "title": "UC Cars and Coffee Meet #1",
@@ -560,7 +560,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.432585-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.868098-05:00"
     },
     {
       "title": "RCR 2026 Car Season Kickoff",
@@ -588,7 +588,7 @@
       "miles_from_cincy": 88.8,
       "lat": 38.2426635,
       "lon": -85.7349755,
-      "last_seen_iso": "2026-03-03T21:16:05.430421-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.866039-05:00"
     },
     {
       "title": "Cincinnati Auto Expo",
@@ -608,7 +608,7 @@
       "title": "Cincinnati Auto Expo",
       "start_iso": "2026-03-26T17:00:00-04:00",
       "end_iso": "2026-03-26T20:00:00-04:00",
-      "location": "525 Elm Street, Cincinnati, OH, United States, Ohio 45202",
+      "location": "525 Elm Street, Cincinnati, OH",
       "city_state": "Cincinnati, OH",
       "url": "https://facebook.com/events/s/cincinnati-auto-expo/1355761812681578/",
       "source": "iCloud Published Calendar (ICS)",
@@ -616,7 +616,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-03-03T21:16:05.431513-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.867081-05:00"
     },
     {
       "title": "April Spools 2026",
@@ -644,7 +644,7 @@
       "miles_from_cincy": 176.8,
       "lat": 37.001968,
       "lon": -86.3683884,
-      "last_seen_iso": "2026-03-03T21:16:05.433249-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.868716-05:00"
     },
     {
       "title": "Ohio Challenge RoadRally (SCCA)",
@@ -658,7 +658,7 @@
       "miles_from_cincy": 100.0,
       "lat": 39.9622601,
       "lon": -83.0007065,
-      "last_seen_iso": "2026-03-03T21:16:05.436410-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.871763-05:00"
     },
     {
       "title": "Ohio Challenge RoadRally (SCCA)",
@@ -686,7 +686,7 @@
       "miles_from_cincy": 99.1,
       "lat": 39.7683331,
       "lon": -86.1583502,
-      "last_seen_iso": "2026-03-03T21:16:05.436574-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.871918-05:00"
     },
     {
       "title": "Hoosier Rally (SCCA)",
@@ -728,7 +728,7 @@
       "miles_from_cincy": 51.5,
       "lat": 39.7802236,
       "lon": -84.1080722,
-      "last_seen_iso": "2026-03-03T21:16:05.429872-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.865526-05:00"
     },
     {
       "title": "Fairfield Cars and Coffee 2026 #1",
@@ -756,7 +756,7 @@
       "miles_from_cincy": 16.7,
       "lat": 39.3448195,
       "lon": -84.5123659,
-      "last_seen_iso": "2026-03-03T21:16:05.431142-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.866708-05:00"
     },
     {
       "title": "2026 Sycamore Cars and Coffee",
@@ -770,7 +770,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.847863-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.850322-05:00"
     },
     {
       "title": "5th Annual “Hail to Horsepower” Car Show",
@@ -798,7 +798,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.435687-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.871083-05:00"
     },
     {
       "title": "Buckeye RoadRally (SCCA)",
@@ -812,7 +812,7 @@
       "miles_from_cincy": 48.4,
       "lat": 39.7589478,
       "lon": -84.1916069,
-      "last_seen_iso": "2026-03-03T21:16:05.437158-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.872446-05:00"
     },
     {
       "title": "Buckeye RoadRally (SCCA)",
@@ -854,7 +854,7 @@
       "miles_from_cincy": 76.5,
       "lat": 38.0373264,
       "lon": -84.8960027,
-      "last_seen_iso": "2026-03-03T21:16:01.856512-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.862649-05:00"
     },
     {
       "title": "Slammedenuff Ohio Car Show 2026",
@@ -882,7 +882,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.430052-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.865692-05:00"
     },
     {
       "title": "Corsa America Spring Rally – Day 1",
@@ -896,7 +896,7 @@
       "miles_from_cincy": 247.3,
       "lat": 35.6342201,
       "lon": -83.402366,
-      "last_seen_iso": "2026-03-03T21:16:05.437345-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.872613-05:00"
     },
     {
       "title": "Corsa America Spring Rally – Day 1",
@@ -924,7 +924,7 @@
       "miles_from_cincy": 265.2,
       "lat": 35.595363,
       "lon": -82.5508407,
-      "last_seen_iso": "2026-03-03T21:16:05.437515-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.872773-05:00"
     },
     {
       "title": "Corsa America Spring Rally – Day 2",
@@ -952,7 +952,7 @@
       "miles_from_cincy": 293.1,
       "lat": 34.863972,
       "lon": -84.324087,
-      "last_seen_iso": "2026-03-03T21:16:05.437687-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.872938-05:00"
     },
     {
       "title": "Corsa America Spring Rally – Day 3",
@@ -980,7 +980,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.843650-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.851446-05:00"
     },
     {
       "title": "2026 Jyan Waespe Memorial Car Show",
@@ -994,7 +994,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.843482-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.861896-05:00"
     },
     {
       "title": "Mid-Ohio RoadRally (SCCA)",
@@ -1008,7 +1008,7 @@
       "miles_from_cincy": 149.4,
       "lat": 40.6787196,
       "lon": -82.5827749,
-      "last_seen_iso": "2026-03-03T21:16:05.437869-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.873093-05:00"
     },
     {
       "title": "Mid-Ohio RoadRally (SCCA)",
@@ -1042,7 +1042,7 @@
       "title": "Zakira;s Garage 2026 Spring Open House",
       "start_iso": "2026-05-16T09:30:00-04:00",
       "end_iso": "2026-05-16T12:30:00-04:00",
-      "location": "4480 Lake Forest Dr, Ste 314, Cincinnati, OH, United States, Ohio 45242",
+      "location": "4480 Lake Forest Dr, Ste 314, Cincinnati, OH, , Ohio 45242",
       "city_state": "Cincinnati, OH",
       "url": "https://facebook.com/events/s/zakiras-garage-2026-spring-ope/1122944979897103/",
       "source": "iCloud Published Calendar (ICS)",
@@ -1050,7 +1050,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-03-03T21:16:01.856706-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.862858-05:00"
     },
     {
       "title": "2026 Annual Krieger Ford Car & Truck Extravaganza",
@@ -1078,7 +1078,7 @@
       "miles_from_cincy": 105.5,
       "lat": 40.0611732,
       "lon": -82.9704462,
-      "last_seen_iso": "2026-03-03T21:16:05.430770-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.866374-05:00"
     },
     {
       "title": "Valley High Car Show",
@@ -1098,7 +1098,7 @@
       "title": "Valley High Car Show",
       "start_iso": "2026-05-17T10:00:00-04:00",
       "end_iso": "2026-05-17T15:00:00-04:00",
-      "location": "10200 Dixie Hwy, Louisville, KY, United States, Kentucky 40272",
+      "location": "10200 Dixie Hwy, Louisville, KY",
       "city_state": "Louisville, KY",
       "url": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/",
       "source": "iCloud Published Calendar (ICS)",
@@ -1106,7 +1106,7 @@
       "miles_from_cincy": 89.3,
       "lat": 38.2542376,
       "lon": -85.759407,
-      "last_seen_iso": "2026-03-03T21:16:05.433428-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.868908-05:00"
     },
     {
       "title": "Rumble on the River Car Show 2026",
@@ -1134,7 +1134,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.428594-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.864359-05:00"
     },
     {
       "title": "Quaker Steak & Lube Classic Car Show & Cruise In",
@@ -1176,7 +1176,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.857274-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.863378-05:00"
     },
     {
       "title": "Dog face K9s 3rd annual Car show",
@@ -1218,7 +1218,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.434306-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.869765-05:00"
     },
     {
       "title": "Open House & Car Show",
@@ -1232,7 +1232,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.435881-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.871255-05:00"
     },
     {
       "title": "Eclipse 5th Annual Open House & Car Show",
@@ -1246,7 +1246,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.852241-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.849546-05:00"
     },
     {
       "title": "4th Annual 20th Century All GM Car Show and Swap Meet",
@@ -1266,7 +1266,7 @@
       "title": "4th Annual 20th Century All GM Car Show and Swap Meet",
       "start_iso": "2026-05-31T09:00:00-04:00",
       "end_iso": "2026-05-31T12:00:00-04:00",
-      "location": "401 Milford Pkwy, Milford, OH 45150-1298, United States",
+      "location": "401 Milford Pkwy, Milford, OH 45150-1298",
       "city_state": "Milford, OH",
       "url": "https://facebook.com/events/s/4th-annual-20th-century-all-gm/2340968919664179/",
       "source": "iCloud Published Calendar (ICS)",
@@ -1274,7 +1274,7 @@
       "miles_from_cincy": 12.6,
       "lat": 39.174625,
       "lon": -84.2958988,
-      "last_seen_iso": "2026-03-03T21:16:05.436068-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.871440-05:00"
     },
     {
       "title": "No Limits 937™ Private Event featuring The Food Pitt",
@@ -1302,7 +1302,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.431329-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.866888-05:00"
     },
     {
       "title": "RallyCross – Edgewater",
@@ -1316,7 +1316,7 @@
       "miles_from_cincy": 43.5,
       "lat": 39.4453393,
       "lon": -83.8285375,
-      "last_seen_iso": "2026-03-03T21:16:05.438524-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.873720-05:00"
     },
     {
       "title": "RallyCross – Edgewater",
@@ -1358,7 +1358,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.430962-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.866538-05:00"
     },
     {
       "title": "Southern Ohio Forest Rally – Day 1",
@@ -1372,7 +1372,7 @@
       "miles_from_cincy": 83.4,
       "lat": 39.3331197,
       "lon": -82.9824019,
-      "last_seen_iso": "2026-03-03T21:16:05.438695-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.873882-05:00"
     },
     {
       "title": "Southern Ohio Forest Rally – Day 1",
@@ -1400,7 +1400,7 @@
       "miles_from_cincy": 83.4,
       "lat": 39.3331197,
       "lon": -82.9824019,
-      "last_seen_iso": "2026-03-03T21:16:05.438881-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.874044-05:00"
     },
     {
       "title": "Southern Ohio Forest Rally – Day 2",
@@ -1428,7 +1428,7 @@
       "miles_from_cincy": 83.4,
       "lat": 39.3331197,
       "lon": -82.9824019,
-      "last_seen_iso": "2026-03-03T21:16:05.439058-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.874203-05:00"
     },
     {
       "title": "OVR PCA Autocross - June 2026",
@@ -1442,7 +1442,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.846653-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.853657-05:00"
     },
     {
       "title": "Southern Ohio Forest Rally – Day 3",
@@ -1470,7 +1470,7 @@
       "miles_from_cincy": 4.6,
       "lat": 39.0882425,
       "lon": -84.4287215,
-      "last_seen_iso": "2026-03-03T21:16:05.439230-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.874378-05:00"
     },
     {
       "title": "Dynasty Rally 2026 – Day 1",
@@ -1498,7 +1498,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.439401-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.874542-05:00"
     },
     {
       "title": "Dynasty Rally 2026 – Day 2",
@@ -1526,7 +1526,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.439569-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.874743-05:00"
     },
     {
       "title": "Voss Hoss Cruise-in 2026",
@@ -1554,7 +1554,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.432754-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.868265-05:00"
     },
     {
       "title": "Dynasty Rally 2026 – Day 3",
@@ -1610,13 +1610,13 @@
       "miles_from_cincy": 52.5,
       "lat": 39.816425,
       "lon": -84.1711083,
-      "last_seen_iso": "2026-03-03T21:16:05.435336-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.870747-05:00"
     },
     {
       "title": "Whiskey Row Car Show - June 20th 2026",
       "start_iso": "2026-06-20T09:00:00-04:00",
       "end_iso": "2026-06-20T12:00:00-04:00",
-      "location": "124 W Main St, Louisville, KY 40202-1344, United States",
+      "location": "124 W Main St, Louisville, KY 40202-1344",
       "city_state": "Louisville, KY",
       "url": "https://facebook.com/events/s/whiskey-row-car-show-june-20th/2608203072913628/",
       "source": "iCloud Published Calendar (ICS)",
@@ -1624,7 +1624,7 @@
       "miles_from_cincy": 89.3,
       "lat": 38.2542376,
       "lon": -85.759407,
-      "last_seen_iso": "2026-03-03T21:16:05.428407-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.864192-05:00"
     },
     {
       "title": "Barrett-Jackson 2026 Columbus Auction",
@@ -1652,7 +1652,7 @@
       "miles_from_cincy": 102.1,
       "lat": 40.0029556,
       "lon": -82.9913182,
-      "last_seen_iso": "2026-03-03T21:16:05.433963-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.869437-05:00"
     },
     {
       "title": "North vs. South Charity Car Event 2026",
@@ -1680,7 +1680,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.431878-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.867424-05:00"
     },
     {
       "title": "Annual Car Show & Chicken Dinner",
@@ -1700,7 +1700,7 @@
       "title": "Annual Car Show & Chicken Dinner",
       "start_iso": "2026-06-28T11:00:00-04:00",
       "end_iso": "2026-06-28T14:30:00-04:00",
-      "location": "Perfect Place Ln, Lawrenceburg, IN 47025, United States",
+      "location": "Perfect Place Ln, Lawrenceburg, IN 47025",
       "city_state": "Lawrenceburg, IN",
       "url": "https://facebook.com/events/s/annual-car-show-chicken-dinner/2048696039298978/",
       "source": "iCloud Published Calendar (ICS)",
@@ -1708,13 +1708,13 @@
       "miles_from_cincy": 18.1,
       "lat": 39.090891,
       "lon": -84.8499504,
-      "last_seen_iso": "2026-03-03T21:16:05.429330-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.865004-05:00"
     },
     {
       "title": "Cars and Coffee June 29",
       "start_iso": "2026-06-28T23:00:00-05:00",
       "end_iso": "2026-06-29T01:00:00-05:00",
-      "location": "The Upside Brew! Start your Engines and your morning with us! Join us for Cars a",
+      "location": "The Upside Brew! Start your Engines and your morning with ! Join for Cars a",
       "city_state": "",
       "url": "https://www.facebook.com/events/329-ludlow-avenue-cincinnati-oh/cars-and-coffee-june-29/1396164504862230/",
       "source": "facebook:discovered",
@@ -1736,7 +1736,7 @@
       "miles_from_cincy": 89.3,
       "lat": 38.2542376,
       "lon": -85.759407,
-      "last_seen_iso": "2026-03-03T21:16:05.439735-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.874900-05:00"
     },
     {
       "title": "King of the Roads Rally",
@@ -1764,7 +1764,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.844707-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.857386-05:00"
     },
     {
       "title": "Cincy Cool Cars Club Car Show",
@@ -1792,7 +1792,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.432409-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.867928-05:00"
     },
     {
       "title": "Rally North America – Ohio Valley 1200 – Day 1",
@@ -1806,7 +1806,7 @@
       "miles_from_cincy": 132.3,
       "lat": 39.3575616,
       "lon": -82.0609557,
-      "last_seen_iso": "2026-03-03T21:16:05.439925-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.875064-05:00"
     },
     {
       "title": "Rally North America – Ohio Valley 1200 – Day 1",
@@ -1834,7 +1834,7 @@
       "miles_from_cincy": 531.5,
       "lat": 46.4481521,
       "lon": -87.6305899,
-      "last_seen_iso": "2026-03-03T21:16:05.440095-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.875253-05:00"
     },
     {
       "title": "Rally North America – Day 2",
@@ -1862,7 +1862,7 @@
       "miles_from_cincy": 395.0,
       "lat": 44.7606481,
       "lon": -85.6165976,
-      "last_seen_iso": "2026-03-03T21:16:05.440265-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.875417-05:00"
     },
     {
       "title": "Rally North America – Day 3",
@@ -1890,7 +1890,7 @@
       "miles_from_cincy": 295.0,
       "lat": 43.3323684,
       "lon": -83.7392288,
-      "last_seen_iso": "2026-03-03T21:16:05.440432-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.875574-05:00"
     },
     {
       "title": "Rally North America – Day 4",
@@ -1932,7 +1932,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.428776-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.864521-05:00"
     },
     {
       "title": "Cincy Car Cruise Rally",
@@ -1946,7 +1946,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-03-03T21:16:05.440598-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.875727-05:00"
     },
     {
       "title": "Cincy Car Cruise Rally",
@@ -1974,7 +1974,7 @@
       "miles_from_cincy": 4.6,
       "lat": 39.0882425,
       "lon": -84.4287215,
-      "last_seen_iso": "2026-03-03T21:16:05.440768-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.875887-05:00"
     },
     {
       "title": "Recharge Rally – Day 1",
@@ -2002,7 +2002,7 @@
       "miles_from_cincy": 283.8,
       "lat": 35.0457219,
       "lon": -85.3094883,
-      "last_seen_iso": "2026-03-03T21:16:05.440952-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.876044-05:00"
     },
     {
       "title": "Recharge Rally – Day 2",
@@ -2030,7 +2030,7 @@
       "miles_from_cincy": 316.1,
       "lat": 34.851354,
       "lon": -82.3984882,
-      "last_seen_iso": "2026-03-03T21:16:05.441121-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.876199-05:00"
     },
     {
       "title": "Recharge Rally – Day 3",
@@ -2058,7 +2058,7 @@
       "miles_from_cincy": 335.4,
       "lat": 35.2272086,
       "lon": -80.8430827,
-      "last_seen_iso": "2026-03-03T21:16:05.441289-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.876364-05:00"
     },
     {
       "title": "Recharge Rally – Day 4",
@@ -2100,7 +2100,7 @@
       "miles_from_cincy": 91.0,
       "lat": 38.1988841,
       "lon": -85.7390427,
-      "last_seen_iso": "2026-03-03T21:16:05.435512-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.870917-05:00"
     },
     {
       "title": "RallyCross – Edgewater",
@@ -2114,7 +2114,7 @@
       "miles_from_cincy": 43.5,
       "lat": 39.4453393,
       "lon": -83.8285375,
-      "last_seen_iso": "2026-03-03T21:16:05.441457-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.876521-05:00"
     },
     {
       "title": "OVR PCA Autocross - August 2026",
@@ -2128,7 +2128,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.851625-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.850475-05:00"
     },
     {
       "title": "RallyCross – Edgewater",
@@ -2170,7 +2170,7 @@
       "miles_from_cincy": 89.3,
       "lat": 38.2542376,
       "lon": -85.759407,
-      "last_seen_iso": "2026-03-03T21:16:05.441621-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.876674-05:00"
     },
     {
       "title": "OVR PCA Autocross - September 2026",
@@ -2184,7 +2184,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.844537-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.861606-05:00"
     },
     {
       "title": "Ride With Randy Rally",
@@ -2218,7 +2218,7 @@
       "title": "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event",
       "start_iso": "2026-10-03T11:00:00-04:00",
       "end_iso": "2026-10-03T14:00:00-04:00",
-      "location": "2669 E Kemper Road, Cincinnati, OH, United States, Ohio 45241",
+      "location": "2669 E Kemper Road, Cincinnati, OH",
       "city_state": "Cincinnati, OH",
       "url": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/",
       "source": "iCloud Published Calendar (ICS)",
@@ -2226,7 +2226,7 @@
       "miles_from_cincy": 0.1,
       "lat": 39.1014537,
       "lon": -84.5124602,
-      "last_seen_iso": "2026-03-03T21:16:05.433609-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.869102-05:00"
     },
     {
       "title": "Porsche Cruise In - OVRPCA & Eclipse Annual Event",
@@ -2240,7 +2240,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:01.855699-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.860255-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 1",
@@ -2254,7 +2254,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.442237-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.877235-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 2",
@@ -2268,7 +2268,7 @@
       "miles_from_cincy": 401.5,
       "lat": 38.8950368,
       "lon": -77.0365427,
-      "last_seen_iso": "2026-03-03T21:16:05.442408-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.877395-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 3",
@@ -2282,7 +2282,7 @@
       "miles_from_cincy": 214.7,
       "lat": 36.5945034,
       "lon": -82.1885212,
-      "last_seen_iso": "2026-03-03T21:16:05.442578-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.877556-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 4",
@@ -2296,7 +2296,7 @@
       "miles_from_cincy": 219.5,
       "lat": 35.9603948,
       "lon": -83.9210261,
-      "last_seen_iso": "2026-03-03T21:16:05.442747-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.877712-05:00"
     },
     {
       "title": "Cancer Awareness Rally – Day 5",
@@ -2310,7 +2310,7 @@
       "miles_from_cincy": 237.9,
       "lat": 36.1622767,
       "lon": -86.7742984,
-      "last_seen_iso": "2026-03-03T21:16:05.442941-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.877868-05:00"
     },
     {
       "title": "Fall 2026 Rennsport Dragon Rally®",
@@ -2338,7 +2338,7 @@
       "miles_from_cincy": null,
       "lat": null,
       "lon": null,
-      "last_seen_iso": "2026-03-03T21:16:05.434482-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.869933-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 1",
@@ -2352,7 +2352,7 @@
       "miles_from_cincy": 369.6,
       "lat": 33.7544657,
       "lon": -84.3898151,
-      "last_seen_iso": "2026-03-03T21:16:05.443123-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.878025-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 2",
@@ -2366,7 +2366,7 @@
       "miles_from_cincy": 369.6,
       "lat": 33.7544657,
       "lon": -84.3898151,
-      "last_seen_iso": "2026-03-03T21:16:05.443291-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.878179-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 3",
@@ -2380,7 +2380,7 @@
       "miles_from_cincy": 265.2,
       "lat": 35.595363,
       "lon": -82.5508407,
-      "last_seen_iso": "2026-03-03T21:16:05.443460-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.878342-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 4",
@@ -2394,7 +2394,7 @@
       "miles_from_cincy": 219.5,
       "lat": 35.9603948,
       "lon": -83.9210261,
-      "last_seen_iso": "2026-03-03T21:16:05.443626-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.878498-05:00"
     },
     {
       "title": "Corsa Dragon Rally – Day 5",
@@ -2408,7 +2408,7 @@
       "miles_from_cincy": 219.5,
       "lat": 35.9603948,
       "lon": -83.9210261,
-      "last_seen_iso": "2026-03-03T21:16:05.443866-05:00"
+      "last_seen_iso": "2026-03-03T21:27:06.878651-05:00"
     }
   ]
 }
