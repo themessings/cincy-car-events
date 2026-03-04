@@ -185,6 +185,23 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(start_dt.strftime("%Y-%m-%d %I:%M %p"), "2026-03-07 08:00 AM")
         self.assertEqual(end_dt.strftime("%Y-%m-%d %I:%M %p"), "2026-03-07 12:00 PM")
 
+    def test_extract_wordpress_event_datetimes_handles_missing_end_meridiem(self):
+        html = '''
+        <article>
+          <div class="tribe-events-calendar-list__event-datetime">March 7 @ 8:00 am - 10:30 EST</div>
+          <time datetime="2026-03-07"></time>
+        </article>
+        '''
+        row = BeautifulSoup(html, "html.parser").select_one("article")
+        fallback_start = parse_dt("2026-03-07")
+
+        start_dt, end_dt = _extract_wordpress_event_datetimes(row, fallback_start)
+
+        self.assertIsNotNone(start_dt)
+        self.assertIsNotNone(end_dt)
+        self.assertEqual(start_dt.strftime("%Y-%m-%d %I:%M %p"), "2026-03-07 08:00 AM")
+        self.assertEqual(end_dt.strftime("%Y-%m-%d %I:%M %p"), "2026-03-07 10:30 AM")
+
     def test_extract_facebook_page_identifier_variants(self):
         self.assertEqual(
             extract_facebook_page_identifier("https://www.facebook.com/Carscoffeewestchester1/"),
