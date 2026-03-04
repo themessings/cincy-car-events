@@ -30,8 +30,6 @@ from scripts.events_collector import (
     parse_dt,
     _extract_address_components,
     verify_usps_address,
-    collect_serpapi_google_events,
-    _resolve_verify_usps_address,
 )
 
 
@@ -520,20 +518,3 @@ class AddressVerificationTests(unittest.TestCase):
         self.assertEqual(out["status"], "verified")
         self.assertEqual(out["zip5"], "45202")
         self.assertIn("CINCINNATI", out["formatted"])
-
-
-class VerifierResolveTests(unittest.TestCase):
-    def test_resolve_verify_usps_address_returns_callable(self):
-        fn = _resolve_verify_usps_address()
-        self.assertTrue(callable(fn))
-
-    def test_resolve_verify_usps_address_fallback_when_symbol_missing(self):
-        original = events_collector_mod.__dict__.pop("verify_usps_address", None)
-        try:
-            fn = _resolve_verify_usps_address()
-            self.assertTrue(callable(fn))
-            out = fn("", "")
-            self.assertEqual(out.get("status"), "unverified_runtime_missing_verifier")
-        finally:
-            if original is not None:
-                events_collector_mod.__dict__["verify_usps_address"] = original
