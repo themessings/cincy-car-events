@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-03T22:35:23.568267-05:00",
-  "count": 157,
+  "generated_at_iso": "2026-03-04T06:32:06.378065-05:00",
+  "count": 154,
   "events": [
     {
       "title": "Drinking Liberally Weekly Meetup",
@@ -1443,16 +1443,6 @@
       "link": "Same as above"
     },
     {
-      "title": "Cancer Awareness Rally – Day 2",
-      "date": "2026-10-18",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "401.5",
-      "location": "Washington, DC",
-      "link": "Same as above"
-    },
-    {
       "title": "Cancer Awareness Rally – Day 3",
       "date": "2026-10-19",
       "start_time": "11:00 PM",
@@ -1460,16 +1450,6 @@
       "categ": "rally",
       "miles_from_c": "214.7",
       "location": "Knoxville, TN, Bristol, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 3",
-      "date": "2026-10-19",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "214.7",
-      "location": "Bristol, TN",
       "link": "Same as above"
     },
     {
@@ -1490,16 +1470,6 @@
       "categ": "rally",
       "miles_from_c": "237.9",
       "location": "Knoxville, TN, Nashville, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 5",
-      "date": "2026-10-21",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "237.9",
-      "location": "Nashville, TN",
       "link": "Same as above"
     },
     {
