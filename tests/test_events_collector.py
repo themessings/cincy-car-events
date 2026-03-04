@@ -28,7 +28,6 @@ from scripts.events_collector import (
     parse_dt,
     _extract_address_components,
     verify_usps_address,
-    collect_serpapi_google_events,
 )
 
 
