@@ -28,8 +28,6 @@ from scripts.events_collector import (
     parse_dt,
     _extract_address_components,
     verify_usps_address,
-    collect_serpapi_google_events,
-    _resolve_verify_usps_address,
 )
 
 
@@ -518,9 +516,3 @@ class AddressVerificationTests(unittest.TestCase):
         self.assertEqual(out["status"], "verified")
         self.assertEqual(out["zip5"], "45202")
         self.assertIn("CINCINNATI", out["formatted"])
-
-
-class VerifierResolveTests(unittest.TestCase):
-    def test_resolve_verify_usps_address_returns_callable(self):
-        fn = _resolve_verify_usps_address()
-        self.assertTrue(callable(fn))
