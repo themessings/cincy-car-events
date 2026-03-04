@@ -1326,6 +1326,95 @@ def simplify_location(location: str, address: str = "") -> str:
     return clean_ws(f"{raw_location}, {address_csv}")
 
 
+US_STATE_ABBR_RE = (
+    r"(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|"
+    r"NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC)"
+)
+US_ADDR_FULL_RE = re.compile(
+    rf"(\d{{1,6}}\s+[^,]+,\s*[^,]+,\s*{US_STATE_ABBR_RE}\s*\d{{5}}(?:-\d{{4}})?)",
+    re.IGNORECASE,
+)
+US_ADDR_WEAK_RE = re.compile(
+    rf"(\d{{1,6}}\s+[^,]+,\s*[^,]+,\s*{US_STATE_ABBR_RE})(?!\s*\d)",
+    re.IGNORECASE,
+)
+
+
+def _format_address_candidate(candidate: str, require_zip: bool = True) -> str:
+    """Normalize an extracted candidate to: street, city, ST [ZIP]."""
+    candidate_clean = re.sub(r"\s*,\s*", ", ", clean_ws(candidate)).strip(" ,")
+    if require_zip:
+        m = re.match(
+            rf"^(\d{{1,6}}\s+[^,]+),\s*([^,]+),\s*({US_STATE_ABBR_RE})\s*(\d{{5}}(?:-\d{{4}})?)$",
+            candidate_clean,
+            flags=re.IGNORECASE,
+        )
+        if not m:
+            return ""
+        street, city, state, zip_code = m.groups()
+        return f"{clean_ws(street)}, {clean_ws(city)}, {state.upper()} {zip_code}"
+
+    m = re.match(
+        rf"^(\d{{1,6}}\s+[^,]+),\s*([^,]+),\s*({US_STATE_ABBR_RE})$",
+        candidate_clean,
+        flags=re.IGNORECASE,
+    )
+    if not m:
+        return ""
+    street, city, state = m.groups()
+    return f"{clean_ws(street)}, {clean_ws(city)}, {state.upper()}"
+
+
+def clean_location(raw: str) -> str:
+    """Extract exactly one clean US postal address when confidently detectable.
+
+    Example mappings (unit-test style):
+      - "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, United States 2812 Fishinger Rd, Upper Arlington, OH 43221"
+        -> "2812 Fishinger Rd, Upper Arlington, OH 43221"
+      - "Crestview Hills Town Center 2791 Town Center Blvd, Crestview Hills, KY, United States 2791 Town Center Blvd, Crestview Hills, KY 41017"
+        -> "2791 Town Center Blvd, Crestview Hills, KY 41017"
+      - "Starbucks (Westerville) 745 Springfield St, Cincinnati, OH 45215 USA"
+        -> "745 Springfield St, Cincinnati, OH 45215"
+      - "745 Springfield St, Cincinnati, OH 45215 745 Springfield St, Cincinnati, OH 45215"
+        -> "745 Springfield St, Cincinnati, OH 45215"
+      - "Venue Name 123 Main St, Columbus, OH"
+        -> "123 Main St, Columbus, OH"
+      - "Meet at the lot behind the mall"
+        -> "Meet at the lot behind the mall"
+    """
+    text = clean_ws(raw)
+    if not text:
+        return ""
+
+    text = re.sub(r"\b(?:United\s+States(?:\s+of\s+America)?|USA|US)\b", " ", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*,\s*", ", ", text)
+    text = clean_ws(text).strip(" ,")
+
+    seen = set()
+    for match in US_ADDR_FULL_RE.finditer(text):
+        formatted = _format_address_candidate(match.group(1), require_zip=True)
+        if not formatted:
+            continue
+        key = formatted.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        return formatted
+
+    seen.clear()
+    for match in US_ADDR_WEAK_RE.finditer(text):
+        formatted = _format_address_candidate(match.group(1), require_zip=False)
+        if not formatted:
+            continue
+        key = formatted.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        return formatted
+
+    return text
+
+
 def normalize_location_for_output(location: str, city_state: str = "") -> str:
     """Normalize final location field for event exports.
 
@@ -1334,7 +1423,7 @@ def normalize_location_for_output(location: str, city_state: str = "") -> str:
     - appends city/state to venue-only location when it's missing
     - avoids repeating city/state when already included in location text
     """
-    normalized_location = clean_ws(location)
+    normalized_location = clean_location(location)
     normalized_location = re.sub(r"\s*,\s*", ", ", normalized_location).strip(" ,")
 
     normalized_city_state = clean_ws(city_state)
