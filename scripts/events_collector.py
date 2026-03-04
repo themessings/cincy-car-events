@@ -83,6 +83,7 @@ FACEBOOK_TARGETS_CACHE: Optional[List[dict]] = None
 FACEBOOK_GRAPH_RUNTIME: Dict[str, object] = {"checked": False, "valid": None, "reason": "unchecked"}
 FACEBOOK_COVERAGE: Dict[str, object] = {"token": {}, "serp_queries": [], "urls_discovered": 0, "urls_parsed": 0, "urls_failed": 0, "failure_reasons": Counter(), "page_events": 0}
 TOKEN_MANAGER: Optional[TokenManager] = None
+URL_ENRICH_CACHE: Dict[str, Optional[dict]] = {}
 EST_TZ = tz.tzoffset("EST", -5 * 60 * 60)
 
 
@@ -1240,6 +1241,59 @@ def save_json(path: str, data) -> None:
 
 def clean_ws(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "")).strip()
+
+
+def _stringify_location_like(value) -> str:
+    """Convert heterogeneous location payloads into a readable one-line string."""
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return clean_ws(value)
+    if isinstance(value, (int, float, bool)):
+        return clean_ws(str(value))
+    if isinstance(value, list):
+        parts = [_stringify_location_like(v) for v in value]
+        return clean_ws(" | ".join(p for p in parts if p))
+    if isinstance(value, dict):
+        direct_keys = ["name", "title", "venue", "event_location", "location", "address"]
+        bits = []
+        for k in direct_keys:
+            v = value.get(k)
+            txt = _stringify_location_like(v)
+            if txt:
+                bits.append(txt)
+
+        if not bits:
+            addr = value.get("address")
+            if isinstance(addr, dict):
+                addr_bits = [
+                    addr.get("street"),
+                    addr.get("streetAddress"),
+                    addr.get("addressLocality"),
+                    addr.get("city"),
+                    addr.get("addressRegion"),
+                    addr.get("state"),
+                    addr.get("postalCode"),
+                ]
+                bits.extend(clean_ws(str(b)) for b in addr_bits if clean_ws(str(b)))
+
+        if bits:
+            deduped = []
+            seen = set()
+            for b in bits:
+                key = b.lower()
+                if key in seen:
+                    continue
+                seen.add(key)
+                deduped.append(b)
+            return clean_ws(", ".join(deduped))
+
+        try:
+            return clean_ws(json.dumps(value, ensure_ascii=False, sort_keys=True))
+        except Exception:
+            return clean_ws(str(value))
+
+    return clean_ws(str(value))
 
 
 def simplify_location(location: str, address: str = "") -> str:
@@ -3009,6 +3063,28 @@ def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
         deduped.append(e)
     return deduped
 
+def enrich_event_from_source_url(url: str) -> Optional[dict]:
+    """Best-effort source page enrichment for sparse SerpAPI google_events rows."""
+    u = clean_ws(url)
+    if not u:
+        return None
+    if u in URL_ENRICH_CACHE:
+        return URL_ENRICH_CACHE[u]
+
+    try:
+        resp = requests.get(u, headers=DEFAULT_HTTP_HEADERS, timeout=20)
+        resp.raise_for_status()
+        html_text = resp.text or ""
+        parsed = parse_schema_org_events_from_html(u, html_text)
+        best = parsed[0] if parsed else None
+        URL_ENRICH_CACHE[u] = best
+        return best
+    except Exception as ex:
+        URL_ENRICH_CACHE[u] = None
+        log(f"⚠️ SerpAPI google_events enrichment skipped: {u} :: {clean_ws(str(ex))[:160]}")
+        return None
+
+
 def parse_google_events_date_best_effort(date_text: str) -> Tuple[Optional[datetime], bool]:
     raw = clean_ws(date_text)
     if not raw:
@@ -3136,8 +3212,8 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
                 continue
 
             end_dt = start_dt + timedelta(hours=2)
-            venue = clean_ws(item.get("venue") or item.get("event_location") or "")
-            address = clean_ws(str(item.get("address") or item.get("location") or ""))
+            venue = _stringify_location_like(item.get("venue") or item.get("event_location") or "")
+            address = _stringify_location_like(item.get("address") or item.get("location") or "")
             location_text = simplify_location(venue, address)
             url = clean_ws(item.get("link") or item.get("event_link") or item.get("website") or item.get("url") or "")
 

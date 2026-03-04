@@ -98,6 +98,35 @@ class CollectorTests(unittest.TestCase):
         self.assertIsNotNone(dt)
         self.assertEqual(dt.isoformat(), "2026-04-10T10:00:00-04:00")
 
+
+    def test_collect_serpapi_google_events_handles_dict_location_payloads(self):
+        source = {"name": "Google Events (SerpAPI) [serpapi_google_events]", "query": "cars cincinnati"}
+        rows = [
+            {
+                "title": "Cars and Coffee Test",
+                "date": {"when": "2026-03-21T08:00:00-04:00"},
+                "event_location": {"name": "Test Venue"},
+                "location": {"address": {"streetAddress": "2726 Riverside Drive", "addressLocality": "Cincinnati", "addressRegion": "OH"}},
+                "link": "https://example.com/event",
+            }
+        ]
+
+        class _ProbeResp:
+            ok = True
+            text = "{}"
+
+            def json(self):
+                return {"search_metadata": {"status": "Success"}, "events_results": rows}
+
+        with patch("scripts.events_collector.SERPAPI_API_KEY", "test-key"), patch(
+            "scripts.events_collector.serpapi_search", return_value=({}, rows)
+        ), patch("scripts.events_collector.requests.get", return_value=_ProbeResp()), patch(
+            "scripts.events_collector.enrich_event_from_source_url", return_value=None
+        ):
+            out = collect_serpapi_google_events(source, diagnostics={})
+
+        self.assertEqual(len(out), 1)
+        self.assertIn("Cincinnati", out[0]["location"])
     def test_extract_facebook_page_identifier_variants(self):
         self.assertEqual(
             extract_facebook_page_identifier("https://www.facebook.com/Carscoffeewestchester1/"),
