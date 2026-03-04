@@ -6,6 +6,8 @@ from dateutil import tz
 from pathlib import Path
 from unittest.mock import patch
 
+import scripts.events_collector as events_collector_mod
+
 from scripts.events_collector import (
     EventItem,
     dedupe_merge,
