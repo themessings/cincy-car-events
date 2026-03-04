@@ -3869,23 +3869,157 @@ def dedupe_merge(
 def write_csv(events: List[dict], path: str) -> None:
     fields = [
         "title",
-        "start_iso",
-        "end_iso",
-        "category",
-        "miles_from_cincy",
+        "date",
+        "start_time",
+        "end_time",
+        "categ",
+        "miles_from_c",
         "location",
-        "city_state",
-        "url",
-        "source",
-        "lat",
-        "lon",
-        "last_seen_iso",
+        "link",
     ]
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         for ev in events:
             w.writerow(ev)
+
+
+def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = None) -> Tuple[List[dict], List[str]]:
+    required_headers = [
+        "title",
+        "date",
+        "start_time",
+        "end_time",
+        "categ",
+        "miles_from_c",
+        "location",
+        "link",
+    ]
+    alias_map = {
+        "title": ["title", "event_title", "name"],
+        "date": ["date", "event_date"],
+        "start_time": ["start_time", "time", "starttime"],
+        "end_time": ["end_time", "endtime"],
+        "categ": ["categ", "category", "type"],
+        "miles_from_c": ["miles_from_c", "miles_from_cincy", "miles", "distance", "mileage"],
+        "location": ["location", "venue", "address"],
+        "link": ["link", "url", "event_url", "eventlink"],
+        "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime"],
+        "end_dt": ["end_iso", "end", "end_datetime", "enddatetime"],
+    }
+
+    if headers is None:
+        seen_headers = []
+        seen_set = set()
+        for row in rows:
+            for key in row.keys():
+                if key not in seen_set:
+                    seen_set.add(key)
+                    seen_headers.append(key)
+        headers = seen_headers
+
+    def pick_value(row: dict, aliases: List[str]) -> str:
+        for alias in aliases:
+            if alias in row:
+                return clean_ws(str(row.get(alias, "")))
+        return ""
+
+    def parse_datetime(raw: str) -> Optional[datetime]:
+        text = clean_ws(raw)
+        if not text:
+            return None
+        try:
+            return dateutil_parser.isoparse(text)
+        except Exception:
+            try:
+                return datetime.fromisoformat(text)
+            except Exception:
+                return None
+
+    def format_time(dt_value: datetime) -> str:
+        return dt_value.strftime("%I:%M %p").lstrip("0")
+
+    normalized_rows: List[dict] = []
+    missing_datetime_rows = []
+    for row_idx, row in enumerate(rows, start=1):
+        normalized = {col: "" for col in required_headers}
+        normalized["title"] = pick_value(row, alias_map["title"])
+        normalized["categ"] = pick_value(row, alias_map["categ"])
+        normalized["miles_from_c"] = pick_value(row, alias_map["miles_from_c"])
+        normalized["location"] = pick_value(row, alias_map["location"])
+        normalized["link"] = pick_value(row, alias_map["link"])
+
+        date_text = pick_value(row, alias_map["date"])
+        start_time_text = pick_value(row, alias_map["start_time"])
+        end_time_text = pick_value(row, alias_map["end_time"])
+
+        date_ok = False
+        start_ok = False
+        end_ok = False
+
+        if date_text and start_time_text:
+            try:
+                parsed_date = dateutil_parser.parse(date_text)
+                parsed_start = dateutil_parser.parse(start_time_text)
+                normalized["date"] = parsed_date.strftime("%Y-%m-%d")
+                normalized["start_time"] = format_time(parsed_start)
+                date_ok = True
+                start_ok = True
+            except Exception:
+                pass
+
+            if end_time_text:
+                try:
+                    parsed_end = dateutil_parser.parse(end_time_text)
+                    normalized["end_time"] = format_time(parsed_end)
+                    end_ok = True
+                except Exception:
+                    normalized["end_time"] = ""
+        
+        if not (date_ok and start_ok):
+            start_dt = parse_datetime(pick_value(row, alias_map["start_dt"]))
+            if start_dt:
+                normalized["date"] = start_dt.strftime("%Y-%m-%d")
+                normalized["start_time"] = format_time(start_dt)
+                date_ok = True
+                start_ok = True
+            else:
+                normalized["date"] = ""
+                normalized["start_time"] = ""
+
+        if not end_ok:
+            end_dt = parse_datetime(pick_value(row, alias_map["end_dt"]))
+            if end_dt:
+                normalized["end_time"] = format_time(end_dt)
+                end_ok = True
+            else:
+                normalized["end_time"] = ""
+
+        if not (date_ok and start_ok and end_ok):
+            missing_datetime_rows.append(row_idx)
+
+        normalized_rows.append(normalized)
+
+    dropped_columns = [h for h in headers if h not in required_headers]
+    log(f"🧹 Export schema cleanup dropped columns: {dropped_columns}")
+    log(
+        "🧾 Rows with missing normalized date/time fields: "
+        f"{len(missing_datetime_rows)}"
+    )
+    if missing_datetime_rows:
+        log(f"   Row numbers with missing values: {missing_datetime_rows}")
+
+    final_headers = list(normalized_rows[0].keys()) if normalized_rows else required_headers
+    assert final_headers == required_headers, (
+        f"Invalid export schema order: expected {required_headers} got {final_headers}"
+    )
+    forbidden_combined_headers = {
+        "iso", "start_iso", "end_iso", "start", "end", "start_datetime", "end_datetime", "datetime"
+    }
+    assert not any((h in forbidden_combined_headers) or ("datetime" in h.lower()) or h.lower().endswith("_iso") for h in final_headers), (
+        f"Invalid combined datetime headers in export: {final_headers}"
+    )
+    return normalized_rows, required_headers
 
 
 # -------------------------
@@ -4031,66 +4165,13 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
     # Ensure tab exists
     ensure_sheet_tab(sheets, spreadsheet_id, "Events")
 
-    headers = [
-        "title",
-        "start_iso",
-        "end_iso",
-        "category",
-        "miles_from_cincy",
-        "location",
-        "city_state",
-        "url",
-        "source",
-        "lat",
-        "lon",
-        "last_seen_iso",
-        "usps_verification_status",
-        "address_street",
-        "address_city",
-        "address_state",
-        "address_zip5",
-        "address_zip4",
-        "address_usps_formatted",
-        "address_verification_error",
-    ]
-
-    verification_cache: Dict[Tuple[str, str], Dict[str, str]] = {}
+    normalized_rows, headers = normalize_export_schema(events)
     values = [headers]
-    for ev in events:
-        location_text = clean_ws(ev.get("location", ""))
-        city_state_text = clean_ws(ev.get("city_state", ""))
-        cache_key = (location_text.lower(), city_state_text.lower())
-        if cache_key not in verification_cache:
-            verification_cache[cache_key] = verify_usps_address(location_text, city_state_text)
-        verified = verification_cache[cache_key]
-
-        values.append(
-            [
-                ev.get("title", ""),
-                ev.get("start_iso", ""),
-                ev.get("end_iso", ""),
-                ev.get("category", ""),
-                ev.get("miles_from_cincy"),
-                location_text,
-                city_state_text,
-                ev.get("url", ""),
-                ev.get("source", ""),
-                ev.get("lat"),
-                ev.get("lon"),
-                ev.get("last_seen_iso", ""),
-                verified.get("status", ""),
-                verified.get("street", ""),
-                verified.get("city", ""),
-                verified.get("state", ""),
-                verified.get("zip5", ""),
-                verified.get("zip4", ""),
-                verified.get("formatted", ""),
-                verified.get("error", ""),
-            ]
-        )
+    for ev in normalized_rows:
+        values.append([ev.get(h, "") for h in headers])
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
-    clear_range = "Events!A1:T"
+    clear_range = "Events!A1:H"
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
         range=clear_range,
@@ -4105,11 +4186,11 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         body={"values": values},
     ).execute()
 
-    # 3) Write a visible update stamp (column U is outside your table)
+    # 3) Write a visible update stamp (column J is outside your table)
     stamp = f"Updated by bot: {now_et_iso()} | rows={len(values)-1}"
     sheets.spreadsheets().values().update(
         spreadsheetId=spreadsheet_id,
-        range="Events!U1",
+        range="Events!J1",
         valueInputOption="RAW",
         body={"values": [[stamp]]},
     ).execute()
@@ -4123,7 +4204,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
     log(f"🧽 Cleared Events sheet range {clear_range} then wrote {len(values)-1} rows")
     log(f"   Wrote {len(values)-1} events to Events!A1")
     log(f"   Preview A1:C5 = {got}")
-    log(f"   Stamp written to Events!U1 = {stamp}")
+    log(f"   Stamp written to Events!J1 = {stamp}")
 
 
 
@@ -4366,15 +4447,17 @@ def main():
     save_json(GEOCODE_CACHE_PATH, geocache)
     save_json(URL_CACHE_PATH, url_cache)
 
+    export_rows, _ = normalize_export_schema(merged_dicts)
+
     payload = {
         "generated_at_iso": now_et_iso(),
-        "count": len(merged_dicts),
-        "events": merged_dicts,
+        "count": len(export_rows),
+        "events": export_rows,
     }
     save_json(EVENTS_JSON_PATH, payload)
-    write_csv(merged_dicts, EVENTS_CSV_PATH)
+    write_csv(export_rows, EVENTS_CSV_PATH)
 
-    update_apex_spreadsheet(merged_dicts)
+    update_apex_spreadsheet(export_rows)
     spreadsheet_id = os.getenv("APEX_SPREADSHEET_ID")
     if spreadsheet_id:
         log(f"📄 Sheets URL: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
@@ -4386,7 +4469,7 @@ def main():
         "generated_at_iso": now_et_iso(),
         "raw_events": len(raw_events),
         "incoming_after_filters": len(incoming),
-        "merged_total": len(merged_dicts),
+        "merged_total": len(export_rows),
         "source_stats": source_run_stats,
         "source_failures": source_failures,
         "serpapi_enabled": serpapi_enabled,
