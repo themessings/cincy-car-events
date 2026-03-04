@@ -11,6 +11,7 @@ import scripts.events_collector as events_collector_mod
 from scripts.events_collector import (
     EventItem,
     dedupe_merge,
+    dedupe_export_rows,
     evaluate_automotive_focus_event,
     extract_facebook_page_identifier,
     extract_facebook_group_key,
@@ -54,6 +55,41 @@ class CollectorTests(unittest.TestCase):
         ]
         merged = dedupe_merge([base], incoming)
         self.assertEqual(len(merged), 2)
+
+
+    def test_dedupe_export_rows_handles_iso_and_fallback_matches(self):
+        rows = [
+            {
+                "title": "Cars & Coffee!",
+                "start_iso": "2026-03-10T09:00:00-05:00",
+                "end_iso": "2026-03-10T11:00:00-05:00",
+                "date": "2026-03-10",
+                "start_time": "9:00 AM",
+                "end_time": "11:00 AM",
+                "location": "123 Main St, Cincinnati, OH, United States",
+                "link": "https://example.com/e?utm_source=fb",
+            },
+            {
+                "title": "Cars and Coffee",
+                "start_iso": "2026-03-10T09:07:00-05:00",
+                "end_iso": "",
+                "date": "2026-03-10",
+                "start_time": "9:07 AM",
+                "end_time": "",
+                "location": "123 Main St, Cincinnati, OH, USA",
+                "link": "https://example.com/e#fragment",
+            },
+            {
+                "title": "Another Event",
+                "start_iso": "2026-03-12T09:00:00-05:00",
+                "location": "456 Elm St, Cincinnati, OH",
+                "link": "https://example.com/another",
+            },
+        ]
+
+        deduped = dedupe_export_rows(rows)
+        self.assertEqual(len(deduped), 2)
+        self.assertEqual(deduped[0]["title"], "Cars & Coffee!")
 
     def test_filter_reason_non_automotive_keyword(self):
         cfg = {

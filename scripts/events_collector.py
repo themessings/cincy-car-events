@@ -12,7 +12,7 @@ from collections import Counter
 from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
-from urllib.parse import parse_qs, unquote, urljoin, urlparse
+from urllib.parse import parse_qs, unquote, urlencode, urljoin, urlparse, urlunparse
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
@@ -85,6 +85,208 @@ FACEBOOK_COVERAGE: Dict[str, object] = {"token": {}, "serp_queries": [], "urls_d
 TOKEN_MANAGER: Optional[TokenManager] = None
 URL_ENRICH_CACHE: Dict[str, Optional[dict]] = {}
 EST_TZ = tz.tzoffset("EST", -5 * 60 * 60)
+
+
+def _normalize_title_for_export_dedupe(value: str) -> str:
+    text = clean_ws(value).lower()
+    if not text:
+        return ""
+    text = text.replace("&", " and ")
+    text = re.sub(r"\band\b", " and ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"[\s\.,;:!\?-]+$", "", text)
+    return text
+
+
+def _normalize_location_for_export_dedupe(value: str) -> str:
+    text = clean_ws(value).lower()
+    if not text:
+        return ""
+    text = re.sub(r"\b(united\s+states|u\.?s\.?a\.?|u\.?s\.?)\b", "", text)
+    text = re.sub(r"\s+", " ", text)
+    parts = [clean_ws(p) for p in re.split(r"\s*,\s*", text) if clean_ws(p)]
+    deduped_parts: List[str] = []
+    seen = set()
+    for part in parts:
+        normalized_part = re.sub(r"[^a-z0-9 ]+", "", part).strip()
+        if not normalized_part or normalized_part in seen:
+            continue
+        seen.add(normalized_part)
+        deduped_parts.append(part)
+    return ", ".join(deduped_parts)
+
+
+def _normalize_link_for_export_dedupe(value: str) -> str:
+    raw = clean_ws(value)
+    if not raw:
+        return ""
+    parsed = urlparse(raw if "://" in raw else f"https://{raw}")
+    host = (parsed.netloc or "").lower()
+    query_items = parse_qs(parsed.query, keep_blank_values=True)
+    filtered_query = []
+    for key in sorted(query_items.keys()):
+        key_l = key.lower()
+        if key_l.startswith("utm_") or key_l in {"fbclid", "gclid"}:
+            continue
+        for val in query_items[key]:
+            filtered_query.append((key, val))
+    query = urlencode(filtered_query, doseq=True)
+    return urlunparse((parsed.scheme or "https", host, parsed.path, "", query, ""))
+
+
+def _parse_export_row_start_dt(row: dict, start_iso_key: str, date_key: str, start_time_key: str) -> Optional[datetime]:
+    raw_iso = clean_ws(str(row.get(start_iso_key, ""))) if start_iso_key else ""
+    dt_value: Optional[datetime] = None
+    if raw_iso:
+        try:
+            dt_value = dateutil_parser.isoparse(raw_iso)
+        except Exception:
+            try:
+                dt_value = datetime.fromisoformat(raw_iso)
+            except Exception:
+                try:
+                    dt_value = dateutil_parser.parse(raw_iso)
+                except Exception:
+                    dt_value = None
+
+    if dt_value is None and date_key:
+        date_raw = clean_ws(str(row.get(date_key, "")))
+        time_raw = clean_ws(str(row.get(start_time_key, ""))) if start_time_key else ""
+        if date_raw:
+            try:
+                dt_value = dateutil_parser.parse(f"{date_raw} {time_raw}".strip())
+            except Exception:
+                dt_value = None
+
+    if dt_value and dt_value.tzinfo is None:
+        dt_value = dt_value.replace(tzinfo=tz.gettz("America/New_York"))
+    return dt_value
+
+
+def dedupe_export_rows(rows: List[dict]) -> List[dict]:
+    """Deduplicate export rows using canonical title/time/location/link rules.
+
+    Inline test examples (expected kept row first in each cluster):
+    1) Same title + same start_iso + same location variant => keep row with non-empty link.
+    2) Same title + start times 7 minutes apart + same link (utm differs) => keep row with date/start/end populated.
+    3) Same title + exact start_iso + duplicated address fragments => keep row with cleaner, longer location.
+    4) Same title + same start_iso + matching normalized link + one row has end_iso => keep row with end_iso.
+    5) Perfect score tie between duplicates => keep earliest occurrence for deterministic output.
+    """
+    if not rows:
+        return []
+
+    alias_map = {
+        "title": ["title", "event_title", "name"],
+        "start_iso": ["start_iso", "iso", "start", "startdatetime"],
+        "end_iso": ["end_iso", "end", "enddatetime"],
+        "date": ["date", "event_date"],
+        "start_time": ["start_time", "time", "starttime"],
+        "end_time": ["end_time", "endtime"],
+        "location": ["location", "venue", "address"],
+        "link": ["link", "url", "event_url", "eventlink"],
+        "categ": ["categ", "category", "type"],
+    }
+    row_keys = set().union(*(row.keys() for row in rows if isinstance(row, dict)))
+
+    def pick_key(cands: List[str]) -> str:
+        for c in cands:
+            if c in row_keys:
+                return c
+        return ""
+
+    k_title = pick_key(alias_map["title"])
+    k_start_iso = pick_key(alias_map["start_iso"])
+    k_end_iso = pick_key(alias_map["end_iso"])
+    k_date = pick_key(alias_map["date"])
+    k_start_time = pick_key(alias_map["start_time"])
+    k_end_time = pick_key(alias_map["end_time"])
+    k_location = pick_key(alias_map["location"])
+    k_link = pick_key(alias_map["link"])
+
+    enriched = []
+    for index, row in enumerate(rows):
+        title_norm = _normalize_title_for_export_dedupe(str(row.get(k_title, ""))) if k_title else ""
+        location_norm = _normalize_location_for_export_dedupe(str(row.get(k_location, ""))) if k_location else ""
+        link_norm = _normalize_link_for_export_dedupe(str(row.get(k_link, ""))) if k_link else ""
+        start_dt = _parse_export_row_start_dt(row, k_start_iso, k_date, k_start_time)
+        start_iso_norm = start_dt.isoformat() if start_dt else ""
+
+        score = (
+            1 if link_norm else 0,
+            1 if all(clean_ws(str(row.get(k, ""))) for k in (k_date, k_start_time, k_end_time) if k) and all([k_date, k_start_time, k_end_time]) else 0,
+            min(len(location_norm), 300),
+            1 if (k_end_iso and clean_ws(str(row.get(k_end_iso, "")))) else 0,
+            -index,
+        )
+        enriched.append(
+            {
+                "index": index,
+                "row": row,
+                "title_norm": title_norm,
+                "location_norm": location_norm,
+                "link_norm": link_norm,
+                "start_dt": start_dt,
+                "start_iso_norm": start_iso_norm,
+                "score": score,
+            }
+        )
+
+    groups: List[List[dict]] = []
+    for item in enriched:
+        matched_group: Optional[List[dict]] = None
+        for group in groups:
+            for candidate in group:
+                strong_match = (
+                    item["title_norm"]
+                    and item["title_norm"] == candidate["title_norm"]
+                    and item["start_iso_norm"]
+                    and item["start_iso_norm"] == candidate["start_iso_norm"]
+                    and (
+                        (item["location_norm"] and item["location_norm"] == candidate["location_norm"])
+                        or (item["link_norm"] and item["link_norm"] == candidate["link_norm"])
+                    )
+                )
+                fallback_match = False
+                if not strong_match and item["title_norm"] and item["title_norm"] == candidate["title_norm"]:
+                    if item["start_dt"] and candidate["start_dt"]:
+                        diff_minutes = abs((item["start_dt"] - candidate["start_dt"]).total_seconds()) / 60
+                        fallback_match = diff_minutes <= 10 and (
+                            (item["location_norm"] and item["location_norm"] == candidate["location_norm"])
+                            or (item["link_norm"] and item["link_norm"] == candidate["link_norm"])
+                        )
+                if strong_match or fallback_match:
+                    matched_group = group
+                    break
+            if matched_group is not None:
+                break
+        if matched_group is None:
+            groups.append([item])
+        else:
+            matched_group.append(item)
+
+    deduped: List[dict] = []
+    removed: List[dict] = []
+    for group in groups:
+        keep = max(group, key=lambda g: g["score"])
+        deduped.append(keep["row"])
+        for item in group:
+            if item is not keep:
+                removed.append(item["row"])
+
+    log(
+        "🧹 Export dedupe summary: "
+        f"in={len(rows)} unique_out={len(deduped)} duplicates_removed={len(removed)}"
+    )
+    if removed:
+        sample = []
+        for row in removed[:5]:
+            sample.append(
+                f"{clean_ws(str(row.get(k_title, '')))} | {clean_ws(str(row.get(k_date, '')))} | {clean_ws(str(row.get(k_start_time, '')))}"
+            )
+        log("🧹 Removed duplicate sample: " + " || ".join(sample))
+
+    return deduped
 
 
 def get_token_manager() -> TokenManager:
@@ -4156,6 +4358,8 @@ def main():
     merged_dicts = prune_past_events(merged_dicts, now_et)
     for ev in merged_dicts:
         ev["location"] = normalize_location_for_output(ev.get("location", ""), ev.get("city_state", ""))
+
+    merged_dicts = dedupe_export_rows(merged_dicts)
 
     geocache = prune_cache_by_age(geocache, now_et, days=180, label="geocode_cache")
     url_cache = prune_cache_by_age(url_cache, now_et, days=180, label="url_cache")
