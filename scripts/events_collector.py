@@ -2006,17 +2006,42 @@ def _extract_wordpress_event_datetimes(row, fallback_start_dt: Optional[datetime
     if not start_dt or not time_text:
         return start_dt, end_dt
 
-    # Look for ranges such as "8:00 am - 12:00 pm".
-    match = re.search(
-        r"(\d{1,2}(?::\d{2})?\s*[AaPp]\.?[Mm]\.?)\s*(?:-|–|—|to)\s*(\d{1,2}(?::\d{2})?\s*[AaPp]\.?[Mm]\.?)",
+    date_prefix = start_dt.strftime("%Y-%m-%d")
+
+    time_token = r"\d{1,2}(?::\d{2})?"
+    meridiem_token = r"(?:\s*[AaPp]\.?[Mm]\.?)?"
+
+    # Handle common variants:
+    # - 8:00 am - 10:30 am EST
+    # - 8:00am - 10:30 EST (missing second am/pm)
+    # - 8 am to 10 am
+    range_match = re.search(
+        rf"({time_token}{meridiem_token})\s*(?:-|–|—|to)\s*({time_token}{meridiem_token})",
         time_text,
     )
-    if not match:
-        return start_dt, end_dt
+    single_match = re.search(rf"\b({time_token}\s*[AaPp]\.?[Mm]\.?)\b", time_text)
 
-    date_prefix = start_dt.strftime("%Y-%m-%d")
-    parsed_start = parse_dt(f"{date_prefix} {match.group(1)}")
-    parsed_end = parse_dt(f"{date_prefix} {match.group(2)}")
+    parsed_start = None
+    parsed_end = None
+    if range_match:
+        start_raw = clean_ws(range_match.group(1))
+        end_raw = clean_ws(range_match.group(2))
+
+        # If one side is missing am/pm, inherit it from the other side.
+        meridiem_pattern = r"[AaPp]\.?[Mm]\.?"
+        start_has_meridiem = bool(re.search(meridiem_pattern, start_raw))
+        end_has_meridiem = bool(re.search(meridiem_pattern, end_raw))
+        if start_has_meridiem and not end_has_meridiem:
+            inferred_meridiem = re.search(meridiem_pattern, start_raw).group(0)
+            end_raw = clean_ws(f"{end_raw} {inferred_meridiem}")
+        elif end_has_meridiem and not start_has_meridiem:
+            inferred_meridiem = re.search(meridiem_pattern, end_raw).group(0)
+            start_raw = clean_ws(f"{start_raw} {inferred_meridiem}")
+
+        parsed_start = parse_dt(f"{date_prefix} {start_raw}")
+        parsed_end = parse_dt(f"{date_prefix} {end_raw}")
+    elif single_match:
+        parsed_start = parse_dt(f"{date_prefix} {single_match.group(1)}")
 
     # Use parsed clock times when they are available; this prevents date-only
     # <time datetime="YYYY-MM-DD"> values from becoming midnight defaults.
