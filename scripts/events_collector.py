@@ -3674,6 +3674,48 @@ def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
     requests_body = {"requests": [{"addSheet": {"properties": {"title": title}}}]}
     sheets.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id, body=requests_body).execute()
 
+
+def verify_usps_address(location_text: str, city_state_text: str) -> Dict[str, str]:
+    """Return normalized USPS verification columns for the Events export.
+
+    USPS validation is optional and can be enabled later; for now this helper
+    guarantees stable output fields and prevents runtime failures when address
+    verification is unavailable.
+    """
+    street = clean_ws(location_text)
+    city_state = clean_ws(city_state_text)
+
+    if not street:
+        return {
+            "status": "skipped_missing_location",
+            "street": "",
+            "city": "",
+            "state": "",
+            "zip5": "",
+            "zip4": "",
+            "formatted": "",
+            "error": "",
+        }
+
+    city = ""
+    state = ""
+    m = re.match(r"^(.+?),\s*([A-Za-z]{2})$", city_state)
+    if m:
+        city = clean_ws(m.group(1))
+        state = clean_ws(m.group(2)).upper()
+
+    formatted_parts = [part for part in (street, city_state) if part]
+    return {
+        "status": "not_configured",
+        "street": street,
+        "city": city,
+        "state": state,
+        "zip5": "",
+        "zip4": "",
+        "formatted": ", ".join(formatted_parts),
+        "error": "USPS verification not configured",
+    }
+
 def update_apex_spreadsheet(events: List[dict]) -> None:
     dry_run = clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y")
     if dry_run:
