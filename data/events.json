@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-04T12:17:25.174906-05:00",
-  "count": 159,
+  "generated_at_iso": "2026-03-04T17:47:29.702531-05:00",
+  "count": 156,
   "events": [
     {
       "title": "Embassy of Italy: Il Cinema Ritrovato on Tour 2026 (Opening Night)",
@@ -48,8 +48,8 @@
       "start_time": "7:30 AM",
       "end_time": "9:30 AM",
       "categ": "local",
-      "miles_from_c": "None",
-      "location": "2812 Fishinger Rd, Upper Arlington, OH 43220",
+      "miles_from_c": "99.2",
+      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
       "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-06/"
     },
     {
@@ -298,8 +298,8 @@
       "start_time": "7:30 AM",
       "end_time": "9:30 AM",
       "categ": "local",
-      "miles_from_c": "None",
-      "location": "2812 Fishinger Rd, Upper Arlington, OH 43220",
+      "miles_from_c": "99.2",
+      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
       "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-13/"
     },
     {
@@ -1463,16 +1463,6 @@
       "link": "Same as above"
     },
     {
-      "title": "Cancer Awareness Rally – Day 2",
-      "date": "2026-10-18",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "401.5",
-      "location": "Washington, DC",
-      "link": "Same as above"
-    },
-    {
       "title": "Cancer Awareness Rally – Day 3",
       "date": "2026-10-19",
       "start_time": "11:00 PM",
@@ -1480,16 +1470,6 @@
       "categ": "rally",
       "miles_from_c": "214.7",
       "location": "Knoxville, TN, Bristol, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 3",
-      "date": "2026-10-19",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "214.7",
-      "location": "Bristol, TN",
       "link": "Same as above"
     },
     {
@@ -1510,16 +1490,6 @@
       "categ": "rally",
       "miles_from_c": "237.9",
       "location": "Knoxville, TN, Nashville, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 5",
-      "date": "2026-10-21",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "237.9",
-      "location": "Nashville, TN",
       "link": "Same as above"
     },
     {
