@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-03T22:17:10.272128-05:00",
-  "count": 136,
+  "generated_at_iso": "2026-03-03T22:35:23.568267-05:00",
+  "count": 157,
   "events": [
     {
       "title": "Drinking Liberally Weekly Meetup",
@@ -243,16 +243,6 @@
       "link": "https://carsandcoffeeevents.com/event/columbus-cafe-racers-monthly-luch-cruise-in/2026-03-11/"
     },
     {
-      "title": "Cavalcade Of Customs",
-      "date": "2026-03-12",
-      "start_time": "11:00 PM",
-      "end_time": "11:00 PM",
-      "categ": "local",
-      "miles_from_c": "17.1",
-      "location": "Beckett Ridge",
-      "link": "https://facebook.com/events/s/cavalcade-of-customs/1388482562860993/"
-    },
-    {
       "title": "Columbus Cars & Coffee Fridays",
       "date": "2026-03-13",
       "start_time": "12:00 AM",
@@ -261,6 +251,16 @@
       "miles_from_c": "99.2",
       "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
       "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-13/"
+    },
+    {
+      "title": "Cavalcade Of Customs",
+      "date": "2026-03-13",
+      "start_time": "12:00 AM",
+      "end_time": "12:00 AM",
+      "categ": "local",
+      "miles_from_c": "17.1",
+      "location": "Beckett Ridge",
+      "link": "https://facebook.com/events/s/cavalcade-of-customs/1388482562860993/"
     },
     {
       "title": "Three Legs of Mann Rally 2026 &#8211; Isle of Man",
@@ -285,8 +285,8 @@
     {
       "title": "65th Annual Cavalcade of Customs",
       "date": "2026-03-13",
-      "start_time": "2:00 PM",
-      "end_time": "5:00 PM",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
       "categ": "local",
       "miles_from_c": "0.3",
       "location": "Duke Energy Convention Center",
@@ -295,8 +295,8 @@
     {
       "title": "Euro Cars and Cocoa",
       "date": "2026-03-15",
-      "start_time": "8:00 AM",
-      "end_time": "11:00 AM",
+      "start_time": "9:00 AM",
+      "end_time": "12:00 PM",
       "categ": "local",
       "miles_from_c": "17.5",
       "location": "The Cocoa Muse",
@@ -307,6 +307,16 @@
       "date": "2026-03-18",
       "start_time": "5:00 PM",
       "end_time": "8:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Quaker Steak and Lube Colerain, OH",
+      "link": "https://facebook.com/events/s/endless-car-culture-cincinnati/1621707615689231/"
+    },
+    {
+      "title": "Endless Car Culture, Cincinnati / Meet #4.1",
+      "date": "2026-03-18",
+      "start_time": "6:00 PM",
+      "end_time": "9:00 PM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "Quaker Steak and Lube Colerain, OH",
@@ -333,10 +343,20 @@
       "link": "https://facebook.com/events/s/dragon-rally-li-51/743746872121536/"
     },
     {
+      "title": "Dragon Rally® LI (51)",
+      "date": "2026-03-21",
+      "start_time": "8:00 AM",
+      "end_time": "11:00 AM",
+      "categ": "rally",
+      "miles_from_c": "None",
+      "location": "129 Hub 4371 Calderwood Hwy Maryville, TN 37801",
+      "link": "https://facebook.com/events/s/dragon-rally-li-51/743746872121536/"
+    },
+    {
       "title": "RCR 2026 Car Season Kickoff",
       "date": "2026-03-21",
-      "start_time": "9:00 AM",
-      "end_time": "12:00 PM",
+      "start_time": "10:00 AM",
+      "end_time": "1:00 PM",
       "categ": "local",
       "miles_from_c": "88.8",
       "location": "Paristown - Louisville, KY",
@@ -345,18 +365,18 @@
     {
       "title": "Cincinnati Auto Expo",
       "date": "2026-03-26",
-      "start_time": "4:00 PM",
-      "end_time": "7:00 PM",
+      "start_time": "5:00 PM",
+      "end_time": "8:00 PM",
       "categ": "local",
       "miles_from_c": "0.1",
-      "location": "525 Elm Street, Cincinnati OH 45202",
+      "location": "525 Elm Street, Cincinnati, OH",
       "link": "https://facebook.com/events/s/cincinnati-auto-expo/1355761812681578/"
     },
     {
       "title": "April Spools 2026",
       "date": "2026-03-26",
-      "start_time": "5:00 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "categ": "local",
       "miles_from_c": "176.8",
       "location": "NCM Motorsports Park",
@@ -405,8 +425,8 @@
     {
       "title": "GDCC Corvettes & Coffee at National Museum of United States Airforce",
       "date": "2026-04-18",
-      "start_time": "8:00 AM",
-      "end_time": "11:00 AM",
+      "start_time": "9:00 AM",
+      "end_time": "12:00 PM",
       "categ": "local",
       "miles_from_c": "51.5",
       "location": "National Museum of the U.S. Air Force",
@@ -433,10 +453,30 @@
       "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "title": "Fairfield Cars and Coffee 2026 #1",
+      "date": "2026-04-19",
+      "start_time": "9:00 AM",
+      "end_time": "12:00 PM",
+      "categ": "local",
+      "miles_from_c": "16.7",
+      "location": "8695 Bilstein Blvd Hamilton Ohio 45015",
+      "link": "https://facebook.com/events/s/fairfield-cars-and-coffee-2026/1629100551564096/"
+    },
+    {
       "title": "5th Annual “Hail to Horsepower” Car Show",
       "date": "2026-04-25",
       "start_time": "8:00 AM",
       "end_time": "3:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Horsepower Farm Middletown",
+      "link": "fb://event/?id=788415087022357"
+    },
+    {
+      "title": "5th Annual “Hail to Horsepower” Car Show",
+      "date": "2026-04-25",
+      "start_time": "9:00 AM",
+      "end_time": "4:00 PM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "Horsepower Farm Middletown",
@@ -473,10 +513,30 @@
       "link": "https://facebook.com/events/s/10th-annual-cruisin-to-a-cure-/3335085709990389/"
     },
     {
+      "title": "10th Annual Cruisin to A Cure for ALS Car Show",
+      "date": "2026-05-03",
+      "start_time": "9:00 AM",
+      "end_time": "5:00 PM",
+      "categ": "local",
+      "miles_from_c": "76.5",
+      "location": "City of Lawrenceburg",
+      "link": "https://facebook.com/events/s/10th-annual-cruisin-to-a-cure-/3335085709990389/"
+    },
+    {
       "title": "Slammedenuff Ohio Car Show 2026",
       "date": "2026-05-03",
       "start_time": "12:00 PM",
       "end_time": "5:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Ohio Expo Center - Lausche Building",
+      "link": "https://facebook.com/events/s/slammedenuff-ohio-car-show-202/1347835250446936/"
+    },
+    {
+      "title": "Slammedenuff Ohio Car Show 2026",
+      "date": "2026-05-03",
+      "start_time": "1:00 PM",
+      "end_time": "6:00 PM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "Ohio Expo Center - Lausche Building",
@@ -595,8 +655,8 @@
     {
       "title": "2026 Annual Krieger Ford Car & Truck Extravaganza",
       "date": "2026-05-17",
-      "start_time": "7:00 AM",
-      "end_time": "3:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "4:00 PM",
       "categ": "local",
       "miles_from_c": "105.5",
       "location": "Krieger Ford",
@@ -613,10 +673,30 @@
       "link": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
     },
     {
+      "title": "Valley High Car Show",
+      "date": "2026-05-17",
+      "start_time": "10:00 AM",
+      "end_time": "3:00 PM",
+      "categ": "local",
+      "miles_from_c": "89.3",
+      "location": "10200 Dixie Hwy, Louisville, KY",
+      "link": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
+    },
+    {
       "title": "Rumble on the River Car Show 2026",
       "date": "2026-05-23",
       "start_time": "6:00 AM",
       "end_time": "3:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Riverfront Madison IN",
+      "link": "https://facebook.com/events/s/rumble-on-the-river-car-show-2/853255881026686/"
+    },
+    {
+      "title": "Rumble on the River Car Show 2026",
+      "date": "2026-05-23",
+      "start_time": "7:00 AM",
+      "end_time": "4:00 PM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "Riverfront Madison IN",
@@ -635,8 +715,8 @@
     {
       "title": "21st Annual Beatersville Car and Bike Show",
       "date": "2026-05-24",
-      "start_time": "8:00 AM",
-      "end_time": "9:00 AM",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "Portal Louisville",
@@ -673,6 +753,26 @@
       "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "title": "Open House & Car Show",
+      "date": "2026-05-30",
+      "start_time": "11:00 AM",
+      "end_time": "2:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Eclipse Window Tinting, Cincinnati Ohio",
+      "link": "https://facebook.com/events/s/open-house-car-show/1831242324193150/"
+    },
+    {
+      "title": "Dog face K9s 3rd annual Car show",
+      "date": "2026-05-30",
+      "start_time": "11:00 AM",
+      "end_time": "3:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Quaker Steak and Lube",
+      "link": "https://facebook.com/events/s/dog-face-k9s-3rd-annual-car-sh/904114905896136/"
+    },
+    {
       "title": "4th Annual 20th Century All GM Car Show and Swap Meet",
       "date": "2026-05-31",
       "start_time": "9:00 AM",
@@ -685,8 +785,8 @@
     {
       "title": "No Limits 937™ Private Event featuring The Food Pitt",
       "date": "2026-05-31",
-      "start_time": "4:00 PM",
-      "end_time": "6:00 PM",
+      "start_time": "5:00 PM",
+      "end_time": "7:00 PM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "DNA Computers & Electronics Repair",
@@ -717,6 +817,16 @@
       "date": "2026-06-06",
       "start_time": "1:00 PM",
       "end_time": "9:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Oxford Masonic Lodge car show",
+      "link": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
+    },
+    {
+      "title": "Oxford Masonic Lodge Annual Charity Car and Bike show",
+      "date": "2026-06-06",
+      "start_time": "2:00 PM",
+      "end_time": "10:00 PM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "Oxford Masonic Lodge car show",
@@ -773,16 +883,6 @@
       "link": "https://www.americanrallyassociation.org/sofr"
     },
     {
-      "title": "OVR PCA Autocross - June 2026",
-      "date": "2026-06-13",
-      "start_time": "8:30 AM",
-      "end_time": "3:00 PM",
-      "categ": "local",
-      "miles_from_c": "None",
-      "location": "",
-      "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
       "title": "Southern Ohio Forest Rally – Day 3",
       "date": "2026-06-13",
       "start_time": "8:00 AM",
@@ -791,6 +891,16 @@
       "miles_from_c": "83.4",
       "location": "Chillicothe, OH",
       "link": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "title": "OVR PCA Autocross - June 2026",
+      "date": "2026-06-13",
+      "start_time": "8:30 AM",
+      "end_time": "3:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "",
+      "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
       "title": "Dynasty Rally 2026 – Day 1",
@@ -853,6 +963,16 @@
       "link": "https://facebook.com/events/s/voss-hoss-cruise-in-2026/1347118783851195/"
     },
     {
+      "title": "Voss Hoss Cruise-in 2026",
+      "date": "2026-06-19",
+      "start_time": "5:00 PM",
+      "end_time": "9:00 PM",
+      "categ": "rally",
+      "miles_from_c": "None",
+      "location": "Voss Used Vehicles",
+      "link": "https://facebook.com/events/s/voss-hoss-cruise-in-2026/1347118783851195/"
+    },
+    {
       "title": "Dynasty Rally 2026 – Day 3",
       "date": "2026-06-20",
       "start_time": "8:00 AM",
@@ -883,10 +1003,20 @@
       "link": "https://facebook.com/events/s/whiskey-row-car-show-june-20th/2608203072913628/"
     },
     {
+      "title": "GDCC Annual all Corvette Car Show",
+      "date": "2026-06-20",
+      "start_time": "9:00 AM",
+      "end_time": "3:00 PM",
+      "categ": "local",
+      "miles_from_c": "52.5",
+      "location": "Hollywood Gaming at Dayton Raceway",
+      "link": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
+    },
+    {
       "title": "Barrett-Jackson 2026 Columbus Auction",
       "date": "2026-06-25",
-      "start_time": "7:00 AM",
-      "end_time": "5:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "6:00 PM",
       "categ": "local",
       "miles_from_c": "102.1",
       "location": "Ohio Expo Center & State Fairgrounds",
@@ -895,8 +1025,8 @@
     {
       "title": "North vs. South Charity Car Event 2026",
       "date": "2026-06-25",
-      "start_time": "12:00 PM",
-      "end_time": "7:00 PM",
+      "start_time": "1:00 PM",
+      "end_time": "8:00 PM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "Destination Outlets (formerly Jeffersonville Outlets) *Off I-71, Jeffersonville, Ohio",
@@ -907,6 +1037,16 @@
       "date": "2026-06-28",
       "start_time": "10:00 AM",
       "end_time": "1:30 PM",
+      "categ": "local",
+      "miles_from_c": "18.1",
+      "location": "Perfect Place Ln, Lawrenceburg, IN 47025",
+      "link": "https://facebook.com/events/s/annual-car-show-chicken-dinner/2048696039298978/"
+    },
+    {
+      "title": "Annual Car Show & Chicken Dinner",
+      "date": "2026-06-28",
+      "start_time": "11:00 AM",
+      "end_time": "2:30 PM",
       "categ": "local",
       "miles_from_c": "18.1",
       "location": "Perfect Place Ln, Lawrenceburg, IN 47025",
@@ -957,6 +1097,16 @@
       "date": "2026-07-11",
       "start_time": "7:30 AM",
       "end_time": "2:30 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Fairfield Ohio - Cincinatti",
+      "link": "https://facebook.com/events/s/cincy-cool-cars-club-car-show/1223464389322097/"
+    },
+    {
+      "title": "Cincy Cool Cars Club Car Show",
+      "date": "2026-07-11",
+      "start_time": "8:30 AM",
+      "end_time": "3:30 PM",
       "categ": "local",
       "miles_from_c": "None",
       "location": "Fairfield Ohio - Cincinatti",
@@ -1047,6 +1197,16 @@
       "date": "2026-07-18",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
+      "categ": "rally",
+      "miles_from_c": "None",
+      "location": "Circuit Cafe / Cincinnati Cars & Coffee",
+      "link": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
+    },
+    {
+      "title": "Dynasty Rally 2026",
+      "date": "2026-07-18",
+      "start_time": "9:00 AM",
+      "end_time": "6:00 PM",
       "categ": "rally",
       "miles_from_c": "None",
       "location": "Circuit Cafe / Cincinnati Cars & Coffee",
@@ -1155,8 +1315,8 @@
     {
       "title": "57th NSRA Street Rod Nationals",
       "date": "2026-08-06",
-      "start_time": "7:00 AM",
-      "end_time": "12:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "1:00 PM",
       "categ": "local",
       "miles_from_c": "91.0",
       "location": "Kentucky Exposition Center",
@@ -1173,16 +1333,6 @@
       "link": "https://cincyscca.com/rally-cross/"
     },
     {
-      "title": "OVR PCA Autocross - August 2026",
-      "date": "2026-08-08",
-      "start_time": "8:30 AM",
-      "end_time": "3:00 PM",
-      "categ": "local",
-      "miles_from_c": "None",
-      "location": "",
-      "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
       "title": "RallyCross – Edgewater",
       "date": "2026-08-08",
       "start_time": "8:00 AM",
@@ -1191,6 +1341,16 @@
       "miles_from_c": "43.5",
       "location": "Wilmington, OH",
       "link": "https://cincyscca.com/rally-cross/"
+    },
+    {
+      "title": "OVR PCA Autocross - August 2026",
+      "date": "2026-08-08",
+      "start_time": "8:30 AM",
+      "end_time": "3:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "",
+      "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
       "title": "Frisch's Court Street Car Show/Cruise-In",
@@ -1213,16 +1373,6 @@
       "link": "https://ridewithrandy.org/"
     },
     {
-      "title": "OVR PCA Autocross - September 2026",
-      "date": "2026-09-12",
-      "start_time": "8:30 AM",
-      "end_time": "3:00 PM",
-      "categ": "local",
-      "miles_from_c": "None",
-      "location": "",
-      "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
       "title": "Ride With Randy Rally",
       "date": "2026-09-12",
       "start_time": "8:00 AM",
@@ -1231,6 +1381,16 @@
       "miles_from_c": "89.3",
       "location": "Louisville, KY",
       "link": "https://ridewithrandy.org/"
+    },
+    {
+      "title": "OVR PCA Autocross - September 2026",
+      "date": "2026-09-12",
+      "start_time": "8:30 AM",
+      "end_time": "3:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "",
+      "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
       "title": "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event",
@@ -1253,6 +1413,16 @@
       "link": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "title": "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event",
+      "date": "2026-10-03",
+      "start_time": "11:00 AM",
+      "end_time": "2:00 PM",
+      "categ": "rally",
+      "miles_from_c": "0.1",
+      "location": "2669 E Kemper Road, Cincinnati, OH",
+      "link": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
+    },
+    {
       "title": "Cancer Awareness Rally – Day 1",
       "date": "2026-10-17",
       "start_time": "11:00 PM",
@@ -1273,6 +1443,16 @@
       "link": "Same as above"
     },
     {
+      "title": "Cancer Awareness Rally – Day 2",
+      "date": "2026-10-18",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "401.5",
+      "location": "Washington, DC",
+      "link": "Same as above"
+    },
+    {
       "title": "Cancer Awareness Rally – Day 3",
       "date": "2026-10-19",
       "start_time": "11:00 PM",
@@ -1280,6 +1460,16 @@
       "categ": "rally",
       "miles_from_c": "214.7",
       "location": "Knoxville, TN, Bristol, TN",
+      "link": "Same as above"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 3",
+      "date": "2026-10-19",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "214.7",
+      "location": "Bristol, TN",
       "link": "Same as above"
     },
     {
@@ -1303,10 +1493,30 @@
       "link": "Same as above"
     },
     {
+      "title": "Cancer Awareness Rally – Day 5",
+      "date": "2026-10-21",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "237.9",
+      "location": "Nashville, TN",
+      "link": "Same as above"
+    },
+    {
       "title": "Fall 2026 Rennsport Dragon Rally®",
       "date": "2026-10-23",
       "start_time": "7:00 AM",
       "end_time": "4:00 PM",
+      "categ": "rally",
+      "miles_from_c": "None",
+      "location": "Fontana Village Resort & Marina",
+      "link": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/"
+    },
+    {
+      "title": "Fall 2026 Rennsport Dragon Rally®",
+      "date": "2026-10-23",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
       "categ": "rally",
       "miles_from_c": "None",
       "location": "Fontana Village Resort & Marina",
