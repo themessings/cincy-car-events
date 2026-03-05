@@ -1,27 +1,7 @@
 {
-  "generated_at_iso": "2026-03-04T18:02:13.247698-05:00",
-  "count": 159,
+  "generated_at_iso": "2026-03-04T21:08:51.067464-05:00",
+  "count": 154,
   "events": [
-    {
-      "title": "Embassy of Italy: Il Cinema Ritrovato on Tour 2026 (Opening Night)",
-      "date": "2026-03-04",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "categ": "rally",
-      "miles_from_c": "None",
-      "location": "",
-      "link": "https://www.meetup.com/hiking-kayaking-and-cultural-adventurers/events/313507514/"
-    },
-    {
-      "title": "Women's Adventure Film Tour 2026- Arlington Cinema and Drafthouse",
-      "date": "2026-03-04",
-      "start_time": "6:00 PM",
-      "end_time": "9:00 PM",
-      "categ": "rally",
-      "miles_from_c": "None",
-      "location": "",
-      "link": "https://www.meetup.com/50-active-fitness-fun-and-friends/events/313357215/"
-    },
     {
       "title": "Drinking Liberally Weekly Meetup",
       "date": "2026-03-05",
@@ -1463,16 +1443,6 @@
       "link": "Same as above"
     },
     {
-      "title": "Cancer Awareness Rally – Day 2",
-      "date": "2026-10-18",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "401.5",
-      "location": "Washington, DC",
-      "link": "Same as above"
-    },
-    {
       "title": "Cancer Awareness Rally – Day 3",
       "date": "2026-10-19",
       "start_time": "11:00 PM",
@@ -1480,16 +1450,6 @@
       "categ": "rally",
       "miles_from_c": "214.7",
       "location": "Knoxville, TN, Bristol, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 3",
-      "date": "2026-10-19",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "214.7",
-      "location": "Bristol, TN",
       "link": "Same as above"
     },
     {
@@ -1510,16 +1470,6 @@
       "categ": "rally",
       "miles_from_c": "237.9",
       "location": "Knoxville, TN, Nashville, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 5",
-      "date": "2026-10-21",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "237.9",
-      "location": "Nashville, TN",
       "link": "Same as above"
     },
     {
