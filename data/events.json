@@ -1,27 +1,7 @@
 {
-  "generated_at_iso": "2026-03-05T06:35:23.876698-05:00",
+  "generated_at_iso": "2026-03-06T06:32:13.545466-05:00",
   "count": 157,
   "events": [
-    {
-      "title": "Drinking Liberally Weekly Meetup",
-      "date": "2026-03-05",
-      "start_time": "9:00 PM",
-      "end_time": "11:00 PM",
-      "categ": "rally",
-      "miles_from_c": "509.3",
-      "location": "3124 Ingersoll Ave, Des Moines IA 50312",
-      "link": "https://www.meetup.com/living-liberally-drinking-liberally-des-moines/events/313351186/"
-    },
-    {
-      "title": "Columbus Cars & Coffee Fridays",
-      "date": "2026-03-06",
-      "start_time": "12:00 AM",
-      "end_time": "2:00 AM",
-      "categ": "local",
-      "miles_from_c": "99.2",
-      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-06/"
-    },
     {
       "title": "Columbus Cars & Coffee Fridays",
       "date": "2026-03-06",
@@ -253,16 +233,6 @@
       "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-13/"
     },
     {
-      "title": "Cavalcade Of Customs",
-      "date": "2026-03-13",
-      "start_time": "12:00 AM",
-      "end_time": "12:00 AM",
-      "categ": "local",
-      "miles_from_c": "17.1",
-      "location": "Beckett Ridge",
-      "link": "https://facebook.com/events/s/cavalcade-of-customs/1388482562860993/"
-    },
-    {
       "title": "Three Legs of Mann Rally 2026 &#8211; Isle of Man",
       "date": "2026-03-13",
       "start_time": "3:00 AM",
@@ -321,6 +291,16 @@
       "miles_from_c": "None",
       "location": "Quaker Steak and Lube Colerain, OH",
       "link": "https://facebook.com/events/s/endless-car-culture-cincinnati/1621707615689231/"
+    },
+    {
+      "title": "Drift Indy Opening Day 2026",
+      "date": "2026-03-20",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "Darana Raceway- Xenia, Ohio",
+      "link": "https://facebook.com/events/s/drift-indy-opening-day-2026/2055012242019528/"
     },
     {
       "title": "UC Cars and Coffee Meet #1",
@@ -403,6 +383,16 @@
       "link": "https://www.scca.com/pages/road-rally"
     },
     {
+      "title": "Spring Break at China Beach Round#2 | TREC 3 Hour",
+      "date": "2026-04-17",
+      "start_time": "8:00 AM",
+      "end_time": "6:00 PM",
+      "categ": "local",
+      "miles_from_c": "148.0",
+      "location": "Mid-Ohio Sports Car Course",
+      "link": "https://facebook.com/events/s/spring-break-at-china-beach-ro/1654389302582694/"
+    },
+    {
       "title": "Hoosier Rally (SCCA)",
       "date": "2026-04-17",
       "start_time": "9:00 AM",
@@ -463,6 +453,16 @@
       "link": "https://facebook.com/events/s/fairfield-cars-and-coffee-2026/1629100551564096/"
     },
     {
+      "title": "Import Face-Off Hebron, OH 4/19/26!",
+      "date": "2026-04-19",
+      "start_time": "9:00 AM",
+      "end_time": "7:00 PM",
+      "categ": "local",
+      "miles_from_c": "120.3",
+      "location": "National Trail Raceway",
+      "link": "https://facebook.com/events/s/import-face-off-hebron-oh-4192/1366574381648422/"
+    },
+    {
       "title": "5th Annual “Hail to Horsepower” Car Show",
       "date": "2026-04-25",
       "start_time": "8:00 AM",
@@ -481,6 +481,16 @@
       "miles_from_c": "None",
       "location": "Horsepower Farm Middletown",
       "link": "fb://event/?id=788415087022357"
+    },
+    {
+      "title": "Jaguar Jubilee Car Show-All Makes, Models, Years",
+      "date": "2026-04-25",
+      "start_time": "12:00 PM",
+      "end_time": "4:00 PM",
+      "categ": "local",
+      "miles_from_c": "67.9",
+      "location": "1901 Selma Rd, Springfield, OH",
+      "link": "https://facebook.com/events/s/jaguar-jubilee-car-show-all-ma/1349238980294415/"
     },
     {
       "title": "Buckeye RoadRally (SCCA)",
@@ -651,6 +661,16 @@
       "miles_from_c": "0.1",
       "location": "4480 Lake Forest Dr, Ste 314, Cincinnati, OH, , Ohio 45242",
       "link": "https://facebook.com/events/s/zakiras-garage-2026-spring-ope/1122944979897103/"
+    },
+    {
+      "title": "Down Bad Drift Spring Kickoff!",
+      "date": "2026-05-16",
+      "start_time": "10:00 AM",
+      "end_time": "6:30 PM",
+      "categ": "local",
+      "miles_from_c": "94.3",
+      "location": "Salem Speedway",
+      "link": "https://facebook.com/events/s/down-bad-drift-spring-kickoff/1606947547280408/"
     },
     {
       "title": "2026 Annual Krieger Ford Car & Truck Extravaganza",
@@ -1363,6 +1383,16 @@
       "link": "https://www.facebook.com/events/1-e-court-st-cincinnati-oh-45202-1103-united-states/frischs-court-street-car-showcruise-in/582845909876607/"
     },
     {
+      "title": "Vaded Street Circuit: Ohio 2026",
+      "date": "2026-08-29",
+      "start_time": "12:00 PM",
+      "end_time": "10:00 PM",
+      "categ": "local",
+      "miles_from_c": "99.4",
+      "location": "Land-Grant Brewing Company",
+      "link": "https://facebook.com/events/s/vaded-street-circuit-ohio-2026/4616674298560484/"
+    },
+    {
       "title": "Ride With Randy Rally",
       "date": "2026-09-11",
       "start_time": "9:00 AM",
@@ -1443,16 +1473,6 @@
       "link": "Same as above"
     },
     {
-      "title": "Cancer Awareness Rally – Day 2",
-      "date": "2026-10-18",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "401.5",
-      "location": "Washington, DC",
-      "link": "Same as above"
-    },
-    {
       "title": "Cancer Awareness Rally – Day 3",
       "date": "2026-10-19",
       "start_time": "11:00 PM",
@@ -1460,16 +1480,6 @@
       "categ": "rally",
       "miles_from_c": "214.7",
       "location": "Knoxville, TN, Bristol, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 3",
-      "date": "2026-10-19",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "214.7",
-      "location": "Bristol, TN",
       "link": "Same as above"
     },
     {
@@ -1490,16 +1500,6 @@
       "categ": "rally",
       "miles_from_c": "237.9",
       "location": "Knoxville, TN, Nashville, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 5",
-      "date": "2026-10-21",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "237.9",
-      "location": "Nashville, TN",
       "link": "Same as above"
     },
     {

@@ -736,5 +736,26 @@
   "Waynesville, OH": {
     "lat": "39.5297824",
     "lon": "-84.0866010"
+  },
+  "Mid-Ohio Sports Car Course": {
+    "lat": "40.6890085",
+    "lon": "-82.6363553"
+  },
+  "Darana Raceway- Xenia, Ohio": null,
+  "Springfield, OH": {
+    "lat": "39.9234046",
+    "lon": "-83.8101380"
+  },
+  "National Trail Raceway": {
+    "lat": "39.9603100",
+    "lon": "-82.5473037"
+  },
+  "Salem Speedway": {
+    "lat": "38.5999768",
+    "lon": "-86.1402747"
+  },
+  "Land-Grant Brewing Company": {
+    "lat": "39.9578720",
+    "lon": "-83.0115076"
   }
 }
