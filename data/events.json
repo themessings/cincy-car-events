@@ -1,67 +1,7 @@
 {
-  "generated_at_iso": "2026-03-06T06:32:13.545466-05:00",
+  "generated_at_iso": "2026-03-07T06:22:16.553548-05:00",
   "count": 157,
   "events": [
-    {
-      "title": "Columbus Cars & Coffee Fridays",
-      "date": "2026-03-06",
-      "start_time": "7:30 AM",
-      "end_time": "9:30 AM",
-      "categ": "local",
-      "miles_from_c": "99.2",
-      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-06/"
-    },
-    {
-      "title": "Meet the Entrepreneurs Behind FounderWay.ai",
-      "date": "2026-03-06",
-      "start_time": "11:30 AM",
-      "end_time": "1:00 PM",
-      "categ": "local",
-      "miles_from_c": "None",
-      "location": "1 Gateway Road, Rm 224, RI",
-      "link": "https://www.meetup.com/opentrellis/events/313608512/"
-    },
-    {
-      "title": "Cincinnati Cars and Coffee",
-      "date": "2026-03-07",
-      "start_time": "12:00 AM",
-      "end_time": "2:00 AM",
-      "categ": "local",
-      "miles_from_c": "6.5",
-      "location": "2791 Town Center Blvd, Crestview Hills, KY",
-      "link": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-03-07/"
-    },
-    {
-      "title": "Cars and Coffee Saturday at Horsepower Farm",
-      "date": "2026-03-07",
-      "start_time": "12:00 AM",
-      "end_time": "2:00 AM",
-      "categ": "local",
-      "miles_from_c": "186.6",
-      "location": "2227 Trinity Dr, Monroe, OH",
-      "link": "https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-03-07/"
-    },
-    {
-      "title": "Columbus Cars & Coffee",
-      "date": "2026-03-07",
-      "start_time": "12:00 AM",
-      "end_time": "2:00 AM",
-      "categ": "local",
-      "miles_from_c": "100.0",
-      "location": "3650 Olentangy River Rd, Columbus, OH",
-      "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-03-07/"
-    },
-    {
-      "title": "Columbus Cars & Coffee @ The City",
-      "date": "2026-03-07",
-      "start_time": "12:00 AM",
-      "end_time": "2:00 AM",
-      "categ": "local",
-      "miles_from_c": "100.0",
-      "location": "2875 Olentangy River Road, Columbus, OH",
-      "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-03-07/"
-    },
     {
       "title": "Cincinnati Cars and Coffee",
       "date": "2026-03-07",
@@ -261,6 +201,26 @@
       "miles_from_c": "0.3",
       "location": "Duke Energy Convention Center",
       "link": "https://facebook.com/events/s/65th-annual-cavalcade-of-custo/788168877564913/"
+    },
+    {
+      "title": "Cincinnati Cars and Coffee",
+      "date": "2026-03-14",
+      "start_time": "8:00 AM",
+      "end_time": "10:30 AM",
+      "categ": "local",
+      "miles_from_c": "6.5",
+      "location": "2791 Town Center Blvd, Crestview Hills, KY",
+      "link": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-03-14/"
+    },
+    {
+      "title": "A Lucky Time at the Lucky Horseshoe w/ Annual Meeting",
+      "date": "2026-03-14",
+      "start_time": "4:30 PM",
+      "end_time": "7:30 PM",
+      "categ": "local",
+      "miles_from_c": "None",
+      "location": "",
+      "link": "https://www.meetup.com/cansmen/events/312701962/"
     },
     {
       "title": "Euro Cars and Cocoa",
@@ -1013,6 +973,16 @@
       "link": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
     },
     {
+      "title": "Cincy Cars & Coffee @ Liberty Center",
+      "date": "2026-06-20",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "categ": "local",
+      "miles_from_c": "19.9",
+      "location": "7160 Taylor Street Liberty Township, OH 45069",
+      "link": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1465749794987498/"
+    },
+    {
       "title": "Whiskey Row Car Show - June 20th 2026",
       "date": "2026-06-20",
       "start_time": "9:00 AM",
@@ -1473,6 +1443,16 @@
       "link": "Same as above"
     },
     {
+      "title": "Cancer Awareness Rally – Day 2",
+      "date": "2026-10-18",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "401.5",
+      "location": "Washington, DC",
+      "link": "Same as above"
+    },
+    {
       "title": "Cancer Awareness Rally – Day 3",
       "date": "2026-10-19",
       "start_time": "11:00 PM",
@@ -1480,6 +1460,16 @@
       "categ": "rally",
       "miles_from_c": "214.7",
       "location": "Knoxville, TN, Bristol, TN",
+      "link": "Same as above"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 3",
+      "date": "2026-10-19",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "214.7",
+      "location": "Bristol, TN",
       "link": "Same as above"
     },
     {
@@ -1500,6 +1490,16 @@
       "categ": "rally",
       "miles_from_c": "237.9",
       "location": "Knoxville, TN, Nashville, TN",
+      "link": "Same as above"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 5",
+      "date": "2026-10-21",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "237.9",
+      "location": "Nashville, TN",
       "link": "Same as above"
     },
     {

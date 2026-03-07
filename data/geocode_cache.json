@@ -757,5 +757,57 @@
   "Land-Grant Brewing Company": {
     "lat": "39.9578720",
     "lon": "-83.0115076"
+  },
+  "Taylor Street Liberty Township, OH": {
+    "lat": "39.3711403",
+    "lon": "-84.3757151"
+  },
+  "Summit, IL": {
+    "lat": "41.7880876",
+    "lon": "-87.8103340"
+  },
+  "Forest Park, IL": {
+    "lat": "41.8794989",
+    "lon": "-87.8136997"
+  },
+  "Naperville, IL": {
+    "lat": "41.7728699",
+    "lon": "-88.1479278"
+  },
+  "Lombard, IL": {
+    "lat": "41.8864687",
+    "lon": "-88.0201536"
+  },
+  "Glen Ellyn, IL": {
+    "lat": "41.8775293",
+    "lon": "-88.0670118"
+  },
+  "Skokie, IL": {
+    "lat": "42.0262972",
+    "lon": "-87.7521069"
+  },
+  "South Holland, IL": {
+    "lat": "41.6008681",
+    "lon": "-87.6069894"
+  },
+  "Oak Forest, IL": {
+    "lat": "41.6028116",
+    "lon": "-87.7439384"
+  },
+  "Hidden Pond Woods Hickory Hills, IL": {
+    "lat": "41.7251003",
+    "lon": "-87.8495197"
+  },
+  "Palos Township, IL": {
+    "lat": "41.6884742",
+    "lon": "-87.8554969"
+  },
+  "La Grange Park, IL": {
+    "lat": "41.8333646",
+    "lon": "-87.8677324"
+  },
+  ", WI": {
+    "lat": "44.4308975",
+    "lon": "-89.6884637"
   }
 }
