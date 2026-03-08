@@ -2435,46 +2435,43 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
         if rows:
             tab_rows_to_try.append((tab, rows))
 
-    try:
-        api_tab_rows = _fetch_sheet_rows_via_api(sheet_id, tab_candidates)
-    except HttpError as ex:
-        status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
-        reason = f"http_error_{status}" if status else "http_error"
-        log(f"⚠️ Sheet import API error for spreadsheet={sheet_id}: {ex}")
-        diagnostics["reason"] = reason
-        return []
-    except Exception as ex:
-        log(f"⚠️ Sheet import failed for spreadsheet={sheet_id}: {ex}")
-        diagnostics["reason"] = "parse_failed"
-        return []
+    tab_rows_to_try: List[Tuple[str, List[List[str]]]] = []
+    if rows:
+        tab_rows_to_try.append((tab_name, rows))
 
-    seen_tabs = {tab for tab, _ in tab_rows_to_try}
-    for tab, rows in api_tab_rows:
-        if tab not in seen_tabs:
-            tab_rows_to_try.append((tab, rows))
-            seen_tabs.add(tab)
+    if not tab_rows_to_try:
+        try:
+            tab_rows_to_try = _fetch_sheet_rows_via_api(sheet_id, tab_candidates)
+        except HttpError as ex:
+            status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
+            reason = f"http_error_{status}" if status else "http_error"
+            log(f"⚠️ Sheet import API error for spreadsheet={sheet_id}: {ex}")
+            diagnostics["reason"] = reason
+            return []
+        except Exception as ex:
+            log(f"⚠️ Sheet import failed for spreadsheet={sheet_id}: {ex}")
+            diagnostics["reason"] = "parse_failed"
+            return []
 
     if not tab_rows_to_try:
         log(f"⚠️ Sheet import returned no rows for spreadsheet={sheet_id}; continuing.")
         diagnostics["reason"] = "no_results_from_search"
         return []
 
-    selected_tab = ""
-    selected_rows: List[List[str]] = []
     parsed: List[dict] = []
     stats: Dict[str, object] = {}
     for candidate_tab, candidate_rows in tab_rows_to_try:
         if not candidate_rows:
             continue
         candidate_parsed, candidate_stats = _parse_google_sheet_events_rows(candidate_rows, source_name, candidate_tab)
-        selected_tab = candidate_tab
-        selected_rows = candidate_rows
+        tab_name = candidate_tab
+        rows = candidate_rows
         parsed = candidate_parsed
         stats = candidate_stats
         if parsed:
             break
 
-    if not selected_rows:
+    if not rows:
         log(f"⚠️ Sheet import returned no rows for spreadsheet={sheet_id}; continuing.")
         diagnostics["reason"] = "no_results_from_search"
         return []
