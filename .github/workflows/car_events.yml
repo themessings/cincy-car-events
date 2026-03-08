@@ -26,6 +26,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install OCR runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr
+
       - name: Syntax check collector scripts
         run: |
           python -m py_compile scripts/events_collector.py scripts/validate_runtime_env.py
@@ -60,6 +65,10 @@ jobs:
           # APEX_SHARED_DRIVE_ID: ${{ secrets.APEX_SHARED_DRIVE_ID }}
         run: |
           set -euo pipefail
+
+          python -u scripts/import_drive_event_screenshots.py \
+            --folder-id "${APEX_SCREENSHOT_FOLDER_ID:-13ex_jE_1zAtCbBPcgsVNde8vkPTbA7JS}" \
+            --sheet-id "${APEX_IMPORT_SPREADSHEET_ID}"
 
           python -u scripts/events_collector.py | tee data/collector.log
 

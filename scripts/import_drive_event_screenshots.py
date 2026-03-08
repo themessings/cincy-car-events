@@ -45,6 +45,7 @@ from __future__ import annotations
 import argparse
 import csv
 import io
+import json
 import os
 import re
 import tempfile
@@ -161,6 +162,17 @@ def get_credentials(args: argparse.Namespace) -> Credentials:
     if creds_path and Path(creds_path).exists():
         # Service account path supplied.
         return ServiceAccountCredentials.from_service_account_file(creds_path, scopes=ALL_SCOPES)
+
+    service_account_json = (
+        os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON", "").strip()
+        or os.getenv("GDRIVE_SERVICE_ACCOUNT_JSON", "").strip()
+    )
+    if service_account_json:
+        try:
+            info = json.loads(service_account_json)
+            return ServiceAccountCredentials.from_service_account_info(info, scopes=ALL_SCOPES)
+        except Exception as exc:
+            raise RuntimeError(f"Invalid GOOGLE_SERVICE_ACCOUNT_JSON/GDRIVE_SERVICE_ACCOUNT_JSON: {exc}")
 
     # OAuth user fallback.
     token_path = Path(args.oauth_token)
