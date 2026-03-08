@@ -116,6 +116,7 @@ class EventRecord:
     city: str = ""
     state: str = ""
     zip: str = ""
+    source: str = ""
     source_file_name: str = ""
     source_drive_file_id: str = ""
     source_drive_link: str = ""
@@ -145,6 +146,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--oauth-token", default="token.json")
     parser.add_argument("--oauth-client-secrets", default="client_secret.json")
+    parser.add_argument("--source-label", default="google_drive_screenshots")
     return parser.parse_args()
 
 
@@ -365,7 +367,7 @@ def extract_address(text: str) -> Tuple[str, str, str, str, str]:
     return "", normalized_street, city, state, zip_code
 
 
-def parse_event_text(text: str, source_name: str, source_id: str, source_link: str) -> EventRecord:
+def parse_event_text(text: str, source_name: str, source_id: str, source_link: str, source_label: str) -> EventRecord:
     lines = [normalize_ws(line) for line in text.splitlines() if normalize_ws(line)]
     event_name = lines[0] if lines else ""
 
@@ -420,6 +422,7 @@ def parse_event_text(text: str, source_name: str, source_id: str, source_link: s
         city=city,
         state=state,
         zip=zip_code,
+        source=source_label,
         source_file_name=source_name,
         source_drive_file_id=source_id,
         source_drive_link=source_link,
@@ -533,6 +536,8 @@ def main() -> None:
 
     raw_events: List[EventRecord] = []
 
+    source_label = normalize_ws(f"{args.source_label}:{args.folder_id}")
+
     with tempfile.TemporaryDirectory(prefix="drive_screenshots_") as tmpdir:
         tmp_path = Path(tmpdir)
 
@@ -551,10 +556,11 @@ def main() -> None:
                 else:
                     text = f"DRY RUN PLACEHOLDER FOR {name}"
 
-                event = parse_event_text(text, name, file_id, item.get("webViewLink", ""))
+                event = parse_event_text(text, name, file_id, item.get("webViewLink", ""), source_label)
                 raw_events.append(event)
             except Exception as exc:
                 err_event = EventRecord(
+                    source=source_label,
                     source_file_name=name,
                     source_drive_file_id=file_id,
                     source_drive_link=item.get("webViewLink", ""),
