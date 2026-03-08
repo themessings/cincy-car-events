@@ -809,5 +809,21 @@
   ", WI": {
     "lat": "44.4308975",
     "lon": "-89.6884637"
+  },
+  "Park Ridge, IL": {
+    "lat": "42.0112329",
+    "lon": "-87.8406031"
+  },
+  "Woodridge, IL": {
+    "lat": "41.7563344",
+    "lon": "-88.0455590"
+  },
+  "Downtown Islamic Center 231 S State Street, Chicago Chicago": {
+    "lat": "41.8786816",
+    "lon": "-87.6272670"
+  },
+  "Oak Park, IL": {
+    "lat": "41.8878145",
+    "lon": "-87.7887615"
   }
 }
