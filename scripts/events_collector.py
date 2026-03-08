@@ -2463,6 +2463,7 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
             continue
         candidate_parsed, candidate_stats = _parse_google_sheet_events_rows(candidate_rows, source_name, candidate_tab)
         tab_name = candidate_tab
+        selected_tab = candidate_tab
         rows = candidate_rows
         parsed = candidate_parsed
         stats = candidate_stats
