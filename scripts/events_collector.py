@@ -3905,7 +3905,7 @@ def to_event_items(
         title = clean_ws(e.get("title", ""))
         location = normalize_location_for_output(e.get("location", ""), e.get("city_state", ""))
         url = clean_ws(e.get("url", ""))
-        source = clean_ws(e.get("source", ""))
+        source = clean_ws(e.get("source", "")) or "unknown_source"
         start_dt: Optional[datetime] = e.get("start_dt")
         end_dt: Optional[datetime] = e.get("end_dt")
 
@@ -4046,6 +4046,7 @@ def write_csv(events: List[dict], path: str) -> None:
         "miles_from_c",
         "location",
         "link",
+        "source",
     ]
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -4064,6 +4065,7 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "miles_from_c",
         "location",
         "link",
+        "source",
     ]
     alias_map = {
         "title": ["title", "event_title", "name"],
@@ -4074,6 +4076,7 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "miles_from_c": ["miles_from_c", "miles_from_cincy", "miles", "distance", "mileage"],
         "location": ["location", "venue", "address"],
         "link": ["link", "url", "event_url", "eventlink"],
+        "source": ["source", "event_source", "source_name", "pulled_from"],
         "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime"],
         "end_dt": ["end_iso", "end", "end_datetime", "enddatetime"],
     }
@@ -4118,6 +4121,7 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         normalized["miles_from_c"] = pick_value(row, alias_map["miles_from_c"])
         normalized["location"] = pick_value(row, alias_map["location"])
         normalized["link"] = pick_value(row, alias_map["link"])
+        normalized["source"] = pick_value(row, alias_map["source"]) or "unknown_source"
 
         date_text = pick_value(row, alias_map["date"])
         start_time_text = pick_value(row, alias_map["start_time"])
@@ -4341,7 +4345,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         values.append([ev.get(h, "") for h in headers])
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
-    clear_range = "Events!A1:H"
+    clear_range = "Events!A1:I"
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
         range=clear_range,
