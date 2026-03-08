@@ -2388,28 +2388,29 @@ def _fetch_public_sheet_rows_csv(sheet_id: str, tab_name: str) -> Optional[List[
         return None
 
 
-def _fetch_sheet_rows_via_api(sheet_id: str, tab_name_candidates: List[str]) -> Tuple[List[List[str]], str]:
+def _fetch_sheet_rows_via_api(sheet_id: str, tab_name_candidates: List[str]) -> List[Tuple[str, List[List[str]]]]:
     creds = get_google_credentials()
     if not creds:
-        return [], ""
+        return []
     sheets = build("sheets", "v4", credentials=creds)
 
     metadata = sheets.spreadsheets().get(spreadsheetId=sheet_id, includeGridData=False).execute()
     sheet_entries = metadata.get("sheets", []) or []
     available_tabs = [clean_ws((entry.get("properties") or {}).get("title", "")) for entry in sheet_entries]
 
-    selected_tab = ""
+    ordered_tabs: List[str] = []
     for tab in tab_name_candidates:
-        if tab in available_tabs:
-            selected_tab = tab
-            break
-    if not selected_tab and available_tabs:
-        selected_tab = available_tabs[0]
-    if not selected_tab:
-        return [], ""
+        if tab in available_tabs and tab not in ordered_tabs:
+            ordered_tabs.append(tab)
+    for tab in available_tabs:
+        if tab and tab not in ordered_tabs:
+            ordered_tabs.append(tab)
 
-    resp = sheets.spreadsheets().values().get(spreadsheetId=sheet_id, range=f"{selected_tab}!A1:Z4000").execute()
-    return resp.get("values", []), selected_tab
+    rows_by_tab: List[Tuple[str, List[List[str]]]] = []
+    for tab in ordered_tabs:
+        resp = sheets.spreadsheets().values().get(spreadsheetId=sheet_id, range=f"{tab}!A1:Z4000").execute()
+        rows_by_tab.append((tab, resp.get("values", [])))
+    return rows_by_tab
 
 
 def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
@@ -2437,9 +2438,13 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
             tab_name = tab
             break
 
-    if not rows:
+    tab_rows_to_try: List[Tuple[str, List[List[str]]]] = []
+    if rows:
+        tab_rows_to_try.append((tab_name, rows))
+
+    if not tab_rows_to_try:
         try:
-            rows, tab_name = _fetch_sheet_rows_via_api(sheet_id, tab_candidates)
+            tab_rows_to_try = _fetch_sheet_rows_via_api(sheet_id, tab_candidates)
         except HttpError as ex:
             status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
             reason = f"http_error_{status}" if status else "http_error"
@@ -2451,12 +2456,28 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
             diagnostics["reason"] = "parse_failed"
             return []
 
-    if not rows:
+    if not tab_rows_to_try:
         log(f"⚠️ Sheet import returned no rows for spreadsheet={sheet_id}; continuing.")
         diagnostics["reason"] = "no_results_from_search"
         return []
 
-    parsed, stats = _parse_google_sheet_events_rows(rows, source_name, tab_name or tried_tabs[0])
+    parsed: List[dict] = []
+    stats: Dict[str, object] = {}
+    for candidate_tab, candidate_rows in tab_rows_to_try:
+        if not candidate_rows:
+            continue
+        candidate_parsed, candidate_stats = _parse_google_sheet_events_rows(candidate_rows, source_name, candidate_tab)
+        tab_name = candidate_tab
+        rows = candidate_rows
+        parsed = candidate_parsed
+        stats = candidate_stats
+        if parsed:
+            break
+
+    if not rows:
+        log(f"⚠️ Sheet import returned no rows for spreadsheet={sheet_id}; continuing.")
+        diagnostics["reason"] = "no_results_from_search"
+        return []
 
     reason = ""
     if stats.get("bad_sheet_headers"):
@@ -4179,7 +4200,7 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
 # -------------------------
 def get_google_credentials() -> Optional[service_account.Credentials]:
     service_account_path = os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE")
-    service_account_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
+    service_account_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON") or os.getenv("GDRIVE_SERVICE_ACCOUNT_JSON")
     scopes = [
         "https://www.googleapis.com/auth/drive",
         "https://www.googleapis.com/auth/spreadsheets",
@@ -4301,7 +4322,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
 
     creds = get_google_credentials()
     if not creds:
-        log("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON.")
+        log("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON/GDRIVE_SERVICE_ACCOUNT_JSON.")
         return
 
     spreadsheet_id = os.getenv("APEX_SPREADSHEET_ID")

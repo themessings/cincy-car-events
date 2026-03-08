@@ -141,7 +141,13 @@ def ensure_runtime_dependencies(dry_run: bool) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Extract events from Drive screenshots")
     parser.add_argument("--folder-id", default="13ex_jE_1zAtCbBPcgsVNde8vkPTbA7JS")
-    parser.add_argument("--sheet-id", default=os.getenv("SHEET_ID", ""))
+    parser.add_argument(
+        "--sheet-id",
+        default=(
+            os.getenv("APEX_IMPORT_SPREADSHEET_ID", "").strip()
+            or os.getenv("SHEET_ID", "").strip()
+        ),
+    )
     parser.add_argument("--max-files", type=int, default=0, help="0 means no limit")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--oauth-token", default="token.json")

@@ -6,6 +6,10 @@ from __future__ import annotations
 import os
 import re
 import sys
+import json
+
+from google.oauth2.service_account import Credentials as ServiceAccountCredentials
+from googleapiclient.discovery import build
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
@@ -29,7 +33,8 @@ def extract_spreadsheet_id(value: str) -> str:
 def main() -> int:
     missing_required = []
 
-    if not os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON"):
+    service_account_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON") or os.getenv("GDRIVE_SERVICE_ACCOUNT_JSON")
+    if not service_account_json:
         missing_required.append("❌ Missing GDRIVE_SERVICE_ACCOUNT_JSON secret; spreadsheet update cannot run.")
 
     if not os.getenv("APEX_SPREADSHEET_ID"):
@@ -90,6 +95,30 @@ def main() -> int:
             "⚠️ APEX_IMPORT_SPREADSHEET_ID is set but could not be parsed as a valid "
             f"spreadsheet ID after normalization: '{normalized_import_sheet or raw_import_sheet}'."
         )
+
+    if service_account_json and normalized_import_sheet:
+        try:
+            creds = ServiceAccountCredentials.from_service_account_info(
+                json.loads(service_account_json),
+                scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"],
+            )
+            sheets = build("sheets", "v4", credentials=creds, cache_discovery=False)
+            meta = sheets.spreadsheets().get(spreadsheetId=normalized_import_sheet).execute()
+            title = (meta.get("properties") or {}).get("title", "")
+            print(
+                "✅ Verified access to APEX_IMPORT_SPREADSHEET_ID "
+                f"({normalized_import_sheet}) title='{title}'"
+            )
+        except Exception as exc:
+            email = ""
+            try:
+                email = json.loads(service_account_json).get("client_email", "")
+            except Exception:
+                pass
+            print(
+                "❌ Unable to access APEX_IMPORT_SPREADSHEET_ID via service account. "
+                f"Share the sheet with {email or 'the service account email'} and confirm the ID. Error: {exc}"
+            )
 
     if os.getenv("COLLECTOR_DRY_RUN"):
         print("ℹ️ COLLECTOR_DRY_RUN is set; collector will skip Google Sheets writes.")
