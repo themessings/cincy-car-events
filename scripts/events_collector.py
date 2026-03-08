@@ -2319,6 +2319,7 @@ def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab
         url = _sheet_value(row, header_map, _sheet_header_key("Link"))
         event_type = _sheet_value(row, header_map, _sheet_header_key("Event Type"))
         cost = _sheet_value(row, header_map, _sheet_header_key("Cost"))
+        row_source = _sheet_value(row, header_map, _sheet_header_key("Source")) or source_name
 
         out.append(
             {
@@ -2327,7 +2328,7 @@ def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab
                 "end_dt": end_dt,
                 "location": location,
                 "url": url,
-                "source": source_name,
+                "source": row_source,
                 "source_tab": tab_name,
                 "event_type": event_type,
                 "cost": cost,

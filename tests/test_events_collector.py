@@ -556,6 +556,24 @@ END:VCALENDAR
         self.assertEqual(out[0]["end_dt"].hour, 11)
         self.assertIn("Cincinnati", out[0]["location"])
 
+    def test_parse_google_sheet_rows_prefers_row_level_source_column(self):
+        rows = [
+            ["Date", "Name", "City / Where You'd Be", "Link", "Source"],
+            [
+                "2099-05-01",
+                "Cars & Coffee",
+                "Cincinnati",
+                "https://example.com/event",
+                "google_drive_screenshots:13ex_jE_1zAtCbBPcgsVNde8vkPTbA7JS",
+            ],
+        ]
+        out, stats = _parse_google_sheet_events_rows(rows, "Google Sheet Events Import", "Events")
+        self.assertEqual(stats["parsed_events"], 1)
+        self.assertEqual(
+            out[0]["source"],
+            "google_drive_screenshots:13ex_jE_1zAtCbBPcgsVNde8vkPTbA7JS",
+        )
+
 
 class AddressVerificationTests(unittest.TestCase):
     def test_extract_address_components_uses_city_state_hint(self):
