@@ -2435,10 +2435,6 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
         if rows:
             tab_rows_to_try.append((tab, rows))
 
-    tab_rows_to_try: List[Tuple[str, List[List[str]]]] = []
-    if rows:
-        tab_rows_to_try.append((tab_name, rows))
-
     if not tab_rows_to_try:
         try:
             tab_rows_to_try = _fetch_sheet_rows_via_api(sheet_id, tab_candidates)
@@ -2460,6 +2456,8 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
 
     parsed: List[dict] = []
     stats: Dict[str, object] = {}
+    tab_name = ""
+    rows: List[List[str]] = []
     for candidate_tab, candidate_rows in tab_rows_to_try:
         if not candidate_rows:
             continue
