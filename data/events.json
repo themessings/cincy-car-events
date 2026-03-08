@@ -1,37 +1,7 @@
 {
-  "generated_at_iso": "2026-03-08T07:22:55.916858-04:00",
-  "count": 147,
+  "generated_at_iso": "2026-03-08T18:13:01.325538-04:00",
+  "count": 150,
   "events": [
-    {
-      "title": "Columbus Cars & Coffee Sundays",
-      "date": "2026-03-08",
-      "start_time": "8:00 AM",
-      "end_time": "11:00 AM",
-      "categ": "local",
-      "miles_from_c": "110.0",
-      "location": "691 N. Cleveland Ave, Westerville, OH 43081",
-      "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-sundays/2026-03-08/"
-    },
-    {
-      "title": "Columbus Cars & Coffee @ Starbucks",
-      "date": "2026-03-08",
-      "start_time": "9:00 AM",
-      "end_time": "12:00 PM",
-      "categ": "local",
-      "miles_from_c": "110.0",
-      "location": "691 N. Cleveland Ave, Westerville, OH 43081",
-      "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-starbucks/2026-03-08/"
-    },
-    {
-      "title": "ACKY Cars and Coffee",
-      "date": "2026-03-08",
-      "start_time": "10:00 AM",
-      "end_time": "12:00 PM",
-      "categ": "local",
-      "miles_from_c": "0.1",
-      "location": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "link": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-03-08/"
-    },
     {
       "title": "Columbus Cafe Racers Monthly Lunch Cruise In",
       "date": "2026-03-11",
@@ -153,6 +123,16 @@
       "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-sundays/2026-03-15/"
     },
     {
+      "title": "Columbus Cars & Coffee @ Starbucks",
+      "date": "2026-03-15",
+      "start_time": "9:00 AM",
+      "end_time": "12:00 PM",
+      "categ": "local",
+      "miles_from_c": "110.0",
+      "location": "691 N. Cleveland Ave, Westerville, OH",
+      "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-starbucks/2026-03-15/"
+    },
+    {
       "title": "Euro Cars and Cocoa",
       "date": "2026-03-15",
       "start_time": "9:00 AM",
@@ -161,6 +141,16 @@
       "miles_from_c": "17.5",
       "location": "The Cocoa Muse",
       "link": "https://facebook.com/events/s/euro-cars-and-cocoa/4227146924205388/"
+    },
+    {
+      "title": "ACKY Cars and Coffee",
+      "date": "2026-03-15",
+      "start_time": "10:00 AM",
+      "end_time": "12:00 PM",
+      "categ": "local",
+      "miles_from_c": "0.1",
+      "location": "2726 Riverside Drive, Cincinnati, OH",
+      "link": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-03-15/"
     },
     {
       "title": "Endless Car Culture, Cincinnati / Meet #4.1",
@@ -181,6 +171,16 @@
       "miles_from_c": "None",
       "location": "Quaker Steak and Lube Colerain, OH",
       "link": "https://facebook.com/events/s/endless-car-culture-cincinnati/1621707615689231/"
+    },
+    {
+      "title": "Columbus Cars & Coffee Fridays",
+      "date": "2026-03-20",
+      "start_time": "7:30 AM",
+      "end_time": "9:30 AM",
+      "categ": "local",
+      "miles_from_c": "99.2",
+      "location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
+      "link": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-20/"
     },
     {
       "title": "Drift Indy Opening Day 2026",
@@ -1373,6 +1373,16 @@
       "link": "Same as above"
     },
     {
+      "title": "Cancer Awareness Rally – Day 2",
+      "date": "2026-10-18",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "401.5",
+      "location": "Washington, DC",
+      "link": "Same as above"
+    },
+    {
       "title": "Cancer Awareness Rally – Day 3",
       "date": "2026-10-19",
       "start_time": "11:00 PM",
@@ -1380,6 +1390,16 @@
       "categ": "rally",
       "miles_from_c": "214.7",
       "location": "Knoxville, TN, Bristol, TN",
+      "link": "Same as above"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 3",
+      "date": "2026-10-19",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "214.7",
+      "location": "Bristol, TN",
       "link": "Same as above"
     },
     {
@@ -1400,6 +1420,16 @@
       "categ": "rally",
       "miles_from_c": "237.9",
       "location": "Knoxville, TN, Nashville, TN",
+      "link": "Same as above"
+    },
+    {
+      "title": "Cancer Awareness Rally – Day 5",
+      "date": "2026-10-21",
+      "start_time": "11:00 PM",
+      "end_time": "1:00 AM",
+      "categ": "rally",
+      "miles_from_c": "237.9",
+      "location": "Nashville, TN",
       "link": "Same as above"
     },
     {
