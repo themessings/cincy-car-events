@@ -2457,7 +2457,6 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
     parsed: List[dict] = []
     stats: Dict[str, object] = {}
     tab_name = ""
-    selected_tab = ""
     rows: List[List[str]] = []
     for candidate_tab, candidate_rows in tab_rows_to_try:
         if not candidate_rows:

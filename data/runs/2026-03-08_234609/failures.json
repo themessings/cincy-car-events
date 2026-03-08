@@ -1,0 +1,12 @@
+{
+  "generated_at_iso": "2026-03-08T19:47:29.324022-04:00",
+  "count": 1,
+  "failures": [
+    {
+      "name": "Google Sheet Events Import",
+      "type": "google_sheet_events_import",
+      "error": "name 'selected_tab' is not defined",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 4530, in main\n    raw_events.extend(collect_google_sheet_events_import(source_with_context, diagnostics=diagnostics))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 2485, in collect_google_sheet_events_import\n    f\"✅ Sheet import loaded: rows={stats.get('rows_read', 0)} tab={selected_tab or tried_tabs[0]} \"\n                                                                    ^^^^^^^^^^^^\nNameError: name 'selected_tab' is not defined\n"
+    }
+  ]
+}
