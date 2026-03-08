@@ -1,0 +1,180 @@
+{
+  "generated_at_iso": "2026-03-08T18:57:25.875131-04:00",
+  "raw_events": 235,
+  "incoming_after_filters": 117,
+  "merged_total": 147,
+  "source_stats": [
+    {
+      "name": "CarsAndCoffeeEvents - Ohio",
+      "type": "html_carsandcoffeeevents_ohio",
+      "status": "ok",
+      "collected": 40
+    },
+    {
+      "name": "Cincinnati Cars and Coffee (Series)",
+      "type": "html_wordpress_events_list",
+      "status": "ok",
+      "collected": 0,
+      "reason": "no_results_from_search"
+    },
+    {
+      "name": "OVR PCA Social Events (ICS)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 92
+    },
+    {
+      "name": "iCloud Published Calendar (ICS)",
+      "type": "ics",
+      "status": "ok",
+      "collected": 53
+    },
+    {
+      "name": "Google Sheet Events Import",
+      "type": "google_sheet_events_import",
+      "status": "failed",
+      "collected": 0,
+      "error": "cannot access local variable 'tab_name' where it is not associated with a value"
+    },
+    {
+      "name": "Facebook Page Events (Graph API sheet/env IDs)",
+      "type": "facebook_page_events",
+      "status": "ok",
+      "collected": 0,
+      "reason": "disabled_invalid_token"
+    },
+    {
+      "name": "Google Events (SerpAPI) [serpapi_google_events]",
+      "type": "serpapi_google_events",
+      "status": "ok",
+      "collected": 1
+    },
+    {
+      "name": "Facebook Group Events (SerpAPI)",
+      "type": "facebook_group_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "FB Events (Cincy keywords)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "FB Events (Ohio + NKY)",
+      "type": "web_search_facebook_events_serpapi",
+      "status": "skipped",
+      "collected": 0,
+      "reason": "disabled_fb_site_discovery"
+    },
+    {
+      "name": "Eventbrite Cincy",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "Meetup Cincy Cars",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 41
+    },
+    {
+      "name": "Regional rallies",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 6
+    },
+    {
+      "name": "SCCA RoadRally + RallyCross",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "American Rally Association (SOFR + regional)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 2
+    },
+    {
+      "name": "Eventbrite regional autos (SerpAPI)",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "MotorsportReg regional autos",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    },
+    {
+      "name": "TrackRabbit + SCCA calendar discovery",
+      "type": "web_search_serpapi",
+      "status": "ok",
+      "collected": 0,
+      "reason": "parsing_schema_changed"
+    }
+  ],
+  "source_failures": [
+    {
+      "name": "Google Sheet Events Import",
+      "type": "google_sheet_events_import",
+      "error": "cannot access local variable 'tab_name' where it is not associated with a value",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 4528, in main\n    raw_events.extend(collect_google_sheet_events_import(source_with_context, diagnostics=diagnostics))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 2440, in collect_google_sheet_events_import\n    tab_rows_to_try.append((tab_name, rows))\n                            ^^^^^^^^\nUnboundLocalError: cannot access local variable 'tab_name' where it is not associated with a value\n"
+    }
+  ],
+  "serpapi_enabled": true,
+  "dry_run": false,
+  "pipeline_metrics": {
+    "normalize_drop_reasons": {
+      "outside_window_past": 76,
+      "non_automotive:exclude_keyword:wine tasting": 2,
+      "location_too_far_local": 35,
+      "non_automotive:hard_exclusion:yoga": 1,
+      "non_automotive:no_automotive_keyword_match": 4
+    },
+    "non_automotive_examples": [
+      "OVR PCA Wine Tasting Summer 2024 - Presented by Porsche of the Village (exclude_keyword:wine tasting)",
+      "OVR PCA Wine Tasting (exclude_keyword:wine tasting)",
+      "Core YOGA (hard_exclusion:yoga)",
+      "Daytona Bike Week &#8211; Daytona Beach, FL (no_automotive_keyword_match)",
+      "Coppa delle Alpi 2026 (no_automotive_keyword_match)"
+    ],
+    "dedupe_drop_reasons": {
+      "duplicate_signature_match": 77
+    }
+  },
+  "facebook_coverage": {
+    "token": {
+      "valid": "no",
+      "reason": "http_400",
+      "expires_at": null,
+      "expires_at_et": "unknown",
+      "refresh_attempted": true,
+      "refresh_succeeded": false,
+      "refresh_error": "missing_app_credentials"
+    },
+    "serp_queries": [],
+    "urls_discovered": 0,
+    "urls_parsed": 0,
+    "urls_failed": 0,
+    "page_events": 0,
+    "failure_reasons": {}
+  }
+}
