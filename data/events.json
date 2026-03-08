@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-08T18:36:52.296504-04:00",
-  "count": 150,
+  "generated_at_iso": "2026-03-08T18:48:10.978035-04:00",
+  "count": 147,
   "events": [
     {
       "title": "Columbus Cafe Racers Monthly Lunch Cruise In",
@@ -1373,16 +1373,6 @@
       "link": "Same as above"
     },
     {
-      "title": "Cancer Awareness Rally – Day 2",
-      "date": "2026-10-18",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "401.5",
-      "location": "Washington, DC",
-      "link": "Same as above"
-    },
-    {
       "title": "Cancer Awareness Rally – Day 3",
       "date": "2026-10-19",
       "start_time": "11:00 PM",
@@ -1390,16 +1380,6 @@
       "categ": "rally",
       "miles_from_c": "214.7",
       "location": "Knoxville, TN, Bristol, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 3",
-      "date": "2026-10-19",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "214.7",
-      "location": "Bristol, TN",
       "link": "Same as above"
     },
     {
@@ -1420,16 +1400,6 @@
       "categ": "rally",
       "miles_from_c": "237.9",
       "location": "Knoxville, TN, Nashville, TN",
-      "link": "Same as above"
-    },
-    {
-      "title": "Cancer Awareness Rally – Day 5",
-      "date": "2026-10-21",
-      "start_time": "11:00 PM",
-      "end_time": "1:00 AM",
-      "categ": "rally",
-      "miles_from_c": "237.9",
-      "location": "Nashville, TN",
       "link": "Same as above"
     },
     {
