@@ -4200,7 +4200,7 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
 # -------------------------
 def get_google_credentials() -> Optional[service_account.Credentials]:
     service_account_path = os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE")
-    service_account_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
+    service_account_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON") or os.getenv("GDRIVE_SERVICE_ACCOUNT_JSON")
     scopes = [
         "https://www.googleapis.com/auth/drive",
         "https://www.googleapis.com/auth/spreadsheets",
@@ -4322,7 +4322,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
 
     creds = get_google_credentials()
     if not creds:
-        log("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON.")
+        log("⚠️ Skipping Google Sheets update: missing GOOGLE_SERVICE_ACCOUNT_FILE or GOOGLE_SERVICE_ACCOUNT_JSON/GDRIVE_SERVICE_ACCOUNT_JSON.")
         return
 
     spreadsheet_id = os.getenv("APEX_SPREADSHEET_ID")
