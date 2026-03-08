@@ -1,0 +1,12 @@
+{
+  "generated_at_iso": "2026-03-08T19:25:15.069273-04:00",
+  "count": 1,
+  "failures": [
+    {
+      "name": "Google Sheet Events Import",
+      "type": "google_sheet_events_import",
+      "error": "cannot access local variable 'tab_name' where it is not associated with a value",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 4528, in main\n    raw_events.extend(collect_google_sheet_events_import(source_with_context, diagnostics=diagnostics))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/cincy-car-events/cincy-car-events/scripts/events_collector.py\", line 2440, in collect_google_sheet_events_import\n    tab_rows_to_try.append((tab_name, rows))\n                            ^^^^^^^^\nUnboundLocalError: cannot access local variable 'tab_name' where it is not associated with a value\n"
+    }
+  ]
+}
