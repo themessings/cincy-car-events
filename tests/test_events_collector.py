@@ -26,6 +26,7 @@ from scripts.events_collector import (
     main,
     load_facebook_targets,
     collect_ics,
+    collect_google_sheet_events_import,
     _parse_google_sheet_events_rows,
     to_event_items,
     simplify_location,
@@ -573,6 +574,24 @@ END:VCALENDAR
             out[0]["source"],
             "google_drive_screenshots:13ex_jE_1zAtCbBPcgsVNde8vkPTbA7JS",
         )
+
+    def test_collect_google_sheet_events_import_tries_multiple_tabs_until_parseable(self):
+        source = {"name": "Google Sheet Events Import", "tab": "Events"}
+        events_rows = [
+            ["Date", "Name", "City / Where You'd Be", "Link"],
+            ["2099-06-01", "Cars & Coffee", "Cincinnati", "https://example.com/event"],
+        ]
+
+        with patch("scripts.events_collector.APEX_IMPORT_SPREADSHEET_ID", "sheet-id"), patch(
+            "scripts.events_collector._fetch_public_sheet_rows_csv", return_value=[]
+        ), patch(
+            "scripts.events_collector._fetch_sheet_rows_via_api",
+            return_value=[("Events", [["Totally", "Wrong", "Headers"]]), ("Extracted Events", events_rows)],
+        ):
+            out = collect_google_sheet_events_import(source, diagnostics={})
+
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0]["title"], "Cars & Coffee")
 
 
 class AddressVerificationTests(unittest.TestCase):

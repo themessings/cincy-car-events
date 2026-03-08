@@ -45,6 +45,7 @@ from __future__ import annotations
 import argparse
 import csv
 import io
+import json
 import os
 import re
 import tempfile
@@ -141,7 +142,13 @@ def ensure_runtime_dependencies(dry_run: bool) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Extract events from Drive screenshots")
     parser.add_argument("--folder-id", default="13ex_jE_1zAtCbBPcgsVNde8vkPTbA7JS")
-    parser.add_argument("--sheet-id", default=os.getenv("SHEET_ID", ""))
+    parser.add_argument(
+        "--sheet-id",
+        default=(
+            os.getenv("APEX_IMPORT_SPREADSHEET_ID", "").strip()
+            or os.getenv("SHEET_ID", "").strip()
+        ),
+    )
     parser.add_argument("--max-files", type=int, default=0, help="0 means no limit")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--oauth-token", default="token.json")
@@ -155,6 +162,17 @@ def get_credentials(args: argparse.Namespace) -> Credentials:
     if creds_path and Path(creds_path).exists():
         # Service account path supplied.
         return ServiceAccountCredentials.from_service_account_file(creds_path, scopes=ALL_SCOPES)
+
+    service_account_json = (
+        os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON", "").strip()
+        or os.getenv("GDRIVE_SERVICE_ACCOUNT_JSON", "").strip()
+    )
+    if service_account_json:
+        try:
+            info = json.loads(service_account_json)
+            return ServiceAccountCredentials.from_service_account_info(info, scopes=ALL_SCOPES)
+        except Exception as exc:
+            raise RuntimeError(f"Invalid GOOGLE_SERVICE_ACCOUNT_JSON/GDRIVE_SERVICE_ACCOUNT_JSON: {exc}")
 
     # OAuth user fallback.
     token_path = Path(args.oauth_token)
