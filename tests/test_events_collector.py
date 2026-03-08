@@ -556,6 +556,52 @@ END:VCALENDAR
         self.assertEqual(out[0]["end_dt"].hour, 11)
         self.assertIn("Cincinnati", out[0]["location"])
 
+    def test_parse_google_sheet_rows_prefers_row_level_source_column(self):
+        rows = [
+            ["Date", "Name", "City / Where You'd Be", "Link", "Source"],
+            [
+                "2099-05-01",
+                "Cars & Coffee",
+                "Cincinnati",
+                "https://example.com/event",
+                "google_drive_screenshots:13ex_jE_1zAtCbBPcgsVNde8vkPTbA7JS",
+            ],
+        ]
+        out, stats = _parse_google_sheet_events_rows(rows, "Google Sheet Events Import", "Events")
+        self.assertEqual(stats["parsed_events"], 1)
+        self.assertEqual(
+            out[0]["source"],
+            "google_drive_screenshots:13ex_jE_1zAtCbBPcgsVNde8vkPTbA7JS",
+        )
+
+    def test_parse_google_sheet_rows_supports_screenshot_import_headers(self):
+        rows = [
+            [
+                "event_name",
+                "date",
+                "start_time",
+                "end_time",
+                "venue_name",
+                "source",
+            ],
+            [
+                "Cars & Coffee Riverfront",
+                "2099-07-04",
+                "10:00",
+                "13:00",
+                "Smale Park",
+                "google_drive_screenshots:folder123",
+            ],
+        ]
+
+        out, stats = _parse_google_sheet_events_rows(rows, "Google Sheet Events Import", "Extracted Events")
+        self.assertEqual(stats["parsed_events"], 1)
+        self.assertEqual(out[0]["title"], "Cars & Coffee Riverfront")
+        self.assertEqual(out[0]["start_dt"].hour, 10)
+        self.assertEqual(out[0]["end_dt"].hour, 13)
+        self.assertEqual(out[0]["location"], "Smale Park")
+        self.assertEqual(out[0]["source"], "google_drive_screenshots:folder123")
+
 
 class AddressVerificationTests(unittest.TestCase):
     def test_extract_address_components_uses_city_state_hint(self):

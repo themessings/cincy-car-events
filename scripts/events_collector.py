@@ -2271,8 +2271,13 @@ def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab
         return [], {"rows_read": 0, "parsed_events": 0}
 
     now_et = datetime.now(tz=tz.gettz("America/New_York"))
-    required_headers = [_sheet_header_key("Date"), _sheet_header_key("Name")]
+    date_header_keys = [_sheet_header_key("Date"), _sheet_header_key("date")]
+    title_header_keys = [_sheet_header_key("Name"), _sheet_header_key("event_name")]
+    required_headers = [date_header_keys[0], title_header_keys[0]]
     header_idx, header_map, normalized_headers = _find_sheet_header_row(rows, required_headers)
+    if header_idx is None:
+        # Support screenshot-import schema (event_name/date/start_time/end_time/...)
+        header_idx, header_map, normalized_headers = _find_sheet_header_row(rows, [date_header_keys[1], title_header_keys[1]])
     if header_idx is None:
         stats = {
             "rows_read": max(len(rows) - 1, 0),
@@ -2291,8 +2296,10 @@ def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab
     data_rows = rows[header_idx + 1 :]
 
     for row_offset, row in enumerate(data_rows, start=header_idx + 2):
-        title = _sheet_value(row, header_map, _sheet_header_key("Name"))
-        date_raw = _sheet_value(row, header_map, _sheet_header_key("Date"))
+        title = _sheet_value(row, header_map, *title_header_keys)
+        date_raw = _sheet_value(row, header_map, *date_header_keys)
+        row_start_time = _sheet_value(row, header_map, _sheet_header_key("start_time"), _sheet_header_key("starttime"))
+        row_end_time = _sheet_value(row, header_map, _sheet_header_key("end_time"), _sheet_header_key("endtime"))
         if not title:
             stats_counter["missing_title"] += 1
             continue
@@ -2300,25 +2307,42 @@ def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab
             stats_counter["missing_date"] += 1
             continue
 
-        start_dt, parse_reason = _parse_sheet_date_value(date_raw, now_et)
+        date_for_parse = date_raw
+        if row_start_time:
+            date_for_parse = f"{date_raw} {row_start_time}"
+
+        start_dt, parse_reason = _parse_sheet_date_value(date_for_parse, now_et)
         if not start_dt:
             stats_counter["parse_failure"] += 1
-            log(f"⚠️ Sheet row skipped: row={row_offset} raw_date='{date_raw}' reason={parse_reason}")
+            log(f"⚠️ Sheet row skipped: row={row_offset} raw_date='{date_for_parse}' reason={parse_reason}")
             continue
 
-        has_explicit_time = bool(re.search(r"\d{1,2}:\d{2}", date_raw)) or "t" in date_raw.lower()
+        has_explicit_time = bool(re.search(r"\d{1,2}:\d{2}", date_for_parse)) or "t" in date_for_parse.lower()
         if not has_explicit_time:
             start_dt = start_dt.replace(hour=9, minute=0, second=0, microsecond=0)
         end_dt = start_dt + timedelta(hours=2)
+        if row_end_time:
+            end_dt_parsed, _ = _parse_sheet_date_value(f"{date_raw} {row_end_time}", now_et)
+            if end_dt_parsed and end_dt_parsed > start_dt:
+                end_dt = end_dt_parsed
 
         if start_dt < now_et:
             stats_counter["past_event"] += 1
             continue
 
-        location = _sheet_value(row, header_map, _sheet_header_key("City / Where You’d Be"), _sheet_header_key("City / Where You'd Be"))
+        location = _sheet_value(
+            row,
+            header_map,
+            _sheet_header_key("City / Where You’d Be"),
+            _sheet_header_key("City / Where You'd Be"),
+            _sheet_header_key("venue_name"),
+            _sheet_header_key("street_address"),
+            _sheet_header_key("city"),
+        )
         url = _sheet_value(row, header_map, _sheet_header_key("Link"))
         event_type = _sheet_value(row, header_map, _sheet_header_key("Event Type"))
         cost = _sheet_value(row, header_map, _sheet_header_key("Cost"))
+        row_source = _sheet_value(row, header_map, _sheet_header_key("Source")) or source_name
 
         out.append(
             {
@@ -2327,7 +2351,7 @@ def _parse_google_sheet_events_rows(rows: List[List[str]], source_name: str, tab
                 "end_dt": end_dt,
                 "location": location,
                 "url": url,
-                "source": source_name,
+                "source": row_source,
                 "source_tab": tab_name,
                 "event_type": event_type,
                 "cost": cost,
@@ -2392,7 +2416,7 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
     diagnostics = diagnostics if diagnostics is not None else {}
     sheet_id = extract_google_spreadsheet_id(clean_ws(source.get("spreadsheet_id") or APEX_IMPORT_SPREADSHEET_ID))
     source_name = source.get("name", "Google Sheet Events Import")
-    tab_candidates = ["Rallies", "Events", "Sheet1"]
+    tab_candidates = ["Rallies", "Events", "Extracted Events", "Sheet1"]
     preferred_tab = clean_ws(source.get("tab") or "")
     if preferred_tab:
         tab_candidates = [preferred_tab] + [t for t in tab_candidates if t != preferred_tab]
