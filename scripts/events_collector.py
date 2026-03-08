@@ -2427,16 +2427,13 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
         diagnostics["reason"] = "missing_env"
         return []
 
-    rows: List[List[str]] = []
-    tab_name = ""
-    tried_tabs = []
-
+    tab_rows_to_try: List[Tuple[str, List[List[str]]]] = []
+    tried_tabs: List[str] = []
     for tab in tab_candidates:
         tried_tabs.append(tab)
         rows = _fetch_public_sheet_rows_csv(sheet_id, tab) or []
         if rows:
-            tab_name = tab
-            break
+            tab_rows_to_try.append((tab, rows))
 
     tab_rows_to_try: List[Tuple[str, List[List[str]]]] = []
     if rows:
@@ -2487,7 +2484,7 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
 
     top_skip_reasons = Counter(stats.get("skip_reasons") or {}).most_common(5)
     log(
-        f"✅ Sheet import loaded: rows={stats.get('rows_read', 0)} tab={tab_name or tried_tabs[0]} "
+        f"✅ Sheet import loaded: rows={stats.get('rows_read', 0)} tab={selected_tab or tried_tabs[0]} "
         f"parsed_events={stats.get('parsed_events', 0)} future_only=yes "
         f"skipped_past={stats.get('skipped_past', 0)} skipped_parse_failed={stats.get('skipped_parse_failed', 0)}"
     )
@@ -2499,7 +2496,7 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
     diagnostics["parsed_events"] = stats.get("parsed_events", 0)
     diagnostics["sheet_skip_reasons"] = stats.get("skip_reasons", {})
     diagnostics["sheet_headers"] = stats.get("header_keys_present", [])
-    diagnostics["sheet_tab"] = tab_name or tried_tabs[0]
+    diagnostics["sheet_tab"] = selected_tab or (tried_tabs[0] if tried_tabs else "")
     diagnostics["tab_candidates"] = tab_candidates
     return parsed
 
