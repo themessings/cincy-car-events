@@ -31,6 +31,16 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
+try:
+    import pytesseract
+except Exception:
+    pytesseract = None
+
+try:
+    from PIL import Image, ImageOps
+except Exception:
+    Image = ImageOps = None
+
 from scripts.facebook_event_parser import parse_facebook_event_page
 from scripts.facebook_token_manager import TokenManager
 
@@ -85,6 +95,7 @@ FACEBOOK_COVERAGE: Dict[str, object] = {"token": {}, "serp_queries": [], "urls_d
 TOKEN_MANAGER: Optional[TokenManager] = None
 URL_ENRICH_CACHE: Dict[str, Optional[dict]] = {}
 EST_TZ = tz.tzoffset("EST", -5 * 60 * 60)
+SCREENSHOT_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".heic", ".heif"}
 
 
 def _normalize_title_for_export_dedupe(value: str) -> str:
@@ -860,6 +871,141 @@ def parse_dt(text: str) -> Optional[datetime]:
     if dt.tzinfo is None:
         return dt.replace(tzinfo=et_tz)
     return dt.astimezone(et_tz)
+
+
+def _parse_time_token_for_screenshots(token: str) -> Optional[Tuple[int, int]]:
+    raw = clean_ws(token).lower().replace(".", "").replace(" ", "")
+    m = re.match(r"^(\d{1,2})(?::(\d{2}))?(am|pm)?$", raw)
+    if not m:
+        return None
+    hour = int(m.group(1))
+    minute = int(m.group(2) or 0)
+    meridiem = m.group(3)
+    if meridiem == "pm" and hour < 12:
+        hour += 12
+    if meridiem == "am" and hour == 12:
+        hour = 0
+    if hour > 23 or minute > 59:
+        return None
+    return hour, minute
+
+
+def _extract_time_range_for_screenshots(text: str) -> Tuple[Optional[Tuple[int, int]], Optional[Tuple[int, int]]]:
+    compact = text.replace("\u2013", "-").replace("\u2014", "-")
+    range_match = re.search(
+        r"(\d{1,2}(?::\d{2})?\s?(?:am|pm)?)\s*(?:-|to|until)\s*(\d{1,2}(?::\d{2})?\s?(?:am|pm)?)",
+        compact,
+        flags=re.IGNORECASE,
+    )
+    if range_match:
+        return (
+            _parse_time_token_for_screenshots(range_match.group(1)),
+            _parse_time_token_for_screenshots(range_match.group(2)),
+        )
+    single = re.search(r"\b(\d{1,2}(?::\d{2})?\s?(?:am|pm))\b", compact, flags=re.IGNORECASE)
+    if single:
+        return _parse_time_token_for_screenshots(single.group(1)), None
+    return None, None
+
+
+def _extract_events_from_screenshot_text(text: str, filename: str, source_name: str) -> List[dict]:
+    cleaned_text = text or ""
+    blocks = [b.strip() for b in re.split(r"\n\s*\n", cleaned_text) if clean_ws(b)]
+    if not blocks and clean_ws(cleaned_text):
+        blocks = [cleaned_text]
+
+    out: List[dict] = []
+    for block in blocks:
+        lines = [clean_ws(line) for line in block.splitlines() if clean_ws(line)]
+        if not lines:
+            continue
+        parsed_dt = parse_dt(block)
+        if not parsed_dt:
+            continue
+        start_tuple, end_tuple = _extract_time_range_for_screenshots(block)
+        if start_tuple:
+            parsed_dt = parsed_dt.replace(hour=start_tuple[0], minute=start_tuple[1], second=0, microsecond=0)
+        else:
+            parsed_dt = parsed_dt.replace(hour=9, minute=0, second=0, microsecond=0)
+
+        end_dt = parsed_dt + timedelta(hours=2)
+        if end_tuple:
+            end_dt = parsed_dt.replace(hour=end_tuple[0], minute=end_tuple[1], second=0, microsecond=0)
+            if end_dt <= parsed_dt:
+                end_dt += timedelta(days=1)
+
+        title = lines[0]
+        location_line = ""
+        for line in lines[1:6]:
+            if any(tok in line.lower() for tok in [" ave", " st", " rd", " blvd", " drive", " dr", " way", ", oh", " cincinnati"]):
+                location_line = line
+                break
+
+        out.append(
+            {
+                "title": title,
+                "start_dt": parsed_dt,
+                "end_dt": end_dt,
+                "location": location_line,
+                "url": "",
+                "source": f"screenshot:{filename}",
+                "source_stream": source_name,
+            }
+        )
+    return out
+
+
+def collect_screenshot_folder_events(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
+    diagnostics = diagnostics if diagnostics is not None else {}
+    source_name = source.get("name", "Screenshot Folder OCR")
+    folder_path = clean_ws(source.get("path") or os.getenv("SCREENSHOTS_DIR") or "/screenshots")
+    if not os.path.isdir(folder_path):
+        log(f"ℹ️ Screenshot folder not found: {folder_path}; skipping screenshot OCR source.")
+        diagnostics["reason"] = "missing_folder"
+        diagnostics["screenshots_detected"] = 0
+        return []
+
+    filenames = [
+        name for name in sorted(os.listdir(folder_path))
+        if os.path.isfile(os.path.join(folder_path, name)) and os.path.splitext(name)[1].lower() in SCREENSHOT_EXTS
+    ]
+    log(f"📸 Screenshot OCR: detected={len(filenames)} folder={folder_path}")
+    diagnostics["screenshots_detected"] = len(filenames)
+
+    if not filenames:
+        diagnostics["reason"] = "no_results_from_search"
+        return []
+
+    if pytesseract is None or Image is None or ImageOps is None:
+        log("⚠️ Screenshot OCR dependencies missing (pytesseract/Pillow); screenshots cannot be processed.")
+        diagnostics["reason"] = "ocr_dependencies_missing"
+        diagnostics["screenshots_processed"] = 0
+        return []
+
+    out: List[dict] = []
+    processed = 0
+    for filename in filenames:
+        path = os.path.join(folder_path, filename)
+        try:
+            image = Image.open(path)
+            image = ImageOps.exif_transpose(image).convert("RGB")
+            ocr_text = pytesseract.image_to_string(image, config="--oem 3 --psm 6")
+            processed += 1
+            log(f"🧾 OCR raw output for {filename}:\n{ocr_text if ocr_text else '[empty]'}")
+
+            parsed = _extract_events_from_screenshot_text(ocr_text, filename, source_name)
+            log(f"📸 Screenshot parsed events: file={filename} count={len(parsed)}")
+            if not parsed:
+                log(f"WARNING: No events extracted from {filename}")
+            out.extend(parsed)
+        except Exception as ex:
+            log(f"⚠️ Screenshot OCR failed for {filename}: {ex}")
+
+    diagnostics["screenshots_processed"] = processed
+    diagnostics["parsed_events"] = len(out)
+    if not out:
+        diagnostics["reason"] = "parse_failed"
+    return out
 
 
 
@@ -3811,9 +3957,11 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict], diagnos
 
 def event_signature(ev: EventItem) -> str:
     title = re.sub(r"\s+", " ", clean_ws(ev.title).lower()).strip()
-    when = clean_ws(ev.start_iso)[:16]
+    start = clean_ws(ev.start_iso)
+    end = clean_ws(ev.end_iso)
     place = re.sub(r"\s+", " ", clean_ws(ev.city_state or ev.location).lower()).strip()
-    return f"{title}||{when}||{place}"
+    url = clean_ws(ev.url).lower()
+    return f"{title}||{start}||{end}||{place}||{url}"
 
 
 def log_counter_top(title: str, counter: Counter, top_n: int = 8) -> None:
@@ -4037,15 +4185,14 @@ def dedupe_merge(
 
 def write_csv(events: List[dict], path: str) -> None:
     fields = [
-        "title",
-        "date",
-        "start_time",
-        "end_time",
-        "categ",
-        "miles_from_c",
-        "location",
-        "link",
-        "source",
+        "Event Name",
+        "Date",
+        "Start Time",
+        "End Time",
+        "Location",
+        "Address",
+        "Source",
+        "Event URL",
     ]
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -4056,15 +4203,14 @@ def write_csv(events: List[dict], path: str) -> None:
 
 def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = None) -> Tuple[List[dict], List[str]]:
     required_headers = [
-        "title",
-        "date",
-        "start_time",
-        "end_time",
-        "categ",
-        "miles_from_c",
-        "location",
-        "link",
-        "source",
+        "Event Name",
+        "Date",
+        "Start Time",
+        "End Time",
+        "Location",
+        "Address",
+        "Source",
+        "Event URL",
     ]
     alias_map = {
         "title": ["title", "event_title", "name"],
@@ -4111,16 +4257,24 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
     def format_time(dt_value: datetime) -> str:
         return dt_value.strftime("%I:%M %p").lstrip("0")
 
+    def normalize_source(raw_source: str) -> str:
+        source = clean_ws(raw_source)
+        if source.lower().startswith("screenshot:"):
+            return source
+        if "sheet" in source.lower():
+            return "sheet"
+        return "web"
+
     normalized_rows: List[dict] = []
     missing_datetime_rows = []
     for row_idx, row in enumerate(rows, start=1):
         normalized = {col: "" for col in required_headers}
-        normalized["title"] = pick_value(row, alias_map["title"])
-        normalized["categ"] = pick_value(row, alias_map["categ"])
-        normalized["miles_from_c"] = pick_value(row, alias_map["miles_from_c"])
-        normalized["location"] = pick_value(row, alias_map["location"])
-        normalized["link"] = pick_value(row, alias_map["link"])
-        normalized["source"] = pick_value(row, alias_map["source"]) or "unknown_source"
+        normalized["Event Name"] = pick_value(row, alias_map["title"])
+        raw_location = pick_value(row, alias_map["location"])
+        normalized["Location"] = raw_location
+        normalized["Address"] = raw_location
+        normalized["Event URL"] = pick_value(row, alias_map["link"])
+        normalized["Source"] = normalize_source(pick_value(row, alias_map["source"]) or "")
 
         date_text = pick_value(row, alias_map["date"])
         start_time_text = pick_value(row, alias_map["start_time"])
@@ -4134,8 +4288,8 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
             try:
                 parsed_date = dateutil_parser.parse(date_text)
                 parsed_start = dateutil_parser.parse(start_time_text)
-                normalized["date"] = parsed_date.strftime("%Y-%m-%d")
-                normalized["start_time"] = format_time(parsed_start)
+                normalized["Date"] = parsed_date.strftime("%Y-%m-%d")
+                normalized["Start Time"] = format_time(parsed_start)
                 date_ok = True
                 start_ok = True
             except Exception:
@@ -4144,29 +4298,29 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
             if end_time_text:
                 try:
                     parsed_end = dateutil_parser.parse(end_time_text)
-                    normalized["end_time"] = format_time(parsed_end)
+                    normalized["End Time"] = format_time(parsed_end)
                     end_ok = True
                 except Exception:
-                    normalized["end_time"] = ""
+                    normalized["End Time"] = ""
         
         if not (date_ok and start_ok):
             start_dt = parse_datetime(pick_value(row, alias_map["start_dt"]))
             if start_dt:
-                normalized["date"] = start_dt.strftime("%Y-%m-%d")
-                normalized["start_time"] = format_time(start_dt)
+                normalized["Date"] = start_dt.strftime("%Y-%m-%d")
+                normalized["Start Time"] = format_time(start_dt)
                 date_ok = True
                 start_ok = True
             else:
-                normalized["date"] = ""
-                normalized["start_time"] = ""
+                normalized["Date"] = ""
+                normalized["Start Time"] = ""
 
         if not end_ok:
             end_dt = parse_datetime(pick_value(row, alias_map["end_dt"]))
             if end_dt:
-                normalized["end_time"] = format_time(end_dt)
+                normalized["End Time"] = format_time(end_dt)
                 end_ok = True
             else:
-                normalized["end_time"] = ""
+                normalized["End Time"] = ""
 
         if not (date_ok and start_ok and end_ok):
             missing_datetime_rows.append(row_idx)
@@ -4437,6 +4591,10 @@ def main():
 
     cfg = load_yaml(CONFIG_PATH)
     sources = cfg.get("sources", [])
+    screenshots_dir = clean_ws(os.getenv("SCREENSHOTS_DIR") or "/screenshots")
+    if os.path.isdir(screenshots_dir):
+        sources = list(sources) + [{"type": "local_screenshot_folder", "name": "Screenshot Folder OCR", "path": screenshots_dir}]
+        log(f"   Screenshot source enabled from {screenshots_dir}")
     log(f"   Config sources loaded: {len(sources)}")
 
     global RUN_ARTIFACT_DIR
@@ -4529,6 +4687,8 @@ def main():
                 raw_events.extend(collect_ics(source_with_context, diagnostics=diagnostics))
             elif stype == "google_sheet_events_import":
                 raw_events.extend(collect_google_sheet_events_import(source_with_context, diagnostics=diagnostics))
+            elif stype == "local_screenshot_folder":
+                raw_events.extend(collect_screenshot_folder_events(source_with_context, diagnostics=diagnostics))
             elif stype == "facebook_page_events":
                 raw_events.extend(collect_facebook_page_events(source_with_context, diagnostics=diagnostics))
             elif stype == "web_search_serpapi":
@@ -4630,6 +4790,8 @@ def main():
     save_json(URL_CACHE_PATH, url_cache)
 
     export_rows, _ = normalize_export_schema(merged_dicts)
+    screenshot_rows_written = sum(1 for row in export_rows if clean_ws(str(row.get("Source", ""))).lower().startswith("screenshot:"))
+    log(f"📸 Screenshot export rows written: {screenshot_rows_written}")
 
     payload = {
         "generated_at_iso": now_et_iso(),
