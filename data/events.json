@@ -1,36 +1,16 @@
 {
-  "generated_at_iso": "2026-03-08T20:21:43.935649-04:00",
-  "count": 178,
+  "generated_at_iso": "2026-03-08T20:29:34.401533-04:00",
+  "count": 97,
   "events": [
-    {
-      "Event Name": "Columbus Cafe Racers Monthly Lunch Cruise In",
-      "Date": "2026-03-11",
-      "Start Time": "12:00 AM",
-      "End Time": "2:00 AM",
-      "Location": "1611 Polaris Parkway, Columbus, OH",
-      "Address": "1611 Polaris Parkway, Columbus, OH",
-      "Source": "web",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cafe-racers-monthly-luch-cruise-in/2026-03-11/"
-    },
     {
       "Event Name": "Columbus Cafe Racers Monthly Lunch Cruise In",
       "Date": "2026-03-11",
       "Start Time": "11:00 AM",
       "End Time": "1:00 PM",
-      "Location": "1611 Polaris Parkway, Columbus, OH 43240",
-      "Address": "1611 Polaris Parkway, Columbus, OH 43240",
-      "Source": "web",
+      "Location": "1611 Polaris Parkway, Columbus, OH",
+      "Address": "1611 Polaris Parkway, Columbus, OH",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cafe-racers-monthly-luch-cruise-in/2026-03-11/"
-    },
-    {
-      "Event Name": "Columbus Cars & Coffee Fridays",
-      "Date": "2026-03-13",
-      "Start Time": "12:00 AM",
-      "End Time": "2:00 AM",
-      "Location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "Address": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "Source": "web",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-13/"
     },
     {
       "Event Name": "Three Legs of Mann Rally 2026 &#8211; Isle of Man",
@@ -39,7 +19,7 @@
       "End Time": "2:59 AM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "Regional rallies",
       "Event URL": "https://bringatrailer.com/event/three-legs-of-mann-rally-2026-isle-of-man/"
     },
     {
@@ -49,7 +29,7 @@
       "End Time": "9:30 AM",
       "Location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
       "Address": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-13/"
     },
     {
@@ -59,7 +39,7 @@
       "End Time": "6:00 PM",
       "Location": "Duke Energy Convention Center",
       "Address": "Duke Energy Convention Center",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/65th-annual-cavalcade-of-custo/788168877564913/"
     },
     {
@@ -69,7 +49,7 @@
       "End Time": "10:30 AM",
       "Location": "2791 Town Center Blvd, Crestview Hills, KY",
       "Address": "2791 Town Center Blvd, Crestview Hills, KY",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-03-14/"
     },
     {
@@ -79,7 +59,7 @@
       "End Time": "12:00 PM",
       "Location": "3650 Olentangy River Rd, Columbus, OH",
       "Address": "3650 Olentangy River Rd, Columbus, OH",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-03-14/"
     },
     {
@@ -89,7 +69,7 @@
       "End Time": "12:00 PM",
       "Location": "2875 Olentangy River Road, Columbus, OH",
       "Address": "2875 Olentangy River Road, Columbus, OH",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-03-14/"
     },
     {
@@ -99,7 +79,7 @@
       "End Time": "1:00 PM",
       "Location": "8000 Factory Shops Boulevard, Jeffersonville, OH",
       "Address": "8000 Factory Shops Boulevard, Jeffersonville, OH",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/destination-cars-and-coffee/2026-03-14/"
     },
     {
@@ -109,7 +89,7 @@
       "End Time": "7:30 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/cansmen/events/312701962/"
     },
     {
@@ -119,7 +99,7 @@
       "End Time": "11:00 AM",
       "Location": "691 N. Cleveland Ave, Westerville, OH",
       "Address": "691 N. Cleveland Ave, Westerville, OH",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-sundays/2026-03-15/"
     },
     {
@@ -129,7 +109,7 @@
       "End Time": "12:00 PM",
       "Location": "691 N. Cleveland Ave, Westerville, OH",
       "Address": "691 N. Cleveland Ave, Westerville, OH",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-starbucks/2026-03-15/"
     },
     {
@@ -139,7 +119,7 @@
       "End Time": "12:00 PM",
       "Location": "The Cocoa Muse",
       "Address": "The Cocoa Muse",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/euro-cars-and-cocoa/4227146924205388/"
     },
     {
@@ -149,18 +129,8 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-03-15/"
-    },
-    {
-      "Event Name": "Endless Car Culture, Cincinnati / Meet #4.1",
-      "Date": "2026-03-18",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Quaker Steak and Lube Colerain, OH",
-      "Address": "Quaker Steak and Lube Colerain, OH",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/1621707615689231/"
     },
     {
       "Event Name": "Endless Car Culture, Cincinnati / Meet #4.1",
@@ -169,7 +139,7 @@
       "End Time": "9:00 PM",
       "Location": "Quaker Steak and Lube Colerain, OH",
       "Address": "Quaker Steak and Lube Colerain, OH",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/1621707615689231/"
     },
     {
@@ -179,7 +149,7 @@
       "End Time": "9:30 AM",
       "Location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
       "Address": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "Source": "web",
+      "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-20/"
     },
     {
@@ -189,28 +159,8 @@
       "End Time": "5:00 PM",
       "Location": "Darana Raceway- Xenia, Ohio",
       "Address": "Darana Raceway- Xenia, Ohio",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/drift-indy-opening-day-2026/2055012242019528/"
-    },
-    {
-      "Event Name": "UC Cars and Coffee Meet #1",
-      "Date": "2026-03-20",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "21 2021 with 170 people in, Cincinnati, OH",
-      "Address": "21 2021 with 170 people in, Cincinnati, OH",
-      "Source": "web",
-      "Event URL": "https://www.facebook.com/events/5118076844930137/"
-    },
-    {
-      "Event Name": "Dragon Rally® LI (51)",
-      "Date": "2026-03-21",
-      "Start Time": "7:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "129 Hub 4371, Calderwood Hwy Maryville TN 37801",
-      "Address": "129 Hub 4371, Calderwood Hwy Maryville TN 37801",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/dragon-rally-li-51/743746872121536/"
     },
     {
       "Event Name": "Dragon Rally® LI (51)",
@@ -219,7 +169,7 @@
       "End Time": "11:00 AM",
       "Location": "129 Hub 4371 Calderwood Hwy Maryville, TN 37801",
       "Address": "129 Hub 4371 Calderwood Hwy Maryville, TN 37801",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dragon-rally-li-51/743746872121536/"
     },
     {
@@ -229,7 +179,7 @@
       "End Time": "1:00 PM",
       "Location": "Paristown - Louisville, KY",
       "Address": "Paristown - Louisville, KY",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/rcr-2026-car-season-kickoff/1185415010435301/"
     },
     {
@@ -239,7 +189,7 @@
       "End Time": "8:00 PM",
       "Location": "525 Elm Street, Cincinnati, OH",
       "Address": "525 Elm Street, Cincinnati, OH",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-auto-expo/1355761812681578/"
     },
     {
@@ -249,7 +199,7 @@
       "End Time": "8:00 PM",
       "Location": "NCM Motorsports Park",
       "Address": "NCM Motorsports Park",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/april-spools-2026/1315912386466471/"
     },
     {
@@ -263,33 +213,13 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
-      "Event Name": "Ohio Challenge RoadRally (SCCA)",
-      "Date": "2026-03-27",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Columbus, OH",
-      "Address": "Columbus, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Ohio Challenge RoadRally (SCCA)",
-      "Date": "2026-03-28",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Lexington, OH, Columbus, OH",
-      "Address": "Lexington, OH, Columbus, OH",
-      "Source": "web",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
       "Date": "2026-04-17",
       "Start Time": "8:00 AM",
       "End Time": "6:00 PM",
       "Location": "Mid-Ohio Sports Car Course",
       "Address": "Mid-Ohio Sports Car Course",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/spring-break-at-china-beach-ro/1654389302582694/"
     },
     {
@@ -303,44 +233,14 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
-      "Event Name": "Hoosier Rally (SCCA)",
-      "Date": "2026-04-17",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Indianapolis, IN",
-      "Address": "Indianapolis, IN",
-      "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Hoosier Rally (SCCA)",
-      "Date": "2026-04-18",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Lexington, OH, Indianapolis, IN",
-      "Address": "Lexington, OH, Indianapolis, IN",
-      "Source": "web",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
       "Event Name": "GDCC Corvettes & Coffee at National Museum of United States Airforce",
       "Date": "2026-04-18",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
       "Location": "National Museum of the U.S. Air Force",
       "Address": "National Museum of the U.S. Air Force",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/gdcc-corvettes-coffee-at-natio/1636585704184790/"
-    },
-    {
-      "Event Name": "Fairfield Cars and Coffee 2026 #1",
-      "Date": "2026-04-19",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "8695 Bilstein Blvd Hamilton Ohio 45015",
-      "Address": "8695 Bilstein Blvd Hamilton Ohio 45015",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/fairfield-cars-and-coffee-2026/1629100551564096/"
     },
     {
       "Event Name": "2026 Sycamore Cars and Coffee",
@@ -349,7 +249,7 @@
       "End Time": "1:00 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
@@ -359,7 +259,7 @@
       "End Time": "12:00 PM",
       "Location": "8695 Bilstein Blvd Hamilton Ohio 45015",
       "Address": "8695 Bilstein Blvd Hamilton Ohio 45015",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/fairfield-cars-and-coffee-2026/1629100551564096/"
     },
     {
@@ -369,18 +269,8 @@
       "End Time": "7:00 PM",
       "Location": "National Trail Raceway",
       "Address": "National Trail Raceway",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/import-face-off-hebron-oh-4192/1366574381648422/"
-    },
-    {
-      "Event Name": "5th Annual “Hail to Horsepower” Car Show",
-      "Date": "2026-04-25",
-      "Start Time": "8:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "Horsepower Farm Middletown",
-      "Address": "Horsepower Farm Middletown",
-      "Source": "web",
-      "Event URL": "fb://event/?id=788415087022357"
     },
     {
       "Event Name": "5th Annual “Hail to Horsepower” Car Show",
@@ -389,7 +279,7 @@
       "End Time": "4:00 PM",
       "Location": "Horsepower Farm Middletown",
       "Address": "Horsepower Farm Middletown",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "fb://event/?id=788415087022357"
     },
     {
@@ -399,7 +289,7 @@
       "End Time": "4:00 PM",
       "Location": "1901 Selma Rd, Springfield, OH",
       "Address": "1901 Selma Rd, Springfield, OH",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/jaguar-jubilee-car-show-all-ma/1349238980294415/"
     },
     {
@@ -413,54 +303,14 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
-      "Event Name": "Buckeye RoadRally (SCCA)",
-      "Date": "2026-05-01",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Buckeye RoadRally (SCCA)",
-      "Date": "2026-05-02",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Lexington, OH, Dayton, OH",
-      "Address": "Lexington, OH, Dayton, OH",
-      "Source": "web",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "10th Annual Cruisin to A Cure for ALS Car Show",
-      "Date": "2026-05-03",
-      "Start Time": "8:00 AM",
-      "End Time": "4:00 PM",
-      "Location": "City of Lawrenceburg",
-      "Address": "City of Lawrenceburg",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/10th-annual-cruisin-to-a-cure-/3335085709990389/"
-    },
-    {
       "Event Name": "10th Annual Cruisin to A Cure for ALS Car Show",
       "Date": "2026-05-03",
       "Start Time": "9:00 AM",
       "End Time": "5:00 PM",
       "Location": "City of Lawrenceburg",
       "Address": "City of Lawrenceburg",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/10th-annual-cruisin-to-a-cure-/3335085709990389/"
-    },
-    {
-      "Event Name": "Slammedenuff Ohio Car Show 2026",
-      "Date": "2026-05-03",
-      "Start Time": "12:00 PM",
-      "End Time": "5:00 PM",
-      "Location": "Ohio Expo Center - Lausche Building",
-      "Address": "Ohio Expo Center - Lausche Building",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/slammedenuff-ohio-car-show-202/1347835250446936/"
     },
     {
       "Event Name": "Slammedenuff Ohio Car Show 2026",
@@ -469,7 +319,7 @@
       "End Time": "6:00 PM",
       "Location": "Ohio Expo Center - Lausche Building",
       "Address": "Ohio Expo Center - Lausche Building",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/slammedenuff-ohio-car-show-202/1347835250446936/"
     },
     {
@@ -483,26 +333,6 @@
       "Event URL": "https://corsarally.com/"
     },
     {
-      "Event Name": "Corsa America Spring Rally – Day 1",
-      "Date": "2026-05-04",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Smoky Mountains, TN (Launch)",
-      "Address": "Smoky Mountains, TN (Launch)",
-      "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
-      "Event Name": "Corsa America Spring Rally – Day 1",
-      "Date": "2026-05-05",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Blue Ridge, GA, Smoky Mountains, TN",
-      "Address": "Blue Ridge, GA, Smoky Mountains, TN",
-      "Source": "web",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
       "Event Name": "Corsa America Spring Rally – Day 2",
       "Date": "2026-05-05",
       "Start Time": "9:00 AM",
@@ -513,26 +343,6 @@
       "Event URL": "https://corsarally.com/"
     },
     {
-      "Event Name": "Corsa America Spring Rally – Day 2",
-      "Date": "2026-05-05",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Asheville, NC",
-      "Address": "Asheville, NC",
-      "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
-      "Event Name": "Corsa America Spring Rally – Day 2",
-      "Date": "2026-05-06",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Blue Ridge, GA, Asheville, NC",
-      "Address": "Blue Ridge, GA, Asheville, NC",
-      "Source": "web",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
       "Event Name": "Corsa America Spring Rally – Day 3",
       "Date": "2026-05-06",
       "Start Time": "9:00 AM",
@@ -540,26 +350,6 @@
       "Location": "Blue Ridge, GA",
       "Address": "Blue Ridge, GA",
       "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
-      "Event Name": "Corsa America Spring Rally – Day 3",
-      "Date": "2026-05-06",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Blue Ridge, GA",
-      "Address": "Blue Ridge, GA",
-      "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
-      "Event Name": "Corsa America Spring Rally – Day 3",
-      "Date": "2026-05-07",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Blue Ridge, GA",
-      "Address": "Blue Ridge, GA",
-      "Source": "web",
       "Event URL": "https://corsarally.com/"
     },
     {
@@ -569,7 +359,7 @@
       "End Time": "3:00 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
@@ -579,7 +369,7 @@
       "End Time": "5:00 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
@@ -590,26 +380,6 @@
       "Location": "Lexington, OH",
       "Address": "Lexington, OH",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Mid-Ohio RoadRally (SCCA)",
-      "Date": "2026-05-15",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Lexington, OH",
-      "Address": "Lexington, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Mid-Ohio RoadRally (SCCA)",
-      "Date": "2026-05-16",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Lexington, OH",
-      "Address": "Lexington, OH",
-      "Source": "web",
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
@@ -619,7 +389,7 @@
       "End Time": "12:30 PM",
       "Location": "4480 Lake Forest Dr, Ste 314, Cincinnati, OH, , Ohio 45242",
       "Address": "4480 Lake Forest Dr, Ste 314, Cincinnati, OH, , Ohio 45242",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/zakiras-garage-2026-spring-ope/1122944979897103/"
     },
     {
@@ -629,7 +399,7 @@
       "End Time": "6:30 PM",
       "Location": "Salem Speedway",
       "Address": "Salem Speedway",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/down-bad-drift-spring-kickoff/1606947547280408/"
     },
     {
@@ -639,18 +409,8 @@
       "End Time": "4:00 PM",
       "Location": "Krieger Ford",
       "Address": "Krieger Ford",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2026-annual-krieger-ford-car-t/929009356126663/"
-    },
-    {
-      "Event Name": "Valley High Car Show",
-      "Date": "2026-05-17",
-      "Start Time": "9:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "10200 Dixie Hwy, Louisville KY 40272",
-      "Address": "10200 Dixie Hwy, Louisville KY 40272",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
     },
     {
       "Event Name": "Valley High Car Show",
@@ -659,18 +419,8 @@
       "End Time": "3:00 PM",
       "Location": "10200 Dixie Hwy, Louisville, KY",
       "Address": "10200 Dixie Hwy, Louisville, KY",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
-    },
-    {
-      "Event Name": "Rumble on the River Car Show 2026",
-      "Date": "2026-05-23",
-      "Start Time": "6:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "Riverfront Madison IN",
-      "Address": "Riverfront Madison IN",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/rumble-on-the-river-car-show-2/853255881026686/"
     },
     {
       "Event Name": "Rumble on the River Car Show 2026",
@@ -679,18 +429,8 @@
       "End Time": "4:00 PM",
       "Location": "Riverfront Madison IN",
       "Address": "Riverfront Madison IN",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/rumble-on-the-river-car-show-2/853255881026686/"
-    },
-    {
-      "Event Name": "Quaker Steak & Lube Classic Car Show & Cruise In",
-      "Date": "2026-05-23",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "9:00AM until 3:00PM",
-      "Address": "9:00AM until 3:00PM",
-      "Source": "web",
-      "Event URL": "https://www.facebook.com/events/590/"
     },
     {
       "Event Name": "21st Annual Beatersville Car and Bike Show",
@@ -699,28 +439,8 @@
       "End Time": "10:00 AM",
       "Location": "Portal Louisville",
       "Address": "Portal Louisville",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "fb://event/?id=1413571117159967"
-    },
-    {
-      "Event Name": "Dog face K9s 3rd annual Car show",
-      "Date": "2026-05-30",
-      "Start Time": "10:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "Quaker Steak and Lube",
-      "Address": "Quaker Steak and Lube",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/dog-face-k9s-3rd-annual-car-sh/904114905896136/"
-    },
-    {
-      "Event Name": "Open House & Car Show",
-      "Date": "2026-05-30",
-      "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "Eclipse Window Tinting, Cincinnati Ohio",
-      "Address": "Eclipse Window Tinting, Cincinnati Ohio",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/open-house-car-show/1831242324193150/"
     },
     {
       "Event Name": "Eclipse 5th Annual Open House & Car Show",
@@ -729,7 +449,7 @@
       "End Time": "2:00 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
@@ -739,7 +459,7 @@
       "End Time": "2:00 PM",
       "Location": "Eclipse Window Tinting, Cincinnati Ohio",
       "Address": "Eclipse Window Tinting, Cincinnati Ohio",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/open-house-car-show/1831242324193150/"
     },
     {
@@ -749,7 +469,7 @@
       "End Time": "3:00 PM",
       "Location": "Quaker Steak and Lube",
       "Address": "Quaker Steak and Lube",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dog-face-k9s-3rd-annual-car-sh/904114905896136/"
     },
     {
@@ -759,7 +479,7 @@
       "End Time": "12:00 PM",
       "Location": "401 Milford Pkwy, Milford, OH 45150-1298",
       "Address": "401 Milford Pkwy, Milford, OH 45150-1298",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/4th-annual-20th-century-all-gm/2340968919664179/"
     },
     {
@@ -769,7 +489,7 @@
       "End Time": "7:00 PM",
       "Location": "DNA Computers & Electronics Repair",
       "Address": "DNA Computers & Electronics Repair",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/no-limits-937-private-event-fe/1916729278941344/"
     },
     {
@@ -783,43 +503,13 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
-      "Event Name": "RallyCross – Edgewater",
-      "Date": "2026-06-05",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Wilmington, OH",
-      "Address": "Wilmington, OH",
-      "Source": "sheet",
-      "Event URL": "https://cincyscca.com/rally-cross/"
-    },
-    {
-      "Event Name": "RallyCross – Edgewater",
-      "Date": "2026-06-06",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Wilmington, OH",
-      "Address": "Wilmington, OH",
-      "Source": "web",
-      "Event URL": "https://cincyscca.com/rally-cross/"
-    },
-    {
-      "Event Name": "Oxford Masonic Lodge Annual Charity Car and Bike show",
-      "Date": "2026-06-06",
-      "Start Time": "1:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "Oxford Masonic Lodge car show",
-      "Address": "Oxford Masonic Lodge car show",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
-    },
-    {
       "Event Name": "Oxford Masonic Lodge Annual Charity Car and Bike show",
       "Date": "2026-06-06",
       "Start Time": "2:00 PM",
       "End Time": "10:00 PM",
       "Location": "Oxford Masonic Lodge car show",
       "Address": "Oxford Masonic Lodge car show",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
     },
     {
@@ -833,58 +523,8 @@
       "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
-      "Event Name": "Southern Ohio Forest Rally – Day 1",
-      "Date": "2026-06-10",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 1",
-      "Date": "2026-06-11",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Source": "web",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
       "Event Name": "Southern Ohio Forest Rally – Day 2",
       "Date": "2026-06-11",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 2",
-      "Date": "2026-06-11",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 2",
-      "Date": "2026-06-12",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Source": "web",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 3",
-      "Date": "2026-06-12",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Chillicothe, OH",
@@ -900,16 +540,6 @@
       "Location": "Chillicothe, OH",
       "Address": "Chillicothe, OH",
       "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 3",
-      "Date": "2026-06-13",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Source": "web",
       "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
@@ -919,7 +549,7 @@
       "End Time": "3:00 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
@@ -933,62 +563,12 @@
       "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
     {
-      "Event Name": "Dynasty Rally 2026 – Day 1",
-      "Date": "2026-06-17",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Launch Cincinnati, OH",
-      "Address": "Launch Cincinnati, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 1",
-      "Date": "2026-06-18",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Launch Cincinnati, OH",
-      "Address": "Launch Cincinnati, OH",
-      "Source": "web",
-      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
-    },
-    {
       "Event Name": "Dynasty Rally 2026 – Day 2",
       "Date": "2026-06-18",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Southern Ohio / KY Backroads",
       "Address": "Southern Ohio / KY Backroads",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 2",
-      "Date": "2026-06-18",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Southern Ohio / KY Backroads",
-      "Address": "Southern Ohio / KY Backroads",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 2",
-      "Date": "2026-06-19",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Knoxville, TN",
-      "Address": "Knoxville, TN",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 3",
-      "Date": "2026-06-19",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Tennessee / Appalachia Region",
-      "Address": "Tennessee / Appalachia Region",
       "Source": "sheet",
       "Event URL": "Same as above"
     },
@@ -1001,16 +581,6 @@
       "Address": "Tennessee / Appalachia Region",
       "Source": "sheet",
       "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Voss Hoss Cruise-in 2026",
-      "Date": "2026-06-19",
-      "Start Time": "4:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Voss Used Vehicles",
-      "Address": "Voss Used Vehicles",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/voss-hoss-cruise-in-2026/1347118783851195/"
     },
     {
       "Event Name": "Voss Hoss Cruise-in 2026",
@@ -1019,28 +589,8 @@
       "End Time": "9:00 PM",
       "Location": "Voss Used Vehicles",
       "Address": "Voss Used Vehicles",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/voss-hoss-cruise-in-2026/1347118783851195/"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 3",
-      "Date": "2026-06-20",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Knoxville, TN",
-      "Address": "Knoxville, TN",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "GDCC Annual all Corvette Car Show",
-      "Date": "2026-06-20",
-      "Start Time": "8:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "Hollywood Gaming at Dayton Raceway",
-      "Address": "Hollywood Gaming at Dayton Raceway",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
     },
     {
       "Event Name": "Cincy Cars & Coffee @ Liberty Center",
@@ -1049,7 +599,7 @@
       "End Time": "12:00 PM",
       "Location": "7160 Taylor Street Liberty Township, OH 45069",
       "Address": "7160 Taylor Street Liberty Township, OH 45069",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1465749794987498/"
     },
     {
@@ -1059,7 +609,7 @@
       "End Time": "12:00 PM",
       "Location": "124 W Main St, Louisville, KY 40202-1344",
       "Address": "124 W Main St, Louisville, KY 40202-1344",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/whiskey-row-car-show-june-20th/2608203072913628/"
     },
     {
@@ -1069,7 +619,7 @@
       "End Time": "3:00 PM",
       "Location": "Hollywood Gaming at Dayton Raceway",
       "Address": "Hollywood Gaming at Dayton Raceway",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
     },
     {
@@ -1079,7 +629,7 @@
       "End Time": "6:00 PM",
       "Location": "Ohio Expo Center & State Fairgrounds",
       "Address": "Ohio Expo Center & State Fairgrounds",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/barrett-jackson-2026-columbus-/1500186320864716/"
     },
     {
@@ -1089,18 +639,8 @@
       "End Time": "8:00 PM",
       "Location": "Destination Outlets (formerly Jeffersonville Outlets) *Off I-71, Jeffersonville, Ohio",
       "Address": "Destination Outlets (formerly Jeffersonville Outlets) *Off I-71, Jeffersonville, Ohio",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Annual Car Show & Chicken Dinner",
-      "Date": "2026-06-28",
-      "Start Time": "10:00 AM",
-      "End Time": "1:30 PM",
-      "Location": "Perfect Place Ln, Lawrenceburg, IN 47025",
-      "Address": "Perfect Place Ln, Lawrenceburg, IN 47025",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/annual-car-show-chicken-dinner/2048696039298978/"
     },
     {
       "Event Name": "Annual Car Show & Chicken Dinner",
@@ -1109,20 +649,10 @@
       "End Time": "2:30 PM",
       "Location": "Perfect Place Ln, Lawrenceburg, IN 47025",
       "Address": "Perfect Place Ln, Lawrenceburg, IN 47025",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/annual-car-show-chicken-dinner/2048696039298978/"
     },
     {
-      "Event Name": "Cars and Coffee June 29",
-      "Date": "2026-06-28",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "The Upside Brew! Start your Engines and your morning with ! Join for Cars a",
-      "Address": "The Upside Brew! Start your Engines and your morning with ! Join for Cars a",
-      "Source": "web",
-      "Event URL": "https://www.facebook.com/events/329-ludlow-avenue-cincinnati-oh/cars-and-coffee-june-29/1396164504862230/"
-    },
-    {
       "Event Name": "King of the Roads Rally",
       "Date": "2026-07-03",
       "Start Time": "9:00 AM",
@@ -1130,26 +660,6 @@
       "Location": "Louisville, KY",
       "Address": "Louisville, KY",
       "Source": "sheet",
-      "Event URL": "https://kingoftheroads.events/"
-    },
-    {
-      "Event Name": "King of the Roads Rally",
-      "Date": "2026-07-03",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Louisville, KY",
-      "Address": "Louisville, KY",
-      "Source": "sheet",
-      "Event URL": "https://kingoftheroads.events/"
-    },
-    {
-      "Event Name": "King of the Roads Rally",
-      "Date": "2026-07-04",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Louisville, KY",
-      "Address": "Louisville, KY",
-      "Source": "web",
       "Event URL": "https://kingoftheroads.events/"
     },
     {
@@ -1159,18 +669,8 @@
       "End Time": "12:00 AM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Cincy Cool Cars Club Car Show",
-      "Date": "2026-07-11",
-      "Start Time": "7:30 AM",
-      "End Time": "2:30 PM",
-      "Location": "Fairfield Ohio - Cincinatti",
-      "Address": "Fairfield Ohio - Cincinatti",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/cincy-cool-cars-club-car-show/1223464389322097/"
     },
     {
       "Event Name": "Cincy Cool Cars Club Car Show",
@@ -1179,7 +679,7 @@
       "End Time": "3:30 PM",
       "Location": "Fairfield Ohio - Cincinatti",
       "Address": "Fairfield Ohio - Cincinatti",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincy-cool-cars-club-car-show/1223464389322097/"
     },
     {
@@ -1193,62 +693,12 @@
       "Event URL": "https://rallynorthamerica.com/rally-events/"
     },
     {
-      "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
-      "Date": "2026-07-11",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Athens, OH (Launch)",
-      "Address": "Athens, OH (Launch)",
-      "Source": "sheet",
-      "Event URL": "https://rallynorthamerica.com/rally-events/"
-    },
-    {
-      "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
-      "Date": "2026-07-12",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Athens, OH (Launch)",
-      "Address": "Athens, OH (Launch)",
-      "Source": "web",
-      "Event URL": "https://rallynorthamerica.com/rally-events/"
-    },
-    {
       "Event Name": "Rally North America – Day 2",
       "Date": "2026-07-12",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Marquette, MI",
       "Address": "Marquette, MI",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Rally North America – Day 2",
-      "Date": "2026-07-12",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Marquette, MI",
-      "Address": "Marquette, MI",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Rally North America – Day 2",
-      "Date": "2026-07-13",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Knoxville, TN, Marquette, MI",
-      "Address": "Knoxville, TN, Marquette, MI",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Rally North America – Day 3",
-      "Date": "2026-07-13",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Traverse City, MI",
-      "Address": "Traverse City, MI",
       "Source": "sheet",
       "Event URL": "Same as above"
     },
@@ -1263,16 +713,6 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Rally North America – Day 3",
-      "Date": "2026-07-14",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Knoxville, TN, Traverse City, MI",
-      "Address": "Knoxville, TN, Traverse City, MI",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
       "Event Name": "Rally North America – Day 4",
       "Date": "2026-07-14",
       "Start Time": "9:00 AM",
@@ -1281,36 +721,6 @@
       "Address": "Frankenmuth, MI",
       "Source": "sheet",
       "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Rally North America – Day 4",
-      "Date": "2026-07-14",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Frankenmuth, MI",
-      "Address": "Frankenmuth, MI",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Rally North America – Day 4",
-      "Date": "2026-07-15",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Knoxville, TN, Frankenmuth, MI",
-      "Address": "Knoxville, TN, Frankenmuth, MI",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026",
-      "Date": "2026-07-18",
-      "Start Time": "8:00 AM",
-      "End Time": "5:00 PM",
-      "Location": "Circuit Cafe / Cincinnati Cars & Coffee",
-      "Address": "Circuit Cafe / Cincinnati Cars & Coffee",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
     },
     {
       "Event Name": "Dynasty Rally 2026",
@@ -1319,7 +729,7 @@
       "End Time": "6:00 PM",
       "Location": "Circuit Cafe / Cincinnati Cars & Coffee",
       "Address": "Circuit Cafe / Cincinnati Cars & Coffee",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
     },
     {
@@ -1333,26 +743,6 @@
       "Event URL": "—"
     },
     {
-      "Event Name": "Cincy Car Cruise Rally",
-      "Date": "2026-07-24",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Cincinnati, OH",
-      "Address": "Cincinnati, OH",
-      "Source": "sheet",
-      "Event URL": "—"
-    },
-    {
-      "Event Name": "Cincy Car Cruise Rally",
-      "Date": "2026-07-25",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Cincinnati, OH",
-      "Address": "Cincinnati, OH",
-      "Source": "web",
-      "Event URL": "—"
-    },
-    {
       "Event Name": "Recharge Rally – Day 1",
       "Date": "2026-07-29",
       "Start Time": "9:00 AM",
@@ -1363,62 +753,12 @@
       "Event URL": "https://www.therechargerally.com/"
     },
     {
-      "Event Name": "Recharge Rally – Day 1",
-      "Date": "2026-07-29",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Launch Cincinnati, OH",
-      "Address": "Launch Cincinnati, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.therechargerally.com/"
-    },
-    {
-      "Event Name": "Recharge Rally – Day 1",
-      "Date": "2026-07-30",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Launch Cincinnati, OH",
-      "Address": "Launch Cincinnati, OH",
-      "Source": "web",
-      "Event URL": "https://www.therechargerally.com/"
-    },
-    {
       "Event Name": "Recharge Rally – Day 2",
       "Date": "2026-07-30",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Chattanooga, TN",
       "Address": "Chattanooga, TN",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Recharge Rally – Day 2",
-      "Date": "2026-07-30",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Chattanooga, TN",
-      "Address": "Chattanooga, TN",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Recharge Rally – Day 2",
-      "Date": "2026-07-31",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Knoxville, TN, Chattanooga, TN",
-      "Address": "Knoxville, TN, Chattanooga, TN",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Recharge Rally – Day 3",
-      "Date": "2026-07-31",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Greenville, SC",
-      "Address": "Greenville, SC",
       "Source": "sheet",
       "Event URL": "Same as above"
     },
@@ -1433,16 +773,6 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Recharge Rally – Day 3",
-      "Date": "2026-08-01",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Knoxville, TN, Greenville, SC",
-      "Address": "Knoxville, TN, Greenville, SC",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
       "Event Name": "Recharge Rally – Day 4",
       "Date": "2026-08-01",
       "Start Time": "9:00 AM",
@@ -1450,26 +780,6 @@
       "Location": "Charlotte, NC",
       "Address": "Charlotte, NC",
       "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Recharge Rally – Day 4",
-      "Date": "2026-08-01",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Charlotte, NC",
-      "Address": "Charlotte, NC",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Recharge Rally – Day 4",
-      "Date": "2026-08-02",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Knoxville, TN, Charlotte, NC",
-      "Address": "Knoxville, TN, Charlotte, NC",
-      "Source": "web",
       "Event URL": "Same as above"
     },
     {
@@ -1479,7 +789,7 @@
       "End Time": "1:00 PM",
       "Location": "Kentucky Exposition Center",
       "Address": "Kentucky Exposition Center",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/57th-nsra-street-rod-nationals/1204385181605828/"
     },
     {
@@ -1493,44 +803,14 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
-      "Event Name": "RallyCross – Edgewater",
-      "Date": "2026-08-07",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Wilmington, OH",
-      "Address": "Wilmington, OH",
-      "Source": "sheet",
-      "Event URL": "https://cincyscca.com/rally-cross/"
-    },
-    {
-      "Event Name": "RallyCross – Edgewater",
-      "Date": "2026-08-08",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Wilmington, OH",
-      "Address": "Wilmington, OH",
-      "Source": "web",
-      "Event URL": "https://cincyscca.com/rally-cross/"
-    },
-    {
       "Event Name": "OVR PCA Autocross - August 2026",
       "Date": "2026-08-08",
       "Start Time": "8:30 AM",
       "End Time": "3:00 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Frisch's Court Street Car Show/Cruise-In",
-      "Date": "2026-08-13",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "14 2022. .., Cincinnati, OH",
-      "Address": "14 2022. .., Cincinnati, OH",
-      "Source": "web",
-      "Event URL": "https://www.facebook.com/events/1-e-court-st-cincinnati-oh-45202-1103-united-states/frischs-court-street-car-showcruise-in/582845909876607/"
     },
     {
       "Event Name": "Vaded Street Circuit: Ohio 2026",
@@ -1539,7 +819,7 @@
       "End Time": "10:00 PM",
       "Location": "Land-Grant Brewing Company",
       "Address": "Land-Grant Brewing Company",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/vaded-street-circuit-ohio-2026/4616674298560484/"
     },
     {
@@ -1553,44 +833,14 @@
       "Event URL": "https://ridewithrandy.org/"
     },
     {
-      "Event Name": "Ride With Randy Rally",
-      "Date": "2026-09-11",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Louisville, KY",
-      "Address": "Louisville, KY",
-      "Source": "sheet",
-      "Event URL": "https://ridewithrandy.org/"
-    },
-    {
-      "Event Name": "Ride With Randy Rally",
-      "Date": "2026-09-12",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Louisville, KY",
-      "Address": "Louisville, KY",
-      "Source": "web",
-      "Event URL": "https://ridewithrandy.org/"
-    },
-    {
       "Event Name": "OVR PCA Autocross - September 2026",
       "Date": "2026-09-12",
       "Start Time": "8:30 AM",
       "End Time": "3:00 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event",
-      "Date": "2026-10-03",
-      "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "2669 E Kemper Road, Cincinnati OH 45241",
-      "Address": "2669 E Kemper Road, Cincinnati OH 45241",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
     },
     {
       "Event Name": "Porsche Cruise In - OVRPCA & Eclipse Annual Event",
@@ -1599,7 +849,7 @@
       "End Time": "2:00 PM",
       "Location": "",
       "Address": "",
-      "Source": "web",
+      "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
@@ -1609,7 +859,7 @@
       "End Time": "2:00 PM",
       "Location": "2669 E Kemper Road, Cincinnati, OH",
       "Address": "2669 E Kemper Road, Cincinnati, OH",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
     },
     {
@@ -1623,26 +873,6 @@
       "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
-      "Event Name": "Cancer Awareness Rally – Day 1",
-      "Date": "2026-10-17",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Launch Washington, DC",
-      "Address": "Launch Washington, DC",
-      "Source": "sheet",
-      "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
-    },
-    {
-      "Event Name": "Cancer Awareness Rally – Day 2",
-      "Date": "2026-10-18",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Knoxville, TN, Washington, DC",
-      "Address": "Knoxville, TN, Washington, DC",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
       "Event Name": "Cancer Awareness Rally – Day 2",
       "Date": "2026-10-18",
       "Start Time": "11:00 PM",
@@ -1650,16 +880,6 @@
       "Location": "Washington, DC",
       "Address": "Washington, DC",
       "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Cancer Awareness Rally – Day 3",
-      "Date": "2026-10-19",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Knoxville, TN, Bristol, TN",
-      "Address": "Knoxville, TN, Bristol, TN",
-      "Source": "web",
       "Event URL": "Same as above"
     },
     {
@@ -1683,26 +903,6 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Cancer Awareness Rally – Day 4",
-      "Date": "2026-10-20",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Knoxville, TN",
-      "Address": "Knoxville, TN",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Cancer Awareness Rally – Day 5",
-      "Date": "2026-10-21",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Knoxville, TN, Nashville, TN",
-      "Address": "Knoxville, TN, Nashville, TN",
-      "Source": "web",
-      "Event URL": "Same as above"
-    },
-    {
       "Event Name": "Cancer Awareness Rally – Day 5",
       "Date": "2026-10-21",
       "Start Time": "11:00 PM",
@@ -1715,21 +915,11 @@
     {
       "Event Name": "Fall 2026 Rennsport Dragon Rally®",
       "Date": "2026-10-23",
-      "Start Time": "7:00 AM",
-      "End Time": "4:00 PM",
-      "Location": "Fontana Village Resort & Marina",
-      "Address": "Fontana Village Resort & Marina",
-      "Source": "web",
-      "Event URL": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/"
-    },
-    {
-      "Event Name": "Fall 2026 Rennsport Dragon Rally®",
-      "Date": "2026-10-23",
       "Start Time": "8:00 AM",
       "End Time": "5:00 PM",
       "Location": "Fontana Village Resort & Marina",
       "Address": "Fontana Village Resort & Marina",
-      "Source": "web",
+      "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/"
     },
     {
@@ -1747,9 +937,9 @@
       "Date": "2026-11-07",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
-      "Location": "Knoxville, TN, Atlanta, GA",
-      "Address": "Knoxville, TN, Atlanta, GA",
-      "Source": "web",
+      "Location": "Atlanta, GA",
+      "Address": "Atlanta, GA",
+      "Source": "sheet",
       "Event URL": "Same as above"
     },
     {
@@ -1757,9 +947,9 @@
       "Date": "2026-11-08",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
-      "Location": "Knoxville, TN, Asheville, NC",
-      "Address": "Knoxville, TN, Asheville, NC",
-      "Source": "web",
+      "Location": "Asheville, NC",
+      "Address": "Asheville, NC",
+      "Source": "sheet",
       "Event URL": "Same as above"
     },
     {
