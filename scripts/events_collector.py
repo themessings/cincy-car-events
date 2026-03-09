@@ -4490,6 +4490,79 @@ def verify_usps_address(location_text: str, city_state_text: str) -> Dict[str, s
         "error": "USPS verification not configured",
     }
 
+MANUAL_SOURCE_TOKENS = {"manual", "manually_added", "user", "user_added"}
+
+
+def _parse_sheet_row_date_et(row: dict) -> Optional[datetime]:
+    date_text = clean_ws(str(row.get("Date", "")))
+    if not date_text:
+        return None
+    start_time = clean_ws(str(row.get("Start Time", "")))
+    candidate = f"{date_text} {start_time}".strip()
+    try:
+        dt = dateutil_parser.parse(candidate)
+    except Exception:
+        try:
+            dt = dateutil_parser.parse(date_text)
+        except Exception:
+            return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=tz.gettz("America/New_York"))
+    return dt
+
+
+def _is_manual_event_row(row: dict) -> bool:
+    source_raw = clean_ws(str(row.get("Source", "")))
+    source = source_raw.lower()
+    if source in MANUAL_SOURCE_TOKENS:
+        return True
+    if source.startswith("screenshot:"):
+        return False
+    if source in {"web", "sheet"}:
+        return False
+    return (not source) and bool(clean_ws(str(row.get("Event Name", "")))) and bool(clean_ws(str(row.get("Date", ""))))
+
+
+def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[dict]:
+    now_et = datetime.now(tz=tz.gettz("America/New_York"))
+    today_et = now_et.date()
+    try:
+        resp = sheets.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range="Events!A1:I4000",
+        ).execute()
+    except Exception as ex:
+        log(f"⚠️ Unable to read existing Events tab for manual-row preservation: {ex}")
+        return []
+
+    rows = resp.get("values", []) or []
+    if not rows:
+        return []
+
+    header = [clean_ws(c) for c in rows[0]]
+    wanted = ["Event Name", "Date", "Start Time", "End Time", "Location", "Address", "Source", "Event URL"]
+    idx = {name: i for i, name in enumerate(header) if name}
+    if not all(col in idx for col in ("Event Name", "Date")):
+        return []
+
+    preserved: List[dict] = []
+    skipped_past = 0
+    for raw in rows[1:]:
+        row = {col: clean_ws(raw[idx[col]] if len(raw) > idx[col] else "") for col in wanted}
+        if not _is_manual_event_row(row):
+            continue
+        parsed_dt = _parse_sheet_row_date_et(row)
+        if parsed_dt is not None and parsed_dt.date() < today_et:
+            skipped_past += 1
+            continue
+        if not row.get("Source"):
+            row["Source"] = "manual"
+        preserved.append(row)
+
+    log(f"ℹ️ Manual sheet rows preserved: kept={len(preserved)} skipped_past={skipped_past}")
+    return preserved
+
+
 def update_apex_spreadsheet(events: List[dict]) -> None:
     dry_run = clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y")
     if dry_run:
@@ -4514,7 +4587,10 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
     # Ensure tab exists
     ensure_sheet_tab(sheets, spreadsheet_id, "Events")
 
-    normalized_rows, headers = normalize_export_schema(events)
+    normalized_rows, _ = normalize_export_schema(events)
+    manual_rows = _read_future_manual_events_from_sheet(sheets, spreadsheet_id)
+    combined_rows = dedupe_export_rows(normalized_rows + manual_rows)
+    normalized_rows, headers = normalize_export_schema(combined_rows)
     values = [headers]
     for ev in normalized_rows:
         values.append([ev.get(h, "") for h in headers])
