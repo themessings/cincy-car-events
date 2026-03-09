@@ -188,14 +188,14 @@ def dedupe_export_rows(rows: List[dict]) -> List[dict]:
         return []
 
     alias_map = {
-        "title": ["title", "event_title", "name"],
+        "title": ["title", "event_title", "name", "Event Name", "event name"],
         "start_iso": ["start_iso", "iso", "start", "startdatetime"],
         "end_iso": ["end_iso", "end", "enddatetime"],
-        "date": ["date", "event_date"],
-        "start_time": ["start_time", "time", "starttime"],
-        "end_time": ["end_time", "endtime"],
-        "location": ["location", "venue", "address"],
-        "link": ["link", "url", "event_url", "eventlink"],
+        "date": ["date", "event_date", "Date"],
+        "start_time": ["start_time", "time", "starttime", "Start Time", "start time"],
+        "end_time": ["end_time", "endtime", "End Time", "end time"],
+        "location": ["location", "venue", "address", "Location"],
+        "link": ["link", "url", "event_url", "eventlink", "Event URL", "event url"],
         "categ": ["categ", "category", "type"],
     }
     row_keys = set().union(*(row.keys() for row in rows if isinstance(row, dict)))
@@ -2601,48 +2601,68 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
         return []
 
     parsed: List[dict] = []
-    stats: Dict[str, object] = {}
-    tab_name = ""
-    rows: List[List[str]] = []
+    rows_seen = False
+    tab_stats: List[Dict[str, object]] = []
+    selected_tab = ""
     for candidate_tab, candidate_rows in tab_rows_to_try:
         if not candidate_rows:
             continue
+        rows_seen = True
         candidate_parsed, candidate_stats = _parse_google_sheet_events_rows(candidate_rows, source_name, candidate_tab)
-        tab_name = candidate_tab
-        selected_tab = candidate_tab
-        rows = candidate_rows
-        parsed = candidate_parsed
-        stats = candidate_stats
-        if parsed:
-            break
+        tab_stats.append({"tab": candidate_tab, "stats": candidate_stats})
+        if candidate_parsed and not selected_tab:
+            selected_tab = candidate_tab
+        parsed.extend(candidate_parsed)
 
-    if not rows:
+    if not rows_seen:
         log(f"⚠️ Sheet import returned no rows for spreadsheet={sheet_id}; continuing.")
         diagnostics["reason"] = "no_results_from_search"
         return []
 
-    reason = ""
-    if stats.get("bad_sheet_headers"):
-        reason = "bad_sheet_headers"
-    elif stats.get("parsed_events", 0) == 0:
-        reason = "parse_failed" if stats.get("skipped_parse_failed", 0) > 0 else "no_results_from_search"
+    if not tab_stats:
+        diagnostics["reason"] = "parse_failed"
+        return []
 
-    top_skip_reasons = Counter(stats.get("skip_reasons") or {}).most_common(5)
-    log(
-        f"✅ Sheet import loaded: rows={stats.get('rows_read', 0)} tab={selected_tab or tried_tabs[0]} "
-        f"parsed_events={stats.get('parsed_events', 0)} future_only=yes "
-        f"skipped_past={stats.get('skipped_past', 0)} skipped_parse_failed={stats.get('skipped_parse_failed', 0)}"
+    primary_stats = next((entry["stats"] for entry in tab_stats if entry["tab"] == selected_tab), tab_stats[0]["stats"])
+    total_rows = sum(int((entry["stats"] or {}).get("rows_read", 0)) for entry in tab_stats)
+    total_parsed = sum(int((entry["stats"] or {}).get("parsed_events", 0)) for entry in tab_stats)
+    total_past = sum(int((entry["stats"] or {}).get("skipped_past", 0)) for entry in tab_stats)
+    total_parse_failed = sum(int((entry["stats"] or {}).get("skipped_parse_failed", 0)) for entry in tab_stats)
+    merged_skip_reasons: Counter = Counter()
+    for entry in tab_stats:
+        merged_skip_reasons.update(Counter((entry["stats"] or {}).get("skip_reasons") or {}))
+
+    reason = ""
+    if total_parsed == 0 and any((entry["stats"] or {}).get("bad_sheet_headers") for entry in tab_stats):
+        reason = "bad_sheet_headers"
+    elif total_parsed == 0:
+        reason = "parse_failed" if total_parse_failed > 0 else "no_results_from_search"
+
+    top_skip_reasons = merged_skip_reasons.most_common(5)
+    tab_summaries = ", ".join(
+        f"{entry['tab']}={int((entry['stats'] or {}).get('parsed_events', 0))}"
+        for entry in tab_stats
     )
+    log(
+        f"✅ Sheet import loaded: rows={total_rows} tab={selected_tab or tried_tabs[0]} "
+        f"parsed_events={total_parsed} future_only=yes "
+        f"skipped_past={total_past} skipped_parse_failed={total_parse_failed}"
+    )
+    log(f"ℹ️ Sheet import per-tab parsed_events: {tab_summaries}")
     if top_skip_reasons:
         log("ℹ️ Sheet import top skip reasons: " + ", ".join(f"{k}={v}" for k, v in top_skip_reasons))
 
     diagnostics["reason"] = reason
-    diagnostics["sheet_rows_read"] = stats.get("rows_read", 0)
-    diagnostics["parsed_events"] = stats.get("parsed_events", 0)
-    diagnostics["sheet_skip_reasons"] = stats.get("skip_reasons", {})
-    diagnostics["sheet_headers"] = stats.get("header_keys_present", [])
+    diagnostics["sheet_rows_read"] = total_rows
+    diagnostics["parsed_events"] = total_parsed
+    diagnostics["sheet_skip_reasons"] = dict(merged_skip_reasons)
+    diagnostics["sheet_headers"] = primary_stats.get("header_keys_present", [])
     diagnostics["sheet_tab"] = selected_tab or (tried_tabs[0] if tried_tabs else "")
     diagnostics["tab_candidates"] = tab_candidates
+    diagnostics["sheet_tabs"] = [
+        {"tab": entry["tab"], "parsed_events": int((entry["stats"] or {}).get("parsed_events", 0))}
+        for entry in tab_stats
+    ]
     return parsed
 
 
@@ -4213,17 +4233,17 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "Event URL",
     ]
     alias_map = {
-        "title": ["title", "event_title", "name"],
-        "date": ["date", "event_date"],
-        "start_time": ["start_time", "time", "starttime"],
-        "end_time": ["end_time", "endtime"],
+        "title": ["title", "event_title", "name", "Event Name", "event name"],
+        "date": ["date", "event_date", "Date"],
+        "start_time": ["start_time", "time", "starttime", "Start Time", "start time"],
+        "end_time": ["end_time", "endtime", "End Time", "end time"],
         "categ": ["categ", "category", "type"],
         "miles_from_c": ["miles_from_c", "miles_from_cincy", "miles", "distance", "mileage"],
-        "location": ["location", "venue", "address"],
-        "link": ["link", "url", "event_url", "eventlink"],
-        "source": ["source", "event_source", "source_name", "pulled_from"],
-        "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime"],
-        "end_dt": ["end_iso", "end", "end_datetime", "enddatetime"],
+        "location": ["location", "venue", "address", "Location"],
+        "link": ["link", "url", "event_url", "eventlink", "Event URL", "event url"],
+        "source": ["source", "event_source", "source_name", "pulled_from", "Source"],
+        "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime", "Start ISO", "start iso"],
+        "end_dt": ["end_iso", "end", "end_datetime", "enddatetime", "End ISO", "end iso"],
     }
 
     if headers is None:
@@ -4263,6 +4283,8 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
             return source
         if "sheet" in source.lower():
             return "sheet"
+        if source:
+            return source
         return "web"
 
     normalized_rows: List[dict] = []
@@ -4468,6 +4490,79 @@ def verify_usps_address(location_text: str, city_state_text: str) -> Dict[str, s
         "error": "USPS verification not configured",
     }
 
+MANUAL_SOURCE_TOKENS = {"manual", "manually_added", "user", "user_added"}
+
+
+def _parse_sheet_row_date_et(row: dict) -> Optional[datetime]:
+    date_text = clean_ws(str(row.get("Date", "")))
+    if not date_text:
+        return None
+    start_time = clean_ws(str(row.get("Start Time", "")))
+    candidate = f"{date_text} {start_time}".strip()
+    try:
+        dt = dateutil_parser.parse(candidate)
+    except Exception:
+        try:
+            dt = dateutil_parser.parse(date_text)
+        except Exception:
+            return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=tz.gettz("America/New_York"))
+    return dt
+
+
+def _is_manual_event_row(row: dict) -> bool:
+    source_raw = clean_ws(str(row.get("Source", "")))
+    source = source_raw.lower()
+    if source in MANUAL_SOURCE_TOKENS:
+        return True
+    if source.startswith("screenshot:"):
+        return False
+    if source in {"web", "sheet"}:
+        return False
+    return (not source) and bool(clean_ws(str(row.get("Event Name", "")))) and bool(clean_ws(str(row.get("Date", ""))))
+
+
+def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[dict]:
+    now_et = datetime.now(tz=tz.gettz("America/New_York"))
+    today_et = now_et.date()
+    try:
+        resp = sheets.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range="Events!A1:I4000",
+        ).execute()
+    except Exception as ex:
+        log(f"⚠️ Unable to read existing Events tab for manual-row preservation: {ex}")
+        return []
+
+    rows = resp.get("values", []) or []
+    if not rows:
+        return []
+
+    header = [clean_ws(c) for c in rows[0]]
+    wanted = ["Event Name", "Date", "Start Time", "End Time", "Location", "Address", "Source", "Event URL"]
+    idx = {name: i for i, name in enumerate(header) if name}
+    if not all(col in idx for col in ("Event Name", "Date")):
+        return []
+
+    preserved: List[dict] = []
+    skipped_past = 0
+    for raw in rows[1:]:
+        row = {col: clean_ws(raw[idx[col]] if len(raw) > idx[col] else "") for col in wanted}
+        if not _is_manual_event_row(row):
+            continue
+        parsed_dt = _parse_sheet_row_date_et(row)
+        if parsed_dt is not None and parsed_dt.date() < today_et:
+            skipped_past += 1
+            continue
+        if not row.get("Source"):
+            row["Source"] = "manual"
+        preserved.append(row)
+
+    log(f"ℹ️ Manual sheet rows preserved: kept={len(preserved)} skipped_past={skipped_past}")
+    return preserved
+
+
 def update_apex_spreadsheet(events: List[dict]) -> None:
     dry_run = clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y")
     if dry_run:
@@ -4492,7 +4587,10 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
     # Ensure tab exists
     ensure_sheet_tab(sheets, spreadsheet_id, "Events")
 
-    normalized_rows, headers = normalize_export_schema(events)
+    normalized_rows, _ = normalize_export_schema(events)
+    manual_rows = _read_future_manual_events_from_sheet(sheets, spreadsheet_id)
+    combined_rows = dedupe_export_rows(normalized_rows + manual_rows)
+    normalized_rows, headers = normalize_export_schema(combined_rows)
     values = [headers]
     for ev in normalized_rows:
         values.append([ev.get(h, "") for h in headers])
