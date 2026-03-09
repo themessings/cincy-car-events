@@ -2601,48 +2601,68 @@ def collect_google_sheet_events_import(source: dict, diagnostics: Optional[dict]
         return []
 
     parsed: List[dict] = []
-    stats: Dict[str, object] = {}
-    tab_name = ""
-    rows: List[List[str]] = []
+    rows_seen = False
+    tab_stats: List[Dict[str, object]] = []
+    selected_tab = ""
     for candidate_tab, candidate_rows in tab_rows_to_try:
         if not candidate_rows:
             continue
+        rows_seen = True
         candidate_parsed, candidate_stats = _parse_google_sheet_events_rows(candidate_rows, source_name, candidate_tab)
-        tab_name = candidate_tab
-        selected_tab = candidate_tab
-        rows = candidate_rows
-        parsed = candidate_parsed
-        stats = candidate_stats
-        if parsed:
-            break
+        tab_stats.append({"tab": candidate_tab, "stats": candidate_stats})
+        if candidate_parsed and not selected_tab:
+            selected_tab = candidate_tab
+        parsed.extend(candidate_parsed)
 
-    if not rows:
+    if not rows_seen:
         log(f"⚠️ Sheet import returned no rows for spreadsheet={sheet_id}; continuing.")
         diagnostics["reason"] = "no_results_from_search"
         return []
 
-    reason = ""
-    if stats.get("bad_sheet_headers"):
-        reason = "bad_sheet_headers"
-    elif stats.get("parsed_events", 0) == 0:
-        reason = "parse_failed" if stats.get("skipped_parse_failed", 0) > 0 else "no_results_from_search"
+    if not tab_stats:
+        diagnostics["reason"] = "parse_failed"
+        return []
 
-    top_skip_reasons = Counter(stats.get("skip_reasons") or {}).most_common(5)
-    log(
-        f"✅ Sheet import loaded: rows={stats.get('rows_read', 0)} tab={selected_tab or tried_tabs[0]} "
-        f"parsed_events={stats.get('parsed_events', 0)} future_only=yes "
-        f"skipped_past={stats.get('skipped_past', 0)} skipped_parse_failed={stats.get('skipped_parse_failed', 0)}"
+    primary_stats = next((entry["stats"] for entry in tab_stats if entry["tab"] == selected_tab), tab_stats[0]["stats"])
+    total_rows = sum(int((entry["stats"] or {}).get("rows_read", 0)) for entry in tab_stats)
+    total_parsed = sum(int((entry["stats"] or {}).get("parsed_events", 0)) for entry in tab_stats)
+    total_past = sum(int((entry["stats"] or {}).get("skipped_past", 0)) for entry in tab_stats)
+    total_parse_failed = sum(int((entry["stats"] or {}).get("skipped_parse_failed", 0)) for entry in tab_stats)
+    merged_skip_reasons: Counter = Counter()
+    for entry in tab_stats:
+        merged_skip_reasons.update(Counter((entry["stats"] or {}).get("skip_reasons") or {}))
+
+    reason = ""
+    if total_parsed == 0 and any((entry["stats"] or {}).get("bad_sheet_headers") for entry in tab_stats):
+        reason = "bad_sheet_headers"
+    elif total_parsed == 0:
+        reason = "parse_failed" if total_parse_failed > 0 else "no_results_from_search"
+
+    top_skip_reasons = merged_skip_reasons.most_common(5)
+    tab_summaries = ", ".join(
+        f"{entry['tab']}={int((entry['stats'] or {}).get('parsed_events', 0))}"
+        for entry in tab_stats
     )
+    log(
+        f"✅ Sheet import loaded: rows={total_rows} tab={selected_tab or tried_tabs[0]} "
+        f"parsed_events={total_parsed} future_only=yes "
+        f"skipped_past={total_past} skipped_parse_failed={total_parse_failed}"
+    )
+    log(f"ℹ️ Sheet import per-tab parsed_events: {tab_summaries}")
     if top_skip_reasons:
         log("ℹ️ Sheet import top skip reasons: " + ", ".join(f"{k}={v}" for k, v in top_skip_reasons))
 
     diagnostics["reason"] = reason
-    diagnostics["sheet_rows_read"] = stats.get("rows_read", 0)
-    diagnostics["parsed_events"] = stats.get("parsed_events", 0)
-    diagnostics["sheet_skip_reasons"] = stats.get("skip_reasons", {})
-    diagnostics["sheet_headers"] = stats.get("header_keys_present", [])
+    diagnostics["sheet_rows_read"] = total_rows
+    diagnostics["parsed_events"] = total_parsed
+    diagnostics["sheet_skip_reasons"] = dict(merged_skip_reasons)
+    diagnostics["sheet_headers"] = primary_stats.get("header_keys_present", [])
     diagnostics["sheet_tab"] = selected_tab or (tried_tabs[0] if tried_tabs else "")
     diagnostics["tab_candidates"] = tab_candidates
+    diagnostics["sheet_tabs"] = [
+        {"tab": entry["tab"], "parsed_events": int((entry["stats"] or {}).get("parsed_events", 0))}
+        for entry in tab_stats
+    ]
     return parsed
 
 
