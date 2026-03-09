@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-08T20:29:34.401533-04:00",
-  "count": 97,
+  "generated_at_iso": "2026-03-08T21:42:59.095293-04:00",
+  "count": 99,
   "events": [
     {
       "Event Name": "Columbus Cafe Racers Monthly Lunch Cruise In",
@@ -11,6 +11,16 @@
       "Address": "1611 Polaris Parkway, Columbus, OH",
       "Source": "CarsAndCoffeeEvents - Ohio",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cafe-racers-monthly-luch-cruise-in/2026-03-11/"
+    },
+    {
+      "Event Name": "Drinking Liberally Weekly Meetup",
+      "Date": "2026-03-12",
+      "Start Time": "9:00 PM",
+      "End Time": "11:00 PM",
+      "Location": "3124 Ingersoll Ave, Des Moines, IA 50312",
+      "Address": "3124 Ingersoll Ave, Des Moines, IA 50312",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/living-liberally-drinking-liberally-des-moines/events/313456617/"
     },
     {
       "Event Name": "Three Legs of Mann Rally 2026 &#8211; Isle of Man",
@@ -211,6 +221,16 @@
       "Address": "Columbus, OH",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Belize Jungle & Island Glamping Adventure Tour",
+      "Date": "2026-04-12",
+      "Start Time": "8:00 AM",
+      "End Time": "10:00 AM",
+      "Location": "",
+      "Address": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/explorer-chicks-of-des-moines/events/310388524/"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
