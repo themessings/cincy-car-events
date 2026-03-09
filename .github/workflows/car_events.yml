@@ -108,5 +108,12 @@ jobs:
           fi
 
           git commit -m "Update Cincinnati-area car events"
-          git pull --rebase origin "${GITHUB_REF_NAME:-main}"
+
+          if ! git pull --rebase origin "${GITHUB_REF_NAME:-main}"; then
+            echo "Rebase conflict detected; keeping freshly generated artifact files and continuing."
+            git checkout --ours data/events.csv data/events.json data/geocode_cache.json data/url_cache.json || true
+            git add data/events.csv data/events.json data/geocode_cache.json data/url_cache.json data/runs
+            GIT_EDITOR=true git rebase --continue
+          fi
+
           git push origin "HEAD:${GITHUB_REF_NAME:-main}"
