@@ -188,14 +188,14 @@ def dedupe_export_rows(rows: List[dict]) -> List[dict]:
         return []
 
     alias_map = {
-        "title": ["title", "event_title", "name"],
+        "title": ["title", "event_title", "name", "Event Name", "event name"],
         "start_iso": ["start_iso", "iso", "start", "startdatetime"],
         "end_iso": ["end_iso", "end", "enddatetime"],
-        "date": ["date", "event_date"],
-        "start_time": ["start_time", "time", "starttime"],
-        "end_time": ["end_time", "endtime"],
-        "location": ["location", "venue", "address"],
-        "link": ["link", "url", "event_url", "eventlink"],
+        "date": ["date", "event_date", "Date"],
+        "start_time": ["start_time", "time", "starttime", "Start Time", "start time"],
+        "end_time": ["end_time", "endtime", "End Time", "end time"],
+        "location": ["location", "venue", "address", "Location"],
+        "link": ["link", "url", "event_url", "eventlink", "Event URL", "event url"],
         "categ": ["categ", "category", "type"],
     }
     row_keys = set().union(*(row.keys() for row in rows if isinstance(row, dict)))
@@ -4213,17 +4213,17 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "Event URL",
     ]
     alias_map = {
-        "title": ["title", "event_title", "name"],
-        "date": ["date", "event_date"],
-        "start_time": ["start_time", "time", "starttime"],
-        "end_time": ["end_time", "endtime"],
+        "title": ["title", "event_title", "name", "Event Name", "event name"],
+        "date": ["date", "event_date", "Date"],
+        "start_time": ["start_time", "time", "starttime", "Start Time", "start time"],
+        "end_time": ["end_time", "endtime", "End Time", "end time"],
         "categ": ["categ", "category", "type"],
         "miles_from_c": ["miles_from_c", "miles_from_cincy", "miles", "distance", "mileage"],
-        "location": ["location", "venue", "address"],
-        "link": ["link", "url", "event_url", "eventlink"],
-        "source": ["source", "event_source", "source_name", "pulled_from"],
-        "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime"],
-        "end_dt": ["end_iso", "end", "end_datetime", "enddatetime"],
+        "location": ["location", "venue", "address", "Location"],
+        "link": ["link", "url", "event_url", "eventlink", "Event URL", "event url"],
+        "source": ["source", "event_source", "source_name", "pulled_from", "Source"],
+        "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime", "Start ISO", "start iso"],
+        "end_dt": ["end_iso", "end", "end_datetime", "enddatetime", "End ISO", "end iso"],
     }
 
     if headers is None:
@@ -4263,6 +4263,8 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
             return source
         if "sheet" in source.lower():
             return "sheet"
+        if source:
+            return source
         return "web"
 
     normalized_rows: List[dict] = []
