@@ -837,5 +837,18 @@
   "Tiburon, CA": {
     "lat": "37.8775332",
     "lon": "-122.4608080"
-  }
+  },
+  "Westwood Baptist Church": {
+    "lat": "55.7561383",
+    "lon": "-4.2017011"
+  },
+  "Batesville, IN": {
+    "lat": "39.3000065",
+    "lon": "-85.2221840"
+  },
+  "Maryland, MD": {
+    "lat": "38.9904124",
+    "lon": "-76.9438586"
+  },
+  "Parking on Morgan's Mill Rd. Bluemont, VA": null
 }

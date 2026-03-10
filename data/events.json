@@ -1,17 +1,7 @@
 {
-  "generated_at_iso": "2026-03-09T07:37:33.826745-04:00",
-  "count": 98,
+  "generated_at_iso": "2026-03-10T07:34:39.409663-04:00",
+  "count": 99,
   "events": [
-    {
-      "Event Name": "Mini-Meetup: Trivia Time!",
-      "Date": "2026-03-09",
-      "Start Time": "7:30 PM",
-      "End Time": "10:00 PM",
-      "Location": "",
-      "Address": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/east-bay-over-60-social-club-meetup-group/events/313394040/"
-    },
     {
       "Event Name": "Columbus Cafe Racers Monthly Lunch Cruise In",
       "Date": "2026-03-11",
@@ -23,14 +13,14 @@
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cafe-racers-monthly-luch-cruise-in/2026-03-11/"
     },
     {
-      "Event Name": "Drinking Liberally Weekly Meetup",
-      "Date": "2026-03-12",
-      "Start Time": "9:00 PM",
-      "End Time": "11:00 PM",
-      "Location": "3124 Ingersoll Ave, Des Moines, IA 50312",
-      "Address": "3124 Ingersoll Ave, Des Moines, IA 50312",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/living-liberally-drinking-liberally-des-moines/events/313456617/"
+      "Event Name": "Three Legs of Mann Rally 2026 &#8211; Isle of Man",
+      "Date": "2026-03-13",
+      "Start Time": "3:00 AM",
+      "End Time": "2:59 AM",
+      "Location": "",
+      "Address": "",
+      "Source": "Regional rallies",
+      "Event URL": "https://bringatrailer.com/event/three-legs-of-mann-rally-2026-isle-of-man/"
     },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -143,6 +133,16 @@
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/1621707615689231/"
     },
     {
+      "Event Name": "Rally the Globe—Generations Rally 2026 – UK",
+      "Date": "2026-03-20",
+      "Start Time": "3:00 AM",
+      "End Time": "2:59 AM",
+      "Location": "",
+      "Address": "",
+      "Source": "Regional rallies",
+      "Event URL": "https://bringatrailer.com/event/rally-the-globe-generations-rally-2026-uk/"
+    },
+    {
       "Event Name": "Columbus Cars & Coffee Fridays",
       "Date": "2026-03-20",
       "Start Time": "7:30 AM",
@@ -211,16 +211,6 @@
       "Address": "Columbus, OH",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Belize Jungle & Island Glamping Adventure Tour",
-      "Date": "2026-04-12",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "",
-      "Address": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/explorer-chicks-of-des-moines/events/310388524/"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
@@ -391,6 +381,16 @@
       "Address": "Lexington, OH",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
+      "Date": "2026-05-16",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "7160 Taylor Street Liberty Township, OH 45069",
+      "Address": "7160 Taylor Street Liberty Township, OH 45069",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/810287732100203/"
     },
     {
       "Event Name": "Zakira;s Garage 2026 Spring Open House",
@@ -661,6 +661,16 @@
       "Address": "Perfect Place Ln, Lawrenceburg, IN 47025",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/annual-car-show-chicken-dinner/2048696039298978/"
+    },
+    {
+      "Event Name": "Cruisin’ for a Cure – Batesville Car Show",
+      "Date": "2026-06-28",
+      "Start Time": "11:00 AM",
+      "End Time": "3:30 PM",
+      "Location": "1198 State Road 46 E, Batesville, IN 47006",
+      "Address": "1198 State Road 46 E, Batesville, IN 47006",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cruisin-for-a-cure-batesville-/1888901302016142/"
     },
     {
       "Event Name": "King of the Roads Rally",
