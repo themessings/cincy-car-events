@@ -1,17 +1,7 @@
 {
-  "generated_at_iso": "2026-03-11T07:35:16.069108-04:00",
+  "generated_at_iso": "2026-03-12T07:33:12.686331-04:00",
   "count": 97,
   "events": [
-    {
-      "Event Name": "Columbus Cafe Racers Monthly Lunch Cruise In",
-      "Date": "2026-03-11",
-      "Start Time": "11:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "1611 Polaris Parkway, Columbus, OH",
-      "Address": "1611 Polaris Parkway, Columbus, OH",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cafe-racers-monthly-luch-cruise-in/2026-03-11/"
-    },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
       "Date": "2026-03-13",
@@ -141,6 +131,16 @@
       "Address": "Darana Raceway- Xenia, Ohio",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/drift-indy-opening-day-2026/2055012242019528/"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-03-21",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2791 Town Center Blvd, Crestview Hills, KY",
+      "Address": "2791 Town Center Blvd, Crestview Hills, KY",
+      "Source": "CarsAndCoffeeEvents - Ohio",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-03-21/"
     },
     {
       "Event Name": "Dragon Rally® LI (51)",
