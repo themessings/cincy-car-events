@@ -1,87 +1,7 @@
 {
-  "generated_at_iso": "2026-03-13T07:32:45.001101-04:00",
-  "count": 97,
+  "generated_at_iso": "2026-03-14T07:25:45.784676-04:00",
+  "count": 86,
   "events": [
-    {
-      "Event Name": "Columbus Cars & Coffee Fridays",
-      "Date": "2026-03-13",
-      "Start Time": "7:30 AM",
-      "End Time": "9:30 AM",
-      "Location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "Address": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-13/"
-    },
-    {
-      "Event Name": "65th Annual Cavalcade of Customs",
-      "Date": "2026-03-13",
-      "Start Time": "3:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "Duke Energy Convention Center",
-      "Address": "Duke Energy Convention Center",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/65th-annual-cavalcade-of-custo/788168877564913/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee",
-      "Date": "2026-03-14",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2791 Town Center Blvd, Crestview Hills, KY",
-      "Address": "2791 Town Center Blvd, Crestview Hills, KY",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-03-14/"
-    },
-    {
-      "Event Name": "Columbus Cars & Coffee",
-      "Date": "2026-03-14",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Rd, Columbus, OH",
-      "Address": "3650 Olentangy River Rd, Columbus, OH",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-03-14/"
-    },
-    {
-      "Event Name": "Columbus Cars & Coffee @ The City",
-      "Date": "2026-03-14",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2875 Olentangy River Road, Columbus, OH",
-      "Address": "2875 Olentangy River Road, Columbus, OH",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-03-14/"
-    },
-    {
-      "Event Name": "Destination Cars and Coffee",
-      "Date": "2026-03-14",
-      "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "8000 Factory Shops Boulevard, Jeffersonville, OH",
-      "Address": "8000 Factory Shops Boulevard, Jeffersonville, OH",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/destination-cars-and-coffee/2026-03-14/"
-    },
-    {
-      "Event Name": "Columbus Cars & Coffee Sundays",
-      "Date": "2026-03-15",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "691 N. Cleveland Ave, Westerville, OH",
-      "Address": "691 N. Cleveland Ave, Westerville, OH",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-sundays/2026-03-15/"
-    },
-    {
-      "Event Name": "Columbus Cars & Coffee @ Starbucks",
-      "Date": "2026-03-15",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "691 N. Cleveland Ave, Westerville, OH",
-      "Address": "691 N. Cleveland Ave, Westerville, OH",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-starbucks/2026-03-15/"
-    },
     {
       "Event Name": "Euro Cars and Cocoa",
       "Date": "2026-03-15",
@@ -91,16 +11,6 @@
       "Address": "The Cocoa Muse",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/euro-cars-and-cocoa/4227146924205388/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-03-15",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-03-15/"
     },
     {
       "Event Name": "Endless Car Culture, Cincinnati / Meet #4.1",
@@ -113,16 +23,6 @@
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/1621707615689231/"
     },
     {
-      "Event Name": "Columbus Cars & Coffee Fridays",
-      "Date": "2026-03-20",
-      "Start Time": "7:30 AM",
-      "End Time": "9:30 AM",
-      "Location": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "Address": "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, 2812 Fishinger Rd, Upper Arlington",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-03-20/"
-    },
-    {
       "Event Name": "Drift Indy Opening Day 2026",
       "Date": "2026-03-20",
       "Start Time": "8:00 AM",
@@ -131,16 +31,6 @@
       "Address": "Darana Raceway- Xenia, Ohio",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/drift-indy-opening-day-2026/2055012242019528/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee",
-      "Date": "2026-03-21",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2791 Town Center Blvd, Crestview Hills, KY",
-      "Address": "2791 Town Center Blvd, Crestview Hills, KY",
-      "Source": "CarsAndCoffeeEvents - Ohio",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-03-21/"
     },
     {
       "Event Name": "Dragon Rally® LI (51)",
