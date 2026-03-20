@@ -870,5 +870,18 @@
   "Arbutus, MD": {
     "lat": "39.2403445",
     "lon": "-76.6914006"
+  },
+  "St. Xavier High School": {
+    "lat": "39.2104028",
+    "lon": "-84.5060383"
+  },
+  "Canton, OH": {
+    "lat": "40.7985464",
+    "lon": "-81.3749508"
+  },
+  "Kuhnle Motorsports Park": null,
+  "Hungry Buffalo Restaurant": {
+    "lat": "39.5438521",
+    "lon": "-82.4488106"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-19T13:38:01.348512-04:00",
-  "count": 84,
+  "generated_at_iso": "2026-03-20T07:33:14.689750-04:00",
+  "count": 88,
   "events": [
     {
       "Event Name": "Drift Indy Opening Day 2026",
@@ -61,6 +61,16 @@
       "Address": "Columbus, OH",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Endless Car Culture, Cincinnati / Meet #4.2",
+      "Date": "2026-04-01",
+      "Start Time": "6:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "Quaker Steak and Lube Colerain, OH",
+      "Address": "Quaker Steak and Lube Colerain, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2284397018630419/"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
@@ -153,6 +163,16 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
+      "Event Name": "Cincinnati Bengals Myles Murphy Gears & Grills Auto Showcase",
+      "Date": "2026-05-02",
+      "Start Time": "11:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "St. Xavier High School",
+      "Address": "St. Xavier High School",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincinnati-bengals-myles-murph/1271011908322189/"
+    },
+    {
       "Event Name": "10th Annual Cruisin to A Cure for ALS Car Show",
       "Date": "2026-05-03",
       "Start Time": "9:00 AM",
@@ -211,6 +231,16 @@
       "Address": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Hocking Hills Cars and Coffee Season Opener",
+      "Date": "2026-05-09",
+      "Start Time": "9:00 AM",
+      "End Time": "11:30 AM",
+      "Location": "Hungry Buffalo Restaurant",
+      "Address": "Hungry Buffalo Restaurant",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/hocking-hills-cars-and-coffee-/1964955747430781/"
     },
     {
       "Event Name": "2026 Jyan Waespe Memorial Car Show",
@@ -601,6 +631,16 @@
       "Address": "Circuit Cafe / Cincinnati Cars & Coffee",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
+    },
+    {
+      "Event Name": "Sunset Showoff 8 at Kuhnle Motorsports Park",
+      "Date": "2026-07-18",
+      "Start Time": "3:00 PM",
+      "End Time": "11:59 PM",
+      "Location": "Kuhnle Motorsports Park",
+      "Address": "Kuhnle Motorsports Park",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/sunset-showoff-8-at-kuhnle-mot/4130639707200382/"
     },
     {
       "Event Name": "Cincy Car Cruise Rally",
