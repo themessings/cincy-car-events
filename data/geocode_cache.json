@@ -883,5 +883,21 @@
   "Hungry Buffalo Restaurant": {
     "lat": "39.5438521",
     "lon": "-82.4488106"
+  },
+  "Montgomery Road Cincinnati, OH": {
+    "lat": "39.1813671",
+    "lon": "-84.4303608"
+  },
+  "Storming Crab": {
+    "lat": "38.1385832",
+    "lon": "-85.6726221"
+  },
+  "Meijer Preston hwy": {
+    "lat": "38.1126543",
+    "lon": "-85.6797064"
+  },
+  "Jeff's Donuts": {
+    "lat": "38.1534614",
+    "lon": "-85.5877159"
   }
 }

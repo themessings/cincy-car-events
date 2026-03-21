@@ -1,17 +1,7 @@
 {
-  "generated_at_iso": "2026-03-20T07:33:14.689750-04:00",
-  "count": 88,
+  "generated_at_iso": "2026-03-21T07:24:39.569009-04:00",
+  "count": 100,
   "events": [
-    {
-      "Event Name": "Drift Indy Opening Day 2026",
-      "Date": "2026-03-20",
-      "Start Time": "8:00 AM",
-      "End Time": "5:00 PM",
-      "Location": "Darana Raceway- Xenia, Ohio",
-      "Address": "Darana Raceway- Xenia, Ohio",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/drift-indy-opening-day-2026/2055012242019528/"
-    },
     {
       "Event Name": "Dragon Rally® LI (51)",
       "Date": "2026-03-21",
@@ -63,6 +53,16 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
+      "Event Name": "Dubs and Donuts 2026",
+      "Date": "2026-03-29",
+      "Start Time": "10:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "Jeff's Donuts",
+      "Address": "Jeff's Donuts",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/dubs-and-donuts-2026/1458586605795675/"
+    },
+    {
       "Event Name": "Endless Car Culture, Cincinnati / Meet #4.2",
       "Date": "2026-04-01",
       "Start Time": "6:00 PM",
@@ -71,6 +71,26 @@
       "Address": "Quaker Steak and Lube Colerain, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2284397018630419/"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-04-04",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859372937734/"
+    },
+    {
+      "Event Name": "2nd annual cruise to Buc-ee’s",
+      "Date": "2026-04-11",
+      "Start Time": "5:30 PM",
+      "End Time": "8:30 PM",
+      "Location": "Meijer Preston hwy",
+      "Address": "Meijer Preston hwy",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2nd-annual-cruise-to-buc-ees/1482480203234349/"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
@@ -101,6 +121,16 @@
       "Address": "National Museum of the U.S. Air Force",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/gdcc-corvettes-coffee-at-natio/1636585704184790/"
+    },
+    {
+      "Event Name": "2026 GermanTech MotorWorks Block Party",
+      "Date": "2026-04-18",
+      "Start Time": "10:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "11250 Midway Dr., Louisville, KY",
+      "Address": "11250 Midway Dr., Louisville, KY",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2026-germantech-motorworks-blo/1988827128371736/"
     },
     {
       "Event Name": "2026 Sycamore Cars and Coffee",
@@ -143,6 +173,16 @@
       "Event URL": "fb://event/?id=788415087022357"
     },
     {
+      "Event Name": "Cars and Computers",
+      "Date": "2026-04-25",
+      "Start Time": "11:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "11400 Bluegrass Parkway, Louisville, KY",
+      "Address": "11400 Bluegrass Parkway, Louisville, KY",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-and-computers/927334136322326/"
+    },
+    {
       "Event Name": "Jaguar Jubilee Car Show-All Makes, Models, Years",
       "Date": "2026-04-25",
       "Start Time": "12:00 PM",
@@ -161,6 +201,16 @@
       "Address": "Dayton, OH",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-05-02",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Bengals Myles Murphy Gears & Grills Auto Showcase",
@@ -393,6 +443,26 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-06-06",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859376271067/"
+    },
+    {
+      "Event Name": "Louisville Mega Cavern Car Show Classic",
+      "Date": "2026-06-06",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "1841 Taylor Ave, Louisville, KY 40213-1565",
+      "Address": "1841 Taylor Ave, Louisville, KY 40213-1565",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/louisville-mega-cavern-car-sho/4263104417339019/"
+    },
+    {
       "Event Name": "Oxford Masonic Lodge Annual Charity Car and Bike show",
       "Date": "2026-06-06",
       "Start Time": "2:00 PM",
@@ -563,6 +633,16 @@
       "Event URL": "https://kingoftheroads.events/"
     },
     {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-07-04",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859379604400/"
+    },
+    {
       "Event Name": "Athens Backhands Driving Tour",
       "Date": "2026-07-10",
       "Start Time": "12:00 AM",
@@ -683,6 +763,16 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-08-01",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859382937733/"
+    },
+    {
       "Event Name": "Recharge Rally – Day 4",
       "Date": "2026-08-01",
       "Start Time": "9:00 AM",
@@ -733,6 +823,16 @@
       "Event URL": "https://facebook.com/events/s/vaded-street-circuit-ohio-2026/4616674298560484/"
     },
     {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859386271066/"
+    },
+    {
       "Event Name": "Ride With Randy Rally",
       "Date": "2026-09-11",
       "Start Time": "9:00 AM",
@@ -751,6 +851,16 @@
       "Address": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-10-03",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859389604399/"
     },
     {
       "Event Name": "Porsche Cruise In - OVRPCA & Eclipse Annual Event",
@@ -841,6 +951,16 @@
       "Address": "Atlanta, GA",
       "Source": "sheet",
       "Event URL": "https://corsarally.com/events/dragon/"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-11-07",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859392937732/"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 2",
