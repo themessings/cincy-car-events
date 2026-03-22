@@ -1,27 +1,7 @@
 {
-  "generated_at_iso": "2026-03-21T07:24:39.569009-04:00",
+  "generated_at_iso": "2026-03-22T07:25:25.309635-04:00",
   "count": 100,
   "events": [
-    {
-      "Event Name": "Dragon Rally® LI (51)",
-      "Date": "2026-03-21",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "129 Hub 4371 Calderwood Hwy Maryville, TN 37801",
-      "Address": "129 Hub 4371 Calderwood Hwy Maryville, TN 37801",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/dragon-rally-li-51/743746872121536/"
-    },
-    {
-      "Event Name": "RCR 2026 Car Season Kickoff",
-      "Date": "2026-03-21",
-      "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "Paristown - Louisville, KY",
-      "Address": "Paristown - Louisville, KY",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/rcr-2026-car-season-kickoff/1185415010435301/"
-    },
     {
       "Event Name": "Cincinnati Auto Expo",
       "Date": "2026-03-26",
@@ -433,6 +413,16 @@
       "Event URL": "https://facebook.com/events/s/no-limits-937-private-event-fe/1916729278941344/"
     },
     {
+      "Event Name": "Enthusiast Showdown 2026 - Track Day • Car Show • Swap Meet",
+      "Date": "2026-06-05",
+      "Start Time": "8:00 AM",
+      "End Time": "10:00 PM",
+      "Location": "1000 Seville Rd, Wadsworth, OH",
+      "Address": "1000 Seville Rd, Wadsworth, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/enthusiast-showdown-2026-track/2042098213377674/"
+    },
+    {
       "Event Name": "RallyCross – Edgewater",
       "Date": "2026-06-05",
       "Start Time": "9:00 AM",
@@ -601,6 +591,16 @@
       "Address": "Destination Outlets (formerly Jeffersonville Outlets) *Off I-71, Jeffersonville, Ohio",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cruise the Burg - Car Meet",
+      "Date": "2026-06-27",
+      "Start Time": "4:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Main St. Miamisburg, OH",
+      "Address": "Main St. Miamisburg, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cruise-the-burg-car-meet/3337907049711873/"
     },
     {
       "Event Name": "Annual Car Show & Chicken Dinner",
