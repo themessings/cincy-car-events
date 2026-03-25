@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-24T07:46:08.033639-04:00",
-  "count": 100,
+  "generated_at_iso": "2026-03-25T07:42:35.664860-04:00",
+  "count": 103,
   "events": [
     {
       "Event Name": "Cincinnati Auto Expo",
@@ -31,6 +31,26 @@
       "Address": "Columbus, OH",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Audi club host “2026 season opener”",
+      "Date": "2026-03-28",
+      "Start Time": "12:00 PM",
+      "End Time": "3:00 PM",
+      "Location": "Pinball Garage",
+      "Address": "Pinball Garage",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/audi-club-host-2026-season-ope/1103359065255603/"
+    },
+    {
+      "Event Name": "Night Shift Motors Car Meet",
+      "Date": "2026-03-28",
+      "Start Time": "4:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Acme Fresh Market",
+      "Address": "Acme Fresh Market",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/night-shift-motors-car-meet/4492796457623113/"
     },
     {
       "Event Name": "Dubs and Donuts 2026",
@@ -211,6 +231,16 @@
       "Address": "City of Lawrenceburg",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/10th-annual-cruisin-to-a-cure-/3335085709990389/"
+    },
+    {
+      "Event Name": "The Dynasty Dash 2026",
+      "Date": "2026-05-03",
+      "Start Time": "12:00 PM",
+      "End Time": "3:00 PM",
+      "Location": "Cincinnnati, Cincinnati, OH, , Ohio",
+      "Address": "Cincinnnati, Cincinnati, OH, , Ohio",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/the-dynasty-dash-2026/1402591311618953/"
     },
     {
       "Event Name": "Slammedenuff Ohio Car Show 2026",
