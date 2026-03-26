@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-25T07:42:35.664860-04:00",
-  "count": 103,
+  "generated_at_iso": "2026-03-26T07:51:30.548974-04:00",
+  "count": 105,
   "events": [
     {
       "Event Name": "Cincinnati Auto Expo",
@@ -133,6 +133,16 @@
       "Event URL": "https://facebook.com/events/s/2026-germantech-motorworks-blo/1988827128371736/"
     },
     {
+      "Event Name": "Marysville Cars and Coffee Season Kickoff",
+      "Date": "2026-04-18",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/marysville-cars-and-coffee-sea/1223760876609621/"
+    },
+    {
       "Event Name": "2026 Sycamore Cars and Coffee",
       "Date": "2026-04-19",
       "Start Time": "9:00 AM",
@@ -161,6 +171,16 @@
       "Address": "National Trail Raceway",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/import-face-off-hebron-oh-4192/1366574381648422/"
+    },
+    {
+      "Event Name": "Inaugural Marysville Ohio Cars, Bikes, and Coffee",
+      "Date": "2026-04-25",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "24025 Honda Pkwy, Marysville, OH 43040-9182",
+      "Address": "24025 Honda Pkwy, Marysville, OH 43040-9182",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/inaugural-marysville-ohio-cars/1837116996961810/"
     },
     {
       "Event Name": "5th Annual “Hail to Horsepower” Car Show",
