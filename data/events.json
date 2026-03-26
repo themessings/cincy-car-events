@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-26T07:51:30.548974-04:00",
-  "count": 105,
+  "generated_at_iso": "2026-03-26T12:13:00.853912-04:00",
+  "count": 177,
   "events": [
     {
       "Event Name": "Cincinnati Auto Expo",
@@ -33,6 +33,16 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-03-28",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Audi club host “2026 season opener”",
       "Date": "2026-03-28",
       "Start Time": "12:00 PM",
@@ -51,6 +61,16 @@
       "Address": "Acme Fresh Market",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/night-shift-motors-car-meet/4492796457623113/"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-03-29",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Dubs and Donuts 2026",
@@ -73,6 +93,16 @@
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2284397018630419/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-04-04",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-04-04",
       "Start Time": "8:00 AM",
@@ -83,6 +113,26 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859372937734/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-04-05",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-04-11",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "2nd annual cruise to Buc-ee’s",
       "Date": "2026-04-11",
       "Start Time": "5:30 PM",
@@ -91,6 +141,16 @@
       "Address": "Meijer Preston hwy",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2nd-annual-cruise-to-buc-ees/1482480203234349/"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-04-12",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
@@ -111,6 +171,16 @@
       "Address": "Indianapolis, IN",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-04-18",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "GDCC Corvettes & Coffee at National Museum of United States Airforce",
@@ -143,6 +213,16 @@
       "Event URL": "https://facebook.com/events/s/marysville-cars-and-coffee-sea/1223760876609621/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-04-19",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "2026 Sycamore Cars and Coffee",
       "Date": "2026-04-19",
       "Start Time": "9:00 AM",
@@ -171,6 +251,16 @@
       "Address": "National Trail Raceway",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/import-face-off-hebron-oh-4192/1366574381648422/"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-04-25",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Inaugural Marysville Ohio Cars, Bikes, and Coffee",
@@ -213,6 +303,16 @@
       "Event URL": "https://facebook.com/events/s/jaguar-jubilee-car-show-all-ma/1349238980294415/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-04-26",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Buckeye RoadRally (SCCA)",
       "Date": "2026-05-01",
       "Start Time": "9:00 AM",
@@ -221,6 +321,16 @@
       "Address": "Dayton, OH",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-02",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -241,6 +351,16 @@
       "Address": "St. Xavier High School",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-bengals-myles-murph/1271011908322189/"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-03",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "10th Annual Cruisin to A Cure for ALS Car Show",
@@ -303,6 +423,16 @@
       "Event URL": "https://corsarally.com/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-09",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "OVR PCA Autocross - May 2026",
       "Date": "2026-05-09",
       "Start Time": "8:30 AM",
@@ -333,6 +463,16 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-10",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
       "Date": "2026-05-15",
       "Start Time": "9:00 AM",
@@ -341,6 +481,16 @@
       "Address": "Lexington, OH",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-16",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Cincy Cars & Coffee @ Liberty Center",
@@ -383,6 +533,16 @@
       "Event URL": "https://facebook.com/events/s/2026-annual-krieger-ford-car-t/929009356126663/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-17",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Valley High Car Show",
       "Date": "2026-05-17",
       "Start Time": "10:00 AM",
@@ -403,6 +563,26 @@
       "Event URL": "https://facebook.com/events/s/rumble-on-the-river-car-show-2/853255881026686/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-23",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-24",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "21st Annual Beatersville Car and Bike Show",
       "Date": "2026-05-24",
       "Start Time": "9:00 AM",
@@ -411,6 +591,16 @@
       "Address": "Portal Louisville",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "fb://event/?id=1413571117159967"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-30",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Eclipse 5th Annual Open House & Car Show",
@@ -441,6 +631,16 @@
       "Address": "Quaker Steak and Lube",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dog-face-k9s-3rd-annual-car-sh/904114905896136/"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-05-31",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "4th Annual 20th Century All GM Car Show and Swap Meet",
@@ -483,6 +683,16 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-06-06",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-06-06",
       "Start Time": "8:00 AM",
@@ -511,6 +721,16 @@
       "Address": "Oxford Masonic Lodge car show",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-06-07",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 1",
@@ -543,6 +763,16 @@
       "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-06-13",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "OVR PCA Autocross - June 2026",
       "Date": "2026-06-13",
       "Start Time": "8:30 AM",
@@ -551,6 +781,16 @@
       "Address": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-06-14",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 1",
@@ -593,6 +833,16 @@
       "Event URL": "https://facebook.com/events/s/voss-hoss-cruise-in-2026/1347118783851195/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-06-20",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Cincy Cars & Coffee @ Liberty Center",
       "Date": "2026-06-20",
       "Start Time": "8:00 AM",
@@ -623,6 +873,16 @@
       "Event URL": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-06-21",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Barrett-Jackson 2026 Columbus Auction",
       "Date": "2026-06-25",
       "Start Time": "8:00 AM",
@@ -643,6 +903,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-06-27",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Cruise the Burg - Car Meet",
       "Date": "2026-06-27",
       "Start Time": "4:00 PM",
@@ -651,6 +921,16 @@
       "Address": "Main St. Miamisburg, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cruise-the-burg-car-meet/3337907049711873/"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-06-28",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Annual Car Show & Chicken Dinner",
@@ -683,6 +963,16 @@
       "Event URL": "https://kingoftheroads.events/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-07-04",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-07-04",
       "Start Time": "8:00 AM",
@@ -693,6 +983,16 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859379604400/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-07-05",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Athens Backhands Driving Tour",
       "Date": "2026-07-10",
       "Start Time": "12:00 AM",
@@ -701,6 +1001,16 @@
       "Address": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-07-11",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Cincy Cool Cars Club Car Show",
@@ -721,6 +1031,16 @@
       "Address": "Athens, OH (Launch)",
       "Source": "sheet",
       "Event URL": "https://rallynorthamerica.com/rally-events/"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-07-12",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Rally North America – Day 2",
@@ -753,6 +1073,16 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-07-18",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Dynasty Rally 2026",
       "Date": "2026-07-18",
       "Start Time": "9:00 AM",
@@ -773,6 +1103,16 @@
       "Event URL": "https://facebook.com/events/s/sunset-showoff-8-at-kuhnle-mot/4130639707200382/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-07-19",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Cincy Car Cruise Rally",
       "Date": "2026-07-24",
       "Start Time": "9:00 AM",
@@ -781,6 +1121,26 @@
       "Address": "Cincinnati, OH",
       "Source": "sheet",
       "Event URL": "—"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-07-25",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-07-26",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Recharge Rally – Day 1",
@@ -813,6 +1173,16 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-01",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-08-01",
       "Start Time": "8:00 AM",
@@ -831,6 +1201,16 @@
       "Address": "Charlotte, NC",
       "Source": "sheet",
       "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-02",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "57th NSRA Street Rod Nationals",
@@ -853,6 +1233,16 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-08",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "OVR PCA Autocross - August 2026",
       "Date": "2026-08-08",
       "Start Time": "8:30 AM",
@@ -861,6 +1251,66 @@
       "Address": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-09",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-15",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-16",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-22",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-23",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-29",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Vaded Street Circuit: Ohio 2026",
@@ -873,6 +1323,26 @@
       "Event URL": "https://facebook.com/events/s/vaded-street-circuit-ohio-2026/4616674298560484/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-08-30",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-09-05",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-09-05",
       "Start Time": "8:00 AM",
@@ -881,6 +1351,16 @@
       "Address": "Storming Crab",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859386271066/"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-09-06",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Ride With Randy Rally",
@@ -893,6 +1373,16 @@
       "Event URL": "https://ridewithrandy.org/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-09-12",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "OVR PCA Autocross - September 2026",
       "Date": "2026-09-12",
       "Start Time": "8:30 AM",
@@ -901,6 +1391,66 @@
       "Address": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-09-13",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-09-19",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-09-20",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-09-26",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-09-27",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-03",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -933,6 +1483,46 @@
       "Event URL": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
     },
     {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-04",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-10",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-11",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-17",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Cancer Awareness Rally – Day 1",
       "Date": "2026-10-17",
       "Start Time": "11:00 PM",
@@ -941,6 +1531,16 @@
       "Address": "Launch Washington, DC",
       "Source": "sheet",
       "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-18",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 2",
@@ -993,6 +1593,46 @@
       "Event URL": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-24",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-25",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-10-31",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-01",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Corsa Dragon Rally – Day 1",
       "Date": "2026-11-06",
       "Start Time": "9:00 AM",
@@ -1001,6 +1641,16 @@
       "Address": "Atlanta, GA",
       "Source": "sheet",
       "Event URL": "https://corsarally.com/events/dragon/"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-07",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -1021,6 +1671,16 @@
       "Address": "Atlanta, GA",
       "Source": "sheet",
       "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-08",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 3",
@@ -1051,6 +1711,66 @@
       "Address": "Knoxville, TN",
       "Source": "sheet",
       "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-14",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-15",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-21",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-22",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-28",
+      "Start Time": "7:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Date": "2026-11-29",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     }
   ]
 }
