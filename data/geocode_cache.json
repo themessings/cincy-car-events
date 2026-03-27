@@ -919,5 +919,34 @@
   "Marysville, OH": {
     "lat": "40.2364486",
     "lon": "-83.3671432"
+  },
+  "High 5 Smoke Shop": {
+    "lat": "37.7021320",
+    "lon": "-85.8695346"
+  },
+  "Main St Hamilton, OH": {
+    "lat": "39.1092486",
+    "lon": "-84.5116667"
+  },
+  "Bowling Green, KY": {
+    "lat": "36.9929203",
+    "lon": "-86.4428677"
+  },
+  "Bruster's Real Ice Cream": {
+    "lat": "42.7775350",
+    "lon": "-71.0776533"
+  },
+  "Austin Landing": {
+    "lat": "33.6834326",
+    "lon": "-96.6245055"
+  },
+  "2nd St. Miamisburg OH": {
+    "lat": "39.6389549",
+    "lon": "-84.2878563"
+  },
+  "Beech Bend Raceway Park": null,
+  "Morgantown, KY": {
+    "lat": "37.2256023",
+    "lon": "-86.6835998"
   }
 }

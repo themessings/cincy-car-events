@@ -1,27 +1,7 @@
 {
-  "generated_at_iso": "2026-03-26T12:13:00.853912-04:00",
-  "count": 177,
+  "generated_at_iso": "2026-03-27T07:43:17.775184-04:00",
+  "count": 181,
   "events": [
-    {
-      "Event Name": "Cincinnati Auto Expo",
-      "Date": "2026-03-26",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "525 Elm Street, Cincinnati, OH",
-      "Address": "525 Elm Street, Cincinnati, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cincinnati-auto-expo/1355761812681578/"
-    },
-    {
-      "Event Name": "April Spools 2026",
-      "Date": "2026-03-26",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "NCM Motorsports Park",
-      "Address": "NCM Motorsports Park",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/april-spools-2026/1315912386466471/"
-    },
     {
       "Event Name": "Ohio Challenge RoadRally (SCCA)",
       "Date": "2026-03-27",
@@ -33,7 +13,7 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-03-28",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -63,7 +43,7 @@
       "Event URL": "https://facebook.com/events/s/night-shift-motors-car-meet/4492796457623113/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-03-29",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -77,8 +57,8 @@
       "Date": "2026-03-29",
       "Start Time": "10:00 AM",
       "End Time": "1:00 PM",
-      "Location": "Jeff's Donuts",
-      "Address": "Jeff's Donuts",
+      "Location": "6405 Bardstown Road - Unit A, Louisville, KY",
+      "Address": "6405 Bardstown Road - Unit A, Louisville, KY",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dubs-and-donuts-2026/1458586605795675/"
     },
@@ -93,7 +73,7 @@
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2284397018630419/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-04",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -113,7 +93,7 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859372937734/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-05",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -123,7 +103,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-11",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -143,7 +123,7 @@
       "Event URL": "https://facebook.com/events/s/2nd-annual-cruise-to-buc-ees/1482480203234349/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-12",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -173,7 +153,7 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-18",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -213,7 +193,7 @@
       "Event URL": "https://facebook.com/events/s/marysville-cars-and-coffee-sea/1223760876609621/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -253,7 +233,27 @@
       "Event URL": "https://facebook.com/events/s/import-face-off-hebron-oh-4192/1366574381648422/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "TCL Vol. 2.2 IS LOCKED IN",
+      "Date": "2026-04-19",
+      "Start Time": "4:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "High 5 Smoke Shop",
+      "Address": "High 5 Smoke Shop",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/tcl-vol-22-is-locked-in/1607089860435440/"
+    },
+    {
+      "Event Name": "2026 Michelin National Corvette Museum Bash",
+      "Date": "2026-04-23",
+      "Start Time": "3:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "350 Corvette Dr, Bowling Green, KY",
+      "Address": "350 Corvette Dr, Bowling Green, KY",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2026-michelin-national-corvett/1294945376003045/"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-25",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -303,7 +303,7 @@
       "Event URL": "https://facebook.com/events/s/jaguar-jubilee-car-show-all-ma/1349238980294415/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-26",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -311,6 +311,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "April horsepower show",
+      "Date": "2026-04-26",
+      "Start Time": "12:00 PM",
+      "End Time": "4:00 PM",
+      "Location": "1315 Main St Hamilton, OH 45013",
+      "Address": "1315 Main St Hamilton, OH 45013",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/april-horsepower-show/1588033929074212/"
     },
     {
       "Event Name": "Buckeye RoadRally (SCCA)",
@@ -323,7 +333,7 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-02",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -353,7 +363,7 @@
       "Event URL": "https://facebook.com/events/s/cincinnati-bengals-myles-murph/1271011908322189/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-03",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -423,7 +433,7 @@
       "Event URL": "https://corsarally.com/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-09",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -453,6 +463,16 @@
       "Event URL": "https://facebook.com/events/s/hocking-hills-cars-and-coffee-/1964955747430781/"
     },
     {
+      "Event Name": "2026 Cruiz-In at the Hot Rod MotorTel",
+      "Date": "2026-05-09",
+      "Start Time": "11:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "587 Carson Bridge Rd, Morgantown, KY 42261-8238",
+      "Address": "587 Carson Bridge Rd, Morgantown, KY 42261-8238",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2026-cruiz-in-at-the-hot-rod-m/1725861638373933/"
+    },
+    {
       "Event Name": "2026 Jyan Waespe Memorial Car Show",
       "Date": "2026-05-09",
       "Start Time": "12:00 PM",
@@ -463,7 +483,7 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-10",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -483,7 +503,7 @@
       "Event URL": "https://www.scca.com/pages/road-rally"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-16",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -533,7 +553,7 @@
       "Event URL": "https://facebook.com/events/s/2026-annual-krieger-ford-car-t/929009356126663/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-17",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -563,7 +583,7 @@
       "Event URL": "https://facebook.com/events/s/rumble-on-the-river-car-show-2/853255881026686/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-23",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -573,7 +593,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-24",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -593,7 +613,17 @@
       "Event URL": "fb://event/?id=1413571117159967"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Speedfest Presented By Sick The Magazine, Street Car Takeover and Braggin Rights",
+      "Date": "2026-05-28",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 PM",
+      "Location": "Beech Bend Raceway Park",
+      "Address": "Beech Bend Raceway Park",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/speedfest-presented-by-sick-th/1598081134713008/"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-30",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -633,7 +663,7 @@
       "Event URL": "https://facebook.com/events/s/dog-face-k9s-3rd-annual-car-sh/904114905896136/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-31",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -683,7 +713,7 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-06",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -723,7 +753,7 @@
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-07",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -763,7 +793,7 @@
       "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-13",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -783,7 +813,7 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-14",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -833,7 +863,7 @@
       "Event URL": "https://facebook.com/events/s/voss-hoss-cruise-in-2026/1347118783851195/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-20",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -873,7 +903,7 @@
       "Event URL": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-21",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -903,7 +933,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-27",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -923,7 +953,7 @@
       "Event URL": "https://facebook.com/events/s/cruise-the-burg-car-meet/3337907049711873/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-28",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -963,7 +993,7 @@
       "Event URL": "https://kingoftheroads.events/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-04",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -983,7 +1013,7 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859379604400/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-05",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1003,7 +1033,7 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-11",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1033,7 +1063,7 @@
       "Event URL": "https://rallynorthamerica.com/rally-events/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-12",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1073,7 +1103,7 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-18",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1103,7 +1133,7 @@
       "Event URL": "https://facebook.com/events/s/sunset-showoff-8-at-kuhnle-mot/4130639707200382/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1123,7 +1153,7 @@
       "Event URL": "—"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-25",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1133,7 +1163,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-26",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1173,7 +1203,7 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-01",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1203,7 +1233,7 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-02",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1233,7 +1263,7 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-08",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1253,7 +1283,7 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-09",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1263,7 +1293,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-15",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1273,7 +1303,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-16",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1283,7 +1313,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-22",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1293,7 +1323,17 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "2nd St Car Meet - Downtown Miamisburg",
+      "Date": "2026-08-22",
+      "Start Time": "4:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "2nd St. Miamisburg OH",
+      "Address": "2nd St. Miamisburg OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2nd-st-car-meet-downtown-miami/2115866132522790/"
+    },
+    {
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-23",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1303,7 +1343,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-29",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1323,7 +1363,7 @@
       "Event URL": "https://facebook.com/events/s/vaded-street-circuit-ohio-2026/4616674298560484/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-30",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1333,7 +1373,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-05",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1353,7 +1393,7 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859386271066/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-06",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1373,7 +1413,7 @@
       "Event URL": "https://ridewithrandy.org/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-12",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1393,7 +1433,7 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-13",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1403,7 +1443,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-19",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1413,7 +1453,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-20",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1423,7 +1463,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-26",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1433,7 +1473,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-27",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1443,7 +1483,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-03",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1483,7 +1523,7 @@
       "Event URL": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-04",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1493,7 +1533,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-10",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1503,7 +1543,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-11",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1513,7 +1553,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-17",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1533,7 +1573,7 @@
       "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-18",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1593,7 +1633,7 @@
       "Event URL": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-24",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1603,7 +1643,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-25",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1613,7 +1653,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-31",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1623,7 +1663,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-01",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1643,7 +1683,7 @@
       "Event URL": "https://corsarally.com/events/dragon/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-07",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1673,7 +1713,7 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-08",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1713,7 +1753,7 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-14",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1723,7 +1763,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-15",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1733,7 +1773,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-21",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1743,7 +1783,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-22",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
@@ -1753,7 +1793,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-28",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
@@ -1763,7 +1803,7 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "New EventCircuit Cafe / Cincinnati Cars &amp; Coffee",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-29",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
