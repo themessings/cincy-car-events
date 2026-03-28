@@ -1,27 +1,7 @@
 {
-  "generated_at_iso": "2026-03-27T07:43:17.775184-04:00",
+  "generated_at_iso": "2026-03-28T07:30:50.194918-04:00",
   "count": 181,
   "events": [
-    {
-      "Event Name": "Ohio Challenge RoadRally (SCCA)",
-      "Date": "2026-03-27",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Columbus, OH",
-      "Address": "Columbus, OH",
-      "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-03-28",
-      "Start Time": "7:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "Audi club host “2026 season opener”",
       "Date": "2026-03-28",
@@ -1103,6 +1083,16 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "Mackinac Island Rally - Dadquest",
+      "Date": "2026-07-18",
+      "Start Time": "12:00 AM",
+      "End Time": "12:00 AM",
+      "Location": "",
+      "Address": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-18",
       "Start Time": "7:00 AM",
@@ -1811,6 +1801,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Ohio Challenge RoadRally (SCCA)",
+      "Date": "2027-03-27",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Columbus, OH",
+      "Address": "Columbus, OH",
+      "Source": "sheet",
+      "Event URL": "https://www.scca.com/pages/road-rally"
     }
   ]
 }
