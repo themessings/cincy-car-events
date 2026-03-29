@@ -1,27 +1,7 @@
 {
-  "generated_at_iso": "2026-03-28T07:30:50.194918-04:00",
-  "count": 181,
+  "generated_at_iso": "2026-03-29T07:31:27.451532-04:00",
+  "count": 179,
   "events": [
-    {
-      "Event Name": "Audi club host “2026 season opener”",
-      "Date": "2026-03-28",
-      "Start Time": "12:00 PM",
-      "End Time": "3:00 PM",
-      "Location": "Pinball Garage",
-      "Address": "Pinball Garage",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/audi-club-host-2026-season-ope/1103359065255603/"
-    },
-    {
-      "Event Name": "Night Shift Motors Car Meet",
-      "Date": "2026-03-28",
-      "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Acme Fresh Market",
-      "Address": "Acme Fresh Market",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/night-shift-motors-car-meet/4492796457623113/"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-03-29",
