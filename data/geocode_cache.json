@@ -972,5 +972,27 @@
   "Gatlinburg, TN": {
     "lat": "35.7142590",
     "lon": "-83.5101638"
+  },
+  "Mount Gilead, OH": {
+    "lat": "40.5492265",
+    "lon": "-82.8274015"
+  },
+  "Lawrenceburg Speedway 351 E. Eads Parkway Lawrenceburg IN 47025": null,
+  "Wildcat Hollow TrailHead Sunday Creek Rd CO Rd 58, 45732, OH 45732 OH": null,
+  "Louisburg, NC": {
+    "lat": "36.0990393",
+    "lon": "-78.3011060"
+  },
+  "Catonsville, MD": {
+    "lat": "39.2609922",
+    "lon": "-76.7455478"
+  },
+  "Fairfax, VA": {
+    "lat": "38.8462236",
+    "lon": "-77.3063733"
+  },
+  "Beaufort, SC": {
+    "lat": "32.3850708",
+    "lon": "-80.6923169"
   }
 }
