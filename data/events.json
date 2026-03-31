@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-30T07:56:53.616696-04:00",
-  "count": 178,
+  "generated_at_iso": "2026-03-31T07:52:40.584231-04:00",
+  "count": 226,
   "events": [
     {
       "Event Name": "Endless Car Culture, Cincinnati / Meet #4.2",
@@ -33,6 +33,26 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859372937734/"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-04-04",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Columbus Tint Design Easter Egg Hunt Car Meet",
+      "Date": "2026-04-04",
+      "Start Time": "6:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "6475 E Main St #102, Reynoldsburg, OH 43068",
+      "Address": "6475 E Main St #102, Reynoldsburg, OH 43068",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-05",
       "Start Time": "8:00 AM",
@@ -43,12 +63,42 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "USB Cars & Coffee Cruise In #27",
+      "Date": "2026-04-08",
+      "Start Time": "6:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "8805 Governors Hill Dr, Cincinnati, OH 45249-1337",
+      "Address": "8805 Governors Hill Dr, Cincinnati, OH 45249-1337",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/usb-cars-coffee-cruise-in-27/1421444845925729/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-11",
       "Start Time": "7:00 AM",
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Drift Indy April Drift Day 2026",
+      "Date": "2026-04-11",
+      "Start Time": "8:00 AM",
+      "End Time": "5:00 PM",
+      "Location": "Darana Raceway- Xenia, Ohio",
+      "Address": "Darana Raceway- Xenia, Ohio",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/drift-indy-april-drift-day-202/942857411921484/"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-04-11",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -69,6 +119,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cars for Cancer",
+      "Date": "2026-04-12",
+      "Start Time": "1:00 PM",
+      "End Time": "3:00 PM",
+      "Location": "1487 Victor Road NW Lancaster, OH",
+      "Address": "1487 Victor Road NW Lancaster, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -99,6 +159,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-04-18",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -173,6 +243,16 @@
       "Event URL": "https://facebook.com/events/s/import-face-off-hebron-oh-4192/1366574381648422/"
     },
     {
+      "Event Name": "Sycamore Cars and Coffee",
+      "Date": "2026-04-19",
+      "Start Time": "9:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "7400 Cornell Rd, Montgomery, OH 45242",
+      "Address": "7400 Cornell Rd, Montgomery, OH 45242",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "TCL Vol. 2.2 IS LOCKED IN",
       "Date": "2026-04-19",
       "Start Time": "4:00 PM",
@@ -203,6 +283,26 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Indianapolis Cars and Coffee",
+      "Date": "2026-04-25",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "11711 N Meridian St, Carmel, IN 46032",
+      "Address": "11711 N Meridian St, Carmel, IN 46032",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-04-25",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Inaugural Marysville Ohio Cars, Bikes, and Coffee",
       "Date": "2026-04-25",
       "Start Time": "9:00 AM",
@@ -217,10 +317,20 @@
       "Date": "2026-04-25",
       "Start Time": "9:00 AM",
       "End Time": "4:00 PM",
-      "Location": "Horsepower Farm Middletown",
-      "Address": "Horsepower Farm Middletown",
+      "Location": "2227 Trinity Dr, Middletown, OH 45044",
+      "Address": "2227 Trinity Dr, Middletown, OH 45044",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "fb://event/?id=788415087022357"
+    },
+    {
+      "Event Name": "Cars &amp; Courage",
+      "Date": "2026-04-25",
+      "Start Time": "10:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "6375 Harrison Ave, Cincinnati, OH 45247",
+      "Address": "6375 Harrison Ave, Cincinnati, OH 45247",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Cars and Computers",
@@ -293,6 +403,16 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-05-02",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Cincinnati Bengals Myles Murphy Gears & Grills Auto Showcase",
       "Date": "2026-05-02",
       "Start Time": "11:00 AM",
@@ -301,6 +421,26 @@
       "Address": "St. Xavier High School",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-bengals-myles-murph/1271011908322189/"
+    },
+    {
+      "Event Name": "O.S.C.C. &amp; High Grain Brewing 13th Annual Classic Car Show",
+      "Date": "2026-05-02",
+      "Start Time": "10:00 PM",
+      "End Time": "12:00 AM",
+      "Location": "9176 Winton Rd, Cincinnati OH 45231",
+      "Address": "9176 Winton Rd, Cincinnati OH 45231",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "7th Annual Spring Toy Barn Car Show",
+      "Date": "2026-05-03",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "5016 Post Rd, Dublin, OH 43017",
+      "Address": "5016 Post Rd, Dublin, OH 43017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -383,6 +523,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-05-09",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "OVR PCA Autocross - May 2026",
       "Date": "2026-05-09",
       "Start Time": "8:30 AM",
@@ -423,6 +573,26 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "Event Name": "Jyan Memorial Car and Bike Show",
+      "Date": "2026-05-09",
+      "Start Time": "12:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "5460 Courseview Dr, Mason, OH 45040",
+      "Address": "5460 Courseview Dr, Mason, OH 45040",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "1st Annual Marigold Festival Cruise-In",
+      "Date": "2026-05-09",
+      "Start Time": "1:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "8625 Brandt Pike, Eichelberger Ampitheater @ The Heights, Huber Heights, OH, , Ohio 45424",
+      "Address": "8625 Brandt Pike, Eichelberger Ampitheater @ The Heights, Huber Heights, OH, , Ohio 45424",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/1st-annual-marigold-festival-c/1408370107593720/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-10",
       "Start Time": "8:00 AM",
@@ -461,6 +631,26 @@
       "Address": "7160 Taylor Street Liberty Township, OH 45069",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/810287732100203/"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-05-16",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Indianapolis Cars and Coffee",
+      "Date": "2026-05-16",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "11000 Stockdale Street, Fishers, IN",
+      "Address": "11000 Stockdale Street, Fishers, IN",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Zakira;s Garage 2026 Spring Open House",
@@ -533,6 +723,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-05-23",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-24",
       "Start Time": "8:00 AM",
@@ -573,6 +773,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-05-30",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Eclipse 5th Annual Open House & Car Show",
       "Date": "2026-05-30",
       "Start Time": "11:00 AM",
@@ -581,6 +791,16 @@
       "Address": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Eclipse 5th Annual Open House &amp; Car Show",
+      "Date": "2026-05-30",
+      "Start Time": "11:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "2669 E Kemper Rd, Cincinnati, OH 45241",
+      "Address": "2669 E Kemper Rd, Cincinnati, OH 45241",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Open House & Car Show",
@@ -673,6 +893,16 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859376271067/"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-06-06",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Louisville Mega Cavern Car Show Classic",
       "Date": "2026-06-06",
       "Start Time": "9:00 AM",
@@ -739,6 +969,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-06-13",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -823,6 +1063,16 @@
       "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1465749794987498/"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-06-20",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Whiskey Row Car Show - June 20th 2026",
       "Date": "2026-06-20",
       "Start Time": "9:00 AM",
@@ -879,6 +1129,26 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Indianapolis Cars and Coffee",
+      "Date": "2026-06-27",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "1800 N Green St, Brownsburg, IN 46112",
+      "Address": "1800 N Green St, Brownsburg, IN 46112",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-06-27",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -953,6 +1223,16 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859379604400/"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-07-04",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-05",
       "Start Time": "8:00 AM",
@@ -979,6 +1259,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-07-11",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -1073,6 +1363,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-07-18",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Dynasty Rally 2026",
       "Date": "2026-07-18",
       "Start Time": "9:00 AM",
@@ -1119,6 +1419,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-07-25",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -1183,6 +1493,16 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859382937733/"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-08-01",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Recharge Rally – Day 4",
       "Date": "2026-08-01",
       "Start Time": "9:00 AM",
@@ -1233,6 +1553,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-08-08",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "OVR PCA Autocross - August 2026",
       "Date": "2026-08-08",
       "Start Time": "8:30 AM",
@@ -1263,6 +1593,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-08-15",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-16",
       "Start Time": "8:00 AM",
@@ -1279,6 +1619,26 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Indianapolis Cars and Coffee",
+      "Date": "2026-08-22",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "10267 East U S Highway 136, Brownsburg, IN",
+      "Address": "10267 East U S Highway 136, Brownsburg, IN",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-08-22",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -1309,6 +1669,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-08-29",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -1353,6 +1723,16 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859386271066/"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-06",
       "Start Time": "8:00 AM",
@@ -1379,6 +1759,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-09-12",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -1413,6 +1803,26 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Indianapolis Cars and Coffee",
+      "Date": "2026-09-19",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "9111 Haverstick Rd, Indianapolis, IN 46240",
+      "Address": "9111 Haverstick Rd, Indianapolis, IN 46240",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-09-19",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-20",
       "Start Time": "8:00 AM",
@@ -1429,6 +1839,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-09-26",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -1461,6 +1881,16 @@
       "Address": "Storming Crab",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859389604399/"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-10-03",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Porsche Cruise In - OVRPCA & Eclipse Annual Event",
@@ -1503,6 +1933,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-10-10",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-11",
       "Start Time": "8:00 AM",
@@ -1519,6 +1959,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-10-17",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -1603,6 +2053,26 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-10-24",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Indianapolis Cars and Coffee - Trunk-or-treat",
+      "Date": "2026-10-24",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "9225 Priority Way W Dr Indianapolis, IN 46240",
+      "Address": "9225 Priority Way W Dr Indianapolis, IN 46240",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-25",
       "Start Time": "8:00 AM",
@@ -1619,6 +2089,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
+      "Date": "2026-10-31",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
+      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },

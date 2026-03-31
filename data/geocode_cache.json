@@ -994,5 +994,50 @@
   "Beaufort, SC": {
     "lat": "32.3850708",
     "lon": "-80.6923169"
+  },
+  "Brownsburg, IN": {
+    "lat": "39.8444409",
+    "lon": "-86.3968962"
+  },
+  "Huber Heights, OH": {
+    "lat": "39.8590241",
+    "lon": "-84.1112699"
+  },
+  "Carmel, IN": {
+    "lat": "39.9784186",
+    "lon": "-86.1283681"
+  },
+  "9176 Winton Rd, Cincinnati OH 45231": {
+    "lat": "39.2337245",
+    "lon": "-84.5088497"
+  },
+  "Middletown, OH": {
+    "lat": "39.5166440",
+    "lon": "-84.4041725"
+  },
+  "Mason, OH": {
+    "lat": "39.3600586",
+    "lon": "-84.3099390"
+  },
+  "Victor Road NW Lancaster, OH": null,
+  "Reynoldsburg, OH": {
+    "lat": "39.9547861",
+    "lon": "-82.8121191"
+  },
+  "Priority Way W Dr Indianapolis, IN": {
+    "lat": "39.9233858",
+    "lon": "-86.1067565"
+  },
+  "Fishers, IN": {
+    "lat": "39.9555928",
+    "lon": "-86.0138729"
+  },
+  "Montgomery, OH": {
+    "lat": "39.6837328",
+    "lon": "-84.2854817"
+  },
+  "Burr Ridge, IL": {
+    "lat": "41.7502971",
+    "lon": "-87.9161818"
   }
 }
