@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-03-31T07:52:40.584231-04:00",
-  "count": 226,
+  "generated_at_iso": "2026-04-01T07:55:43.284555-04:00",
+  "count": 229,
   "events": [
     {
       "Event Name": "Endless Car Culture, Cincinnati / Meet #4.2",
@@ -11,6 +11,16 @@
       "Address": "Quaker Steak and Lube Colerain, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2284397018630419/"
+    },
+    {
+      "Event Name": "Gyros and Gas",
+      "Date": "2026-04-02",
+      "Start Time": "4:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Billies Burgers",
+      "Address": "Billies Burgers",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/gyros-and-gas/959245963183750/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -171,6 +181,16 @@
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Hilliard Cars and Coffee at Hilliard Detailing Garage & J Auto Repair",
+      "Date": "2026-04-18",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "Hilliard Detailing Garage",
+      "Address": "Hilliard Detailing Garage",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/hilliard-cars-and-coffee-at-hi/902331492571162/"
     },
     {
       "Event Name": "GDCC Corvettes & Coffee at National Museum of United States Airforce",
@@ -1501,6 +1521,16 @@
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "7th Annual Motors and Rotors",
+      "Date": "2026-08-01",
+      "Start Time": "9:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "Bolton Field - Columbus, Ohio KTZR",
+      "Address": "Bolton Field - Columbus, Ohio KTZR",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/7th-annual-motors-and-rotors/3902418063394968/"
     },
     {
       "Event Name": "Recharge Rally – Day 4",
