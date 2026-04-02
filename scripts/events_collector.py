@@ -2325,6 +2325,9 @@ def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
                     "location": loc,
                     "url": url,
                     "source": source_name,
+                    # Per project policy, all ICS feeds are curated automotive calendars.
+                    # Skip non-automotive keyword/exclusion filtering for every ICS event.
+                    "bypass_automotive_filter": True,
                 }
             )
 

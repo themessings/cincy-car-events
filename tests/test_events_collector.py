@@ -544,6 +544,67 @@ END:VCALENDAR
         self.assertEqual(len(out), 2)
         self.assertEqual([e["start_dt"].day for e in out], [1, 5])
 
+    def test_collect_ics_propagates_bypass_automotive_filter(self):
+        ics = """BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Caffeine and Fuel - Cincinnati
+DTSTART:20990103T120000Z
+DTEND:20990103T140000Z
+END:VEVENT
+END:VCALENDAR
+"""
+
+        class _Resp:
+            status_code = 200
+            content = ics.encode("utf-8")
+
+            def raise_for_status(self):
+                return None
+
+        with patch("scripts.events_collector.requests.get", return_value=_Resp()):
+            out = collect_ics(
+                {
+                    "name": "iCloud Published Calendar (ICS)",
+                    "url": "https://example.com/calendar.ics",
+                    "future_only": True,
+                    "bypass_automotive_filter": True,
+                }
+            )
+
+        self.assertEqual(len(out), 1)
+        self.assertTrue(out[0]["bypass_automotive_filter"])
+
+    def test_collect_ics_always_bypasses_automotive_filter(self):
+        ics = """BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Neighborhood Pancake Breakfast
+DTSTART:20990104T120000Z
+DTEND:20990104T140000Z
+END:VEVENT
+END:VCALENDAR
+"""
+
+        class _Resp:
+            status_code = 200
+            content = ics.encode("utf-8")
+
+            def raise_for_status(self):
+                return None
+
+        with patch("scripts.events_collector.requests.get", return_value=_Resp()):
+            out = collect_ics(
+                {
+                    "name": "Any ICS Feed",
+                    "url": "https://example.com/calendar.ics",
+                    "future_only": True,
+                }
+            )
+
+        self.assertEqual(len(out), 1)
+        self.assertTrue(out[0]["bypass_automotive_filter"])
+
     def test_parse_google_sheet_rows_maps_columns_and_defaults_date_only_time(self):
         rows = [
             ["Date", "Name", "City / Where You'd Be", "Link"],
