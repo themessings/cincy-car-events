@@ -1060,5 +1060,25 @@
     "lat": "37.9599516",
     "lon": "-87.4906322"
   },
-  "DRA AUTO BODY PARTS": null
+  "DRA AUTO BODY PARTS": null,
+  "Spokane, WA": {
+    "lat": "47.6571934",
+    "lon": "-117.4235100"
+  },
+  "SEATTLE, WA": {
+    "lat": "47.6038321",
+    "lon": "-122.3300620"
+  },
+  "KIRKLAND, WA": {
+    "lat": "47.6765382",
+    "lon": "-122.2070775"
+  },
+  "Seattle, WA": {
+    "lat": "47.6038321",
+    "lon": "-122.3300620"
+  },
+  "Portland, OR": {
+    "lat": "45.5202471",
+    "lon": "-122.6741940"
+  }
 }

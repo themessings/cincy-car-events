@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-04-01T20:50:37.911294-04:00",
-  "count": 270,
+  "generated_at_iso": "2026-04-02T07:48:44.584135-04:00",
+  "count": 269,
   "events": [
     {
       "Event Name": "Gyros and Gas",
@@ -161,16 +161,6 @@
       "Address": "Meijer Preston hwy",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2nd-annual-cruise-to-buc-ees/1482480203234349/"
-    },
-    {
-      "Event Name": "RoadRally - Sports Car Club of America",
-      "Date": "2026-04-12",
-      "Start Time": "12:00 AM",
-      "End Time": "2:00 AM",
-      "Location": "Indianapolis",
-      "Address": "Indianapolis",
-      "Source": "Regional rallies",
-      "Event URL": "https://www.scca.com/events/page/3?categories=rally%2Csolo%2Cstarting-line%2Cprosolo%2Cautocross-5%2Ctrackdays%2Cregional-track-event%2Ctrackdays-2%2Ctrack-events%2Ctrack-night&within=100"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
