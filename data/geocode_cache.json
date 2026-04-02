@@ -1042,5 +1042,18 @@
   },
   "Hilliard Detailing Garage": null,
   "Billies Burgers": null,
-  "Bolton Field - Columbus, Ohio KTZR": null
+  "Bolton Field - Columbus, Ohio KTZR": null,
+  "5530 Medpace Way, Cincinnati OH": {
+    "lat": "39.1597591",
+    "lon": "-84.4035748"
+  },
+  "6963 South Liberty Drive Liberty Township OH 45044": null,
+  "Freedom Square II, IN": {
+    "lat": "40.4274604",
+    "lon": "-86.9164458"
+  },
+  "Indianapolis": {
+    "lat": "39.7683331",
+    "lon": "-86.1583502"
+  }
 }
