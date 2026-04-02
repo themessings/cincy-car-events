@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-04-01T20:16:46.316379-04:00",
-  "count": 267,
+  "generated_at_iso": "2026-04-01T20:50:37.911294-04:00",
+  "count": 270,
   "events": [
     {
       "Event Name": "Gyros and Gas",
@@ -33,6 +33,16 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859372937734/"
     },
     {
+      "Event Name": "Cars & Coffee",
+      "Date": "2026-04-04",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "Horsepower Farm Middletown",
+      "Address": "Horsepower Farm Middletown",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-coffee/1376187927872100/"
+    },
+    {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
       "Date": "2026-04-04",
       "Start Time": "8:00 AM",
@@ -53,6 +63,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "DRA x BLUEREIIGN Park & Chill (Car Meet)",
+      "Date": "2026-04-04",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "DRA AUTO BODY PARTS",
+      "Address": "DRA AUTO BODY PARTS",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/dra-x-bluereiign-park-chill-ca/1436128377990929/"
+    },
+    {
       "Event Name": "Columbus Tint Design Easter Egg Hunt Car Meet",
       "Date": "2026-04-04",
       "Start Time": "6:00 PM",
@@ -71,6 +91,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cars & Coffee April",
+      "Date": "2026-04-05",
+      "Start Time": "10:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "Washington Square Mall",
+      "Address": "Washington Square Mall",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-coffee-april/1186708930254932/"
     },
     {
       "Event Name": "USB Cars & Coffee Cruise In #27",
