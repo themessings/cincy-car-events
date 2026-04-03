@@ -1,17 +1,7 @@
 {
-  "generated_at_iso": "2026-04-02T07:48:44.584135-04:00",
-  "count": 269,
+  "generated_at_iso": "2026-04-03T07:39:56.725990-04:00",
+  "count": 268,
   "events": [
-    {
-      "Event Name": "Gyros and Gas",
-      "Date": "2026-04-02",
-      "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Billies Burgers",
-      "Address": "Billies Burgers",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/gyros-and-gas/959245963183750/"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-04",
