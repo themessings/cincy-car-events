@@ -1,17 +1,7 @@
 {
-  "generated_at_iso": "2026-04-03T07:39:56.725990-04:00",
+  "generated_at_iso": "2026-04-04T07:31:35.437295-04:00",
   "count": 268,
   "events": [
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-04-04",
-      "Start Time": "7:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-04-04",
@@ -161,6 +151,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Euro Cars and Cocoa Sunday April 12, 2026",
+      "Date": "2026-04-12",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "600 West Loveland Ave, Loveland, OH",
+      "Address": "600 West Loveland Ave, Loveland, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/euro-cars-and-cocoa-sunday-apr/1478628383640690/"
     },
     {
       "Event Name": "Cars for Cancer",
