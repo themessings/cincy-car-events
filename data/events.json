@@ -1,67 +1,7 @@
 {
-  "generated_at_iso": "2026-04-04T07:31:35.437295-04:00",
-  "count": 268,
+  "generated_at_iso": "2026-04-05T07:32:35.444803-04:00",
+  "count": 262,
   "events": [
-    {
-      "Event Name": "Southern Indiana Car & Coffee",
-      "Date": "2026-04-04",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Storming Crab",
-      "Address": "Storming Crab",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859372937734/"
-    },
-    {
-      "Event Name": "Cars & Coffee",
-      "Date": "2026-04-04",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Horsepower Farm Middletown",
-      "Address": "Horsepower Farm Middletown",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cars-coffee/1376187927872100/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-04-04",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-04-04",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "DRA x BLUEREIIGN Park & Chill (Car Meet)",
-      "Date": "2026-04-04",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "DRA AUTO BODY PARTS",
-      "Address": "DRA AUTO BODY PARTS",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/dra-x-bluereiign-park-chill-ca/1436128377990929/"
-    },
-    {
-      "Event Name": "Columbus Tint Design Easter Egg Hunt Car Meet",
-      "Date": "2026-04-04",
-      "Start Time": "6:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "6475 E Main St #102, Reynoldsburg, OH 43068",
-      "Address": "6475 E Main St #102, Reynoldsburg, OH 43068",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-05",
