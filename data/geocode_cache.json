@@ -1104,5 +1104,51 @@
   "Kings Mills, OH": {
     "lat": "39.3558465",
     "lon": "-84.2472627"
-  }
+  },
+  "Washington DC, DC": {
+    "lat": "38.8950982",
+    "lon": "-77.0363849"
+  },
+  "st Street, NW": {
+    "lat": "45.6230706",
+    "lon": "-60.6306537"
+  },
+  "Online ONLINE, Washington, dc 20001 Washington dc 20001": null,
+  "550 Morse St. NE, 120, WA": {
+    "lat": "38.9072368",
+    "lon": "-76.9980494"
+  },
+  "Derwood, MD": {
+    "lat": "39.1142020",
+    "lon": "-77.1495090"
+  },
+  "anacostia park, SE": {
+    "lat": "38.8733578",
+    "lon": "-76.9834023"
+  },
+  "Annandale, VA": {
+    "lat": "38.8387030",
+    "lon": "-77.1951755"
+  },
+  "Sperryville, VA": {
+    "lat": "38.6560120",
+    "lon": "-78.2370017"
+  },
+  "Pineview Dr Front Royal, VA": null,
+  "Front Royal, VA": {
+    "lat": "38.9179069",
+    "lon": "-78.1918077"
+  },
+  "Bentonville, VA": {
+    "lat": "38.8314248",
+    "lon": "-78.3168239"
+  },
+  "Royal Bowling Tefthidos 7, Peristeri 121 32, Peristeri Peristeri": null,
+  "A LIAR MAN Sofroniou 2, Athina 118 54, Greece, Athens meetup1 Athens meetup1": null,
+  "Starttech Ventures Likourgou 1, Athina 105 51, Greece, Athens meetup1 Athens meetup1": null,
+  "SuiHub Agiou Markou 22, Athens, 105 60, Greece, Athens meetup1 Athens meetup1": null,
+  "Π55 Coworking Space Plateon 55, Athina 104 35 Athina 104 35": null,
+  "Secret Restaurant Location in Athens Karistou, Athina 115 23, Greece, Athens meetup1 Athens meetup1": null,
+  "En aithria Astiggos 13, Athens, 10555, , Athens meetup1 Athens meetup1": null,
+  "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52, , Athens meetup1 Athens meetup1": null
 }

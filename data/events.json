@@ -1,26 +1,26 @@
 {
-  "generated_at_iso": "2026-04-05T07:32:35.444803-04:00",
-  "count": 262,
+  "generated_at_iso": "2026-04-06T07:52:02.026210-04:00",
+  "count": 267,
   "events": [
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-04-05",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event Name": "Market Intelligence in a Society that hates Transparency [foobar.i/o #8]",
+      "Date": "2026-04-07",
+      "Start Time": "12:00 PM",
+      "End Time": "2:00 PM",
+      "Location": "Starttech Ventures Likourgou 1, Athina 105 51, Greece, Athens meetup1 Athens meetup1",
+      "Address": "Starttech Ventures Likourgou 1, Athina 105 51, Greece, Athens meetup1 Athens meetup1",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ko-KR/foobar-io/events/313630621/"
     },
     {
-      "Event Name": "Cars & Coffee April",
-      "Date": "2026-04-05",
-      "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "Washington Square Mall",
-      "Address": "Washington Square Mall",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cars-coffee-april/1186708930254932/"
+      "Event Name": "Game Night",
+      "Date": "2026-04-07",
+      "Start Time": "1:00 PM",
+      "End Time": "4:55 PM",
+      "Location": "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52, , Athens meetup1 Athens meetup1",
+      "Address": "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52, , Athens meetup1 Athens meetup1",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ko-KR/nomad-hub-greece-group/events/313630925/"
     },
     {
       "Event Name": "USB Cars & Coffee Cruise In #27",
@@ -31,6 +31,26 @@
       "Address": "8805 Governors Hill Dr, Cincinnati, OH 45249-1337",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/usb-cars-coffee-cruise-in-27/1421444845925729/"
+    },
+    {
+      "Event Name": "It's Finally Friday! International night! EXCEPTIONALLY THURSDAY",
+      "Date": "2026-04-10",
+      "Start Time": "2:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "A LIAR MAN Sofroniou 2, Athina 118 54, Greece, Athens meetup1 Athens meetup1",
+      "Address": "A LIAR MAN Sofroniou 2, Athina 118 54, Greece, Athens meetup1 Athens meetup1",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ko-KR/athens-friday-night-fever/events/312261475/"
+    },
+    {
+      "Event Name": "Founders Running Club :: Athens",
+      "Date": "2026-04-11",
+      "Start Time": "2:00 AM",
+      "End Time": "3:30 AM",
+      "Location": "SuiHub Agiou Markou 22, Athens, 105 60, Greece, Athens meetup1 Athens meetup1",
+      "Address": "SuiHub Agiou Markou 22, Athens, 105 60, Greece, Athens meetup1 Athens meetup1",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ko-KR/founders-running-club-athens/events/313891945/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -83,6 +103,26 @@
       "Event URL": "https://facebook.com/events/s/2nd-annual-cruise-to-buc-ees/1482480203234349/"
     },
     {
+      "Event Name": "Coffee & Chat at 12pm@En Aithria",
+      "Date": "2026-04-12",
+      "Start Time": "5:00 AM",
+      "End Time": "10:00 AM",
+      "Location": "En aithria Astiggos 13, Athens, 10555, , Athens meetup1 Athens meetup1",
+      "Address": "En aithria Astiggos 13, Athens, 10555, , Athens meetup1 Athens meetup1",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ko-KR/meetup-group-dhlqlvdd/events/313907497/"
+    },
+    {
+      "Event Name": "Greek Brunch: Make New Friends",
+      "Date": "2026-04-12",
+      "Start Time": "5:30 AM",
+      "End Time": "7:30 AM",
+      "Location": "Secret Restaurant Location in Athens Karistou, Athina 115 23, Greece, Athens meetup1 Athens meetup1",
+      "Address": "Secret Restaurant Location in Athens Karistou, Athina 115 23, Greece, Athens meetup1 Athens meetup1",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ko-KR/athens-brunch-club/events/312632764/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-12",
       "Start Time": "8:00 AM",
@@ -111,6 +151,16 @@
       "Address": "1487 Victor Road NW Lancaster, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Endless Car Culture, Cincinnati / Meet #4.3",
+      "Date": "2026-04-15",
+      "Start Time": "6:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "Quaker Steak and Lube Colerain, OH",
+      "Address": "Quaker Steak and Lube Colerain, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2120079848770684/"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
