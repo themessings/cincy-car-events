@@ -1,26 +1,26 @@
 {
-  "generated_at_iso": "2026-04-06T07:52:02.026210-04:00",
-  "count": 267,
+  "generated_at_iso": "2026-04-07T07:56:53.230639-04:00",
+  "count": 266,
   "events": [
     {
-      "Event Name": "Market Intelligence in a Society that hates Transparency [foobar.i/o #8]",
+      "Event Name": "TIME CHANGED Monthly Coffee Meetup at Panera",
       "Date": "2026-04-07",
-      "Start Time": "12:00 PM",
-      "End Time": "2:00 PM",
-      "Location": "Starttech Ventures Likourgou 1, Athina 105 51, Greece, Athens meetup1 Athens meetup1",
-      "Address": "Starttech Ventures Likourgou 1, Athina 105 51, Greece, Athens meetup1 Athens meetup1",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
       "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ko-KR/foobar-io/events/313630621/"
+      "Event URL": "https://www.meetup.com/ellicott-city-womens-meetup-45/events/308524922/"
     },
     {
-      "Event Name": "Game Night",
+      "Event Name": "Medium Level: Koffee Klatch Tour DC Tulip",
       "Date": "2026-04-07",
-      "Start Time": "1:00 PM",
-      "End Time": "4:55 PM",
-      "Location": "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52, , Athens meetup1 Athens meetup1",
-      "Address": "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52, , Athens meetup1 Athens meetup1",
+      "Start Time": "12:00 PM",
+      "End Time": "3:00 PM",
+      "Location": "329 N Manchester St, Arlington, VA 22203",
+      "Address": "329 N Manchester St, Arlington, VA 22203",
       "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ko-KR/nomad-hub-greece-group/events/313630925/"
+      "Event URL": "https://www.meetup.com/novacbg/events/313608688/"
     },
     {
       "Event Name": "USB Cars & Coffee Cruise In #27",
@@ -33,26 +33,6 @@
       "Event URL": "https://facebook.com/events/s/usb-cars-coffee-cruise-in-27/1421444845925729/"
     },
     {
-      "Event Name": "It's Finally Friday! International night! EXCEPTIONALLY THURSDAY",
-      "Date": "2026-04-10",
-      "Start Time": "2:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "A LIAR MAN Sofroniou 2, Athina 118 54, Greece, Athens meetup1 Athens meetup1",
-      "Address": "A LIAR MAN Sofroniou 2, Athina 118 54, Greece, Athens meetup1 Athens meetup1",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ko-KR/athens-friday-night-fever/events/312261475/"
-    },
-    {
-      "Event Name": "Founders Running Club :: Athens",
-      "Date": "2026-04-11",
-      "Start Time": "2:00 AM",
-      "End Time": "3:30 AM",
-      "Location": "SuiHub Agiou Markou 22, Athens, 105 60, Greece, Athens meetup1 Athens meetup1",
-      "Address": "SuiHub Agiou Markou 22, Athens, 105 60, Greece, Athens meetup1 Athens meetup1",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ko-KR/founders-running-club-athens/events/313891945/"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-11",
       "Start Time": "7:00 AM",
@@ -61,6 +41,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "2026 Meet 1",
+      "Date": "2026-04-11",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Austin Landing Blvd, Miamisburg, OH 45342",
+      "Address": "Austin Landing Blvd, Miamisburg, OH 45342",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2026-meet-1/2136619220467501/"
     },
     {
       "Event Name": "Drift Indy April Drift Day 2026",
@@ -83,6 +73,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Lex Ky Cars and Coffee",
+      "Date": "2026-04-11",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "2349 Richmond Rd",
+      "Address": "2349 Richmond Rd",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/lex-ky-cars-and-coffee/1372303011321688/"
+    },
+    {
       "Event Name": "Caffeine and Fuel - Cincinnati",
       "Date": "2026-04-11",
       "Start Time": "9:00 AM",
@@ -101,26 +101,6 @@
       "Address": "Meijer Preston hwy",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2nd-annual-cruise-to-buc-ees/1482480203234349/"
-    },
-    {
-      "Event Name": "Coffee & Chat at 12pm@En Aithria",
-      "Date": "2026-04-12",
-      "Start Time": "5:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "En aithria Astiggos 13, Athens, 10555, , Athens meetup1 Athens meetup1",
-      "Address": "En aithria Astiggos 13, Athens, 10555, , Athens meetup1 Athens meetup1",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ko-KR/meetup-group-dhlqlvdd/events/313907497/"
-    },
-    {
-      "Event Name": "Greek Brunch: Make New Friends",
-      "Date": "2026-04-12",
-      "Start Time": "5:30 AM",
-      "End Time": "7:30 AM",
-      "Location": "Secret Restaurant Location in Athens Karistou, Athina 115 23, Greece, Athens meetup1 Athens meetup1",
-      "Address": "Secret Restaurant Location in Athens Karistou, Athina 115 23, Greece, Athens meetup1 Athens meetup1",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ko-KR/athens-brunch-club/events/312632764/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -901,6 +881,16 @@
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "KSP Classics, Customs, and Cruisers Car Show",
+      "Date": "2026-05-30",
+      "Start Time": "9:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "300 Sower Blvd, Frankfort, KY 40601",
+      "Address": "300 Sower Blvd, Frankfort, KY 40601",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/ksp-classics-customs-and-cruis/1370305214017894/"
     },
     {
       "Event Name": "Caffeine and Fuel - Cincinnati",

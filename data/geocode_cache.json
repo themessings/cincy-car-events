@@ -1150,5 +1150,21 @@
   "Π55 Coworking Space Plateon 55, Athina 104 35 Athina 104 35": null,
   "Secret Restaurant Location in Athens Karistou, Athina 115 23, Greece, Athens meetup1 Athens meetup1": null,
   "En aithria Astiggos 13, Athens, 10555, , Athens meetup1 Athens meetup1": null,
-  "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52, , Athens meetup1 Athens meetup1": null
+  "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52, , Athens meetup1 Athens meetup1": null,
+  "Frankfort, KY": {
+    "lat": "38.2009055",
+    "lon": "-84.8732836"
+  },
+  "Miamisburg, OH": {
+    "lat": "39.6428362",
+    "lon": "-84.2866083"
+  },
+  "Rosslyn, VA": {
+    "lat": "38.8959791",
+    "lon": "-77.0709087"
+  },
+  "Mokena, IL": {
+    "lat": "41.5261437",
+    "lon": "-87.8892189"
+  }
 }
