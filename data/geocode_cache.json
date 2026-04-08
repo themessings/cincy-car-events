@@ -1166,5 +1166,26 @@
   "Mokena, IL": {
     "lat": "41.5261437",
     "lon": "-87.8892189"
+  },
+  "Altoona, IA": {
+    "lat": "41.6437308",
+    "lon": "-93.4696031"
+  },
+  "Issac Walton League branch hill loveland re., Loveland, oh Loveland oh": null,
+  "Morning View, KY": {
+    "lat": "38.8320105",
+    "lon": "-84.4563282"
+  },
+  "Union, KY": {
+    "lat": "37.6372470",
+    "lon": "-87.9580360"
+  },
+  "Newport, KY": {
+    "lat": "39.0889469",
+    "lon": "-84.4919524"
+  },
+  "Falmouth, KY": {
+    "lat": "38.6767366",
+    "lon": "-84.3304592"
   }
 }
