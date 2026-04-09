@@ -1,26 +1,16 @@
 {
-  "generated_at_iso": "2026-04-08T07:59:12.585986-04:00",
-  "count": 266,
+  "generated_at_iso": "2026-04-09T08:01:41.052232-04:00",
+  "count": 265,
   "events": [
     {
-      "Event Name": "USB Cars & Coffee Cruise In #27",
-      "Date": "2026-04-08",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "8805 Governors Hill Dr, Cincinnati, OH 45249-1337",
-      "Address": "8805 Governors Hill Dr, Cincinnati, OH 45249-1337",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/usb-cars-coffee-cruise-in-27/1421444845925729/"
-    },
-    {
-      "Event Name": "Drinking Liberally Weekly Meetup",
-      "Date": "2026-04-09",
-      "Start Time": "9:00 PM",
-      "End Time": "11:00 PM",
-      "Location": "3124 Ingersoll Ave, Des Moines, IA 50312",
-      "Address": "3124 Ingersoll Ave, Des Moines, IA 50312",
+      "Event Name": "Meet David Blanchard, Blanchard's Coffee Company",
+      "Date": "2026-04-10",
+      "Start Time": "11:30 AM",
+      "End Time": "1:00 PM",
+      "Location": "1 Gateway Road, Rm 224, RI",
+      "Address": "1 Gateway Road, Rm 224, RI",
       "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/living-liberally-drinking-liberally-des-moines/events/313877659/"
+      "Event URL": "https://www.meetup.com/opentrellis/events/314152734/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
