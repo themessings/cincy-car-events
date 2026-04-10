@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-04-09T08:01:41.052232-04:00",
-  "count": 265,
+  "generated_at_iso": "2026-04-10T07:52:33.795580-04:00",
+  "count": 267,
   "events": [
     {
       "Event Name": "Meet David Blanchard, Blanchard's Coffee Company",
@@ -73,6 +73,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Meet Up Play Date",
+      "Date": "2026-04-11",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "52 4590 Beech St, Norwood, OH 45212",
+      "Address": "52 4590 Beech St, Norwood, OH 45212",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314187731/"
+    },
+    {
       "Event Name": "2nd annual cruise to Buc-ee’s",
       "Date": "2026-04-11",
       "Start Time": "5:30 PM",
@@ -121,6 +131,16 @@
       "Address": "Quaker Steak and Lube Colerain, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2120079848770684/"
+    },
+    {
+      "Event Name": "Desert Ridge Monthly Meet-up",
+      "Date": "2026-04-15",
+      "Start Time": "8:30 PM",
+      "End Time": "10:00 PM",
+      "Location": "",
+      "Address": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/meetup-group-emhilhod/events/313972753/"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
