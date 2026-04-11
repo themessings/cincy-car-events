@@ -1215,5 +1215,30 @@
   "Glendale, AZ": {
     "lat": "33.5386858",
     "lon": "-112.1859940"
+  },
+  "Edgewater Sports Park": null,
+  "Paicines, CA": {
+    "lat": "36.7285708",
+    "lon": "-121.2785409"
+  },
+  "Olive Hill, KY": {
+    "lat": "38.3000809",
+    "lon": "-83.1740654"
+  },
+  "West Chester, OH": {
+    "lat": "39.3303357",
+    "lon": "-84.4082750"
+  },
+  "ALEXANDRIA, VA": {
+    "lat": "38.8051095",
+    "lon": "-77.0470229"
+  },
+  "Fort Belvoir, VA": {
+    "lat": "38.7107970",
+    "lon": "-77.1436907"
+  },
+  "Lovettsville, VA": {
+    "lat": "39.2747722",
+    "lon": "-77.6393091"
   }
 }

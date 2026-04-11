@@ -1,27 +1,7 @@
 {
-  "generated_at_iso": "2026-04-10T07:52:33.795580-04:00",
+  "generated_at_iso": "2026-04-11T07:33:42.209948-04:00",
   "count": 267,
   "events": [
-    {
-      "Event Name": "Meet David Blanchard, Blanchard's Coffee Company",
-      "Date": "2026-04-10",
-      "Start Time": "11:30 AM",
-      "End Time": "1:00 PM",
-      "Location": "1 Gateway Road, Rm 224, RI",
-      "Address": "1 Gateway Road, Rm 224, RI",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/opentrellis/events/314152734/"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-04-11",
-      "Start Time": "7:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "2026 Meet 1",
       "Date": "2026-04-11",
@@ -133,14 +113,14 @@
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2120079848770684/"
     },
     {
-      "Event Name": "Desert Ridge Monthly Meet-up",
-      "Date": "2026-04-15",
-      "Start Time": "8:30 PM",
-      "End Time": "10:00 PM",
+      "Event Name": "Cincinnati Ruby Brigade - Monthly Meetup",
+      "Date": "2026-04-16",
+      "Start Time": "12:00 PM",
+      "End Time": "1:00 PM",
       "Location": "",
       "Address": "",
       "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/meetup-group-emhilhod/events/313972753/"
+      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/312504658/"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
@@ -347,6 +327,16 @@
       "Date": "2026-04-25",
       "Start Time": "9:00 AM",
       "End Time": "4:00 PM",
+      "Location": "Horsepower Farm Middletown",
+      "Address": "Horsepower Farm Middletown",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/5th-annual-hail-to-horsepower-/788415087022357/"
+    },
+    {
+      "Event Name": "5th Annual “Hail to Horsepower” Car Show",
+      "Date": "2026-04-25",
+      "Start Time": "9:00 AM",
+      "End Time": "4:00 PM",
       "Location": "2227 Trinity Dr, Middletown, OH 45044",
       "Address": "2227 Trinity Dr, Middletown, OH 45044",
       "Source": "iCloud Published Calendar (ICS)",
@@ -431,16 +421,6 @@
       "Address": "1315 Main St Hamilton, OH 45013",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/april-horsepower-show/1588033929074212/"
-    },
-    {
-      "Event Name": "Northern KY Sierra Club's April Meeting - Green Burials",
-      "Date": "2026-04-27",
-      "Start Time": "6:30 PM",
-      "End Time": "8:00 PM",
-      "Location": "901 East 6th Street, Newport, KY",
-      "Address": "901 East 6th Street, Newport, KY",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/313604404/"
     },
     {
       "Event Name": "Buckeye RoadRally (SCCA)",
@@ -1203,6 +1183,16 @@
       "Event URL": "https://facebook.com/events/s/voss-hoss-cruise-in-2026/1347118783851195/"
     },
     {
+      "Event Name": "Streetcar Takeover Edgewater",
+      "Date": "2026-06-19",
+      "Start Time": "11:45 PM",
+      "End Time": "11:45 PM",
+      "Location": "Edgewater Sports Park",
+      "Address": "Edgewater Sports Park",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/streetcar-takeover-edgewater/1901399977154844/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-20",
       "Start Time": "7:00 AM",
@@ -1961,6 +1951,16 @@
       "Address": "5530 Medpace Way, Cincinnati OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Corvette Connection | Greater Cincinnati Corvettes & ECLIPSE Annual Event",
+      "Date": "2026-08-29",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "Eclipse Window Tinting, Cincinnati Ohio",
+      "Address": "Eclipse Window Tinting, Cincinnati Ohio",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/corvette-connection-greater-ci/1429612775369342/"
     },
     {
       "Event Name": "Vaded Street Circuit: Ohio 2026",
