@@ -1,77 +1,7 @@
 {
-  "generated_at_iso": "2026-04-11T07:33:42.209948-04:00",
-  "count": 267,
+  "generated_at_iso": "2026-04-12T07:37:00.766265-04:00",
+  "count": 261,
   "events": [
-    {
-      "Event Name": "2026 Meet 1",
-      "Date": "2026-04-11",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Austin Landing Blvd, Miamisburg, OH 45342",
-      "Address": "Austin Landing Blvd, Miamisburg, OH 45342",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2026-meet-1/2136619220467501/"
-    },
-    {
-      "Event Name": "Drift Indy April Drift Day 2026",
-      "Date": "2026-04-11",
-      "Start Time": "8:00 AM",
-      "End Time": "5:00 PM",
-      "Location": "Darana Raceway- Xenia, Ohio",
-      "Address": "Darana Raceway- Xenia, Ohio",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/drift-indy-april-drift-day-202/942857411921484/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-04-11",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Lex Ky Cars and Coffee",
-      "Date": "2026-04-11",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "2349 Richmond Rd",
-      "Address": "2349 Richmond Rd",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/lex-ky-cars-and-coffee/1372303011321688/"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-04-11",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Meet Up Play Date",
-      "Date": "2026-04-11",
-      "Start Time": "11:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "52 4590 Beech St, Norwood, OH 45212",
-      "Address": "52 4590 Beech St, Norwood, OH 45212",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314187731/"
-    },
-    {
-      "Event Name": "2nd annual cruise to Buc-ee’s",
-      "Date": "2026-04-11",
-      "Start Time": "5:30 PM",
-      "End Time": "8:30 PM",
-      "Location": "Meijer Preston hwy",
-      "Address": "Meijer Preston hwy",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2nd-annual-cruise-to-buc-ees/1482480203234349/"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-12",
@@ -1481,6 +1411,16 @@
       "Address": "Athens, OH (Launch)",
       "Source": "sheet",
       "Event URL": "https://rallynorthamerica.com/rally-events/"
+    },
+    {
+      "Event Name": "Ultimate Auto show, Oakley",
+      "Date": "2026-07-11",
+      "Start Time": "4:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Oakley Greens",
+      "Address": "Oakley Greens",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/ultimate-auto-show-oakley/1658836658585759/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
