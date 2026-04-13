@@ -1248,5 +1248,17 @@
   "Fairborn, OH": {
     "lat": "39.8208998",
     "lon": "-84.0193858"
+  },
+  "Four Bridges Dr Liberty Township, OH": {
+    "lat": "39.3768179",
+    "lon": "-84.3463375"
+  },
+  "Eastgate South Dr Cincinnati, OH": {
+    "lat": "39.0977862",
+    "lon": "-84.2787375"
+  },
+  "South Lebanon, OH": {
+    "lat": "39.3710358",
+    "lon": "-84.2128058"
   }
 }

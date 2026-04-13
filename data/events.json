@@ -1,34 +1,24 @@
 {
-  "generated_at_iso": "2026-04-12T07:37:00.766265-04:00",
-  "count": 261,
+  "generated_at_iso": "2026-04-13T08:05:51.156159-04:00",
+  "count": 311,
   "events": [
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-04-12",
-      "Start Time": "8:00 AM",
+      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
+      "Date": "2026-04-15",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Location": "",
+      "Address": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/313960794/"
     },
     {
-      "Event Name": "Euro Cars and Cocoa Sunday April 12, 2026",
-      "Date": "2026-04-12",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "600 West Loveland Ave, Loveland, OH",
-      "Address": "600 West Loveland Ave, Loveland, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/euro-cars-and-cocoa-sunday-apr/1478628383640690/"
-    },
-    {
-      "Event Name": "Cars for Cancer",
-      "Date": "2026-04-12",
-      "Start Time": "1:00 PM",
-      "End Time": "3:00 PM",
-      "Location": "1487 Victor Road NW Lancaster, OH",
-      "Address": "1487 Victor Road NW Lancaster, OH",
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-04-15",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -203,6 +193,16 @@
       "Event URL": "https://facebook.com/events/s/tcl-vol-22-is-locked-in/1607089860435440/"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-04-22",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "2026 Michelin National Corvette Museum Bash",
       "Date": "2026-04-23",
       "Start Time": "3:00 PM",
@@ -211,6 +211,16 @@
       "Address": "350 Corvette Dr, Bowling Green, KY",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2026-michelin-national-corvett/1294945376003045/"
+    },
+    {
+      "Event Name": "Sunset Cruisers Season Opener",
+      "Date": "2026-04-24",
+      "Start Time": "7:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "650 Eastgate South Dr Cincinnati, OH",
+      "Address": "650 Eastgate South Dr Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -351,6 +361,16 @@
       "Address": "1315 Main St Hamilton, OH 45013",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/april-horsepower-show/1588033929074212/"
+    },
+    {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-04-29",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Buckeye RoadRally (SCCA)",
@@ -503,6 +523,16 @@
       "Event URL": "https://corsarally.com/"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-05-06",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-09",
       "Start Time": "7:00 AM",
@@ -511,6 +541,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-05-09",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -551,6 +591,16 @@
       "Address": "5530 Medpace Way, Cincinnati OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Montgomery Exotics and Espresso",
+      "Date": "2026-05-09",
+      "Start Time": "10:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "",
+      "Address": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://www.montgomeryohio.gov/event/new-exotics-espresso-car-show/"
     },
     {
       "Event Name": "2026 Cruiz-In at the Hot Rod MotorTel",
@@ -603,6 +653,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-05-13",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
       "Date": "2026-05-15",
       "Start Time": "9:00 AM",
@@ -631,6 +691,16 @@
       "Address": "7160 Taylor Street Liberty Township, OH 45069",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/810287732100203/"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-05-16",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -713,6 +783,16 @@
       "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-05-20",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Rumble on the River Car Show 2026",
       "Date": "2026-05-23",
       "Start Time": "7:00 AM",
@@ -731,6 +811,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-05-23",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -773,6 +863,16 @@
       "Event URL": "fb://event/?id=1413571117159967"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-05-27",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Speedfest Presented By Sick The Magazine, Street Car Takeover and Braggin Rights",
       "Date": "2026-05-28",
       "Start Time": "8:00 AM",
@@ -791,6 +891,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-05-30",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -903,6 +1013,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-06-03",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Enthusiast Showdown 2026 - Track Day • Car Show • Swap Meet",
       "Date": "2026-06-05",
       "Start Time": "8:00 AM",
@@ -1003,6 +1123,16 @@
       "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-06-10",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Southern Ohio Forest Rally – Day 2",
       "Date": "2026-06-11",
       "Start Time": "9:00 AM",
@@ -1031,6 +1161,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-06-13",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1083,6 +1223,16 @@
       "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-06-17",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Dynasty Rally 2026 – Day 2",
       "Date": "2026-06-18",
       "Start Time": "9:00 AM",
@@ -1131,6 +1281,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-06-20",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincy Cars & Coffee @ Liberty Center",
@@ -1193,6 +1353,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-06-24",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Barrett-Jackson 2026 Columbus Auction",
       "Date": "2026-06-25",
       "Start Time": "8:00 AM",
@@ -1231,6 +1401,16 @@
       "Address": "1800 N Green St, Brownsburg, IN 46112",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-06-27",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1293,6 +1473,16 @@
       "Event URL": "https://facebook.com/events/s/cruisin-for-a-cure-batesville-/1888901302016142/"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-07-01",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "King of the Roads Rally",
       "Date": "2026-07-03",
       "Start Time": "9:00 AM",
@@ -1353,6 +1543,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-07-08",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Athens Backhands Driving Tour",
       "Date": "2026-07-10",
       "Start Time": "12:00 AM",
@@ -1371,6 +1571,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-07-11",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1463,6 +1673,16 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-07-15",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Mt Gilead's Annual Downtown Car and Bike Show",
       "Date": "2026-07-17",
       "Start Time": "4:00 PM",
@@ -1491,6 +1711,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-07-18",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1543,6 +1773,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-07-22",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Cincy Car Cruise Rally",
       "Date": "2026-07-24",
       "Start Time": "9:00 AM",
@@ -1561,6 +1801,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-07-25",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1603,6 +1853,16 @@
       "Event URL": "https://www.therechargerally.com/"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-07-29",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Recharge Rally – Day 2",
       "Date": "2026-07-30",
       "Start Time": "9:00 AM",
@@ -1640,7 +1900,7 @@
       "Location": "Storming Crab",
       "Address": "Storming Crab",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859382937733/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1693,6 +1953,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-08-05",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "57th NSRA Street Rod Nationals",
       "Date": "2026-08-06",
       "Start Time": "8:00 AM",
@@ -1721,6 +1991,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-08-08",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1763,6 +2043,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-08-12",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-15",
       "Start Time": "7:00 AM",
@@ -1771,6 +2061,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-08-15",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1803,6 +2103,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-08-19",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-22",
       "Start Time": "7:00 AM",
@@ -1811,6 +2121,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-08-22",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Indianapolis Cars and Coffee",
@@ -1863,6 +2183,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-08-26",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-29",
       "Start Time": "7:00 AM",
@@ -1871,6 +2201,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-08-29",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1923,6 +2263,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-09-02",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-05",
       "Start Time": "7:00 AM",
@@ -1940,7 +2290,7 @@
       "Location": "Storming Crab",
       "Address": "Storming Crab",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859386271066/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1973,6 +2323,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-09-09",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Ride With Randy Rally",
       "Date": "2026-09-11",
       "Start Time": "9:00 AM",
@@ -1991,6 +2351,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-09-12",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -2033,6 +2403,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-09-16",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-19",
       "Start Time": "7:00 AM",
@@ -2051,6 +2431,16 @@
       "Address": "9111 Haverstick Rd, Indianapolis, IN 46240",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-09-19",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -2083,6 +2473,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-09-23",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-26",
       "Start Time": "7:00 AM",
@@ -2091,6 +2491,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-09-26",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -2119,6 +2529,16 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-09-30",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
@@ -2193,6 +2613,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-10-07",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-10",
       "Start Time": "7:00 AM",
@@ -2201,6 +2631,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-10-10",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -2233,6 +2673,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-10-14",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-17",
       "Start Time": "7:00 AM",
@@ -2241,6 +2691,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-10-17",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -2313,6 +2773,16 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-10-21",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Cancer Awareness Rally – Day 5",
       "Date": "2026-10-21",
       "Start Time": "11:00 PM",
@@ -2341,6 +2811,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-10-24",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -2383,6 +2863,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-10-28",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr Liberty Township, OH",
+      "Address": "8300 Four Bridges Dr Liberty Township, OH",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-31",
       "Start Time": "7:00 AM",
@@ -2391,6 +2881,16 @@
       "Address": "2726 Riverside Drive, Cincinnati, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-10-31",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Storming Crab",
+      "Address": "Storming Crab",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -2450,7 +2950,7 @@
       "Location": "Storming Crab",
       "Address": "Storming Crab",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859392937732/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Caffeine and Fuel - Cincinnati",
