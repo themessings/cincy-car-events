@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-04-13T08:05:51.156159-04:00",
-  "count": 311,
+  "generated_at_iso": "2026-04-14T08:00:58.046254-04:00",
+  "count": 317,
   "events": [
     {
       "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
@@ -43,6 +43,16 @@
       "Event URL": "https://www.meetup.com/techlife-cincinnati/events/312504658/"
     },
     {
+      "Event Name": "Drinking Liberally Weekly Meetup",
+      "Date": "2026-04-16",
+      "Start Time": "9:00 PM",
+      "End Time": "11:00 PM",
+      "Location": "3124 Ingersoll Ave, Des Moines, IA 50312",
+      "Address": "3124 Ingersoll Ave, Des Moines, IA 50312",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/es-ES/living-liberally-drinking-liberally-des-moines/events/313993745/"
+    },
+    {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
       "Date": "2026-04-17",
       "Start Time": "8:00 AM",
@@ -51,6 +61,16 @@
       "Address": "Mid-Ohio Sports Car Course",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/spring-break-at-china-beach-ro/1654389302582694/"
+    },
+    {
+      "Event Name": "Caffeine for a Cause Cars & Coffee",
+      "Date": "2026-04-17",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "Rural King Supply",
+      "Address": "Rural King Supply",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/caffeine-for-a-cause-cars-coff/1003522875535251/"
     },
     {
       "Event Name": "Hoosier Rally (SCCA)",
@@ -211,6 +231,16 @@
       "Address": "350 Corvette Dr, Bowling Green, KY",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2026-michelin-national-corvett/1294945376003045/"
+    },
+    {
+      "Event Name": "Drinking Liberally Weekly Meetup",
+      "Date": "2026-04-23",
+      "Start Time": "9:00 PM",
+      "End Time": "11:00 PM",
+      "Location": "3124 Ingersoll Ave, Des Moines, IA 50312",
+      "Address": "3124 Ingersoll Ave, Des Moines, IA 50312",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/living-liberally-drinking-liberally-des-moines/events/314115354/"
     },
     {
       "Event Name": "Sunset Cruisers Season Opener",
@@ -843,6 +873,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "The Evolution of Speed",
+      "Date": "2026-05-23",
+      "Start Time": "12:00 PM",
+      "End Time": "4:30 PM",
+      "Location": "EVO MotorWerke",
+      "Address": "EVO MotorWerke",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/the-evolution-of-speed/1272330884869065/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-24",
       "Start Time": "8:00 AM",
@@ -1311,6 +1351,16 @@
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincy Cool Cars-White Oak Christian Church Car Show",
+      "Date": "2026-06-20",
+      "Start Time": "8:30 AM",
+      "End Time": "3:30 PM",
+      "Location": "Hamilton, Ohio",
+      "Address": "Hamilton, Ohio",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincy-cool-cars-white-oak-chri/2408876486213992/"
     },
     {
       "Event Name": "Whiskey Row Car Show - June 20th 2026",
@@ -2521,6 +2571,16 @@
       "Address": "5530 Medpace Way, Cincinnati OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Thundercruise! - Car & Bike Meet",
+      "Date": "2026-09-26",
+      "Start Time": "4:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Main St Downtown Miamisburg",
+      "Address": "Main St Downtown Miamisburg",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/thundercruise-car-bike-meet/1182278670391763/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",

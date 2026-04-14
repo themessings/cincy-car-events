@@ -1260,5 +1260,31 @@
   "South Lebanon, OH": {
     "lat": "39.3710358",
     "lon": "-84.2128058"
+  },
+  "Rural King Supply": {
+    "lat": "38.4078701",
+    "lon": "-87.7982631"
+  },
+  "Main St Downtown Miamisburg": null,
+  "Hamilton, Ohio": {
+    "lat": "39.2085354",
+    "lon": "-84.5501874"
+  },
+  "EVO MotorWerke": null,
+  "Covington, KY": {
+    "lat": "39.0831712",
+    "lon": "-84.5107548"
+  },
+  "Sharonville, OH": {
+    "lat": "39.2681145",
+    "lon": "-84.4132779"
+  },
+  ", DE": {
+    "lat": "51.1638175",
+    "lon": "10.4478313"
+  },
+  "nd st Lansing, IL": {
+    "lat": "41.8115091",
+    "lon": "-87.9302023"
   }
 }
