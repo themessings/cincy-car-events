@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-04-14T08:00:58.046254-04:00",
-  "count": 317,
+  "generated_at_iso": "2026-04-15T08:00:39.141173-04:00",
+  "count": 316,
   "events": [
     {
       "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
@@ -41,16 +41,6 @@
       "Address": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/techlife-cincinnati/events/312504658/"
-    },
-    {
-      "Event Name": "Drinking Liberally Weekly Meetup",
-      "Date": "2026-04-16",
-      "Start Time": "9:00 PM",
-      "End Time": "11:00 PM",
-      "Location": "3124 Ingersoll Ave, Des Moines, IA 50312",
-      "Address": "3124 Ingersoll Ave, Des Moines, IA 50312",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/es-ES/living-liberally-drinking-liberally-des-moines/events/313993745/"
     },
     {
       "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
