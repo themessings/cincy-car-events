@@ -1,77 +1,7 @@
 {
-  "generated_at_iso": "2026-04-15T08:00:39.141173-04:00",
-  "count": 316,
+  "generated_at_iso": "2026-04-17T15:49:42.731586-04:00",
+  "count": 318,
   "events": [
-    {
-      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
-      "Date": "2026-04-15",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/313960794/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-04-15",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Endless Car Culture, Cincinnati / Meet #4.3",
-      "Date": "2026-04-15",
-      "Start Time": "6:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "Quaker Steak and Lube Colerain, OH",
-      "Address": "Quaker Steak and Lube Colerain, OH",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/2120079848770684/"
-    },
-    {
-      "Event Name": "Cincinnati Ruby Brigade - Monthly Meetup",
-      "Date": "2026-04-16",
-      "Start Time": "12:00 PM",
-      "End Time": "1:00 PM",
-      "Location": "",
-      "Address": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/312504658/"
-    },
-    {
-      "Event Name": "Spring Break at China Beach Round#2 | TREC 3 Hour",
-      "Date": "2026-04-17",
-      "Start Time": "8:00 AM",
-      "End Time": "6:00 PM",
-      "Location": "Mid-Ohio Sports Car Course",
-      "Address": "Mid-Ohio Sports Car Course",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/spring-break-at-china-beach-ro/1654389302582694/"
-    },
-    {
-      "Event Name": "Caffeine for a Cause Cars & Coffee",
-      "Date": "2026-04-17",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Rural King Supply",
-      "Address": "Rural King Supply",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/caffeine-for-a-cause-cars-coff/1003522875535251/"
-    },
-    {
-      "Event Name": "Hoosier Rally (SCCA)",
-      "Date": "2026-04-17",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Indianapolis, IN",
-      "Address": "Indianapolis, IN",
-      "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-18",
@@ -143,6 +73,16 @@
       "Event URL": "https://facebook.com/events/s/marysville-cars-and-coffee-sea/1223760876609621/"
     },
     {
+      "Event Name": "Weird &#038; Wacky Car Show &#8211; Portland, OR",
+      "Date": "2026-04-18",
+      "Start Time": "4:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "",
+      "Address": "",
+      "Source": "Regional rallies",
+      "Event URL": "https://bringatrailer.com/event/weird-wacky-car-show-portland-or/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-19",
       "Start Time": "8:00 AM",
@@ -201,6 +141,16 @@
       "Address": "High 5 Smoke Shop",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/tcl-vol-22-is-locked-in/1607089860435440/"
+    },
+    {
+      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
+      "Date": "2026-04-22",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314089180/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -353,6 +303,16 @@
       "Event URL": "https://facebook.com/events/s/jaguar-jubilee-car-show-all-ma/1349238980294415/"
     },
     {
+      "Event Name": "Kentucky Region Autocross 2026 Fun Event 1 @ Salem Speedway",
+      "Date": "2026-04-26",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2009976-kentucky-region-autocross-2026-fun-event-1-salem-speedway"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-26",
       "Start Time": "8:00 AM",
@@ -443,6 +403,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Pug Meet Up Play Date",
+      "Date": "2026-05-02",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "52 4590 Beech St, Norwood, OH 45212",
+      "Address": "52 4590 Beech St, Norwood, OH 45212",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314319246/"
+    },
+    {
       "Event Name": "Cincinnati Bengals Myles Murphy Gears & Grills Auto Showcase",
       "Date": "2026-05-02",
       "Start Time": "11:00 AM",
@@ -451,6 +421,16 @@
       "Address": "St. Xavier High School",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-bengals-myles-murph/1271011908322189/"
+    },
+    {
+      "Event Name": "Kentucky Derby Meet Up at Gina's and Ellen's",
+      "Date": "2026-05-02",
+      "Start Time": "2:00 PM",
+      "End Time": "4:00 PM",
+      "Location": "",
+      "Address": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/loki-lesbians/events/314082124/"
     },
     {
       "Event Name": "O.S.C.C. &amp; High Grain Brewing 13th Annual Classic Car Show",
@@ -551,6 +531,16 @@
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "CINPA Monthly Meeting",
+      "Date": "2026-05-06",
+      "Start Time": "6:30 PM",
+      "End Time": "8:30 PM",
+      "Location": "",
+      "Address": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/314061191/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -811,6 +801,16 @@
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Ruby Brigade - Monthly Meetup",
+      "Date": "2026-05-21",
+      "Start Time": "12:00 PM",
+      "End Time": "1:00 PM",
+      "Location": "",
+      "Address": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/zqtdhtyjchbcc/"
     },
     {
       "Event Name": "Rumble on the River Car Show 2026",
@@ -1273,6 +1273,16 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "2026 SCCA Great Lakes RallyCross Divisional Challenge @ Appalachian Overland Triangle",
+      "Date": "2026-06-19",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Source": "SCCA RoadRally + RallyCross",
+      "Event URL": "https://www.scca.com/events/2009834-2026-scca-great-lakes-rallycross-divisional-challenge-appalachian-overland-triangle"
+    },
+    {
       "Event Name": "Dynasty Rally 2026 – Day 3",
       "Date": "2026-06-19",
       "Start Time": "9:00 AM",
@@ -1601,6 +1611,16 @@
       "Address": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
+      "Date": "2026-07-10",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
