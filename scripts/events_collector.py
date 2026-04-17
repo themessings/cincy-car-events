@@ -4214,6 +4214,8 @@ def write_csv(events: List[dict], path: str) -> None:
         "End Time",
         "Location",
         "Address",
+        "Closest City",
+        "Callout",
         "Source",
         "Event URL",
     ]
@@ -4232,6 +4234,8 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "End Time",
         "Location",
         "Address",
+        "Closest City",
+        "Callout",
         "Source",
         "Event URL",
     ]
@@ -4243,6 +4247,8 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "categ": ["categ", "category", "type"],
         "miles_from_c": ["miles_from_c", "miles_from_cincy", "miles", "distance", "mileage"],
         "location": ["location", "venue", "address", "Location"],
+        "closest_city": ["closest_city", "closest city", "Closest City"],
+        "callout": ["callout", "Callout"],
         "link": ["link", "url", "event_url", "eventlink", "Event URL", "event url"],
         "source": ["source", "event_source", "source_name", "pulled_from", "Source"],
         "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime", "Start ISO", "start iso"],
@@ -4298,6 +4304,8 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         raw_location = pick_value(row, alias_map["location"])
         normalized["Location"] = raw_location
         normalized["Address"] = raw_location
+        normalized["Closest City"] = pick_value(row, alias_map["closest_city"])
+        normalized["Callout"] = pick_value(row, alias_map["callout"])
         normalized["Event URL"] = pick_value(row, alias_map["link"])
         normalized["Source"] = normalize_source(pick_value(row, alias_map["source"]) or "")
 
@@ -4532,7 +4540,7 @@ def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[d
     try:
         resp = sheets.spreadsheets().values().get(
             spreadsheetId=spreadsheet_id,
-            range="Events!A1:I4000",
+            range="Events!A1:Z4000",
         ).execute()
     except Exception as ex:
         log(f"⚠️ Unable to read existing Events tab for manual-row preservation: {ex}")
@@ -4543,7 +4551,7 @@ def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[d
         return []
 
     header = [clean_ws(c) for c in rows[0]]
-    wanted = ["Event Name", "Date", "Start Time", "End Time", "Location", "Address", "Source", "Event URL"]
+    wanted = ["Event Name", "Date", "Start Time", "End Time", "Location", "Address", "Closest City", "Callout", "Source", "Event URL"]
     idx = {name: i for i, name in enumerate(header) if name}
     if not all(col in idx for col in ("Event Name", "Date")):
         return []
@@ -4551,7 +4559,10 @@ def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[d
     preserved: List[dict] = []
     skipped_past = 0
     for raw in rows[1:]:
-        row = {col: clean_ws(raw[idx[col]] if len(raw) > idx[col] else "") for col in wanted}
+        row = {}
+        for col in wanted:
+            col_idx = idx.get(col)
+            row[col] = clean_ws(raw[col_idx] if col_idx is not None and len(raw) > col_idx else "")
         if not _is_manual_event_row(row):
             continue
         parsed_dt = _parse_sheet_row_date_et(row)
@@ -4599,7 +4610,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         values.append([ev.get(h, "") for h in headers])
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
-    clear_range = "Events!A1:I"
+    clear_range = "Events!A1:Z"
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
         range=clear_range,
@@ -4614,11 +4625,11 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         body={"values": values},
     ).execute()
 
-    # 3) Write a visible update stamp (column J is outside your table)
+    # 3) Write a visible update stamp (column K is outside your table)
     stamp = f"Updated by bot: {now_et_iso()} | rows={len(values)-1}"
     sheets.spreadsheets().values().update(
         spreadsheetId=spreadsheet_id,
-        range="Events!J1",
+        range="Events!K1",
         valueInputOption="RAW",
         body={"values": [[stamp]]},
     ).execute()
