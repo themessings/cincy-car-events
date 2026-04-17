@@ -654,6 +654,45 @@ END:VCALENDAR
         self.assertEqual(len(out), 1)
         self.assertEqual(out[0]["title"], "Cars & Coffee")
 
+    def test_read_future_manual_events_handles_added_export_columns(self):
+        class _ValuesApi:
+            def __init__(self, payload):
+                self.payload = payload
+
+            def get(self, spreadsheetId, range):
+                self._spreadsheet_id = spreadsheetId
+                self._range = range
+                return self
+
+            def execute(self):
+                return self.payload
+
+        class _SpreadsheetsApi:
+            def __init__(self, payload):
+                self.payload = payload
+
+            def values(self):
+                return _ValuesApi(self.payload)
+
+        class _SheetsApi:
+            def __init__(self, payload):
+                self.payload = payload
+
+            def spreadsheets(self):
+                return _SpreadsheetsApi(self.payload)
+
+        payload = {
+            "values": [
+                ["Event Name", "Date", "Start Time", "End Time", "Location", "Address", "Closest City", "Callout", "Source", "Event URL"],
+                ["Cars & Coffee", "2099-05-01", "9:00 AM", "11:00 AM", "Cincinnati", "123 Main St", "Cincinnati", "Featured", "manual", "https://example.com/event"],
+            ]
+        }
+        out = events_collector_mod._read_future_manual_events_from_sheet(_SheetsApi(payload), "sheet-id")
+
+        self.assertEqual(len(out), 1)
+        self.assertEqual(out[0]["Closest City"], "Cincinnati")
+        self.assertEqual(out[0]["Callout"], "Featured")
+
 
 class AddressVerificationTests(unittest.TestCase):
     def test_extract_address_components_uses_city_state_hint(self):
