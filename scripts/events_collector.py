@@ -4214,6 +4214,8 @@ def write_csv(events: List[dict], path: str) -> None:
         "End Time",
         "Location",
         "Address",
+        "Closest City",
+        "Callout",
         "Source",
         "Event URL",
     ]
@@ -4232,6 +4234,8 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "End Time",
         "Location",
         "Address",
+        "Closest City",
+        "Callout",
         "Source",
         "Event URL",
     ]
@@ -4532,7 +4536,7 @@ def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[d
     try:
         resp = sheets.spreadsheets().values().get(
             spreadsheetId=spreadsheet_id,
-            range="Events!A1:I4000",
+            range="Events!A1:J4000",
         ).execute()
     except Exception as ex:
         log(f"⚠️ Unable to read existing Events tab for manual-row preservation: {ex}")
@@ -4543,7 +4547,7 @@ def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[d
         return []
 
     header = [clean_ws(c) for c in rows[0]]
-    wanted = ["Event Name", "Date", "Start Time", "End Time", "Location", "Address", "Source", "Event URL"]
+    wanted = ["Event Name", "Date", "Start Time", "End Time", "Location", "Address", "Closest City", "Callout", "Source", "Event URL"]
     optional_aliases = {
         "Event URL": ["Event URL", "URL", "Url", "Link", "Event Link", "event_url", "event url"],
     }
@@ -4612,7 +4616,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         values.append([ev.get(h, "") for h in headers])
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
-    clear_range = "Events!A1:I"
+    clear_range = "Events!A1:J"
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
         range=clear_range,
@@ -4627,11 +4631,11 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         body={"values": values},
     ).execute()
 
-    # 3) Write a visible update stamp (column J is outside your table)
+    # 3) Write a visible update stamp (column K is outside your table)
     stamp = f"Updated by bot: {now_et_iso()} | rows={len(values)-1}"
     sheets.spreadsheets().values().update(
         spreadsheetId=spreadsheet_id,
-        range="Events!J1",
+        range="Events!K1",
         valueInputOption="RAW",
         body={"values": [[stamp]]},
     ).execute()
