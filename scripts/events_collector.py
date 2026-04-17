@@ -4544,14 +4544,27 @@ def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[d
 
     header = [clean_ws(c) for c in rows[0]]
     wanted = ["Event Name", "Date", "Start Time", "End Time", "Location", "Address", "Source", "Event URL"]
+    optional_aliases = {
+        "Event URL": ["Event URL", "URL", "Url", "Link", "Event Link", "event_url", "event url"],
+    }
     idx = {name: i for i, name in enumerate(header) if name}
     if not all(col in idx for col in ("Event Name", "Date")):
         return []
+    for canonical, aliases in optional_aliases.items():
+        if canonical in idx:
+            continue
+        for alias in aliases:
+            if alias in idx:
+                idx[canonical] = idx[alias]
+                break
 
     preserved: List[dict] = []
     skipped_past = 0
     for raw in rows[1:]:
-        row = {col: clean_ws(raw[idx[col]] if len(raw) > idx[col] else "") for col in wanted}
+        row = {
+            col: clean_ws(raw[idx[col]] if (col in idx and len(raw) > idx[col]) else "")
+            for col in wanted
+        }
         if not _is_manual_event_row(row):
             continue
         parsed_dt = _parse_sheet_row_date_et(row)
