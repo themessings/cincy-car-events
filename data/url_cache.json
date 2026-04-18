@@ -84,7 +84,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-04-17T16:07:22.216036-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=29": {
@@ -92,7 +92,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
-    "fetched_at_iso": "2026-04-17T16:07:22.216036-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.eventbrite.com/b/oh--colerain/auto-boat-and-air/": {
@@ -2159,7 +2159,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=2": {
-    "fetched_at_iso": "2026-04-17T16:06:31.675723-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.eventbrite.com/o/aces-bar-grill-107935116761": {
@@ -2898,7 +2898,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-04-17T16:07:22.216036-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--huber-heights/food-and-car-show/": {
@@ -4078,7 +4078,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cleves/cincinnati-exp-regional-rally/": {
-    "fetched_at_iso": "2026-04-17T16:06:31.675723-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.facebook.com/events/974397501534794": {
@@ -6176,7 +6176,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--kentucky/cincinnati-ohio/": {
-    "fetched_at_iso": "2026-04-17T16:06:31.675723-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/coffee/us/": {
@@ -7252,7 +7252,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=8": {
-    "fetched_at_iso": "2026-04-17T16:06:31.675723-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/": {
@@ -7331,7 +7331,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1987276963895": {
-    "fetched_at_iso": "2026-04-17T16:07:22.216036-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/events/lrjgqtyjcgblc/": {
@@ -7566,7 +7566,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/expos/": {
-    "fetched_at_iso": "2026-04-17T16:06:31.675723-04:00",
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
     "events": []
   },
   "https://www.press.bmwgroup.com/usa/article/detail/T0455796EN_US/iconic-biennial-rally-%E2%80%9Cmini-takes-the-states%E2%80%9D-returns-in-2026-with-three-weekend-nine-city-adventure-across-three-states?language=en_US": {
@@ -7604,5 +7604,9 @@
         "url": "https://www.scca.com/events/2009976-kentucky-region-autocross-2026-fun-event-1-salem-speedway"
       }
     ]
+  },
+  "https://www.eventbrite.com/d/ky--florence/car-shows/": {
+    "fetched_at_iso": "2026-04-18T07:34:54.430916-04:00",
+    "events": []
   }
 }

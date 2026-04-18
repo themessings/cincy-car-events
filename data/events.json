@@ -1,19 +1,7 @@
 {
-  "generated_at_iso": "2026-04-17T16:07:36.929112-04:00",
-  "count": 318,
+  "generated_at_iso": "2026-04-18T07:35:43.436355-04:00",
+  "count": 276,
   "events": [
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-04-18",
-      "Start Time": "7:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
       "Date": "2026-04-18",
@@ -85,18 +73,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/marysville-cars-and-coffee-sea/1223760876609621/"
-    },
-    {
-      "Event Name": "Weird &#038; Wacky Car Show &#8211; Portland, OR",
-      "Date": "2026-04-18",
-      "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Regional rallies",
-      "Event URL": "https://bringatrailer.com/event/weird-wacky-car-show-portland-or/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -171,18 +147,6 @@
       "Event URL": "https://facebook.com/events/s/tcl-vol-22-is-locked-in/1607089860435440/"
     },
     {
-      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
-      "Date": "2026-04-22",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314089180/"
-    },
-    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-04-22",
       "Start Time": "5:00 PM",
@@ -205,18 +169,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2026-michelin-national-corvett/1294945376003045/"
-    },
-    {
-      "Event Name": "Drinking Liberally Weekly Meetup",
-      "Date": "2026-04-23",
-      "Start Time": "9:00 PM",
-      "End Time": "11:00 PM",
-      "Location": "3124 Ingersoll Ave, Des Moines, IA 50312",
-      "Address": "3124 Ingersoll Ave, Des Moines, IA 50312",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/living-liberally-drinking-liberally-des-moines/events/314115354/"
     },
     {
       "Event Name": "Sunset Cruisers Season Opener",
@@ -303,18 +255,6 @@
       "Event URL": "fb://event/?id=788415087022357"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-04-25",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Eastside Auto Spa Season Opener",
       "Date": "2026-04-25",
       "Start Time": "9:00 AM",
@@ -361,18 +301,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/jaguar-jubilee-car-show-all-ma/1349238980294415/"
-    },
-    {
-      "Event Name": "Kentucky Region Autocross 2026 Fun Event 1 @ Salem Speedway",
-      "Date": "2026-04-26",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2009976-kentucky-region-autocross-2026-fun-event-1-salem-speedway"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -471,30 +399,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-05-02",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Pug Meet Up Play Date",
-      "Date": "2026-05-02",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "52 4590 Beech St, Norwood, OH 45212",
-      "Address": "52 4590 Beech St, Norwood, OH 45212",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314319246/"
-    },
-    {
       "Event Name": "Cincinnati Bengals Myles Murphy Gears & Grills Auto Showcase",
       "Date": "2026-05-02",
       "Start Time": "11:00 AM",
@@ -505,18 +409,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-bengals-myles-murph/1271011908322189/"
-    },
-    {
-      "Event Name": "Kentucky Derby Meet Up at Gina's and Ellen's",
-      "Date": "2026-05-02",
-      "Start Time": "2:00 PM",
-      "End Time": "4:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/loki-lesbians/events/314082124/"
     },
     {
       "Event Name": "O.S.C.C. &amp; High Grain Brewing 13th Annual Classic Car Show",
@@ -639,18 +531,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "CINPA Monthly Meeting",
-      "Date": "2026-05-06",
-      "Start Time": "6:30 PM",
-      "End Time": "8:30 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/314061191/"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-09",
       "Start Time": "7:00 AM",
@@ -709,18 +589,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/hocking-hills-cars-and-coffee-/1964955747430781/"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-05-09",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Montgomery Exotics and Espresso",
@@ -879,18 +747,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-05-16",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Zakira;s Garage 2026 Spring Open House",
       "Date": "2026-05-16",
       "Start Time": "9:30 AM",
@@ -963,18 +819,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Cincinnati Ruby Brigade - Monthly Meetup",
-      "Date": "2026-05-21",
-      "Start Time": "12:00 PM",
-      "End Time": "1:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/zqtdhtyjchbcc/"
-    },
-    {
       "Event Name": "Rumble on the River Car Show 2026",
       "Date": "2026-05-23",
       "Start Time": "7:00 AM",
@@ -1017,18 +861,6 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-05-23",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -1141,18 +973,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/ksp-classics-customs-and-cruis/1370305214017894/"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-05-30",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Eclipse 5th Annual Open House & Car Show",
@@ -1335,18 +1155,6 @@
       "Event URL": "https://facebook.com/events/s/louisville-mega-cavern-car-sho/4263104417339019/"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-06-06",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Oxford Masonic Lodge Annual Charity Car and Bike show",
       "Date": "2026-06-06",
       "Start Time": "2:00 PM",
@@ -1467,18 +1275,6 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-06-13",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-14",
       "Start Time": "8:00 AM",
@@ -1525,18 +1321,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "2026 SCCA Great Lakes RallyCross Divisional Challenge @ Appalachian Overland Triangle",
-      "Date": "2026-06-19",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "SCCA RoadRally + RallyCross",
-      "Event URL": "https://www.scca.com/events/2009834-2026-scca-great-lakes-rallycross-divisional-challenge-appalachian-overland-triangle"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -1659,18 +1443,6 @@
       "Event URL": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-06-20",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-21",
       "Start Time": "8:00 AM",
@@ -1761,18 +1533,6 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-06-27",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -1887,18 +1647,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-07-04",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-05",
       "Start Time": "8:00 AM",
@@ -1933,18 +1681,6 @@
       "Callout": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
-      "Date": "2026-07-10",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1993,18 +1729,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincy-cool-cars-club-car-show/1223464389322097/"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-07-11",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
@@ -2163,18 +1887,6 @@
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-07-18",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Sunset Showoff 8 at Kuhnle Motorsports Park",
       "Date": "2026-07-18",
       "Start Time": "3:00 PM",
@@ -2253,18 +1965,6 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-07-25",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -2379,18 +2079,6 @@
       "Event URL": "https://facebook.com/events/s/7th-annual-motors-and-rotors/3902418063394968/"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-08-01",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Recharge Rally – Day 4",
       "Date": "2026-08-01",
       "Start Time": "9:00 AM",
@@ -2499,18 +2187,6 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-08-08",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-09",
       "Start Time": "8:00 AM",
@@ -2565,18 +2241,6 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-08-15",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -2655,18 +2319,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-08-22",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "2nd St Car Meet - Downtown Miamisburg",
       "Date": "2026-08-22",
       "Start Time": "4:00 PM",
@@ -2733,18 +2385,6 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-08-29",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -2835,18 +2475,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-09-05",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-06",
       "Start Time": "8:00 AM",
@@ -2931,18 +2559,6 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-09-12",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-13",
       "Start Time": "8:00 AM",
@@ -3015,18 +2631,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-09-19",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-20",
       "Start Time": "8:00 AM",
@@ -3081,18 +2685,6 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-09-26",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -3165,18 +2757,6 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-10-03",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -3267,18 +2847,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-10-10",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-11",
       "Start Time": "8:00 AM",
@@ -3333,18 +2901,6 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-10-17",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -3495,18 +3051,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-10-24",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-25",
       "Start Time": "8:00 AM",
@@ -3567,18 +3111,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-10-31",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-01",
       "Start Time": "8:00 AM",
@@ -3625,18 +3157,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-11-07",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 2",
@@ -3711,18 +3231,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-11-14",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-15",
       "Start Time": "8:00 AM",
@@ -3741,18 +3249,6 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-11-21",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
       "Closest City": "",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
@@ -3783,18 +3279,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-11-28",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-29",
       "Start Time": "8:00 AM",
@@ -3813,6 +3297,18 @@
       "End Time": "11:00 AM",
       "Location": "Columbus, OH",
       "Address": "Columbus, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Hoosier Rally (SCCA)",
+      "Date": "2027-04-17",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Indianapolis, IN",
+      "Address": "Indianapolis, IN",
       "Closest City": "",
       "Callout": "",
       "Source": "sheet",
