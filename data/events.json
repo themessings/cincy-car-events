@@ -1,79 +1,7 @@
 {
-  "generated_at_iso": "2026-04-18T07:35:43.436355-04:00",
-  "count": 276,
+  "generated_at_iso": "2026-04-19T07:36:07.132017-04:00",
+  "count": 272,
   "events": [
-    {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-04-18",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Hilliard Cars and Coffee at Hilliard Detailing Garage & J Auto Repair",
-      "Date": "2026-04-18",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Hilliard Detailing Garage",
-      "Address": "Hilliard Detailing Garage",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/hilliard-cars-and-coffee-at-hi/902331492571162/"
-    },
-    {
-      "Event Name": "GDCC Corvettes & Coffee at National Museum of United States Airforce",
-      "Date": "2026-04-18",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "National Museum of the U.S. Air Force",
-      "Address": "National Museum of the U.S. Air Force",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/gdcc-corvettes-coffee-at-natio/1636585704184790/"
-    },
-    {
-      "Event Name": "Caffeine and Fuel - Cincinnati",
-      "Date": "2026-04-18",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5530 Medpace Way, Cincinnati OH",
-      "Address": "5530 Medpace Way, Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "2026 GermanTech MotorWorks Block Party",
-      "Date": "2026-04-18",
-      "Start Time": "10:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "11250 Midway Dr., Louisville, KY",
-      "Address": "11250 Midway Dr., Louisville, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2026-germantech-motorworks-blo/1988827128371736/"
-    },
-    {
-      "Event Name": "Marysville Cars and Coffee Season Kickoff",
-      "Date": "2026-04-18",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/marysville-cars-and-coffee-sea/1223760876609621/"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-19",
@@ -555,6 +483,18 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
+      "Event Name": "2026 Meet 2",
+      "Date": "2026-05-09",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Austin Landing Blvd, Miamisburg, OH 45342",
+      "Address": "Austin Landing Blvd, Miamisburg, OH 45342",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2026-meet-2/1514989883341211/"
+    },
+    {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
       "Date": "2026-05-09",
       "Start Time": "8:00 AM",
@@ -865,6 +805,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Krueger's Second Annual Car, Truck, & Bike Show",
+      "Date": "2026-05-23",
+      "Start Time": "9:00 AM",
+      "End Time": "4:00 PM",
+      "Location": "7220 N Dixie Dr, Dayton, OH",
+      "Address": "7220 N Dixie Dr, Dayton, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/kruegers-second-annual-car-tru/930127726577677/"
     },
     {
       "Event Name": "The Evolution of Speed",
