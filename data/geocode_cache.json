@@ -1294,5 +1294,53 @@
   "Wawa": {
     "lat": "40.8500948",
     "lon": "-74.3507325"
+  },
+  "Clermont Northeastern High School": {
+    "lat": "39.1304324",
+    "lon": "-84.1019374"
+  },
+  "Meridian Mark Plaza Office Complex": null,
+  "Franklin Municipal Court": {
+    "lat": "44.9187000",
+    "lon": "-74.1943467"
+  },
+  "Scioto Downs Racetrack and Casino": null,
+  "Historic Crew Stadium": {
+    "lat": "40.0094680",
+    "lon": "-82.9911382"
+  },
+  "Toy Barn": {
+    "lat": "40.1012489",
+    "lon": "-83.1281052"
+  },
+  "The Pub 2692 Edmondson Rd, (Located in Rookwood Commons and Pavilion), Norwood, oh Norwood oh": null,
+  "Centreville, VA": {
+    "lat": "38.8387653",
+    "lon": "-77.4315911"
+  },
+  "Brookeville, MD": {
+    "lat": "39.1803067",
+    "lon": "-77.0584474"
+  },
+  "th St. NE Washington, DC": null,
+  "Big Sur, CA": {
+    "lat": "36.1437044",
+    "lon": "-121.5645930"
+  },
+  "Fort Thomas, KY": {
+    "lat": "39.0786242",
+    "lon": "-84.4483432"
+  },
+  "Villa Hills, KY": {
+    "lat": "39.0633933",
+    "lon": "-84.5929998"
+  },
+  "Richmond, CA": {
+    "lat": "49.1631680",
+    "lon": "-123.1374140"
+  },
+  "Mill Valley, CA": {
+    "lat": "37.9060368",
+    "lon": "-122.5449763"
   }
 }

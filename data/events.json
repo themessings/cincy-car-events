@@ -1,78 +1,18 @@
 {
-  "generated_at_iso": "2026-04-19T07:36:07.132017-04:00",
-  "count": 272,
+  "generated_at_iso": "2026-04-20T08:07:38.216225-04:00",
+  "count": 281,
   "events": [
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-04-19",
-      "Start Time": "8:00 AM",
+      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
+      "Date": "2026-04-22",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "2026 Sycamore Cars and Coffee",
-      "Date": "2026-04-19",
-      "Start Time": "9:00 AM",
-      "End Time": "1:00 PM",
       "Location": "",
       "Address": "",
       "Closest City": "",
       "Callout": "",
-      "Source": "OVR PCA Social Events (ICS)",
-      "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Fairfield Cars and Coffee 2026 #1",
-      "Date": "2026-04-19",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "8695 Bilstein Blvd Hamilton Ohio 45015",
-      "Address": "8695 Bilstein Blvd Hamilton Ohio 45015",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/fairfield-cars-and-coffee-2026/1629100551564096/"
-    },
-    {
-      "Event Name": "Import Face-Off Hebron, OH 4/19/26!",
-      "Date": "2026-04-19",
-      "Start Time": "9:00 AM",
-      "End Time": "7:00 PM",
-      "Location": "National Trail Raceway",
-      "Address": "National Trail Raceway",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/import-face-off-hebron-oh-4192/1366574381648422/"
-    },
-    {
-      "Event Name": "Sycamore Cars and Coffee",
-      "Date": "2026-04-19",
-      "Start Time": "9:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "7400 Cornell Rd, Montgomery, OH 45242",
-      "Address": "7400 Cornell Rd, Montgomery, OH 45242",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "TCL Vol. 2.2 IS LOCKED IN",
-      "Date": "2026-04-19",
-      "Start Time": "4:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "High 5 Smoke Shop",
-      "Address": "High 5 Smoke Shop",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/tcl-vol-22-is-locked-in/1607089860435440/"
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314089180/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -121,6 +61,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Indianapolis Cars & Coffee - Hosted by Meridian Mark I and II",
+      "Date": "2026-04-25",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Meridian Mark Plaza Office Complex",
+      "Address": "Meridian Mark Plaza Office Complex",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/1288126416619353/"
     },
     {
       "Event Name": "Indianapolis Cars and Coffee",
@@ -231,6 +183,18 @@
       "Event URL": "https://facebook.com/events/s/jaguar-jubilee-car-show-all-ma/1349238980294415/"
     },
     {
+      "Event Name": "Kentucky Region Autocross 2026 Fun Event 1 @ Salem Speedway",
+      "Date": "2026-04-26",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2009976-kentucky-region-autocross-2026-fun-event-1-salem-speedway"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-04-26",
       "Start Time": "8:00 AM",
@@ -265,6 +229,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/april-horsepower-show/1588033929074212/"
+    },
+    {
+      "Event Name": "Northern KY Sierra Club's April Meeting - Green Burials",
+      "Date": "2026-04-27",
+      "Start Time": "6:30 PM",
+      "End Time": "8:00 PM",
+      "Location": "901 East 6th Street, Newport, KY",
+      "Address": "901 East 6th Street, Newport, KY",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/313604404/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -327,6 +303,30 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Inaugural Rocket Rumble",
+      "Date": "2026-05-02",
+      "Start Time": "9:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "Clermont Northeastern High School",
+      "Address": "Clermont Northeastern High School",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/inaugural-rocket-rumble/1391474752673528/"
+    },
+    {
+      "Event Name": "Pug Meet Up Play Date",
+      "Date": "2026-05-02",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "52 4590 Beech St, Norwood, OH 45212",
+      "Address": "52 4590 Beech St, Norwood, OH 45212",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314319246/"
+    },
+    {
       "Event Name": "Cincinnati Bengals Myles Murphy Gears & Grills Auto Showcase",
       "Date": "2026-05-02",
       "Start Time": "11:00 AM",
@@ -337,6 +337,30 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-bengals-myles-murph/1271011908322189/"
+    },
+    {
+      "Event Name": "Kentucky Derby Meet Up at Gina's and Ellen's",
+      "Date": "2026-05-02",
+      "Start Time": "2:00 PM",
+      "End Time": "4:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/loki-lesbians/events/314082124/"
+    },
+    {
+      "Event Name": "Show us Your HORSEPOWER",
+      "Date": "2026-05-02",
+      "Start Time": "3:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "Scioto Downs Racetrack and Casino",
+      "Address": "Scioto Downs Racetrack and Casino",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/show-us-your-horsepower/4318075691839764/"
     },
     {
       "Event Name": "O.S.C.C. &amp; High Grain Brewing 13th Annual Classic Car Show",
@@ -361,6 +385,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "2026 TOY BARN SPRING CAR SHOW",
+      "Date": "2026-05-03",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "Toy Barn",
+      "Address": "Toy Barn",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2026-toy-barn-spring-car-show/977421228129317/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -457,6 +493,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "CINPA Monthly Meeting",
+      "Date": "2026-05-06",
+      "Start Time": "6:30 PM",
+      "End Time": "8:30 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/314061191/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -747,6 +795,18 @@
       "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
     },
     {
+      "Event Name": "May General Meeting: Tour of SD1's Dry Creek Wastewater Treatment Plant",
+      "Date": "2026-05-18",
+      "Start Time": "6:30 PM",
+      "End Time": "8:00 PM",
+      "Location": "2999 Amsterdam Road, Villa Hills, KY",
+      "Address": "2999 Amsterdam Road, Villa Hills, KY",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/314198829/"
+    },
+    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-05-20",
       "Start Time": "5:00 PM",
@@ -757,6 +817,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Ruby Brigade - Monthly Meetup",
+      "Date": "2026-05-21",
+      "Start Time": "12:00 PM",
+      "End Time": "1:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/zqtdhtyjchbcc/"
     },
     {
       "Event Name": "Rumble on the River Car Show 2026",
@@ -1275,6 +1347,18 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "2026 SCCA Great Lakes RallyCross Divisional Challenge @ Appalachian Overland Triangle",
+      "Date": "2026-06-19",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "SCCA RoadRally + RallyCross",
+      "Event URL": "https://www.scca.com/events/2009834-2026-scca-great-lakes-rallycross-divisional-challenge-appalachian-overland-triangle"
+    },
+    {
       "Event Name": "Dynasty Rally 2026 – Day 3",
       "Date": "2026-06-19",
       "Start Time": "9:00 AM",
@@ -1633,6 +1717,18 @@
       "Callout": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
+      "Date": "2026-07-10",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2425,6 +2521,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "All Out War - Motorsports Festival 2026",
+      "Date": "2026-09-05",
+      "Start Time": "7:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "Historic Crew Stadium",
+      "Address": "Historic Crew Stadium",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/all-out-war-motorsports-festiv/2317196702145427/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
