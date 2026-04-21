@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-04-20T08:07:38.216225-04:00",
-  "count": 281,
+  "generated_at_iso": "2026-04-21T08:02:08.651358-04:00",
+  "count": 279,
   "events": [
     {
       "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
@@ -229,18 +229,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/april-horsepower-show/1588033929074212/"
-    },
-    {
-      "Event Name": "Northern KY Sierra Club's April Meeting - Green Burials",
-      "Date": "2026-04-27",
-      "Start Time": "6:30 PM",
-      "End Time": "8:00 PM",
-      "Location": "901 East 6th Street, Newport, KY",
-      "Address": "901 East 6th Street, Newport, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/313604404/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -793,18 +781,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
-    },
-    {
-      "Event Name": "May General Meeting: Tour of SD1's Dry Creek Wastewater Treatment Plant",
-      "Date": "2026-05-18",
-      "Start Time": "6:30 PM",
-      "End Time": "8:00 PM",
-      "Location": "2999 Amsterdam Road, Villa Hills, KY",
-      "Address": "2999 Amsterdam Road, Villa Hills, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/314198829/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
