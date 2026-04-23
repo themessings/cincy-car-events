@@ -1,31 +1,7 @@
 {
-  "generated_at_iso": "2026-04-21T08:02:08.651358-04:00",
-  "count": 279,
+  "generated_at_iso": "2026-04-23T08:01:03.068105-04:00",
+  "count": 281,
   "events": [
-    {
-      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
-      "Date": "2026-04-22",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314089180/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-04-22",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "2026 Michelin National Corvette Museum Bash",
       "Date": "2026-04-23",
@@ -231,6 +207,30 @@
       "Event URL": "https://facebook.com/events/s/april-horsepower-show/1588033929074212/"
     },
     {
+      "Event Name": "Northern KY Sierra Club's April Meeting - Green Burials",
+      "Date": "2026-04-27",
+      "Start Time": "6:30 PM",
+      "End Time": "8:00 PM",
+      "Location": "901 East 6th Street, Newport, KY",
+      "Address": "901 East 6th Street, Newport, KY",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/313604404/"
+    },
+    {
+      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
+      "Date": "2026-04-29",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314197606/"
+    },
+    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-04-29",
       "Start Time": "5:00 PM",
@@ -277,6 +277,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+    },
+    {
+      "Event Name": "Stance @ Circuit | C&C Showcase",
+      "Date": "2026-05-02",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/stance-circuit-cc-showcase/1513995883680509/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -781,6 +793,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
+    },
+    {
+      "Event Name": "May General Meeting: Tour of SD1's Dry Creek Wastewater Treatment Plant",
+      "Date": "2026-05-18",
+      "Start Time": "6:30 PM",
+      "End Time": "8:00 PM",
+      "Location": "2999 Amsterdam Road, Villa Hills, KY",
+      "Address": "2999 Amsterdam Road, Villa Hills, KY",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/314198829/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
