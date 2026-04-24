@@ -1,18 +1,18 @@
 {
-  "generated_at_iso": "2026-04-23T08:01:03.068105-04:00",
-  "count": 281,
+  "generated_at_iso": "2026-04-24T07:59:11.147278-04:00",
+  "count": 280,
   "events": [
     {
-      "Event Name": "2026 Michelin National Corvette Museum Bash",
-      "Date": "2026-04-23",
-      "Start Time": "3:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "350 Corvette Dr, Bowling Green, KY",
-      "Address": "350 Corvette Dr, Bowling Green, KY",
+      "Event Name": "Meet Shannon Eastwood & Paul Maguire",
+      "Date": "2026-04-24",
+      "Start Time": "11:30 AM",
+      "End Time": "1:00 PM",
+      "Location": "1 Gateway Road, Rm 224, RI",
+      "Address": "1 Gateway Road, Rm 224, RI",
       "Closest City": "",
       "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2026-michelin-national-corvett/1294945376003045/"
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/opentrellis/events/314398029/"
     },
     {
       "Event Name": "Sunset Cruisers Season Opener",
@@ -135,6 +135,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cars & Coffee at The Haven",
+      "Date": "2026-04-25",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/alexandria-cars-coffee/events/313478807/"
+    },
+    {
       "Event Name": "Cars and Computers",
       "Date": "2026-04-25",
       "Start Time": "11:00 AM",
@@ -205,18 +217,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/april-horsepower-show/1588033929074212/"
-    },
-    {
-      "Event Name": "Northern KY Sierra Club's April Meeting - Green Burials",
-      "Date": "2026-04-27",
-      "Start Time": "6:30 PM",
-      "End Time": "8:00 PM",
-      "Location": "901 East 6th Street, Newport, KY",
-      "Address": "901 East 6th Street, Newport, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/313604404/"
     },
     {
       "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
@@ -793,18 +793,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
-    },
-    {
-      "Event Name": "May General Meeting: Tour of SD1's Dry Creek Wastewater Treatment Plant",
-      "Date": "2026-05-18",
-      "Start Time": "6:30 PM",
-      "End Time": "8:00 PM",
-      "Location": "2999 Amsterdam Road, Villa Hills, KY",
-      "Address": "2999 Amsterdam Road, Villa Hills, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/314198829/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
