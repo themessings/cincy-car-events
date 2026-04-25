@@ -1,43 +1,7 @@
 {
-  "generated_at_iso": "2026-04-24T07:59:11.147278-04:00",
-  "count": 280,
+  "generated_at_iso": "2026-04-25T07:40:30.643961-04:00",
+  "count": 278,
   "events": [
-    {
-      "Event Name": "Meet Shannon Eastwood & Paul Maguire",
-      "Date": "2026-04-24",
-      "Start Time": "11:30 AM",
-      "End Time": "1:00 PM",
-      "Location": "1 Gateway Road, Rm 224, RI",
-      "Address": "1 Gateway Road, Rm 224, RI",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/opentrellis/events/314398029/"
-    },
-    {
-      "Event Name": "Sunset Cruisers Season Opener",
-      "Date": "2026-04-24",
-      "Start Time": "7:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "650 Eastgate South Dr Cincinnati, OH",
-      "Address": "650 Eastgate South Dr Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-04-25",
-      "Start Time": "7:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "Indianapolis Cars & Coffee - Hosted by Meridian Mark I and II",
       "Date": "2026-04-25",
@@ -1177,6 +1141,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
+    },
+    {
+      "Event Name": "Southern Indiana Region Autocross #2 @ Mid-American Air Center",
+      "Date": "2026-06-07",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2009587-southern-indiana-region-autocross-2-mid-american-air-center"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
