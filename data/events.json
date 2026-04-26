@@ -1,139 +1,7 @@
 {
-  "generated_at_iso": "2026-04-25T07:40:30.643961-04:00",
-  "count": 278,
+  "generated_at_iso": "2026-04-26T07:41:57.265293-04:00",
+  "count": 265,
   "events": [
-    {
-      "Event Name": "Indianapolis Cars & Coffee - Hosted by Meridian Mark I and II",
-      "Date": "2026-04-25",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Meridian Mark Plaza Office Complex",
-      "Address": "Meridian Mark Plaza Office Complex",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/1288126416619353/"
-    },
-    {
-      "Event Name": "Indianapolis Cars and Coffee",
-      "Date": "2026-04-25",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "11711 N Meridian St, Carmel, IN 46032",
-      "Address": "11711 N Meridian St, Carmel, IN 46032",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-04-25",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Inaugural Marysville Ohio Cars, Bikes, and Coffee",
-      "Date": "2026-04-25",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "24025 Honda Pkwy, Marysville, OH 43040-9182",
-      "Address": "24025 Honda Pkwy, Marysville, OH 43040-9182",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/inaugural-marysville-ohio-cars/1837116996961810/"
-    },
-    {
-      "Event Name": "5th Annual “Hail to Horsepower” Car Show",
-      "Date": "2026-04-25",
-      "Start Time": "9:00 AM",
-      "End Time": "4:00 PM",
-      "Location": "Horsepower Farm Middletown",
-      "Address": "Horsepower Farm Middletown",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/5th-annual-hail-to-horsepower-/788415087022357/"
-    },
-    {
-      "Event Name": "5th Annual “Hail to Horsepower” Car Show",
-      "Date": "2026-04-25",
-      "Start Time": "9:00 AM",
-      "End Time": "4:00 PM",
-      "Location": "2227 Trinity Dr, Middletown, OH 45044",
-      "Address": "2227 Trinity Dr, Middletown, OH 45044",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "fb://event/?id=788415087022357"
-    },
-    {
-      "Event Name": "Eastside Auto Spa Season Opener",
-      "Date": "2026-04-25",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "11117 Kenwood Rd, Cincinnati, OH 45242",
-      "Address": "11117 Kenwood Rd, Cincinnati, OH 45242",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Cars &amp; Courage",
-      "Date": "2026-04-25",
-      "Start Time": "10:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "6375 Harrison Ave, Cincinnati, OH 45247",
-      "Address": "6375 Harrison Ave, Cincinnati, OH 45247",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Cars & Coffee at The Haven",
-      "Date": "2026-04-25",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/alexandria-cars-coffee/events/313478807/"
-    },
-    {
-      "Event Name": "Cars and Computers",
-      "Date": "2026-04-25",
-      "Start Time": "11:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "11400 Bluegrass Parkway, Louisville, KY",
-      "Address": "11400 Bluegrass Parkway, Louisville, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cars-and-computers/927334136322326/"
-    },
-    {
-      "Event Name": "Jaguar Jubilee Car Show-All Makes, Models, Years",
-      "Date": "2026-04-25",
-      "Start Time": "12:00 PM",
-      "End Time": "4:00 PM",
-      "Location": "1901 Selma Rd, Springfield, OH",
-      "Address": "1901 Selma Rd, Springfield, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/jaguar-jubilee-car-show-all-ma/1349238980294415/"
-    },
     {
       "Event Name": "Kentucky Region Autocross 2026 Fun Event 1 @ Salem Speedway",
       "Date": "2026-04-26",
@@ -1143,18 +1011,6 @@
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
     },
     {
-      "Event Name": "Southern Indiana Region Autocross #2 @ Mid-American Air Center",
-      "Date": "2026-06-07",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2009587-southern-indiana-region-autocross-2-mid-american-air-center"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-07",
       "Start Time": "8:00 AM",
@@ -1309,18 +1165,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "2026 SCCA Great Lakes RallyCross Divisional Challenge @ Appalachian Overland Triangle",
-      "Date": "2026-06-19",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "SCCA RoadRally + RallyCross",
-      "Event URL": "https://www.scca.com/events/2009834-2026-scca-great-lakes-rallycross-divisional-challenge-appalachian-overland-triangle"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
