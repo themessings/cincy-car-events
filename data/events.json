@@ -1,54 +1,18 @@
 {
-  "generated_at_iso": "2026-04-26T07:41:57.265293-04:00",
-  "count": 265,
+  "generated_at_iso": "2026-04-27T08:22:11.986687-04:00",
+  "count": 263,
   "events": [
     {
-      "Event Name": "Kentucky Region Autocross 2026 Fun Event 1 @ Salem Speedway",
-      "Date": "2026-04-26",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
+      "Event Name": "Mahjong Night @ Anderson Public Library - Temp Monday Meeting",
+      "Date": "2026-04-27",
+      "Start Time": "6:30 PM",
+      "End Time": "8:30 PM",
+      "Location": "7450 State Rd, Cincinnati, OH 45230",
+      "Address": "7450 State Rd, Cincinnati, OH 45230",
       "Closest City": "",
       "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2009976-kentucky-region-autocross-2026-fun-event-1-salem-speedway"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-04-26",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Gemeinschaft - Welcome 2026",
-      "Date": "2026-04-26",
-      "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "8584 Duke Blvd, Mason, OH 45040",
-      "Address": "8584 Duke Blvd, Mason, OH 45040",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "April horsepower show",
-      "Date": "2026-04-26",
-      "Start Time": "12:00 PM",
-      "End Time": "4:00 PM",
-      "Location": "1315 Main St Hamilton, OH 45013",
-      "Address": "1315 Main St Hamilton, OH 45013",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/april-horsepower-show/1588033929074212/"
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnati-mahjong-meetup-group/events/314458092/"
     },
     {
       "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
@@ -648,7 +612,7 @@
       "Closest City": "",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/zqtdhtyjchbcc/"
+      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/314502710/"
     },
     {
       "Event Name": "Rumble on the River Car Show 2026",
@@ -1165,6 +1129,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "2026 SCCA Great Lakes RallyCross Divisional Challenge @ Appalachian Overland Triangle",
+      "Date": "2026-06-19",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "SCCA RoadRally + RallyCross",
+      "Event URL": "https://www.scca.com/events/2009834-2026-scca-great-lakes-rallycross-divisional-challenge-appalachian-overland-triangle"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
