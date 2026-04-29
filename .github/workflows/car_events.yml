@@ -2,7 +2,7 @@ name: Cincinnati Car Events Collector
 
 on:
   schedule:
-    - cron: "0 11 * * *" # Daily 11:00 UTC (~6am ET standard)
+    - cron: "0 11 * * 0,2,5" # Sundays, Tuesdays, Fridays at 11:00 UTC (~6am ET standard)
   workflow_dispatch: {}
 
 permissions:
