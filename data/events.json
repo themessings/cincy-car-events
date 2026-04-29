@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-04-28T08:26:43.033885-04:00",
-  "count": 269,
+  "generated_at_iso": "2026-04-29T08:20:00.338376-04:00",
+  "count": 275,
   "events": [
     {
       "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
@@ -495,16 +495,16 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Ohio Valley Region SCCA Hoosier Super Tour - Great Lakes Race of Champions 2026 @ Mid-Ohio Sports Car Course",
+      "Event Name": "Motor Meet Up Cruise-In-Rising Sun, IN",
       "Date": "2026-05-15",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
+      "Start Time": "12:00 AM",
+      "End Time": "12:00 AM",
+      "Location": "Ohio County Tourism, Inc. PO Box 112 - 217 N. High Street Rising Sun IN 47040",
+      "Address": "Ohio County Tourism, Inc. PO Box 112 - 217 N. High Street Rising Sun IN 47040",
       "Closest City": "",
       "Callout": "",
-      "Source": "SCCA RoadRally + RallyCross",
-      "Event URL": "https://www.scca.com/events/2008931-ohio-valley-region-scca-hoosier-super-tour-great-lakes-race-of-champions-2026-mid-ohio-sports-car-course"
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://visitindiana.in.gov/event/motor-meet-up-cruise-in-rising-sun-in/29030/"
     },
     {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
@@ -627,6 +627,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Fairfield Cars and Coffee 2026 #2",
+      "Date": "2026-05-17",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "Thyssen Krupp Bilstein",
+      "Address": "Thyssen Krupp Bilstein",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/fairfield-cars-and-coffee-2026/1334502791824672/"
+    },
+    {
       "Event Name": "Valley High Car Show",
       "Date": "2026-05-17",
       "Start Time": "10:00 AM",
@@ -637,6 +649,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
+    },
+    {
+      "Event Name": "May motor madness",
+      "Date": "2026-05-17",
+      "Start Time": "6:00 PM",
+      "End Time": "10:00 PM",
+      "Location": "Scrub-A-Truck",
+      "Address": "Scrub-A-Truck",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/may-motor-madness/798315856368547/"
     },
     {
       "Event Name": "May General Meeting: Tour of SD1's Dry Creek Wastewater Treatment Plant",
@@ -709,6 +733,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+    },
+    {
+      "Event Name": "Unlikely Survivors @ Circuit | C&C Showcase",
+      "Date": "2026-05-23",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/unlikely-survivors-circuit-cc-/1793939434896213/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -891,6 +927,18 @@
       "Event URL": "https://facebook.com/events/s/dog-face-k9s-3rd-annual-car-sh/904114905896136/"
     },
     {
+      "Event Name": "Cars and Cops Vol2",
+      "Date": "2026-05-30",
+      "Start Time": "5:30 PM",
+      "End Time": "8:30 PM",
+      "Location": "Source 1 Automotive",
+      "Address": "Source 1 Automotive",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-and-cops-vol2/2129739137860320/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-31",
       "Start Time": "8:00 AM",
@@ -913,6 +961,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/4th-annual-20th-century-all-gm/2340968919664179/"
+    },
+    {
+      "Event Name": "No Limits 937™ Private Event featuring The Food Pitt & Ducati North America",
+      "Date": "2026-05-31",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "DNA Computers & Electronics Repair",
+      "Address": "DNA Computers & Electronics Repair",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/no-limits-937-private-event-fe/1916729278941344/"
     },
     {
       "Event Name": "No Limits 937™ Private Event featuring The Food Pitt",
@@ -1141,6 +1201,18 @@
       "Callout": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Tri-State Truck Takeover",
+      "Date": "2026-06-13",
+      "Start Time": "10:00 AM",
+      "End Time": "11:00 PM",
+      "Location": "2836 Harris Pike, Independence, KY",
+      "Address": "2836 Harris Pike, Independence, KY",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/tri-state-truck-takeover/1371892453975764/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1571,7 +1643,7 @@
       "Address": "",
       "Closest City": "",
       "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Source": "SCCA RoadRally + RallyCross; TrackRabbit + SCCA calendar discovery",
       "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
