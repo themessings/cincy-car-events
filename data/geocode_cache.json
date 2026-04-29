@@ -1390,5 +1390,13 @@
     "lat": "41.8927842",
     "lon": "-87.6904479"
   },
-  "Ohio County Tourism, Inc. PO Box 112 - 217 N. High Street Rising Sun IN 47040": null
+  "Ohio County Tourism, Inc. PO Box 112 - 217 N. High Street Rising Sun IN 47040": null,
+  "Powell, OH": {
+    "lat": "40.1578403",
+    "lon": "-83.0751869"
+  },
+  "Londonderry, OH": {
+    "lat": "40.1547909",
+    "lon": "-81.3003885"
+  }
 }

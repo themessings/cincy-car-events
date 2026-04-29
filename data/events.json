@@ -1,19 +1,7 @@
 {
-  "generated_at_iso": "2026-04-29T08:20:00.338376-04:00",
-  "count": 275,
+  "generated_at_iso": "2026-04-29T14:51:08.907953-04:00",
+  "count": 272,
   "events": [
-    {
-      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
-      "Date": "2026-04-29",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314197606/"
-    },
     {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-04-29",
@@ -111,6 +99,18 @@
       "Event URL": "https://facebook.com/events/s/inaugural-rocket-rumble/1391474752673528/"
     },
     {
+      "Event Name": "2nd Cars' n Condos Event of 2026",
+      "Date": "2026-05-02",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "4301 Home Road, Powell, OH",
+      "Address": "4301 Home Road, Powell, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2nd-cars-n-condos-event-of-202/2476810312739191/"
+    },
+    {
       "Event Name": "Lex Ky Cars and Coffee",
       "Date": "2026-05-02",
       "Start Time": "9:00 AM",
@@ -193,18 +193,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "2026 TOY BARN SPRING CAR SHOW",
-      "Date": "2026-05-03",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Toy Barn",
-      "Address": "Toy Barn",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2026-toy-barn-spring-car-show/977421228129317/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -421,18 +409,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2026-cruiz-in-at-the-hot-rod-m/1725861638373933/"
-    },
-    {
-      "Event Name": "Let’s Meet at - Factory 52 🌮 Gatherall",
-      "Date": "2026-05-09",
-      "Start Time": "11:30 AM",
-      "End Time": "1:30 PM",
-      "Location": "2750 Park Avenue, Norwood, OH",
-      "Address": "2750 Park Avenue, Norwood, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/lets-meet-at-the-park/events/313940467/"
     },
     {
       "Event Name": "2026 Jyan Waespe Memorial Car Show",
@@ -661,18 +637,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/may-motor-madness/798315856368547/"
-    },
-    {
-      "Event Name": "May General Meeting: Tour of SD1's Dry Creek Wastewater Treatment Plant",
-      "Date": "2026-05-18",
-      "Start Time": "6:30 PM",
-      "End Time": "8:00 PM",
-      "Location": "2999 Amsterdam Road, Villa Hills, KY",
-      "Address": "2999 Amsterdam Road, Villa Hills, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/314198829/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -1215,6 +1179,18 @@
       "Event URL": "https://facebook.com/events/s/tri-state-truck-takeover/1371892453975764/"
     },
     {
+      "Event Name": "Car & Bike Show",
+      "Date": "2026-06-13",
+      "Start Time": "11:00 AM",
+      "End Time": "4:00 PM",
+      "Location": "34568 -50, Londonderry, OH",
+      "Address": "34568 -50, Londonderry, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/car-bike-show/1464874131923686/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-14",
       "Start Time": "8:00 AM",
@@ -1643,7 +1619,7 @@
       "Address": "",
       "Closest City": "",
       "Callout": "",
-      "Source": "SCCA RoadRally + RallyCross; TrackRabbit + SCCA calendar discovery",
+      "Source": "TrackRabbit + SCCA calendar discovery",
       "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
@@ -1849,18 +1825,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
-    },
-    {
-      "Event Name": "A Tour of the Campbell County Log Cabin History & Farm Heritage Museum",
-      "Date": "2026-07-18",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "890 Clay Ridge Rd, Grants Lick, KY",
-      "Address": "890 Clay Ridge Rd, Grants Lick, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/314302280/"
     },
     {
       "Event Name": "Sunset Showoff 8 at Kuhnle Motorsports Park",
