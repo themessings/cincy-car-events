@@ -1398,5 +1398,13 @@
   "Londonderry, OH": {
     "lat": "40.1547909",
     "lon": "-81.3003885"
+  },
+  "Erlanger Lions Club 5996 Belair Dr.": {
+    "lat": "39.0186563",
+    "lon": "-84.6178388"
+  },
+  "Manassas, VA": {
+    "lat": "38.7509488",
+    "lon": "-77.4752667"
   }
 }

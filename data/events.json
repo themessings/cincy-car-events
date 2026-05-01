@@ -1,19 +1,7 @@
 {
-  "generated_at_iso": "2026-04-29T14:51:08.907953-04:00",
-  "count": 272,
+  "generated_at_iso": "2026-05-01T08:02:06.592161-04:00",
+  "count": 274,
   "events": [
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-04-29",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "Buckeye RoadRally (SCCA)",
       "Date": "2026-05-01",
@@ -279,6 +267,18 @@
       "Event URL": "https://corsarally.com/"
     },
     {
+      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
+      "Date": "2026-05-06",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314314657/"
+    },
+    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-05-06",
       "Start Time": "5:00 PM",
@@ -312,7 +312,7 @@
       "Closest City": "",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/314061191/"
+      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314061191/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -469,6 +469,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Meetup en West Sixth Covington Haus",
+      "Date": "2026-05-14",
+      "Start Time": "7:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "100 West Sixth Street, Covington, KY",
+      "Address": "100 West Sixth Street, Covington, KY",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnatisimos/events/313763429/"
     },
     {
       "Event Name": "Motor Meet Up Cruise-In-Rising Sun, IN",
@@ -660,7 +672,7 @@
       "Closest City": "",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/techlife-cincinnati/events/314502710/"
+      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502710/"
     },
     {
       "Event Name": "Rumble on the River Car Show 2026",
@@ -1849,6 +1861,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "READ DETAILS!!! Kenton County Sheriff's Office 2nd Annual Car Show",
+      "Date": "2026-07-19",
+      "Start Time": "9:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "Erlanger Lions Club 5996 Belair Dr.",
+      "Address": "Erlanger Lions Club 5996 Belair Dr.",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/read-details-kenton-county-she/1226997656251881/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
