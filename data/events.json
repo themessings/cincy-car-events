@@ -1,175 +1,7 @@
 {
-  "generated_at_iso": "2026-05-01T08:02:06.592161-04:00",
-  "count": 274,
+  "generated_at_iso": "2026-05-03T07:44:02.346087-04:00",
+  "count": 255,
   "events": [
-    {
-      "Event Name": "Buckeye RoadRally (SCCA)",
-      "Date": "2026-05-01",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-05-02",
-      "Start Time": "7:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Southern Indiana Car & Coffee",
-      "Date": "2026-05-02",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Storming Crab",
-      "Address": "Storming Crab",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
-    },
-    {
-      "Event Name": "Stance @ Circuit | C&C Showcase",
-      "Date": "2026-05-02",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/stance-circuit-cc-showcase/1513995883680509/"
-    },
-    {
-      "Event Name": "Cars & Coffee May Edition",
-      "Date": "2026-05-02",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Horsepower Farm Middletown",
-      "Address": "Horsepower Farm Middletown",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cars-coffee-may-edition/2179706992844033/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-05-02",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Inaugural Rocket Rumble",
-      "Date": "2026-05-02",
-      "Start Time": "9:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "Clermont Northeastern High School",
-      "Address": "Clermont Northeastern High School",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/inaugural-rocket-rumble/1391474752673528/"
-    },
-    {
-      "Event Name": "2nd Cars' n Condos Event of 2026",
-      "Date": "2026-05-02",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "4301 Home Road, Powell, OH",
-      "Address": "4301 Home Road, Powell, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2nd-cars-n-condos-event-of-202/2476810312739191/"
-    },
-    {
-      "Event Name": "Lex Ky Cars and Coffee",
-      "Date": "2026-05-02",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "2349 Richmond Rd",
-      "Address": "2349 Richmond Rd",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/lex-ky-cars-and-coffee/1732069384829271/"
-    },
-    {
-      "Event Name": "Pug Meet Up Play Date",
-      "Date": "2026-05-02",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "52 4590 Beech St, Norwood, OH 45212",
-      "Address": "52 4590 Beech St, Norwood, OH 45212",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314319246/"
-    },
-    {
-      "Event Name": "Cincinnati Bengals Myles Murphy Gears & Grills Auto Showcase",
-      "Date": "2026-05-02",
-      "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "St. Xavier High School",
-      "Address": "St. Xavier High School",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cincinnati-bengals-myles-murph/1271011908322189/"
-    },
-    {
-      "Event Name": "Kentucky Derby Meet Up at Gina's and Ellen's",
-      "Date": "2026-05-02",
-      "Start Time": "2:00 PM",
-      "End Time": "4:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/loki-lesbians/events/314082124/"
-    },
-    {
-      "Event Name": "Show us Your HORSEPOWER",
-      "Date": "2026-05-02",
-      "Start Time": "3:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "Scioto Downs Racetrack and Casino",
-      "Address": "Scioto Downs Racetrack and Casino",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/show-us-your-horsepower/4318075691839764/"
-    },
-    {
-      "Event Name": "O.S.C.C. &amp; High Grain Brewing 13th Annual Classic Car Show",
-      "Date": "2026-05-02",
-      "Start Time": "10:00 PM",
-      "End Time": "12:00 AM",
-      "Location": "9176 Winton Rd, Cincinnati OH 45231",
-      "Address": "9176 Winton Rd, Cincinnati OH 45231",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "7th Annual Spring Toy Barn Car Show",
       "Date": "2026-05-03",
@@ -267,18 +99,6 @@
       "Event URL": "https://corsarally.com/"
     },
     {
-      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
-      "Date": "2026-05-06",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314314657/"
-    },
-    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-05-06",
       "Start Time": "5:00 PM",
@@ -301,18 +121,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/1583067262770758/"
-    },
-    {
-      "Event Name": "CINPA Monthly Meeting",
-      "Date": "2026-05-06",
-      "Start Time": "6:30 PM",
-      "End Time": "8:30 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314061191/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -469,30 +277,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Meetup en West Sixth Covington Haus",
-      "Date": "2026-05-14",
-      "Start Time": "7:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "100 West Sixth Street, Covington, KY",
-      "Address": "100 West Sixth Street, Covington, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnatisimos/events/313763429/"
-    },
-    {
-      "Event Name": "Motor Meet Up Cruise-In-Rising Sun, IN",
-      "Date": "2026-05-15",
-      "Start Time": "12:00 AM",
-      "End Time": "12:00 AM",
-      "Location": "Ohio County Tourism, Inc. PO Box 112 - 217 N. High Street Rising Sun IN 47040",
-      "Address": "Ohio County Tourism, Inc. PO Box 112 - 217 N. High Street Rising Sun IN 47040",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://visitindiana.in.gov/event/motor-meet-up-cruise-in-rising-sun-in/29030/"
     },
     {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
@@ -661,18 +445,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Cincinnati Ruby Brigade - Monthly Meetup",
-      "Date": "2026-05-21",
-      "Start Time": "12:00 PM",
-      "End Time": "1:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502710/"
     },
     {
       "Event Name": "Rumble on the River Car Show 2026",
@@ -1249,18 +1021,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "2026 SCCA Great Lakes RallyCross Divisional Challenge @ Appalachian Overland Triangle",
-      "Date": "2026-06-19",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "SCCA RoadRally + RallyCross",
-      "Event URL": "https://www.scca.com/events/2009834-2026-scca-great-lakes-rallycross-divisional-challenge-appalachian-overland-triangle"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -3285,6 +3045,18 @@
       "End Time": "11:00 AM",
       "Location": "Indianapolis, IN",
       "Address": "Indianapolis, IN",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Buckeye RoadRally (SCCA)",
+      "Date": "2027-05-01",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Dayton, OH",
+      "Address": "Dayton, OH",
       "Closest City": "",
       "Callout": "",
       "Source": "sheet",
