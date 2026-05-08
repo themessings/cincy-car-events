@@ -1,67 +1,7 @@
 {
-  "generated_at_iso": "2026-05-05T08:03:59.918911-04:00",
-  "count": 253,
+  "generated_at_iso": "2026-05-08T08:15:59.544437-04:00",
+  "count": 250,
   "events": [
-    {
-      "Event Name": "The 72nd Tulpenrallye",
-      "Date": "2026-05-03",
-      "Start Time": "3:00 AM",
-      "End Time": "2:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Regional rallies",
-      "Event URL": "https://bringatrailer.com/event/the-72nd-tulpenrallye/"
-    },
-    {
-      "Event Name": "Corsa America Spring Rally – Day 2",
-      "Date": "2026-05-05",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Asheville, NC",
-      "Address": "Asheville, NC",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
-      "Event Name": "Corsa America Spring Rally – Day 3",
-      "Date": "2026-05-06",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Blue Ridge, GA",
-      "Address": "Blue Ridge, GA",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-05-06",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Endless Car Culture, Cincinnati / Meet 4.4",
-      "Date": "2026-05-06",
-      "Start Time": "6:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "Quaker Steak and Lube Colerain, OH",
-      "Address": "Quaker Steak and Lube Colerain, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/endless-car-culture-cincinnati/1583067262770758/"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-09",
@@ -205,18 +145,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Rally the Globe—Vintage Shamrock 2026 – Ireland",
-      "Date": "2026-05-11",
-      "Start Time": "3:00 AM",
-      "End Time": "2:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Regional rallies",
-      "Event URL": "https://bringatrailer.com/event/rally-the-globe-vintage-shamrock-2026-ireland/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -793,6 +721,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
+    },
+    {
+      "Event Name": "Southern Indiana Region Autocross #2 @ Mid-American Air Center",
+      "Date": "2026-06-07",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2009587-southern-indiana-region-autocross-2-mid-american-air-center"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -3033,6 +2973,30 @@
       "End Time": "11:00 AM",
       "Location": "Smoky Mountains, TN (Launch)",
       "Address": "Smoky Mountains, TN (Launch)",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://corsarally.com/"
+    },
+    {
+      "Event Name": "Corsa America Spring Rally – Day 2",
+      "Date": "2027-05-05",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Asheville, NC",
+      "Address": "Asheville, NC",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://corsarally.com/"
+    },
+    {
+      "Event Name": "Corsa America Spring Rally – Day 3",
+      "Date": "2027-05-06",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Blue Ridge, GA",
+      "Address": "Blue Ridge, GA",
       "Closest City": "",
       "Callout": "",
       "Source": "sheet",
