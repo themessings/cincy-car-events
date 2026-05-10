@@ -1167,7 +1167,7 @@
     "events": []
   },
   "https://rallynorthamerica.com/drives-events/": {
-    "fetched_at_iso": "2026-05-08T08:10:10.343464-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": []
   },
   "https://www.facebook.com/groups/ncrallycross/posts/24327648043598609/": {
@@ -1295,19 +1295,19 @@
     "events": []
   },
   "https://www.dynastyautoevents.com/": {
-    "fetched_at_iso": "2026-05-08T08:10:10.343464-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": []
   },
   "https://www.therechargerally.com/": {
-    "fetched_at_iso": "2026-05-08T08:10:10.343464-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-tickets": {
-    "fetched_at_iso": "2026-05-08T08:10:10.343464-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-dash-2025": {
-    "fetched_at_iso": "2026-05-08T08:10:10.343464-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": [
       {
         "title": "Dynasty Dash 2025",
@@ -1319,7 +1319,7 @@
     ]
   },
   "https://www.dynastyautoevents.com/event-details/scarecrow-scram-1": {
-    "fetched_at_iso": "2026-05-05T08:03:18.254788-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": [
       {
         "title": "Scarecrow Scram",
@@ -1343,11 +1343,11 @@
     ]
   },
   "https://rallynorthamerica.com/rally-events/": {
-    "fetched_at_iso": "2026-05-05T08:03:18.254788-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": []
   },
   "https://gravityrally.com/pages/2026-cancer-awareness-rally": {
-    "fetched_at_iso": "2026-05-08T08:10:10.343464-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-the-cincinnati-auto-expo": {
@@ -2396,7 +2396,7 @@
     "events": []
   },
   "https://www.therechargerally.com/rechargerally8": {
-    "fetched_at_iso": "2026-05-08T08:10:10.343464-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": []
   },
   "https://www.facebook.com/events/1185415010435301": {
@@ -2890,7 +2890,7 @@
     "events": []
   },
   "https://cincyscca.com/": {
-    "fetched_at_iso": "2026-05-08T08:15:39.736388-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:49.830341-04:00",
     "events": []
   },
   "https://www.facebook.com/events/newport-antique-car-hill-climb/newport-antique-auto-hill-climb-car-show/1179371070678213/": {
@@ -3284,11 +3284,11 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/southern-indiana": {
-    "fetched_at_iso": "2026-05-01T08:01:42.121923-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/ohio-valley": {
-    "fetched_at_iso": "2026-05-01T08:01:42.121923-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?loc=Louisville&country=US&lat=38.20&lng=-85.74&radius=180": {
@@ -3296,15 +3296,15 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/indianapolis": {
-    "fetched_at_iso": "2026-05-01T08:01:42.121923-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/central-kentucky": {
-    "fetched_at_iso": "2026-04-29T14:50:48.168959-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?country=US&radius=180&lat=39.25&lng=-84.38&loc=Cincinnati&page=2": {
-    "fetched_at_iso": "2026-05-01T08:01:42.121923-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/northwestern-ohio": {
@@ -3312,7 +3312,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/western-ohio": {
-    "fetched_at_iso": "2026-05-01T08:01:42.121923-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?country=US&radius=180&lat=39.78036&lng=-86.04276&loc=Indianapolis&page=4": {
@@ -3320,7 +3320,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/venues/mid-ohio-sports-car-course-lexington-oh": {
-    "fetched_at_iso": "2026-04-29T14:50:48.168959-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.scca.com/events/2008981-ohio-valley-sprints-time-trial-mid-ohio-sports-car-course": {
@@ -3376,7 +3376,7 @@
     "events": []
   },
   "https://www.scca.com/pages/autocross": {
-    "fetched_at_iso": "2026-05-08T08:15:52.267494-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:49.830341-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/open-road-supercar-driving-tours/?srsltid=AfmBOookY65e0XbclItkW3HMIVjdPjRY5z1KG25M2wWRJM2BwZwQDemP": {
@@ -4778,7 +4778,7 @@
     ]
   },
   "https://cincyscca.motorsportreg.com/": {
-    "fetched_at_iso": "2026-05-01T08:01:42.121923-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/cincinnati": {
@@ -6744,7 +6744,7 @@
     "events": []
   },
   "https://www.therechargerally.com/app-landing-page": {
-    "fetched_at_iso": "2026-05-08T08:10:10.343464-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:51.446799-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--events--this-weekend/cincinnati-ohio/?page=4": {
@@ -7871,7 +7871,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/neohio": {
-    "fetched_at_iso": "2026-05-01T08:01:42.121923-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
     "events": []
   },
   "https://www.scca.com/events/page/6?categories=rally%2Csolo%2Cstarting-line%2Cprosolo%2Cautocross-5%2Ctrackdays%2Cregional-track-event%2Ctrackdays-2%2Ctrack-events%2Ctrack-night&within=100": {
@@ -7996,15 +7996,15 @@
     ]
   },
   "https://en.wikipedia.org/wiki/Cincinnati": {
-    "fetched_at_iso": "2026-05-08T08:08:49.446770-04:00",
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
     "events": []
   },
   "https://www.visitcincy.com/": {
-    "fetched_at_iso": "2026-05-08T08:08:49.446770-04:00",
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
     "events": []
   },
   "https://www.cincinnati.com/": {
-    "fetched_at_iso": "2026-05-08T08:08:49.446770-04:00",
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
     "events": []
   },
   "https://www.reddit.com/r/cincinnati/": {
@@ -8024,11 +8024,11 @@
     ]
   },
   "https://www.visitcincy.com/things-to-do/": {
-    "fetched_at_iso": "2026-05-08T08:08:49.446770-04:00",
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
     "events": []
   },
   "https://www.cincinnati-oh.gov/cityofcincinnati/": {
-    "fetched_at_iso": "2026-05-08T08:08:49.446770-04:00",
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
     "events": []
   },
   "https://www.cincinnatiexperience.com/": {
@@ -8036,15 +8036,15 @@
     "events": []
   },
   "https://www.cincinnati-oh.gov/cityofcincinnati/visitors/": {
-    "fetched_at_iso": "2026-05-05T08:01:49.262460-04:00",
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
     "events": []
   },
   "https://rallyrd.com/": {
-    "fetched_at_iso": "2026-05-03T07:42:22.002068-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
     "events": []
   },
   "https://www.merriam-webster.com/dictionary/rally": {
-    "fetched_at_iso": "2026-05-08T08:09:07.516232-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
     "events": []
   },
   "https://rally.co/?srsltid=AfmBOorKhPaHLGSsCd3W7HbyqARnPE1xhko8UQPkh4-7FbxOl9_uHgLE": {
@@ -8056,11 +8056,11 @@
     "events": []
   },
   "https://en.wikipedia.org/wiki/Rallying": {
-    "fetched_at_iso": "2026-05-08T08:09:07.516232-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
     "events": []
   },
   "https://www.youtube.com/@wrc": {
-    "fetched_at_iso": "2026-05-08T08:09:07.516232-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
     "events": []
   },
   "https://www.rally.tv/": {
@@ -8068,7 +8068,7 @@
     "events": []
   },
   "https://rallyinnovation.com/": {
-    "fetched_at_iso": "2026-05-08T08:09:07.516232-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
     "events": []
   },
   "https://www.reddit.com/r/rally/": {
@@ -8076,7 +8076,7 @@
     "events": []
   },
   "https://en.wikipedia.org/wiki/Road": {
-    "fetched_at_iso": "2026-05-05T08:02:38.642042-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:16.697430-04:00",
     "events": [
       {
         "title": "Road - Wikipedia",
@@ -8088,7 +8088,7 @@
     ]
   },
   "https://www.reddit.com/r/cincinnati/comments/1pc4wp9/how_are_the_roads/": {
-    "fetched_at_iso": "2026-05-05T08:02:38.642042-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:16.697430-04:00",
     "events": []
   },
   "https://dictionary.cambridge.org/us/dictionary/english/road": {
@@ -8096,43 +8096,43 @@
     "events": []
   },
   "https://www.youtube.com/watch?v=x3SW8353EeI": {
-    "fetched_at_iso": "2026-05-05T08:02:38.642042-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:16.697430-04:00",
     "events": []
   },
   "https://www.cincinnati-oh.gov/public-services/about-public-services/traffic-road-operations/": {
-    "fetched_at_iso": "2026-05-05T08:02:38.642042-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:16.697430-04:00",
     "events": []
   },
   "https://www.merriam-webster.com/dictionary/road": {
-    "fetched_at_iso": "2026-05-05T08:02:38.642042-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:16.697430-04:00",
     "events": []
   },
   "https://www.dictionary.com/browse/road": {
-    "fetched_at_iso": "2026-05-03T07:42:43.141095-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:16.697430-04:00",
     "events": []
   },
   "https://www.britannica.com/technology/road": {
-    "fetched_at_iso": "2026-05-05T08:02:38.642042-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:16.697430-04:00",
     "events": []
   },
   "https://www.scca.com/pages/what-is-autocross": {
-    "fetched_at_iso": "2026-05-08T08:15:39.736388-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:49.830341-04:00",
     "events": []
   },
   "https://cincyscca.com/autocross/": {
-    "fetched_at_iso": "2026-05-08T08:15:39.736388-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:49.830341-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Autocross": {
-    "fetched_at_iso": "2026-05-08T08:15:39.736388-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:49.830341-04:00",
     "events": []
   },
   "https://www.youtube.com/watch?v=Af2zJAOAqWQ": {
-    "fetched_at_iso": "2026-05-08T08:15:39.736388-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:49.830341-04:00",
     "events": []
   },
   "https://www.scca.com/pages/i-want-to-autocross": {
-    "fetched_at_iso": "2026-05-08T08:15:39.736388-04:00",
+    "fetched_at_iso": "2026-05-10T08:02:49.830341-04:00",
     "events": []
   },
   "https://www.pca.org/autox": {
@@ -8148,7 +8148,7 @@
     "events": []
   },
   "https://www.wlwt.com/": {
-    "fetched_at_iso": "2026-05-05T08:01:49.262460-04:00",
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/?srsltid=AfmBOor5z-ijchYmPTu8fl2xuJSBAFpQg6EhGKgnAhHbpIS_3RGMnECP": {
@@ -8168,7 +8168,7 @@
     "events": []
   },
   "https://en.wikipedia.org/wiki/Southern_United_States": {
-    "fetched_at_iso": "2026-05-05T08:03:02.612117-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
     "events": [
       {
         "title": "Southern United States - Wikipedia",
@@ -8180,19 +8180,19 @@
     ]
   },
   "https://www.subr.edu/": {
-    "fetched_at_iso": "2026-05-05T08:03:02.612117-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
     "events": []
   },
   "https://www.southernwv.edu/": {
-    "fetched_at_iso": "2026-05-05T08:03:02.612117-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
     "events": []
   },
   "https://www.southernct.edu/": {
-    "fetched_at_iso": "2026-05-05T08:03:02.612117-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
     "events": []
   },
   "https://www.reddit.com/r/AskAnAmerican/comments/ero1hq/do_you_consider_cincinnati_a_southern_city/": {
-    "fetched_at_iso": "2026-05-05T08:03:02.612117-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
     "events": []
   },
   "https://dictionary.cambridge.org/pronunciation/english/southern": {
@@ -8200,12 +8200,20 @@
     "events": []
   },
   "https://www.espn.com/mens-college-basketball/team/_/id/2582/southern-jaguars": {
-    "fetched_at_iso": "2026-05-05T08:03:02.612117-04:00",
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
     "events": []
   },
   "https://www.gosoin.com/": {
-    "fetched_at_iso": "2026-05-05T08:03:02.612117-04:00",
-    "events": []
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
+    "events": [
+      {
+        "title": "Southern Indiana Things to Do, Hotels & Restaurants",
+        "start_iso": "2026-05-10T00:00:00-04:00",
+        "end_iso": "2026-05-10T02:00:00-04:00",
+        "location": "Louisville",
+        "url": "https://www.gosoin.com/"
+      }
+    ]
   },
   "https://cincyscca.com/autocross/getting-started/": {
     "fetched_at_iso": "2026-05-08T08:15:39.736388-04:00",
@@ -8252,19 +8260,19 @@
     "events": []
   },
   "https://www.carfax.com/Used-Cars-in-Cincinnati-OH_c12309": {
-    "fetched_at_iso": "2026-05-08T08:10:22.646767-04:00",
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
     "events": []
   },
   "https://www.cars.com/": {
-    "fetched_at_iso": "2026-05-08T08:10:22.646767-04:00",
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
     "events": []
   },
   "https://www.caranddriver.com/": {
-    "fetched_at_iso": "2026-05-08T08:10:22.646767-04:00",
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
     "events": []
   },
   "https://www.cars.com/shopping/cincinnati-oh/": {
-    "fetched_at_iso": "2026-05-08T08:10:22.646767-04:00",
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
     "events": []
   },
   "https://www.cincyautomall.com/": {
@@ -8276,15 +8284,79 @@
     "events": []
   },
   "https://cars.usnews.com/cars-trucks/browse": {
-    "fetched_at_iso": "2026-05-08T08:10:22.646767-04:00",
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
     "events": []
   },
   "https://www.kbb.com/car-finder/": {
-    "fetched_at_iso": "2026-05-08T08:10:22.646767-04:00",
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
     "events": []
   },
   "https://timetrials.scca.com/events/page/2": {
     "fetched_at_iso": "2026-05-08T08:15:52.267494-04:00",
+    "events": []
+  },
+  "https://downtowncincinnati.com/": {
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
+    "events": []
+  },
+  "https://realestate.usnews.com/places/ohio/cincinnati": {
+    "fetched_at_iso": "2026-05-10T07:53:57.143332-04:00",
+    "events": []
+  },
+  "https://www.rallyhealth.com/": {
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
+    "events": []
+  },
+  "https://www.rallyhouse.com/?srsltid=AfmBOooDLHvvdSBlyMr8F36oIm8G7uOX2Ogq5GS1XKpeSsSOt-tZpubi": {
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
+    "events": []
+  },
+  "https://rally.co/?srsltid=AfmBOopd0JSmNqEQpqxWj6D9CgvuLSyvuOKKJ5zfe0OcjZGYSfCW1jPj": {
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
+    "events": []
+  },
+  "https://wearerally.com/": {
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
+    "events": []
+  },
+  "https://www.broadcom.com/products/software/value-stream-management/rally": {
+    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
+    "events": []
+  },
+  "https://www.youtube.com/shorts/50RLZ9-7l9E": {
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
+    "events": []
+  },
+  "https://en.wikipedia.org/wiki/Southern_American_English": {
+    "fetched_at_iso": "2026-05-10T07:56:36.337121-04:00",
+    "events": [
+      {
+        "title": "Southern American English - Wikipedia",
+        "start_iso": "2007-07-03T00:00:00-04:00",
+        "end_iso": "2007-07-03T02:00:00-04:00",
+        "location": "Louisville",
+        "url": "https://en.wikipedia.org/wiki/Southern_American_English"
+      }
+    ]
+  },
+  "https://www.cincyautos.com/": {
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
+    "events": []
+  },
+  "https://www.carmax.com/": {
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
+    "events": []
+  },
+  "https://www.autotrader.com/cars-for-sale/new-cars/cincinnati-oh": {
+    "fetched_at_iso": "2026-05-10T07:57:05.691252-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/events/buckeye-bmw-cca-mid-ohio-hpde-2026-sports-car-course-driving-events-090599": {
+    "fetched_at_iso": "2026-05-10T08:02:21.937792-04:00",
+    "events": []
+  },
+  "https://drivenasa.com/autocross/": {
+    "fetched_at_iso": "2026-05-10T08:02:49.830341-04:00",
     "events": []
   }
 }

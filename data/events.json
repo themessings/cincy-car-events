@@ -1,139 +1,7 @@
 {
-  "generated_at_iso": "2026-05-08T08:15:59.544437-04:00",
-  "count": 250,
+  "generated_at_iso": "2026-05-10T08:03:00.038969-04:00",
+  "count": 236,
   "events": [
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-05-09",
-      "Start Time": "7:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Southern Indiana Car & Coffee",
-      "Date": "2026-05-09",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Storming Crab",
-      "Address": "Storming Crab",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
-    },
-    {
-      "Event Name": "2026 Meet 2",
-      "Date": "2026-05-09",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Austin Landing Blvd, Miamisburg, OH 45342",
-      "Address": "Austin Landing Blvd, Miamisburg, OH 45342",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2026-meet-2/1514989883341211/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-05-09",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "OVR PCA Autocross - May 2026",
-      "Date": "2026-05-09",
-      "Start Time": "8:30 AM",
-      "End Time": "3:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "OVR PCA Social Events (ICS)",
-      "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Hocking Hills Cars and Coffee Season Opener",
-      "Date": "2026-05-09",
-      "Start Time": "9:00 AM",
-      "End Time": "11:30 AM",
-      "Location": "Hungry Buffalo Restaurant",
-      "Address": "Hungry Buffalo Restaurant",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/hocking-hills-cars-and-coffee-/1964955747430781/"
-    },
-    {
-      "Event Name": "Montgomery Exotics and Espresso",
-      "Date": "2026-05-09",
-      "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://www.montgomeryohio.gov/event/new-exotics-espresso-car-show/"
-    },
-    {
-      "Event Name": "2026 Cruiz-In at the Hot Rod MotorTel",
-      "Date": "2026-05-09",
-      "Start Time": "11:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "587 Carson Bridge Rd, Morgantown, KY 42261-8238",
-      "Address": "587 Carson Bridge Rd, Morgantown, KY 42261-8238",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2026-cruiz-in-at-the-hot-rod-m/1725861638373933/"
-    },
-    {
-      "Event Name": "2026 Jyan Waespe Memorial Car Show",
-      "Date": "2026-05-09",
-      "Start Time": "12:00 PM",
-      "End Time": "5:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "OVR PCA Social Events (ICS)",
-      "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Jyan Memorial Car and Bike Show",
-      "Date": "2026-05-09",
-      "Start Time": "12:00 PM",
-      "End Time": "5:00 PM",
-      "Location": "5460 Courseview Dr, Mason, OH 45040",
-      "Address": "5460 Courseview Dr, Mason, OH 45040",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "1st Annual Marigold Festival Cruise-In",
-      "Date": "2026-05-09",
-      "Start Time": "1:00 PM",
-      "End Time": "5:00 PM",
-      "Location": "8625 Brandt Pike, Eichelberger Ampitheater @ The Heights, Huber Heights, OH, , Ohio 45424",
-      "Address": "8625 Brandt Pike, Eichelberger Ampitheater @ The Heights, Huber Heights, OH, , Ohio 45424",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/1st-annual-marigold-festival-c/1408370107593720/"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-05-10",
@@ -723,18 +591,6 @@
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
     },
     {
-      "Event Name": "Southern Indiana Region Autocross #2 @ Mid-American Air Center",
-      "Date": "2026-06-07",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2009587-southern-indiana-region-autocross-2-mid-american-air-center"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-07",
       "Start Time": "8:00 AM",
@@ -1275,18 +1131,6 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
-      "Date": "2026-07-10",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-11",
       "Start Time": "7:00 AM",
@@ -1549,18 +1393,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "—"
-    },
-    {
-      "Event Name": "Kentucky, Track Day/Time Trial @ NCM Motorsports Park",
-      "Date": "2026-07-25",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
