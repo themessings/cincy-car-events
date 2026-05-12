@@ -1,19 +1,7 @@
 {
-  "generated_at_iso": "2026-05-10T08:03:00.038969-04:00",
-  "count": 236,
+  "generated_at_iso": "2026-05-12T09:07:43.802822-04:00",
+  "count": 239,
   "events": [
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-05-10",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-05-13",
@@ -591,6 +579,18 @@
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
     },
     {
+      "Event Name": "Southern Indiana Region Autocross #2 @ Mid-American Air Center",
+      "Date": "2026-06-07",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2009587-southern-indiana-region-autocross-2-mid-american-air-center"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-07",
       "Start Time": "8:00 AM",
@@ -1131,6 +1131,18 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
+      "Date": "2026-07-10",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-11",
       "Start Time": "7:00 AM",
@@ -1335,6 +1347,18 @@
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
     },
     {
+      "Event Name": "Dynasty Rally 2026",
+      "Date": "2026-07-18",
+      "Start Time": "9:00 AM",
+      "End Time": "6:00 PM",
+      "Location": "Location will be sent to ticket holders.",
+      "Address": "Location will be sent to ticket holders.",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
+    },
+    {
       "Event Name": "Sunset Showoff 8 at Kuhnle Motorsports Park",
       "Date": "2026-07-18",
       "Start Time": "3:00 PM",
@@ -1393,6 +1417,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "—"
+    },
+    {
+      "Event Name": "Kentucky, Track Day/Time Trial @ NCM Motorsports Park",
+      "Date": "2026-07-25",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
