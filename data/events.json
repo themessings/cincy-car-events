@@ -1,19 +1,7 @@
 {
-  "generated_at_iso": "2026-05-12T09:07:43.802822-04:00",
+  "generated_at_iso": "2026-05-15T08:56:09.692502-04:00",
   "count": 239,
   "events": [
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-05-13",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
       "Date": "2026-05-15",
@@ -109,6 +97,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/down-bad-drift-spring-kickoff/1606947547280408/"
+    },
+    {
+      "Event Name": "Delaware BaT Meet-Up—May 16 with McQueen Classics!",
+      "Date": "2026-05-16",
+      "Start Time": "12:00 PM",
+      "End Time": "4:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Regional rallies",
+      "Event URL": "https://bringatrailer.com/event/delaware-bat-meet-up-may-16-with-mcqueen-classics/"
     },
     {
       "Event Name": "2026 Annual Krieger Ford Car & Truck Extravaganza",
@@ -577,18 +577,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
-    },
-    {
-      "Event Name": "Southern Indiana Region Autocross #2 @ Mid-American Air Center",
-      "Date": "2026-06-07",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2009587-southern-indiana-region-autocross-2-mid-american-air-center"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1741,6 +1729,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Southern Indiana Region Autocross #5 @ Mid-American Air Center",
+      "Date": "2026-08-16",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2009593-southern-indiana-region-autocross-5-mid-american-air-center"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
