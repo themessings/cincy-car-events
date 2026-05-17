@@ -1,115 +1,7 @@
 {
-  "generated_at_iso": "2026-05-15T08:56:09.692502-04:00",
-  "count": 239,
+  "generated_at_iso": "2026-05-17T08:02:12.277504-04:00",
+  "count": 228,
   "events": [
-    {
-      "Event Name": "Mid-Ohio RoadRally (SCCA)",
-      "Date": "2026-05-15",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Lexington, OH",
-      "Address": "Lexington, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-05-16",
-      "Start Time": "7:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
-      "Date": "2026-05-16",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "7160 Taylor Street Liberty Township, OH 45069",
-      "Address": "7160 Taylor Street Liberty Township, OH 45069",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/810287732100203/"
-    },
-    {
-      "Event Name": "Southern Indiana Car & Coffee",
-      "Date": "2026-05-16",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Storming Crab",
-      "Address": "Storming Crab",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-05-16",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Indianapolis Cars and Coffee",
-      "Date": "2026-05-16",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "11000 Stockdale Street, Fishers, IN",
-      "Address": "11000 Stockdale Street, Fishers, IN",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Zakira;s Garage 2026 Spring Open House",
-      "Date": "2026-05-16",
-      "Start Time": "9:30 AM",
-      "End Time": "12:30 PM",
-      "Location": "4480 Lake Forest Dr, Ste 314, Cincinnati, OH, , Ohio 45242",
-      "Address": "4480 Lake Forest Dr, Ste 314, Cincinnati, OH, , Ohio 45242",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/zakiras-garage-2026-spring-ope/1122944979897103/"
-    },
-    {
-      "Event Name": "Down Bad Drift Spring Kickoff!",
-      "Date": "2026-05-16",
-      "Start Time": "10:00 AM",
-      "End Time": "6:30 PM",
-      "Location": "Salem Speedway",
-      "Address": "Salem Speedway",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/down-bad-drift-spring-kickoff/1606947547280408/"
-    },
-    {
-      "Event Name": "Delaware BaT Meet-Up—May 16 with McQueen Classics!",
-      "Date": "2026-05-16",
-      "Start Time": "12:00 PM",
-      "End Time": "4:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Regional rallies",
-      "Event URL": "https://bringatrailer.com/event/delaware-bat-meet-up-may-16-with-mcqueen-classics/"
-    },
     {
       "Event Name": "2026 Annual Krieger Ford Car & Truck Extravaganza",
       "Date": "2026-05-17",
@@ -1119,18 +1011,6 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
-      "Date": "2026-07-10",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-11",
       "Start Time": "7:00 AM",
@@ -1405,18 +1285,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "—"
-    },
-    {
-      "Event Name": "Kentucky, Track Day/Time Trial @ NCM Motorsports Park",
-      "Date": "2026-07-25",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1729,18 +1597,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Southern Indiana Region Autocross #5 @ Mid-American Air Center",
-      "Date": "2026-08-16",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2009593-southern-indiana-region-autocross-5-mid-american-air-center"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2869,6 +2725,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://corsarally.com/"
+    },
+    {
+      "Event Name": "Mid-Ohio RoadRally (SCCA)",
+      "Date": "2027-05-15",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Lexington, OH",
+      "Address": "Lexington, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.scca.com/pages/road-rally"
     }
   ]
 }

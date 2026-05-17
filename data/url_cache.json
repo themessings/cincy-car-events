@@ -84,7 +84,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=29": {
@@ -92,7 +92,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.eventbrite.com/b/oh--colerain/auto-boat-and-air/": {
@@ -1066,7 +1066,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/2026-ara-schedule": {
-    "fetched_at_iso": "2026-05-12T09:06:31.358231-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
     "events": []
   },
   "http://www.fca-ohio.org/": {
@@ -1167,7 +1167,7 @@
     "events": []
   },
   "https://rallynorthamerica.com/drives-events/": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": []
   },
   "https://www.facebook.com/groups/ncrallycross/posts/24327648043598609/": {
@@ -1179,7 +1179,7 @@
     "events": []
   },
   "https://www.scca.com/pages/road-rally-events": {
-    "fetched_at_iso": "2026-05-08T08:09:28.020710-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/": {
@@ -1203,7 +1203,7 @@
     "events": []
   },
   "https://www.scca.com/events/2008957-ohio-valley-summer-sprints-regional-road-race-2026-mid-ohio-sports-car-course": {
-    "fetched_at_iso": "2026-05-08T08:09:28.020710-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
     "events": [
       {
         "title": "Ohio Valley Summer Sprints Regional Road Race 2026 @ Mid-Ohio Sports Car Course",
@@ -1219,7 +1219,7 @@
     "events": []
   },
   "https://www.scca.com/events/2009084-ohio-region-2026-winter-roadrally-dibellas-subs-solon": {
-    "fetched_at_iso": "2026-05-08T08:09:28.020710-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
     "events": [
       {
         "title": "Ohio Region 2026 Winter RoadRally @ DiBella’s Subs - Solon",
@@ -1235,7 +1235,7 @@
     "events": []
   },
   "https://cincyscca.com/road-rally/": {
-    "fetched_at_iso": "2026-05-08T08:09:28.020710-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
     "events": []
   },
   "https://www.scca.com/events?categories=rally%2Cstarting-line%2Csolo%2Cprosolo%2Cautocross-5%2Crallycross%2Crallycross-2%2Csl-rallycross%2Csl-track%2Ctrack-night%2Ctrackdays%2Ctrackdays-2%2Ctimetrials-2%2Ctarga%2Ctimetrials%2Cclub%2Cclub-2%2Cclubracing&within=25": {
@@ -1263,15 +1263,15 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/sofr": {
-    "fetched_at_iso": "2026-05-12T09:06:31.358231-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/american-rally-association-announces-2026-schedule": {
-    "fetched_at_iso": "2026-05-12T09:06:31.358231-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/live": {
-    "fetched_at_iso": "2026-05-12T09:06:31.358231-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/copy-of-2025-championship-standings": {
@@ -1295,15 +1295,15 @@
     "events": []
   },
   "https://www.dynastyautoevents.com/": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": []
   },
   "https://www.therechargerally.com/": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-tickets": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-dash-2025": {
@@ -1347,11 +1347,11 @@
     "events": []
   },
   "https://gravityrally.com/pages/2026-cancer-awareness-rally": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-the-cincinnati-auto-expo": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": [
       {
         "title": "Dynasty @ The Cincinnati Auto Expo",
@@ -2175,7 +2175,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=2": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.eventbrite.com/o/aces-bar-grill-107935116761": {
@@ -2388,15 +2388,15 @@
     "events": []
   },
   "https://www.scca.com/pages/road-rally": {
-    "fetched_at_iso": "2026-03-08T21:41:56.378554-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/ara-s-summer-starts-with-southern-ohio-forest-rally": {
-    "fetched_at_iso": "2026-05-12T09:06:31.358231-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
     "events": []
   },
   "https://www.therechargerally.com/rechargerally8": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": []
   },
   "https://www.facebook.com/events/1185415010435301": {
@@ -2890,7 +2890,7 @@
     "events": []
   },
   "https://cincyscca.com/": {
-    "fetched_at_iso": "2026-05-15T08:55:52.920839-04:00",
+    "fetched_at_iso": "2026-05-17T08:02:02.589572-04:00",
     "events": []
   },
   "https://www.facebook.com/events/newport-antique-car-hill-climb/newport-antique-auto-hill-climb-car-show/1179371070678213/": {
@@ -2898,7 +2898,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=3": {
-    "fetched_at_iso": "2026-04-24T07:57:25.959521-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:43.117151-04:00",
     "events": []
   },
   "https://www.rennsportdragonrally.com/event-details": {
@@ -2914,7 +2914,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--huber-heights/food-and-car-show/": {
@@ -3268,11 +3268,11 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-shows/": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/classic-car-show/": {
-    "fetched_at_iso": "2026-05-01T08:01:35.001094-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--lewis-center/car-show-columbus/": {
@@ -3376,7 +3376,7 @@
     "events": []
   },
   "https://www.scca.com/pages/autocross": {
-    "fetched_at_iso": "2026-05-15T08:56:03.455939-04:00",
+    "fetched_at_iso": "2026-05-17T08:02:02.589572-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/open-road-supercar-driving-tours/?srsltid=AfmBOookY65e0XbclItkW3HMIVjdPjRY5z1KG25M2wWRJM2BwZwQDemP": {
@@ -3697,7 +3697,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/competitors": {
-    "fetched_at_iso": "2026-04-07T07:56:03.364720-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/classic-car-show/": {
@@ -4746,7 +4746,7 @@
     "events": []
   },
   "https://www.scca.com/events/2009582-southern-indiana-road-rally-1-more-scrambled-legs-hardee-s-evansville": {
-    "fetched_at_iso": "2026-05-08T08:09:28.020710-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
     "events": [
       {
         "title": "Southern Indiana Road Rally #1 More Scrambled Legs @ Hardee's - Evansville",
@@ -5240,7 +5240,7 @@
     "events": []
   },
   "https://www.scca.com/pages/rallycross": {
-    "fetched_at_iso": "2026-05-01T08:00:18.392008-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/roller-blading/us/": {
@@ -5957,7 +5957,7 @@
     "events": []
   },
   "https://rallynorthamerica.com/": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/no-limit-car-show-tickets-1984486431337": {
@@ -6752,7 +6752,7 @@
     "events": []
   },
   "https://www.therechargerally.com/app-landing-page": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--events--this-weekend/cincinnati-ohio/?page=4": {
@@ -6764,7 +6764,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/vip-program": {
-    "fetched_at_iso": "2026-05-12T09:06:31.358231-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
     "events": []
   },
   "https://www.meetup.com/de-de/sass-serious-about-social-stuff-30s-50s-day-cin-noky/": {
@@ -7218,7 +7218,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=8": {
-    "fetched_at_iso": "2026-04-27T08:19:50.134552-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:43.117151-04:00",
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/": {
@@ -7297,7 +7297,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1987276963895": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/events/lrjgqtyjcgblc/": {
@@ -7887,7 +7887,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--powell/classic-car-show-this-weekend/": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/events/2026-wor-scca-autocross-school-annual-tech-day-kil-kare-raceway-western-ohio-808187": {
@@ -7923,7 +7923,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-shows/": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/?srsltid=AfmBOopMH2GgvIAMnIDUisRy0niXCa8ufx7vjObJdpYFyLIryzo57J1m": {
@@ -7967,7 +7967,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/rallies/": {
-    "fetched_at_iso": "2026-05-08T08:08:43.952344-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:43.117151-04:00",
     "events": []
   },
   "https://www.meetup.com/tr-tr/techlife-cincinnati/": {
@@ -8004,23 +8004,23 @@
     ]
   },
   "https://en.wikipedia.org/wiki/Cincinnati": {
-    "fetched_at_iso": "2026-05-15T08:53:34.373789-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": []
   },
   "https://www.visitcincy.com/": {
-    "fetched_at_iso": "2026-05-15T08:53:34.373789-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": []
   },
   "https://www.cincinnati.com/": {
-    "fetched_at_iso": "2026-05-15T08:53:34.373789-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": []
   },
   "https://www.reddit.com/r/cincinnati/": {
-    "fetched_at_iso": "2026-05-15T08:53:05.261943-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": []
   },
   "https://www.cincymuseum.org/": {
-    "fetched_at_iso": "2026-05-12T09:05:45.301659-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": [
       {
         "title": "Home Page - Cincinnati Museum Center",
@@ -8032,11 +8032,11 @@
     ]
   },
   "https://www.visitcincy.com/things-to-do/": {
-    "fetched_at_iso": "2026-05-15T08:53:34.373789-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": []
   },
   "https://www.cincinnati-oh.gov/cityofcincinnati/": {
-    "fetched_at_iso": "2026-05-15T08:53:34.373789-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": []
   },
   "https://www.cincinnatiexperience.com/": {
@@ -8048,11 +8048,11 @@
     "events": []
   },
   "https://rallyrd.com/": {
-    "fetched_at_iso": "2026-05-12T09:06:07.523438-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
     "events": []
   },
   "https://www.merriam-webster.com/dictionary/rally": {
-    "fetched_at_iso": "2026-05-12T09:06:07.523438-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
     "events": []
   },
   "https://rally.co/?srsltid=AfmBOorKhPaHLGSsCd3W7HbyqARnPE1xhko8UQPkh4-7FbxOl9_uHgLE": {
@@ -8060,11 +8060,11 @@
     "events": []
   },
   "https://www.wrc.com/en": {
-    "fetched_at_iso": "2026-05-08T08:09:07.516232-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Rallying": {
-    "fetched_at_iso": "2026-05-10T07:56:07.880038-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
     "events": []
   },
   "https://www.youtube.com/@wrc": {
@@ -8072,15 +8072,15 @@
     "events": []
   },
   "https://www.rally.tv/": {
-    "fetched_at_iso": "2026-05-12T09:06:07.523438-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
     "events": []
   },
   "https://rallyinnovation.com/": {
-    "fetched_at_iso": "2026-05-12T09:06:07.523438-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
     "events": []
   },
   "https://www.reddit.com/r/rally/": {
-    "fetched_at_iso": "2026-05-08T08:09:07.516232-04:00",
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Road": {
@@ -8124,23 +8124,23 @@
     "events": []
   },
   "https://www.scca.com/pages/what-is-autocross": {
-    "fetched_at_iso": "2026-05-15T08:55:52.920839-04:00",
+    "fetched_at_iso": "2026-05-17T08:02:02.589572-04:00",
     "events": []
   },
   "https://cincyscca.com/autocross/": {
-    "fetched_at_iso": "2026-05-15T08:55:52.920839-04:00",
+    "fetched_at_iso": "2026-05-17T08:02:02.589572-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Autocross": {
-    "fetched_at_iso": "2026-05-15T08:55:52.920839-04:00",
+    "fetched_at_iso": "2026-05-17T08:02:02.589572-04:00",
     "events": []
   },
   "https://www.youtube.com/watch?v=Af2zJAOAqWQ": {
-    "fetched_at_iso": "2026-05-15T08:55:52.920839-04:00",
+    "fetched_at_iso": "2026-05-17T08:02:02.589572-04:00",
     "events": []
   },
   "https://www.scca.com/pages/i-want-to-autocross": {
-    "fetched_at_iso": "2026-05-15T08:55:52.920839-04:00",
+    "fetched_at_iso": "2026-05-17T08:02:02.589572-04:00",
     "events": []
   },
   "https://www.pca.org/autox": {
@@ -8216,7 +8216,7 @@
     "events": []
   },
   "https://cincyscca.com/autocross/getting-started/": {
-    "fetched_at_iso": "2026-05-08T08:15:39.736388-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:45.834319-04:00",
     "events": []
   },
   "https://www.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park": {
@@ -8256,7 +8256,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/2026-championship-standings": {
-    "fetched_at_iso": "2026-05-12T09:06:31.358231-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
     "events": []
   },
   "https://www.carfax.com/Used-Cars-in-Cincinnati-OH_c12309": {
@@ -8356,15 +8356,15 @@
     "events": []
   },
   "https://drivenasa.com/autocross/": {
-    "fetched_at_iso": "2026-05-12T09:07:21.167569-04:00",
+    "fetched_at_iso": "2026-05-17T08:02:02.589572-04:00",
     "events": []
   },
   "https://www.visittheusa.com/destinations/ohio/cincy-region/": {
-    "fetched_at_iso": "2026-05-15T08:53:34.373789-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": []
   },
   "https://www.achp.gov/preserve-america/community/cincinnati-ohio": {
-    "fetched_at_iso": "2026-05-15T08:53:34.373789-04:00",
+    "fetched_at_iso": "2026-05-17T07:59:47.840553-04:00",
     "events": []
   },
   "https://www.rallyhouse.com/?srsltid=AfmBOood7B_7mK5r84pXL-7o4-l6mcHbZCEHVDqx2ctuONNLDLpbMTgi": {
@@ -8388,7 +8388,7 @@
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026": {
-    "fetched_at_iso": "2026-05-15T08:55:00.437365-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:20.562538-04:00",
     "events": [
       {
         "title": "Dynasty Rally 2026",
@@ -8400,7 +8400,7 @@
     ]
   },
   "https://www.eventbrite.com/e/1st-annual-columbus-northern-lions-club-charity-car-show-tickets-1988942289930": {
-    "fetched_at_iso": "2026-05-12T09:07:13.049632-04:00",
+    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
     "events": []
   },
   "https://gvc-bmwcca.org/What_is_an_Autocross": {
@@ -8442,5 +8442,41 @@
         "url": "https://www.scca.com/events/2009593-southern-indiana-region-autocross-5-mid-american-air-center"
       }
     ]
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=14": {
+    "fetched_at_iso": "2026-05-17T07:59:43.117151-04:00",
+    "events": []
+  },
+  "https://www.rallysea.com/": {
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
+    "events": []
+  },
+  "https://www.rebellerally.com/": {
+    "fetched_at_iso": "2026-05-17T08:00:20.585577-04:00",
+    "events": []
+  },
+  "https://cincyscca.com/rallycross/2026-rallycross-schedule-and-results/": {
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/2009926-2026-appalachian-triangle-rallycross-event-2-appalachian-overland-triangle": {
+    "fetched_at_iso": "2026-05-17T08:00:44.234617-04:00",
+    "events": [
+      {
+        "title": "CANCELED - 2026 Appalachian Triangle RallyCross Event #2 @ Appalachian Overland Triangle",
+        "start_iso": "2026-05-16T01:00:00-04:00",
+        "end_iso": "2026-05-17T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2009926-2026-appalachian-triangle-rallycross-event-2-appalachian-overland-triangle"
+      }
+    ]
+  },
+  "http://www.sneakattackrally.com/ARACombinerThing/schedule.html?ara": {
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
+    "events": []
+  },
+  "https://sneakattackrally.com/ARA/entryList.html?ohio": {
+    "fetched_at_iso": "2026-05-17T08:01:07.727260-04:00",
+    "events": []
   }
 }
