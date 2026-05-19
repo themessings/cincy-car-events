@@ -1,67 +1,7 @@
 {
-  "generated_at_iso": "2026-05-17T08:02:12.277504-04:00",
-  "count": 228,
+  "generated_at_iso": "2026-05-19T10:05:24.911680-04:00",
+  "count": 223,
   "events": [
-    {
-      "Event Name": "2026 Annual Krieger Ford Car & Truck Extravaganza",
-      "Date": "2026-05-17",
-      "Start Time": "8:00 AM",
-      "End Time": "4:00 PM",
-      "Location": "Krieger Ford",
-      "Address": "Krieger Ford",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2026-annual-krieger-ford-car-t/929009356126663/"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-05-17",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Fairfield Cars and Coffee 2026 #2",
-      "Date": "2026-05-17",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Thyssen Krupp Bilstein",
-      "Address": "Thyssen Krupp Bilstein",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/fairfield-cars-and-coffee-2026/1334502791824672/"
-    },
-    {
-      "Event Name": "Valley High Car Show",
-      "Date": "2026-05-17",
-      "Start Time": "10:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "10200 Dixie Hwy, Louisville, KY",
-      "Address": "10200 Dixie Hwy, Louisville, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/valley-high-car-show/1934589247130127/"
-    },
-    {
-      "Event Name": "May motor madness",
-      "Date": "2026-05-17",
-      "Start Time": "6:00 PM",
-      "End Time": "10:00 PM",
-      "Location": "Scrub-A-Truck",
-      "Address": "Scrub-A-Truck",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/may-motor-madness/798315856368547/"
-    },
     {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-05-20",
