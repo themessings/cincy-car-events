@@ -1415,5 +1415,46 @@
     "lat": "38.2542376",
     "lon": "-85.7594070"
   },
-  "Location will be sent to ticket holders.": null
+  "Location will be sent to ticket holders.": null,
+  "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017": null,
+  "Ludlow, KY": {
+    "lat": "39.0925598",
+    "lon": "-84.5474435"
+  },
+  ", MI": {
+    "lat": "43.6211955",
+    "lon": "-84.6824346"
+  },
+  "Washington Washington, DC": {
+    "lat": "38.8976428",
+    "lon": "-77.0061464"
+  },
+  "Santa Clara, CA": {
+    "lat": "37.2333253",
+    "lon": "-121.6846349"
+  },
+  "Washington, VA": {
+    "lat": "36.7402360",
+    "lon": "-81.9421666"
+  },
+  "Greater Landover, MD": {
+    "lat": "38.9340002",
+    "lon": "-76.8966397"
+  },
+  "Campbell, CA": {
+    "lat": "37.2870626",
+    "lon": "-121.9448810"
+  },
+  "Cupertino, CA": {
+    "lat": "37.3228934",
+    "lon": "-122.0322895"
+  },
+  "Morgan Hill, CA": {
+    "lat": "37.1304080",
+    "lon": "-121.6544974"
+  },
+  "Mountain View, CA": {
+    "lat": "37.3893889",
+    "lon": "-122.0832101"
+  }
 }
