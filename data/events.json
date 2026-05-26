@@ -1,18 +1,66 @@
 {
-  "generated_at_iso": "2026-05-24T08:05:17.231816-04:00",
-  "count": 188,
+  "generated_at_iso": "2026-05-26T09:57:55.136397-04:00",
+  "count": 213,
   "events": [
     {
-      "Event Name": "21st Annual Beatersville Car and Bike Show",
-      "Date": "2026-05-24",
-      "Start Time": "9:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Portal Louisville",
-      "Address": "Portal Louisville",
+      "Event Name": "Cincy .NET Users Group (CINNUG) and Architect Forum Monthly Meeting",
+      "Date": "2026-05-26",
+      "Start Time": "6:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Office Key 9078 Union Centre Blvd, suite 350, West Chester, OH West Chester OH",
+      "Address": "Office Key 9078 Union Centre Blvd, suite 350, West Chester, OH West Chester OH",
       "Closest City": "",
       "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "fb://event/?id=1413571117159967"
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/312344101/"
+    },
+    {
+      "Event Name": "Monthly Meeting & Happy Hour",
+      "Date": "2026-05-26",
+      "Start Time": "6:00 PM",
+      "End Time": "7:30 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ko-KR/rotaractdc/events/314706328/"
+    },
+    {
+      "Event Name": "Tuesday Del Ray meeting",
+      "Date": "2026-05-26",
+      "Start Time": "7:30 PM",
+      "End Time": "8:30 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ko-KR/alexandria-volunteering-meetup-group/events/314668006/"
+    },
+    {
+      "Event Name": "Men's Group Meeting - Real Men, Real Visibility, Connection & Growth - Peninsula",
+      "Date": "2026-05-26",
+      "Start Time": "10:00 PM",
+      "End Time": "12:00 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/mensgroup/events/314670368/"
+    },
+    {
+      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
+      "Date": "2026-05-27",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314542620/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -39,6 +87,18 @@
       "Event URL": "https://facebook.com/events/s/speedfest-presented-by-sick-th/1598081134713008/"
     },
     {
+      "Event Name": "Unlikely Survivors @ Circuit | C&C Showcase",
+      "Date": "2026-05-30",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Address": "2726 Riverside Drive, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/unlikely-survivors-circuit-cc-/1793939434896213/"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-05-30",
       "Start Time": "8:00 AM",
@@ -63,6 +123,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-05-30",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-05-30/"
+    },
+    {
       "Event Name": "KSP Classics, Customs, and Cruisers Car Show",
       "Date": "2026-05-30",
       "Start Time": "9:00 AM",
@@ -73,6 +145,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/ksp-classics-customs-and-cruis/1370305214017894/"
+    },
+    {
+      "Event Name": "Edgewater Truck Fest",
+      "Date": "2026-05-30",
+      "Start Time": "10:00 AM",
+      "End Time": "11:00 PM",
+      "Location": "Edgewater Sports Park",
+      "Address": "Edgewater Sports Park",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/edgewater-truck-fest/2107761669978552/"
     },
     {
       "Event Name": "Eclipse 5th Annual Open House & Car Show",
@@ -159,6 +243,18 @@
       "Event URL": "https://facebook.com/events/s/4th-annual-20th-century-all-gm/2340968919664179/"
     },
     {
+      "Event Name": "Cars and Coffee: Sunday May 31: All cars welcome!",
+      "Date": "2026-05-31",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "600 West Loveland Ave, Loveland, OH",
+      "Address": "600 West Loveland Ave, Loveland, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-and-coffee-sunday-may-31-/2138752930854327/"
+    },
+    {
       "Event Name": "No Limits 937™ Private Event featuring The Food Pitt & Ducati North America",
       "Date": "2026-05-31",
       "Start Time": "5:00 PM",
@@ -183,6 +279,54 @@
       "Event URL": "https://facebook.com/events/s/no-limits-937-private-event-fe/1916729278941344/"
     },
     {
+      "Event Name": "No Limits 937™ Private Event featuring The Food Pitt & Ducati Cincinnati",
+      "Date": "2026-05-31",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "DNA Computers & Electronics Repair",
+      "Address": "DNA Computers & Electronics Repair",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/no-limits-937-private-event-fe/1916729278941344/"
+    },
+    {
+      "Event Name": "May Throttle Fest• Scrub a Truck event",
+      "Date": "2026-05-31",
+      "Start Time": "6:00 PM",
+      "End Time": "10:00 PM",
+      "Location": "Scrub-A-Truck",
+      "Address": "Scrub-A-Truck",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/may-throttle-fest-scrub-a-truc/1000062155686228/"
+    },
+    {
+      "Event Name": "4th Annual 20th Century All GM Car Show and Swap Meet -1999 & Older ONLY",
+      "Date": "2026-05-31",
+      "Start Time": "9:00 PM",
+      "End Time": "12:00 AM",
+      "Location": "401 Milford Pkwy, Milford, OH 45150-1298",
+      "Address": "401 Milford Pkwy, Milford, OH 45150-1298",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/4th-annual-20th-century-all-gm/859107560067719/"
+    },
+    {
+      "Event Name": "Cinti Medical Marijuana Meetup on Tuesday 6/2/26 to Mix/Mingle/Network/Celebrate",
+      "Date": "2026-06-02",
+      "Start Time": "8:00 PM",
+      "End Time": "10:00 PM",
+      "Location": "3301 Madison Rd, Cincinnati, OH",
+      "Address": "3301 Madison Rd, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnati-medical-marijuana-meetup/events/314894125/"
+    },
+    {
       "Event Name": "Rhinegeist Tap Takeover",
       "Date": "2026-06-03",
       "Start Time": "3:00 PM",
@@ -205,6 +349,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "CINPA Monthly Meeting",
+      "Date": "2026-06-03",
+      "Start Time": "6:30 PM",
+      "End Time": "8:30 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502686/"
     },
     {
       "Event Name": "Enthusiast Showdown 2026 - Track Day • Car Show • Swap Meet",
@@ -265,6 +421,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/louisville-mega-cavern-car-sho/4263104417339019/"
+    },
+    {
+      "Event Name": "Meet up play date",
+      "Date": "2026-06-06",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "5057 Wooster Pike, Cincinnati, OH",
+      "Address": "5057 Wooster Pike, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738799/"
     },
     {
       "Event Name": "Oxford Masonic Lodge Annual Charity Car and Bike show",
@@ -435,6 +603,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-06-17",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308198591931/"
+    },
+    {
       "Event Name": "Dynasty Rally 2026 – Day 2",
       "Date": "2026-06-18",
       "Start Time": "9:00 AM",
@@ -445,6 +625,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Cincinnati Ruby Brigade - Monthly Meetup",
+      "Date": "2026-06-18",
+      "Start Time": "12:00 PM",
+      "End Time": "1:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502711/"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -553,6 +745,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
+    },
+    {
+      "Event Name": "No Limits 937™ Car Community Day",
+      "Date": "2026-06-20",
+      "Start Time": "11:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "Main Event West Chester",
+      "Address": "Main Event West Chester",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/no-limits-937-car-community-da/959458323493814/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -771,18 +975,6 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
-      "Date": "2026-07-10",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
-    },
-    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-07-11",
       "Start Time": "8:00 AM",
@@ -903,6 +1095,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-07-15",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308208591930/"
+    },
+    {
       "Event Name": "Mt Gilead's Annual Downtown Car and Bike Show",
       "Date": "2026-07-17",
       "Start Time": "4:00 PM",
@@ -939,6 +1143,18 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
+      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
+      "Date": "2026-07-18",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "7160 Taylor Street Liberty Township, OH 45069",
+      "Address": "7160 Taylor Street Liberty Township, OH 45069",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1280772053912863/"
+    },
+    {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
       "Date": "2026-07-18",
       "Start Time": "8:00 AM",
@@ -961,6 +1177,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
+    },
+    {
+      "Event Name": "UMTR at Edgewater Sports Park - Presented by Southwest Paving & O'Reilly Auto Parts",
+      "Date": "2026-07-18",
+      "Start Time": "10:00 AM",
+      "End Time": "11:00 PM",
+      "Location": "Edgewater Sports Park",
+      "Address": "Edgewater Sports Park",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/umtr-at-edgewater-sports-park-/1222465236458437/"
     },
     {
       "Event Name": "Sunset Showoff 8 at Kuhnle Motorsports Park",
@@ -1047,6 +1275,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "72nd Annual Antique & Classic Car Parade of Hamilton/Fairfield OHIO",
+      "Date": "2026-07-25",
+      "Start Time": "8:30 AM",
+      "End Time": "11:30 AM",
+      "Location": "101 Knightsbridge Dr, Hamilton, OH 45011-3166",
+      "Address": "101 Knightsbridge Dr, Hamilton, OH 45011-3166",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/72nd-annual-antique-classic-ca/1028501906270938/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-26",
       "Start Time": "8:00 AM",
@@ -1057,6 +1297,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Limbo contest car show hosted by downtown runnaz",
+      "Date": "2026-07-26",
+      "Start Time": "6:30 PM",
+      "End Time": "10:30 PM",
+      "Location": "Scrub-A-Truck",
+      "Address": "Scrub-A-Truck",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/limbo-contest-car-show-hosted-/1714091790036797/"
     },
     {
       "Event Name": "Recharge Rally – Day 1",
@@ -1239,6 +1491,18 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "Event Name": "UMTR at Darana Raceway (Kilkare)",
+      "Date": "2026-08-08",
+      "Start Time": "9:00 AM",
+      "End Time": "7:00 PM",
+      "Location": "Darana Raceway- Xenia, Ohio",
+      "Address": "Darana Raceway- Xenia, Ohio",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/umtr-at-darana-raceway-kilkare/931346839710801/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-09",
       "Start Time": "8:00 AM",
@@ -1311,6 +1575,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-08-19",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308201925264/"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-08-22",
       "Start Time": "8:00 AM",
@@ -1369,18 +1645,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee",
-      "Date": "2026-08-24",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Crestview Hills Town Center, 2751 Dixie Hwy | Crestview Hills, KY",
-      "Address": "Crestview Hills Town Center, 2751 Dixie Hwy | Crestview Hills, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-05-30/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -1599,6 +1863,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-09-16",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308205258597/"
+    },
+    {
       "Event Name": "Indianapolis Cars and Coffee",
       "Date": "2026-09-19",
       "Start Time": "8:00 AM",
@@ -1633,6 +1909,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Delhi Street Rodders Car Show",
+      "Date": "2026-09-19",
+      "Start Time": "3:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "VFW's Cabana on the Whitewater",
+      "Address": "VFW's Cabana on the Whitewater",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/delhi-street-rodders-car-show/1504155877799366/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1933,6 +2221,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2026-10-21",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308211925263/"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 5",

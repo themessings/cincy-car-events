@@ -1456,5 +1456,47 @@
   "Mountain View, CA": {
     "lat": "37.3893889",
     "lon": "-122.0832101"
+  },
+  "Main Event West Chester": {
+    "lat": "39.3173690",
+    "lon": "-84.4240902"
+  },
+  "Hamilton, OH": {
+    "lat": "39.2085354",
+    "lon": "-84.5501874"
+  },
+  "Liberty Twp, OH": {
+    "lat": "39.4009490",
+    "lon": "-84.4097355"
+  },
+  "Mason High School": {
+    "lat": "30.7433498",
+    "lon": "-99.2418902"
+  },
+  "VFW's Cabana on the Whitewater": null,
+  "Fort Washington, MD": {
+    "lat": "38.7379938",
+    "lon": "-77.0043036"
+  },
+  "columbia, MD": {
+    "lat": "39.1938429",
+    "lon": "-76.8646092"
+  },
+  ", WA": {
+    "lat": "-25.2303005",
+    "lon": "121.0187246"
+  },
+  "ANNANDALE, VA": {
+    "lat": "38.8387030",
+    "lon": "-77.1951755"
+  },
+  "Laurel, MD": {
+    "lat": "39.0984317",
+    "lon": "-76.8485094"
+  },
+  "1800 Limerick St, Room 600, AL": null,
+  "Chevy Chase, MD": {
+    "lat": "38.9813699",
+    "lon": "-77.0849245"
   }
 }
