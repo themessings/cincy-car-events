@@ -1,91 +1,7 @@
 {
-  "generated_at_iso": "2026-05-26T09:57:55.136397-04:00",
-  "count": 213,
+  "generated_at_iso": "2026-05-29T10:01:46.637457-04:00",
+  "count": 205,
   "events": [
-    {
-      "Event Name": "Cincy .NET Users Group (CINNUG) and Architect Forum Monthly Meeting",
-      "Date": "2026-05-26",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Office Key 9078 Union Centre Blvd, suite 350, West Chester, OH West Chester OH",
-      "Address": "Office Key 9078 Union Centre Blvd, suite 350, West Chester, OH West Chester OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/312344101/"
-    },
-    {
-      "Event Name": "Monthly Meeting & Happy Hour",
-      "Date": "2026-05-26",
-      "Start Time": "6:00 PM",
-      "End Time": "7:30 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ko-KR/rotaractdc/events/314706328/"
-    },
-    {
-      "Event Name": "Tuesday Del Ray meeting",
-      "Date": "2026-05-26",
-      "Start Time": "7:30 PM",
-      "End Time": "8:30 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ko-KR/alexandria-volunteering-meetup-group/events/314668006/"
-    },
-    {
-      "Event Name": "Men's Group Meeting - Real Men, Real Visibility, Connection & Growth - Peninsula",
-      "Date": "2026-05-26",
-      "Start Time": "10:00 PM",
-      "End Time": "12:00 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/mensgroup/events/314670368/"
-    },
-    {
-      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
-      "Date": "2026-05-27",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314542620/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-05-27",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Speedfest Presented By Sick The Magazine, Street Car Takeover and Braggin Rights",
-      "Date": "2026-05-28",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 PM",
-      "Location": "Beech Bend Raceway Park",
-      "Address": "Beech Bend Raceway Park",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/speedfest-presented-by-sick-th/1598081134713008/"
-    },
     {
       "Event Name": "Unlikely Survivors @ Circuit | C&C Showcase",
       "Date": "2026-05-30",
@@ -145,6 +61,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/ksp-classics-customs-and-cruis/1370305214017894/"
+    },
+    {
+      "Event Name": "Open House & Car Show",
+      "Date": "2026-05-30",
+      "Start Time": "8:59 AM",
+      "End Time": "10:59 AM",
+      "Location": "Eclipse, 2669 E Kemper Rd | Cincinnati, OH",
+      "Address": "Eclipse, 2669 E Kemper Rd | Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://www.facebook.com/events/eclipse-window-tinting-cincinnati-ohio/open-house-car-show/1831242324193150/"
     },
     {
       "Event Name": "Edgewater Truck Fest",
@@ -315,18 +243,6 @@
       "Event URL": "https://facebook.com/events/s/4th-annual-20th-century-all-gm/859107560067719/"
     },
     {
-      "Event Name": "Cinti Medical Marijuana Meetup on Tuesday 6/2/26 to Mix/Mingle/Network/Celebrate",
-      "Date": "2026-06-02",
-      "Start Time": "8:00 PM",
-      "End Time": "10:00 PM",
-      "Location": "3301 Madison Rd, Cincinnati, OH",
-      "Address": "3301 Madison Rd, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-medical-marijuana-meetup/events/314894125/"
-    },
-    {
       "Event Name": "Rhinegeist Tap Takeover",
       "Date": "2026-06-03",
       "Start Time": "3:00 PM",
@@ -349,18 +265,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "CINPA Monthly Meeting",
-      "Date": "2026-06-03",
-      "Start Time": "6:30 PM",
-      "End Time": "8:30 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502686/"
     },
     {
       "Event Name": "Enthusiast Showdown 2026 - Track Day • Car Show • Swap Meet",
@@ -421,18 +325,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/louisville-mega-cavern-car-sho/4263104417339019/"
-    },
-    {
-      "Event Name": "Meet up play date",
-      "Date": "2026-06-06",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5057 Wooster Pike, Cincinnati, OH",
-      "Address": "5057 Wooster Pike, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738799/"
     },
     {
       "Event Name": "Oxford Masonic Lodge Annual Charity Car and Bike show",
@@ -625,18 +517,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Cincinnati Ruby Brigade - Monthly Meetup",
-      "Date": "2026-06-18",
-      "Start Time": "12:00 PM",
-      "End Time": "1:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502711/"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -975,6 +855,18 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
+      "Date": "2026-07-10",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-07-11",
       "Start Time": "8:00 AM",
@@ -1177,6 +1069,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026",
+      "Date": "2026-07-18",
+      "Start Time": "9:00 AM",
+      "End Time": "6:00 PM",
+      "Location": "Location will be sent to ticket holders.",
+      "Address": "Location will be sent to ticket holders.",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
     {
       "Event Name": "UMTR at Edgewater Sports Park - Presented by Southwest Paving & O'Reilly Auto Parts",
