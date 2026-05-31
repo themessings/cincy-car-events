@@ -1498,5 +1498,17 @@
   "Chevy Chase, MD": {
     "lat": "38.9813699",
     "lon": "-77.0849245"
+  },
+  "Alexandria Branch 8333 Alexandria Pike Alexandria KY 41001": {
+    "lat": "38.9513955",
+    "lon": "-84.3941544"
+  },
+  "Berwyn Heights, MD": {
+    "lat": "38.9939991",
+    "lon": "-76.9105292"
+  },
+  "Matteson, IL": {
+    "lat": "41.5098320",
+    "lon": "-87.7392670"
   }
 }
