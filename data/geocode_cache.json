@@ -1510,5 +1510,29 @@
   "Matteson, IL": {
     "lat": "41.5098320",
     "lon": "-87.7392670"
+  },
+  "Central Parkway Cincinnati, OH": {
+    "lat": "39.1237849",
+    "lon": "-84.5333636"
+  },
+  "N. Manchester St. Arlington, VA": {
+    "lat": "38.8793106",
+    "lon": "-77.1439692"
+  },
+  "washington, DC": {
+    "lat": "38.8950982",
+    "lon": "-77.0363849"
+  },
+  "Wesley Place, SW": {
+    "lat": "38.8788504",
+    "lon": "-77.0162341"
+  },
+  ", MO": {
+    "lat": "38.7604815",
+    "lon": "-92.5617875"
+  },
+  "Tipp City, OH": {
+    "lat": "39.9613250",
+    "lon": "-84.1700609"
   }
 }

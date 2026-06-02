@@ -84,7 +84,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-05-31T08:11:34.962189-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=29": {
@@ -92,7 +92,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
-    "fetched_at_iso": "2026-05-31T08:11:34.962189-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.eventbrite.com/b/oh--colerain/auto-boat-and-air/": {
@@ -1183,7 +1183,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/": {
-    "fetched_at_iso": "2026-05-31T08:11:55.896957-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
     "events": []
   },
   "https://www.facebook.com/indyhoodrats/posts/road-rally-to-the-famous-11-mile-long-tail-of-the-dragon-located-in-vonore-tenne/867730542516222/": {
@@ -2187,35 +2187,35 @@
     "events": []
   },
   "https://www.meetup.com/daytonhikers/": {
-    "fetched_at_iso": "2026-05-22T09:32:11.071784-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
     "events": [
       {
-        "title": "Hills and Dales Fitness Hike 1, 2 or 3",
-        "start_iso": "2026-05-24T10:30:00-04:00",
-        "end_iso": "2026-05-24T12:30:00-04:00",
-        "location": "Paw Paw Pavilion Deep Hollow Rd, Kettering, OH Kettering OH",
-        "url": "https://www.meetup.com/daytonhikers/events/314740207/"
-      },
-      {
-        "title": "Hidden Waterfall and New Trail Hike at John Bryan/Clifton Gorge ~5.5 miles",
-        "start_iso": "2026-05-24T16:00:00-04:00",
-        "end_iso": "2026-05-24T18:30:00-04:00",
-        "location": "John Bryan State Park 3790 OH-370, Yellow Springs, OH Yellow Springs OH",
-        "url": "https://www.meetup.com/daytonhikers/events/314899440/"
-      },
-      {
-        "title": "9am start time: Germantown MetroPark Hike 7-9 miles - Moderately Brisk",
-        "start_iso": "2026-05-25T09:00:00-04:00",
-        "end_iso": "2026-05-25T11:30:00-04:00",
-        "location": "7501 Conservancy Rd 7501 Conservancy Rd, Germantown, OH Germantown OH",
-        "url": "https://www.meetup.com/daytonhikers/events/314849241/"
-      },
-      {
         "title": "9am start time; ~3 or 6 mile hike at Sugarcreek - Moderately Brisk",
-        "start_iso": "2026-05-26T09:00:00-04:00",
-        "end_iso": "2026-05-26T11:00:00-04:00",
+        "start_iso": "2026-06-02T09:00:00-04:00",
+        "end_iso": "2026-06-02T11:00:00-04:00",
         "location": "Sugarcreek MetroPark 4178 Conference Road, Bellbrook, OH Bellbrook OH",
-        "url": "https://www.meetup.com/daytonhikers/events/314875930/"
+        "url": "https://www.meetup.com/daytonhikers/events/314974726/"
+      },
+      {
+        "title": "A hike with one of mankind’s biggest fans.",
+        "start_iso": "2026-06-02T10:00:00-04:00",
+        "end_iso": "2026-06-02T11:35:00-04:00",
+        "location": "Taylorsville MetroPark S Cassel and Taylorsville Dam Rd., Vandalia, OH Vandalia OH",
+        "url": "https://www.meetup.com/daytonhikers/events/314768351/"
+      },
+      {
+        "title": "Urban Hike: \"The Neighborhoods\"",
+        "start_iso": "2026-06-02T11:00:00-04:00",
+        "end_iso": "2026-06-02T14:15:00-04:00",
+        "location": "Deer Meadow Park 4321 Pinnacle Rd,, Moraine, OH Moraine OH",
+        "url": "https://www.meetup.com/daytonhikers/events/314995543/"
+      },
+      {
+        "title": "Hills and Dales Metropark, Houk Stream Park, Elizabeth Gardens and Loy Garden",
+        "start_iso": "2026-06-02T15:00:00-04:00",
+        "end_iso": "2026-06-02T17:00:00-04:00",
+        "location": "Paw Paw Pavilion Deep Hollow Rd, Kettering, OH Kettering OH",
+        "url": "https://www.meetup.com/daytonhikers/events/314983877/"
       }
     ]
   },
@@ -2890,7 +2890,7 @@
     "events": []
   },
   "https://cincyscca.com/": {
-    "fetched_at_iso": "2026-05-31T08:14:31.591202-04:00",
+    "fetched_at_iso": "2026-06-02T10:56:01.350082-04:00",
     "events": []
   },
   "https://www.facebook.com/events/newport-antique-car-hill-climb/newport-antique-auto-hill-climb-car-show/1179371070678213/": {
@@ -2914,7 +2914,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-05-31T08:11:34.962189-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--huber-heights/food-and-car-show/": {
@@ -3260,19 +3260,19 @@
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/car-show/": {
-    "fetched_at_iso": "2026-05-05T08:03:37.359072-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/car-shows/": {
-    "fetched_at_iso": "2026-05-05T08:03:37.359072-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-shows/": {
-    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/classic-car-show/": {
-    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--lewis-center/car-show-columbus/": {
@@ -3376,7 +3376,7 @@
     "events": []
   },
   "https://www.scca.com/pages/autocross": {
-    "fetched_at_iso": "2026-05-31T08:14:31.591202-04:00",
+    "fetched_at_iso": "2026-06-02T10:56:01.350082-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/open-road-supercar-driving-tours/?srsltid=AfmBOookY65e0XbclItkW3HMIVjdPjRY5z1KG25M2wWRJM2BwZwQDemP": {
@@ -4830,7 +4830,7 @@
     "events": []
   },
   "https://www.eventbrite.com/b/oh--cincinnati/government/": {
-    "fetched_at_iso": "2026-04-10T07:50:16.133807-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/estrangement/us/": {
@@ -5457,7 +5457,7 @@
     "events": []
   },
   "https://www.meetup.com/sw_polls_static_sitemap4.xml.gz": {
-    "fetched_at_iso": "2026-05-26T09:54:27.681019-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
     "events": []
   },
   "https://www.meetup.com/sw_groups_3.xml.gz": {
@@ -5859,7 +5859,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-events/": {
-    "fetched_at_iso": "2026-05-31T08:11:34.962189-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/preview-southern-ohio-forest-rally": {
@@ -6194,154 +6194,154 @@
     "events": []
   },
   "https://www.meetup.com/topics/coffee/us/": {
-    "fetched_at_iso": "2026-05-31T08:11:39.826612-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
     "events": [
       {
-        "title": "Coffee & Chat",
-        "start_iso": "2026-05-31T10:15:00-04:00",
-        "end_iso": "2026-05-31T12:15:00-04:00",
-        "location": "Quincy Park 1201 N Quincy St, Arlington, VA 22201 Arlington VA 22201",
-        "url": "https://www.meetup.com/arlington-coffee-and-chill-meetup/events/314810826/"
+        "title": "Medium(-) Level: The Koffee Klatch Ride: Frame in Vienna",
+        "start_iso": "2026-06-02T10:00:00-04:00",
+        "end_iso": "2026-06-02T13:00:00-04:00",
+        "location": "Bluemont Park South Shelter 325 N. Manchester St. Arlington, VA, Arlington, VA 22203 Arlington VA 22203",
+        "url": "https://www.meetup.com/novacbg/events/315018966/"
       },
       {
-        "title": "Meaningful Conversation and Coffee. At Caffe Amouri in Vienna",
-        "start_iso": "2026-05-31T15:00:00-04:00",
-        "end_iso": "2026-05-31T17:00:00-04:00",
-        "location": "Caffe Amouri 107 Church St NE, Vienna, VA Vienna VA",
-        "url": "https://www.meetup.com/higher-grounds-dmv/events/314626282/"
+        "title": "Live Music - Every Tuesday",
+        "start_iso": "2026-06-02T18:00:00-04:00",
+        "end_iso": "2026-06-02T20:00:00-04:00",
+        "location": "Divino Ristorante 2505 Wisconsin Ave NW, Washington, DC 20007 Washington DC 20007",
+        "url": "https://www.meetup.com/italian-foodie-wine-tasting-lovers/events/314774771/"
       },
       {
-        "title": "Meaningful Conversation and Coffee - Northside Social Falls Church",
-        "start_iso": "2026-05-31T10:00:00-04:00",
-        "end_iso": "2026-05-31T11:30:00-04:00",
-        "location": "Northside Social Coffee & Wine Falls Church 205 Park Avenue, Falls Church, VA 22046 Falls Church VA 22046",
-        "url": "https://www.meetup.com/higher-grounds-dmv/events/312439881/"
+        "title": "Tabletop Tuesdays",
+        "start_iso": "2026-06-02T17:00:00-04:00",
+        "end_iso": "2026-06-02T19:00:00-04:00",
+        "location": "Weird Brothers Coffee 321 Sunset Park Drive, Herndon, VA 20170 Herndon VA 20170",
+        "url": "https://www.meetup.com/weird-brothers-coffee-events/events/314219853/"
       },
       {
-        "title": "LGBTQ+ Coffee and Conversation @ as you are.",
-        "start_iso": "2026-05-31T12:00:00-04:00",
-        "end_iso": "2026-05-31T13:00:00-04:00",
-        "location": "as you are. DC 500 8th St SE, Washington, DC 20003 Washington DC 20003",
-        "url": "https://www.meetup.com/gogaydc/events/314646748/"
+        "title": "SOLD OUT-Profs & Pints DC: Inside the World Cup",
+        "start_iso": "2026-06-02T18:00:00-04:00",
+        "end_iso": "2026-06-02T20:00:00-04:00",
+        "location": "Penn Social 801 E St NW, Washington, DC 20004 Washington DC 20004",
+        "url": "https://www.meetup.com/profs-and-pints-meetup/events/314757153/"
       },
       {
-        "title": "Alexandria Cars & Coffee @Hollin Hall Shopping Center",
-        "start_iso": "2026-05-31T08:00:00-04:00",
-        "end_iso": "2026-05-31T10:00:00-04:00",
+        "title": "TIME CHANGED Monthly Coffee Meetup at Panera",
+        "start_iso": "2026-06-02T10:00:00-04:00",
+        "end_iso": "2026-06-02T12:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/alexandria-cars-coffee/events/313479078/"
+        "url": "https://www.meetup.com/ellicott-city-womens-meetup-45/events/311922749/"
       },
       {
-        "title": "LGBTQ+ Coffee and Conversation",
-        "start_iso": "2026-05-31T12:00:00-04:00",
-        "end_iso": "2026-05-31T13:00:00-04:00",
-        "location": "as you are. DC 500 8th St SE, Washington, DC 20003 Washington DC 20003",
-        "url": "https://www.meetup.com/maryland-lgbtq-pros/events/314646794/"
+        "title": "French conversation happy hour!",
+        "start_iso": "2026-06-02T19:15:00-04:00",
+        "end_iso": "2026-06-02T22:00:00-04:00",
+        "location": "Tony and Joe's Seafood Place 3000 K St NW, Washington, DC 20007 Washington DC 20007",
+        "url": "https://www.meetup.com/dc-french-conversation/events/314356587/"
       },
       {
-        "title": "LGBTQ+ Community Coffee and Conversation @ As You Are.",
-        "start_iso": "2026-05-31T12:00:00-04:00",
-        "end_iso": "2026-05-31T13:00:00-04:00",
-        "location": "As You Are 500 8th St. SE, Washington, DC, DC 20003 Washington, DC DC 20003",
-        "url": "https://www.meetup.com/outinnova/events/314646788/"
-      },
-      {
-        "title": "Sunday Brunch Social: Meet New Friends",
-        "start_iso": "2026-05-31T12:30:00-04:00",
-        "end_iso": "2026-05-31T14:30:00-04:00",
-        "location": "Secret Restaurant Location in Downtown/Penn Quarter 11th St NW, Washington, DC 20001, United States, Washington, DC 20001 Washington DC 20001",
-        "url": "https://www.meetup.com/make-new-friends-over-food-dc/events/314705870/"
-      },
-      {
-        "title": "Walk & Clean",
-        "start_iso": "2026-05-31T09:30:00-04:00",
-        "end_iso": "2026-05-31T11:45:00-04:00",
-        "location": "Panera Bread 5926 Kingstowne Center, Alexandria, VA 22315 Alexandria VA 22315",
-        "url": "https://www.meetup.com/kingstowne-walk-n-talk/events/314454830/"
-      },
-      {
-        "title": "Share a book, meet a friend",
-        "start_iso": "2026-05-31T10:30:00-04:00",
-        "end_iso": "2026-05-31T12:00:00-04:00",
-        "location": "La Madeleine Bakery, Cafe and Bistro 500 King St, Alexandria, VA 22314 Alexandria VA 22314",
-        "url": "https://www.meetup.com/share-a-book-meet-a-friend/events/314886859/"
-      },
-      {
-        "title": "The Sisterhood Table - Coffee, Conversation & Connection",
-        "start_iso": "2026-05-31T10:00:00-04:00",
-        "end_iso": "2026-05-31T12:00:00-04:00",
+        "title": "SRF is offering ONLINE MEDITATIONS in today's climate",
+        "start_iso": "2026-06-02T19:00:00-04:00",
+        "end_iso": "2026-06-02T21:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/sistah-friends-connect/events/314548781/"
+        "url": "https://www.meetup.com/college-park-meditation-meetup-group/events/314775699/"
       },
       {
-        "title": "Bridge & Brews-Alexandria to National Harbor",
-        "start_iso": "2026-05-31T17:00:00-04:00",
-        "end_iso": "2026-05-31T21:00:00-04:00",
-        "location": "Jones Point Park 1 Jones Pt, Alexandria, VA, VA 22314 Alexandria, VA VA 22314",
-        "url": "https://www.meetup.com/social-sips-bites-mclean-edition/events/314629138/"
+        "title": "Cats and Coffee ☕️",
+        "start_iso": "2026-06-06T10:00:00-04:00",
+        "end_iso": "2026-06-06T12:00:00-04:00",
+        "location": "Coffee Republic at King Farm Village Center 801 Pleastant Dr # 100, Rockville, md 20850 Rockville md 20850",
+        "url": "https://www.meetup.com/dmv-cats/events/314598232/"
       },
       {
-        "title": "Dim Sum Brunch in Rockville Corner Bites",
-        "start_iso": "2026-05-31T10:30:00-04:00",
-        "end_iso": "2026-05-31T12:30:00-04:00",
-        "location": "Corner Bites 316 N. Washington St, Rockville, MD 20850 Rockville MD 20850",
-        "url": "https://www.meetup.com/social-sips-bites-mclean-edition/events/314310724/"
+        "title": "Shaghf Cafe - Fairfax",
+        "start_iso": "2026-06-06T09:00:00-04:00",
+        "end_iso": "2026-06-06T10:00:00-04:00",
+        "location": "Shaghf Coffee 2727A Merrilee Dr,, Fairfax, VA 22031 Fairfax VA 22031",
+        "url": "https://www.meetup.com/nova-cafe-hoppers/events/314934642/"
       },
       {
-        "title": "Real Connection-Real Theology",
-        "start_iso": "2026-05-31T09:45:00-04:00",
-        "end_iso": "2026-05-31T10:45:00-04:00",
-        "location": "St Louis Catholic Church 2907 Popkins Ln, Alexandria, VA Alexandria VA",
-        "url": "https://www.meetup.com/catholic-social-club/events/314474211/"
-      },
-      {
-        "title": "IVGDA Chicago - Game Developers' Meetup",
-        "start_iso": "2026-06-06T15:00:00-04:00",
-        "end_iso": "2026-06-06T17:00:00-04:00",
-        "location": "Capital One Café 100 S State St, Chicago, IL 60603 Chicago IL 60603",
-        "url": "https://www.meetup.com/indie-game-developers-association/events/314838331/"
-      },
-      {
-        "title": "Coffee, Tea & Chocolate",
-        "start_iso": "2026-06-13T11:00:00-04:00",
-        "end_iso": "2026-06-13T13:00:00-04:00",
+        "title": "NOVA Watches & Coffee",
+        "start_iso": "2026-06-07T10:30:00-04:00",
+        "end_iso": "2026-06-07T12:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/coffee-tea-and-talk/events/314707703/"
+        "url": "https://www.meetup.com/nova-watches-coffee/events/315059784/"
       },
       {
-        "title": "Cafecito y Chisme @ Dulce De Leche Cafecito - North Center",
-        "start_iso": "2026-06-07T11:00:00-04:00",
-        "end_iso": "2026-06-07T13:00:00-04:00",
-        "location": "Dulce De Leche Cafecito 4054 N Western, Chicago, IL 60618 Chicago IL 60618",
-        "url": "https://www.meetup.com/latinx-latino-hispanic-singles-of-chicago/events/315010536/"
+        "title": "Medium: The Koffee Klatch Ride: Off the Beaten Track (OBT) - Haraz Coffee House",
+        "start_iso": "2026-06-04T10:00:00-04:00",
+        "end_iso": "2026-06-04T13:00:00-04:00",
+        "location": "Eakin Park 8601 Tobin Rd, Annandale, VA 22003 Annandale VA 22003",
+        "url": "https://www.meetup.com/novacbg/events/315017704/"
       },
       {
-        "title": "The Birthday Club",
-        "start_iso": "2026-06-01T13:00:00-04:00",
-        "end_iso": "2026-06-01T13:15:00-04:00",
+        "title": "Did you hear about Kitty Karr by Crystal Smith Paul",
+        "start_iso": "2026-06-06T11:30:00-04:00",
+        "end_iso": "2026-06-06T13:30:00-04:00",
+        "location": "Haraz Coffehouse 11015 Lee Highway, Fairfax, VA 22030 Fairfax VA 22030",
+        "url": "https://www.meetup.com/book-list-book-club/events/312409570/"
+      },
+      {
+        "title": "Saturday Morning Walk and Coffee",
+        "start_iso": "2026-06-06T09:30:00-04:00",
+        "end_iso": "2026-06-06T11:30:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/the-snail-mail-revolution/events/314072438/"
+        "url": "https://www.meetup.com/nova-women-friends/events/314829316/"
       },
       {
-        "title": "Lombard B.Y.O.Craft Night!",
-        "start_iso": "2026-06-03T20:00:00-04:00",
-        "end_iso": "2026-06-03T22:00:00-04:00",
-        "location": "Qahwah House 406 E Roosevelt Rd,, Lombard, IL 60148 Lombard IL 60148",
-        "url": "https://www.meetup.com/lombard-b-y-o-craft-night/events/314969313/"
+        "title": "Coffee, Art & Conversations☕️",
+        "start_iso": "2026-06-07T12:00:00-04:00",
+        "end_iso": "2026-06-07T14:00:00-04:00",
+        "location": "Dolphin Cafe 1510 H St NW suite 100, Washington, DC 20005, Washington, DC 20005 Washington DC 20005",
+        "url": "https://www.meetup.com/dmv-coffee-collective/events/314989294/"
       },
       {
-        "title": "Coffee and \"Tea\"",
-        "start_iso": "2026-06-13T14:00:00-04:00",
-        "end_iso": "2026-06-13T16:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/suburban-chicago-bolingbrook-lgbtqia/events/314706379/"
+        "title": "Evening Turkish Tea ☕🌙",
+        "start_iso": "2026-06-11T22:00:00-04:00",
+        "end_iso": "2026-06-12T00:00:00-04:00",
+        "location": "Castro The exact location will be disclosed once ticket is comfirmed, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/have-fun-make-friends-sf/events/314524292/"
       },
       {
-        "title": "Coffee at Panera",
-        "start_iso": "2026-06-03T11:00:00-04:00",
-        "end_iso": "2026-06-03T13:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/the-orland-park-widows-and-widowers-meetup-group/events/314167182/"
+        "title": "Morning 5K & Coffee: Golden Gate Promenade (Presidio)",
+        "start_iso": "2026-06-28T12:30:00-04:00",
+        "end_iso": "2026-06-28T14:30:00-04:00",
+        "location": "Crissy Field Center Mason St & Halleck St, San Francisco, CA 94129 San Francisco CA 94129",
+        "url": "https://www.meetup.com/have-fun-make-friends-sf/events/314524459/"
+      },
+      {
+        "title": "Breakfast Hang at SOHN",
+        "start_iso": "2026-07-12T12:00:00-04:00",
+        "end_iso": "2026-07-12T14:00:00-04:00",
+        "location": "SOHN 2535 3rd street, San Francisco, CA 94107 San Francisco CA 94107",
+        "url": "https://www.meetup.com/have-fun-make-friends-sf/events/314972537/"
+      },
+      {
+        "title": "Coffee, creative writing, and chat",
+        "start_iso": "2026-06-27T18:00:00-04:00",
+        "end_iso": "2026-06-27T20:00:00-04:00",
+        "location": "The Yard Coffee 1018 Main St. ,, Redwood City, CA 94063 Redwood City CA 94063",
+        "url": "https://www.meetup.com/san-carlos-friendly-meetup-group/events/313905545/"
+      },
+      {
+        "title": "Coffee, creative writing, and chat",
+        "start_iso": "2026-06-13T18:00:00-04:00",
+        "end_iso": "2026-06-13T20:00:00-04:00",
+        "location": "The Yard Coffee 1018 Main St. ,, Redwood City, CA 94063 Redwood City CA 94063",
+        "url": "https://www.meetup.com/san-carlos-friendly-meetup-group/events/313905544/"
+      },
+      {
+        "title": "Morning Coffee at Thorough Bread & Pastry ☕🥐",
+        "start_iso": "2026-06-21T11:00:00-04:00",
+        "end_iso": "2026-06-21T13:00:00-04:00",
+        "location": "Thorough Bread & Pastry 248 Church Street, San Francisco, CA 94114 San Francisco CA 94114",
+        "url": "https://www.meetup.com/have-fun-make-friends-sf/events/314524429/"
+      },
+      {
+        "title": "Wednesday Evening Walk & Chat",
+        "start_iso": "2026-06-03T21:00:00-04:00",
+        "end_iso": "2026-06-03T22:30:00-04:00",
+        "location": "Pulgas Ridge Parking Lot 167 Edmonds Road, Redwood City, CA 94062 Redwood City CA 94062",
+        "url": "https://www.meetup.com/peninsula-women-in-their-30s-ish-coffee-walks/events/314870824/"
       }
     ]
   },
@@ -7034,14 +7034,14 @@
     "events": []
   },
   "https://www.meetup.com/find/us--oh--cincinnati/car-meets/": {
-    "fetched_at_iso": "2026-05-31T08:11:39.826612-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
     "events": [
       {
-        "title": "Brunch at Ford’s Garage",
-        "start_iso": "2026-05-31T13:30:00-04:00",
-        "end_iso": "2026-05-31T15:30:00-04:00",
-        "location": "Ford’s Garage 2692 Madison Rd, Norwood, OH Norwood OH",
-        "url": "https://www.meetup.com/55-fun-friends/events/314774719/"
+        "title": "RECESS: Soccer or Futbol",
+        "start_iso": "2026-06-17T18:00:00-04:00",
+        "end_iso": "2026-06-17T20:00:00-04:00",
+        "location": "Four Seasons Marina 4609 Kellogg Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314894114/"
       },
       {
         "title": "Cinti Medical Marijuana Meetup on Tuesday 6/2/26 to Mix/Mingle/Network/Celebrate",
@@ -7079,18 +7079,25 @@
         "url": "https://www.meetup.com/cincigeek/events/314708806/"
       },
       {
-        "title": "RECESS: Soccer or Futbol",
-        "start_iso": "2026-06-17T18:00:00-04:00",
-        "end_iso": "2026-06-17T20:00:00-04:00",
-        "location": "Four Seasons Marina 4609 Kellogg Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314894114/"
-      },
-      {
         "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
         "start_iso": "2026-06-14T14:00:00-04:00",
         "end_iso": "2026-06-14T16:00:00-04:00",
         "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314836993/"
+      },
+      {
+        "title": "Pug Meet Up Play Date",
+        "start_iso": "2026-06-18T18:00:00-04:00",
+        "end_iso": "2026-06-18T20:00:00-04:00",
+        "location": "Factory 52 4590 Beech St, Norwood, OH 45212,, Norwood, OH Norwood OH",
+        "url": "https://www.meetup.com/cincinnati-pugs/events/314738666/"
+      },
+      {
+        "title": "Speed Dating and Matchmaking for Singles Ages 25-45 | Cincinnati",
+        "start_iso": "2026-06-16T18:00:00-04:00",
+        "end_iso": "2026-06-16T20:00:00-04:00",
+        "location": "The Pitch Cincy The Pitch Cincy 1430 Central Parkway Cincinnati, OH, 45202, Cincinnati, IN Cincinnati IN",
+        "url": "https://www.meetup.com/findcincinnati/events/314870135/"
       },
       {
         "title": "Cincy Web Tech Drinkup, presented by Veritas Automata",
@@ -7105,13 +7112,6 @@
         "end_iso": "2026-06-10T20:00:00-04:00",
         "location": "Element Eatery 5350 Medpace Way, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/findcincinnati/events/314870129/"
-      },
-      {
-        "title": "Sunday 9am Pickelball at Lang Park. 2.5 +",
-        "start_iso": "2026-05-31T09:00:00-04:00",
-        "end_iso": "2026-05-31T11:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/fifty-plus-singles/events/314982810/"
       },
       {
         "title": "Eat, Drink and Music Trivia at Snow's Lakeside Tavern in Colerain",
@@ -7358,7 +7358,7 @@
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/events/lrjgqtyjcgblc/": {
-    "fetched_at_iso": "2026-05-31T08:11:39.826612-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
     "events": [
       {
         "title": "Cincy .NET Users Group (CINNUG): GitHub Copilot Dev Days",
@@ -7390,7 +7390,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/ky--independence/car-shows/": {
-    "fetched_at_iso": "2026-05-31T08:11:34.962189-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
     "events": []
   },
   "https://www.meetup.com/cincy-hiking-and-social-club-20s-30s-40s/": {
@@ -7589,7 +7589,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/expos/": {
-    "fetched_at_iso": "2026-04-20T08:04:50.952923-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.press.bmwgroup.com/usa/article/detail/T0455796EN_US/iconic-biennial-rally-%E2%80%9Cmini-takes-the-states%E2%80%9D-returns-in-2026-with-three-weekend-nine-city-adventure-across-three-states?language=en_US": {
@@ -7944,7 +7944,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--powell/classic-car-show-this-weekend/": {
-    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/events/2026-wor-scca-autocross-school-annual-tech-day-kil-kare-raceway-western-ohio-808187": {
@@ -7992,7 +7992,7 @@
     "events": []
   },
   "https://www.meetup.com/cincinnati-cyber-security-for-control-systems/events/314514159/": {
-    "fetched_at_iso": "2026-05-31T08:11:39.826612-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
     "events": [
       {
         "title": "(CS)²AI Online™ Replay: Cybersecurity of Electric Vehicles & Automations",
@@ -8024,7 +8024,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/rallies/": {
-    "fetched_at_iso": "2026-05-31T08:11:34.962189-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
     "events": []
   },
   "https://www.meetup.com/tr-tr/techlife-cincinnati/": {
@@ -8097,11 +8097,11 @@
     "events": []
   },
   "https://rallyrd.com/": {
-    "fetched_at_iso": "2026-05-31T08:13:00.731703-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:13.560531-04:00",
     "events": []
   },
   "https://www.merriam-webster.com/dictionary/rally": {
-    "fetched_at_iso": "2026-05-31T08:13:00.731703-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
     "events": []
   },
   "https://rally.co/?srsltid=AfmBOorKhPaHLGSsCd3W7HbyqARnPE1xhko8UQPkh4-7FbxOl9_uHgLE": {
@@ -8109,11 +8109,11 @@
     "events": []
   },
   "https://www.wrc.com/en": {
-    "fetched_at_iso": "2026-05-29T10:00:03.240133-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Rallying": {
-    "fetched_at_iso": "2026-05-29T10:00:03.240133-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
     "events": []
   },
   "https://www.youtube.com/@wrc": {
@@ -8121,19 +8121,19 @@
     "events": []
   },
   "https://www.rally.tv/": {
-    "fetched_at_iso": "2026-05-29T10:00:03.240133-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
     "events": []
   },
   "https://rallyinnovation.com/": {
-    "fetched_at_iso": "2026-05-31T08:13:00.731703-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
     "events": []
   },
   "https://www.reddit.com/r/rally/": {
-    "fetched_at_iso": "2026-05-22T09:32:50.190894-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Road": {
-    "fetched_at_iso": "2026-05-22T09:33:10.357209-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:21.499735-04:00",
     "events": [
       {
         "title": "Road - Wikipedia",
@@ -8145,11 +8145,11 @@
     ]
   },
   "https://www.reddit.com/r/cincinnati/comments/1pc4wp9/how_are_the_roads/": {
-    "fetched_at_iso": "2026-05-22T09:33:10.357209-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:21.499735-04:00",
     "events": []
   },
   "https://dictionary.cambridge.org/us/dictionary/english/road": {
-    "fetched_at_iso": "2026-05-22T09:33:10.357209-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:21.499735-04:00",
     "events": []
   },
   "https://www.youtube.com/watch?v=x3SW8353EeI": {
@@ -8157,7 +8157,7 @@
     "events": []
   },
   "https://www.cincinnati-oh.gov/public-services/about-public-services/traffic-road-operations/": {
-    "fetched_at_iso": "2026-05-22T09:33:10.357209-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:21.499735-04:00",
     "events": []
   },
   "https://www.merriam-webster.com/dictionary/road": {
@@ -8169,27 +8169,27 @@
     "events": []
   },
   "https://www.britannica.com/technology/road": {
-    "fetched_at_iso": "2026-05-15T08:54:15.394377-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:21.499735-04:00",
     "events": []
   },
   "https://www.scca.com/pages/what-is-autocross": {
-    "fetched_at_iso": "2026-05-31T08:14:31.591202-04:00",
+    "fetched_at_iso": "2026-06-02T10:56:01.350082-04:00",
     "events": []
   },
   "https://cincyscca.com/autocross/": {
-    "fetched_at_iso": "2026-05-31T08:14:31.591202-04:00",
+    "fetched_at_iso": "2026-06-02T10:56:01.350082-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Autocross": {
-    "fetched_at_iso": "2026-05-31T08:14:31.591202-04:00",
+    "fetched_at_iso": "2026-06-02T10:56:01.350082-04:00",
     "events": []
   },
   "https://www.youtube.com/watch?v=Af2zJAOAqWQ": {
-    "fetched_at_iso": "2026-05-31T08:14:31.591202-04:00",
+    "fetched_at_iso": "2026-06-02T10:56:01.350082-04:00",
     "events": []
   },
   "https://www.scca.com/pages/i-want-to-autocross": {
-    "fetched_at_iso": "2026-05-31T08:14:31.591202-04:00",
+    "fetched_at_iso": "2026-06-02T10:56:01.350082-04:00",
     "events": []
   },
   "https://www.pca.org/autox": {
@@ -8201,7 +8201,7 @@
     "events": []
   },
   "https://www.eventbrite.com/b/ky--florence/auto-boat-and-air/": {
-    "fetched_at_iso": "2026-05-08T08:08:43.952344-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
     "events": []
   },
   "https://www.wlwt.com/": {
@@ -8225,7 +8225,7 @@
     "events": []
   },
   "https://en.wikipedia.org/wiki/Southern_United_States": {
-    "fetched_at_iso": "2026-05-31T08:12:47.792418-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:53.164581-04:00",
     "events": [
       {
         "title": "Southern United States - Wikipedia",
@@ -8237,15 +8237,15 @@
     ]
   },
   "https://www.subr.edu/": {
-    "fetched_at_iso": "2026-05-31T08:12:47.792418-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:53.164581-04:00",
     "events": []
   },
   "https://www.southernwv.edu/": {
-    "fetched_at_iso": "2026-05-31T08:12:47.792418-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:53.164581-04:00",
     "events": []
   },
   "https://www.southernct.edu/": {
-    "fetched_at_iso": "2026-05-31T08:12:47.792418-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:53.164581-04:00",
     "events": []
   },
   "https://www.reddit.com/r/AskAnAmerican/comments/ero1hq/do_you_consider_cincinnati_a_southern_city/": {
@@ -8257,7 +8257,7 @@
     "events": []
   },
   "https://www.espn.com/mens-college-basketball/team/_/id/2582/southern-jaguars": {
-    "fetched_at_iso": "2026-05-31T08:12:47.792418-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:53.164581-04:00",
     "events": []
   },
   "https://www.gosoin.com/": {
@@ -8265,7 +8265,7 @@
     "events": []
   },
   "https://cincyscca.com/autocross/getting-started/": {
-    "fetched_at_iso": "2026-05-17T08:01:45.834319-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:40.115324-04:00",
     "events": []
   },
   "https://www.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park": {
@@ -8353,7 +8353,7 @@
     "events": []
   },
   "https://www.rallyhealth.com/": {
-    "fetched_at_iso": "2026-05-31T08:13:00.731703-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:13.560531-04:00",
     "events": []
   },
   "https://www.rallyhouse.com/?srsltid=AfmBOooDLHvvdSBlyMr8F36oIm8G7uOX2Ogq5GS1XKpeSsSOt-tZpubi": {
@@ -8365,11 +8365,11 @@
     "events": []
   },
   "https://wearerally.com/": {
-    "fetched_at_iso": "2026-05-31T08:13:00.731703-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:13.560531-04:00",
     "events": []
   },
   "https://www.broadcom.com/products/software/value-stream-management/rally": {
-    "fetched_at_iso": "2026-05-31T08:13:00.731703-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:13.560531-04:00",
     "events": []
   },
   "https://www.youtube.com/shorts/50RLZ9-7l9E": {
@@ -8449,7 +8449,7 @@
     ]
   },
   "https://www.eventbrite.com/e/1st-annual-columbus-northern-lions-club-charity-car-show-tickets-1988942289930": {
-    "fetched_at_iso": "2026-05-17T08:01:41.408827-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
     "events": []
   },
   "https://gvc-bmwcca.org/What_is_an_Autocross": {
@@ -8493,7 +8493,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=14": {
-    "fetched_at_iso": "2026-05-31T08:11:34.962189-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
     "events": []
   },
   "https://www.rallysea.com/": {
@@ -8501,7 +8501,7 @@
     "events": []
   },
   "https://www.rebellerally.com/": {
-    "fetched_at_iso": "2026-05-31T08:13:00.731703-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:13.560531-04:00",
     "events": []
   },
   "https://cincyscca.com/rallycross/2026-rallycross-schedule-and-results/": {
@@ -8569,7 +8569,7 @@
     "events": []
   },
   "https://www.meetup.com/cincinnati-cyber-security-for-control-systems/events/314629239/": {
-    "fetched_at_iso": "2026-05-31T08:11:39.826612-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
     "events": [
       {
         "title": "(CS)²AI Online™ Replay: Demystifying Patching in OT Cybersecurity",
@@ -9213,7 +9213,7 @@
     "events": []
   },
   "https://www.facebook.com/ohiouniversitysouthern/": {
-    "fetched_at_iso": "2026-05-24T08:03:14.192644-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:53.164581-04:00",
     "events": []
   },
   "https://www.rallyhouse.com/?srsltid=AfmBOoqL5j0ek-nn0cmRhtc4ZhU2QRDY7FUXww_w1uYuETBm9GSMOwHA": {
@@ -9237,154 +9237,154 @@
     ]
   },
   "https://www.meetup.com/topics/off-camera-flash/us/": {
-    "fetched_at_iso": "2026-05-31T08:11:39.826612-04:00",
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
     "events": [
       {
-        "title": "Improv workshop at Library.",
-        "start_iso": "2026-05-31T12:00:00-04:00",
-        "end_iso": "2026-05-31T13:00:00-04:00",
-        "location": "Sherwood Regional Library 2501 Sherwood Hall Lane, Alexandria, VA 22306 Alexandria VA 22306",
-        "url": "https://www.meetup.com/dmv-t-v-film-acting-class-collective-group/events/314765836/"
+        "title": "Level 2 Salsa Group Class.",
+        "start_iso": "2026-06-02T19:00:00-04:00",
+        "end_iso": "2026-06-02T20:30:00-04:00",
+        "location": "Crown Dance Studio 2820 Dorr Ave, Fairfax, VA 22031 Fairfax VA 22031",
+        "url": "https://www.meetup.com/dance-classes-at-crown-dance-studio/events/314776303/"
       },
       {
-        "title": "Signal Film Festival",
-        "start_iso": "2026-05-31T16:00:00-04:00",
-        "end_iso": "2026-05-31T20:00:00-04:00",
+        "title": "· Hot Mess in a Wedding Dress · by Stefanie Davis ☼ online event",
+        "start_iso": "2026-06-02T19:00:00-04:00",
+        "end_iso": "2026-06-02T21:00:00-04:00",
+        "location": "Nowhere King Street, Alexandria, VA 22301 Alexandria VA 22301",
+        "url": "https://www.meetup.com/oddball-cinema/events/312386210/"
+      },
+      {
+        "title": "American Mahjongg — Open Play & Free Lessons",
+        "start_iso": "2026-06-02T18:00:00-04:00",
+        "end_iso": "2026-06-02T20:00:00-04:00",
+        "location": "Martin L King Library 901 G Street Northwest, Washington D.C., DC 20001 Washington D.C. DC 20001",
+        "url": "https://www.meetup.com/dcmahjongg/events/314774761/"
+      },
+      {
+        "title": "Olney Big Band at Brookside Gardens",
+        "start_iso": "2026-06-02T18:30:00-04:00",
+        "end_iso": "2026-06-02T20:00:00-04:00",
+        "location": "Brookside Gardens 1800 Glenallen Ave,, Wheaton, MD 20902 Wheaton MD 20902",
+        "url": "https://www.meetup.com/50s-60s-and-70s-of-the-red-line-and-beyond/events/314420899/"
+      },
+      {
+        "title": "Alexandria Sportrock Tuesday (Unhosted) Climbing",
+        "start_iso": "2026-06-02T19:00:00-04:00",
+        "end_iso": "2026-06-02T21:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/dcmediamakers/events/313559558/"
+        "url": "https://www.meetup.com/dmvrockclimbing/events/314776135/"
       },
       {
-        "title": "Tuner @ Regal Gallery Place - 4:10pm show",
-        "start_iso": "2026-05-31T16:10:00-04:00",
-        "end_iso": "2026-05-31T19:10:00-04:00",
-        "location": "Regal Gallery Place 701 7th St NW, Washington, DC 20001 Washington DC 20001",
-        "url": "https://www.meetup.com/snfcdc/events/315017026/"
+        "title": "Medium(-) Level: The Koffee Klatch Ride: Frame in Vienna",
+        "start_iso": "2026-06-02T10:00:00-04:00",
+        "end_iso": "2026-06-02T13:00:00-04:00",
+        "location": "Bluemont Park South Shelter 325 N. Manchester St. Arlington, VA, Arlington, VA 22203 Arlington VA 22203",
+        "url": "https://www.meetup.com/novacbg/events/315018966/"
       },
       {
-        "title": "Coffee & Chat",
-        "start_iso": "2026-05-31T10:15:00-04:00",
-        "end_iso": "2026-05-31T12:15:00-04:00",
-        "location": "Quincy Park 1201 N Quincy St, Arlington, VA 22201 Arlington VA 22201",
-        "url": "https://www.meetup.com/arlington-coffee-and-chill-meetup/events/314810826/"
+        "title": "Amharic Conversation Class",
+        "start_iso": "2026-06-02T18:00:00-04:00",
+        "end_iso": "2026-06-02T20:00:00-04:00",
+        "location": "Refer Eventbrite Ticket Link Refer Eventbrite Ticket Link, Washington, dc 20001 Washington dc 20001",
+        "url": "https://www.meetup.com/language-lovers-dc/events/314775067/"
       },
       {
-        "title": "ASL Brunch on Sundays in Greenbelt",
-        "start_iso": "2026-05-31T10:30:00-04:00",
-        "end_iso": "2026-05-31T12:00:00-04:00",
-        "location": "Cedars of Lebanon 103 Centerway, Greenbelt, MD 20770 Greenbelt MD 20770",
-        "url": "https://www.meetup.com/aslbridge/events/313760993/"
+        "title": "Coffee, Art & Conversations☕️",
+        "start_iso": "2026-06-07T12:00:00-04:00",
+        "end_iso": "2026-06-07T14:00:00-04:00",
+        "location": "Dolphin Cafe 1510 H St NW suite 100, Washington, DC 20005, Washington, DC 20005 Washington DC 20005",
+        "url": "https://www.meetup.com/dmv-coffee-collective/events/314989294/"
       },
       {
-        "title": "Alexandria Cars & Coffee @Hollin Hall Shopping Center",
-        "start_iso": "2026-05-31T08:00:00-04:00",
-        "end_iso": "2026-05-31T10:00:00-04:00",
+        "title": "Photo Class: iPhone Photography - Getting Started at the National Gallery of Art",
+        "start_iso": "2026-06-07T10:30:00-04:00",
+        "end_iso": "2026-06-07T14:30:00-04:00",
+        "location": "Washington USA Washington, DC Washington USA Washington, DC, Washington, DC Washington DC",
+        "url": "https://www.meetup.com/capital-photography-center/events/314390594/"
+      },
+      {
+        "title": "American Smooth & Rhythm Classes (Saturday)",
+        "start_iso": "2026-06-06T10:30:00-04:00",
+        "end_iso": "2026-06-06T12:00:00-04:00",
+        "location": "Crown Dance Studio 2820 Dorr Ave, Fairfax, VA 22031 Fairfax VA 22031",
+        "url": "https://www.meetup.com/dance-classes-at-crown-dance-studio/events/314830934/"
+      },
+      {
+        "title": "Photography Isn’t Dead",
+        "start_iso": "2026-06-07T14:00:00-04:00",
+        "end_iso": "2026-06-07T16:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/alexandria-cars-coffee/events/313479078/"
+        "url": "https://www.meetup.com/6449oldalexanderferryroad/events/314871468/"
       },
       {
-        "title": "Introductory Clinic",
-        "start_iso": "2026-05-31T09:00:00-04:00",
-        "end_iso": "2026-05-31T10:00:00-04:00",
-        "location": "Woodrow Wilson Plaza 1300 Pennsylvania Ave NW, Washington, DC Washington DC",
-        "url": "https://www.meetup.com/washington-area-roadskaters/events/314706286/"
+        "title": "The Washington Pug Meetup Group Monthly Meetup",
+        "start_iso": "2026-06-06T10:00:00-04:00",
+        "end_iso": "2026-06-06T13:00:00-04:00",
+        "location": "Shirlington Park 2601 South Arlington Mill Drive, Arlington, VA 22206 Arlington VA 22206",
+        "url": "https://www.meetup.com/pug-dc-arlington-chrissiebrodigan/events/314830446/"
       },
       {
-        "title": "Washington DC Gay Zoom Online Speed Dating",
-        "start_iso": "2026-05-31T16:00:00-04:00",
-        "end_iso": "2026-05-31T17:00:00-04:00",
-        "location": "William Jefferson Clinton Building William Jefferson Clinton Building, Washington DC, DC 20004 Washington DC DC 20004",
-        "url": "https://www.meetup.com/glowing-hearts-gay-men-social-meetups/events/314991973/"
+        "title": "Shut Up & Write!® in Washington DC",
+        "start_iso": "2026-06-03T19:00:00-04:00",
+        "end_iso": "2026-06-03T20:30:00-04:00",
+        "location": "Sonny's Pizza 3120 Georgia Ave NW, washington, DC 20010 washington DC 20010",
+        "url": "https://www.meetup.com/shutupandwritedc/events/313635982/"
       },
       {
-        "title": "Easy Hike: 2-3 miles Lake Artemesia",
-        "start_iso": "2026-05-31T11:15:00-04:00",
-        "end_iso": "2026-05-31T13:15:00-04:00",
-        "location": "Lake Artemesia 8190 55th Ave ,, Berwyn Heights, MD 20740 Berwyn Heights MD 20740",
-        "url": "https://www.meetup.com/hiking-and-other-stuff-group/events/314747090/"
+        "title": "DC Code & Coffee - Southwest Library - Free Coffee!",
+        "start_iso": "2026-06-07T13:30:00-04:00",
+        "end_iso": "2026-06-07T16:30:00-04:00",
+        "location": "Southwest Library 900 Wesley Place, SW, Washington, DC Washington DC",
+        "url": "https://www.meetup.com/dc-code-coffee/events/314939258/"
       },
       {
-        "title": "Shut up & Write Arlington/Alexandria",
-        "start_iso": "2026-05-31T07:30:00-04:00",
-        "end_iso": "2026-05-31T09:00:00-04:00",
-        "location": "Kaldi's Social House 3100 10th St N, Arlington, VA 22201 Arlington VA 22201",
-        "url": "https://www.meetup.com/shutupandwritearlington/events/314744495/"
-      },
-      {
-        "title": "Dim Sum Brunch in Rockville Corner Bites",
-        "start_iso": "2026-05-31T10:30:00-04:00",
-        "end_iso": "2026-05-31T12:30:00-04:00",
-        "location": "Corner Bites 316 N. Washington St, Rockville, MD 20850 Rockville MD 20850",
-        "url": "https://www.meetup.com/social-sips-bites-mclean-edition/events/314310724/"
-      },
-      {
-        "title": "Meaningful Conversation and Coffee - Northside Social Falls Church",
-        "start_iso": "2026-05-31T10:00:00-04:00",
-        "end_iso": "2026-05-31T11:30:00-04:00",
-        "location": "Northside Social Coffee & Wine Falls Church 205 Park Avenue, Falls Church, VA 22046 Falls Church VA 22046",
-        "url": "https://www.meetup.com/higher-grounds-dmv/events/312439881/"
-      },
-      {
-        "title": "Sapphic Sunday Slowdown at Spark Social",
-        "start_iso": "2026-05-31T16:00:00-04:00",
-        "end_iso": "2026-05-31T19:00:00-04:00",
+        "title": "Foundation Scaffolding",
+        "start_iso": "2026-06-07T17:00:00-04:00",
+        "end_iso": "2026-06-07T19:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/dynamic2595/events/314924324/"
+        "url": "https://www.meetup.com/bay-flash-mob-meetup-group/events/314709961/"
       },
       {
-        "title": "Sunday Skate - Capital Crescent Trail!",
-        "start_iso": "2026-05-31T10:00:00-04:00",
-        "end_iso": "2026-05-31T13:00:00-04:00",
-        "location": "Pershing Park 14th Street and Pennsylvania Avenue NW, Washington, DC 20045 Washington DC 20045",
-        "url": "https://www.meetup.com/washington-area-roadskaters/events/314744655/"
-      },
-      {
-        "title": "May 2026 Photo Challenge: Close Up",
-        "start_iso": "2026-06-01T00:45:00-04:00",
-        "end_iso": "2026-06-01T02:45:00-04:00",
+        "title": "(SOLD OUT) Adobe Create Now - Design Week Event",
+        "start_iso": "2026-06-03T20:00:00-04:00",
+        "end_iso": "2026-06-03T23:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/chicago-digital-photo/events/314631592/"
+        "url": "https://www.meetup.com/california_camera_club/events/314789798/"
       },
       {
-        "title": "Thriller - The Michael Jackson Dance Party (social)",
-        "start_iso": "2026-06-13T21:30:00-04:00",
-        "end_iso": "2026-06-14T00:30:00-04:00",
-        "location": "Chop Shop 2033 W North Ave, Chicago, Illinois 60647, Chicago, IL Chicago IL",
-        "url": "https://www.meetup.com/chicago-thriller-flash-mob/events/314898059/"
+        "title": "Mini Masterclass San Francisco, CA- Photography, Lighting & Portfolio Review",
+        "start_iso": "2026-06-26T19:00:00-04:00",
+        "end_iso": "2026-06-27T00:00:00-04:00",
+        "location": "AC Hotel San Francisco Airport/Oyster Point Waterfront 1333 Veterans Boulevard, South San Francisco, California, USA, 94080, San Francisco, CA 94080 San Francisco CA 94080",
+        "url": "https://www.meetup.com/photographytraining/events/314423328/"
       },
       {
-        "title": "Motoring Along Chicago's Old Motor Row",
-        "start_iso": "2026-06-13T14:30:00-04:00",
-        "end_iso": "2026-06-13T17:30:00-04:00",
+        "title": "Photographer Talk - SF Leica Gallery",
+        "start_iso": "2026-06-18T20:30:00-04:00",
+        "end_iso": "2026-06-18T23:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/chicago-streets-and-beyond-photography-group/events/314618806/"
+        "url": "https://www.meetup.com/california_camera_club/events/314748267/"
       },
       {
-        "title": "MAPLD FANFEST SUMMER READING KICK-OFF",
-        "start_iso": "2026-06-13T15:00:00-04:00",
-        "end_iso": "2026-06-13T20:00:00-04:00",
-        "location": "Matteson Area Public Library District 801 School Ave, Matteson, IL 60443 Matteson IL 60443",
-        "url": "https://www.meetup.com/matteson-library-events-and-classes/events/315001373/"
+        "title": "🌈 Distance Makes the Disco Grow Stronger",
+        "start_iso": "2026-06-08T22:00:00-04:00",
+        "end_iso": "2026-06-09T00:00:00-04:00",
+        "location": "Noisebridge 272 Capp St, Noisebridge, San Francisco, CA 94110 San Francisco CA 94110",
+        "url": "https://www.meetup.com/noisebridge/events/314870763/"
       },
       {
-        "title": "Navy Pier fireworks",
-        "start_iso": "2026-06-10T21:30:00-04:00",
-        "end_iso": "2026-06-10T22:30:00-04:00",
+        "title": "Flag Day Gaming!",
+        "start_iso": "2026-06-14T17:00:00-04:00",
+        "end_iso": "2026-06-14T22:00:00-04:00",
+        "location": "9927 Stanley Ave 9927 Stanley Ave, Oakland, CA 94605 Oakland CA 94605",
+        "url": "https://www.meetup.com/eastbay-gay-board-gamers/events/314943595/"
+      },
+      {
+        "title": "Tanzania Safari",
+        "start_iso": "2026-06-15T22:00:00-04:00",
+        "end_iso": "2026-06-25T00:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/chicago-streets-and-beyond-photography-group/events/313103307/"
-      },
-      {
-        "title": "American Writers Festival - Harold Washington Library Center",
-        "start_iso": "2026-06-07T11:00:00-04:00",
-        "end_iso": "2026-06-07T18:00:00-04:00",
-        "location": "Harold Washington Library 400 South State Street, Chicago, IL 60605 Chicago IL 60605",
-        "url": "https://www.meetup.com/the-american-writers-museum/events/314567771/"
-      },
-      {
-        "title": "Cinematography and Lighting Class",
-        "start_iso": "2026-06-03T19:30:00-04:00",
-        "end_iso": "2026-06-03T22:30:00-04:00",
-        "location": "Chicago Filmmakers 1326 W Hollywood Ave, Chicago, IL 60660 Chicago IL 60660",
-        "url": "https://www.meetup.com/chicago-filmmakers/events/314793328/"
+        "url": "https://www.meetup.com/sfphotolovers/events/311855081/"
       }
     ]
   },
@@ -9541,7 +9541,7 @@
     ]
   },
   "https://www.youtube.com/@wrc/videos": {
-    "fetched_at_iso": "2026-05-26T09:55:57.426022-04:00",
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
     "events": []
   },
   "https://www.thesaurus.com/browse/rally": {
@@ -9577,7 +9577,7 @@
     "events": []
   },
   "https://www.ohio.edu/southern": {
-    "fetched_at_iso": "2026-05-31T08:12:47.792418-04:00",
+    "fetched_at_iso": "2026-06-02T10:54:53.164581-04:00",
     "events": []
   },
   "https://www.rallyhouse.com/?srsltid=AfmBOopHRyt1cFeCkhppzwHbCCKGF049oYbVukGtj1zk51zsxc9ZsTcL": {
@@ -9594,6 +9594,243 @@
   },
   "https://edgewaterrace.com/autocross-1": {
     "fetched_at_iso": "2026-05-31T08:14:31.591202-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/ky--florence/northern-ky-speed-dating/": {
+    "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/job-fairs/": {
+    "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
+    "events": []
+  },
+  "https://www.meetup.com/topics/car-enthusiasts/": {
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
+    "events": [
+      {
+        "title": "Castro to Mt Sutro Loop",
+        "start_iso": "2026-06-02T17:00:00-04:00",
+        "end_iso": "2026-06-02T19:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/boomer-women-with-time-sense-of-humor-pandemic-style/events/314758794/"
+      },
+      {
+        "title": "Oakland Warehouse Toastmasters - Zoom & In Person - Improve Public Speaking",
+        "start_iso": "2026-06-02T10:00:00-04:00",
+        "end_iso": "2026-06-02T11:00:00-04:00",
+        "location": "Warehouse 416 416 26th St, Oakland, CA Oakland CA",
+        "url": "https://www.meetup.com/d57_toastmasters_clubs_meetup_group/events/314768307/"
+      },
+      {
+        "title": "Presidio loop over hills and along the coast",
+        "start_iso": "2026-06-02T14:10:00-04:00",
+        "end_iso": "2026-06-02T18:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/boomer-women-with-time-sense-of-humor-pandemic-style/events/314620434/"
+      },
+      {
+        "title": "Palo Alto Early Risers Toastmasters",
+        "start_iso": "2026-06-02T09:30:00-04:00",
+        "end_iso": "2026-06-02T11:00:00-04:00",
+        "location": "3391 Middlefield Rd 3391 Middlefield Rd, Palo Alto, CA 94306 Palo Alto CA 94306",
+        "url": "https://www.meetup.com/district4toastmasters/events/314768194/"
+      },
+      {
+        "title": "Microsoft Build 2026 - In-person and Online event",
+        "start_iso": "2026-06-02T11:00:00-04:00",
+        "end_iso": "2026-06-03T21:00:00-04:00",
+        "location": "Fort Mason Center 2 Marina Blvd, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/northtorontoug/events/314321693/"
+      },
+      {
+        "title": "LeTip of Fremont - Business to Business Networking Since 2007",
+        "start_iso": "2026-06-02T10:00:00-04:00",
+        "end_iso": "2026-06-02T11:30:00-04:00",
+        "location": "Sunrise Chiropractic 39210 State St Ste 120, Fremont, CA Fremont CA",
+        "url": "https://www.meetup.com/letip-of-fremont/events/313506839/"
+      },
+      {
+        "title": "Brickyard Cove to end of Bay Bridge via Bay Trail",
+        "start_iso": "2026-06-02T13:00:00-04:00",
+        "end_iso": "2026-06-02T16:00:00-04:00",
+        "location": "Brickyard Cove 599 University Ave, Berkeley, ca 94710 Berkeley ca 94710",
+        "url": "https://www.meetup.com/slow-spokes/events/315043674/"
+      },
+      {
+        "title": "Bollywood Nights at Salesforce Park - Free",
+        "start_iso": "2026-06-05T20:30:00-04:00",
+        "end_iso": "2026-06-05T22:00:00-04:00",
+        "location": "salesforce park 425 mission street, san francisco, CA 94105 san francisco CA 94105",
+        "url": "https://www.meetup.com/iwanttodothatsf/events/314580787/"
+      },
+      {
+        "title": "Master the Art Communication with San Carlos-Belmont Toastmasters",
+        "start_iso": "2026-06-02T21:15:00-04:00",
+        "end_iso": "2026-06-02T22:45:00-04:00",
+        "location": "San Carlos Library 610 Elm St, San Carlos, CA 94070 San Carlos CA 94070",
+        "url": "https://www.meetup.com/san-carlos-belmont-toastmasters-meetup-group/events/314957889/"
+      },
+      {
+        "title": "R&B Night w/ Childfree by Choice SF",
+        "start_iso": "2026-06-03T21:00:00-04:00",
+        "end_iso": "2026-06-03T23:00:00-04:00",
+        "location": "Rise over Run Rooftop Bar and Restaurant 33 turk st,, San Francisco, CA 94102 San Francisco CA 94102",
+        "url": "https://www.meetup.com/childfree-by-choice-san-francisco/events/314802823/"
+      },
+      {
+        "title": "Let’s do Board Games for a change, Anyone? (Burlingame)",
+        "start_iso": "2026-06-05T21:30:00-04:00",
+        "end_iso": "2026-06-05T23:30:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/asianamericanadventurers-explorers/events/314612428/"
+      },
+      {
+        "title": "Costa Rica Eco Adventure: Waterfalls, Snorkeling, Zip lines, Rafting, Volcanoes!",
+        "start_iso": "2026-06-05T22:00:00-04:00",
+        "end_iso": "2026-06-15T00:00:00-04:00",
+        "location": "International Terminal - San Francisco International Airport (SFO) San Francisco, California 94128 SFO, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/iwanttodothatsf/events/310894060/"
+      },
+      {
+        "title": "Rhino Business Toastmasters Weekly Meeting",
+        "start_iso": "2026-06-02T21:15:00-04:00",
+        "end_iso": "2026-06-02T22:45:00-04:00",
+        "location": "Arup 560 Mission St Ste 700, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/rhino-business-club-toastmasters-meetup-group/events/314778493/"
+      },
+      {
+        "title": "MLK Shoreline + Ferry, ˜20 miles (Ride #120)",
+        "start_iso": "2026-06-07T12:30:00-04:00",
+        "end_iso": "2026-06-07T16:00:00-04:00",
+        "location": "Lake Merritt 800 Oak St, Oakland, CA 94607 Oakland CA 94607",
+        "url": "https://www.meetup.com/eastbay-bike-and-music/events/314950539/"
+      },
+      {
+        "title": "Childfree Drinks, Snacks, and Games at the Detour",
+        "start_iso": "2026-06-14T17:30:00-04:00",
+        "end_iso": "2026-06-14T20:00:00-04:00",
+        "location": "The Detour 2200 Market St, San Francisco, CA 94114 San Francisco CA 94114",
+        "url": "https://www.meetup.com/childfree-by-choice-san-francisco/events/314926754/"
+      },
+      {
+        "title": "Master the Art of Communication & Leadership: Hybrid Toastmasters Open House",
+        "start_iso": "2026-06-16T21:15:00-04:00",
+        "end_iso": "2026-06-16T22:45:00-04:00",
+        "location": "Belmont Public Library 1110 Alameda de las Pulgas, Belmont, CA 94002 Belmont CA 94002",
+        "url": "https://www.meetup.com/san-carlos-belmont-toastmasters-meetup-group/events/314957928/"
+      },
+      {
+        "title": "SF Speed Dating for 30s/40s",
+        "start_iso": "2026-06-14T17:30:00-04:00",
+        "end_iso": "2026-06-14T19:30:00-04:00",
+        "location": "DACHA Kitchen & Bar 1085 Sutter St, San Francisco, CA 94109 San Francisco CA 94109",
+        "url": "https://www.meetup.com/iwanttodothatsf/events/314790052/"
+      },
+      {
+        "title": "Real Estate Networking: Unleash Your Potential",
+        "start_iso": "2026-06-11T21:30:00-04:00",
+        "end_iso": "2026-06-11T23:30:00-04:00",
+        "location": "140 E 4th Ave 140 E 4th Ave, San Mateo, CA 94401 San Mateo CA 94401",
+        "url": "https://www.meetup.com/exclusive-bay-area-real-estate-group/events/314481074/"
+      },
+      {
+        "title": "Doc Wong Street Riding Clinic!",
+        "start_iso": "2026-06-14T12:00:00-04:00",
+        "end_iso": "2026-06-14T17:30:00-04:00",
+        "location": "Full Motion Chiropractic 1021 Alameda de las Pulgas, Belmont, CA 94002 Belmont CA 94002",
+        "url": "https://www.meetup.com/docwong/events/314833840/"
+      },
+      {
+        "title": "SF Speed Dating Party for 30s/40s",
+        "start_iso": "2026-06-14T17:30:00-04:00",
+        "end_iso": "2026-06-14T19:30:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/southbayadventure/events/314775192/"
+      },
+      {
+        "title": "Exploratorium After Dark: Unplug and Play",
+        "start_iso": "2026-06-18T21:00:00-04:00",
+        "end_iso": "2026-06-19T01:00:00-04:00",
+        "location": "Exploratorium Pier 15 on the Embarcadero, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/bay-area-millennials-and-gen-z-meetup-group/events/313894744/"
+      }
+    ]
+  },
+  "https://www.meetup.com/movingwater/": {
+    "fetched_at_iso": "2026-06-02T10:53:45.707917-04:00",
+    "events": [
+      {
+        "title": "After Work! Great Miami River Tipp City to Taylorsville Metropark Dam - 6 Miles",
+        "start_iso": "2026-06-03T17:00:00-04:00",
+        "end_iso": "2026-06-03T20:00:00-04:00",
+        "location": "Tipp City Canoe Ramp 2 Wagon Wheel Rd, Tipp City, OH Tipp City OH",
+        "url": "https://www.meetup.com/movingwater-flatwater-kayaking-camping-outdoor-watersports/events/313555029/"
+      },
+      {
+        "title": "Try Mountain Biking with Five Rivers Metro Park @ MOMBA",
+        "start_iso": "2026-06-09T16:00:00-04:00",
+        "end_iso": "2026-06-09T19:00:00-04:00",
+        "location": "Huffman/ MOMBA trails 4485 Union Schoolhouse Rd, Dayton, OH Dayton OH",
+        "url": "https://www.meetup.com/movingwater-flatwater-kayaking-camping-outdoor-watersports/events/313428829/"
+      },
+      {
+        "title": "Little Miami 3.7 miles -Narrows Reserve to Washington Mills Road",
+        "start_iso": "2026-07-01T17:30:00-04:00",
+        "end_iso": "2026-07-01T20:30:00-04:00",
+        "location": "The Narrows Reserve 2575 Indian Ripple Road, Beavercreek, OH Beavercreek OH",
+        "url": "https://www.meetup.com/movingwater-flatwater-kayaking-camping-outdoor-watersports/events/313774271/"
+      },
+      {
+        "title": "Paddle the Best Sections of the Little Miami River on Independence Day!",
+        "start_iso": "2026-07-04T09:00:00-04:00",
+        "end_iso": "2026-07-04T14:30:00-04:00",
+        "location": "Kelley Nature Preserve 297 Ohio 126, Loveland, OH Loveland OH",
+        "url": "https://www.meetup.com/movingwater-flatwater-kayaking-camping-outdoor-watersports/events/313894041/"
+      }
+    ]
+  },
+  "https://www.rallyhouse.com/?srsltid=AfmBOopeg56H-3D6de7Jw71kLyUYJ3qwXEHhHEW563LgSF39znwGqo1e": {
+    "fetched_at_iso": "2026-06-02T10:54:13.560531-04:00",
+    "events": []
+  },
+  "https://rallycu.com/": {
+    "fetched_at_iso": "2026-06-02T10:54:13.560531-04:00",
+    "events": [
+      {
+        "title": "Home | Rally Credit Union",
+        "start_iso": "2025-06-12T00:00:00-04:00",
+        "end_iso": "2025-06-12T02:00:00-04:00",
+        "location": "",
+        "url": "https://rallycu.com/"
+      }
+    ]
+  },
+  "https://rally.co/?srsltid=AfmBOoplFqA6m7evYauWje1ZhPr0yDZWHBfaxH9My_U6drpzAMAUnDw5": {
+    "fetched_at_iso": "2026-06-02T10:54:13.560531-04:00",
+    "events": []
+  },
+  "https://www.reddit.com/r/cincinnati/comments/1tq5ira/roads_closed_in_rookwood/": {
+    "fetched_at_iso": "2026-06-02T10:54:21.499735-04:00",
+    "events": []
+  },
+  "https://www.dictionary.com/browse/southern": {
+    "fetched_at_iso": "2026-06-02T10:54:53.164581-04:00",
+    "events": []
+  },
+  "https://checkersandrallys.com/location/rally-s-7312-reading-rd-97757": {
+    "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
+    "events": []
+  },
+  "https://cincyscca.com/category/solo/": {
+    "fetched_at_iso": "2026-06-02T10:55:40.115324-04:00",
+    "events": []
+  },
+  "https://www.facebook.com/groups/CincySCCASolo/": {
+    "fetched_at_iso": "2026-06-02T10:55:40.115324-04:00",
+    "events": []
+  },
+  "https://www.sfrautox.com/?page_id=884": {
+    "fetched_at_iso": "2026-06-02T10:56:01.350082-04:00",
     "events": []
   }
 }
