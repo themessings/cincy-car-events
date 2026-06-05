@@ -1,67 +1,7 @@
 {
-  "generated_at_iso": "2026-06-02T10:56:20.562083-04:00",
-  "count": 190,
+  "generated_at_iso": "2026-06-05T09:55:51.379654-04:00",
+  "count": 226,
   "events": [
-    {
-      "Event Name": "TIME CHANGED Monthly Coffee Meetup at Panera",
-      "Date": "2026-06-02",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ellicott-city-womens-meetup-45/events/311922749/"
-    },
-    {
-      "Event Name": "Cinti Medical Marijuana Meetup on Tuesday 6/2/26 to Mix/Mingle/Network/Celebrate",
-      "Date": "2026-06-02",
-      "Start Time": "8:00 PM",
-      "End Time": "10:00 PM",
-      "Location": "3301 Madison Rd, Cincinnati, OH",
-      "Address": "3301 Madison Rd, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-medical-marijuana-meetup/events/314894125/"
-    },
-    {
-      "Event Name": "Rhinegeist Tap Takeover",
-      "Date": "2026-06-03",
-      "Start Time": "3:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "6963 South Liberty Drive Liberty Township OH 45044",
-      "Address": "6963 South Liberty Drive Liberty Township OH 45044",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-06-03",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Enthusiast Showdown 2026 - Track Day • Car Show • Swap Meet",
-      "Date": "2026-06-05",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 PM",
-      "Location": "1000 Seville Rd, Wadsworth, OH",
-      "Address": "1000 Seville Rd, Wadsworth, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/enthusiast-showdown-2026-track/2042098213377674/"
-    },
     {
       "Event Name": "RallyCross – Edgewater",
       "Date": "2026-06-05",
@@ -75,6 +15,54 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
+      "Event Name": "Gilroy: Royal-T Ranch Tour and Barn Picnic",
+      "Date": "2026-06-05",
+      "Start Time": "1:00 PM",
+      "End Time": "4:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/vintage-women-of-the-south-bay/events/314776893/"
+    },
+    {
+      "Event Name": "Gilroy: Royal-T Ranch Tour and Barn Picnic",
+      "Date": "2026-06-05",
+      "Start Time": "1:00 PM",
+      "End Time": "4:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/ja-JP/vintage-women-of-the-south-bay/events/314776893/"
+    },
+    {
+      "Event Name": "Washboard Festival Cassic Car Cruise-In",
+      "Date": "2026-06-05",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Spring St S, Logan, OH 43138",
+      "Address": "Spring St S, Logan, OH 43138",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/washboard-festival-cassic-car-/930723563005527/"
+    },
+    {
+      "Event Name": "Cruisin' Through the Century: Downtown Bloomington's Route 66 Centennial Celebration",
+      "Date": "2026-06-05",
+      "Start Time": "6:00 PM",
+      "End Time": "11:00 PM",
+      "Location": "Downtown Bloomington",
+      "Address": "Downtown Bloomington",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cruisin-through-the-century-do/1473692100430424/"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-06-06",
       "Start Time": "8:00 AM",
@@ -85,6 +73,30 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859376271067/"
+    },
+    {
+      "Event Name": "62nd Annual Spring Festival Car Show & Swap Meet",
+      "Date": "2026-06-06",
+      "Start Time": "8:00 AM",
+      "End Time": "4:30 PM",
+      "Location": "Fairfield County Fairgrounds",
+      "Address": "Fairfield County Fairgrounds",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/62nd-annual-spring-festival-ca/962229909550231/"
+    },
+    {
+      "Event Name": "2026 Meet 3",
+      "Date": "2026-06-06",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Austin Landing Blvd, Miamisburg, OH 45342",
+      "Address": "Austin Landing Blvd, Miamisburg, OH 45342",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "fb://event/?id=1761218888588346"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -135,6 +147,30 @@
       "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738799/"
     },
     {
+      "Event Name": "LOWRIDER MAGAZINE SUPER SHOW - INDIANAPOLIS",
+      "Date": "2026-06-06",
+      "Start Time": "11:00 AM",
+      "End Time": "6:00 PM",
+      "Location": "Indiana State Fairgrounds & Event Center",
+      "Address": "Indiana State Fairgrounds & Event Center",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/lowrider-magazine-super-show-i/2104959997085931/"
+    },
+    {
+      "Event Name": "2026 Bryan Lewis Memorial Car Show",
+      "Date": "2026-06-06",
+      "Start Time": "11:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "Upper arlington lutheran church mill run",
+      "Address": "Upper arlington lutheran church mill run",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/2026-bryan-lewis-memorial-car-/771487962370084/"
+    },
+    {
       "Event Name": "Oxford Masonic Lodge Annual Charity Car and Bike show",
       "Date": "2026-06-06",
       "Start Time": "2:00 PM",
@@ -145,6 +181,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
+    },
+    {
+      "Event Name": "Jax Wax Street Madness",
+      "Date": "2026-06-06",
+      "Start Time": "3:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "National Trail Raceway",
+      "Address": "National Trail Raceway",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/jax-wax-street-madness/1269559161576293/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -159,6 +207,30 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "EMMEET- COLUMBUS (BIKE/CAR) EVENT",
+      "Date": "2026-06-07",
+      "Start Time": "2:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "4100 Columbia St Hilliard, OH 43026",
+      "Address": "4100 Columbia St Hilliard, OH 43026",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/emmeet-columbus-bikecar-event/1492235252637292/"
+    },
+    {
+      "Event Name": "Ashlea Albertson Memorial Car, Truck & Bike Show",
+      "Date": "2026-06-07",
+      "Start Time": "3:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "Indianapolis Speedrome",
+      "Address": "Indianapolis Speedrome",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/ashlea-albertson-memorial-car-/896656706384918/"
+    },
+    {
       "Event Name": "Southern Ohio Forest Rally – Day 1",
       "Date": "2026-06-10",
       "Start Time": "9:00 AM",
@@ -169,6 +241,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
+      "Date": "2026-06-10",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314569604/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -207,6 +291,18 @@
       "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
+      "Event Name": "Blackwings & Batteries",
+      "Date": "2026-06-13",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "Germain Cadillac of Easton",
+      "Address": "Germain Cadillac of Easton",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/blackwings-batteries/1183379190525245/"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-06-13",
       "Start Time": "8:00 AM",
@@ -243,6 +339,30 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "Event Name": "Cars and Coffee featuring RUGGED RIDES Showcase!",
+      "Date": "2026-06-13",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "5575 Keim Circle, Columbus, OH",
+      "Address": "5575 Keim Circle, Columbus, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-and-coffee-featuring-rugg/812851634545098/"
+    },
+    {
+      "Event Name": "Hocking Hills Cars and Coffee June Meet",
+      "Date": "2026-06-13",
+      "Start Time": "9:00 AM",
+      "End Time": "11:30 AM",
+      "Location": "Hungry Buffalo Restaurant",
+      "Address": "Hungry Buffalo Restaurant",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/hocking-hills-cars-and-coffee-/26957375527282541/"
+    },
+    {
       "Event Name": "Tri-State Truck Takeover",
       "Date": "2026-06-13",
       "Start Time": "10:00 AM",
@@ -255,6 +375,42 @@
       "Event URL": "https://facebook.com/events/s/tri-state-truck-takeover/1371892453975764/"
     },
     {
+      "Event Name": "Cruise-In to Connection!",
+      "Date": "2026-06-13",
+      "Start Time": "10:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "Rosegate Commons",
+      "Address": "Rosegate Commons",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cruise-in-to-connection/3486737658148156/"
+    },
+    {
+      "Event Name": "5 Year Anniversary Bash & Season Opener",
+      "Date": "2026-06-13",
+      "Start Time": "10:00 AM",
+      "End Time": "4:00 PM",
+      "Location": "1800 Georgesville Square Dr, Columbus, OH",
+      "Address": "1800 Georgesville Square Dr, Columbus, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/5-year-anniversary-bash-season/1630944078323888/"
+    },
+    {
+      "Event Name": "BACKWOODS BASH 2K26",
+      "Date": "2026-06-13",
+      "Start Time": "11:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "KimTam Park at Melanie Springs",
+      "Address": "KimTam Park at Melanie Springs",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/backwoods-bash-2k26/2028480841052760/"
+    },
+    {
       "Event Name": "Car & Bike Show",
       "Date": "2026-06-13",
       "Start Time": "11:00 AM",
@@ -265,6 +421,30 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/car-bike-show/1464874131923686/"
+    },
+    {
+      "Event Name": "WARM WATER COVE DRONE MEETUP in San Francisco!",
+      "Date": "2026-06-13",
+      "Start Time": "1:00 PM",
+      "End Time": "3:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/flying-drones-for-fun/events/314955091/"
+    },
+    {
+      "Event Name": "Logan Cruise Night",
+      "Date": "2026-06-13",
+      "Start Time": "5:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "Logan, Ohio",
+      "Address": "Logan, Ohio",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/logan-cruise-night/810300828474205/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -325,6 +505,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Sharonville Car Show",
+      "Date": "2026-06-18",
+      "Start Time": "6:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Sharonville Downtown 3327 Creek Rd Sharonville OH",
+      "Address": "Sharonville Downtown 3327 Creek Rd Sharonville OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://bluestoneivory.com/calendar/list/"
     },
     {
       "Event Name": "Pug Meet Up Play Date",
@@ -447,6 +639,18 @@
       "Event URL": "https://facebook.com/events/s/whiskey-row-car-show-june-20th/2608203072913628/"
     },
     {
+      "Event Name": "Cars & Coffee",
+      "Date": "2026-06-20",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "4720 Bowling Blvd, Louisville, KY",
+      "Address": "4720 Bowling Blvd, Louisville, KY",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-coffee/1470195837589723/"
+    },
+    {
       "Event Name": "GDCC Annual all Corvette Car Show",
       "Date": "2026-06-20",
       "Start Time": "9:00 AM",
@@ -457,6 +661,30 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/gdcc-annual-all-corvette-car-s/1554510319182310/"
+    },
+    {
+      "Event Name": "Motor Mayhem",
+      "Date": "2026-06-20",
+      "Start Time": "9:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "Cave Area Conference Center",
+      "Address": "Cave Area Conference Center",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/motor-mayhem/1646868049784499/"
+    },
+    {
+      "Event Name": "Whiskey Row Car Show - June 20th 2026",
+      "Date": "2026-06-20",
+      "Start Time": "10:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "124 W Main St, Louisville, KY 40202-1344",
+      "Address": "124 W Main St, Louisville, KY 40202-1344",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/whiskey-row-car-show-june-20th/2608203072913628/"
     },
     {
       "Event Name": "No Limits 937™ Car Community Day",
@@ -481,6 +709,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Porsches & Pints",
+      "Date": "2026-06-21",
+      "Start Time": "2:00 PM",
+      "End Time": "4:00 PM",
+      "Location": "1396 Pinckard Pike, Versailles, KY",
+      "Address": "1396 Pinckard Pike, Versailles, KY",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/porsches-pints/1570992301305956/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -543,6 +783,18 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
+      "Event Name": "Indianapolis Cars & Coffee - Hosted By Connection Pointe Christian Church",
+      "Date": "2026-06-27",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Connection Pointe Christian Church",
+      "Address": "Connection Pointe Christian Church",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/1281681426738389/"
+    },
+    {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
       "Date": "2026-06-27",
       "Start Time": "8:00 AM",
@@ -553,6 +805,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "5th Annual Stockhands Horses For Healing Car Show",
+      "Date": "2026-06-27",
+      "Start Time": "10:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "Artomotive",
+      "Address": "Artomotive",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/5th-annual-stockhands-horses-f/1525065468600827/"
     },
     {
       "Event Name": "Cruise the Burg - Car Meet",
@@ -577,6 +841,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Dudes, Drives & Donuts",
+      "Date": "2026-06-28",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "4918 Cooper Rd, Blue Ash, OH",
+      "Address": "4918 Cooper Rd, Blue Ash, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/dudes-drives-donuts/1506862480911398/"
     },
     {
       "Event Name": "Annual Car Show & Chicken Dinner",
@@ -697,6 +973,54 @@
       "Callout": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
+      "Date": "2026-07-10",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
+    },
+    {
+      "Event Name": "Cincinnati Region IT SPEC*TACULAR",
+      "Date": "2026-07-10",
+      "Start Time": "7:00 AM",
+      "End Time": "5:00 PM",
+      "Location": "Mid-Ohio Sports Car Course",
+      "Address": "Mid-Ohio Sports Car Course",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincinnati-region-it-spectacul/830259446262201/"
+    },
+    {
+      "Event Name": "Cincinnati Region SCCA – 1-Hour Endurance Bracket Race (CRE)",
+      "Date": "2026-07-11",
+      "Start Time": "7:00 AM",
+      "End Time": "10:00 AM",
+      "Location": "Mid-Ohio Sports Car Course",
+      "Address": "Mid-Ohio Sports Car Course",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincinnati-region-scca-1-hour-/752294304636527/"
+    },
+    {
+      "Event Name": "IndySCCA Solo Points Event #4 (Indy vs. Columbus)",
+      "Date": "2026-07-11",
+      "Start Time": "7:00 AM",
+      "End Time": "10:00 AM",
+      "Location": "Indiana State Fairgrounds & Event Center",
+      "Address": "Indiana State Fairgrounds & Event Center",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/indyscca-solo-points-event-4-i/1367301258490955/"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -1227,6 +1551,18 @@
       "Event URL": "https://facebook.com/events/s/umtr-at-darana-raceway-kilkare/931346839710801/"
     },
     {
+      "Event Name": "Vettes Rods & Classics Charity Car Show",
+      "Date": "2026-08-08",
+      "Start Time": "9:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "825 Tech Center Dr. Gahanna",
+      "Address": "825 Tech Center Dr. Gahanna",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/vettes-rods-classics-charity-c/4270028373215122/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-08-09",
       "Start Time": "8:00 AM",
@@ -1455,6 +1791,30 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "NHRA US Nationals",
+      "Date": "2026-09-03",
+      "Start Time": "1:59 PM",
+      "End Time": "4:59 PM",
+      "Location": "10267 Hwy 136, Indianapolis, IN 46234",
+      "Address": "10267 Hwy 136, Indianapolis, IN 46234",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/nhra-us-nationals/2060031824913660/"
+    },
+    {
+      "Event Name": "NHRA US Nationals",
+      "Date": "2026-09-04",
+      "Start Time": "1:59 PM",
+      "End Time": "4:59 PM",
+      "Location": "10267 Hwy 136, Indianapolis, IN 46234",
+      "Address": "10267 Hwy 136, Indianapolis, IN 46234",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/nhra-us-nationals/1280461794242719/"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-09-05",
       "Start Time": "8:00 AM",
@@ -1467,6 +1827,18 @@
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
+      "Event Name": "The Fast Parts Grand Prix at Mid-Ohio",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "6:00 PM",
+      "Location": "Mid-Ohio Sports Car Course",
+      "Address": "Mid-Ohio Sports Car Course",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/the-fast-parts-grand-prix-at-m/1173981004805186/"
+    },
+    {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
       "Date": "2026-09-05",
       "Start Time": "8:00 AM",
@@ -1477,6 +1849,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cars Night Out - Sept",
+      "Date": "2026-09-05",
+      "Start Time": "6:00 PM",
+      "End Time": "10:00 PM",
+      "Location": "Slate Performance Automotive",
+      "Address": "Slate Performance Automotive",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-night-out-sept/2908856852642683/"
     },
     {
       "Event Name": "All Out War - Motorsports Festival 2026",
@@ -1563,6 +1947,18 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "Event Name": "Dallara Cars & Coffee",
+      "Date": "2026-09-12",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "1201 Main St, Speedway, IN",
+      "Address": "1201 Main St, Speedway, IN",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/dallara-cars-coffee/1475248440733735/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-13",
       "Start Time": "8:00 AM",
@@ -1621,6 +2017,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+    },
+    {
+      "Event Name": "Indianapolis Cars & Coffee - Hosted by Keystone at the Crossing Indianapolis",
+      "Date": "2026-09-19",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "8900 Keystone Xing, Indianapolis, IN 46240-0030",
+      "Address": "8900 Keystone Xing, Indianapolis, IN 46240-0030",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/2179168556173345/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1839,6 +2247,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "'Cruise In' Car Show",
+      "Date": "2026-10-11",
+      "Start Time": "11:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "4521 Spring Grove Ave, Cincinnati, OH",
+      "Address": "4521 Spring Grove Ave, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cruise-in-car-show/1439212361072214/"
+    },
+    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-10-14",
       "Start Time": "5:00 PM",
@@ -1993,6 +2413,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+    },
+    {
+      "Event Name": "Indianapolis Cars & Coffee [Trunk-or-Treat] 👻🎃🍂🚗 - Hosted by Model 1 and Lakefront at Keystone",
+      "Date": "2026-10-24",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "9225 Priority Way West Dr, Indianapolis, IN 46240-0108",
+      "Address": "9225 Priority Way West Dr, Indianapolis, IN 46240-0108",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-trunk/1305039368396062/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",

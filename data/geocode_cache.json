@@ -1534,5 +1534,106 @@
   "Tipp City, OH": {
     "lat": "39.9613250",
     "lon": "-84.1700609"
+  },
+  "Germain Cadillac of Easton": {
+    "lat": "40.0562835",
+    "lon": "-82.9177027"
+  },
+  "Fairfield County Fairgrounds": {
+    "lat": "39.7265355",
+    "lon": "-82.6004228"
+  },
+  "LEX 530": {
+    "lat": "35.3147591",
+    "lon": "-80.7299266"
+  },
+  "Indianapolis Speedrome": {
+    "lat": "39.7569271",
+    "lon": "-86.0557516"
+  },
+  "Blue Ash, OH": {
+    "lat": "39.2320073",
+    "lon": "-84.3782817"
+  },
+  "Rosegate Commons": null,
+  "Germania Society": {
+    "lat": "52.5380648",
+    "lon": "13.6040719"
+  },
+  "Indiana State Fairgrounds & Event Center": null,
+  "Logan, OH": {
+    "lat": "40.4430521",
+    "lon": "-83.7414465"
+  },
+  "Versailles, KY": {
+    "lat": "38.0525760",
+    "lon": "-84.7299464"
+  },
+  "Downtown Bloomington": {
+    "lat": "39.1653620",
+    "lon": "-86.5286657"
+  },
+  "West Chester": {
+    "lat": "39.9597389",
+    "lon": "-75.6044609"
+  },
+  "Speedway, IN": {
+    "lat": "39.7881233",
+    "lon": "-86.2407144"
+  },
+  "KimTam Park at Melanie Springs": null,
+  "Cave Area Conference Center": null,
+  "Knowledge Services": {
+    "lat": "53.4064658",
+    "lon": "-2.9636626"
+  },
+  "German Park": {
+    "lat": "39.3145762",
+    "lon": "-76.6353543"
+  },
+  "Elks Lodge": {
+    "lat": "41.7635405",
+    "lon": "-72.6720613"
+  },
+  "St. Joseph Children's Home": {
+    "lat": "14.1913340",
+    "lon": "120.9624687"
+  },
+  "Columbia St Hilliard, OH": {
+    "lat": "40.0325390",
+    "lon": "-83.1594382"
+  },
+  "Cox Park": {
+    "lat": "-33.7850261",
+    "lon": "151.0515274"
+  },
+  "Bloomington, IL": {
+    "lat": "40.4797828",
+    "lon": "-88.9939147"
+  },
+  "Artomotive": null,
+  "Slate Performance Automotive": null,
+  "Connection Pointe Christian Church": null,
+  "825 Tech Center Dr. Gahanna": {
+    "lat": "39.9995204",
+    "lon": "-82.8512951"
+  },
+  "Upper arlington lutheran church mill run": null,
+  "Logan, Ohio": {
+    "lat": "40.4430521",
+    "lon": "-83.7414465"
+  },
+  "Sharonville Downtown 3327 Creek Rd Sharonville OH": null,
+  "Maineville, OH": {
+    "lat": "39.3151340",
+    "lon": "-84.2209419"
+  },
+  "Los Gatos, CA": {
+    "lat": "37.2266110",
+    "lon": "-121.9746797"
+  },
+  "san jose, CA": {
+    "lat": "37.3361663",
+    "lon": "-121.8905910"
   }
 }
