@@ -1,211 +1,7 @@
 {
-  "generated_at_iso": "2026-06-05T09:55:51.379654-04:00",
-  "count": 226,
+  "generated_at_iso": "2026-06-07T08:26:43.518942-04:00",
+  "count": 207,
   "events": [
-    {
-      "Event Name": "RallyCross – Edgewater",
-      "Date": "2026-06-05",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Wilmington, OH",
-      "Address": "Wilmington, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://cincyscca.com/rally-cross/"
-    },
-    {
-      "Event Name": "Gilroy: Royal-T Ranch Tour and Barn Picnic",
-      "Date": "2026-06-05",
-      "Start Time": "1:00 PM",
-      "End Time": "4:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/vintage-women-of-the-south-bay/events/314776893/"
-    },
-    {
-      "Event Name": "Gilroy: Royal-T Ranch Tour and Barn Picnic",
-      "Date": "2026-06-05",
-      "Start Time": "1:00 PM",
-      "End Time": "4:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/ja-JP/vintage-women-of-the-south-bay/events/314776893/"
-    },
-    {
-      "Event Name": "Washboard Festival Cassic Car Cruise-In",
-      "Date": "2026-06-05",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Spring St S, Logan, OH 43138",
-      "Address": "Spring St S, Logan, OH 43138",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/washboard-festival-cassic-car-/930723563005527/"
-    },
-    {
-      "Event Name": "Cruisin' Through the Century: Downtown Bloomington's Route 66 Centennial Celebration",
-      "Date": "2026-06-05",
-      "Start Time": "6:00 PM",
-      "End Time": "11:00 PM",
-      "Location": "Downtown Bloomington",
-      "Address": "Downtown Bloomington",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cruisin-through-the-century-do/1473692100430424/"
-    },
-    {
-      "Event Name": "Southern Indiana Car & Coffee",
-      "Date": "2026-06-06",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Storming Crab",
-      "Address": "Storming Crab",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859376271067/"
-    },
-    {
-      "Event Name": "62nd Annual Spring Festival Car Show & Swap Meet",
-      "Date": "2026-06-06",
-      "Start Time": "8:00 AM",
-      "End Time": "4:30 PM",
-      "Location": "Fairfield County Fairgrounds",
-      "Address": "Fairfield County Fairgrounds",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/62nd-annual-spring-festival-ca/962229909550231/"
-    },
-    {
-      "Event Name": "2026 Meet 3",
-      "Date": "2026-06-06",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Austin Landing Blvd, Miamisburg, OH 45342",
-      "Address": "Austin Landing Blvd, Miamisburg, OH 45342",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "fb://event/?id=1761218888588346"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-06-06",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee",
-      "Date": "2026-06-06",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-06-06/"
-    },
-    {
-      "Event Name": "Louisville Mega Cavern Car Show Classic",
-      "Date": "2026-06-06",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "1841 Taylor Ave, Louisville, KY 40213-1565",
-      "Address": "1841 Taylor Ave, Louisville, KY 40213-1565",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/louisville-mega-cavern-car-sho/4263104417339019/"
-    },
-    {
-      "Event Name": "Meet up play date",
-      "Date": "2026-06-06",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5057 Wooster Pike, Cincinnati, OH",
-      "Address": "5057 Wooster Pike, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738799/"
-    },
-    {
-      "Event Name": "LOWRIDER MAGAZINE SUPER SHOW - INDIANAPOLIS",
-      "Date": "2026-06-06",
-      "Start Time": "11:00 AM",
-      "End Time": "6:00 PM",
-      "Location": "Indiana State Fairgrounds & Event Center",
-      "Address": "Indiana State Fairgrounds & Event Center",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/lowrider-magazine-super-show-i/2104959997085931/"
-    },
-    {
-      "Event Name": "2026 Bryan Lewis Memorial Car Show",
-      "Date": "2026-06-06",
-      "Start Time": "11:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "Upper arlington lutheran church mill run",
-      "Address": "Upper arlington lutheran church mill run",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/2026-bryan-lewis-memorial-car-/771487962370084/"
-    },
-    {
-      "Event Name": "Oxford Masonic Lodge Annual Charity Car and Bike show",
-      "Date": "2026-06-06",
-      "Start Time": "2:00 PM",
-      "End Time": "10:00 PM",
-      "Location": "Oxford Masonic Lodge car show",
-      "Address": "Oxford Masonic Lodge car show",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/oxford-masonic-lodge-annual-ch/831444313209776/"
-    },
-    {
-      "Event Name": "Jax Wax Street Madness",
-      "Date": "2026-06-06",
-      "Start Time": "3:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "National Trail Raceway",
-      "Address": "National Trail Raceway",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/jax-wax-street-madness/1269559161576293/"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-06-07",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
     {
       "Event Name": "EMMEET- COLUMBUS (BIKE/CAR) EVENT",
       "Date": "2026-06-07",
@@ -241,18 +37,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
-      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
-      "Date": "2026-06-10",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314569604/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -423,18 +207,6 @@
       "Event URL": "https://facebook.com/events/s/car-bike-show/1464874131923686/"
     },
     {
-      "Event Name": "WARM WATER COVE DRONE MEETUP in San Francisco!",
-      "Date": "2026-06-13",
-      "Start Time": "1:00 PM",
-      "End Time": "3:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/flying-drones-for-fun/events/314955091/"
-    },
-    {
       "Event Name": "Logan Cruise Night",
       "Date": "2026-06-13",
       "Start Time": "5:00 PM",
@@ -517,18 +289,6 @@
       "Callout": "",
       "Source": "Google Events (SerpAPI) [serpapi_google_events]",
       "Event URL": "https://bluestoneivory.com/calendar/list/"
-    },
-    {
-      "Event Name": "Pug Meet Up Play Date",
-      "Date": "2026-06-18",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "52 4590 Beech St, Norwood, OH 45212",
-      "Address": "52 4590 Beech St, Norwood, OH 45212",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738666/"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -975,18 +735,6 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
-      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
-      "Date": "2026-07-10",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
-    },
-    {
       "Event Name": "Cincinnati Region IT SPEC*TACULAR",
       "Date": "2026-07-10",
       "Start Time": "7:00 AM",
@@ -1225,6 +973,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026",
+      "Date": "2026-07-18",
+      "Start Time": "9:00 AM",
+      "End Time": "6:00 PM",
+      "Location": "Location will be sent to ticket holders.",
+      "Address": "Location will be sent to ticket holders.",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
     {
       "Event Name": "UMTR at Edgewater Sports Park - Presented by Southwest Paving & O'Reilly Auto Parts",
@@ -2713,6 +2473,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "RallyCross – Edgewater",
+      "Date": "2027-06-05",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Wilmington, OH",
+      "Address": "Wilmington, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://cincyscca.com/rally-cross/"
     }
   ]
 }
