@@ -1,31 +1,7 @@
 {
-  "generated_at_iso": "2026-06-07T08:26:43.518942-04:00",
-  "count": 207,
+  "generated_at_iso": "2026-06-09T09:48:09.966386-04:00",
+  "count": 206,
   "events": [
-    {
-      "Event Name": "EMMEET- COLUMBUS (BIKE/CAR) EVENT",
-      "Date": "2026-06-07",
-      "Start Time": "2:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "4100 Columbia St Hilliard, OH 43026",
-      "Address": "4100 Columbia St Hilliard, OH 43026",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/emmeet-columbus-bikecar-event/1492235252637292/"
-    },
-    {
-      "Event Name": "Ashlea Albertson Memorial Car, Truck & Bike Show",
-      "Date": "2026-06-07",
-      "Start Time": "3:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "Indianapolis Speedrome",
-      "Address": "Indianapolis Speedrome",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/ashlea-albertson-memorial-car-/896656706384918/"
-    },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 1",
       "Date": "2026-06-10",
@@ -469,6 +445,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cars and Coffee at Liberty Collective",
+      "Date": "2026-06-21",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "6735 Lakota Lane, Liberty Township, Butler County, OH, , Ohio 45044",
+      "Address": "6735 Lakota Lane, Liberty Township, Butler County, OH, , Ohio 45044",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-and-coffee-at-liberty-col/26724367567234570/"
     },
     {
       "Event Name": "Porsches & Pints",
