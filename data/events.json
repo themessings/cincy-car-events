@@ -1,55 +1,7 @@
 {
-  "generated_at_iso": "2026-06-09T09:48:09.966386-04:00",
-  "count": 206,
+  "generated_at_iso": "2026-06-12T10:13:24.738900-04:00",
+  "count": 209,
   "events": [
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 1",
-      "Date": "2026-06-10",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-06-10",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 2",
-      "Date": "2026-06-11",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 3",
-      "Date": "2026-06-12",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
-    },
     {
       "Event Name": "Blackwings & Batteries",
       "Date": "2026-06-13",
@@ -159,6 +111,18 @@
       "Event URL": "https://facebook.com/events/s/5-year-anniversary-bash-season/1630944078323888/"
     },
     {
+      "Event Name": "Car Show Benefiting the LIUNA Local 265 Retiree Club",
+      "Date": "2026-06-13",
+      "Start Time": "10:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "LiUNA Local 265 3457 Montgomery Rd Cincinnati OH 45207",
+      "Address": "LiUNA Local 265 3457 Montgomery Rd Cincinnati OH 45207",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://www.mobilize.us/mobilize/event/922763/"
+    },
+    {
       "Event Name": "BACKWOODS BASH 2K26",
       "Date": "2026-06-13",
       "Start Time": "11:00 AM",
@@ -205,6 +169,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "The Vulcanized Rubber Critique Meeting",
+      "Date": "2026-06-15",
+      "Start Time": "7:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/writers-884/events/315202661/"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 1",
@@ -265,6 +241,18 @@
       "Callout": "",
       "Source": "Google Events (SerpAPI) [serpapi_google_events]",
       "Event URL": "https://bluestoneivory.com/calendar/list/"
+    },
+    {
+      "Event Name": "Pug Meet Up Play Date",
+      "Date": "2026-06-18",
+      "Start Time": "6:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "52 4590 Beech St, Norwood, OH 45212",
+      "Address": "52 4590 Beech St, Norwood, OH 45212",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738666/"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -507,6 +495,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Happy Hour Moxy Rooftop 1st Social Meet-up",
+      "Date": "2026-06-26",
+      "Start Time": "7:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "312 Main St, Cincinnati, OH",
+      "Address": "312 Main St, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/girlfriendz-networking-group-2026/events/314852337/"
+    },
+    {
       "Event Name": "Indianapolis Cars and Coffee",
       "Date": "2026-06-27",
       "Start Time": "8:00 AM",
@@ -721,6 +721,18 @@
       "Callout": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
+      "Date": "2026-07-10",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
       "Event Name": "Cincinnati Region IT SPEC*TACULAR",
@@ -2473,6 +2485,30 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://cincyscca.com/rally-cross/"
+    },
+    {
+      "Event Name": "Southern Ohio Forest Rally – Day 1",
+      "Date": "2027-06-10",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Chillicothe, OH",
+      "Address": "Chillicothe, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "Event Name": "Southern Ohio Forest Rally – Day 2",
+      "Date": "2027-06-11",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Chillicothe, OH",
+      "Address": "Chillicothe, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.americanrallyassociation.org/sofr"
     }
   ]
 }
