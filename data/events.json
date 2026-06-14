@@ -1,174 +1,42 @@
 {
-  "generated_at_iso": "2026-06-12T10:13:24.738900-04:00",
-  "count": 209,
+  "generated_at_iso": "2026-06-14T09:05:32.433417-04:00",
+  "count": 199,
   "events": [
     {
-      "Event Name": "Blackwings & Batteries",
-      "Date": "2026-06-13",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Germain Cadillac of Easton",
-      "Address": "Germain Cadillac of Easton",
+      "Event Name": "Let's Meetup and walk @ DEVOU PARK in Covington, KY",
+      "Date": "2026-06-14",
+      "Start Time": "9:30 AM",
+      "End Time": "11:30 AM",
+      "Location": "790 Park Lane, Covington, KY",
+      "Address": "790 Park Lane, Covington, KY",
       "Closest City": "",
       "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/blackwings-batteries/1183379190525245/"
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/american-walkers/events/315147027/"
     },
     {
-      "Event Name": "Southern Indiana Car & Coffee",
-      "Date": "2026-06-13",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Storming Crab",
-      "Address": "Storming Crab",
+      "Event Name": "Cincinnati Concours dElegance",
+      "Date": "2026-06-14",
+      "Start Time": "10:00 AM",
+      "End Time": "4:00 PM",
+      "Location": "Ault Park &#8211; Cincinnati, OH 5090 Observatory Circle OH 45208",
+      "Address": "Ault Park &#8211; Cincinnati, OH 5090 Observatory Circle OH 45208",
       "Closest City": "",
       "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://americancollectors.com/event/cincinnati-concours-delegance/"
     },
     {
-      "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
-      "Date": "2026-06-13",
-      "Start Time": "8:00 AM",
-      "End Time": "10:30 AM",
-      "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "OVR PCA Autocross - June 2026",
-      "Date": "2026-06-13",
-      "Start Time": "8:30 AM",
-      "End Time": "3:00 PM",
+      "Event Name": "Flag Day Meetup",
+      "Date": "2026-06-14",
+      "Start Time": "2:00 PM",
+      "End Time": "4:00 PM",
       "Location": "",
       "Address": "",
       "Closest City": "",
       "Callout": "",
-      "Source": "OVR PCA Social Events (ICS)",
-      "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Cars and Coffee featuring RUGGED RIDES Showcase!",
-      "Date": "2026-06-13",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5575 Keim Circle, Columbus, OH",
-      "Address": "5575 Keim Circle, Columbus, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cars-and-coffee-featuring-rugg/812851634545098/"
-    },
-    {
-      "Event Name": "Hocking Hills Cars and Coffee June Meet",
-      "Date": "2026-06-13",
-      "Start Time": "9:00 AM",
-      "End Time": "11:30 AM",
-      "Location": "Hungry Buffalo Restaurant",
-      "Address": "Hungry Buffalo Restaurant",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/hocking-hills-cars-and-coffee-/26957375527282541/"
-    },
-    {
-      "Event Name": "Tri-State Truck Takeover",
-      "Date": "2026-06-13",
-      "Start Time": "10:00 AM",
-      "End Time": "11:00 PM",
-      "Location": "2836 Harris Pike, Independence, KY",
-      "Address": "2836 Harris Pike, Independence, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/tri-state-truck-takeover/1371892453975764/"
-    },
-    {
-      "Event Name": "Cruise-In to Connection!",
-      "Date": "2026-06-13",
-      "Start Time": "10:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "Rosegate Commons",
-      "Address": "Rosegate Commons",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cruise-in-to-connection/3486737658148156/"
-    },
-    {
-      "Event Name": "5 Year Anniversary Bash & Season Opener",
-      "Date": "2026-06-13",
-      "Start Time": "10:00 AM",
-      "End Time": "4:00 PM",
-      "Location": "1800 Georgesville Square Dr, Columbus, OH",
-      "Address": "1800 Georgesville Square Dr, Columbus, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/5-year-anniversary-bash-season/1630944078323888/"
-    },
-    {
-      "Event Name": "Car Show Benefiting the LIUNA Local 265 Retiree Club",
-      "Date": "2026-06-13",
-      "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "LiUNA Local 265 3457 Montgomery Rd Cincinnati OH 45207",
-      "Address": "LiUNA Local 265 3457 Montgomery Rd Cincinnati OH 45207",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://www.mobilize.us/mobilize/event/922763/"
-    },
-    {
-      "Event Name": "BACKWOODS BASH 2K26",
-      "Date": "2026-06-13",
-      "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "KimTam Park at Melanie Springs",
-      "Address": "KimTam Park at Melanie Springs",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/backwoods-bash-2k26/2028480841052760/"
-    },
-    {
-      "Event Name": "Car & Bike Show",
-      "Date": "2026-06-13",
-      "Start Time": "11:00 AM",
-      "End Time": "4:00 PM",
-      "Location": "34568 -50, Londonderry, OH",
-      "Address": "34568 -50, Londonderry, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/car-bike-show/1464874131923686/"
-    },
-    {
-      "Event Name": "Logan Cruise Night",
-      "Date": "2026-06-13",
-      "Start Time": "5:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "Logan, Ohio",
-      "Address": "Logan, Ohio",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/logan-cruise-night/810300828474205/"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-06-14",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/welovedachshunds/events/314499478/"
     },
     {
       "Event Name": "The Vulcanized Rubber Critique Meeting",
@@ -421,6 +289,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/no-limits-937-car-community-da/959458323493814/"
+    },
+    {
+      "Event Name": "JAM 513 BYOT Coed Quads Pick Your Poison Sand Volleyball Tournament",
+      "Date": "2026-06-20",
+      "Start Time": "5:00 PM",
+      "End Time": "11:30 PM",
+      "Location": "4005 Hooper Hill, Cincinnati, OH",
+      "Address": "4005 Hooper Hill, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315201524/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -687,6 +567,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Let’s Meet at - Eden Park",
+      "Date": "2026-07-04",
+      "Start Time": "11:30 AM",
+      "End Time": "1:00 PM",
+      "Location": "1501 Eden Park Drive, Cincinnati, OH",
+      "Address": "1501 Eden Park Drive, Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/lets-meet-at-the-park/events/315020742/"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-05",
       "Start Time": "8:00 AM",
@@ -721,18 +613,6 @@
       "Callout": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
-      "Date": "2026-07-10",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
       "Event Name": "Cincinnati Region IT SPEC*TACULAR",
@@ -973,18 +853,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026",
-      "Date": "2026-07-18",
-      "Start Time": "9:00 AM",
-      "End Time": "6:00 PM",
-      "Location": "Location will be sent to ticket holders.",
-      "Address": "Location will be sent to ticket holders.",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
-      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
     {
       "Event Name": "UMTR at Edgewater Sports Park - Presented by Southwest Paving & O'Reilly Auto Parts",
@@ -2501,6 +2369,18 @@
     {
       "Event Name": "Southern Ohio Forest Rally – Day 2",
       "Date": "2027-06-11",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Chillicothe, OH",
+      "Address": "Chillicothe, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "Event Name": "Southern Ohio Forest Rally – Day 3",
+      "Date": "2027-06-12",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Chillicothe, OH",
