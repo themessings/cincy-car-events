@@ -1,55 +1,7 @@
 {
-  "generated_at_iso": "2026-06-14T09:05:32.433417-04:00",
-  "count": 199,
+  "generated_at_iso": "2026-06-16T11:54:19.703383-04:00",
+  "count": 191,
   "events": [
-    {
-      "Event Name": "Let's Meetup and walk @ DEVOU PARK in Covington, KY",
-      "Date": "2026-06-14",
-      "Start Time": "9:30 AM",
-      "End Time": "11:30 AM",
-      "Location": "790 Park Lane, Covington, KY",
-      "Address": "790 Park Lane, Covington, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/american-walkers/events/315147027/"
-    },
-    {
-      "Event Name": "Cincinnati Concours dElegance",
-      "Date": "2026-06-14",
-      "Start Time": "10:00 AM",
-      "End Time": "4:00 PM",
-      "Location": "Ault Park &#8211; Cincinnati, OH 5090 Observatory Circle OH 45208",
-      "Address": "Ault Park &#8211; Cincinnati, OH 5090 Observatory Circle OH 45208",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://americancollectors.com/event/cincinnati-concours-delegance/"
-    },
-    {
-      "Event Name": "Flag Day Meetup",
-      "Date": "2026-06-14",
-      "Start Time": "2:00 PM",
-      "End Time": "4:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/welovedachshunds/events/314499478/"
-    },
-    {
-      "Event Name": "The Vulcanized Rubber Critique Meeting",
-      "Date": "2026-06-15",
-      "Start Time": "7:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/writers-884/events/315202661/"
-    },
     {
       "Event Name": "Dynasty Rally 2026 – Day 1",
       "Date": "2026-06-17",
@@ -109,18 +61,6 @@
       "Callout": "",
       "Source": "Google Events (SerpAPI) [serpapi_google_events]",
       "Event URL": "https://bluestoneivory.com/calendar/list/"
-    },
-    {
-      "Event Name": "Pug Meet Up Play Date",
-      "Date": "2026-06-18",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "52 4590 Beech St, Norwood, OH 45212",
-      "Address": "52 4590 Beech St, Norwood, OH 45212",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738666/"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -291,18 +231,6 @@
       "Event URL": "https://facebook.com/events/s/no-limits-937-car-community-da/959458323493814/"
     },
     {
-      "Event Name": "JAM 513 BYOT Coed Quads Pick Your Poison Sand Volleyball Tournament",
-      "Date": "2026-06-20",
-      "Start Time": "5:00 PM",
-      "End Time": "11:30 PM",
-      "Location": "4005 Hooper Hill, Cincinnati, OH",
-      "Address": "4005 Hooper Hill, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315201524/"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-06-21",
       "Start Time": "8:00 AM",
@@ -373,18 +301,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Happy Hour Moxy Rooftop 1st Social Meet-up",
-      "Date": "2026-06-26",
-      "Start Time": "7:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "312 Main St, Cincinnati, OH",
-      "Address": "312 Main St, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/girlfriendz-networking-group-2026/events/314852337/"
     },
     {
       "Event Name": "Indianapolis Cars and Coffee",
@@ -565,18 +481,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Let’s Meet at - Eden Park",
-      "Date": "2026-07-04",
-      "Start Time": "11:30 AM",
-      "End Time": "1:00 PM",
-      "Location": "1501 Eden Park Drive, Cincinnati, OH",
-      "Address": "1501 Eden Park Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/lets-meet-at-the-park/events/315020742/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
