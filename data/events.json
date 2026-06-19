@@ -1,79 +1,7 @@
 {
-  "generated_at_iso": "2026-06-16T11:54:19.703383-04:00",
-  "count": 191,
+  "generated_at_iso": "2026-06-19T10:18:59.642753-04:00",
+  "count": 190,
   "events": [
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 1",
-      "Date": "2026-06-17",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Launch Cincinnati, OH",
-      "Address": "Launch Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-06-17",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-06-17",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308198591931/"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 2",
-      "Date": "2026-06-18",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Southern Ohio / KY Backroads",
-      "Address": "Southern Ohio / KY Backroads",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Sharonville Car Show",
-      "Date": "2026-06-18",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Sharonville Downtown 3327 Creek Rd Sharonville OH",
-      "Address": "Sharonville Downtown 3327 Creek Rd Sharonville OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://bluestoneivory.com/calendar/list/"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 3",
-      "Date": "2026-06-19",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Tennessee / Appalachia Region",
-      "Address": "Tennessee / Appalachia Region",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
     {
       "Event Name": "Voss Hoss Cruise-in 2026",
       "Date": "2026-06-19",
@@ -217,6 +145,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/whiskey-row-car-show-june-20th/2608203072913628/"
+    },
+    {
+      "Event Name": "Main Event - No Limit 937 Car Show",
+      "Date": "2026-06-20",
+      "Start Time": "9:12 AM",
+      "End Time": "11:12 AM",
+      "Location": "Main Event West Chester, Main Event West Chester, 9477 Oxford Way | West Chester Township, OH",
+      "Address": "Main Event West Chester, Main Event West Chester, 9477 Oxford Way | West Chester Township, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://www.eventbrite.com/e/main-event-no-limit-937-car-show-tickets-1990096761987"
     },
     {
       "Event Name": "No Limits 937™ Car Community Day",
@@ -519,6 +459,18 @@
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
     },
     {
+      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
+      "Date": "2026-07-10",
+      "Start Time": "1:00 AM",
+      "End Time": "12:59 AM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "TrackRabbit + SCCA calendar discovery",
+      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
+    },
+    {
       "Event Name": "Cincinnati Region IT SPEC*TACULAR",
       "Date": "2026-07-10",
       "Start Time": "7:00 AM",
@@ -757,6 +709,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026",
+      "Date": "2026-07-18",
+      "Start Time": "9:00 AM",
+      "End Time": "6:00 PM",
+      "Location": "Location will be sent to ticket holders.",
+      "Address": "Location will be sent to ticket holders.",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
     {
       "Event Name": "UMTR at Edgewater Sports Park - Presented by Southwest Paving & O'Reilly Auto Parts",
@@ -2293,6 +2257,30 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026 – Day 1",
+      "Date": "2027-06-17",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Launch Cincinnati, OH",
+      "Address": "Launch Cincinnati, OH",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026 – Day 2",
+      "Date": "2027-06-18",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Southern Ohio / KY Backroads",
+      "Address": "Southern Ohio / KY Backroads",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
     }
   ]
 }
