@@ -84,7 +84,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-06-21T09:04:40.337262-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:02.347368-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=29": {
@@ -92,7 +92,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
-    "fetched_at_iso": "2026-06-21T09:04:40.337262-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
     "events": []
   },
   "https://www.eventbrite.com/b/oh--colerain/auto-boat-and-air/": {
@@ -1183,7 +1183,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/": {
-    "fetched_at_iso": "2026-06-21T09:05:59.073929-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:28.923972-04:00",
     "events": []
   },
   "https://www.facebook.com/indyhoodrats/posts/road-rally-to-the-famous-11-mile-long-tail-of-the-dragon-located-in-vonore-tenne/867730542516222/": {
@@ -2890,7 +2890,7 @@
     "events": []
   },
   "https://cincyscca.com/": {
-    "fetched_at_iso": "2026-06-21T09:08:46.314206-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:44.950815-04:00",
     "events": []
   },
   "https://www.facebook.com/events/newport-antique-car-hill-climb/newport-antique-auto-hill-climb-car-show/1179371070678213/": {
@@ -2914,7 +2914,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-06-14T09:03:49.170765-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--huber-heights/food-and-car-show/": {
@@ -3260,15 +3260,15 @@
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/car-show/": {
-    "fetched_at_iso": "2026-06-14T09:03:49.170765-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/car-shows/": {
-    "fetched_at_iso": "2026-06-05T09:54:28.877927-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-shows/": {
-    "fetched_at_iso": "2026-06-14T09:03:49.170765-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/classic-car-show/": {
@@ -3376,7 +3376,7 @@
     "events": []
   },
   "https://www.scca.com/pages/autocross": {
-    "fetched_at_iso": "2026-06-19T10:18:50.010345-04:00",
+    "fetched_at_iso": "2026-06-23T09:45:02.132791-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/open-road-supercar-driving-tours/?srsltid=AfmBOookY65e0XbclItkW3HMIVjdPjRY5z1KG25M2wWRJM2BwZwQDemP": {
@@ -4830,7 +4830,7 @@
     "events": []
   },
   "https://www.eventbrite.com/b/oh--cincinnati/government/": {
-    "fetched_at_iso": "2026-06-21T09:04:40.337262-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:02.347368-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/estrangement/us/": {
@@ -7048,7 +7048,7 @@
     "events": []
   },
   "https://www.meetup.com/find/us--oh--cincinnati/car-meets/": {
-    "fetched_at_iso": "2026-06-14T09:00:16.825734-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
     "events": [
       {
         "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
@@ -7058,60 +7058,39 @@
         "url": "https://www.meetup.com/queencitysocialclub/events/315178560/"
       },
       {
-        "title": "Afro Caribbean Day Party @Revel OTR",
-        "start_iso": "2026-06-14T15:00:00-04:00",
-        "end_iso": "2026-06-14T17:00:00-04:00",
-        "location": "Revel OTR 111 East 12th Street, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/tzbentafrocaribbeaneventsincincinnati/events/315223875/"
+        "title": "VirtualPals Meeting for Sally's Crafty & Chat",
+        "start_iso": "2026-06-24T10:00:00-04:00",
+        "end_iso": "2026-06-24T12:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/thehumanconnectionhub/events/314569606/"
       },
       {
-        "title": "RECESS: Soccer or Futbol",
-        "start_iso": "2026-06-17T18:00:00-04:00",
-        "end_iso": "2026-06-17T20:00:00-04:00",
-        "location": "Four Seasons Marina 4609 Kellogg Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314894114/"
+        "title": "RECESS: Nerf Wars",
+        "start_iso": "2026-07-08T18:00:00-04:00",
+        "end_iso": "2026-07-08T20:00:00-04:00",
+        "location": "Yeatman's Cove at Sawyer Point 705 E. Pete Rose Way, Cincinnati, 45202, OH Cincinnati, 45202 OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277529/"
       },
       {
-        "title": ":::::CGM BOOK CLUB::::: Ender's Game & The Book with No Name",
-        "start_iso": "2026-06-17T19:00:00-04:00",
-        "end_iso": "2026-06-17T21:00:00-04:00",
-        "location": "Pacific Kitchen 8300 Market Pl Ln, Montgomery, OH Montgomery OH",
-        "url": "https://www.meetup.com/cincigeek/events/314708806/"
-      },
-      {
-        "title": "Cheers Toastmasters Club-1st and 3rd Mondays",
-        "start_iso": "2026-06-15T12:00:00-04:00",
-        "end_iso": "2026-06-15T14:00:00-04:00",
-        "location": "Sawyer point Building 720 E Pete Rose Way, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/toastmasters-clubs-of-cincinnati-and-the-tri-state/events/314962796/"
-      },
-      {
-        "title": "Happy Hour Moxy Rooftop 1st Social Meet-up",
+        "title": "Live Band Jameze Latrail Band Meet-up",
         "start_iso": "2026-06-26T19:00:00-04:00",
         "end_iso": "2026-06-26T21:00:00-04:00",
-        "location": "Moxy Hotel 312 Main St, Cincinnati, OH Cincinnati OH",
+        "location": "Park Place Restaurant 1185 Kemper Meadow Drive, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/girlfriendz-networking-group-2026/events/314852337/"
       },
       {
-        "title": "Pug Meet Up Play Date",
-        "start_iso": "2026-06-18T18:00:00-04:00",
-        "end_iso": "2026-06-18T20:00:00-04:00",
-        "location": "Factory 52 4590 Beech St, Norwood, OH 45212,, Norwood, OH Norwood OH",
-        "url": "https://www.meetup.com/cincinnati-pugs/events/314738666/"
+        "title": "Cheers Toastmasters Club-1st and 3rd Mondays",
+        "start_iso": "2026-07-06T12:00:00-04:00",
+        "end_iso": "2026-07-06T14:00:00-04:00",
+        "location": "Sawyer point Building 720 E Pete Rose Way, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/toastmasters-clubs-of-cincinnati-and-the-tri-state/events/315285343/"
       },
       {
         "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
-        "start_iso": "2026-06-14T14:00:00-04:00",
-        "end_iso": "2026-06-14T16:00:00-04:00",
+        "start_iso": "2026-06-28T14:00:00-04:00",
+        "end_iso": "2026-06-28T16:00:00-04:00",
         "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314836993/"
-      },
-      {
-        "title": "Speed Dating and Matchmaking for Singles Ages 25-45 | Cincinnati",
-        "start_iso": "2026-06-16T18:00:00-04:00",
-        "end_iso": "2026-06-16T20:00:00-04:00",
-        "location": "The Pitch Cincy The Pitch Cincy 1430 Central Parkway Cincinnati, OH, 45202, Cincinnati, IN Cincinnati IN",
-        "url": "https://www.meetup.com/findcincinnati/events/314870135/"
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277162/"
       },
       {
         "title": "RECESS: Basketball, cornhole and drinks at Ziegler Park & Rosedale Bar in OTR",
@@ -7121,6 +7100,13 @@
         "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314894168/"
       },
       {
+        "title": "Stereo Weekend @Factory52",
+        "start_iso": "2026-07-04T16:00:00-04:00",
+        "end_iso": "2026-07-04T18:00:00-04:00",
+        "location": "Braxton Factory 52 4600 Beech St Suites 100 & 300, Norwood, OH Norwood OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314832212/"
+      },
+      {
         "title": "Yoga @Summit Park (Blue Ash)",
         "start_iso": "2026-06-24T17:15:00-04:00",
         "end_iso": "2026-06-24T19:15:00-04:00",
@@ -7128,11 +7114,25 @@
         "url": "https://www.meetup.com/northern-cincy-social-club/events/315197501/"
       },
       {
+        "title": "Let's Meet @ the Coffee Shop!",
+        "start_iso": "2026-07-01T09:30:00-04:00",
+        "end_iso": "2026-07-01T11:30:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-nky-ladies-50/events/315222361/"
+      },
+      {
+        "title": "MISTERMAN AND THE MOJO BAND",
+        "start_iso": "2026-06-29T18:00:00-04:00",
+        "end_iso": "2026-06-29T20:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/fifty-plus-singles/events/315357629/"
+      },
+      {
         "title": "Weekly Stammtisch (Regulars’ Table)",
-        "start_iso": "2026-06-15T18:30:00-04:00",
-        "end_iso": "2026-06-15T20:30:00-04:00",
+        "start_iso": "2026-06-29T18:30:00-04:00",
+        "end_iso": "2026-06-29T20:30:00-04:00",
         "location": "KANTINE Biergarten Eatery 1220 Harrison Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincideutsch/events/311520585/"
+        "url": "https://www.meetup.com/cincideutsch/events/311520587/"
       }
     ]
   },
@@ -7372,7 +7372,7 @@
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/events/lrjgqtyjcgblc/": {
-    "fetched_at_iso": "2026-06-14T09:00:16.825734-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
     "events": [
       {
         "title": "Cincy .NET Users Group (CINNUG): GitHub Copilot Dev Days",
@@ -7603,7 +7603,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/expos/": {
-    "fetched_at_iso": "2026-06-02T10:55:37.157046-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:02.347368-04:00",
     "events": []
   },
   "https://www.press.bmwgroup.com/usa/article/detail/T0455796EN_US/iconic-biennial-rally-%E2%80%9Cmini-takes-the-states%E2%80%9D-returns-in-2026-with-three-weekend-nine-city-adventure-across-three-states?language=en_US": {
@@ -8111,11 +8111,11 @@
     "events": []
   },
   "https://rallyrd.com/": {
-    "fetched_at_iso": "2026-06-21T09:05:59.073929-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:28.923972-04:00",
     "events": []
   },
   "https://www.merriam-webster.com/dictionary/rally": {
-    "fetched_at_iso": "2026-06-21T09:05:59.073929-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:28.923972-04:00",
     "events": []
   },
   "https://rally.co/?srsltid=AfmBOorKhPaHLGSsCd3W7HbyqARnPE1xhko8UQPkh4-7FbxOl9_uHgLE": {
@@ -8127,27 +8127,27 @@
     "events": []
   },
   "https://en.wikipedia.org/wiki/Rallying": {
-    "fetched_at_iso": "2026-06-21T09:05:59.073929-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:28.923972-04:00",
     "events": []
   },
   "https://www.youtube.com/@wrc": {
-    "fetched_at_iso": "2026-06-21T09:05:59.073929-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:28.923972-04:00",
     "events": []
   },
   "https://www.rally.tv/": {
-    "fetched_at_iso": "2026-06-16T11:52:37.230562-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:28.923972-04:00",
     "events": []
   },
   "https://rallyinnovation.com/": {
-    "fetched_at_iso": "2026-06-21T09:05:59.073929-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:23.398501-04:00",
     "events": []
   },
   "https://www.reddit.com/r/rally/": {
-    "fetched_at_iso": "2026-06-21T09:05:59.073929-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:28.923972-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Road": {
-    "fetched_at_iso": "2026-06-21T09:05:27.686534-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:46.739422-04:00",
     "events": [
       {
         "title": "Road - Wikipedia",
@@ -8159,11 +8159,11 @@
     ]
   },
   "https://www.reddit.com/r/cincinnati/comments/1pc4wp9/how_are_the_roads/": {
-    "fetched_at_iso": "2026-06-21T09:05:27.686534-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:46.739422-04:00",
     "events": []
   },
   "https://dictionary.cambridge.org/us/dictionary/english/road": {
-    "fetched_at_iso": "2026-06-21T09:05:27.686534-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:46.739422-04:00",
     "events": []
   },
   "https://www.youtube.com/watch?v=x3SW8353EeI": {
@@ -8171,7 +8171,7 @@
     "events": []
   },
   "https://www.cincinnati-oh.gov/public-services/about-public-services/traffic-road-operations/": {
-    "fetched_at_iso": "2026-06-21T09:05:27.686534-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:46.739422-04:00",
     "events": []
   },
   "https://www.merriam-webster.com/dictionary/road": {
@@ -8187,23 +8187,23 @@
     "events": []
   },
   "https://www.scca.com/pages/what-is-autocross": {
-    "fetched_at_iso": "2026-06-21T09:08:46.314206-04:00",
+    "fetched_at_iso": "2026-06-23T09:45:02.132791-04:00",
     "events": []
   },
   "https://cincyscca.com/autocross/": {
-    "fetched_at_iso": "2026-06-21T09:08:46.314206-04:00",
+    "fetched_at_iso": "2026-06-23T09:45:02.132791-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Autocross": {
-    "fetched_at_iso": "2026-06-21T09:08:46.314206-04:00",
+    "fetched_at_iso": "2026-06-23T09:45:02.132791-04:00",
     "events": []
   },
   "https://www.youtube.com/watch?v=Af2zJAOAqWQ": {
-    "fetched_at_iso": "2026-06-21T09:08:46.314206-04:00",
+    "fetched_at_iso": "2026-06-23T09:45:02.132791-04:00",
     "events": []
   },
   "https://www.scca.com/pages/i-want-to-autocross": {
-    "fetched_at_iso": "2026-06-12T10:12:42.565437-04:00",
+    "fetched_at_iso": "2026-06-23T09:45:02.132791-04:00",
     "events": []
   },
   "https://www.pca.org/autox": {
@@ -8239,7 +8239,7 @@
     "events": []
   },
   "https://en.wikipedia.org/wiki/Southern_United_States": {
-    "fetched_at_iso": "2026-06-16T11:53:02.674881-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:03.240866-04:00",
     "events": [
       {
         "title": "Southern United States - Wikipedia",
@@ -8251,15 +8251,15 @@
     ]
   },
   "https://www.subr.edu/": {
-    "fetched_at_iso": "2026-06-16T11:53:02.674881-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:03.240866-04:00",
     "events": []
   },
   "https://www.southernwv.edu/": {
-    "fetched_at_iso": "2026-06-07T08:22:11.733188-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:03.240866-04:00",
     "events": []
   },
   "https://www.southernct.edu/": {
-    "fetched_at_iso": "2026-06-16T11:53:02.674881-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:03.240866-04:00",
     "events": []
   },
   "https://www.reddit.com/r/AskAnAmerican/comments/ero1hq/do_you_consider_cincinnati_a_southern_city/": {
@@ -8279,7 +8279,7 @@
     "events": []
   },
   "https://cincyscca.com/autocross/getting-started/": {
-    "fetched_at_iso": "2026-06-21T09:08:46.314206-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:44.950815-04:00",
     "events": []
   },
   "https://www.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park": {
@@ -8375,7 +8375,7 @@
     "events": []
   },
   "https://www.rallyhealth.com/": {
-    "fetched_at_iso": "2026-06-19T10:13:31.312354-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:23.398501-04:00",
     "events": []
   },
   "https://www.rallyhouse.com/?srsltid=AfmBOooDLHvvdSBlyMr8F36oIm8G7uOX2Ogq5GS1XKpeSsSOt-tZpubi": {
@@ -8387,11 +8387,11 @@
     "events": []
   },
   "https://wearerally.com/": {
-    "fetched_at_iso": "2026-06-19T10:13:31.312354-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:23.398501-04:00",
     "events": []
   },
   "https://www.broadcom.com/products/software/value-stream-management/rally": {
-    "fetched_at_iso": "2026-06-19T10:13:31.312354-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:23.398501-04:00",
     "events": []
   },
   "https://www.youtube.com/shorts/50RLZ9-7l9E": {
@@ -8471,7 +8471,7 @@
     ]
   },
   "https://www.eventbrite.com/e/1st-annual-columbus-northern-lions-club-charity-car-show-tickets-1988942289930": {
-    "fetched_at_iso": "2026-06-14T09:03:49.170765-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
     "events": []
   },
   "https://gvc-bmwcca.org/What_is_an_Autocross": {
@@ -8515,7 +8515,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=14": {
-    "fetched_at_iso": "2026-06-21T09:04:40.337262-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:02.347368-04:00",
     "events": []
   },
   "https://www.rallysea.com/": {
@@ -8523,7 +8523,7 @@
     "events": []
   },
   "https://www.rebellerally.com/": {
-    "fetched_at_iso": "2026-06-19T10:13:31.312354-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:23.398501-04:00",
     "events": []
   },
   "https://cincyscca.com/rallycross/2026-rallycross-schedule-and-results/": {
@@ -9211,7 +9211,7 @@
     ]
   },
   "https://www.transportation.ohio.gov/": {
-    "fetched_at_iso": "2026-06-21T09:05:27.686534-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:46.739422-04:00",
     "events": [
       {
         "title": "Ohio Department of Transportation",
@@ -9231,7 +9231,7 @@
     "events": []
   },
   "https://thesouthern.com/": {
-    "fetched_at_iso": "2026-06-16T11:53:02.674881-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:03.240866-04:00",
     "events": []
   },
   "https://www.facebook.com/southernuniversitybatonrouge/": {
@@ -9623,7 +9623,7 @@
     "events": []
   },
   "https://edgewaterrace.com/autocross-1": {
-    "fetched_at_iso": "2026-06-14T09:05:13.510092-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:44.950815-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--florence/northern-ky-speed-dating/": {
@@ -9852,7 +9852,7 @@
     "events": []
   },
   "https://cincyscca.com/category/solo/": {
-    "fetched_at_iso": "2026-06-21T09:08:46.314206-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:44.950815-04:00",
     "events": []
   },
   "https://www.facebook.com/groups/CincySCCASolo/": {
@@ -10232,7 +10232,7 @@
     "events": []
   },
   "https://www.meetup.com/queencitysocialclub/": {
-    "fetched_at_iso": "2026-06-14T09:00:16.825734-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
     "events": [
       {
         "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
@@ -10453,7 +10453,7 @@
     ]
   },
   "https://goldrushrally.com/": {
-    "fetched_at_iso": "2026-06-21T09:05:59.073929-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:28.923972-04:00",
     "events": []
   },
   "https://www.scca.com/articles/2019245-the-2025-usrrc-will-be-an-unforgettable-shore-to-shore-buckeye-adventure": {
@@ -10461,7 +10461,7 @@
     "events": []
   },
   "https://www.southernglazers.com/": {
-    "fetched_at_iso": "2026-06-12T10:11:52.910139-04:00",
+    "fetched_at_iso": "2026-06-23T09:44:03.240866-04:00",
     "events": []
   },
   "https://www.eventbrite.com/o/28665156265": {
@@ -10570,14 +10570,14 @@
     ]
   },
   "https://www.meetup.com/find/us--oh--cincinnati/": {
-    "fetched_at_iso": "2026-06-14T09:00:16.825734-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
     "events": [
       {
-        "title": "Peer-to-Peer Insights & Generative, Community-Centered AI",
-        "start_iso": "2026-06-17T16:00:00-04:00",
-        "end_iso": "2026-06-17T18:00:00-04:00",
+        "title": "Generative AI and Analytics: What’s Real, What's Hype, and Where AI is Heading",
+        "start_iso": "2026-07-15T16:00:00-04:00",
+        "end_iso": "2026-07-15T18:00:00-04:00",
         "location": "Union Hall 1311 Vine St, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincinnati-data-and-analytics/events/314876261/"
+        "url": "https://www.meetup.com/cincinnati-data-and-analytics/events/315292969/"
       },
       {
         "title": "Applied AI for UX across the full product lifecycle",
@@ -10587,6 +10587,48 @@
         "url": "https://www.meetup.com/ixda-cincinnati/events/314853542/"
       },
       {
+        "title": "Cincy Web Tech Drinkup",
+        "start_iso": "2026-07-02T17:00:00-04:00",
+        "end_iso": "2026-07-02T19:00:00-04:00",
+        "location": "MOTR Pub 1345 Main Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cwtdrinkup/events/312938225/"
+      },
+      {
+        "title": "BYOBoardGame @ Rhinegeist",
+        "start_iso": "2026-06-24T18:30:00-04:00",
+        "end_iso": "2026-06-24T22:10:00-04:00",
+        "location": "Rhinegeist Brewery 1910 Elm Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-beer-and-boardgames/events/315172268/"
+      },
+      {
+        "title": "RECESS: Nerf Wars",
+        "start_iso": "2026-07-08T18:00:00-04:00",
+        "end_iso": "2026-07-08T20:00:00-04:00",
+        "location": "Yeatman's Cove at Sawyer Point 705 E. Pete Rose Way, Cincinnati, 45202, OH Cincinnati, 45202 OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277529/"
+      },
+      {
+        "title": "2026 AfriFest: Taste of Africa",
+        "start_iso": "2026-07-18T12:00:00-04:00",
+        "end_iso": "2026-07-18T14:00:00-04:00",
+        "location": "Sawyer Point 705 E. Pete Rose Way, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/55-fun-friends/events/314242299/"
+      },
+      {
+        "title": "Killer Queen & Board Games at Dice on Draft",
+        "start_iso": "2026-06-29T19:00:00-04:00",
+        "end_iso": "2026-06-29T21:00:00-04:00",
+        "location": "Dice on Draft 20 E 5th Street, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/cincinnati-beer-and-boardgames/events/315067947/"
+      },
+      {
+        "title": "You’re an Economist, You Just Don’t Know It Yet",
+        "start_iso": "2026-07-08T18:30:00-04:00",
+        "end_iso": "2026-07-08T20:30:00-04:00",
+        "location": "Distributed Charge 315 E 15th St., Suite 2-1, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/cincinnati-bitcoin/events/315140068/"
+      },
+      {
         "title": "Learning Party",
         "start_iso": "2026-06-23T18:00:00-04:00",
         "end_iso": "2026-06-23T20:30:00-04:00",
@@ -10594,25 +10636,60 @@
         "url": "https://www.meetup.com/self-care-sisterhood/events/314987252/"
       },
       {
-        "title": "BYOBoardGame @ The Pitch",
-        "start_iso": "2026-06-17T18:30:00-04:00",
-        "end_iso": "2026-06-17T22:10:00-04:00",
-        "location": "The Pitch Cincy The Pitch Cincy 1430 Central Parkway Cincinnati, OH, 45202, Cincinnati, IN Cincinnati IN",
-        "url": "https://www.meetup.com/cincinnati-beer-and-boardgames/events/315172267/"
+        "title": "Men's High Intermediate Grass Volleyball 1 Court Hirsch 6:30-8:30",
+        "start_iso": "2026-06-23T18:30:00-04:00",
+        "end_iso": "2026-06-23T20:30:00-04:00",
+        "location": "Hirsch Recreation Center 3630 Reading Road, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315219029/"
       },
       {
-        "title": "Killer Queen & Board Games at Dice on Draft",
-        "start_iso": "2026-06-15T19:00:00-04:00",
-        "end_iso": "2026-06-15T21:00:00-04:00",
-        "location": "Dice on Draft 20 E 5th Street, Covington, KY Covington KY",
-        "url": "https://www.meetup.com/cincinnati-beer-and-boardgames/events/314968933/"
+        "title": "Women's High Intermediate Grass Volleyball 1 Court Hirsch 6:30-8:30",
+        "start_iso": "2026-06-23T18:30:00-04:00",
+        "end_iso": "2026-06-23T20:30:00-04:00",
+        "location": "Hirsch Recreation Center 3630 Reading Road, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315287380/"
       },
       {
-        "title": "Join Biggest Community | Investors Founders | Cincinnati | Online",
-        "start_iso": "2026-06-18T13:00:00-04:00",
-        "end_iso": "2026-06-18T14:00:00-04:00",
-        "location": "Cincinnati E. Pete Rose Way, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/investor/events/315013610/"
+        "title": "Placeholder MCKIE (HIGH) INTERMEDIATE Vball.",
+        "start_iso": "2026-06-23T18:00:00-04:00",
+        "end_iso": "2026-06-23T20:00:00-04:00",
+        "location": "McKie Recreation Center 1655 Chase Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/314966616/"
+      },
+      {
+        "title": "Spring Grove Cemetery Walk",
+        "start_iso": "2026-06-23T10:00:00-04:00",
+        "end_iso": "2026-06-23T12:00:00-04:00",
+        "location": "Spring Grove Cemetery and Arboretum 4521 Spring Grove Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/iwantto/events/313620151/"
+      },
+      {
+        "title": "Tuesday evening hike at Summit park (beginner friendly)",
+        "start_iso": "2026-06-23T18:00:00-04:00",
+        "end_iso": "2026-06-23T20:00:00-04:00",
+        "location": "Madtree: Parks and Rec 4321 Glendale Milford Rd., Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/315355753/"
+      },
+      {
+        "title": "Trivia & a Movie in the Park",
+        "start_iso": "2026-06-23T19:00:00-04:00",
+        "end_iso": "2026-06-23T22:30:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/i-d-be-game-for-that/events/315306759/"
+      },
+      {
+        "title": "Mahjong Night @ Cincy Book Rack - Tuesday",
+        "start_iso": "2026-06-23T18:00:00-04:00",
+        "end_iso": "2026-06-23T21:00:00-04:00",
+        "location": "The Book Rack, Inc 8315 Beechmont Ave Suite 23, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-mahjong-meetup-group/events/315305827/"
+      },
+      {
+        "title": "Zoo La La",
+        "start_iso": "2026-06-26T19:30:00-04:00",
+        "end_iso": "2026-06-26T22:00:00-04:00",
+        "location": "Cincinnati Zoo & Botanical Garden 3400 Vine Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/312501261/"
       },
       {
         "title": "PRIDE. PINTS. PURPOSE: Celebrate PRIDE at Rhinegeist Brewery",
@@ -10622,144 +10699,46 @@
         "url": "https://www.meetup.com/hypcincinnati/events/314708543/"
       },
       {
-        "title": "Men's Group Hyde Park Cincinnati (3rd Monday)",
-        "start_iso": "2026-06-15T18:45:00-04:00",
-        "end_iso": "2026-06-15T21:15:00-04:00",
-        "location": "Cincinnati Ohio Cincinnati Ohio, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/mkp-cincinnati/events/314969034/"
-      },
-      {
-        "title": "No Kings - Rise Up, Concert for the First Amendment",
-        "start_iso": "2026-06-14T19:30:00-04:00",
-        "end_iso": "2026-06-14T21:30:00-04:00",
-        "location": "Cincinnati TBA, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/communityofreason/events/315062530/"
-      },
-      {
-        "title": "Coed Quads Pick Up Play at Hooligan's Sunday 4-7pm",
-        "start_iso": "2026-06-14T16:00:00-04:00",
-        "end_iso": "2026-06-14T19:00:00-04:00",
-        "location": "Hooligans Pub & Eatery 3340 Highland Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315054389/"
-      },
-      {
-        "title": "Magick and Witchcraft",
-        "start_iso": "2026-06-14T17:15:00-04:00",
-        "end_iso": "2026-06-14T19:15:00-04:00",
-        "location": "Poppets & Potions 4116 Hamilton Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/occult-oasis-meetup-group/events/314460290/"
-      },
-      {
-        "title": "Late notice Kenwood mall walk due to weather",
-        "start_iso": "2026-06-14T12:00:00-04:00",
-        "end_iso": "2026-06-14T14:00:00-04:00",
-        "location": "Kenwood Mall 7875 Montgomery Rd, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincy-hiking-and-social-club-20s-30s-40s/events/315247196/"
-      },
-      {
-        "title": "Just Sing - A.K.A. - Sober Karaoke",
-        "start_iso": "2026-06-14T15:00:00-04:00",
-        "end_iso": "2026-06-14T16:30:00-04:00",
-        "location": "Evendale Cultural Arts Center 10500 Reading Road, Evendale, OH Evendale OH",
-        "url": "https://www.meetup.com/explore-butler-county/events/314968487/"
-      },
-      {
-        "title": "Sunday Meditation",
-        "start_iso": "2026-06-14T11:30:00-04:00",
-        "end_iso": "2026-06-14T13:00:00-04:00",
-        "location": "Cincinnati Yoga School 6125 Ridge Avenue, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/ananda-cincinnati-meditation-group/events/314949409/"
-      },
-      {
-        "title": "Looking for Inner Peace? Find rest and healing in the midst of chaos",
-        "start_iso": "2026-06-14T11:00:00-04:00",
-        "end_iso": "2026-06-14T12:00:00-04:00",
-        "location": "Anderson Center - Community Room 7850 Five Mile Road, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/eckankar-greater-cincinnati/events/313463714/"
-      },
-      {
-        "title": "One Heart Light: Meditation & Blessing (@Hello Sunshine Yoga - Cincinnati)",
-        "start_iso": "2026-06-14T19:45:00-04:00",
-        "end_iso": "2026-06-14T20:45:00-04:00",
-        "location": "Hello Sunshine Yoga 6211 Montgomery Rd, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/oneheartlight/events/314955898/"
-      },
-      {
-        "title": "City Flea",
-        "start_iso": "2026-06-20T10:00:00-04:00",
-        "end_iso": "2026-06-20T11:45:00-04:00",
-        "location": "Washington Park 45202 1230 Elm St., Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/self-care-sisterhood/events/314984489/"
-      },
-      {
-        "title": "June Bookclub: True Love Experiment",
-        "start_iso": "2026-06-20T12:00:00-04:00",
-        "end_iso": "2026-06-20T13:30:00-04:00",
-        "location": "Cincinnati Main Library 800 Vine Street, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/self-care-sisterhood/events/311474210/"
-      },
-      {
-        "title": "Where is AI in 2026 and Where is it Going?",
-        "start_iso": "2026-06-20T11:00:00-04:00",
-        "end_iso": "2026-06-20T13:00:00-04:00",
-        "location": "Hamilton County Public Library, Main Branch, Downtown 800 Vine Street, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/ai-safety-awareness-group-cincinatti/events/315085713/"
-      },
-      {
         "title": "Guided Meditation at Clifton Ave., Cincinnati- Come experience peace within !!",
-        "start_iso": "2026-06-19T19:00:00-04:00",
-        "end_iso": "2026-06-19T20:15:00-04:00",
+        "start_iso": "2026-06-26T19:00:00-04:00",
+        "end_iso": "2026-06-26T20:15:00-04:00",
         "location": "Clifton United Methodist Church 3416 Clifton Avenue, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/sahajameditationcincy/events/315030897/"
+        "url": "https://www.meetup.com/sahajameditationcincy/events/315139087/"
+      },
+      {
+        "title": "Assemble Newsletter for the Association for the Blind",
+        "start_iso": "2026-06-27T10:00:00-04:00",
+        "end_iso": "2026-06-27T13:00:00-04:00",
+        "location": "Cincinnati Association for the Blind and Visually Impaired 2015 Gilbert Ave,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/communityofreason/events/313823176/"
       },
       {
         "title": "Coed Quads Pick Up Play at Hooligan's Sunday 4-7pm",
-        "start_iso": "2026-06-21T16:00:00-04:00",
-        "end_iso": "2026-06-21T19:00:00-04:00",
+        "start_iso": "2026-06-28T16:00:00-04:00",
+        "end_iso": "2026-06-28T19:00:00-04:00",
         "location": "Hooligans Pub & Eatery 3340 Highland Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315054391/"
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315054394/"
+      },
+      {
+        "title": "Michelle Robinson Band @Element Eatery",
+        "start_iso": "2026-06-27T18:00:00-04:00",
+        "end_iso": "2026-06-27T22:00:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314769943/"
+      },
+      {
+        "title": "Learn Japanese in Cincy (West)",
+        "start_iso": "2026-06-27T13:00:00-04:00",
+        "end_iso": "2026-06-27T15:00:00-04:00",
+        "location": "The Fix Coffeehouse & Bar 2835 Woodburn Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/learn-japanese-in-cincy/events/314502597/"
       },
       {
         "title": "D&D 5e - The Forge of Fury Multi-Shot",
-        "start_iso": "2026-06-19T18:15:00-04:00",
-        "end_iso": "2026-06-19T23:59:00-04:00",
+        "start_iso": "2026-06-26T18:15:00-04:00",
+        "end_iso": "2026-06-26T23:59:00-04:00",
         "location": "Hero's Hearth 8315 Beechmont Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincinnati-adventurers-guild/events/313987165/"
-      },
-      {
-        "title": "Coffee and conversation at Panera Bread",
-        "start_iso": "2026-06-20T09:00:00-04:00",
-        "end_iso": "2026-06-20T11:00:00-04:00",
-        "location": "Panera Bread 6104 Harrison Ave, Dent, OH Dent OH",
-        "url": "https://www.meetup.com/single-over-50-fun-cincinnati/events/315202692/"
-      },
-      {
-        "title": "JAM 513 BYOT Coed Quads Pick Your Poison Sand Volleyball Tournament",
-        "start_iso": "2026-06-20T17:00:00-04:00",
-        "end_iso": "2026-06-20T23:30:00-04:00",
-        "location": "cherry grove lanes/ setters volleyball courts 4005 Hooper Hill, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315201524/"
-      },
-      {
-        "title": "Wine & Convesation @ Crafts & Vines",
-        "start_iso": "2026-06-20T19:00:00-04:00",
-        "end_iso": "2026-06-20T22:00:00-04:00",
-        "location": "Craft and Vines 642 Main Street Covington, KY 41011, Covington, KY Covington KY",
-        "url": "https://www.meetup.com/wine-conversation/events/315136082/"
-      },
-      {
-        "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
-        "start_iso": "2026-06-14T14:00:00-04:00",
-        "end_iso": "2026-06-14T16:00:00-04:00",
-        "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314836993/"
-      },
-      {
-        "title": "Something to Wine About",
-        "start_iso": "2026-06-27T19:00:00-04:00",
-        "end_iso": "2026-06-27T21:00:00-04:00",
-        "location": "Cincinnati, OH Cincinnati, OH, Cincinnati, Oh Cincinnati Oh",
-        "url": "https://www.meetup.com/black-love-and-friends-cincinnati/events/314819753/"
+        "url": "https://www.meetup.com/cincinnati-adventurers-guild/events/315337300/"
       },
       {
         "title": "RECESS: Basketball, cornhole and drinks at Ziegler Park & Rosedale Bar in OTR",
@@ -10769,25 +10748,11 @@
         "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314894168/"
       },
       {
-        "title": "Your Summer Social Life Starts Here 🍻🎳 🍻 20% Off for NEW Bowlers!",
-        "start_iso": "2026-06-19T19:00:00-04:00",
-        "end_iso": "2026-06-19T21:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/fun-cincinnati-girlfriends/events/314740874/"
-      },
-      {
-        "title": "Pickleball for Beginners at Norwood/Hyde Park!!",
-        "start_iso": "2026-06-14T10:00:00-04:00",
-        "end_iso": "2026-06-14T11:30:00-04:00",
-        "location": "Eastside Recreation Center 3950 Paxton Ave. ,, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/iwantto/events/315148348/"
-      },
-      {
-        "title": "RECESS: Soccer or Futbol",
-        "start_iso": "2026-06-17T18:00:00-04:00",
-        "end_iso": "2026-06-17T20:00:00-04:00",
-        "location": "Four Seasons Marina 4609 Kellogg Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314894114/"
+        "title": "Something to Wine About",
+        "start_iso": "2026-06-27T19:00:00-04:00",
+        "end_iso": "2026-06-27T21:00:00-04:00",
+        "location": "Cincinnati, OH Cincinnati, OH, Cincinnati, Oh Cincinnati Oh",
+        "url": "https://www.meetup.com/black-love-and-friends-cincinnati/events/314819753/"
       },
       {
         "title": "BB Riverboat Brunch!",
@@ -10797,32 +10762,60 @@
         "url": "https://www.meetup.com/55-fun-friends/events/314201142/"
       },
       {
-        "title": "Cincinnati Reds Game",
-        "start_iso": "2026-06-16T19:00:00-04:00",
-        "end_iso": "2026-06-16T22:00:00-04:00",
-        "location": "Great American Ball Park 100 100 Joe Nuxhall Way, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincy-hiking-and-social-club-20s-30s-40s/events/314702099/"
+        "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
+        "start_iso": "2026-06-30T20:30:00-04:00",
+        "end_iso": "2026-06-30T23:00:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/queencitysocialclub/events/315178560/"
       },
       {
-        "title": "Date Cincy: Singles Summer Block Party (Posting not hosting)",
-        "start_iso": "2026-06-18T18:30:00-04:00",
-        "end_iso": "2026-06-18T21:00:00-04:00",
-        "location": "The Banks 150 East Freedom Way,, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincy-hiking-and-social-club-20s-30s-40s/events/314695180/"
+        "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
+        "start_iso": "2026-06-28T14:00:00-04:00",
+        "end_iso": "2026-06-28T16:00:00-04:00",
+        "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277162/"
+      },
+      {
+        "title": "Trivia @ Element Eatery",
+        "start_iso": "2026-06-29T18:30:00-04:00",
+        "end_iso": "2026-06-29T21:00:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincy-social-connections/events/315374233/"
+      },
+      {
+        "title": "It's Finally Friday!",
+        "start_iso": "2026-07-10T18:00:00-04:00",
+        "end_iso": "2026-07-10T22:00:00-04:00",
+        "location": "Washington Park 1230 Elm Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/black-love-and-friends-cincinnati/events/315036637/"
+      },
+      {
+        "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
+        "start_iso": "2026-07-05T14:00:00-04:00",
+        "end_iso": "2026-07-05T16:00:00-04:00",
+        "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277166/"
       },
       {
         "title": "Tokyo Kitty Karaoke Night",
         "start_iso": "2026-07-03T18:30:00-04:00",
         "end_iso": "2026-07-03T20:30:00-04:00",
         "location": "Tokyo Kitty 575 Race Street, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincy-hiking-and-social-club-20s-30s-40s/events/314989637/"
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/314989637/"
+      },
+      {
+        "title": "Ohio River Walk",
+        "start_iso": "2026-06-25T18:30:00-04:00",
+        "end_iso": "2026-06-25T20:30:00-04:00",
+        "location": "Covington Yard 401 Greenup St, Covington, KY 41011, Kentucky, KY Kentucky KY",
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/315282027/"
       },
       {
         "title": "Cincinnati Pride Parade and Festival",
         "start_iso": "2026-06-27T11:00:00-04:00",
         "end_iso": "2026-06-27T13:00:00-04:00",
         "location": "Fountain Square 520 Vine St, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincy-hiking-and-social-club-20s-30s-40s/events/314815723/"
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/314815723/"
       },
       {
         "title": "Let’s Meet at - Eden Park",
@@ -10839,18 +10832,32 @@
         "url": "https://www.meetup.com/sierraoutings/events/315244971/"
       },
       {
-        "title": "Friday Corryville All Levels Coed Indoor Volleyball",
-        "start_iso": "2026-06-19T16:45:00-04:00",
-        "end_iso": "2026-06-19T18:30:00-04:00",
-        "location": "Corryville Recreation Center 2823 Eden Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315014573/"
+        "title": "Contra Dance",
+        "start_iso": "2026-06-29T19:00:00-04:00",
+        "end_iso": "2026-06-29T21:00:00-04:00",
+        "location": "Wyoming Fine Arts Center 322 Wyoming Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/315183875/"
       },
       {
-        "title": "Let's Meetup and walk @ DEVOU PARK in Covington, KY",
-        "start_iso": "2026-06-14T09:30:00-04:00",
-        "end_iso": "2026-06-14T11:30:00-04:00",
-        "location": "Drees Pavilion at Devou Park 790 Park Lane, Covington, KY Covington KY",
-        "url": "https://www.meetup.com/american-walkers/events/315147027/"
+        "title": "Sunday Fitness Hike: Newport Aquarium to Eden Park Hike and Back - 9AM Start",
+        "start_iso": "2026-06-28T09:00:00-04:00",
+        "end_iso": "2026-06-28T12:00:00-04:00",
+        "location": "1 Aquarium Way 1 Aquarium Way, Newport, KY Newport KY",
+        "url": "https://www.meetup.com/hike-cincinnati/events/314837163/"
+      },
+      {
+        "title": "Hiking with the Cincinnati Ski Club!",
+        "start_iso": "2026-06-27T10:00:00-04:00",
+        "end_iso": "2026-06-27T13:00:00-04:00",
+        "location": "Doe Run Lake 1501 Bullock Pen Road, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/cincinnati-ski-club/events/315171077/"
+      },
+      {
+        "title": "Friday Corryville All Levels Coed Indoor Volleyball",
+        "start_iso": "2026-06-26T16:45:00-04:00",
+        "end_iso": "2026-06-26T18:30:00-04:00",
+        "location": "Corryville Recreation Center 2823 Eden Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315014578/"
       },
       {
         "title": "Wednesday Corryville All Levels Coed Indoor Volleyball",
@@ -10861,52 +10868,38 @@
       },
       {
         "title": "Madisonville - (HIGH) INTERMEDIATE Coed Adult Volleyball",
-        "start_iso": "2026-06-17T17:45:00-04:00",
-        "end_iso": "2026-06-17T20:00:00-04:00",
+        "start_iso": "2026-06-24T17:45:00-04:00",
+        "end_iso": "2026-06-24T20:00:00-04:00",
         "location": "Madisonville Recreation Center 5320 Stewart Road, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/314961979/"
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/314961981/"
       },
       {
         "title": "*SUMMER HOURS* Intermediate Coed Indoor Volleyball from 5:30-7:50pm",
-        "start_iso": "2026-06-18T17:30:00-04:00",
-        "end_iso": "2026-06-18T19:50:00-04:00",
+        "start_iso": "2026-06-25T17:30:00-04:00",
+        "end_iso": "2026-06-25T19:50:00-04:00",
         "location": "Mt Washington Recreation Center 1715 Beacon Street, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/314967768/"
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/314967769/"
+      },
+      {
+        "title": "Let's meetup and walk Mt. Airy Forest",
+        "start_iso": "2026-06-28T09:30:00-04:00",
+        "end_iso": "2026-06-28T11:30:00-04:00",
+        "location": "Mt. Airy Forest Cincinnati 5083 Colerain Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/american-walkers/events/315365665/"
       },
       {
         "title": "Community Ultimate Frisbee, Pleasant Ridge",
-        "start_iso": "2026-06-17T18:00:00-04:00",
-        "end_iso": "2026-06-17T19:00:00-04:00",
+        "start_iso": "2026-06-24T18:00:00-04:00",
+        "end_iso": "2026-06-24T19:00:00-04:00",
         "location": "Pleasant Ridge Baptist Church 6401 Ridge Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/community-ultimate-frisbee-pleasant-ridge/events/315239410/"
+        "url": "https://www.meetup.com/community-ultimate-frisbee-pleasant-ridge/events/315362760/"
       },
       {
-        "title": "The Non-competitive Tennis Partner Program",
-        "start_iso": "2026-07-01T19:00:00-04:00",
-        "end_iso": "2026-07-01T21:00:00-04:00",
+        "title": "June Tourney",
+        "start_iso": "2026-06-23T19:00:00-04:00",
+        "end_iso": "2026-06-23T21:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/cincinnati-tennis-league/events/315220764/"
-      },
-      {
-        "title": "'80s Night at Fountain Square!",
-        "start_iso": "2026-06-20T19:00:00-04:00",
-        "end_iso": "2026-06-20T23:00:00-04:00",
-        "location": "Fountain Square 520 Vine St, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cinci-live-music/events/315000664/"
-      },
-      {
-        "title": "Afro Caribbean Day Party @Revel OTR",
-        "start_iso": "2026-06-14T15:00:00-04:00",
-        "end_iso": "2026-06-14T20:00:00-04:00",
-        "location": "Revel OTR 111 East 12th Street, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincinnati-afro-caribbean-and-international-experiences/events/315223860/"
-      },
-      {
-        "title": "The Leo presented by Queen City Balladeers",
-        "start_iso": "2026-06-14T17:00:00-04:00",
-        "end_iso": "2026-06-14T21:00:00-04:00",
-        "location": "Zion United Church of Christ 2301 Indian Mound Ave, Norwood, OH Norwood OH",
-        "url": "https://www.meetup.com/queen-city-balladeers-leo-coffeehouse/events/315168577/"
+        "url": "https://www.meetup.com/cincinnati-tennis-league/events/313850658/"
       },
       {
         "title": "INTERNATIONAL NIGHT @ SOMERSET BAR",
@@ -10914,6 +10907,13 @@
         "end_iso": "2026-06-28T01:00:00-04:00",
         "location": "Somerset Bar 139 E McMicken Ave, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/cincinnati-afro-caribbean-and-international-experiences/events/315226276/"
+      },
+      {
+        "title": "AFRIFEST: TASTE OF AFRICA",
+        "start_iso": "2026-07-18T11:00:00-04:00",
+        "end_iso": "2026-07-18T21:00:00-04:00",
+        "location": "SAWYER POINT PARK 705 E PETE ROSE WAY, CINCINNATI, OH CINCINNATI OH",
+        "url": "https://www.meetup.com/cincinnati-afro-caribbean-and-international-experiences/events/315367939/"
       },
       {
         "title": "1st Sunday Rise Up Singing",
@@ -10962,7 +10962,7 @@
     "events": []
   },
   "https://www.networx.com/c.road-works-asphalt1": {
-    "fetched_at_iso": "2026-06-21T09:05:27.686534-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:46.739422-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/hotly-contested-unpredictable-ara-national-championship-set-to-continue-at-southern-ohio": {
@@ -11026,7 +11026,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/october-12th/": {
-    "fetched_at_iso": "2026-06-21T09:04:40.337262-04:00",
+    "fetched_at_iso": "2026-06-23T09:43:02.347368-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/festivals/": {
@@ -11043,6 +11043,891 @@
   },
   "https://www.thextremexperience.com/?srsltid=AfmBOorMKPtooT5wdlJqdPVKFKhf4IWRH7TOeXaTjnmr5ZNSmTli4djM": {
     "fetched_at_iso": "2026-06-21T09:05:08.191991-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=2": {
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=4": {
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-middletown-ohio/?page=3": {
+    "fetched_at_iso": "2026-06-23T09:43:02.347368-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-downtown-hamilton/?page=4": {
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
+    "events": []
+  },
+  "https://www.meetup.com/queencitysocialclub/events/315178560/": {
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
+    "events": []
+  },
+  "https://www.meetup.com/find/us--oh--cincinnati/social/": {
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
+    "events": [
+      {
+        "title": "RECESS: Basketball, cornhole and drinks at Ziegler Park & Rosedale Bar in OTR",
+        "start_iso": "2026-06-25T18:00:00-04:00",
+        "end_iso": "2026-06-25T20:00:00-04:00",
+        "location": "Ziegler Park 1322 Sycamore Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314894168/"
+      },
+      {
+        "title": "BB Riverboat Brunch!",
+        "start_iso": "2026-06-28T12:00:00-04:00",
+        "end_iso": "2026-06-28T14:00:00-04:00",
+        "location": "B B Riverboats Inc 101 Riverboat Row, Newport, KY Newport KY",
+        "url": "https://www.meetup.com/55-fun-friends/events/314201142/"
+      },
+      {
+        "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
+        "start_iso": "2026-06-28T14:00:00-04:00",
+        "end_iso": "2026-06-28T16:00:00-04:00",
+        "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277162/"
+      },
+      {
+        "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
+        "start_iso": "2026-07-05T14:00:00-04:00",
+        "end_iso": "2026-07-05T16:00:00-04:00",
+        "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277166/"
+      },
+      {
+        "title": "RECESS: Nerf Wars",
+        "start_iso": "2026-07-08T18:00:00-04:00",
+        "end_iso": "2026-07-08T20:00:00-04:00",
+        "location": "Yeatman's Cove at Sawyer Point 705 E. Pete Rose Way, Cincinnati, 45202, OH Cincinnati, 45202 OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277529/"
+      },
+      {
+        "title": "2026 AfriFest: Taste of Africa",
+        "start_iso": "2026-07-18T12:00:00-04:00",
+        "end_iso": "2026-07-18T14:00:00-04:00",
+        "location": "Sawyer Point 705 E. Pete Rose Way, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/55-fun-friends/events/314242299/"
+      },
+      {
+        "title": "June dinner event Part 2",
+        "start_iso": "2026-06-24T19:00:00-04:00",
+        "end_iso": "2026-06-24T21:00:00-04:00",
+        "location": "Bravo West Chester 9436 Water Front Dr, West Chester, OH West Chester OH",
+        "url": "https://www.meetup.com/single-over-50-fun-cincinnati/events/314845195/"
+      },
+      {
+        "title": "Tri-State Freethinkers and Tri-State Atheists Social Gathering",
+        "start_iso": "2026-06-25T19:00:00-04:00",
+        "end_iso": "2026-06-25T21:00:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/tristatefreethinkers/events/315047115/"
+      },
+      {
+        "title": "Blue Ash Golf Course 4th of July",
+        "start_iso": "2026-07-04T12:00:00-04:00",
+        "end_iso": "2026-07-04T14:00:00-04:00",
+        "location": "Blue Ash Golf Course 4040 Cooper Rd, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/asgacincinnati/events/314978355/"
+      },
+      {
+        "title": "Elks Run golf course",
+        "start_iso": "2026-07-18T12:00:00-04:00",
+        "end_iso": "2026-07-18T14:00:00-04:00",
+        "location": "Elks Run Golf Course 2000 Elklick Rd, Batavia, OH Batavia OH",
+        "url": "https://www.meetup.com/asgacincinnati/events/315174644/"
+      },
+      {
+        "title": "Hickory Sticks Golf Club",
+        "start_iso": "2026-07-11T12:00:00-04:00",
+        "end_iso": "2026-07-11T14:00:00-04:00",
+        "location": "Hickory Sticks Golf Club 3812 Painter Rd, California, KY California KY",
+        "url": "https://www.meetup.com/asgacincinnati/events/314978439/"
+      },
+      {
+        "title": "Bitcoin Social 🏌️ at Top Golf",
+        "start_iso": "2026-07-30T18:30:00-04:00",
+        "end_iso": "2026-07-30T20:30:00-04:00",
+        "location": "Top Golf 9568 Waterfront Drive, West Chester, OH West Chester OH",
+        "url": "https://www.meetup.com/cincinnati-bitcoin/events/312460049/"
+      },
+      {
+        "title": "Tri-State Freethinkers and Tri-State Atheists Social Gathering",
+        "start_iso": "2026-06-25T19:00:00-04:00",
+        "end_iso": "2026-06-25T21:00:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnatiatheists/events/315047061/"
+      },
+      {
+        "title": "Stogie Socialites Meet and Greet",
+        "start_iso": "2026-07-01T17:00:00-04:00",
+        "end_iso": "2026-07-01T19:00:00-04:00",
+        "location": "Leaf to Ash Cigar Lounge 6183 Salem Road,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/stogie-social-cincy/events/315219320/"
+      },
+      {
+        "title": "Stereo Weekend @Factory52",
+        "start_iso": "2026-07-04T16:00:00-04:00",
+        "end_iso": "2026-07-04T18:00:00-04:00",
+        "location": "Braxton Factory 52 4600 Beech St Suites 100 & 300, Norwood, OH Norwood OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314832212/"
+      },
+      {
+        "title": "Cincy Web Tech Drinkup",
+        "start_iso": "2026-07-02T17:00:00-04:00",
+        "end_iso": "2026-07-02T19:00:00-04:00",
+        "location": "MOTR Pub 1345 Main Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cwtdrinkup/events/312938225/"
+      },
+      {
+        "title": "Wednesday Night Walk and Social",
+        "start_iso": "2026-06-24T18:30:00-04:00",
+        "end_iso": "2026-06-24T20:30:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/fifty-plus-singles/events/315109858/"
+      },
+      {
+        "title": "Michelle Robinson Band @Element Eatery",
+        "start_iso": "2026-06-27T18:00:00-04:00",
+        "end_iso": "2026-06-27T20:00:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314769943/"
+      },
+      {
+        "title": "Drinks @Madtree Parks & Recreation (Blue Ash)",
+        "start_iso": "2026-06-24T18:30:00-04:00",
+        "end_iso": "2026-06-24T20:30:00-04:00",
+        "location": "Madtree: Parks and Rec 4321 Glendale Milford Rd., Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/315197505/"
+      },
+      {
+        "title": "Meetup en Ludlow Wines",
+        "start_iso": "2026-06-24T19:00:00-04:00",
+        "end_iso": "2026-06-24T21:00:00-04:00",
+        "location": "Ludlow Wines 343 Ludlow Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnatisimos/events/314771156/"
+      },
+      {
+        "title": "C3: Code, Craft, Community - NEW NIGHT!",
+        "start_iso": "2026-06-24T18:00:00-04:00",
+        "end_iso": "2026-06-24T20:00:00-04:00",
+        "location": "Ingage Partners 4445 Lake Forest Drive, Suite 440, Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/c3-code-craft-community/events/315222635/"
+      },
+      {
+        "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
+        "start_iso": "2026-06-30T20:30:00-04:00",
+        "end_iso": "2026-06-30T22:30:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/queencitysocialclub/events/315178560/"
+      },
+      {
+        "title": "Coffee and Conversation",
+        "start_iso": "2026-07-04T09:00:00-04:00",
+        "end_iso": "2026-07-04T11:00:00-04:00",
+        "location": "Panera Bread 6104 Harrison Ave, Dent, OH Dent OH",
+        "url": "https://www.meetup.com/single-over-50-fun-cincinnati/events/315353932/"
+      },
+      {
+        "title": "Trivia @ Element Eatery",
+        "start_iso": "2026-06-29T18:30:00-04:00",
+        "end_iso": "2026-06-29T20:30:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincy-social-connections/events/315374233/"
+      }
+    ]
+  },
+  "https://www.meetup.com/find/us--ky--newport/sports-and-hobbies/": {
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
+    "events": [
+      {
+        "title": "Thursday Meet at the Library",
+        "start_iso": "2026-06-25T18:00:00-04:00",
+        "end_iso": "2026-06-25T20:00:00-04:00",
+        "location": "Kenton County Public Library, Covington Branch 502 Scott St., Covington, KY Covington KY",
+        "url": "https://www.meetup.com/covington-write-meetup-group/events/315025104/"
+      },
+      {
+        "title": "The Devil's Teeth",
+        "start_iso": "2026-07-14T19:00:00-04:00",
+        "end_iso": "2026-07-14T21:00:00-04:00",
+        "location": "Campbell County Public Library: Newport Branch 901 East 6th Street, Newport, KY Newport KY",
+        "url": "https://www.meetup.com/northern-kentucky-cincy-science-book-club/events/314474691/"
+      },
+      {
+        "title": "Discuss The Lion Women of Tehran by Marjan Kamali",
+        "start_iso": "2026-07-09T19:00:00-04:00",
+        "end_iso": "2026-07-09T21:00:00-04:00",
+        "location": "Ault Park Pavilion 5090 Observatory Cir, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-lgbt-book-club/events/314499119/"
+      },
+      {
+        "title": "Entangled Life: How Fungi Make Our Worlds, Change Our Minds & Shape Our Futures",
+        "start_iso": "2026-08-11T19:00:00-04:00",
+        "end_iso": "2026-08-11T21:00:00-04:00",
+        "location": "Campbell County Public Library: Newport Branch 901 East 6th Street, Newport, KY Newport KY",
+        "url": "https://www.meetup.com/northern-kentucky-cincy-science-book-club/events/314907474/"
+      },
+      {
+        "title": "Yoga @Summit Park (Blue Ash)",
+        "start_iso": "2026-06-24T17:15:00-04:00",
+        "end_iso": "2026-06-24T18:30:00-04:00",
+        "location": "Summit Park 4335 Glendale Milford Road, Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/315197501/"
+      },
+      {
+        "title": "Yoga Washington Park Free on the Green's",
+        "start_iso": "2026-07-01T17:00:00-04:00",
+        "end_iso": "2026-07-01T19:00:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/girlfriendz-networking-group-2026/events/315306447/"
+      },
+      {
+        "title": "Guided Meditation at Clifton Ave., Cincinnati- Come experience peace within !!",
+        "start_iso": "2026-06-26T19:00:00-04:00",
+        "end_iso": "2026-06-26T20:15:00-04:00",
+        "location": "Clifton United Methodist Church 3416 Clifton Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sahajameditationcincy/events/315139087/"
+      },
+      {
+        "title": "Golden Lotus Yoga Meditation Group, in the Raja Yoga, Kriya Yoga Tradition",
+        "start_iso": "2026-06-25T19:30:00-04:00",
+        "end_iso": "2026-06-25T20:30:00-04:00",
+        "location": "1860 Broadstone Rd 1860 Broadstone Rd, Grosse Pointe Woods, Mi Grosse Pointe Woods Mi",
+        "url": "https://www.meetup.com/grosse-pointe-meditation-group/events/315126618/"
+      },
+      {
+        "title": "Cincinnati Reds - Skyline, Sunset and Fireworks",
+        "start_iso": "2026-07-10T19:30:00-04:00",
+        "end_iso": "2026-07-10T22:30:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/314408509/"
+      },
+      {
+        "title": "Stereo Weekend @Factory52",
+        "start_iso": "2026-07-04T16:00:00-04:00",
+        "end_iso": "2026-07-04T19:00:00-04:00",
+        "location": "Braxton Factory 52 4600 Beech St Suites 100 & 300, Norwood, OH Norwood OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314832212/"
+      },
+      {
+        "title": "CCPC's Monthly Meet N' Greet Social Hour(s)",
+        "start_iso": "2026-07-06T18:00:00-04:00",
+        "end_iso": "2026-07-06T20:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/312920370/"
+      },
+      {
+        "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
+        "start_iso": "2026-06-30T20:30:00-04:00",
+        "end_iso": "2026-06-30T23:00:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/queencitysocialclub/events/315178560/"
+      },
+      {
+        "title": "Sunday Meditation",
+        "start_iso": "2026-06-28T11:30:00-04:00",
+        "end_iso": "2026-06-28T13:00:00-04:00",
+        "location": "Cincinnati Yoga School 6125 Ridge Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/ananda-cincinnati-meditation-group/events/315091640/"
+      },
+      {
+        "title": "Guided Meditation at Milford - Come experience peace within !!",
+        "start_iso": "2026-06-24T19:00:00-04:00",
+        "end_iso": "2026-06-24T20:15:00-04:00",
+        "location": "Miami Township Civic Center 6101 Meijer Dr, Milford, OH Milford OH",
+        "url": "https://www.meetup.com/sahajameditationcincy/events/315063414/"
+      },
+      {
+        "title": "Wednesday Long Meditation",
+        "start_iso": "2026-06-24T20:00:00-04:00",
+        "end_iso": "2026-06-24T21:30:00-04:00",
+        "location": "Wisdom Temple 9848 Orchard Club Dr., Montgomery, OH Montgomery OH",
+        "url": "https://www.meetup.com/ananda-cincinnati-meditation-group/events/315111677/"
+      }
+    ]
+  },
+  "https://www.meetup.com/find/us--ky--dayton/photography/": {
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
+    "events": [
+      {
+        "title": "Cincinnati Reds - Skyline, Sunset and Fireworks",
+        "start_iso": "2026-07-10T19:30:00-04:00",
+        "end_iso": "2026-07-10T21:30:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/314408509/"
+      },
+      {
+        "title": "Photo 101 - How To FOCUS Your Lens In Photography: Manual Focus Methods",
+        "start_iso": "2026-06-26T19:00:00-04:00",
+        "end_iso": "2026-06-26T21:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315330189/"
+      },
+      {
+        "title": "Learn STOCK Photography ~ Recommended Agencies, Resources And Tools",
+        "start_iso": "2026-06-30T20:00:00-04:00",
+        "end_iso": "2026-06-30T22:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315370199/"
+      },
+      {
+        "title": "Stock Photography Strategy Session - Turn Your Images Into Income",
+        "start_iso": "2026-06-23T20:00:00-04:00",
+        "end_iso": "2026-06-23T22:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315356483/"
+      },
+      {
+        "title": "CCPC's Monthly Meet N' Greet Social Hour(s)",
+        "start_iso": "2026-07-06T18:00:00-04:00",
+        "end_iso": "2026-07-06T20:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/312920370/"
+      },
+      {
+        "title": "Photo 101 ~ Learn How To Instantly Take Better Images! Aperture, Shutter, ISO",
+        "start_iso": "2026-06-29T19:00:00-04:00",
+        "end_iso": "2026-06-29T21:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315343837/"
+      },
+      {
+        "title": "An Introduction To Lenses & Focal Length In Photography",
+        "start_iso": "2026-06-24T19:00:00-04:00",
+        "end_iso": "2026-06-24T21:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315300172/"
+      },
+      {
+        "title": "An Intro To Landscape Photography For Beginners - Instantly Improve Your Images!",
+        "start_iso": "2026-06-25T19:00:00-04:00",
+        "end_iso": "2026-06-25T21:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315315022/"
+      },
+      {
+        "title": "Stereo Weekend @Factory52",
+        "start_iso": "2026-07-04T16:00:00-04:00",
+        "end_iso": "2026-07-04T18:00:00-04:00",
+        "location": "Braxton Factory 52 4600 Beech St Suites 100 & 300, Norwood, OH Norwood OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314832212/"
+      },
+      {
+        "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
+        "start_iso": "2026-06-30T20:30:00-04:00",
+        "end_iso": "2026-06-30T22:30:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/queencitysocialclub/events/315178560/"
+      },
+      {
+        "title": "Yoga @Summit Park (Blue Ash)",
+        "start_iso": "2026-06-24T17:15:00-04:00",
+        "end_iso": "2026-06-24T19:15:00-04:00",
+        "location": "Summit Park 4335 Glendale Milford Road, Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/315197501/"
+      },
+      {
+        "title": "Drinks @Madtree Parks & Recreation (Blue Ash)",
+        "start_iso": "2026-06-24T18:30:00-04:00",
+        "end_iso": "2026-06-24T20:30:00-04:00",
+        "location": "Madtree: Parks and Rec 4321 Glendale Milford Rd., Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/315197505/"
+      },
+      {
+        "title": "Cincy Web Tech Drinkup",
+        "start_iso": "2026-07-02T17:00:00-04:00",
+        "end_iso": "2026-07-02T19:00:00-04:00",
+        "location": "MOTR Pub 1345 Main Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cwtdrinkup/events/312938225/"
+      }
+    ]
+  },
+  "https://www.meetup.com/find/us--ky--ft-mitchell/sports-and-hobbies/": {
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
+    "events": [
+      {
+        "title": "Thursday Meet at the Library",
+        "start_iso": "2026-06-25T18:00:00-04:00",
+        "end_iso": "2026-06-25T20:00:00-04:00",
+        "location": "Kenton County Public Library, Covington Branch 502 Scott St., Covington, KY Covington KY",
+        "url": "https://www.meetup.com/covington-write-meetup-group/events/315025104/"
+      },
+      {
+        "title": "Discuss The Lion Women of Tehran by Marjan Kamali",
+        "start_iso": "2026-07-09T19:00:00-04:00",
+        "end_iso": "2026-07-09T21:00:00-04:00",
+        "location": "Ault Park Pavilion 5090 Observatory Cir, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-lgbt-book-club/events/314499119/"
+      },
+      {
+        "title": "July Bookclub: The Five Star Weekend",
+        "start_iso": "2026-07-26T13:30:00-04:00",
+        "end_iso": "2026-07-26T15:30:00-04:00",
+        "location": "TBD TBD, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/self-care-sisterhood/events/311474219/"
+      },
+      {
+        "title": "How Is the Brain Wired?",
+        "start_iso": "2026-06-28T15:00:00-04:00",
+        "end_iso": "2026-06-28T16:30:00-04:00",
+        "location": "Clifton Branch Library 3400 Brookiline Ave., Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/science-conversation-cincy-meetup/events/315202125/"
+      },
+      {
+        "title": "Yoga Washington Park Free on the Green's",
+        "start_iso": "2026-07-01T17:00:00-04:00",
+        "end_iso": "2026-07-01T19:00:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/girlfriendz-networking-group-2026/events/315306447/"
+      },
+      {
+        "title": "Guided Meditation at Clifton Ave., Cincinnati- Come experience peace within !!",
+        "start_iso": "2026-06-26T19:00:00-04:00",
+        "end_iso": "2026-06-26T20:15:00-04:00",
+        "location": "Clifton United Methodist Church 3416 Clifton Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sahajameditationcincy/events/315139087/"
+      },
+      {
+        "title": "Golden Lotus Yoga Meditation Group, in the Raja Yoga, Kriya Yoga Tradition",
+        "start_iso": "2026-06-25T19:30:00-04:00",
+        "end_iso": "2026-06-25T20:30:00-04:00",
+        "location": "1860 Broadstone Rd 1860 Broadstone Rd, Grosse Pointe Woods, Mi Grosse Pointe Woods Mi",
+        "url": "https://www.meetup.com/grosse-pointe-meditation-group/events/315126618/"
+      },
+      {
+        "title": "Sunday Meditation",
+        "start_iso": "2026-06-28T11:30:00-04:00",
+        "end_iso": "2026-06-28T13:00:00-04:00",
+        "location": "Cincinnati Yoga School 6125 Ridge Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/ananda-cincinnati-meditation-group/events/315091640/"
+      },
+      {
+        "title": "Cincinnati Reds - Skyline, Sunset and Fireworks",
+        "start_iso": "2026-07-10T19:30:00-04:00",
+        "end_iso": "2026-07-10T22:30:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/314408509/"
+      },
+      {
+        "title": "Stereo Weekend @Factory52",
+        "start_iso": "2026-07-04T16:00:00-04:00",
+        "end_iso": "2026-07-04T19:00:00-04:00",
+        "location": "Braxton Factory 52 4600 Beech St Suites 100 & 300, Norwood, OH Norwood OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314832212/"
+      },
+      {
+        "title": "CCPC's Monthly Meet N' Greet Social Hour(s)",
+        "start_iso": "2026-07-06T18:00:00-04:00",
+        "end_iso": "2026-07-06T20:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/312920370/"
+      },
+      {
+        "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
+        "start_iso": "2026-06-30T20:30:00-04:00",
+        "end_iso": "2026-06-30T23:00:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/queencitysocialclub/events/315178560/"
+      },
+      {
+        "title": "Monday Night Meditation Practice",
+        "start_iso": "2026-06-29T19:00:00-04:00",
+        "end_iso": "2026-06-29T21:00:00-04:00",
+        "location": "Indianapolis Zen Center 3703 N Washington Blvd, Indianapolis, IN Indianapolis IN",
+        "url": "https://www.meetup.com/indianapolis-zen-center/events/315190104/"
+      },
+      {
+        "title": "Wednesday Long Meditation",
+        "start_iso": "2026-06-24T20:00:00-04:00",
+        "end_iso": "2026-06-24T21:30:00-04:00",
+        "location": "Wisdom Temple 9848 Orchard Club Dr., Montgomery, OH Montgomery OH",
+        "url": "https://www.meetup.com/ananda-cincinnati-meditation-group/events/315111677/"
+      }
+    ]
+  },
+  "https://www.meetup.com/tr-TR/find/us--oh--cincinnati/": {
+    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
+    "events": [
+      {
+        "title": "Generative AI and Analytics: What’s Real, What's Hype, and Where AI is Heading",
+        "start_iso": "2026-07-15T16:00:00-04:00",
+        "end_iso": "2026-07-15T18:00:00-04:00",
+        "location": "Union Hall 1311 Vine St, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-data-and-analytics/events/315292969/"
+      },
+      {
+        "title": "Applied AI for UX across the full product lifecycle",
+        "start_iso": "2026-06-24T18:00:00-04:00",
+        "end_iso": "2026-06-24T19:30:00-04:00",
+        "location": "The 1819 Innovation HUB 2900 Reading Road, Cincinnati, oh Cincinnati oh",
+        "url": "https://www.meetup.com/ixda-cincinnati/events/314853542/"
+      },
+      {
+        "title": "Cincy Web Tech Drinkup",
+        "start_iso": "2026-07-02T17:00:00-04:00",
+        "end_iso": "2026-07-02T19:00:00-04:00",
+        "location": "MOTR Pub 1345 Main Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cwtdrinkup/events/312938225/"
+      },
+      {
+        "title": "BYOBoardGame @ Rhinegeist",
+        "start_iso": "2026-06-24T18:30:00-04:00",
+        "end_iso": "2026-06-24T22:10:00-04:00",
+        "location": "Rhinegeist Brewery 1910 Elm Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-beer-and-boardgames/events/315172268/"
+      },
+      {
+        "title": "RECESS: Nerf Wars",
+        "start_iso": "2026-07-08T18:00:00-04:00",
+        "end_iso": "2026-07-08T20:00:00-04:00",
+        "location": "Yeatman's Cove at Sawyer Point 705 E. Pete Rose Way, Cincinnati, 45202, OH Cincinnati, 45202 OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277529/"
+      },
+      {
+        "title": "2026 AfriFest: Taste of Africa",
+        "start_iso": "2026-07-18T12:00:00-04:00",
+        "end_iso": "2026-07-18T14:00:00-04:00",
+        "location": "Sawyer Point 705 E. Pete Rose Way, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/55-fun-friends/events/314242299/"
+      },
+      {
+        "title": "Killer Queen & Board Games at Dice on Draft",
+        "start_iso": "2026-06-29T19:00:00-04:00",
+        "end_iso": "2026-06-29T21:00:00-04:00",
+        "location": "Dice on Draft 20 E 5th Street, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/cincinnati-beer-and-boardgames/events/315067947/"
+      },
+      {
+        "title": "You’re an Economist, You Just Don’t Know It Yet",
+        "start_iso": "2026-07-08T18:30:00-04:00",
+        "end_iso": "2026-07-08T20:30:00-04:00",
+        "location": "Distributed Charge 315 E 15th St., Suite 2-1, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/cincinnati-bitcoin/events/315140068/"
+      },
+      {
+        "title": "Learning Party",
+        "start_iso": "2026-06-23T18:00:00-04:00",
+        "end_iso": "2026-06-23T20:30:00-04:00",
+        "location": "Blue Ash Library Blue Ash Library 4911 Cooper Rd. Cincinnati, Ohio 45242 Phone 513-369-6051, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/self-care-sisterhood/events/314987252/"
+      },
+      {
+        "title": "Women's High Intermediate Grass Volleyball 1 Court Hirsch 6:30-8:30",
+        "start_iso": "2026-06-23T18:30:00-04:00",
+        "end_iso": "2026-06-23T20:30:00-04:00",
+        "location": "Hirsch Recreation Center 3630 Reading Road, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315287380/"
+      },
+      {
+        "title": "Men's High Intermediate Grass Volleyball 1 Court Hirsch 6:30-8:30",
+        "start_iso": "2026-06-23T18:30:00-04:00",
+        "end_iso": "2026-06-23T20:30:00-04:00",
+        "location": "Hirsch Recreation Center 3630 Reading Road, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315219029/"
+      },
+      {
+        "title": "Placeholder MCKIE (HIGH) INTERMEDIATE Vball.",
+        "start_iso": "2026-06-23T18:00:00-04:00",
+        "end_iso": "2026-06-23T20:00:00-04:00",
+        "location": "McKie Recreation Center 1655 Chase Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/314966616/"
+      },
+      {
+        "title": "Spring Grove Cemetery Walk",
+        "start_iso": "2026-06-23T10:00:00-04:00",
+        "end_iso": "2026-06-23T12:00:00-04:00",
+        "location": "Spring Grove Cemetery and Arboretum 4521 Spring Grove Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/iwantto/events/313620151/"
+      },
+      {
+        "title": "Tuesday evening hike at Summit park (beginner friendly)",
+        "start_iso": "2026-06-23T18:00:00-04:00",
+        "end_iso": "2026-06-23T20:00:00-04:00",
+        "location": "Madtree: Parks and Rec 4321 Glendale Milford Rd., Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/315355753/"
+      },
+      {
+        "title": "Trivia & a Movie in the Park",
+        "start_iso": "2026-06-23T19:00:00-04:00",
+        "end_iso": "2026-06-23T22:30:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/i-d-be-game-for-that/events/315306759/"
+      },
+      {
+        "title": "Mahjong Night @ Cincy Book Rack - Tuesday",
+        "start_iso": "2026-06-23T18:00:00-04:00",
+        "end_iso": "2026-06-23T21:00:00-04:00",
+        "location": "The Book Rack, Inc 8315 Beechmont Ave Suite 23, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-mahjong-meetup-group/events/315305827/"
+      },
+      {
+        "title": "Zoo La La",
+        "start_iso": "2026-06-26T19:30:00-04:00",
+        "end_iso": "2026-06-26T22:00:00-04:00",
+        "location": "Cincinnati Zoo & Botanical Garden 3400 Vine Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/312501261/"
+      },
+      {
+        "title": "PRIDE. PINTS. PURPOSE: Celebrate PRIDE at Rhinegeist Brewery",
+        "start_iso": "2026-06-27T14:00:00-04:00",
+        "end_iso": "2026-06-27T16:00:00-04:00",
+        "location": "Rhinegeist Brewery 1910 Elm Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/hypcincinnati/events/314708543/"
+      },
+      {
+        "title": "Guided Meditation at Clifton Ave., Cincinnati- Come experience peace within !!",
+        "start_iso": "2026-06-26T19:00:00-04:00",
+        "end_iso": "2026-06-26T20:15:00-04:00",
+        "location": "Clifton United Methodist Church 3416 Clifton Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sahajameditationcincy/events/315139087/"
+      },
+      {
+        "title": "Assemble Newsletter for the Association for the Blind",
+        "start_iso": "2026-06-27T10:00:00-04:00",
+        "end_iso": "2026-06-27T13:00:00-04:00",
+        "location": "Cincinnati Association for the Blind and Visually Impaired 2015 Gilbert Ave,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/communityofreason/events/313823176/"
+      },
+      {
+        "title": "Coed Quads Pick Up Play at Hooligan's Sunday 4-7pm",
+        "start_iso": "2026-06-28T16:00:00-04:00",
+        "end_iso": "2026-06-28T19:00:00-04:00",
+        "location": "Hooligans Pub & Eatery 3340 Highland Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315054394/"
+      },
+      {
+        "title": "Michelle Robinson Band @Element Eatery",
+        "start_iso": "2026-06-27T18:00:00-04:00",
+        "end_iso": "2026-06-27T22:00:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314769943/"
+      },
+      {
+        "title": "Learn Japanese in Cincy (West)",
+        "start_iso": "2026-06-27T13:00:00-04:00",
+        "end_iso": "2026-06-27T15:00:00-04:00",
+        "location": "The Fix Coffeehouse & Bar 2835 Woodburn Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/learn-japanese-in-cincy/events/314502597/"
+      },
+      {
+        "title": "D&D 5e - The Forge of Fury Multi-Shot",
+        "start_iso": "2026-06-26T18:15:00-04:00",
+        "end_iso": "2026-06-26T23:59:00-04:00",
+        "location": "Hero's Hearth 8315 Beechmont Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-adventurers-guild/events/315337300/"
+      },
+      {
+        "title": "RECESS: Basketball, cornhole and drinks at Ziegler Park & Rosedale Bar in OTR",
+        "start_iso": "2026-06-25T18:00:00-04:00",
+        "end_iso": "2026-06-25T21:00:00-04:00",
+        "location": "Ziegler Park 1322 Sycamore Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/314894168/"
+      },
+      {
+        "title": "Something to Wine About",
+        "start_iso": "2026-06-27T19:00:00-04:00",
+        "end_iso": "2026-06-27T21:00:00-04:00",
+        "location": "Cincinnati, OH Cincinnati, OH, Cincinnati, Oh Cincinnati Oh",
+        "url": "https://www.meetup.com/black-love-and-friends-cincinnati/events/314819753/"
+      },
+      {
+        "title": "BB Riverboat Brunch!",
+        "start_iso": "2026-06-28T12:00:00-04:00",
+        "end_iso": "2026-06-28T14:00:00-04:00",
+        "location": "B B Riverboats Inc 101 Riverboat Row, Newport, KY Newport KY",
+        "url": "https://www.meetup.com/55-fun-friends/events/314201142/"
+      },
+      {
+        "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
+        "start_iso": "2026-06-30T20:30:00-04:00",
+        "end_iso": "2026-06-30T23:00:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/queencitysocialclub/events/315178560/"
+      },
+      {
+        "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
+        "start_iso": "2026-06-28T14:00:00-04:00",
+        "end_iso": "2026-06-28T16:00:00-04:00",
+        "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277162/"
+      },
+      {
+        "title": "Trivia @ Element Eatery",
+        "start_iso": "2026-06-29T18:30:00-04:00",
+        "end_iso": "2026-06-29T21:00:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincy-social-connections/events/315374233/"
+      },
+      {
+        "title": "It's Finally Friday!",
+        "start_iso": "2026-07-10T18:00:00-04:00",
+        "end_iso": "2026-07-10T22:00:00-04:00",
+        "location": "Washington Park 1230 Elm Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/black-love-and-friends-cincinnati/events/315036637/"
+      },
+      {
+        "title": "RECESS: Slow Pitch Coed Softball SaSS Vs. SaSS",
+        "start_iso": "2026-07-05T14:00:00-04:00",
+        "end_iso": "2026-07-05T16:00:00-04:00",
+        "location": "Owl’s Nest Park 1961 Madison Rd, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277166/"
+      },
+      {
+        "title": "Tokyo Kitty Karaoke Night",
+        "start_iso": "2026-07-03T18:30:00-04:00",
+        "end_iso": "2026-07-03T20:30:00-04:00",
+        "location": "Tokyo Kitty 575 Race Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/314989637/"
+      },
+      {
+        "title": "Ohio River Walk",
+        "start_iso": "2026-06-25T18:30:00-04:00",
+        "end_iso": "2026-06-25T20:30:00-04:00",
+        "location": "Covington Yard 401 Greenup St, Covington, KY 41011, Kentucky, KY Kentucky KY",
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/315282027/"
+      },
+      {
+        "title": "Cincinnati Pride Parade and Festival",
+        "start_iso": "2026-06-27T11:00:00-04:00",
+        "end_iso": "2026-06-27T13:00:00-04:00",
+        "location": "Fountain Square 520 Vine St, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/314815723/"
+      },
+      {
+        "title": "Let’s Meet at - Eden Park",
+        "start_iso": "2026-07-04T11:30:00-04:00",
+        "end_iso": "2026-07-04T13:00:00-04:00",
+        "location": "Eden Park Mirror Lake 1501 Eden Park Drive, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/lets-meet-at-the-park/events/315020742/"
+      },
+      {
+        "title": "Monday, July 6th, (2026) Educational forum on Nuclear Energy and the Al Craze.",
+        "start_iso": "2026-07-06T19:00:00-04:00",
+        "end_iso": "2026-07-06T21:00:00-04:00",
+        "location": "Mount Auburn Presbyterian Church 103 William Howard Taft Road, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sierraoutings/events/315244971/"
+      },
+      {
+        "title": "Contra Dance",
+        "start_iso": "2026-06-29T19:00:00-04:00",
+        "end_iso": "2026-06-29T21:00:00-04:00",
+        "location": "Wyoming Fine Arts Center 322 Wyoming Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincyhikingsocialclub/events/315183875/"
+      },
+      {
+        "title": "Sunday Fitness Hike: Newport Aquarium to Eden Park Hike and Back - 9AM Start",
+        "start_iso": "2026-06-28T09:00:00-04:00",
+        "end_iso": "2026-06-28T12:00:00-04:00",
+        "location": "1 Aquarium Way 1 Aquarium Way, Newport, KY Newport KY",
+        "url": "https://www.meetup.com/hike-cincinnati/events/314837163/"
+      },
+      {
+        "title": "Hiking with the Cincinnati Ski Club!",
+        "start_iso": "2026-06-27T10:00:00-04:00",
+        "end_iso": "2026-06-27T13:00:00-04:00",
+        "location": "Doe Run Lake 1501 Bullock Pen Road, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/cincinnati-ski-club/events/315171077/"
+      },
+      {
+        "title": "Friday Corryville All Levels Coed Indoor Volleyball",
+        "start_iso": "2026-06-26T16:45:00-04:00",
+        "end_iso": "2026-06-26T18:30:00-04:00",
+        "location": "Corryville Recreation Center 2823 Eden Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315014578/"
+      },
+      {
+        "title": "Wednesday Corryville All Levels Coed Indoor Volleyball",
+        "start_iso": "2026-07-08T17:00:00-04:00",
+        "end_iso": "2026-07-08T18:45:00-04:00",
+        "location": "Corryville Recreation Center 2823 Eden Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/315119500/"
+      },
+      {
+        "title": "Madisonville - (HIGH) INTERMEDIATE Coed Adult Volleyball",
+        "start_iso": "2026-06-24T17:45:00-04:00",
+        "end_iso": "2026-06-24T20:00:00-04:00",
+        "location": "Madisonville Recreation Center 5320 Stewart Road, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/314961981/"
+      },
+      {
+        "title": "*SUMMER HOURS* Intermediate Coed Indoor Volleyball from 5:30-7:50pm",
+        "start_iso": "2026-06-25T17:30:00-04:00",
+        "end_iso": "2026-06-25T19:50:00-04:00",
+        "location": "Mt Washington Recreation Center 1715 Beacon Street, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/314967769/"
+      },
+      {
+        "title": "Let's meetup and walk Mt. Airy Forest",
+        "start_iso": "2026-06-28T09:30:00-04:00",
+        "end_iso": "2026-06-28T11:30:00-04:00",
+        "location": "Mt. Airy Forest Cincinnati 5083 Colerain Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/american-walkers/events/315365665/"
+      },
+      {
+        "title": "Community Ultimate Frisbee, Pleasant Ridge",
+        "start_iso": "2026-06-24T18:00:00-04:00",
+        "end_iso": "2026-06-24T19:00:00-04:00",
+        "location": "Pleasant Ridge Baptist Church 6401 Ridge Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/community-ultimate-frisbee-pleasant-ridge/events/315362760/"
+      },
+      {
+        "title": "June Tourney",
+        "start_iso": "2026-06-23T19:00:00-04:00",
+        "end_iso": "2026-06-23T21:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-tennis-league/events/313850658/"
+      },
+      {
+        "title": "INTERNATIONAL NIGHT @ SOMERSET BAR",
+        "start_iso": "2026-06-27T21:00:00-04:00",
+        "end_iso": "2026-06-28T01:00:00-04:00",
+        "location": "Somerset Bar 139 E McMicken Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-afro-caribbean-and-international-experiences/events/315226276/"
+      },
+      {
+        "title": "AFRIFEST: TASTE OF AFRICA",
+        "start_iso": "2026-07-18T11:00:00-04:00",
+        "end_iso": "2026-07-18T21:00:00-04:00",
+        "location": "SAWYER POINT PARK 705 E PETE ROSE WAY, CINCINNATI, OH CINCINNATI OH",
+        "url": "https://www.meetup.com/cincinnati-afro-caribbean-and-international-experiences/events/315367939/"
+      },
+      {
+        "title": "1st Sunday Rise Up Singing",
+        "start_iso": "2026-07-05T15:00:00-04:00",
+        "end_iso": "2026-07-05T17:00:00-04:00",
+        "location": "Zion United Church of Christ 2301 Indian Mound Ave, Norwood, OH Norwood OH",
+        "url": "https://www.meetup.com/queen-city-balladeers-leo-coffeehouse/events/315085112/"
+      }
+    ]
+  },
+  "https://www.southern.edu/": {
+    "fetched_at_iso": "2026-06-23T09:44:03.240866-04:00",
+    "events": []
+  },
+  "https://www.facebook.com/UTSouthern/": {
+    "fetched_at_iso": "2026-06-23T09:44:03.240866-04:00",
+    "events": []
+  },
+  "https://www.rallyhouse.com/?srsltid=AfmBOooM5JQM30QaU7k-V1j9OFPwJwZ4JKb1VPoYXzCC9Tr1nZKC8sfN": {
+    "fetched_at_iso": "2026-06-23T09:44:23.398501-04:00",
+    "events": []
+  },
+  "https://rally.co/?srsltid=AfmBOopbm9SldXlzir0Bqvik_p_iLvyOs4dCb374ylnZpSZ2QE7CXYZo": {
+    "fetched_at_iso": "2026-06-23T09:44:23.398501-04:00",
+    "events": []
+  },
+  "https://www.rallypickleball.com/": {
+    "fetched_at_iso": "2026-06-23T09:44:23.398501-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=3": {
+    "fetched_at_iso": "2026-06-23T09:44:38.217924-04:00",
+    "events": []
+  },
+  "https://ccsportscarclub.org/autocross/": {
+    "fetched_at_iso": "2026-06-23T09:45:02.132791-04:00",
     "events": []
   }
 }

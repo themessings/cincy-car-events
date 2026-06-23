@@ -1707,5 +1707,14 @@
   "West Chester Township, OH": {
     "lat": "39.3359319",
     "lon": "-84.4155616"
+  },
+  "315 E 15th St., Suite 2-1, CO": null,
+  "Batavia, OH": {
+    "lat": "39.0770072",
+    "lon": "-84.1768795"
+  },
+  "California, KY": {
+    "lat": "38.9186766",
+    "lon": "-84.2635472"
   }
 }
