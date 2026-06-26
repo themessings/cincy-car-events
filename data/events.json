@@ -1,103 +1,7 @@
 {
-  "generated_at_iso": "2026-06-23T09:45:19.345205-04:00",
-  "count": 182,
+  "generated_at_iso": "2026-06-26T09:13:27.740278-04:00",
+  "count": 170,
   "events": [
-    {
-      "Event Name": "June Tourney",
-      "Date": "2026-06-23",
-      "Start Time": "7:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-tennis-league/events/313850658/"
-    },
-    {
-      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
-      "Date": "2026-06-24",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314569606/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-06-24",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Meetup en Ludlow Wines",
-      "Date": "2026-06-24",
-      "Start Time": "7:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "343 Ludlow Ave, Cincinnati, OH",
-      "Address": "343 Ludlow Ave, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnatisimos/events/314771156/"
-    },
-    {
-      "Event Name": "Barrett-Jackson 2026 Columbus Auction",
-      "Date": "2026-06-25",
-      "Start Time": "8:00 AM",
-      "End Time": "6:00 PM",
-      "Location": "Ohio Expo Center & State Fairgrounds",
-      "Address": "Ohio Expo Center & State Fairgrounds",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/barrett-jackson-2026-columbus-/1500186320864716/"
-    },
-    {
-      "Event Name": "North vs. South Charity Car Event 2026",
-      "Date": "2026-06-25",
-      "Start Time": "1:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Destination Outlets (formerly Jeffersonville Outlets) *Off I-71, Jeffersonville, Ohio",
-      "Address": "Destination Outlets (formerly Jeffersonville Outlets) *Off I-71, Jeffersonville, Ohio",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Thursday Meet at the Library",
-      "Date": "2026-06-25",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "502 Scott St., Covington, KY",
-      "Address": "502 Scott St., Covington, KY",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/covington-write-meetup-group/events/315025104/"
-    },
-    {
-      "Event Name": "Live Band Jameze Latrail Band Meet-up",
-      "Date": "2026-06-26",
-      "Start Time": "7:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "1185 Kemper Meadow Drive, Cincinnati, OH",
-      "Address": "1185 Kemper Meadow Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/girlfriendz-networking-group-2026/events/314852337/"
-    },
     {
       "Event Name": "Indianapolis Cars and Coffee",
       "Date": "2026-06-27",
@@ -195,18 +99,6 @@
       "Event URL": "https://facebook.com/events/s/dudes-drives-donuts/1506862480911398/"
     },
     {
-      "Event Name": "Let's meetup and walk Mt. Airy Forest",
-      "Date": "2026-06-28",
-      "Start Time": "9:30 AM",
-      "End Time": "11:30 AM",
-      "Location": "5083 Colerain Avenue, Cincinnati, OH",
-      "Address": "5083 Colerain Avenue, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/american-walkers/events/315365665/"
-    },
-    {
       "Event Name": "Annual Car Show & Chicken Dinner",
       "Date": "2026-06-28",
       "Start Time": "11:00 AM",
@@ -243,18 +135,6 @@
       "Event URL": "https://facebook.com/events/s/no-limits-937-sponsor-event-fe/1569527364529661/"
     },
     {
-      "Event Name": "Let's Meet @ the Coffee Shop!",
-      "Date": "2026-07-01",
-      "Start Time": "9:30 AM",
-      "End Time": "11:30 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-nky-ladies-50/events/315222361/"
-    },
-    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-07-01",
       "Start Time": "5:00 PM",
@@ -265,18 +145,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Stogie Socialites Meet and Greet",
-      "Date": "2026-07-01",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Leaf to Ash Cigar Lounge 6183 Salem Road, , Cincinnati, OH Cincinnati OH",
-      "Address": "Leaf to Ash Cigar Lounge 6183 Salem Road, , Cincinnati, OH Cincinnati OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/stogie-social-cincy/events/315219320/"
     },
     {
       "Event Name": "King of the Roads Rally",
@@ -315,18 +183,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Let’s Meet at - Eden Park",
-      "Date": "2026-07-04",
-      "Start Time": "11:30 AM",
-      "End Time": "1:00 PM",
-      "Location": "1501 Eden Park Drive, Cincinnati, OH",
-      "Address": "1501 Eden Park Drive, Cincinnati, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/lets-meet-at-the-park/events/315020742/"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-07-05",
       "Start Time": "8:00 AM",
@@ -337,18 +193,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "CCPC's Monthly Meet N' Greet Social Hour(s)",
-      "Date": "2026-07-06",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/312920370/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -613,6 +457,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026",
+      "Date": "2026-07-18",
+      "Start Time": "9:00 AM",
+      "End Time": "6:00 PM",
+      "Location": "Location will be sent to ticket holders.",
+      "Address": "Location will be sent to ticket holders.",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
+      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
     {
       "Event Name": "UMTR at Edgewater Sports Park - Presented by Southwest Paving & O'Reilly Auto Parts",
