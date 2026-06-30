@@ -1,55 +1,7 @@
 {
-  "generated_at_iso": "2026-06-28T08:26:10.911253-04:00",
+  "generated_at_iso": "2026-06-30T09:15:37.407032-04:00",
   "count": 162,
   "events": [
-    {
-      "Event Name": "Dudes, Drives & Donuts",
-      "Date": "2026-06-28",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "4918 Cooper Rd, Blue Ash, OH",
-      "Address": "4918 Cooper Rd, Blue Ash, OH",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/dudes-drives-donuts/1506862480911398/"
-    },
-    {
-      "Event Name": "Annual Car Show & Chicken Dinner",
-      "Date": "2026-06-28",
-      "Start Time": "11:00 AM",
-      "End Time": "2:30 PM",
-      "Location": "Perfect Place Ln, Lawrenceburg, IN 47025",
-      "Address": "Perfect Place Ln, Lawrenceburg, IN 47025",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/annual-car-show-chicken-dinner/2048696039298978/"
-    },
-    {
-      "Event Name": "Cruisin’ for a Cure – Batesville Car Show",
-      "Date": "2026-06-28",
-      "Start Time": "11:00 AM",
-      "End Time": "3:30 PM",
-      "Location": "1198 State Road 46 E, Batesville, IN 47006",
-      "Address": "1198 State Road 46 E, Batesville, IN 47006",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cruisin-for-a-cure-batesville-/1888901302016142/"
-    },
-    {
-      "Event Name": "No Limits 937™ Sponsor Event Featuring The Food Pitt",
-      "Date": "2026-06-28",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "DNA Computers & Electronics Repair",
-      "Address": "DNA Computers & Electronics Repair",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/no-limits-937-sponsor-event-fe/1569527364529661/"
-    },
     {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-07-01",
@@ -195,6 +147,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-07-11",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-11/"
+    },
+    {
       "Event Name": "Cincy Cool Cars Club Car Show",
       "Date": "2026-07-11",
       "Start Time": "8:30 AM",
@@ -253,6 +217,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "HHCC x Porsche Club",
+      "Date": "2026-07-12",
+      "Start Time": "10:30 AM",
+      "End Time": "1:00 PM",
+      "Location": "Hungry Buffalo Restaurant",
+      "Address": "Hungry Buffalo Restaurant",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/hhcc-x-porsche-club/1543769710548111/"
     },
     {
       "Event Name": "Rally North America – Day 3",
@@ -363,6 +339,18 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-07-18",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-18/"
+    },
+    {
       "Event Name": "Dynasty Rally 2026",
       "Date": "2026-07-18",
       "Start Time": "9:00 AM",
@@ -469,6 +457,18 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-07-25",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-25/"
     },
     {
       "Event Name": "72nd Annual Antique & Classic Car Parade of Hamilton/Fairfield OHIO",
