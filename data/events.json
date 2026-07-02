@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-07-02T09:37:56.225671-04:00",
-  "count": 963,
+  "generated_at_iso": "2026-07-02T09:52:51.150314-04:00",
+  "count": 965,
   "events": [
     {
       "Event Name": "Premier Car & Truck Cruise-In",
@@ -63,6 +63,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/rockin-randalls-cruise-in/2026-07-02/"
     },
     {
+      "Event Name": "The Honda Indy 200 at Mid-Ohio Presented by the 2027 CR-V Hybrid",
+      "Date": "2026-07-03",
+      "Start Time": "7:00 AM",
+      "End Time": "5:00 PM",
+      "Location": "Mid-Ohio Sports Car Course",
+      "Address": "Mid-Ohio Sports Car Course",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/the-honda-indy-200-at-mid-ohio/817933141361693/"
+    },
+    {
       "Event Name": "Columbus Cars & Coffee Fridays",
       "Date": "2026-07-03",
       "Start Time": "7:30 AM",
@@ -73,18 +85,6 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-07-03/"
-    },
-    {
-      "Event Name": "King of the Roads Rally",
-      "Date": "2026-07-03",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Louisville, KY",
-      "Address": "Louisville, KY",
-      "Closest City": "Louisville, KY",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://kingoftheroads.events/"
     },
     {
       "Event Name": "King of the Roads Rally",
@@ -147,6 +147,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/renegades-up-car-truck-bike-8-mile-cruise-show/"
     },
     {
+      "Event Name": "Car Show",
+      "Date": "2026-07-03",
+      "Start Time": "4:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "S Pearl St, Cicero, IN 46034",
+      "Address": "S Pearl St, Cicero, IN 46034",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/car-show/1370098474930018/"
+    },
+    {
       "Event Name": "Wheels & Whoppers",
       "Date": "2026-07-03",
       "Start Time": "5:00 PM",
@@ -169,6 +181,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/4th-annual-grace-baptist-car-show/"
+    },
+    {
+      "Event Name": "July '26 First Friday Cruise-In",
+      "Date": "2026-07-03",
+      "Start Time": "5:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "Danville Town Square",
+      "Address": "Danville Town Square",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/july-26-first-friday-cruise-in/970294782079224/"
     },
     {
       "Event Name": "McDonald’s Sellersburg 2026 Summer Car Shows",
@@ -327,6 +351,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-07-04/"
     },
     {
+      "Event Name": "No Limits 937 Team® at Dayton Cars & Coffee 2026 Meet 4",
+      "Date": "2026-07-04",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Austin Landing",
+      "Address": "Austin Landing",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/no-limits-937-team-at-dayton-c/942074965601188/"
+    },
+    {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
       "Date": "2026-07-04",
       "Start Time": "8:30 AM",
@@ -411,6 +447,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/muncie-cars-coffee-2026-season-10/2026-07-04/"
     },
     {
+      "Event Name": "King of the Roads Rally",
+      "Date": "2026-07-04",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Louisville, KY",
+      "Address": "Louisville, KY",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://kingoftheroads.events/"
+    },
+    {
       "Event Name": "America 250 Car & Tractor Show",
       "Date": "2026-07-04",
       "Start Time": "10:00 AM",
@@ -447,6 +495,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/oreilly-auto-parts-car-show-west-milton-oh/"
     },
     {
+      "Event Name": "Festival of the Bells Car, Truck and Bike Show",
+      "Date": "2026-07-04",
+      "Start Time": "10:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "William Scott House",
+      "Address": "William Scott House",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/festival-of-the-bells-car-truc/1861130381173865/"
+    },
+    {
       "Event Name": "Let’s Meet at - Eden Park",
       "Date": "2026-07-04",
       "Start Time": "11:30 AM",
@@ -481,18 +541,6 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-07-04/"
-    },
-    {
-      "Event Name": "Kettering Saturday Night Cruise-in",
-      "Date": "2026-07-04",
-      "Start Time": "4:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "Orthopaedic Institute of Dayton 3205 Woodman Drive Dayton OH 45420",
-      "Address": "Orthopaedic Institute of Dayton 3205 Woodman Drive Dayton OH 45420",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Source": "Google Events - Dayton",
-      "Event URL": "https://www.daytonlocal.com/events/kettering-saturday-night-cruise-in/"
     },
     {
       "Event Name": "City of Richmond Old School Customs Cruisin for 250 Years of Celebrating America",
@@ -541,6 +589,18 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/shelby-county-car-club-presents-monthly-cruise-in/2026-07-04/"
+    },
+    {
+      "Event Name": "Bewley’s Garage 4th of July Cruise In",
+      "Date": "2026-07-04",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Clayton, Indiana",
+      "Address": "Clayton, Indiana",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/bewleys-garage-4th-of-july-cru/1768925360763360/"
     },
     {
       "Event Name": "Midnight Motors Auto Club Bi Weekly Meet",
@@ -649,6 +709,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/firecracker-cruise-in/"
+    },
+    {
+      "Event Name": "Sunday Cruise In’s with Nostalgic Car Garage at Braxton Union",
+      "Date": "2026-07-05",
+      "Start Time": "4:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8901 U.S. 42 HWY, Union, KY",
+      "Address": "8901 U.S. 42 HWY, Union, KY",
+      "Closest City": "Nashville, TN",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/sunday-cruise-ins-with-nostalg/784721667583367/"
     },
     {
       "Event Name": "CCPC's Monthly Meet N' Greet Social Hour(s)",
@@ -879,6 +951,18 @@
       "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
+      "Event Name": "Cincinnati Region IT SPEC*TACULAR",
+      "Date": "2026-07-10",
+      "Start Time": "7:00 AM",
+      "End Time": "5:00 PM",
+      "Location": "Mid-Ohio Sports Car Course",
+      "Address": "Mid-Ohio Sports Car Course",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincinnati-region-it-spectacul/830259446262201/"
+    },
+    {
       "Event Name": "Columbus Cars & Coffee Fridays",
       "Date": "2026-07-10",
       "Start Time": "7:30 AM",
@@ -1035,6 +1119,18 @@
       "Event URL": "https://facebook.com/events/s/indyscca-solo-points-event-4-i/1367301258490955/"
     },
     {
+      "Event Name": "Cincinnati Region SCCA – 1-Hour Endurance Bracket Race (CRE)",
+      "Date": "2026-07-11",
+      "Start Time": "7:00 AM",
+      "End Time": "10:00 AM",
+      "Location": "Mid-Ohio Sports Car Course",
+      "Address": "Mid-Ohio Sports Car Course",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincinnati-region-scca-1-hour-/752294304636527/"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-07-11",
       "Start Time": "8:00 AM",
@@ -1057,18 +1153,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee",
-      "Date": "2026-07-11",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-11/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee",
@@ -1165,6 +1249,18 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/impd-north-district-presents-horsepower-and-heroes-car-show-cruise-in/"
+    },
+    {
+      "Event Name": "Cincy Cool Cars Club Car Show",
+      "Date": "2026-07-11",
+      "Start Time": "8:30 AM",
+      "End Time": "3:30 PM",
+      "Location": "Fairfield, Ohio",
+      "Address": "Fairfield, Ohio",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincy-cool-cars-club-car-show/2040573946874610/"
     },
     {
       "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
@@ -1287,18 +1383,6 @@
       "Event URL": "https://carsandcoffeeevents.com/event/7th-annual-freaki-tiki-kustom-car-show/"
     },
     {
-      "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
-      "Date": "2026-07-11",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Athens, OH (Launch)",
-      "Address": "Athens, OH (Launch)",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://rallynorthamerica.com/rally-events/"
-    },
-    {
       "Event Name": "Street Kingz Motorfest Part 3 Car Show",
       "Date": "2026-07-11",
       "Start Time": "11:00 AM",
@@ -1321,6 +1405,18 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/classic-car-show-9/"
+    },
+    {
+      "Event Name": "Stance Car Cookout #3",
+      "Date": "2026-07-11",
+      "Start Time": "1:00 PM",
+      "End Time": "4:00 PM",
+      "Location": "West Chester",
+      "Address": "West Chester",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/stance-car-cookout-3/858520520401623/"
     },
     {
       "Event Name": "Ultimate Auto show, Oakley",
@@ -1443,6 +1539,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-07-12/"
     },
     {
+      "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
+      "Date": "2026-07-12",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Athens, OH (Launch)",
+      "Address": "Athens, OH (Launch)",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://rallynorthamerica.com/rally-events/"
+    },
+    {
       "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-07-12",
       "Start Time": "10:00 AM",
@@ -1455,16 +1563,16 @@
       "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-07-12/"
     },
     {
-      "Event Name": "Rally North America – Day 2",
+      "Event Name": "HHCC x Porsche Club",
       "Date": "2026-07-12",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Marquette, MI",
-      "Address": "Marquette, MI",
-      "Closest City": "Chicago, IL",
+      "Start Time": "10:30 AM",
+      "End Time": "1:00 PM",
+      "Location": "Hungry Buffalo Restaurant",
+      "Address": "Hungry Buffalo Restaurant",
+      "Closest City": "",
       "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/hhcc-x-porsche-club/1543769710548111/"
     },
     {
       "Event Name": "Hot Rod & Car Show Cruise-In at One More Lounge",
@@ -1503,36 +1611,36 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Rally North America – Day 3",
+      "Event Name": "Rally North America – Day 2",
       "Date": "2026-07-13",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Marquette, MI",
+      "Address": "Marquette, MI",
+      "Closest City": "Chicago, IL",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Rally North America – Day 4",
+      "Date": "2026-07-14",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Frankenmuth, MI",
+      "Address": "Frankenmuth, MI",
+      "Closest City": "Detroit, MI",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Rally North America – Day 3",
+      "Date": "2026-07-14",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Traverse City, MI",
       "Address": "Traverse City, MI",
-      "Closest City": "Detroit, MI",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Rally North America – Day 4",
-      "Date": "2026-07-14",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Frankenmuth, MI",
-      "Address": "Frankenmuth, MI",
-      "Closest City": "Detroit, MI",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Rally North America – Day 4",
-      "Date": "2026-07-14",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Frankenmuth, MI",
-      "Address": "Frankenmuth, MI",
       "Closest City": "Detroit, MI",
       "Callout": "",
       "Source": "sheet",
@@ -1575,6 +1683,18 @@
       "Event URL": "https://www.meetup.com/cingles-net-a-social-network-for-cincinnati-singles-over-45/events/315403347/"
     },
     {
+      "Event Name": "Rally North America – Day 4",
+      "Date": "2026-07-15",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Frankenmuth, MI",
+      "Address": "Frankenmuth, MI",
+      "Closest City": "Detroit, MI",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
       "Event Name": "Chicken Eater’s Car Club",
       "Date": "2026-07-15",
       "Start Time": "10:30 AM",
@@ -1585,30 +1705,6 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-07-15/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-07-15",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-07-15",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308208591930/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -1753,6 +1849,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-07-17/"
+    },
+    {
+      "Event Name": "Mt Gilead's Annual Downtown Car and Bike Show",
+      "Date": "2026-07-17",
+      "Start Time": "4:00 PM",
+      "End Time": "8:30 PM",
+      "Location": "Mount Gilead, OH",
+      "Address": "Mount Gilead, OH",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/mt-gileads-annual-downtown-car/1011093661852820/"
     },
     {
       "Event Name": "Shepherdsville Cruise-In",
@@ -1902,18 +2010,6 @@
       "Event Name": "Cincinnati Cars and Coffee",
       "Date": "2026-07-18",
       "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-18/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee",
-      "Date": "2026-07-18",
-      "Start Time": "8:00 AM",
       "End Time": "10:30 AM",
       "Location": "Crestview Hills Town Center - 2791 Town Center Blvd, Crestview Hills, KY 41017",
       "Address": "Crestview Hills Town Center - 2791 Town Center Blvd, Crestview Hills, KY 41017",
@@ -2005,18 +2101,6 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/gdcc-corvettes-coffee-at-natio/1835544663779664/"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026",
-      "Date": "2026-07-18",
-      "Start Time": "9:00 AM",
-      "End Time": "6:00 PM",
-      "Location": "Circuit Cafe / Cincinnati Cars & Coffee",
-      "Address": "Circuit Cafe / Cincinnati Cars & Coffee",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/dynasty-rally-2026/1480331986501090/"
     },
     {
       "Event Name": "Dynasty Rally 2026",
@@ -2631,18 +2715,6 @@
       "Event URL": "https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-6/"
     },
     {
-      "Event Name": "Cincy Car Cruise Rally",
-      "Date": "2026-07-24",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Cincinnati, OH",
-      "Address": "Cincinnati, OH",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "—"
-    },
-    {
       "Event Name": "Friday Nights Beavercreek Cruise-In At The Vineyard Church",
       "Date": "2026-07-24",
       "Start Time": "4:00 PM",
@@ -2766,18 +2838,6 @@
       "Event Name": "Cincinnati Cars and Coffee",
       "Date": "2026-07-25",
       "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-25/"
-    },
-    {
-      "Event Name": "Cincinnati Cars and Coffee",
-      "Date": "2026-07-25",
-      "Start Time": "8:00 AM",
       "End Time": "10:30 AM",
       "Location": "Crestview Hills Town Center - 2791 Town Center Blvd, Crestview Hills, KY 41017",
       "Address": "Crestview Hills Town Center - 2791 Town Center Blvd, Crestview Hills, KY 41017",
@@ -2833,6 +2893,18 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/19th-annual-cowan-lions-club-car-truck-tractor-show/"
+    },
+    {
+      "Event Name": "Indianapolis Cars & Coffee - Hosted by Knowledge Services + The Club Coworking",
+      "Date": "2026-07-25",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Knowledge Services",
+      "Address": "Knowledge Services",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/971155262234357/"
     },
     {
       "Event Name": "72nd Annual Antique & Classic Car Parade of Hamilton/Fairfield OHIO",
@@ -2919,6 +2991,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/whipz-indiana-car-club-7th-annual-open-car-show/"
     },
     {
+      "Event Name": "Cincy Car Cruise Rally",
+      "Date": "2026-07-25",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Cincinnati, OH",
+      "Address": "Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "—"
+    },
+    {
       "Event Name": "Classic Axles Car Show",
       "Date": "2026-07-25",
       "Start Time": "10:00 AM",
@@ -2953,6 +3037,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/dublin-community-club-car-show/"
+    },
+    {
+      "Event Name": "Cars in the Commonwealth 2026 presented by SueDistractedDriver . Com",
+      "Date": "2026-07-25",
+      "Start Time": "10:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "Hermitage Farm",
+      "Address": "Hermitage Farm",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cars-in-the-commonwealth-2026-/905037448526758/"
     },
     {
       "Event Name": "Clayton Homes Of Chillicothe Second Annual Car Show",
@@ -3171,18 +3267,6 @@
       "Event URL": "https://www.therechargerally.com/"
     },
     {
-      "Event Name": "Recharge Rally – Day 1",
-      "Date": "2026-07-29",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Launch Cincinnati, OH",
-      "Address": "Launch Cincinnati, OH",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://www.therechargerally.com/"
-    },
-    {
       "Event Name": "Chicken Eater’s Car Club",
       "Date": "2026-07-29",
       "Start Time": "10:30 AM",
@@ -3255,16 +3339,16 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Recharge Rally – Day 2",
+      "Event Name": "Recharge Rally – Day 1",
       "Date": "2026-07-30",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
-      "Location": "Chattanooga, TN",
-      "Address": "Chattanooga, TN",
-      "Closest City": "Knoxville, TN",
+      "Location": "Launch Cincinnati, OH",
+      "Address": "Launch Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "https://www.therechargerally.com/"
     },
     {
       "Event Name": "Premier Car & Truck Cruise-In",
@@ -3351,12 +3435,12 @@
       "Event URL": "https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-7/"
     },
     {
-      "Event Name": "Recharge Rally – Day 3",
+      "Event Name": "Recharge Rally – Day 2",
       "Date": "2026-07-31",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
-      "Location": "Greenville, SC",
-      "Address": "Greenville, SC",
+      "Location": "Chattanooga, TN",
+      "Address": "Chattanooga, TN",
       "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
@@ -3555,6 +3639,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/spokes-to-speed-100-years-of-wheels/"
     },
     {
+      "Event Name": "Dayton Cars and coffee #5 August",
+      "Date": "2026-08-01",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Austin Landing",
+      "Address": "Austin Landing",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/dayton-cars-and-coffee-5-augus/1317688127222980/"
+    },
+    {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
       "Date": "2026-08-01",
       "Start Time": "8:30 AM",
@@ -3675,12 +3771,12 @@
       "Event URL": "https://carsandcoffeeevents.com/event/united-car-bike-show/"
     },
     {
-      "Event Name": "Recharge Rally – Day 4",
+      "Event Name": "Recharge Rally – Day 3",
       "Date": "2026-08-01",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
-      "Location": "Charlotte, NC",
-      "Address": "Charlotte, NC",
+      "Location": "Greenville, SC",
+      "Address": "Greenville, SC",
       "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
@@ -3865,6 +3961,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-08-02/"
+    },
+    {
+      "Event Name": "Recharge Rally – Day 4",
+      "Date": "2026-08-02",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Charlotte, NC",
+      "Address": "Charlotte, NC",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
     },
     {
       "Event Name": "LFP & MVG Annual Car Show",
@@ -4095,18 +4203,6 @@
       "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
-      "Event Name": "RallyCross – Edgewater",
-      "Date": "2026-08-07",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Wilmington, OH",
-      "Address": "Wilmington, OH",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://cincyscca.com/rally-cross/"
-    },
-    {
       "Event Name": "Friday Nights Beavercreek Cruise-In At The Vineyard Church",
       "Date": "2026-08-07",
       "Start Time": "4:00 PM",
@@ -4287,18 +4383,6 @@
       "Event URL": "https://carsandcoffeeevents.com/event/cider-run-2026/"
     },
     {
-      "Event Name": "Cincinnati Cars and Coffee",
-      "Date": "2026-08-08",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-08-08/"
-    },
-    {
       "Event Name": "OVR PCA Autocross - August 2026",
       "Date": "2026-08-08",
       "Start Time": "8:30 AM",
@@ -4441,6 +4525,18 @@
       "Callout": "Tickets required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/woodmen-wheels-car-show-outdoor-vendor-fair/"
+    },
+    {
+      "Event Name": "RallyCross – Edgewater",
+      "Date": "2026-08-08",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Wilmington, OH",
+      "Address": "Wilmington, OH",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://cincyscca.com/rally-cross/"
     },
     {
       "Event Name": "Destination Cars and Coffee",
@@ -5238,30 +5334,6 @@
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-08-19",
       "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-08-19",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308201925264/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-08-19",
-      "Start Time": "5:00 PM",
       "End Time": "8:00 PM",
       "Location": "Four Bridges Country Club - 8300 Four Bridges Dr., Liberty Township, OH 45044",
       "Address": "Four Bridges Country Club - 8300 Four Bridges Dr., Liberty Township, OH 45044",
@@ -5547,16 +5619,16 @@
       "Event URL": "https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-08-22/"
     },
     {
-      "Event Name": "Cincinnati Cars and Coffee",
+      "Event Name": "Indianapolis Cars and Coffee",
       "Date": "2026-08-22",
       "Start Time": "8:00 AM",
       "End Time": "11:00 AM",
-      "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "Cincinnati, OH",
+      "Location": "Lucas Oil Indianapolis Raceway Park - 10267 East U S Highway 136, Brownsburg, IN",
+      "Address": "Lucas Oil Indianapolis Raceway Park - 10267 East U S Highway 136, Brownsburg, IN",
+      "Closest City": "St. Louis, MO",
       "Callout": "",
-      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
-      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-08-22/"
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Columbus Cars & Coffee @ The City",
@@ -6351,6 +6423,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/rpm-performance-cruise-in/2026-09-02/"
     },
     {
+      "Event Name": "NHRA US Nationals",
+      "Date": "2026-09-03",
+      "Start Time": "1:59 PM",
+      "End Time": "4:59 PM",
+      "Location": "Lucas Oil Indianapolis Raceway Park - 10267 Hwy 136, Indianapolis, IN 46234",
+      "Address": "Lucas Oil Indianapolis Raceway Park - 10267 Hwy 136, Indianapolis, IN 46234",
+      "Closest City": "St. Louis, MO",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/nhra-us-nationals/2060031824913660/"
+    },
+    {
       "Event Name": "Premier Car & Truck Cruise-In",
       "Date": "2026-09-03",
       "Start Time": "4:00 PM",
@@ -6421,6 +6505,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-09-04/"
+    },
+    {
+      "Event Name": "NHRA US Nationals",
+      "Date": "2026-09-04",
+      "Start Time": "1:59 PM",
+      "End Time": "4:59 PM",
+      "Location": "Lucas Oil Indianapolis Raceway Park - 10267 Hwy 136, Indianapolis, IN 46234",
+      "Address": "Lucas Oil Indianapolis Raceway Park - 10267 Hwy 136, Indianapolis, IN 46234",
+      "Closest City": "St. Louis, MO",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/nhra-us-nationals/1280461794242719/"
     },
     {
       "Event Name": "Friday Nights Beavercreek Cruise-In At The Vineyard Church",
@@ -6579,6 +6675,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-09-05/"
     },
     {
+      "Event Name": "The Fast Parts Grand Prix at Mid-Ohio",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "6:00 PM",
+      "Location": "Mid-Ohio Sports Car Course",
+      "Address": "Mid-Ohio Sports Car Course",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/the-fast-parts-grand-prix-at-m/1173981004805186/"
+    },
+    {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
       "Date": "2026-09-05",
       "Start Time": "8:30 AM",
@@ -6673,6 +6781,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/muncie-cars-coffee-2026-season-10/2026-09-05/"
+    },
+    {
+      "Event Name": "Kentuckiana Showdown",
+      "Date": "2026-09-05",
+      "Start Time": "10:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "Cox Park",
+      "Address": "Cox Park",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/kentuckiana-showdown/750300924600734/"
     },
     {
       "Event Name": "Conkey Classic",
@@ -6987,18 +7107,6 @@
       "Event URL": "https://ridewithrandy.org/"
     },
     {
-      "Event Name": "Ride With Randy Rally",
-      "Date": "2026-09-11",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Louisville, KY",
-      "Address": "Louisville, KY",
-      "Closest City": "Louisville, KY",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://ridewithrandy.org/"
-    },
-    {
       "Event Name": "Friday Nights Beavercreek Cruise-In At The Vineyard Church",
       "Date": "2026-09-11",
       "Start Time": "4:00 PM",
@@ -7287,6 +7395,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/dallara-cars-coffee/"
     },
     {
+      "Event Name": "Ride With Randy Rally",
+      "Date": "2026-09-12",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Louisville, KY",
+      "Address": "Louisville, KY",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://ridewithrandy.org/"
+    },
+    {
       "Event Name": "Destination Cars and Coffee",
       "Date": "2026-09-12",
       "Start Time": "10:00 AM",
@@ -7537,30 +7657,6 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-09-16/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-09-16",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-09-16",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308205258597/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -8689,6 +8785,18 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/joe-show-car-truck-and-bike-show/"
+    },
+    {
+      "Event Name": "Cincinnati VW/Porsche Reunion 2026, Fresh Air",
+      "Date": "2026-09-27",
+      "Start Time": "8:00 AM",
+      "End Time": "7:00 PM",
+      "Location": "Germania Society",
+      "Address": "Germania Society",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincinnati-vwporsche-reunion-2/758822510614568/"
     },
     {
       "Event Name": "Euro Cars and Cocoa",
@@ -10251,18 +10359,6 @@
       "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
-      "Event Name": "Cancer Awareness Rally – Day 1",
-      "Date": "2026-10-17",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Launch Washington, DC",
-      "Address": "Launch Washington, DC",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-18",
       "Start Time": "8:00 AM",
@@ -10335,30 +10431,6 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Cancer Awareness Rally – Day 2",
-      "Date": "2026-10-18",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Washington, DC",
-      "Address": "Washington, DC",
-      "Closest City": "Pittsburgh, PA",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Cancer Awareness Rally – Day 3",
-      "Date": "2026-10-19",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Bristol, TN",
-      "Address": "Bristol, TN",
-      "Closest City": "Knoxville, TN",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
       "Event Name": "Cancer Awareness Rally – Day 3",
       "Date": "2026-10-19",
       "Start Time": "11:00 PM",
@@ -10395,18 +10467,6 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Cancer Awareness Rally – Day 4",
-      "Date": "2026-10-20",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Knoxville, TN",
-      "Address": "Knoxville, TN",
-      "Closest City": "Knoxville, TN",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
       "Event Name": "Chicken Eater’s Car Club",
       "Date": "2026-10-21",
       "Start Time": "10:30 AM",
@@ -10417,30 +10477,6 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-10-21/"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-10-21",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Dr Liberty Township, OH",
-      "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "Four Bridges Cruise-In",
-      "Date": "2026-10-21",
-      "Start Time": "5:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308211925263/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -10489,18 +10525,6 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-10-21/"
-    },
-    {
-      "Event Name": "Cancer Awareness Rally – Day 5",
-      "Date": "2026-10-21",
-      "Start Time": "11:00 PM",
-      "End Time": "1:00 AM",
-      "Location": "Nashville, TN",
-      "Address": "Nashville, TN",
-      "Closest City": "Nashville, TN",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 5",
@@ -11236,7 +11260,7 @@
     },
     {
       "Event Name": "Ohio Challenge RoadRally (SCCA)",
-      "Date": "2027-03-27",
+      "Date": "2027-03-28",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Columbus, OH",
@@ -11260,7 +11284,7 @@
     },
     {
       "Event Name": "Hoosier Rally (SCCA)",
-      "Date": "2027-04-17",
+      "Date": "2027-04-18",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Indianapolis, IN",
@@ -11284,7 +11308,7 @@
     },
     {
       "Event Name": "Buckeye RoadRally (SCCA)",
-      "Date": "2027-05-01",
+      "Date": "2027-05-02",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Dayton, OH",
@@ -11307,8 +11331,20 @@
       "Event URL": "https://corsarally.com/"
     },
     {
+      "Event Name": "Corsa America Spring Rally – Day 2",
+      "Date": "2027-05-05",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Asheville, NC",
+      "Address": "Asheville, NC",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://corsarally.com/"
+    },
+    {
       "Event Name": "Corsa America Spring Rally – Day 1",
-      "Date": "2027-05-04",
+      "Date": "2027-05-05",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Smoky Mountains, TN (Launch)",
@@ -11319,30 +11355,6 @@
       "Event URL": "https://corsarally.com/"
     },
     {
-      "Event Name": "Corsa America Spring Rally – Day 2",
-      "Date": "2027-05-05",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Asheville, NC",
-      "Address": "Asheville, NC",
-      "Closest City": "Knoxville, TN",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
-      "Event Name": "Corsa America Spring Rally – Day 2",
-      "Date": "2027-05-05",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Asheville, NC",
-      "Address": "Asheville, NC",
-      "Closest City": "Knoxville, TN",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
-    },
-    {
       "Event Name": "Corsa America Spring Rally – Day 3",
       "Date": "2027-05-06",
       "Start Time": "9:00 AM",
@@ -11355,8 +11367,20 @@
       "Event URL": "https://corsarally.com/"
     },
     {
-      "Event Name": "Corsa America Spring Rally – Day 3",
+      "Event Name": "Corsa America Spring Rally – Day 2",
       "Date": "2027-05-06",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Asheville, NC",
+      "Address": "Asheville, NC",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://corsarally.com/"
+    },
+    {
+      "Event Name": "Corsa America Spring Rally – Day 3",
+      "Date": "2027-05-07",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Blue Ridge, GA",
@@ -11380,7 +11404,7 @@
     },
     {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
-      "Date": "2027-05-15",
+      "Date": "2027-05-16",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Lexington, OH",
@@ -11404,7 +11428,7 @@
     },
     {
       "Event Name": "RallyCross – Edgewater",
-      "Date": "2027-06-05",
+      "Date": "2027-06-06",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Wilmington, OH",
@@ -11413,18 +11437,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://cincyscca.com/rally-cross/"
-    },
-    {
-      "Event Name": "Southern Ohio Forest Rally – Day 1",
-      "Date": "2027-06-10",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Chillicothe, OH",
-      "Address": "Chillicothe, OH",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 1",
@@ -11451,7 +11463,7 @@
       "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
-      "Event Name": "Southern Ohio Forest Rally – Day 2",
+      "Event Name": "Southern Ohio Forest Rally – Day 1",
       "Date": "2027-06-11",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
@@ -11475,8 +11487,20 @@
       "Event URL": "https://www.americanrallyassociation.org/sofr"
     },
     {
-      "Event Name": "Southern Ohio Forest Rally – Day 3",
+      "Event Name": "Southern Ohio Forest Rally – Day 2",
       "Date": "2027-06-12",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Chillicothe, OH",
+      "Address": "Chillicothe, OH",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "Event Name": "Southern Ohio Forest Rally – Day 3",
+      "Date": "2027-06-13",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Chillicothe, OH",
@@ -11499,8 +11523,20 @@
       "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
     {
+      "Event Name": "Dynasty Rally 2026 – Day 2",
+      "Date": "2027-06-18",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Southern Ohio / KY Backroads",
+      "Address": "Southern Ohio / KY Backroads",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
       "Event Name": "Dynasty Rally 2026 – Day 1",
-      "Date": "2027-06-17",
+      "Date": "2027-06-18",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Launch Cincinnati, OH",
@@ -11509,30 +11545,6 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 2",
-      "Date": "2027-06-18",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Southern Ohio / KY Backroads",
-      "Address": "Southern Ohio / KY Backroads",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Dynasty Rally 2026 – Day 2",
-      "Date": "2027-06-18",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Southern Ohio / KY Backroads",
-      "Address": "Southern Ohio / KY Backroads",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -11547,8 +11559,20 @@
       "Event URL": "Same as above"
     },
     {
-      "Event Name": "Dynasty Rally 2026 – Day 3",
+      "Event Name": "Dynasty Rally 2026 – Day 2",
       "Date": "2027-06-19",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Southern Ohio / KY Backroads",
+      "Address": "Southern Ohio / KY Backroads",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026 – Day 3",
+      "Date": "2027-06-20",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
       "Location": "Tennessee / Appalachia Region",
