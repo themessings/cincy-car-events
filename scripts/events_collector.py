@@ -559,7 +559,7 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
     url = f"https://graph.facebook.com/v18.0/{event_id}"
     params = {
         "access_token": get_facebook_access_token(),
-        "fields": "name,start_time,end_time,place,timezone,description",
+        "fields": "name,start_time,end_time,place,timezone,description,ticket_uri",
     }
 
     r = requests.get(url, params=params, timeout=30)
@@ -589,6 +589,8 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
         "end_dt": end_dt or (start_dt + timedelta(hours=2)),
         "location": location,
         "url": f"https://www.facebook.com/events/{event_id}",
+        "description": clean_ws(str(item.get("description", "") or ""))[:2000],
+        "ticket_uri": clean_ws(str(item.get("ticket_uri", "") or "")),
     }
 
 
@@ -758,6 +760,8 @@ class EventItem:
     lat: Optional[float]
     lon: Optional[float]
     last_seen_iso: str
+    callout: str = ""  # e.g. "Registration required" / "Tickets required"
+    closest_city: str = ""  # nearest major city, e.g. "Cincinnati, OH"
 
 
 def event_item_from_stored_row(row: dict) -> Optional[EventItem]:
@@ -787,34 +791,36 @@ def event_item_from_stored_row(row: dict) -> Optional[EventItem]:
 
     start_dt = parse_iso_datetime_safe(start_iso)
     if start_dt is None:
-        start_dt = parse_dt(f"{pick('date', 'event_date')} {pick('start_time', 'time', 'starttime')}")
+        start_dt = parse_dt(f"{pick('date', 'event_date', 'Date')} {pick('start_time', 'time', 'starttime', 'Start Time')}")
     if start_dt is None:
-        start_dt = parse_dt(pick("date", "event_date"))
+        start_dt = parse_dt(pick("date", "event_date", "Date"))
     if start_dt is None:
         return None
 
     end_dt = parse_iso_datetime_safe(end_iso)
     if end_dt is None:
-        end_dt = parse_dt(f"{pick('date', 'event_date')} {pick('end_time', 'endtime')}")
+        end_dt = parse_dt(f"{pick('date', 'event_date', 'Date')} {pick('end_time', 'endtime', 'End Time')}")
     if end_dt is None:
         end_dt = start_dt
 
-    location = pick("location", "venue", "address")
+    location = pick("location", "venue", "address", "Location", "Address")
     city_state = pick("city_state") or guess_city_state(location)
 
     return EventItem(
-        title=pick("title", "event_title", "name") or "(untitled event)",
+        title=pick("title", "event_title", "name", "Event Name") or "(untitled event)",
         start_iso=start_dt.isoformat(),
         end_iso=end_dt.isoformat(),
         location=location,
         city_state=city_state,
-        url=pick("url", "link", "event_url", "eventlink"),
-        source=pick("source") or "legacy_import",
+        url=pick("url", "link", "event_url", "eventlink", "Event URL"),
+        source=pick("source", "Source") or "legacy_import",
         category=pick("category", "categ", "type") or "local",
         miles_from_cincy=parse_float(pick("miles_from_cincy", "miles_from_c", "miles", "distance", "mileage")),
         lat=parse_float(pick("lat", "latitude")),
         lon=parse_float(pick("lon", "lng", "longitude")),
         last_seen_iso=pick("last_seen_iso", "last_seen") or now_et_iso(),
+        callout=pick("callout", "Callout"),
+        closest_city=pick("closest_city", "Closest City"),
     )
 
 
@@ -1116,6 +1122,75 @@ def haversine_miles(lat1, lon1, lat2, lon2) -> float:
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return R * c
 
+
+# Major cities used for the "Closest City" export column (name, lat, lon).
+MAJOR_CITIES: List[Tuple[str, float, float]] = [
+    ("Cincinnati, OH", 39.1031, -84.5120),
+    ("Dayton, OH", 39.7589, -84.1916),
+    ("Columbus, OH", 39.9612, -82.9988),
+    ("Cleveland, OH", 41.4993, -81.6944),
+    ("Toledo, OH", 41.6528, -83.5379),
+    ("Louisville, KY", 38.2527, -85.7585),
+    ("Lexington, KY", 38.0406, -84.5037),
+    ("Indianapolis, IN", 39.7684, -86.1581),
+    ("Fort Wayne, IN", 41.0793, -85.1394),
+    ("Nashville, TN", 36.1627, -86.7816),
+    ("Knoxville, TN", 35.9606, -83.9207),
+    ("Pittsburgh, PA", 40.4406, -79.9959),
+    ("Charleston, WV", 38.3498, -81.6326),
+    ("Detroit, MI", 42.3314, -83.0458),
+    ("Chicago, IL", 41.8781, -87.6298),
+    ("St. Louis, MO", 38.6270, -90.1994),
+]
+
+
+def closest_major_city(lat: Optional[float], lon: Optional[float]) -> str:
+    if lat is None or lon is None:
+        return ""
+    try:
+        name, _, _ = min(MAJOR_CITIES, key=lambda c: haversine_miles(lat, lon, c[1], c[2]))
+    except Exception:
+        return ""
+    return name
+
+
+REGISTRATION_KEYWORDS = (
+    "registration", "register", "rsvp", "sign up", "sign-up", "signup",
+    "pre-register", "preregister", "entry fee", "entry form",
+)
+TICKET_KEYWORDS = (
+    "ticket", "admission", "box office", "gate fee", "admittance",
+)
+REGISTRATION_NEGATIONS = (
+    "no registration", "registration not required", "registration is not required",
+    "without registration", "no rsvp",
+)
+TICKET_NEGATIONS = (
+    "no ticket", "free admission", "free entry", "free to attend",
+    "free event", "no admission",
+)
+
+
+def detect_registration_callout(*texts: str, ticket_url: str = "") -> str:
+    """Best-effort detection for the export "Callout" column: does the event
+    appear to require registration and/or tickets? Returns "" when no signal."""
+    blob = " ".join(clean_ws(str(t)).lower() for t in texts if t)
+
+    reg_negated = any(p in blob for p in REGISTRATION_NEGATIONS)
+    tix_negated = any(p in blob for p in TICKET_NEGATIONS)
+
+    has_reg = (not reg_negated) and any(k in blob for k in REGISTRATION_KEYWORDS)
+    has_tix = bool(clean_ws(ticket_url)) or ((not tix_negated) and any(k in blob for k in TICKET_KEYWORDS))
+
+    if has_reg and has_tix:
+        return "Registration & tickets required"
+    if has_reg:
+        return "Registration required"
+    if has_tix:
+        return "Tickets required"
+    return ""
+
+
 def extract_facebook_page_identifier(page_url: str) -> str:
     """Extract a canonical Facebook page identifier (username or numeric ID) from a URL-ish value."""
     raw = clean_ws(page_url)
@@ -1359,6 +1434,8 @@ def normalize_facebook_page_event(item: dict, page_name: str) -> Optional[dict]:
         "source": f"Facebook: {page_name}",
         "event_type": "facebook_page",
         "cost": "",
+        "description": clean_ws(str(item.get("description", "") or ""))[:2000],
+        "ticket_uri": clean_ws(str(item.get("ticket_uri", "") or "")),
     }
 
 
@@ -1771,20 +1848,42 @@ def _format_address_candidate(candidate: str, require_zip: bool = True) -> str:
     return f"{clean_ws(street)}, {clean_ws(city)}, {state.upper()}"
 
 
+def _extract_venue_prefix(text: str, formatted_address: str) -> str:
+    """Return the venue name preceding the extracted address, if any.
+
+    Looks for the first occurrence of the address's street portion in the raw
+    text; anything before it is treated as the venue name candidate.
+    """
+    street = clean_ws(formatted_address.split(",", 1)[0])
+    if not street:
+        return ""
+    idx = text.lower().find(street.lower())
+    if idx <= 0:
+        return ""
+    prefix = clean_ws(text[:idx]).strip(" ,-–—")
+    if not prefix or len(prefix) > 80:
+        return ""
+    # A prefix that starts with a street number is an address fragment, not a venue name.
+    if re.match(r"^\d", prefix):
+        return ""
+    return prefix
+
+
 def clean_location(raw: str) -> str:
-    """Extract exactly one clean US postal address when confidently detectable.
+    """Extract one clean US postal address, keeping the venue name when present.
+
+    Output format: "Venue Name - street, city, ST ZIP" (no country), or just the
+    address when no venue name precedes it.
 
     Example mappings (unit-test style):
       - "Colin's Coffee 2812 Fishinger Rd, Upper Arlington, United States 2812 Fishinger Rd, Upper Arlington, OH 43221"
-        -> "2812 Fishinger Rd, Upper Arlington, OH 43221"
-      - "Crestview Hills Town Center 2791 Town Center Blvd, Crestview Hills, KY, United States 2791 Town Center Blvd, Crestview Hills, KY 41017"
-        -> "2791 Town Center Blvd, Crestview Hills, KY 41017"
+        -> "Colin's Coffee - 2812 Fishinger Rd, Upper Arlington, OH 43221"
       - "Starbucks (Westerville) 745 Springfield St, Cincinnati, OH 45215 USA"
-        -> "745 Springfield St, Cincinnati, OH 45215"
+        -> "Starbucks (Westerville) - 745 Springfield St, Cincinnati, OH 45215"
       - "745 Springfield St, Cincinnati, OH 45215 745 Springfield St, Cincinnati, OH 45215"
         -> "745 Springfield St, Cincinnati, OH 45215"
       - "Venue Name 123 Main St, Columbus, OH"
-        -> "123 Main St, Columbus, OH"
+        -> "Venue Name - 123 Main St, Columbus, OH"
       - "Meet at the lot behind the mall"
         -> "Meet at the lot behind the mall"
     """
@@ -1796,6 +1895,10 @@ def clean_location(raw: str) -> str:
     text = re.sub(r"\s*,\s*", ", ", text)
     text = clean_ws(text).strip(" ,")
 
+    def with_venue(formatted: str) -> str:
+        venue = _extract_venue_prefix(text, formatted)
+        return f"{venue} - {formatted}" if venue else formatted
+
     seen = set()
     for match in US_ADDR_FULL_RE.finditer(text):
         formatted = _format_address_candidate(match.group(1), require_zip=True)
@@ -1805,7 +1908,7 @@ def clean_location(raw: str) -> str:
         if key in seen:
             continue
         seen.add(key)
-        return formatted
+        return with_venue(formatted)
 
     seen.clear()
     for match in US_ADDR_WEAK_RE.finditer(text):
@@ -1816,7 +1919,7 @@ def clean_location(raw: str) -> str:
         if key in seen:
             continue
         seen.add(key)
-        return formatted
+        return with_venue(formatted)
 
     return text
 
@@ -4139,6 +4242,12 @@ def to_event_items(
                     source_counter["location_too_far_rally"] += 1
                 continue
 
+        callout = clean_ws(str(e.get("callout", ""))) or detect_registration_callout(
+            title,
+            e.get("description", ""),
+            ticket_url=str(e.get("ticket_uri", "") or ""),
+        )
+
         out.append(
             EventItem(
                 title=title,
@@ -4153,6 +4262,9 @@ def to_event_items(
                 lat=lat,
                 lon=lon,
                 last_seen_iso=now_et_iso(),
+                callout=callout,
+                # closest_city is intentionally left blank here; main() backfills
+                # it with ZIP-priority geocoding for better accuracy.
             )
         )
 
@@ -4187,6 +4299,10 @@ def dedupe_merge(
                 cur.location = ev.location
             if not cur.city_state and ev.city_state:
                 cur.city_state = ev.city_state
+            if not cur.callout and ev.callout:
+                cur.callout = ev.callout
+            if not cur.closest_city and ev.closest_city:
+                cur.closest_city = ev.closest_city
             if ev.source and ev.source not in cur.source:
                 cur.source = clean_ws(f"{cur.source}; {ev.source}")
             merged[k] = cur
@@ -4251,6 +4367,10 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "source": ["source", "event_source", "source_name", "pulled_from", "Source"],
         "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime", "Start ISO", "start iso"],
         "end_dt": ["end_iso", "end", "end_datetime", "enddatetime", "End ISO", "end iso"],
+        "closest_city": ["Closest City", "closest_city", "closest city"],
+        "callout": ["Callout", "callout", "call_out", "call out"],
+        "lat": ["lat", "latitude"],
+        "lon": ["lon", "lng", "longitude"],
     }
 
     if headers is None:
@@ -4304,6 +4424,23 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         normalized["Address"] = raw_location
         normalized["Event URL"] = pick_value(row, alias_map["link"])
         normalized["Source"] = normalize_source(pick_value(row, alias_map["source"]) or "")
+
+        closest_city = pick_value(row, alias_map["closest_city"])
+        if not closest_city:
+            def _coord(aliases: List[str]) -> Optional[float]:
+                raw_coord = pick_value(row, aliases)
+                try:
+                    return float(raw_coord) if raw_coord else None
+                except Exception:
+                    return None
+
+            closest_city = closest_major_city(_coord(alias_map["lat"]), _coord(alias_map["lon"]))
+        normalized["Closest City"] = closest_city
+
+        normalized["Callout"] = (
+            pick_value(row, alias_map["callout"])
+            or detect_registration_callout(normalized["Event Name"], raw_location)
+        )
 
         date_text = pick_value(row, alias_map["date"])
         start_time_text = pick_value(row, alias_map["start_time"])
@@ -4897,8 +5034,29 @@ def main():
     now_et = datetime.now(tz=tz.gettz("America/New_York"))
     merged_dicts = [asdict(e) for e in merged]
     merged_dicts = prune_past_events(merged_dicts, now_et)
+    closest_city_backfilled = 0
     for ev in merged_dicts:
         ev["location"] = normalize_location_for_output(ev.get("location", ""), ev.get("city_state", ""))
+        if not clean_ws(str(ev.get("closest_city", "") or "")):
+            lat, lon = ev.get("lat"), ev.get("lon")
+            # Prefer the ZIP code when present — city names alone are ambiguous
+            # (e.g. "Fairfield, OH" resolves to the wrong Fairfield).
+            zip_match = re.search(r"\b(\d{5})(?:-\d{4})?\b", str(ev.get("location") or ""))
+            if zip_match:
+                latlon = geocode(f"{zip_match.group(1)}, USA", geocache)
+                if latlon:
+                    lat, lon = latlon
+            elif lat is None or lon is None:
+                query = ev.get("city_state") or ev.get("location")
+                latlon = geocode(query, geocache) if query else None
+                if latlon:
+                    lat, lon = latlon
+            filled = closest_major_city(lat, lon)
+            if filled:
+                ev["closest_city"] = filled
+                closest_city_backfilled += 1
+    if closest_city_backfilled:
+        log(f"🗺️ Closest City backfilled for {closest_city_backfilled} events")
 
     merged_dicts = dedupe_export_rows(merged_dicts)
 
