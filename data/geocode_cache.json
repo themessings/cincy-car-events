@@ -406,7 +406,7 @@
     "lat": "39.6283928",
     "lon": "-84.1593818"
   },
-  "6:30PM \u2013 8:30PM EST. Tomorrow": null,
+  "6:30PM – 8:30PM EST. Tomorrow": null,
   "Street , Monrovia,. 74 people ... Louisville K.Y.. Sports": null,
   "2026": {
     "lat": "47.7627112",
@@ -422,7 +422,7 @@
     "lon": "-84.4970393"
   },
   "news! Our Self": null,
-  "4:30PM \u2013 7:30PM EDT": null,
+  "4:30PM – 7:30PM EDT": null,
   "Cleveland, OH": {
     "lat": "41.4996574",
     "lon": "-81.6936772"
@@ -1147,7 +1147,7 @@
   "A LIAR MAN Sofroniou 2, Athina 118 54, Greece, Athens meetup1 Athens meetup1": null,
   "Starttech Ventures Likourgou 1, Athina 105 51, Greece, Athens meetup1 Athens meetup1": null,
   "SuiHub Agiou Markou 22, Athens, 105 60, Greece, Athens meetup1 Athens meetup1": null,
-  "\u03a055 Coworking Space Plateon 55, Athina 104 35 Athina 104 35": null,
+  "Π55 Coworking Space Plateon 55, Athina 104 35 Athina 104 35": null,
   "Secret Restaurant Location in Athens Karistou, Athina 115 23, Greece, Athens meetup1 Athens meetup1": null,
   "En aithria Astiggos 13, Athens, 10555, , Athens meetup1 Athens meetup1": null,
   "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52, , Athens meetup1 Athens meetup1": null,
@@ -3447,5 +3447,132 @@
   "47117, USA": {
     "lat": "38.1200905",
     "lon": "-85.9775132"
+  },
+  "Quaker Steak and Lube 3737 Stone Creek Blvd Cincinnati OH 45251": null,
+  "Community Park East - Fairborn 691 E. Dayton-Yellow Springs Rd Fairborn OH 45324": null,
+  "National Museum of the U.S. Air Force 1100 Spaatz St. Wright-Patterson AFB OH 45433": {
+    "lat": "39.7802236",
+    "lon": "-84.1080722"
+  },
+  "Downtown Waynesville Main Street Waynesville OH 45068": null,
+  "Orthopaedic Institute of Dayton 3205 Woodman Drive Dayton OH 45420": null,
+  "Eastwood MetroPark 1385 Harshman Road Dayton OH 45431": null,
+  "Ohio Expo Center 717 E 11th Ave Columbus OH 43211": null,
+  "Groovy Plants Ranch 4140 County Rd 15 Marengo OH 43334": null,
+  "Carrie Gaulbert Cox Park 3730 River Road Louisville KY 40207": null,
+  "Scamahorn Park 130 E. Main St. Pittsboro IN 46167": null,
+  "Zionsville, IN": {
+    "lat": "39.9507240",
+    "lon": "-86.2616968"
+  },
+  "Johnson County Park 7248 S. Picnic Dr. Nineveh IN 46164": null,
+  "Greenwood High School 615 W. Smith Valley Road Greenwood IN 46142": null,
+  "Oak Brook, IL": {
+    "lat": "41.8327126",
+    "lon": "-87.9484125"
+  },
+  "Elmhurst, IL": {
+    "lat": "41.8994745",
+    "lon": "-87.9403418"
+  },
+  "Orland Park, IL": {
+    "lat": "41.6306630",
+    "lon": "-87.8536288"
+  },
+  "chicago, IL": {
+    "lat": "41.8755616",
+    "lon": "-87.6244212"
+  },
+  "13225, USA": {
+    "lat": "37.7546106",
+    "lon": "-122.4656070"
+  },
+  "21450, USA": {
+    "lat": "47.5392968",
+    "lon": "-122.3607887"
+  },
+  "45420, USA": {
+    "lat": "39.7175996",
+    "lon": "-84.1326698"
+  },
+  "40207, USA": {
+    "lat": "38.2562122",
+    "lon": "-85.6490407"
+  },
+  "33499, USA": {
+    "lat": "41.6331705",
+    "lon": "-87.6173347"
+  },
+  "10050, USA": {
+    "lat": "47.6685905",
+    "lon": "-122.2954880"
+  },
+  "10444, USA": {
+    "lat": "33.9372608",
+    "lon": "-118.1271600"
+  },
+  "14923, USA": {
+    "lat": "37.7782225",
+    "lon": "-122.4194550"
+  },
+  "45433, USA": {
+    "lat": "39.7867973",
+    "lon": "-84.0921376"
+  },
+  "11067, USA": {
+    "lat": "33.4917374",
+    "lon": "-112.0912360"
+  },
+  "15769, USA": {
+    "lat": "41.6851489",
+    "lon": "-87.6427862"
+  },
+  "10801, USA": {
+    "lat": "40.9177156",
+    "lon": "-73.7869096"
+  },
+  "24025, USA": {
+    "lat": "30.6972412",
+    "lon": "-88.1892334"
+  },
+  "12650, USA": {
+    "lat": "39.3343712",
+    "lon": "-76.6558268"
+  },
+  "23000, USA": {
+    "lat": "34.2171222",
+    "lon": "-94.5516102"
+  },
+  "12265, USA": {
+    "lat": "39.8364394",
+    "lon": "-86.2871336"
+  },
+  "10542, USA": {
+    "lat": "41.3727960",
+    "lon": "-73.7613570"
+  },
+  "11225, USA": {
+    "lat": "40.6623452",
+    "lon": "-73.9531827"
+  },
+  "38295, USA": {
+    "lat": "30.6972412",
+    "lon": "-88.1892334"
+  },
+  "46388, USA": {
+    "lat": "30.6972412",
+    "lon": "-88.1892334"
+  },
+  "11140, USA": {
+    "lat": "41.9375969",
+    "lon": "-87.7125147"
+  },
+  "15808, USA": {
+    "lat": "42.3994690",
+    "lon": "-70.9981481"
+  },
+  "12296, USA": {
+    "lat": "41.3077999",
+    "lon": "-72.9302910"
   }
 }
