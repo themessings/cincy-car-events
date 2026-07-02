@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-07-02T08:25:01.506576-04:00",
-  "count": 197,
+  "generated_at_iso": "2026-07-02T09:01:16.783537-04:00",
+  "count": 228,
   "events": [
     {
       "Event Name": "The Honda Indy 200 at Mid-Ohio Presented by the 2027 CR-V Hybrid",
@@ -9,7 +9,7 @@
       "End Time": "5:00 PM",
       "Location": "Mid-Ohio Sports Car Course",
       "Address": "Mid-Ohio Sports Car Course",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/the-honda-indy-200-at-mid-ohio/817933141361693/"
@@ -21,7 +21,19 @@
       "End Time": "11:00 AM",
       "Location": "Louisville, KY",
       "Address": "Louisville, KY",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://kingoftheroads.events/"
+    },
+    {
+      "Event Name": "King of the Roads Rally",
+      "Date": "2026-07-03",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Louisville, KY",
+      "Address": "Louisville, KY",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://kingoftheroads.events/"
@@ -33,7 +45,7 @@
       "End Time": "6:00 PM",
       "Location": "7285 Dixie Hwy, Fairfield, OH 45014-8573",
       "Address": "7285 Dixie Hwy, Fairfield, OH 45014-8573",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/renegades-up-car-truck-bike-cr/2869461123391324/"
@@ -45,7 +57,7 @@
       "End Time": "7:00 PM",
       "Location": "S Pearl St, Cicero, IN 46034",
       "Address": "S Pearl St, Cicero, IN 46034",
-      "Closest City": "",
+      "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/car-show/1370098474930018/"
@@ -57,7 +69,7 @@
       "End Time": "9:00 PM",
       "Location": "Danville Town Square",
       "Address": "Danville Town Square",
-      "Closest City": "",
+      "Closest City": "Charleston, WV",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/july-26-first-friday-cruise-in/970294782079224/"
@@ -69,7 +81,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859379604400/"
@@ -93,7 +105,7 @@
       "End Time": "11:00 AM",
       "Location": "Austin Landing Blvd, Miamisburg, OH 45342",
       "Address": "Austin Landing Blvd, Miamisburg, OH 45342",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2026-meet-4/1365680135475005/"
@@ -105,7 +117,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -117,7 +129,7 @@
       "End Time": "6:00 PM",
       "Location": "Sportsdrome Speedway",
       "Address": "Sportsdrome Speedway",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/mid-summer-bash/788925330830163/"
@@ -129,7 +141,7 @@
       "End Time": "1:00 PM",
       "Location": "Shelby County Fairgrounds, Sidney, OH 45365",
       "Address": "Shelby County Fairgrounds, Sidney, OH 45365",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/america-250-car-tractor-show/1995134004729510/"
@@ -138,10 +150,10 @@
       "Event Name": "Let’s Meet at - Eden Park",
       "Date": "2026-07-04",
       "Start Time": "11:30 AM",
-      "End Time": "1:30 PM",
-      "Location": "1501 Eden Park Drive, Cincinnati, OH",
-      "Address": "1501 Eden Park Drive, Cincinnati, OH",
-      "Closest City": "",
+      "End Time": "1:00 PM",
+      "Location": "Eden Park Mirror Lake - 1501 Eden Park Drive, Cincinnati, OH",
+      "Address": "Eden Park Mirror Lake - 1501 Eden Park Drive, Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/lets-meet-at-the-park/events/315020742/"
@@ -153,7 +165,7 @@
       "End Time": "8:00 PM",
       "Location": "Clayton, Indiana",
       "Address": "Clayton, Indiana",
-      "Closest City": "",
+      "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/bewleys-garage-4th-of-july-cru/1768925360763360/"
@@ -165,7 +177,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -177,7 +189,7 @@
       "End Time": "7:00 PM",
       "Location": "8901 U.S. 42 HWY, Union, KY",
       "Address": "8901 U.S. 42 HWY, Union, KY",
-      "Closest City": "",
+      "Closest City": "Nashville, TN",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/sunday-cruise-ins-with-nostalg/784721667583367/"
@@ -201,7 +213,7 @@
       "End Time": "10:00 PM",
       "Location": "3301 Madison Rd, Cincinnati, OH",
       "Address": "3301 Madison Rd, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/cincinnati-medical-marijuana-meetup/events/315431863/"
@@ -225,7 +237,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -237,7 +249,7 @@
       "End Time": "8:30 PM",
       "Location": "Element Eatery 5250 Medpace Way, , Cincinnati, OH Cincinnati OH",
       "Address": "Element Eatery 5250 Medpace Way, , Cincinnati, OH Cincinnati OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/queencitysocialclub/events/315397590/"
@@ -273,7 +285,7 @@
       "End Time": "5:00 PM",
       "Location": "Mid-Ohio Sports Car Course",
       "Address": "Mid-Ohio Sports Car Course",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-region-it-spectacul/830259446262201/"
@@ -297,7 +309,7 @@
       "End Time": "10:00 AM",
       "Location": "Mid-Ohio Sports Car Course",
       "Address": "Mid-Ohio Sports Car Course",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-region-scca-1-hour-/752294304636527/"
@@ -321,7 +333,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -333,7 +345,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -345,7 +357,7 @@
       "End Time": "11:00 AM",
       "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
       "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Google Events (SerpAPI) [serpapi_google_events]",
       "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-11/"
@@ -369,7 +381,7 @@
       "End Time": "3:30 PM",
       "Location": "Fairfield, Ohio",
       "Address": "Fairfield, Ohio",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincy-cool-cars-club-car-show/2040573946874610/"
@@ -381,7 +393,7 @@
       "End Time": "11:00 AM",
       "Location": "Athens, OH (Launch)",
       "Address": "Athens, OH (Launch)",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://rallynorthamerica.com/rally-events/"
@@ -393,10 +405,22 @@
       "End Time": "12:00 PM",
       "Location": "4800 Lodge Rd., Cincinnati, OH",
       "Address": "4800 Lodge Rd., Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/cincyhikingsocialclub/events/315413020/"
+    },
+    {
+      "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
+      "Date": "2026-07-11",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Athens, OH (Launch)",
+      "Address": "Athens, OH (Launch)",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://rallynorthamerica.com/rally-events/"
     },
     {
       "Event Name": "Ultimate Auto show, Oakley",
@@ -405,7 +429,7 @@
       "End Time": "7:00 PM",
       "Location": "Oakley Greens",
       "Address": "Oakley Greens",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/ultimate-auto-show-oakley/1658836658585759/"
@@ -417,7 +441,7 @@
       "End Time": "7:00 PM",
       "Location": "Oakley Greens",
       "Address": "Oakley Greens",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/ultimate-auto-show-at-oakley-g/1658836658585759/"
@@ -429,7 +453,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -441,7 +465,19 @@
       "End Time": "11:00 AM",
       "Location": "Marquette, MI",
       "Address": "Marquette, MI",
-      "Closest City": "",
+      "Closest City": "Chicago, IL",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Rally North America – Day 2",
+      "Date": "2026-07-12",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Marquette, MI",
+      "Address": "Marquette, MI",
+      "Closest City": "Chicago, IL",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -453,7 +489,7 @@
       "End Time": "1:00 PM",
       "Location": "Hungry Buffalo Restaurant",
       "Address": "Hungry Buffalo Restaurant",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/hhcc-x-porsche-club/1543769710548111/"
@@ -465,7 +501,7 @@
       "End Time": "3:45 PM",
       "Location": "4521 Spring Grove Ave, Cincinnati, OH",
       "Address": "4521 Spring Grove Ave, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/iwantto/events/315428270/"
@@ -477,7 +513,19 @@
       "End Time": "11:00 AM",
       "Location": "Traverse City, MI",
       "Address": "Traverse City, MI",
-      "Closest City": "",
+      "Closest City": "Detroit, MI",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Rally North America – Day 3",
+      "Date": "2026-07-13",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Traverse City, MI",
+      "Address": "Traverse City, MI",
+      "Closest City": "Detroit, MI",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -489,7 +537,19 @@
       "End Time": "11:00 AM",
       "Location": "Frankenmuth, MI",
       "Address": "Frankenmuth, MI",
-      "Closest City": "",
+      "Closest City": "Detroit, MI",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Rally North America – Day 4",
+      "Date": "2026-07-14",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Frankenmuth, MI",
+      "Address": "Frankenmuth, MI",
+      "Closest City": "Detroit, MI",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -513,7 +573,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -525,7 +585,7 @@
       "End Time": "7:00 PM",
       "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
       "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308208591930/"
@@ -537,7 +597,7 @@
       "End Time": "8:00 PM",
       "Location": "52 4590 Beech St, Norwood, OH 45212",
       "Address": "52 4590 Beech St, Norwood, OH 45212",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738888/"
@@ -549,7 +609,7 @@
       "End Time": "8:30 PM",
       "Location": "Mount Gilead, OH",
       "Address": "Mount Gilead, OH",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/mt-gileads-annual-downtown-car/1011093661852820/"
@@ -573,7 +633,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -585,7 +645,7 @@
       "End Time": "12:00 PM",
       "Location": "7160 Taylor Street Liberty Township, OH 45069",
       "Address": "7160 Taylor Street Liberty Township, OH 45069",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1280772053912863/"
@@ -597,7 +657,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -609,7 +669,7 @@
       "End Time": "11:00 AM",
       "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
       "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Google Events (SerpAPI) [serpapi_google_events]",
       "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-18/"
@@ -621,7 +681,7 @@
       "End Time": "12:00 PM",
       "Location": "National Museum of the U.S. Air Force",
       "Address": "National Museum of the U.S. Air Force",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/gdcc-corvettes-coffee-at-natio/1835544663779664/"
@@ -646,7 +706,7 @@
       "Location": "Location will be sent to ticket holders.",
       "Address": "Location will be sent to ticket holders.",
       "Closest City": "",
-      "Callout": "",
+      "Callout": "Tickets required",
       "Source": "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)",
       "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
     },
@@ -669,7 +729,7 @@
       "End Time": "12:00 PM",
       "Location": "5057 Wooster Pike, Cincinnati, OH",
       "Address": "5057 Wooster Pike, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/cincinnati-pugs/events/314738815/"
@@ -693,8 +753,8 @@
       "End Time": "8:00 PM",
       "Location": "805 Columbia Ave, Middletown, OH 45042-1907",
       "Address": "805 Columbia Ave, Middletown, OH 45042-1907",
-      "Closest City": "",
-      "Callout": "",
+      "Closest City": "Dayton, OH",
+      "Callout": "Registration required",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/the-ohio-challengefka-balloonf/1539516784017605/"
     },
@@ -717,7 +777,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -729,7 +789,7 @@
       "End Time": "3:00 PM",
       "Location": "Erlanger Lions Club 5996 Belair Dr.",
       "Address": "Erlanger Lions Club 5996 Belair Dr.",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/read-details-kenton-county-she/1226997656251881/"
@@ -753,7 +813,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -765,7 +825,7 @@
       "End Time": "7:30 PM",
       "Location": "Central Insurance 4450 Bridge Park Ave, , Dublin, OH 43017 Dublin OH 43017",
       "Address": "Central Insurance 4450 Bridge Park Ave, , Dublin, OH 43017 Dublin OH 43017",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/central-ohio-net-developers-group-condg/events/313792193/"
@@ -777,7 +837,19 @@
       "End Time": "11:00 AM",
       "Location": "Cincinnati, OH",
       "Address": "Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "—"
+    },
+    {
+      "Event Name": "Cincy Car Cruise Rally",
+      "Date": "2026-07-24",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Cincinnati, OH",
+      "Address": "Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "—"
@@ -789,7 +861,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -801,7 +873,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -813,7 +885,7 @@
       "End Time": "11:00 AM",
       "Location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
       "Address": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "Google Events (SerpAPI) [serpapi_google_events]",
       "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-25/"
@@ -825,7 +897,7 @@
       "End Time": "11:30 AM",
       "Location": "101 Knightsbridge Dr, Hamilton, OH 45011-3166",
       "Address": "101 Knightsbridge Dr, Hamilton, OH 45011-3166",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/72nd-annual-antique-classic-ca/1028501906270938/"
@@ -837,7 +909,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -861,7 +933,19 @@
       "End Time": "11:00 AM",
       "Location": "Launch Cincinnati, OH",
       "Address": "Launch Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.therechargerally.com/"
+    },
+    {
+      "Event Name": "Recharge Rally – Day 1",
+      "Date": "2026-07-29",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Launch Cincinnati, OH",
+      "Address": "Launch Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.therechargerally.com/"
@@ -873,7 +957,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -885,7 +969,19 @@
       "End Time": "11:00 AM",
       "Location": "Chattanooga, TN",
       "Address": "Chattanooga, TN",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Recharge Rally – Day 2",
+      "Date": "2026-07-30",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Chattanooga, TN",
+      "Address": "Chattanooga, TN",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -897,7 +993,19 @@
       "End Time": "11:00 AM",
       "Location": "Greenville, SC",
       "Address": "Greenville, SC",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Recharge Rally – Day 3",
+      "Date": "2026-07-31",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Greenville, SC",
+      "Address": "Greenville, SC",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -909,7 +1017,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -921,7 +1029,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -945,7 +1053,19 @@
       "End Time": "11:00 AM",
       "Location": "Charlotte, NC",
       "Address": "Charlotte, NC",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Recharge Rally – Day 4",
+      "Date": "2026-08-01",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Charlotte, NC",
+      "Address": "Charlotte, NC",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -969,7 +1089,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -981,7 +1101,7 @@
       "End Time": "3:00 PM",
       "Location": "Miami Valley Gaming",
       "Address": "Miami Valley Gaming",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/lfp-mvg-annual-car-show/1529777211997097/"
@@ -993,7 +1113,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1005,7 +1125,7 @@
       "End Time": "1:00 PM",
       "Location": "Kentucky Exposition Center",
       "Address": "Kentucky Exposition Center",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/57th-nsra-street-rod-nationals/1204385181605828/"
@@ -1017,7 +1137,19 @@
       "End Time": "11:00 AM",
       "Location": "Wilmington, OH",
       "Address": "Wilmington, OH",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://cincyscca.com/rally-cross/"
+    },
+    {
+      "Event Name": "RallyCross – Edgewater",
+      "Date": "2026-08-07",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Wilmington, OH",
+      "Address": "Wilmington, OH",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://cincyscca.com/rally-cross/"
@@ -1029,7 +1161,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1041,7 +1173,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1077,7 +1209,7 @@
       "End Time": "3:00 PM",
       "Location": "825 Tech Center Dr. Gahanna",
       "Address": "825 Tech Center Dr. Gahanna",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/vettes-rods-classics-charity-c/4270028373215122/"
@@ -1089,7 +1221,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1101,7 +1233,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1113,7 +1245,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1125,7 +1257,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1137,7 +1269,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1149,7 +1281,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1161,7 +1293,7 @@
       "End Time": "7:00 PM",
       "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
       "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308201925264/"
@@ -1173,7 +1305,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1185,7 +1317,7 @@
       "End Time": "11:00 AM",
       "Location": "10267 East U S Highway 136, Brownsburg, IN",
       "Address": "10267 East U S Highway 136, Brownsburg, IN",
-      "Closest City": "",
+      "Closest City": "St. Louis, MO",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1197,7 +1329,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1209,7 +1341,7 @@
       "End Time": "8:00 PM",
       "Location": "2nd St. Miamisburg OH",
       "Address": "2nd St. Miamisburg OH",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/2nd-st-car-meet-downtown-miami/2115866132522790/"
@@ -1221,7 +1353,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1233,7 +1365,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1245,7 +1377,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1257,7 +1389,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1281,7 +1413,7 @@
       "End Time": "3:00 PM",
       "Location": "4980 Zion Rd, Cleves, OH",
       "Address": "4980 Zion Rd, Cleves, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/zion-cmc-cruise-in/27967158486235192/"
@@ -1293,7 +1425,7 @@
       "End Time": "10:00 PM",
       "Location": "Land-Grant Brewing Company",
       "Address": "Land-Grant Brewing Company",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/vaded-street-circuit-ohio-2026/4616674298560484/"
@@ -1305,7 +1437,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1317,7 +1449,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1329,7 +1461,7 @@
       "End Time": "4:59 PM",
       "Location": "10267 Hwy 136, Indianapolis, IN 46234",
       "Address": "10267 Hwy 136, Indianapolis, IN 46234",
-      "Closest City": "",
+      "Closest City": "St. Louis, MO",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/nhra-us-nationals/2060031824913660/"
@@ -1341,7 +1473,7 @@
       "End Time": "4:59 PM",
       "Location": "10267 Hwy 136, Indianapolis, IN 46234",
       "Address": "10267 Hwy 136, Indianapolis, IN 46234",
-      "Closest City": "",
+      "Closest City": "St. Louis, MO",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/nhra-us-nationals/1280461794242719/"
@@ -1353,7 +1485,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1365,7 +1497,7 @@
       "End Time": "6:00 PM",
       "Location": "Mid-Ohio Sports Car Course",
       "Address": "Mid-Ohio Sports Car Course",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/the-fast-parts-grand-prix-at-m/1173981004805186/"
@@ -1377,7 +1509,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1401,7 +1533,7 @@
       "End Time": "6:00 PM",
       "Location": "Historic Crew Stadium",
       "Address": "Historic Crew Stadium",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/all-out-war-motorsports-festiv/2317196702145427/"
@@ -1413,7 +1545,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1425,7 +1557,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1437,7 +1569,19 @@
       "End Time": "11:00 AM",
       "Location": "Louisville, KY",
       "Address": "Louisville, KY",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://ridewithrandy.org/"
+    },
+    {
+      "Event Name": "Ride With Randy Rally",
+      "Date": "2026-09-11",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Louisville, KY",
+      "Address": "Louisville, KY",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://ridewithrandy.org/"
@@ -1449,7 +1593,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1461,7 +1605,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1485,7 +1629,7 @@
       "End Time": "12:00 PM",
       "Location": "1201 Main St, Speedway, IN",
       "Address": "1201 Main St, Speedway, IN",
-      "Closest City": "",
+      "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/dallara-cars-coffee/1475248440733735/"
@@ -1497,7 +1641,7 @@
       "End Time": "5:00 PM",
       "Location": "Butler County Fair",
       "Address": "Butler County Fair",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/westside-lowriders-annual-picn/26043252652002417/"
@@ -1509,7 +1653,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1521,7 +1665,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1533,7 +1677,7 @@
       "End Time": "7:00 PM",
       "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
       "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308205258597/"
@@ -1545,7 +1689,7 @@
       "End Time": "11:00 AM",
       "Location": "9111 Haverstick Rd, Indianapolis, IN 46240",
       "Address": "9111 Haverstick Rd, Indianapolis, IN 46240",
-      "Closest City": "",
+      "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1557,7 +1701,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1569,7 +1713,7 @@
       "End Time": "11:00 AM",
       "Location": "8900 Keystone Xing, Indianapolis, IN 46240-0030",
       "Address": "8900 Keystone Xing, Indianapolis, IN 46240-0030",
-      "Closest City": "",
+      "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/2179168556173345/"
@@ -1581,7 +1725,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1605,7 +1749,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1617,7 +1761,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1629,7 +1773,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1641,7 +1785,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1665,7 +1809,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1677,7 +1821,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1689,7 +1833,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859389604399/"
@@ -1701,7 +1845,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1725,7 +1869,7 @@
       "End Time": "2:00 PM",
       "Location": "2669 E Kemper Road, Cincinnati, OH",
       "Address": "2669 E Kemper Road, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
@@ -1737,7 +1881,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1749,7 +1893,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1761,7 +1905,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1773,7 +1917,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1785,7 +1929,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1797,7 +1941,7 @@
       "End Time": "3:00 PM",
       "Location": "4521 Spring Grove Ave, Cincinnati, OH",
       "Address": "4521 Spring Grove Ave, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cruise-in-car-show/1439212361072214/"
@@ -1809,7 +1953,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1821,7 +1965,7 @@
       "End Time": "8:00 PM",
       "Location": "24 Miami St., Hamilton, OH",
       "Address": "24 Miami St., Hamilton, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/10th-anniversary-bash-cruise-i/2757384507959711/"
@@ -1833,7 +1977,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1845,10 +1989,22 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cancer Awareness Rally – Day 1",
+      "Date": "2026-10-17",
+      "Start Time": "11:00 PM",
+      "End Time": "1:00 AM",
+      "Location": "Launch Washington, DC",
+      "Address": "Launch Washington, DC",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 1",
@@ -1869,7 +2025,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1881,7 +2037,19 @@
       "End Time": "1:00 AM",
       "Location": "Washington, DC",
       "Address": "Washington, DC",
-      "Closest City": "",
+      "Closest City": "Pittsburgh, PA",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Cancer Awareness Rally – Day 2",
+      "Date": "2026-10-18",
+      "Start Time": "11:00 PM",
+      "End Time": "1:00 AM",
+      "Location": "Washington, DC",
+      "Address": "Washington, DC",
+      "Closest City": "Pittsburgh, PA",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -1893,7 +2061,19 @@
       "End Time": "1:00 AM",
       "Location": "Bristol, TN",
       "Address": "Bristol, TN",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Cancer Awareness Rally – Day 3",
+      "Date": "2026-10-19",
+      "Start Time": "11:00 PM",
+      "End Time": "1:00 AM",
+      "Location": "Bristol, TN",
+      "Address": "Bristol, TN",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -1905,7 +2085,19 @@
       "End Time": "1:00 AM",
       "Location": "Knoxville, TN",
       "Address": "Knoxville, TN",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Cancer Awareness Rally – Day 4",
+      "Date": "2026-10-20",
+      "Start Time": "11:00 PM",
+      "End Time": "1:00 AM",
+      "Location": "Knoxville, TN",
+      "Address": "Knoxville, TN",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -1917,7 +2109,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -1929,7 +2121,7 @@
       "End Time": "7:00 PM",
       "Location": "Four Bridges Dr, Liberty Twp, OH 45044",
       "Address": "Four Bridges Dr, Liberty Twp, OH 45044",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/four-bridges-cruise-in/1267308211925263/"
@@ -1941,7 +2133,19 @@
       "End Time": "1:00 AM",
       "Location": "Nashville, TN",
       "Address": "Nashville, TN",
-      "Closest City": "",
+      "Closest City": "Nashville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Cancer Awareness Rally – Day 5",
+      "Date": "2026-10-21",
+      "Start Time": "11:00 PM",
+      "End Time": "1:00 AM",
+      "Location": "Nashville, TN",
+      "Address": "Nashville, TN",
+      "Closest City": "Nashville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -1965,7 +2169,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -1977,7 +2181,7 @@
       "End Time": "11:00 AM",
       "Location": "9225 Priority Way West Dr, Indianapolis, IN 46240-0108",
       "Address": "9225 Priority Way West Dr, Indianapolis, IN 46240-0108",
-      "Closest City": "",
+      "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-trunk/1305039368396062/"
@@ -1989,7 +2193,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2001,7 +2205,7 @@
       "End Time": "11:00 AM",
       "Location": "9225 Priority Way W Dr Indianapolis, IN 46240",
       "Address": "9225 Priority Way W Dr Indianapolis, IN 46240",
-      "Closest City": "",
+      "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2013,7 +2217,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2025,7 +2229,7 @@
       "End Time": "7:00 PM",
       "Location": "8300 Four Bridges Dr Liberty Township, OH",
       "Address": "8300 Four Bridges Dr Liberty Township, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2037,7 +2241,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -2049,7 +2253,7 @@
       "End Time": "10:30 AM",
       "Location": "2751 Dixie Hwy, Crestview Hills, KY 41017",
       "Address": "2751 Dixie Hwy, Crestview Hills, KY 41017",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2061,7 +2265,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2073,7 +2277,7 @@
       "End Time": "11:00 AM",
       "Location": "Atlanta, GA",
       "Address": "Atlanta, GA",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://corsarally.com/events/dragon/"
@@ -2085,7 +2289,7 @@
       "End Time": "11:00 AM",
       "Location": "Storming Crab",
       "Address": "Storming Crab",
-      "Closest City": "",
+      "Closest City": "Louisville, KY",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
@@ -2097,7 +2301,7 @@
       "End Time": "11:00 AM",
       "Location": "Atlanta, GA",
       "Address": "Atlanta, GA",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -2109,7 +2313,7 @@
       "End Time": "3:00 PM",
       "Location": "297 Buttermilk Pike, Fort Mitchell, KY 41017-2136",
       "Address": "297 Buttermilk Pike, Fort Mitchell, KY 41017-2136",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/read-details-coldwell-banker-4/1416195726981667/"
@@ -2121,7 +2325,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2133,7 +2337,7 @@
       "End Time": "11:00 AM",
       "Location": "Asheville, NC",
       "Address": "Asheville, NC",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -2145,7 +2349,7 @@
       "End Time": "11:00 AM",
       "Location": "Knoxville, TN",
       "Address": "Knoxville, TN",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -2157,7 +2361,7 @@
       "End Time": "11:00 AM",
       "Location": "Knoxville, TN",
       "Address": "Knoxville, TN",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
@@ -2169,7 +2373,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2181,7 +2385,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2193,7 +2397,7 @@
       "End Time": "12:00 PM",
       "Location": "2726 Riverside Drive, Cincinnati, OH",
       "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
@@ -2205,7 +2409,19 @@
       "End Time": "11:00 AM",
       "Location": "Columbus, OH",
       "Address": "Columbus, OH",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Ohio Challenge RoadRally (SCCA)",
+      "Date": "2027-03-27",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Columbus, OH",
+      "Address": "Columbus, OH",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
@@ -2217,7 +2433,19 @@
       "End Time": "11:00 AM",
       "Location": "Indianapolis, IN",
       "Address": "Indianapolis, IN",
-      "Closest City": "",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Hoosier Rally (SCCA)",
+      "Date": "2027-04-17",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Indianapolis, IN",
+      "Address": "Indianapolis, IN",
+      "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
@@ -2229,7 +2457,19 @@
       "End Time": "11:00 AM",
       "Location": "Dayton, OH",
       "Address": "Dayton, OH",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Buckeye RoadRally (SCCA)",
+      "Date": "2027-05-01",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Dayton, OH",
+      "Address": "Dayton, OH",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
@@ -2241,7 +2481,19 @@
       "End Time": "11:00 AM",
       "Location": "Smoky Mountains, TN (Launch)",
       "Address": "Smoky Mountains, TN (Launch)",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://corsarally.com/"
+    },
+    {
+      "Event Name": "Corsa America Spring Rally – Day 1",
+      "Date": "2027-05-04",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Smoky Mountains, TN (Launch)",
+      "Address": "Smoky Mountains, TN (Launch)",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://corsarally.com/"
@@ -2253,7 +2505,19 @@
       "End Time": "11:00 AM",
       "Location": "Asheville, NC",
       "Address": "Asheville, NC",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://corsarally.com/"
+    },
+    {
+      "Event Name": "Corsa America Spring Rally – Day 2",
+      "Date": "2027-05-05",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Asheville, NC",
+      "Address": "Asheville, NC",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://corsarally.com/"
@@ -2265,7 +2529,19 @@
       "End Time": "11:00 AM",
       "Location": "Blue Ridge, GA",
       "Address": "Blue Ridge, GA",
-      "Closest City": "",
+      "Closest City": "Knoxville, TN",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://corsarally.com/"
+    },
+    {
+      "Event Name": "Corsa America Spring Rally – Day 3",
+      "Date": "2027-05-06",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Blue Ridge, GA",
+      "Address": "Blue Ridge, GA",
+      "Closest City": "Knoxville, TN",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://corsarally.com/"
@@ -2277,7 +2553,19 @@
       "End Time": "11:00 AM",
       "Location": "Lexington, OH",
       "Address": "Lexington, OH",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.scca.com/pages/road-rally"
+    },
+    {
+      "Event Name": "Mid-Ohio RoadRally (SCCA)",
+      "Date": "2027-05-15",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Lexington, OH",
+      "Address": "Lexington, OH",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.scca.com/pages/road-rally"
@@ -2289,7 +2577,19 @@
       "End Time": "11:00 AM",
       "Location": "Wilmington, OH",
       "Address": "Wilmington, OH",
-      "Closest City": "",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://cincyscca.com/rally-cross/"
+    },
+    {
+      "Event Name": "RallyCross – Edgewater",
+      "Date": "2027-06-05",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Wilmington, OH",
+      "Address": "Wilmington, OH",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://cincyscca.com/rally-cross/"
@@ -2301,7 +2601,19 @@
       "End Time": "11:00 AM",
       "Location": "Chillicothe, OH",
       "Address": "Chillicothe, OH",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "Event Name": "Southern Ohio Forest Rally – Day 1",
+      "Date": "2027-06-10",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Chillicothe, OH",
+      "Address": "Chillicothe, OH",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.americanrallyassociation.org/sofr"
@@ -2313,7 +2625,19 @@
       "End Time": "11:00 AM",
       "Location": "Chillicothe, OH",
       "Address": "Chillicothe, OH",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "Event Name": "Southern Ohio Forest Rally – Day 2",
+      "Date": "2027-06-11",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Chillicothe, OH",
+      "Address": "Chillicothe, OH",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.americanrallyassociation.org/sofr"
@@ -2325,7 +2649,19 @@
       "End Time": "11:00 AM",
       "Location": "Chillicothe, OH",
       "Address": "Chillicothe, OH",
-      "Closest City": "",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.americanrallyassociation.org/sofr"
+    },
+    {
+      "Event Name": "Southern Ohio Forest Rally – Day 3",
+      "Date": "2027-06-12",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Chillicothe, OH",
+      "Address": "Chillicothe, OH",
+      "Closest City": "Columbus, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.americanrallyassociation.org/sofr"
@@ -2337,7 +2673,19 @@
       "End Time": "11:00 AM",
       "Location": "Launch Cincinnati, OH",
       "Address": "Launch Cincinnati, OH",
-      "Closest City": "",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026 – Day 1",
+      "Date": "2027-06-17",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Launch Cincinnati, OH",
+      "Address": "Launch Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026"
@@ -2349,6 +2697,30 @@
       "End Time": "11:00 AM",
       "Location": "Southern Ohio / KY Backroads",
       "Address": "Southern Ohio / KY Backroads",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026 – Day 2",
+      "Date": "2027-06-18",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Southern Ohio / KY Backroads",
+      "Address": "Southern Ohio / KY Backroads",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Dynasty Rally 2026 – Day 3",
+      "Date": "2027-06-19",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Tennessee / Appalachia Region",
+      "Address": "Tennessee / Appalachia Region",
       "Closest City": "",
       "Callout": "",
       "Source": "sheet",
