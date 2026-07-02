@@ -1716,5 +1716,59 @@
   "California, KY": {
     "lat": "38.9186766",
     "lon": "-84.2635472"
+  },
+  "Miami Valley Gaming": {
+    "lat": "39.4432434",
+    "lon": "-84.3200068"
+  },
+  "Fairfield, OH": {
+    "lat": "39.7886111",
+    "lon": "-82.6418883"
+  },
+  "Robert L. Schuler Sports Complex": null,
+  "William Scott House": {
+    "lat": "-36.9191170",
+    "lon": "174.7852001"
+  },
+  "Danville Town Square": {
+    "lat": "38.0786966",
+    "lon": "-81.8339186"
+  },
+  "Butler County Fair": {
+    "lat": "39.3033258",
+    "lon": "-84.5175541"
+  },
+  "Sportsdrome Speedway": {
+    "lat": "38.3137019",
+    "lon": "-85.7553890"
+  },
+  "Magnolia Springs Loveland Senior Living": null,
+  "Fairfield, Ohio": {
+    "lat": "39.7886111",
+    "lon": "-82.6418883"
+  },
+  "Sidney, OH": {
+    "lat": "40.2842410",
+    "lon": "-84.1555267"
+  },
+  "Fort Mitchell, KY": {
+    "lat": "39.0595047",
+    "lon": "-84.5474432"
+  },
+  "Cicero, IN": {
+    "lat": "40.1323222",
+    "lon": "-86.0137897"
+  },
+  "Clayton, Indiana": {
+    "lat": "39.6892129",
+    "lon": "-86.5224984"
+  },
+  "Wyoming, OH": {
+    "lat": "39.2311692",
+    "lon": "-84.4657758"
+  },
+  "Latonia, KY": {
+    "lat": "39.0473361",
+    "lon": "-84.5031192"
   }
 }
