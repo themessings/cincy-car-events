@@ -1863,8 +1863,10 @@ def _extract_venue_prefix(text: str, formatted_address: str) -> str:
     prefix = clean_ws(text[:idx]).strip(" ,-–—")
     if not prefix or len(prefix) > 80:
         return ""
-    # A prefix that starts with a street number is an address fragment, not a venue name.
-    if re.match(r"^\d", prefix):
+    # Reject street-address fragments ("2812 Fishinger Rd") but keep venue names
+    # that merely start with a number ("41 North Tavern").
+    street_word = r"(?:rd|road|st|street|ave|avenue|dr|drive|blvd|boulevard|hwy|highway|pike|ln|lane|way|pkwy|parkway|ct|court|cir|circle|pl|place)"
+    if re.search(rf"^\d{{1,6}}\s+.*\b{street_word}\.?$", prefix, flags=re.IGNORECASE):
         return ""
     return prefix
 
@@ -2232,6 +2234,133 @@ def collect_wordpress_events_series(source: dict) -> List[dict]:
             }
         )
     return events
+
+
+def collect_tribe_events_api(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
+    """Collect events from a The Events Calendar (Tribe) WordPress REST API.
+
+    Replaces fragile HTML scraping of carsandcoffeeevents.com: the open REST
+    endpoint returns structured venue data (address/city/state/zip), cost, and
+    description, filtered server-side by state category.
+    """
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("parse_failures", 0)
+
+    base_url = clean_ws(source.get("url", "")).rstrip("/")
+    if not base_url:
+        diagnostics["reason"] = "missing_env"
+        return []
+    endpoint = f"{base_url}/wp-json/tribe/events/v1/events"
+
+    categories = source.get("categories") or [None]
+    lookahead_days = int(source.get("lookahead_days", 120))
+    per_page = int(source.get("per_page", 50))
+    max_pages = int(source.get("max_pages", 30))
+    source_name = source.get("name", "Tribe Events API")
+    bypass = bool(source.get("bypass_automotive_filter", False))
+
+    et_tz = tz.gettz("America/New_York")  # real ET (handles EST/EDT), not the fixed EST_TZ offset
+    now_et = datetime.now(tz=et_tz)
+    start_date = now_et.strftime("%Y-%m-%d")
+    end_date = (now_et + timedelta(days=lookahead_days)).strftime("%Y-%m-%d")
+
+    out: List[dict] = []
+    seen = set()
+
+    for category in categories:
+        page = 1
+        while page <= max_pages:
+            params = {
+                "per_page": per_page,
+                "page": page,
+                "start_date": start_date,
+                "end_date": end_date,
+            }
+            if category:
+                params["categories"] = category
+            try:
+                r = requests.get(endpoint, params=params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
+                if r.status_code == 400 and page > 1:
+                    break  # past the last page
+                r.raise_for_status()
+                payload = r.json() or {}
+            except Exception as ex:
+                log(f"⚠️ Tribe API request failed ({source_name} cat={category} page={page}): {ex}")
+                diagnostics["parse_failures"] += 1
+                break
+
+            rows = payload.get("events", []) or []
+            diagnostics["raw_candidates"] += len(rows)
+
+            for item in rows:
+                title = clean_ws(html.unescape(str(item.get("title", "") or "")))
+                start_raw = clean_ws(str(item.get("start_date", "") or ""))
+                end_raw = clean_ws(str(item.get("end_date", "") or ""))
+                if not title or not start_raw:
+                    diagnostics["parse_failures"] += 1
+                    continue
+                try:
+                    start_dt = datetime.fromisoformat(start_raw).replace(tzinfo=et_tz)
+                except Exception:
+                    diagnostics["parse_failures"] += 1
+                    continue
+                try:
+                    end_dt = datetime.fromisoformat(end_raw).replace(tzinfo=et_tz) if end_raw else None
+                except Exception:
+                    end_dt = None
+
+                venue = item.get("venue") or {}
+                if isinstance(venue, list):
+                    venue = venue[0] if venue else {}
+                venue_name = clean_ws(html.unescape(str(venue.get("venue", "") or "")))
+                street = clean_ws(html.unescape(str(venue.get("address", "") or "")))
+                city = clean_ws(html.unescape(str(venue.get("city", "") or "")))
+                state = clean_ws(str(venue.get("stateprovince", "") or venue.get("state", "") or ""))
+                zip_code = clean_ws(str(venue.get("zip", "") or ""))
+
+                addr_parts = ", ".join(p for p in (street, city, f"{state} {zip_code}".strip()) if p)
+                # Skip the venue prefix when it just repeats the street address.
+                if venue_name and venue_name.lower() in (street.lower(), city.lower()):
+                    venue_name = ""
+                location = f"{venue_name} - {addr_parts}" if (venue_name and addr_parts) else (addr_parts or venue_name)
+                city_state = f"{city}, {state}" if (city and state) else ""
+
+                description_html = str(item.get("description", "") or "")
+                description = clean_ws(BeautifulSoup(description_html, "html.parser").get_text(" ")) if description_html else ""
+                cost = clean_ws(str(item.get("cost", "") or ""))
+                if cost:
+                    description = clean_ws(f"{description} Cost: {cost}")
+
+                key = (title.lower(), start_dt.isoformat()[:16], city.lower())
+                if key in seen:
+                    continue
+                seen.add(key)
+
+                out.append({
+                    "title": title,
+                    "start_dt": start_dt,
+                    "end_dt": end_dt or (start_dt + timedelta(hours=2)),
+                    "location": location,
+                    "city_state": city_state,
+                    "geocode_query": f"{zip_code[:5]}, USA" if re.match(r"^\d{5}", zip_code) else (city_state or None),
+                    "description": description[:2000],
+                    "url": clean_ws(str(item.get("url", "") or item.get("website", "") or "")),
+                    "source": source_name,
+                    "bypass_automotive_filter": bypass,
+                })
+
+            total_pages = int(payload.get("total_pages", 1) or 1)
+            if page >= total_pages:
+                break
+            page += 1
+            time.sleep(0.3)
+
+        log(f"   Tribe API {source_name} cat={category or 'all'}: running total {len(out)} events")
+
+    if diagnostics.get("reason") is None and not out:
+        diagnostics["reason"] = "no_results_from_search"
+    return out
 
 
 def _extract_wordpress_event_datetimes(row, fallback_start_dt: Optional[datetime]) -> Tuple[Optional[datetime], Optional[datetime]]:
@@ -3845,7 +3974,11 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
         return []
 
     source_name = source.get("name", "Google Events (SerpAPI) [serpapi_google_events]")
-    location = clean_ws(os.getenv("SERPAPI_LOCATION", SERPAPI_LOCATION or "Cincinnati, OH")) or "Cincinnati, OH"
+    location = (
+        clean_ws(str(source.get("location", "") or ""))
+        or clean_ws(os.getenv("SERPAPI_LOCATION", SERPAPI_LOCATION or "Cincinnati, OH"))
+        or "Cincinnati, OH"
+    )
     gl = clean_ws(os.getenv("SERPAPI_GL", SERPAPI_GL or "us")) or "us"
     hl = clean_ws(os.getenv("SERPAPI_HL", SERPAPI_HL or "en")) or "en"
     base_filter = clean_ws(os.getenv("SERPAPI_EVENTS_DATE_FILTER", SERPAPI_EVENTS_DATE_FILTER or "date:month")) or "date:month"
@@ -3874,48 +4007,49 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
             htichips=htichips,
         )
 
-        # Pull one direct payload for explicit metadata visibility in logs.
-        params = {
-            "api_key": SERPAPI_API_KEY,
-            "engine": "google_events",
-            "q": query,
-            "location": location,
-            "gl": gl,
-            "hl": hl,
-            "htichips": htichips,
-            "start": 0,
-            "num": 10,
-        }
-        payload = {}
-        try:
-            probe_resp = requests.get("https://serpapi.com/search.json", params=params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
-            if probe_resp.ok:
-                payload = probe_resp.json() if probe_resp.text else {}
-            else:
-                payload = {"error": f"http_{probe_resp.status_code}"}
-        except Exception as ex:
-            payload = {"error": str(ex)}
+        # Debug probe (extra API call) only when the paged search came back empty.
+        if not rows:
+            params = {
+                "api_key": SERPAPI_API_KEY,
+                "engine": "google_events",
+                "q": query,
+                "location": location,
+                "gl": gl,
+                "hl": hl,
+                "htichips": htichips,
+                "start": 0,
+                "num": 10,
+            }
+            payload = {}
+            try:
+                probe_resp = requests.get("https://serpapi.com/search.json", params=params, headers=DEFAULT_HTTP_HEADERS, timeout=45)
+                if probe_resp.ok:
+                    payload = probe_resp.json() if probe_resp.text else {}
+                else:
+                    payload = {"error": f"http_{probe_resp.status_code}"}
+            except Exception as ex:
+                payload = {"error": str(ex)}
 
-        meta = payload.get("search_metadata") if isinstance(payload, dict) else {}
-        status = clean_ws(str((meta or {}).get("status", "")))
-        top_level_keys = sorted(payload.keys()) if isinstance(payload, dict) else []
-        payload_rows, payload_key, _ = extract_google_events_rows(payload if isinstance(payload, dict) else {})
+            meta = payload.get("search_metadata") if isinstance(payload, dict) else {}
+            status = clean_ws(str((meta or {}).get("status", "")))
+            top_level_keys = sorted(payload.keys()) if isinstance(payload, dict) else []
+            payload_rows, payload_key, _ = extract_google_events_rows(payload if isinstance(payload, dict) else {})
 
-        log(
-            f"ℹ️ SerpAPI google_events meta: status={status or 'unknown'} keys={top_level_keys} "
-            f"parsed_key={payload_key or 'missing'} len(events_results)={len(payload_rows)}"
-        )
-        if status != "Success":
             log(
-                f"⚠️ SerpAPI google_events non-success: status={status or 'unknown'} "
-                f"error={clean_ws(str((payload or {}).get('error') or (payload or {}).get('serpapi_error') or 'none'))} "
-                f"search_parameters={json.dumps((payload or {}).get('search_parameters') or params, sort_keys=True)}"
+                f"ℹ️ SerpAPI google_events meta: status={status or 'unknown'} keys={top_level_keys} "
+                f"parsed_key={payload_key or 'missing'} len(events_results)={len(payload_rows)}"
             )
+            if status != "Success":
+                log(
+                    f"⚠️ SerpAPI google_events non-success: status={status or 'unknown'} "
+                    f"error={clean_ws(str((payload or {}).get('error') or (payload or {}).get('serpapi_error') or 'none'))} "
+                    f"search_parameters={json.dumps((payload or {}).get('search_parameters') or params, sort_keys=True)}"
+                )
+            diagnostics["search_status"] = status or "unknown"
+            diagnostics["events_results_len"] = len(payload_rows)
+            diagnostics["top_level_keys"] = top_level_keys
 
         diagnostics["raw_candidates"] += len(rows)
-        diagnostics["search_status"] = status or "unknown"
-        diagnostics["events_results_len"] = len(payload_rows)
-        diagnostics["top_level_keys"] = top_level_keys
 
         for item in rows:
             if not isinstance(item, dict):
@@ -3973,10 +4107,10 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
                 }
             )
 
-        if out:
-            break
+        # Accumulate across all date windows (this month AND next month);
+        # the `seen` set dedupes overlapping results.
         if idx == 0 and len(htichips_attempts) > 1:
-            log(f"ℹ️ SerpAPI google_events fallback: widening htichips from {htichips_attempts[0]} to {htichips_attempts[1]}")
+            log(f"ℹ️ SerpAPI google_events: also querying htichips={htichips_attempts[1]} (running total {len(out)})")
 
     if diagnostics.get("reason") is None and not out:
         diagnostics["reason"] = "parse_failed" if diagnostics.get("parse_failures", 0) > 0 else "no_results_from_search"
@@ -4004,12 +4138,30 @@ def collect_web_search_serpapi(source: dict, url_cache: Dict[str, dict], diagnos
         log(f"ℹ️ SerpAPI disabled; skipping {source_name}.")
         return []
 
+    # Google frequently ignores `site:` operators in API results, returning junk
+    # domains (car dealers, reddit) that 403 or parse to nothing. Enforce the
+    # site: restriction ourselves when the query declares one.
+    allowed_domains = set()
+    for q in queries:
+        for m in re.finditer(r"site:([A-Za-z0-9.-]+)", q):
+            allowed_domains.add(m.group(1).lower().removeprefix("www."))
+
     links: List[str] = []
     for q in queries[:20]:
         links.extend(serpapi_search(q, max_results=max_results))
         time.sleep(0.2)
 
     links = list(dict.fromkeys(clean_ws(u) for u in links if clean_ws(u)))
+    if allowed_domains:
+        def _domain_ok(u: str) -> bool:
+            host = (urlparse(u).netloc or "").lower().removeprefix("www.")
+            return any(host == d or host.endswith("." + d) for d in allowed_domains)
+
+        before = len(links)
+        links = [u for u in links if _domain_ok(u)]
+        dropped = before - len(links)
+        if dropped:
+            log(f"🧹 {source_name}: dropped {dropped}/{before} off-domain results (site: operator not honored)")
     diagnostics["raw_candidates"] = len(links)
     if not links:
         diagnostics["reason"] = "no_results_from_search"
@@ -4219,8 +4371,10 @@ def to_event_items(
                 source_counter["outside_window_future"] += 1
             continue
 
-        city_state = guess_city_state(location)
-        query = city_state or location
+        city_state = clean_ws(str(e.get("city_state", "") or "")) or guess_city_state(location)
+        # Sources can supply an unambiguous geocode hint (e.g. "45014, USA");
+        # ZIP queries avoid same-name-city mismatches.
+        query = clean_ws(str(e.get("geocode_query", "") or "")) or city_state or location
         latlon = geocode(query, geocache) if query else None
         lat = lon = None
         miles = None
@@ -4936,6 +5090,8 @@ def main():
             diagnostics: dict = {}
             if stype == "html_carsandcoffeeevents_ohio":
                 raw_events.extend(collect_carsandcoffeeevents_ohio(source_with_context))
+            elif stype == "tribe_events_api":
+                raw_events.extend(collect_tribe_events_api(source_with_context, diagnostics=diagnostics))
             elif stype == "html_wordpress_events_list":
                 raw_events.extend(collect_wordpress_events_series(source_with_context))
             elif stype == "ics":
