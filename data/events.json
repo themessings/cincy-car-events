@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-07-02T09:52:51.150314-04:00",
-  "count": 965,
+  "generated_at_iso": "2026-07-02T09:57:12.646820-04:00",
+  "count": 962,
   "events": [
     {
       "Event Name": "Premier Car & Truck Cruise-In",
@@ -493,18 +493,6 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/oreilly-auto-parts-car-show-west-milton-oh/"
-    },
-    {
-      "Event Name": "Festival of the Bells Car, Truck and Bike Show",
-      "Date": "2026-07-04",
-      "Start Time": "10:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "William Scott House",
-      "Address": "William Scott House",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/festival-of-the-bells-car-truc/1861130381173865/"
     },
     {
       "Event Name": "Let’s Meet at - Eden Park",
@@ -1249,18 +1237,6 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/impd-north-district-presents-horsepower-and-heroes-car-show-cruise-in/"
-    },
-    {
-      "Event Name": "Cincy Cool Cars Club Car Show",
-      "Date": "2026-07-11",
-      "Start Time": "8:30 AM",
-      "End Time": "3:30 PM",
-      "Location": "Fairfield, Ohio",
-      "Address": "Fairfield, Ohio",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cincy-cool-cars-club-car-show/2040573946874610/"
     },
     {
       "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
@@ -7279,12 +7255,12 @@
       "Date": "2026-09-12",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "1201 Main St, Speedway, IN",
-      "Address": "1201 Main St, Speedway, IN",
+      "Location": "5520 Madison Ave, Indianapolis, IN 46201",
+      "Address": "5520 Madison Ave, Indianapolis, IN 46201",
       "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/dallara-cars-coffee/1475248440733735/"
+      "Callout": "Tickets required",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/dallara-cars-coffee/"
     },
     {
       "Event Name": "Columbus Cars & Coffee @ The City",
@@ -7381,18 +7357,6 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/4th-annual-chasing-sunsets-car-show/"
-    },
-    {
-      "Event Name": "Dallara Cars & Coffee",
-      "Date": "2026-09-12",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "5520 Madison Ave, Indianapolis, IN 46201",
-      "Address": "5520 Madison Ave, Indianapolis, IN 46201",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "Tickets required",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/dallara-cars-coffee/"
     },
     {
       "Event Name": "Ride With Randy Rally",
