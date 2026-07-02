@@ -94,7 +94,9 @@ FACEBOOK_GRAPH_RUNTIME: Dict[str, object] = {"checked": False, "valid": None, "r
 FACEBOOK_COVERAGE: Dict[str, object] = {"token": {}, "serp_queries": [], "urls_discovered": 0, "urls_parsed": 0, "urls_failed": 0, "failure_reasons": Counter(), "page_events": 0}
 TOKEN_MANAGER: Optional[TokenManager] = None
 URL_ENRICH_CACHE: Dict[str, Optional[dict]] = {}
-EST_TZ = tz.tzoffset("EST", -5 * 60 * 60)
+# Real Eastern time (EST/EDT). The old fixed -5:00 offset stamped summer events
+# an hour off internally, which broke duplicate detection across sources.
+EST_TZ = tz.gettz("America/New_York")
 SCREENSHOT_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".heic", ".heif"}
 
 
@@ -243,38 +245,51 @@ def dedupe_export_rows(rows: List[dict]) -> List[dict]:
             }
         )
 
+    _PLACEHOLDER_LOCATION_RE = re.compile(r"will be sent|ticket holders|\btba\b|\btbd\b|to be announced|to be determined")
+
+    def _locations_compatible(a: str, b: str) -> bool:
+        """Same event described two ways? Venue-only text from a calendar and a
+        full street address from the web must still cluster; genuinely different
+        venues (no shared text or street/zip numbers) must not."""
+        if not a or not b:
+            return True
+        if _PLACEHOLDER_LOCATION_RE.search(a) or _PLACEHOLDER_LOCATION_RE.search(b):
+            return True
+        if a == b or a in b or b in a:
+            return True
+        nums_a = set(re.findall(r"\d{3,5}", a))
+        nums_b = set(re.findall(r"\d{3,5}", b))
+        return bool(nums_a & nums_b)
+
+    def _items_match(item: dict, candidate: dict) -> bool:
+        if not item["title_norm"] or item["title_norm"] != candidate["title_norm"]:
+            return False
+        loc_or_link_ok = _locations_compatible(item["location_norm"], candidate["location_norm"]) or (
+            bool(item["link_norm"]) and item["link_norm"] == candidate["link_norm"]
+        )
+        if not loc_or_link_ok:
+            return False
+        if item["start_iso_norm"] and item["start_iso_norm"] == candidate["start_iso_norm"]:
+            return True
+        if item["start_dt"] and candidate["start_dt"]:
+            diff_minutes = abs((item["start_dt"] - candidate["start_dt"]).total_seconds()) / 60
+            return diff_minutes <= 70
+        return False
+
     groups: List[List[dict]] = []
     for item in enriched:
-        matched_group: Optional[List[dict]] = None
-        for group in groups:
-            for candidate in group:
-                strong_match = (
-                    item["title_norm"]
-                    and item["title_norm"] == candidate["title_norm"]
-                    and item["start_iso_norm"]
-                    and item["start_iso_norm"] == candidate["start_iso_norm"]
-                    and (
-                        (item["location_norm"] and item["location_norm"] == candidate["location_norm"])
-                        or (item["link_norm"] and item["link_norm"] == candidate["link_norm"])
-                    )
-                )
-                fallback_match = False
-                if not strong_match and item["title_norm"] and item["title_norm"] == candidate["title_norm"]:
-                    if item["start_dt"] and candidate["start_dt"]:
-                        diff_minutes = abs((item["start_dt"] - candidate["start_dt"]).total_seconds()) / 60
-                        fallback_match = diff_minutes <= 10 and (
-                            (item["location_norm"] and item["location_norm"] == candidate["location_norm"])
-                            or (item["link_norm"] and item["link_norm"] == candidate["link_norm"])
-                        )
-                if strong_match or fallback_match:
-                    matched_group = group
-                    break
-            if matched_group is not None:
-                break
-        if matched_group is None:
+        # Collect every group this item matches, then merge them — location
+        # variants of one event can otherwise land in separate groups depending
+        # on row order (A~C and B~C but not A~B).
+        matching = [g for g in groups if any(_items_match(item, cand) for cand in g)]
+        if not matching:
             groups.append([item])
         else:
-            matched_group.append(item)
+            merged = matching[0]
+            for g in matching[1:]:
+                merged.extend(g)
+                groups.remove(g)
+            merged.append(item)
 
     deduped: List[dict] = []
     removed: List[dict] = []
@@ -2088,6 +2103,27 @@ def log_exception_context(context: str, ex: Exception) -> str:
 # -------------------------
 # Geocoding (Nominatim) + cache
 # -------------------------
+def reliable_geocode_query(location: str, city_state: str = "") -> Optional[str]:
+    """Return a geocode query only when it can be trusted.
+
+    Bare venue names ("Cox Park", "Austin Landing") geocode to random places
+    worldwide — those produced bogus 770–9,375 mile distances that wrongly
+    deleted nearby events. Only ZIPs, city+state, or state-bearing addresses
+    are reliable enough to act on.
+    """
+    location = clean_ws(location)
+    city_state = clean_ws(city_state)
+
+    zip_match = re.search(r"\b(\d{5})(?:-\d{4})?\b", location)
+    if zip_match:
+        return f"{zip_match.group(1)}, USA"
+    if re.search(r",\s*[A-Z]{2}\b", city_state):
+        return city_state
+    if re.search(r",\s*[A-Z]{2}\b", location):
+        return location
+    return None
+
+
 def geocode(place: str, cache: Dict[str, dict]) -> Optional[Tuple[float, float]]:
     place = clean_ws(place)
     if not place:
@@ -2100,7 +2136,7 @@ def geocode(place: str, cache: Dict[str, dict]) -> Optional[Tuple[float, float]]
         return None
 
     url = "https://nominatim.openstreetmap.org/search"
-    params = {"q": place, "format": "json", "limit": 1}
+    params = {"q": place, "format": "json", "limit": 1, "countrycodes": "us"}
     headers = {"User-Agent": "cincy-car-events-bot/1.0 (github actions)"}
 
     try:
@@ -2560,6 +2596,9 @@ def collect_ics(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
                     # Per project policy, all ICS feeds are curated automotive calendars.
                     # Skip non-automotive keyword/exclusion filtering for every ICS event.
                     "bypass_automotive_filter": True,
+                    # Trusted calendars (e.g. Joel's iCloud calendar) are never
+                    # distance-dropped — geocoding venue-only names is unreliable.
+                    "bypass_distance_filter": bool(source.get("bypass_distance_filter", False)),
                 }
             )
 
@@ -4373,8 +4412,8 @@ def to_event_items(
 
         city_state = clean_ws(str(e.get("city_state", "") or "")) or guess_city_state(location)
         # Sources can supply an unambiguous geocode hint (e.g. "45014, USA");
-        # ZIP queries avoid same-name-city mismatches.
-        query = clean_ws(str(e.get("geocode_query", "") or "")) or city_state or location
+        # otherwise only geocode text reliable enough to act on (ZIP or city+state).
+        query = clean_ws(str(e.get("geocode_query", "") or "")) or reliable_geocode_query(location, city_state)
         latlon = geocode(query, geocache) if query else None
         lat = lon = None
         miles = None
@@ -4384,7 +4423,8 @@ def to_event_items(
 
         cat = categorize(title, location, cfg)
 
-        if miles is not None:
+        # Trusted sources (bypass_distance_filter) are never distance-dropped.
+        if miles is not None and not bool(e.get("bypass_distance_filter")):
             if cat == "local" and miles > local_max:
                 drop_reasons["location_too_far_local"] += 1
                 if source_counter is not None:
@@ -5199,6 +5239,12 @@ def main():
     local_max = float(cfg["filters"]["local_max_miles"])
     rally_max = float(cfg["filters"]["rally_max_miles"])
     home_lat, home_lon = float(cfg["home"]["lat"]), float(cfg["home"]["lon"])
+    distance_exempt_sources = {
+        clean_ws(str(src.get("name", "")))
+        for src in (sources or [])
+        if clean_ws(str(src.get("name", "")))
+        and clean_ws(str(src.get("bypass_distance_filter", ""))).lower() in {"1", "true", "yes", "y"}
+    }
     closest_city_backfilled = 0
     dropped_far = 0
     kept_dicts: List[dict] = []
@@ -5206,18 +5252,21 @@ def main():
         ev["location"] = normalize_location_for_output(ev.get("location", ""), ev.get("city_state", ""))
 
         lat, lon = ev.get("lat"), ev.get("lon")
-        zip_match = re.search(r"\b(\d{5})(?:-\d{4})?\b", str(ev.get("location") or ""))
-        if zip_match:
-            latlon = geocode(f"{zip_match.group(1)}, USA", geocache)
+        # Only geocode text reliable enough to act on (ZIP or city+state) —
+        # bare venue names resolve to random places worldwide.
+        geo_query = reliable_geocode_query(str(ev.get("location") or ""), str(ev.get("city_state") or ""))
+        if geo_query and geo_query.endswith(", USA"):
+            latlon = geocode(geo_query, geocache)
             if latlon:
                 lat, lon = latlon
-        elif lat is None or lon is None:
-            query = ev.get("city_state") or ev.get("location")
-            latlon = geocode(query, geocache) if query else None
+        elif (lat is None or lon is None) and geo_query:
+            latlon = geocode(geo_query, geocache)
             if latlon:
                 lat, lon = latlon
 
-        if lat is not None and lon is not None:
+        ev_source = clean_ws(str(ev.get("source", "") or ""))
+        distance_exempt = any(name in ev_source for name in distance_exempt_sources)
+        if lat is not None and lon is not None and not distance_exempt:
             miles = miles_from_home(lat, lon, home_lat, home_lon)
             # Recompute from title/location (stored rows default to "local").
             cat = categorize(str(ev.get("title", "") or ""), str(ev.get("location", "") or ""), cfg)
