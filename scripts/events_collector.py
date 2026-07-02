@@ -261,20 +261,29 @@ def dedupe_export_rows(rows: List[dict]) -> List[dict]:
         nums_b = set(re.findall(r"\d{3,5}", b))
         return bool(nums_a & nums_b)
 
+    def _title_is_specific(title_norm: str) -> bool:
+        # Generic names ("car show", "cars and coffee") can belong to different
+        # events on the same day; distinctive names cannot.
+        return len(title_norm) >= 16 and len(title_norm.split()) >= 3
+
     def _items_match(item: dict, candidate: dict) -> bool:
         if not item["title_norm"] or item["title_norm"] != candidate["title_norm"]:
             return False
-        loc_or_link_ok = _locations_compatible(item["location_norm"], candidate["location_norm"]) or (
-            bool(item["link_norm"]) and item["link_norm"] == candidate["link_norm"]
-        )
-        if not loc_or_link_ok:
-            return False
+        starts_close = False
         if item["start_iso_norm"] and item["start_iso_norm"] == candidate["start_iso_norm"]:
-            return True
-        if item["start_dt"] and candidate["start_dt"]:
+            starts_close = True
+        elif item["start_dt"] and candidate["start_dt"]:
             diff_minutes = abs((item["start_dt"] - candidate["start_dt"]).total_seconds()) / 60
-            return diff_minutes <= 70
-        return False
+            starts_close = diff_minutes <= 70
+        if not starts_close:
+            return False
+        if _locations_compatible(item["location_norm"], candidate["location_norm"]):
+            return True
+        if item["link_norm"] and item["link_norm"] == candidate["link_norm"]:
+            return True
+        # Distinctive title at the same day+time: same event even when the two
+        # sources describe the venue differently.
+        return _title_is_specific(item["title_norm"])
 
     groups: List[List[dict]] = []
     for item in enriched:
