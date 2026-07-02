@@ -78,17 +78,18 @@ filters:
   - carsandcoffeeevents.com
   - pca.org
 categorization:
+  # rally = multi-day/destination driving events worth a longer trip (600 mi cap).
+  # Bare "cruise"/"tour" removed: they matched every weekly Cruise-In and
+  # let Cleveland/Chicago-distance events into the sheet.
   rally_keywords:
   - rally
   - roadrally
   - rallycross
   - stage rally
-  - tour
   - road rally
   - driving tour
   - road trip
   - poker run
-  - cruise
   local_keywords:
   - cars and coffee
   - car show

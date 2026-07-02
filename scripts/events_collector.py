@@ -5190,27 +5190,51 @@ def main():
     now_et = datetime.now(tz=tz.gettz("America/New_York"))
     merged_dicts = [asdict(e) for e in merged]
     merged_dicts = prune_past_events(merged_dicts, now_et)
+    # Final geo pass over ALL merged events (including ones reloaded from
+    # events.json, which intake filtering never re-checks):
+    #   1. resolve coordinates, preferring the ZIP code — city names alone are
+    #      ambiguous (e.g. "Fairfield, OH" resolves to the wrong Fairfield)
+    #   2. enforce the local/rally distance caps
+    #   3. backfill the Closest City column
+    local_max = float(cfg["filters"]["local_max_miles"])
+    rally_max = float(cfg["filters"]["rally_max_miles"])
+    home_lat, home_lon = float(cfg["home"]["lat"]), float(cfg["home"]["lon"])
     closest_city_backfilled = 0
+    dropped_far = 0
+    kept_dicts: List[dict] = []
     for ev in merged_dicts:
         ev["location"] = normalize_location_for_output(ev.get("location", ""), ev.get("city_state", ""))
+
+        lat, lon = ev.get("lat"), ev.get("lon")
+        zip_match = re.search(r"\b(\d{5})(?:-\d{4})?\b", str(ev.get("location") or ""))
+        if zip_match:
+            latlon = geocode(f"{zip_match.group(1)}, USA", geocache)
+            if latlon:
+                lat, lon = latlon
+        elif lat is None or lon is None:
+            query = ev.get("city_state") or ev.get("location")
+            latlon = geocode(query, geocache) if query else None
+            if latlon:
+                lat, lon = latlon
+
+        if lat is not None and lon is not None:
+            miles = miles_from_home(lat, lon, home_lat, home_lon)
+            # Recompute from title/location (stored rows default to "local").
+            cat = categorize(str(ev.get("title", "") or ""), str(ev.get("location", "") or ""), cfg)
+            limit = rally_max if cat == "rally" else local_max
+            if miles > limit:
+                dropped_far += 1
+                continue
+
         if not clean_ws(str(ev.get("closest_city", "") or "")):
-            lat, lon = ev.get("lat"), ev.get("lon")
-            # Prefer the ZIP code when present — city names alone are ambiguous
-            # (e.g. "Fairfield, OH" resolves to the wrong Fairfield).
-            zip_match = re.search(r"\b(\d{5})(?:-\d{4})?\b", str(ev.get("location") or ""))
-            if zip_match:
-                latlon = geocode(f"{zip_match.group(1)}, USA", geocache)
-                if latlon:
-                    lat, lon = latlon
-            elif lat is None or lon is None:
-                query = ev.get("city_state") or ev.get("location")
-                latlon = geocode(query, geocache) if query else None
-                if latlon:
-                    lat, lon = latlon
             filled = closest_major_city(lat, lon)
             if filled:
                 ev["closest_city"] = filled
                 closest_city_backfilled += 1
+        kept_dicts.append(ev)
+    merged_dicts = kept_dicts
+    if dropped_far:
+        log(f"🧹 Dropped {dropped_far} merged events beyond distance caps (local={local_max}mi rally={rally_max}mi)")
     if closest_city_backfilled:
         log(f"🗺️ Closest City backfilled for {closest_city_backfilled} events")
 
