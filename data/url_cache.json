@@ -84,7 +84,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-07-02T09:56:46.045784-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=29": {
@@ -92,7 +92,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
-    "fetched_at_iso": "2026-06-28T08:23:58.063258-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   },
   "https://www.eventbrite.com/b/oh--colerain/auto-boat-and-air/": {
@@ -1066,7 +1066,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/2026-ara-schedule": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "http://www.fca-ohio.org/": {
@@ -1183,7 +1183,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://www.facebook.com/indyhoodrats/posts/road-rally-to-the-famous-11-mile-long-tail-of-the-dragon-located-in-vonore-tenne/867730542516222/": {
@@ -1263,7 +1263,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/sofr": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/american-rally-association-announces-2026-schedule": {
@@ -1271,7 +1271,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/live": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/copy-of-2025-championship-standings": {
@@ -2392,7 +2392,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/post/ara-s-summer-starts-with-southern-ohio-forest-rally": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://www.therechargerally.com/rechargerally8": {
@@ -2914,7 +2914,7 @@
     "event": null
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-07-02T09:56:46.045784-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--huber-heights/food-and-car-show/": {
@@ -3264,7 +3264,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/car-shows/": {
-    "fetched_at_iso": "2026-06-28T08:23:58.063258-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-shows/": {
@@ -3376,7 +3376,7 @@
     "events": []
   },
   "https://www.scca.com/pages/autocross": {
-    "fetched_at_iso": "2026-07-02T09:57:10.620710-04:00",
+    "fetched_at_iso": "2026-07-03T09:02:04.614284-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/open-road-supercar-driving-tours/?srsltid=AfmBOookY65e0XbclItkW3HMIVjdPjRY5z1KG25M2wWRJM2BwZwQDemP": {
@@ -5301,7 +5301,7 @@
     ]
   },
   "https://www.scca.com/pages/what-is-roadrally": {
-    "fetched_at_iso": "2026-07-02T09:56:47.683612-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:14.224958-04:00",
     "events": []
   },
   "https://www.scca.com/pages/rallycross": {
@@ -5620,35 +5620,35 @@
     "events": []
   },
   "https://www.meetup.com/sierraoutings/": {
-    "fetched_at_iso": "2026-06-12T10:10:55.749604-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": [
       {
-        "title": "Bike and Brunch",
-        "start_iso": "2026-06-13T09:00:00-04:00",
-        "end_iso": "2026-06-13T12:00:00-04:00",
-        "location": "Miami Riverview Park 587 Branch Hill-Loveland Rd, Loveland, OH Loveland OH",
-        "url": "https://www.meetup.com/sierraoutings/events/315154547/"
-      },
-      {
         "title": "Paddle the Little Miami",
-        "start_iso": "2026-06-14T10:00:00-04:00",
-        "end_iso": "2026-06-14T15:00:00-04:00",
-        "location": "Mather's Mill Wilmington Road, Oregonia, OH Oregonia OH",
-        "url": "https://www.meetup.com/sierraoutings/events/315040459/"
+        "start_iso": "2026-07-05T10:00:00-04:00",
+        "end_iso": "2026-07-05T16:00:00-04:00",
+        "location": "Hall's Creek River Access 3121 Mason Morrow Milgrove Rd 38, Morrow, OH Morrow OH",
+        "url": "https://www.meetup.com/sierraoutings/events/315477645/"
       },
       {
-        "title": "Gear Sale Drop-off",
-        "start_iso": "2026-06-17T13:00:00-04:00",
-        "end_iso": "2026-06-17T16:00:00-04:00",
-        "location": "Jay Freeman 7291 Ridge Road, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/sierraoutings/events/315221639/"
+        "title": "Monday, July 6th, (2026) Educational forum on Nuclear Energy and the Al Craze.",
+        "start_iso": "2026-07-06T19:00:00-04:00",
+        "end_iso": "2026-07-06T21:00:00-04:00",
+        "location": "Mount Auburn Presbyterian Church 103 William Howard Taft Road, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sierraoutings/events/315244971/"
       },
       {
-        "title": "Bike the flat roads of Clermont County",
-        "start_iso": "2026-06-20T10:00:00-04:00",
-        "end_iso": "2026-06-20T15:00:00-04:00",
-        "location": "Goshen Middle School 6692 Goshen Road, Goshen, OH Goshen OH",
-        "url": "https://www.meetup.com/sierraoutings/events/315040506/"
+        "title": "Eco-Themed Board Game Night",
+        "start_iso": "2026-07-22T17:15:00-04:00",
+        "end_iso": "2026-07-22T20:15:00-04:00",
+        "location": "Deer Park Branch of the Library, Meeting Room A 4020 East Galbraith Road, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sierraoutings/events/315392586/"
+      },
+      {
+        "title": "See You at the Miami Group Annual Picnic!",
+        "start_iso": "2026-08-09T15:00:00-04:00",
+        "end_iso": "2026-08-09T20:00:00-04:00",
+        "location": "Issac Walton League branch hill loveland re., Loveland, oh Loveland oh",
+        "url": "https://www.meetup.com/sierraoutings/events/315332305/"
       }
     ]
   },
@@ -6208,7 +6208,7 @@
     ]
   },
   "https://www.americanrallyassociation.org/event-results": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--kentucky/cincinnati-ohio/": {
@@ -6990,7 +6990,7 @@
     ]
   },
   "https://www.americanrallyassociation.org/boone-forest-rally": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://www.meetup.com/northern-kentucky-sierra-club/": {
@@ -7056,7 +7056,7 @@
     "events": []
   },
   "https://www.meetup.com/find/us--oh--cincinnati/car-meets/": {
-    "fetched_at_iso": "2026-07-02T08:21:49.531180-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": [
       {
         "title": "Pug Meet Up Play Date",
@@ -7108,6 +7108,13 @@
         "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/315277166/"
       },
       {
+        "title": "Meet up play date",
+        "start_iso": "2026-07-18T10:00:00-04:00",
+        "end_iso": "2026-07-18T12:00:00-04:00",
+        "location": "Otto Armleder Memorial Park 5057 Wooster Pike, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincinnati-pugs/events/314738815/"
+      },
+      {
         "title": "Element Eatery Meet Up and Hang",
         "start_iso": "2026-07-09T18:30:00-04:00",
         "end_iso": "2026-07-09T20:30:00-04:00",
@@ -7120,13 +7127,6 @@
         "end_iso": "2026-07-04T17:00:00-04:00",
         "location": "Braxton Factory 52 4600 Beech St Suites 100 & 300, Norwood, OH Norwood OH",
         "url": "https://www.meetup.com/northern-cincy-social-club/events/314832212/"
-      },
-      {
-        "title": "Meet up play date",
-        "start_iso": "2026-07-18T10:00:00-04:00",
-        "end_iso": "2026-07-18T12:00:00-04:00",
-        "location": "Otto Armleder Memorial Park 5057 Wooster Pike, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincinnati-pugs/events/314738815/"
       },
       {
         "title": "Sunday 8:30 am pickelball at Lang Park. 2.5 +",
@@ -7376,7 +7376,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1987276963895": {
-    "fetched_at_iso": "2026-07-02T09:56:46.045784-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/events/lrjgqtyjcgblc/": {
@@ -8119,11 +8119,11 @@
     "events": []
   },
   "https://rallyrd.com/": {
-    "fetched_at_iso": "2026-06-28T08:22:06.800672-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:14.224958-04:00",
     "events": []
   },
   "https://www.merriam-webster.com/dictionary/rally": {
-    "fetched_at_iso": "2026-07-02T09:56:47.683612-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:14.224958-04:00",
     "events": []
   },
   "https://rally.co/?srsltid=AfmBOorKhPaHLGSsCd3W7HbyqARnPE1xhko8UQPkh4-7FbxOl9_uHgLE": {
@@ -8135,7 +8135,7 @@
     "events": []
   },
   "https://en.wikipedia.org/wiki/Rallying": {
-    "fetched_at_iso": "2026-07-02T09:56:47.683612-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:14.224958-04:00",
     "events": []
   },
   "https://www.youtube.com/@wrc": {
@@ -8143,11 +8143,11 @@
     "events": []
   },
   "https://www.rally.tv/": {
-    "fetched_at_iso": "2026-06-26T09:11:28.562709-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:14.224958-04:00",
     "events": []
   },
   "https://rallyinnovation.com/": {
-    "fetched_at_iso": "2026-07-02T09:56:47.683612-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:14.224958-04:00",
     "events": []
   },
   "https://www.reddit.com/r/rally/": {
@@ -8195,7 +8195,7 @@
     "events": []
   },
   "https://www.scca.com/pages/what-is-autocross": {
-    "fetched_at_iso": "2026-07-02T09:57:10.620710-04:00",
+    "fetched_at_iso": "2026-07-03T09:02:04.614284-04:00",
     "events": []
   },
   "https://cincyscca.com/autocross/": {
@@ -8555,7 +8555,7 @@
     "events": []
   },
   "https://sneakattackrally.com/ARA/entryList.html?ohio": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://local12.com/": {
@@ -10240,7 +10240,7 @@
     "events": []
   },
   "https://www.meetup.com/queencitysocialclub/": {
-    "fetched_at_iso": "2026-07-02T08:21:49.531180-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": [
       {
         "title": "Element Eatery Meet Up and Hang",
@@ -10468,7 +10468,7 @@
     ]
   },
   "https://goldrushrally.com/": {
-    "fetched_at_iso": "2026-06-26T09:11:28.562709-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:14.224958-04:00",
     "events": []
   },
   "https://www.scca.com/articles/2019245-the-2025-usrrc-will-be-an-unforgettable-shore-to-shore-buckeye-adventure": {
@@ -10981,7 +10981,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/post/hotly-contested-unpredictable-ara-national-championship-set-to-continue-at-southern-ohio": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=33": {
@@ -11033,7 +11033,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/post/quintero-takes-first-win-as-block-assumes-championship-lead-at-southern-ohio-forest-rally": {
-    "fetched_at_iso": "2026-07-02T09:57:00.584115-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:32.890322-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/events--today/?page=2": {
@@ -11073,11 +11073,11 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-downtown-hamilton/?page=4": {
-    "fetched_at_iso": "2026-06-28T08:23:58.063258-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   },
   "https://www.meetup.com/queencitysocialclub/events/315178560/": {
-    "fetched_at_iso": "2026-07-02T09:56:46.897706-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": []
   },
   "https://www.meetup.com/find/us--oh--cincinnati/social/": {
@@ -11254,21 +11254,21 @@
     ]
   },
   "https://www.meetup.com/find/us--ky--newport/sports-and-hobbies/": {
-    "fetched_at_iso": "2026-07-02T08:21:49.531180-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": [
+      {
+        "title": "Thursday Meet at the Library",
+        "start_iso": "2026-07-09T18:00:00-04:00",
+        "end_iso": "2026-07-09T20:00:00-04:00",
+        "location": "Kenton County Public Library, Covington Branch 502 Scott St., Covington, KY Covington KY",
+        "url": "https://www.meetup.com/covington-write-meetup-group/events/315515082/"
+      },
       {
         "title": "The Devil's Teeth",
         "start_iso": "2026-07-14T19:00:00-04:00",
         "end_iso": "2026-07-14T21:00:00-04:00",
         "location": "Campbell County Public Library: Newport Branch 901 East 6th Street, Newport, KY Newport KY",
         "url": "https://www.meetup.com/northern-kentucky-cincy-science-book-club/events/314474691/"
-      },
-      {
-        "title": "AUTHOR TALK: Gabrielle Cerberville",
-        "start_iso": "2026-07-08T18:45:00-04:00",
-        "end_iso": "2026-07-08T20:45:00-04:00",
-        "location": "Lloyd Library 917 Plum St, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/northern-kentucky-cincy-science-book-club/events/315461766/"
       },
       {
         "title": "July Bookclub: The Five Star Weekend",
@@ -11278,11 +11278,11 @@
         "url": "https://www.meetup.com/self-care-sisterhood/events/311474219/"
       },
       {
-        "title": "Book Club w/ Theresa- The Berry Pickers by Amanda Peters",
-        "start_iso": "2026-08-14T13:00:00-04:00",
-        "end_iso": "2026-08-14T15:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/cincinnati-nky-ladies-50/events/315373669/"
+        "title": "AUTHOR TALK: Gabrielle Cerberville",
+        "start_iso": "2026-07-08T18:45:00-04:00",
+        "end_iso": "2026-07-08T20:45:00-04:00",
+        "location": "Lloyd Library 917 Plum St, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/northern-kentucky-cincy-science-book-club/events/315461766/"
       },
       {
         "title": "Yoga for Higher Consciousness",
@@ -11334,11 +11334,11 @@
         "url": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/312920370/"
       },
       {
-        "title": "Cincy Web Tech Drinkup",
-        "start_iso": "2026-07-02T17:00:00-04:00",
-        "end_iso": "2026-07-02T19:00:00-04:00",
-        "location": "MOTR Pub 1345 Main Street, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cwtdrinkup/events/312938225/"
+        "title": "Science Time with Atlas Aether",
+        "start_iso": "2026-07-15T18:00:00-04:00",
+        "end_iso": "2026-07-15T20:00:00-04:00",
+        "location": "Brink Brewing Company 5905 Hamilton Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/tristatescienceclub/events/315524039/"
       },
       {
         "title": "Sunday Meditation",
@@ -11364,7 +11364,7 @@
     ]
   },
   "https://www.meetup.com/find/us--ky--dayton/photography/": {
-    "fetched_at_iso": "2026-06-23T09:43:04.950754-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": [
       {
         "title": "Cincinnati Reds - Skyline, Sunset and Fireworks",
@@ -11374,25 +11374,25 @@
         "url": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/314408509/"
       },
       {
-        "title": "Photo 101 - How To FOCUS Your Lens In Photography: Manual Focus Methods",
-        "start_iso": "2026-06-26T19:00:00-04:00",
-        "end_iso": "2026-06-26T21:00:00-04:00",
+        "title": "How To FOCUS Your Lens In Photography: Auto Focus Methods And Techniques",
+        "start_iso": "2026-07-03T19:00:00-04:00",
+        "end_iso": "2026-07-03T21:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/indianapolis-photography-community/events/315330189/"
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315428929/"
       },
       {
-        "title": "Learn STOCK Photography ~ Recommended Agencies, Resources And Tools",
-        "start_iso": "2026-06-30T20:00:00-04:00",
-        "end_iso": "2026-06-30T22:00:00-04:00",
+        "title": "Intro To Street Photography: How To Conquer Your Fears & Take Strong Photos",
+        "start_iso": "2026-07-09T19:00:00-04:00",
+        "end_iso": "2026-07-09T21:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/indianapolis-photography-community/events/315370199/"
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315517390/"
       },
       {
-        "title": "Stock Photography Strategy Session - Turn Your Images Into Income",
-        "start_iso": "2026-06-23T20:00:00-04:00",
-        "end_iso": "2026-06-23T22:00:00-04:00",
+        "title": "Introduction To PORTRAIT Photography For Beginners: Plan, Shoot, Deliver!",
+        "start_iso": "2026-07-07T19:00:00-04:00",
+        "end_iso": "2026-07-07T21:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/indianapolis-photography-community/events/315356483/"
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315485747/"
       },
       {
         "title": "CCPC's Monthly Meet N' Greet Social Hour(s)",
@@ -11403,59 +11403,59 @@
       },
       {
         "title": "Photo 101 ~ Learn How To Instantly Take Better Images! Aperture, Shutter, ISO",
-        "start_iso": "2026-06-29T19:00:00-04:00",
-        "end_iso": "2026-06-29T21:00:00-04:00",
+        "start_iso": "2026-07-06T19:00:00-04:00",
+        "end_iso": "2026-07-06T21:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/indianapolis-photography-community/events/315343837/"
-      },
-      {
-        "title": "An Introduction To Lenses & Focal Length In Photography",
-        "start_iso": "2026-06-24T19:00:00-04:00",
-        "end_iso": "2026-06-24T21:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/indianapolis-photography-community/events/315300172/"
-      },
-      {
-        "title": "An Intro To Landscape Photography For Beginners - Instantly Improve Your Images!",
-        "start_iso": "2026-06-25T19:00:00-04:00",
-        "end_iso": "2026-06-25T21:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/indianapolis-photography-community/events/315315022/"
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315444566/"
       },
       {
         "title": "Stereo Weekend @Factory52",
-        "start_iso": "2026-07-04T16:00:00-04:00",
-        "end_iso": "2026-07-04T18:00:00-04:00",
+        "start_iso": "2026-07-04T15:00:00-04:00",
+        "end_iso": "2026-07-04T17:00:00-04:00",
         "location": "Braxton Factory 52 4600 Beech St Suites 100 & 300, Norwood, OH Norwood OH",
         "url": "https://www.meetup.com/northern-cincy-social-club/events/314832212/"
       },
       {
-        "title": "🎬 Summer Cinema Night: Cars at Washington Park! 🚗✨",
-        "start_iso": "2026-06-30T20:30:00-04:00",
-        "end_iso": "2026-06-30T22:30:00-04:00",
-        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/queencitysocialclub/events/315178560/"
-      },
-      {
-        "title": "Yoga @Summit Park (Blue Ash)",
-        "start_iso": "2026-06-24T17:15:00-04:00",
-        "end_iso": "2026-06-24T19:15:00-04:00",
-        "location": "Summit Park 4335 Glendale Milford Road, Blue Ash, OH Blue Ash OH",
-        "url": "https://www.meetup.com/northern-cincy-social-club/events/315197501/"
+        "title": "Introduction To PHOTOSHOP For Beginners! Start Editing Your Photos W Confidence",
+        "start_iso": "2026-07-08T19:00:00-04:00",
+        "end_iso": "2026-07-08T21:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indianapolis-photography-community/events/315498905/"
       },
       {
         "title": "Drinks @Madtree Parks & Recreation (Blue Ash)",
-        "start_iso": "2026-06-24T18:30:00-04:00",
-        "end_iso": "2026-06-24T20:30:00-04:00",
+        "start_iso": "2026-07-08T18:30:00-04:00",
+        "end_iso": "2026-07-08T20:30:00-04:00",
         "location": "Madtree: Parks and Rec 4321 Glendale Milford Rd., Blue Ash, OH Blue Ash OH",
-        "url": "https://www.meetup.com/northern-cincy-social-club/events/315197505/"
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/315469158/"
       },
       {
-        "title": "Cincy Web Tech Drinkup",
-        "start_iso": "2026-07-02T17:00:00-04:00",
-        "end_iso": "2026-07-02T19:00:00-04:00",
-        "location": "MOTR Pub 1345 Main Street, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cwtdrinkup/events/312938225/"
+        "title": "Science Time with Atlas Aether",
+        "start_iso": "2026-07-15T18:00:00-04:00",
+        "end_iso": "2026-07-15T20:00:00-04:00",
+        "location": "Brink Brewing Company 5905 Hamilton Avenue, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/tristatescienceclub/events/315524039/"
+      },
+      {
+        "title": "Jet Pack Academy @Cincinnati Distilling Rooftop",
+        "start_iso": "2026-07-10T19:00:00-04:00",
+        "end_iso": "2026-07-10T21:00:00-04:00",
+        "location": "Cincinnati Distilling 203 Mill Street, Milford, OH Milford OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314770059/"
+      },
+      {
+        "title": "Yoga @Summit Park (Blue Ash)",
+        "start_iso": "2026-07-08T17:15:00-04:00",
+        "end_iso": "2026-07-08T19:15:00-04:00",
+        "location": "Summit Park 4335 Glendale Milford Road, Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/315469155/"
+      },
+      {
+        "title": "Element Eatery Meet Up and Hang",
+        "start_iso": "2026-07-09T18:30:00-04:00",
+        "end_iso": "2026-07-09T20:30:00-04:00",
+        "location": "Element Eatery 5250 Medpace Way ,, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/queencitysocialclub/events/315397590/"
       }
     ]
   },
@@ -11918,11 +11918,11 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=15": {
-    "fetched_at_iso": "2026-07-02T09:56:46.045784-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=17": {
-    "fetched_at_iso": "2026-06-26T09:10:57.524524-04:00",
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=16": {
@@ -12002,7 +12002,7 @@
     "events": []
   },
   "https://www.meetup.com/find/us--oh--cincinnati/dogs/": {
-    "fetched_at_iso": "2026-07-02T08:21:49.531180-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": [
       {
         "title": "Meet up play date",
@@ -12061,18 +12061,18 @@
         "url": "https://www.meetup.com/loki-lesbians/events/313580919/"
       },
       {
-        "title": "Jet Pack Academy @Cincinnati Distilling Rooftop",
-        "start_iso": "2026-07-10T19:00:00-04:00",
-        "end_iso": "2026-07-10T21:00:00-04:00",
-        "location": "Cincinnati Distilling 203 Mill Street, Milford, OH Milford OH",
-        "url": "https://www.meetup.com/northern-cincy-social-club/events/314770059/"
-      },
-      {
         "title": "Spring Grove Cemetery walk",
         "start_iso": "2026-07-05T09:30:00-04:00",
         "end_iso": "2026-07-05T11:30:00-04:00",
         "location": "Spring Grove 4521 Spring Grove Ave, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/american-walkers/events/315439567/"
+      },
+      {
+        "title": "Jet Pack Academy @Cincinnati Distilling Rooftop",
+        "start_iso": "2026-07-10T19:00:00-04:00",
+        "end_iso": "2026-07-10T21:00:00-04:00",
+        "location": "Cincinnati Distilling 203 Mill Street, Milford, OH Milford OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/314770059/"
       },
       {
         "title": "Generative AI and Analytics: What’s Real, What's Hype, and Where AI is Heading",
@@ -12091,56 +12091,154 @@
     ]
   },
   "https://www.meetup.com/topics/activities-in-cincinnati/": {
-    "fetched_at_iso": "2026-07-02T08:21:49.531180-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": [
       {
-        "title": "Wakefulness Through Writing & Walking",
-        "start_iso": "2026-07-10T07:00:00-04:00",
-        "end_iso": "2026-07-10T09:00:00-04:00",
-        "location": "Silver Spring , Silver Spring, MD Silver Spring MD",
-        "url": "https://www.meetup.com/neurodivergent-nurturing-through-nature/events/315340762/"
+        "title": "Clement Street Happy Hour Cleanup",
+        "start_iso": "2026-07-03T19:00:00-04:00",
+        "end_iso": "2026-07-03T20:00:00-04:00",
+        "location": "Richmond Republic Draught House 642 Clement St, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/refuse-refuse-san-francisco/events/315248281/"
       },
       {
-        "title": "Kayak/Paddle Board and Hike at Occoneechee State Park (Rescheduled)",
-        "start_iso": "2026-07-24T12:00:00-04:00",
-        "end_iso": "2026-07-26T12:00:00-04:00",
-        "location": "Occoneechee State Park 1192 Occoneechee Park Rd, Clarksville, VA 23927 Clarksville VA 23927",
-        "url": "https://www.meetup.com/gethiking-charlottesville-charlottesville-va/events/314237177/"
+        "title": "SAN FRANCISCO: Rush Hour Banner Drop for Factory Farm Watch",
+        "start_iso": "2026-07-03T19:45:00-04:00",
+        "end_iso": "2026-07-03T21:45:00-04:00",
+        "location": "531 Utah St, San Francisco, CA 94110 531 Utah St, San Francisco, CA 94110 San Francisco CA 94110",
+        "url": "https://www.meetup.com/direct-action-everywhere-bay-area/events/315434102/"
       },
       {
-        "title": "Aspire 13: One AppHost, Many Languages – Chris Ayers",
-        "start_iso": "2026-07-07T18:30:00-04:00",
-        "end_iso": "2026-07-07T20:30:00-04:00",
-        "location": "InfernoRed Office, One Loudoun 44679 Endicott Drive, One Loudoun, Loudoun, VA 20147 Loudoun VA 20147",
-        "url": "https://www.meetup.com/caparea-net/events/315493633/"
+        "title": "Morning Coffee Cleanup",
+        "start_iso": "2026-07-03T11:00:00-04:00",
+        "end_iso": "2026-07-03T12:00:00-04:00",
+        "location": "Cinderella Bakery & Cafe 436 Balboa Street, San Francisco, CA 94118 San Francisco CA 94118",
+        "url": "https://www.meetup.com/refuse-refuse-san-francisco/events/315243397/"
       },
       {
-        "title": "Camping, Kayaking and star gazing in Virginia",
-        "start_iso": "2026-07-30T16:00:00-04:00",
-        "end_iso": "2026-08-02T12:00:00-04:00",
+        "title": "Dim Sum 🥟 in Millbrae",
+        "start_iso": "2026-07-03T14:00:00-04:00",
+        "end_iso": "2026-07-03T16:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/ladytrailblazers/events/314266069/"
+        "url": "https://www.meetup.com/norcalasianamerican/events/315479813/"
       },
       {
-        "title": "SOP July Monthly Meeting",
-        "start_iso": "2026-07-18T10:00:00-04:00",
-        "end_iso": "2026-07-18T11:30:00-04:00",
+        "title": "DISNEY MUSEUM /PRESIDIO TUNNEL TOP WALK/& LUNCH",
+        "start_iso": "2026-07-03T13:00:00-04:00",
+        "end_iso": "2026-07-03T14:30:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/sons-of-poseidon/events/312824581/"
+        "url": "https://www.meetup.com/retiree-club/events/315123463/"
       },
       {
-        "title": "Career Success Group Job Seeker Accountability & Networking",
-        "start_iso": "2026-07-23T09:30:00-04:00",
-        "end_iso": "2026-07-23T10:30:00-04:00",
-        "location": "Great Careers Network Great Careers Network, 53 Darby Road, Ste. F, Paoli, PA 19301 Paoli PA 19301",
-        "url": "https://www.meetup.com/philadelphia-area-great-careers-group/events/315251477/"
+        "title": "Afrobeats Vibes Oakland 1st Friday, Friday July 3rd from 9pm at Lux",
+        "start_iso": "2026-07-03T12:00:00-04:00",
+        "end_iso": "2026-07-15T19:00:00-04:00",
+        "location": "Lux Pub & Club 1100 Franklin Street, Oakland, CA 94607 Oakland CA 94607",
+        "url": "https://www.meetup.com/bay-area-dining-out-dancing-culture-meetup-group/events/315348618/"
       },
       {
-        "title": "July Meeting - Lightning Talks!",
-        "start_iso": "2026-07-23T17:30:00-04:00",
-        "end_iso": "2026-07-23T19:30:00-04:00",
-        "location": "Central Insurance 4450 Bridge Park Ave,, Dublin, OH 43017 Dublin OH 43017",
-        "url": "https://www.meetup.com/central-ohio-net-developers-group-condg/events/313792193/"
+        "title": "First Friday Yappy Hour at Marina Green",
+        "start_iso": "2026-07-03T19:30:00-04:00",
+        "end_iso": "2026-07-03T20:30:00-04:00",
+        "location": "Marina Green 500 Marina Blvd, San Francisco, CA 94123 San Francisco CA 94123",
+        "url": "https://www.meetup.com/sfyorkiemeetup/events/315248760/"
+      },
+      {
+        "title": "Discover SF -- Fillmore Jazz Festival & Golden Gate Fireworks",
+        "start_iso": "2026-07-04T16:00:00-04:00",
+        "end_iso": "2026-07-04T21:30:00-04:00",
+        "location": "The Mill 736 Divisadero St, San Francisco, CA 94117, San Francisco, CA 94117 San Francisco CA 94117",
+        "url": "https://www.meetup.com/bay-area-active-social-20s-30s/events/315435165/"
+      },
+      {
+        "title": "Stern Grove Music Festival -- Major Lazer",
+        "start_iso": "2026-07-05T17:00:00-04:00",
+        "end_iso": "2026-07-05T20:00:00-04:00",
+        "location": "Peet's Coffee 3251 20th Ave, San Francisco, CA 94132 San Francisco CA 94132",
+        "url": "https://www.meetup.com/townflame/events/315464706/"
+      },
+      {
+        "title": "Chinatown Cleanup",
+        "start_iso": "2026-07-04T18:00:00-04:00",
+        "end_iso": "2026-07-04T19:30:00-04:00",
+        "location": "Portsmouth Square 50 Walter U Lum Pl, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/refuse-refuse-san-francisco/events/315261193/"
+      },
+      {
+        "title": "Stern Grove Festival -- Major Lazer",
+        "start_iso": "2026-07-05T17:00:00-04:00",
+        "end_iso": "2026-07-05T20:00:00-04:00",
+        "location": "Peet's cafe 3251 20th Ave, san francisco, CA 94132 san francisco CA 94132",
+        "url": "https://www.meetup.com/bay-area-active-social-20s-30s/events/315491827/"
+      },
+      {
+        "title": "Late Blooms and Birds of Devil's Slide",
+        "start_iso": "2026-07-05T11:00:00-04:00",
+        "end_iso": "2026-07-05T13:00:00-04:00",
+        "location": "Devils Slide Trail South of Devil's Slide Tunnel, Pacifica, CA Pacifica CA",
+        "url": "https://www.meetup.com/california-native-plant-society-bay-area-meetup-group/events/315456042/"
+      },
+      {
+        "title": "\"SUPER FIREWORKS\" ARE BEST IN SONOMA !!!",
+        "start_iso": "2026-07-04T21:30:00-04:00",
+        "end_iso": "2026-07-05T00:30:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indie-toms-hidden-backroads-adventures/events/315420680/"
+      },
+      {
+        "title": "Bollywood Nights at Salesforce Park - Free",
+        "start_iso": "2026-07-03T20:30:00-04:00",
+        "end_iso": "2026-07-03T22:00:00-04:00",
+        "location": "salesforce park 425 mission street, san francisco, CA 94105 san francisco CA 94105",
+        "url": "https://www.meetup.com/iwanttodothatsf/events/315034157/"
+      },
+      {
+        "title": "Drawing Nature in the Field",
+        "start_iso": "2026-07-12T13:00:00-04:00",
+        "end_iso": "2026-07-12T15:00:00-04:00",
+        "location": "San Francisco San Francisco, CA San Francisco San Francisco, CA, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/california-native-plant-society-bay-area-meetup-group/events/315457802/"
+      },
+      {
+        "title": "Ferry Fest",
+        "start_iso": "2026-07-12T15:00:00-04:00",
+        "end_iso": "2026-07-12T21:00:00-04:00",
+        "location": "Ferry Building 1 Ferry Building, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/contra-costa-social-group/events/315439261/"
+      },
+      {
+        "title": "Alemany Farm Native Plant Volunteer Day",
+        "start_iso": "2026-07-06T16:00:00-04:00",
+        "end_iso": "2026-07-06T19:30:00-04:00",
+        "location": "Alemany Farm 700 Alemany Blvd, San Francisco, CA San Francisco CA",
+        "url": "https://www.meetup.com/nature-in-the-city/events/315288724/"
+      },
+      {
+        "title": "From crisis to conservation: Empowering action for biodiversity",
+        "start_iso": "2026-07-09T22:00:00-04:00",
+        "end_iso": "2026-07-10T00:00:00-04:00",
+        "location": "San Francisco County Fair Building 1199 9th Avenue, San Francisco, CA 94122 San Francisco CA 94122",
+        "url": "https://www.meetup.com/california-native-plant-society-bay-area-meetup-group/events/315323099/"
+      },
+      {
+        "title": "Sunday Kickball @ Bushrod Park!",
+        "start_iso": "2026-07-19T15:30:00-04:00",
+        "end_iso": "2026-07-19T18:00:00-04:00",
+        "location": "Bushrod Park Oakland, CA, Oakland, CA 94601 Oakland CA 94601",
+        "url": "https://www.meetup.com/bay-area-social-scene/events/315444680/"
+      },
+      {
+        "title": "Summer Concert (Foster City)!",
+        "start_iso": "2026-07-10T20:50:00-04:00",
+        "end_iso": "2026-07-10T22:50:00-04:00",
+        "location": "Leo Ryan Park Amphitheater 650 Shell Blvd, Foster City, CA Foster City CA",
+        "url": "https://www.meetup.com/redwood-city-social-meetup/events/315079880/"
+      },
+      {
+        "title": "Improv Jam Session | Beginner-Friendly Game Day",
+        "start_iso": "2026-07-19T17:00:00-04:00",
+        "end_iso": "2026-07-19T19:00:00-04:00",
+        "location": "William McKinley Monument William McKinley Monument, San Francisco, CA 94117, San Francisco, CA 94117 San Francisco CA 94117",
+        "url": "https://www.meetup.com/have-fun-make-friends-sf/events/315309250/"
       }
     ]
   },
@@ -12234,7 +12332,7 @@
     ]
   },
   "https://www.meetup.com/find/us--oh--cincinnati/investing/": {
-    "fetched_at_iso": "2026-07-02T08:21:49.531180-04:00",
+    "fetched_at_iso": "2026-07-03T09:00:50.882484-04:00",
     "events": [
       {
         "title": "Butterbees in Milford",
@@ -12244,39 +12342,11 @@
         "url": "https://www.meetup.com/cincystockinvestorsandtraders/events/315411415/"
       },
       {
-        "title": "Real Estate Investment Networking",
-        "start_iso": "2026-07-06T20:35:00-04:00",
-        "end_iso": "2026-07-06T22:35:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/real-estate-wealth-institute-cincinnati/events/315292053/"
-      },
-      {
-        "title": "Real Estate Investment Networking Event",
-        "start_iso": "2026-07-07T10:00:00-04:00",
-        "end_iso": "2026-07-07T12:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/real-estate-wealth-institute-cincinnati/events/315298268/"
-      },
-      {
         "title": "Follow up on past action items and new challenges in your investing journey",
         "start_iso": "2026-07-08T18:00:00-04:00",
         "end_iso": "2026-07-08T20:00:00-04:00",
         "location": "",
         "url": "https://www.meetup.com/cincinnati-real-estate-investing/events/315320238/"
-      },
-      {
-        "title": "Picnic with a Purpose: Real Estate Networking That Actually Pays Off",
-        "start_iso": "2026-07-02T17:00:00-04:00",
-        "end_iso": "2026-07-02T19:00:00-04:00",
-        "location": "Blue Ash Recreation Center 4433 Cooper Rd, Blue Ash, OH Blue Ash OH",
-        "url": "https://www.meetup.com/cincinnatireia/events/315313263/"
-      },
-      {
-        "title": "Drinks @Madtree Parks & Recreation (Blue Ash)",
-        "start_iso": "2026-07-08T18:30:00-04:00",
-        "end_iso": "2026-07-08T20:30:00-04:00",
-        "location": "Madtree: Parks and Rec 4321 Glendale Milford Rd., Blue Ash, OH Blue Ash OH",
-        "url": "https://www.meetup.com/northern-cincy-social-club/events/315469158/"
       },
       {
         "title": "How to Start Real Estate Investing",
@@ -12286,11 +12356,39 @@
         "url": "https://www.meetup.com/agents-investment-deals/events/315482964/"
       },
       {
+        "title": "Drinks @Madtree Parks & Recreation (Blue Ash)",
+        "start_iso": "2026-07-08T18:30:00-04:00",
+        "end_iso": "2026-07-08T20:30:00-04:00",
+        "location": "Madtree: Parks and Rec 4321 Glendale Milford Rd., Blue Ash, OH Blue Ash OH",
+        "url": "https://www.meetup.com/northern-cincy-social-club/events/315469158/"
+      },
+      {
+        "title": "July's Tool Tip Tuesday with Tamara West",
+        "start_iso": "2026-07-14T12:00:00-04:00",
+        "end_iso": "2026-07-14T14:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/kreia-com/events/315319810/"
+      },
+      {
         "title": "Online Intensive: How to Plan a Rehab Right",
         "start_iso": "2026-07-11T09:00:00-04:00",
         "end_iso": "2026-07-11T11:00:00-04:00",
         "location": "",
         "url": "https://www.meetup.com/cincinnatireia/events/315468528/"
+      },
+      {
+        "title": "UNLOCK THE TAX LIEN/ TAX DEED MILLIONAIRE SECRET",
+        "start_iso": "2026-07-06T21:00:00-04:00",
+        "end_iso": "2026-07-06T23:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/indianapolis-multifamily-investing-meetup/events/315499670/"
+      },
+      {
+        "title": "Idea Night",
+        "start_iso": "2026-07-21T19:00:00-04:00",
+        "end_iso": "2026-07-21T21:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/dayton-value-investing-meetup/events/315507118/"
       },
       {
         "title": "You’re an Economist, You Just Don’t Know It Yet",
@@ -12960,6 +13058,18 @@
   },
   "https://www.grubhub.com/restaurant/rallys-4115-glenway-ave-cincinnati/2928344": {
     "fetched_at_iso": "2026-07-02T09:56:47.683612-04:00",
+    "events": []
+  },
+  "https://www.subaru.com/motorsports.html": {
+    "fetched_at_iso": "2026-07-03T09:01:14.224958-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/united-states--ohio/car-show-today/?page=48": {
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/river-roots-festival/?page=18": {
+    "fetched_at_iso": "2026-07-03T09:01:51.728992-04:00",
     "events": []
   }
 }

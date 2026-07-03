@@ -1,67 +1,7 @@
 {
-  "generated_at_iso": "2026-07-02T09:57:12.646820-04:00",
-  "count": 962,
+  "generated_at_iso": "2026-07-03T09:02:24.787472-04:00",
+  "count": 968,
   "events": [
-    {
-      "Event Name": "Premier Car & Truck Cruise-In",
-      "Date": "2026-07-02",
-      "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "PREMIER Classic Auto Restoration - 251 Eastwood Road, Williamsburg, OH 45176",
-      "Address": "PREMIER Classic Auto Restoration - 251 Eastwood Road, Williamsburg, OH 45176",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-07-02/"
-    },
-    {
-      "Event Name": "Minford Dairy Bar Cruise In",
-      "Date": "2026-07-02",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Minford Dairy Bar - Minford, OH 45653",
-      "Address": "Minford Dairy Bar - Minford, OH 45653",
-      "Closest City": "Charleston, WV",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-07-02/"
-    },
-    {
-      "Event Name": "Alexandria Cruise-In",
-      "Date": "2026-07-02",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Alexandria Village Green Shopping Center - Alexandria, KY 41001",
-      "Address": "Alexandria Village Green Shopping Center - Alexandria, KY 41001",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-07-02/"
-    },
-    {
-      "Event Name": "Martinsville Cruise-in on the Square",
-      "Date": "2026-07-02",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Jefferson Street, Martinsville, IN 46151",
-      "Address": "Jefferson Street, Martinsville, IN 46151",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-02/"
-    },
-    {
-      "Event Name": "Rockin’ Randall’s Cruise-In",
-      "Date": "2026-07-02",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Liberty Countrymark - 404 N Main Street, Liberty, IN 47353",
-      "Address": "Liberty Countrymark - 404 N Main Street, Liberty, IN 47353",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/rockin-randalls-cruise-in/2026-07-02/"
-    },
     {
       "Event Name": "The Honda Indy 200 at Mid-Ohio Presented by the 2027 CR-V Hybrid",
       "Date": "2026-07-03",
@@ -373,6 +313,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-n-coffee-meetup-1st-saturdays/2026-07-04/"
+    },
+    {
+      "Event Name": "NoLimit Car Club presents; Firework Bash & Car Show",
+      "Date": "2026-07-04",
+      "Start Time": "8:59 AM",
+      "End Time": "10:59 AM",
+      "Location": "Carrie Gaulbert Cox Park, Carrie Gaulbert Cox Park, 3730 River Rd | Louisville, KY",
+      "Address": "Carrie Gaulbert Cox Park, Carrie Gaulbert Cox Park, 3730 River Rd | Louisville, KY",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Source": "Google Events - Louisville",
+      "Event URL": "https://things-to-lou.com/events/nolimit-car-club-presents-firework-bash-car-show/"
     },
     {
       "Event Name": "MID SUMMER BASH",
@@ -901,6 +853,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-09/"
+    },
+    {
+      "Event Name": "Thursday Meet at the Library",
+      "Date": "2026-07-09",
+      "Start Time": "6:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Kenton County Public Library, Covington Branch - 502 Scott St., Covington, KY",
+      "Address": "Kenton County Public Library, Covington Branch - 502 Scott St., Covington, KY",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/covington-write-meetup-group/events/315515082/"
     },
     {
       "Event Name": "Element Eatery Meet Up and Hang",
@@ -2581,6 +2545,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-07-22/"
+    },
+    {
+      "Event Name": "Eco-Themed Board Game Night",
+      "Date": "2026-07-22",
+      "Start Time": "5:15 PM",
+      "End Time": "8:15 PM",
+      "Location": "Deer Park Branch of the Library, Meeting Room A - 4020 East Galbraith Road, Cincinnati, OH",
+      "Address": "Deer Park Branch of the Library, Meeting Room A - 4020 East Galbraith Road, Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/sierraoutings/events/315392586/"
     },
     {
       "Event Name": "GCPL Car Show",
@@ -11065,6 +11041,102 @@
       "Callout": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-10-31",
+      "Start Time": "8:00 AM",
+      "End Time": "10:30 AM",
+      "Location": "Crestview Hills Town Center - 2791 Town Center Blvd, Crestview Hills, KY 41017",
+      "Address": "Crestview Hills Town Center - 2791 Town Center Blvd, Crestview Hills, KY 41017",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-10-31/"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee",
+      "Date": "2026-10-31",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "The Ohio State University Wexner Medical Center - 3650 Olentangy River Rd, Columbus, OH 43214",
+      "Address": "The Ohio State University Wexner Medical Center - 3650 Olentangy River Rd, Columbus, OH 43214",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-10-31/"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
+      "Date": "2026-10-31",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-10-31/"
+    },
+    {
+      "Event Name": "Lawrenceburg Cars & Coffee",
+      "Date": "2026-10-31",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "68 Doughty Rd, Lawrenceburg, IN 47025",
+      "Address": "68 Doughty Rd, Lawrenceburg, IN 47025",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-10-31/"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee @ The City",
+      "Date": "2026-10-31",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "The City Apartments - 2875 Olentangy River Road, Columbus, OH 43202",
+      "Address": "The City Apartments - 2875 Olentangy River Road, Columbus, OH 43202",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-10-31/"
+    },
+    {
+      "Event Name": "Steels & Wheels Halloween Car Show",
+      "Date": "2026-10-31",
+      "Start Time": "12:00 PM",
+      "End Time": "3:00 PM",
+      "Location": "20 S High St, Canal Winchester, OH 43110",
+      "Address": "20 S High St, Canal Winchester, OH 43110",
+      "Closest City": "Columbus, OH",
+      "Callout": "Registration required",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/steels-wheels-halloween-car-show/"
+    },
+    {
+      "Event Name": "Kettering Saturday Night Cruise-In",
+      "Date": "2026-10-31",
+      "Start Time": "4:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "Orthopedic Institute of Dayton - 3205 Woodman Dr, Dayton, OH 45401",
+      "Address": "Orthopedic Institute of Dayton - 3205 Woodman Dr, Dayton, OH 45401",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-10-31/"
+    },
+    {
+      "Event Name": "No Flex Car Cruise",
+      "Date": "2026-10-31",
+      "Start Time": "7:00 PM",
+      "End Time": "11:00 PM",
+      "Location": "Bittersweet Center - 8651 Preston Hwy, Louisville, KY 40219",
+      "Address": "Bittersweet Center - 8651 Preston Hwy, Louisville, KY 40219",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-31/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
