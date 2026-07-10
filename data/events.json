@@ -1,79 +1,7 @@
 {
-  "generated_at_iso": "2026-07-09T08:25:07.024712-04:00",
-  "count": 906,
+  "generated_at_iso": "2026-07-10T09:13:50.813699-04:00",
+  "count": 902,
   "events": [
-    {
-      "Event Name": "Premier Car & Truck Cruise-In",
-      "Date": "2026-07-09",
-      "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "PREMIER Classic Auto Restoration - 251 Eastwood Road, Williamsburg, OH 45176",
-      "Address": "PREMIER Classic Auto Restoration - 251 Eastwood Road, Williamsburg, OH 45176",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-07-09/"
-    },
-    {
-      "Event Name": "Minford Dairy Bar Cruise In",
-      "Date": "2026-07-09",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Minford Dairy Bar - Minford, OH 45653",
-      "Address": "Minford Dairy Bar - Minford, OH 45653",
-      "Closest City": "Charleston, WV",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-07-09/"
-    },
-    {
-      "Event Name": "Alexandria Cruise-In",
-      "Date": "2026-07-09",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Alexandria Village Green Shopping Center - Alexandria, KY 41001",
-      "Address": "Alexandria Village Green Shopping Center - Alexandria, KY 41001",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-07-09/"
-    },
-    {
-      "Event Name": "Martinsville Cruise-in on the Square",
-      "Date": "2026-07-09",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Jefferson Street, Martinsville, IN 46151",
-      "Address": "Jefferson Street, Martinsville, IN 46151",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-09/"
-    },
-    {
-      "Event Name": "Thursday Meet at the Library",
-      "Date": "2026-07-09",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Kenton County Public Library, Covington Branch - 502 Scott St., Covington, KY",
-      "Address": "Kenton County Public Library, Covington Branch - 502 Scott St., Covington, KY",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/covington-write-meetup-group/events/315515082/"
-    },
-    {
-      "Event Name": "Element Eatery Meet Up and Hang",
-      "Date": "2026-07-09",
-      "Start Time": "6:30 PM",
-      "End Time": "8:30 PM",
-      "Location": "Element Eatery 5250 Medpace Way, , Cincinnati, OH Cincinnati OH",
-      "Address": "Element Eatery 5250 Medpace Way, , Cincinnati, OH Cincinnati OH",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "Meetup Cincy Cars",
-      "Event URL": "https://www.meetup.com/queencitysocialclub/events/315397590/"
-    },
     {
       "Event Name": "Athens Backhands Driving Tour",
       "Date": "2026-07-10",
@@ -85,18 +13,6 @@
       "Callout": "",
       "Source": "OVR PCA Social Events (ICS)",
       "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
-      "Date": "2026-07-10",
-      "Start Time": "1:00 AM",
-      "End Time": "12:59 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "TrackRabbit + SCCA calendar discovery",
-      "Event URL": "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course"
     },
     {
       "Event Name": "Cincinnati Region IT SPEC*TACULAR",
@@ -481,6 +397,30 @@
       "Callout": "Registration required",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/warrior-wheels-custom-classic-car-truck-bike-show/"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-07-11",
+      "Start Time": "9:11 AM",
+      "End Time": "11:11 AM",
+      "Location": "Crestview Hills Town Center, Crestview Hills Town Center, 2751 Dixie Hwy | Crestview Hills, KY",
+      "Address": "Crestview Hills Town Center, Crestview Hills Town Center, 2751 Dixie Hwy | Crestview Hills, KY",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-11/"
+    },
+    {
+      "Event Name": "Car Show at the Engineers Club",
+      "Date": "2026-07-11",
+      "Start Time": "9:11 AM",
+      "End Time": "11:11 AM",
+      "Location": "Engineers Club of Dayton, Engineers Club of Dayton, 110 E Monument Ave | Dayton, OH",
+      "Address": "Engineers Club of Dayton, Engineers Club of Dayton, 110 E Monument Ave | Dayton, OH",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Source": "Google Events - Dayton",
+      "Event URL": "https://www.destinationdayton.org/event/engineers-club-of-dayton-car-show/18696/"
     },
     {
       "Event Name": "Saturday hike at Mt. Airy Forest- Moderate to Difficult (Meet at the Treehouse)",
@@ -3829,6 +3769,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/hot-rod-car-show-cruise-in-at-one-more-lounge/2026-08-09/"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-08-10",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "Crestview Hills Town Center, Crestview Hills Town Center, 2751 Dixie Hwy | Crestview Hills, KY",
+      "Address": "Crestview Hills Town Center, Crestview Hills Town Center, 2751 Dixie Hwy | Crestview Hills, KY",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-18/"
     },
     {
       "Event Name": "Indian Lake Mcdonald’s the Ultimate Summer Cruise-In",
