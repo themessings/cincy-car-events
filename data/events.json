@@ -1,175 +1,7 @@
 {
-  "generated_at_iso": "2026-07-12T08:01:45.646987-04:00",
-  "count": 861,
+  "generated_at_iso": "2026-07-14T08:16:09.988271-04:00",
+  "count": 858,
   "events": [
-    {
-      "Event Name": "Athens Backhands Driving Tour",
-      "Date": "2026-07-10",
-      "Start Time": "12:00 AM",
-      "End Time": "12:00 AM",
-      "Location": "",
-      "Address": "",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "OVR PCA Social Events (ICS)",
-      "Event URL": "https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics"
-    },
-    {
-      "Event Name": "Goodguys - Car Show",
-      "Date": "2026-07-12",
-      "Start Time": "7:59 AM",
-      "End Time": "9:59 AM",
-      "Location": "Celeste Center",
-      "Address": "Celeste Center",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "Google Events - Columbus",
-      "Event URL": "https://www.viagogo.com/ae/Sports-Tickets/Motorsports/Goodguys-Racing-Tickets/E-159762569"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-07-12",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "McCordsville Cars & Coffee",
-      "Date": "2026-07-12",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "McCord Square - 5811 Main St., McCordsville, IN 46055",
-      "Address": "McCord Square - 5811 Main St., McCordsville, IN 46055",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/mccordsville-cars-coffee/2026-07-12/"
-    },
-    {
-      "Event Name": "Goodguys Car Show",
-      "Date": "2026-07-12",
-      "Start Time": "8:00 AM",
-      "End Time": "10:00 AM",
-      "Location": "Ohio Expo Center 717 E 11th Ave Columbus OH 43211",
-      "Address": "Ohio Expo Center 717 E 11th Ave Columbus OH 43211",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Source": "Google Events - Columbus",
-      "Event URL": "https://ticketnetwork.lusg.net/c/7381352/132208/2322?prodsku=7494044&u=https%3A%2F%2Fwww.ticketnetwork.com%2Fen%2Fp%2F7494044&intsrc=APIG_896"
-    },
-    {
-      "Event Name": "Rally North America – Day 2",
-      "Date": "2026-07-12",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Marquette, MI",
-      "Address": "Marquette, MI",
-      "Closest City": "Chicago, IL",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Euro Cars and Cocoa",
-      "Date": "2026-07-12",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "The Cocoa Muse - 600 W Loveland Ave., Loveland, OH 45140",
-      "Address": "The Cocoa Muse - 600 W Loveland Ave., Loveland, OH 45140",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-07-12/"
-    },
-    {
-      "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
-      "Date": "2026-07-12",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Athens, OH (Launch)",
-      "Address": "Athens, OH (Launch)",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "https://rallynorthamerica.com/rally-events/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-07-12",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-07-12/"
-    },
-    {
-      "Event Name": "HHCC x Porsche Club",
-      "Date": "2026-07-12",
-      "Start Time": "10:30 AM",
-      "End Time": "1:00 PM",
-      "Location": "Hungry Buffalo Restaurant",
-      "Address": "Hungry Buffalo Restaurant",
-      "Closest City": "",
-      "Callout": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/hhcc-x-porsche-club/1543769710548111/"
-    },
-    {
-      "Event Name": "Hot Rod & Car Show Cruise-In at One More Lounge",
-      "Date": "2026-07-12",
-      "Start Time": "12:00 PM",
-      "End Time": "3:00 PM",
-      "Location": "7143 Southeastern Ave, Wanamaker, IN 46239",
-      "Address": "7143 Southeastern Ave, Wanamaker, IN 46239",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/hot-rod-car-show-cruise-in-at-one-more-lounge/2026-07-12/"
-    },
-    {
-      "Event Name": "6th Annual 2026 Purple Door Car Show And Ice Cream Social",
-      "Date": "2026-07-12",
-      "Start Time": "2:00 PM",
-      "End Time": "5:00 PM",
-      "Location": "St John Lutheran Church - 1100 N Main St, Celina, OH 45822",
-      "Address": "St John Lutheran Church - 1100 N Main St, Celina, OH 45822",
-      "Closest City": "Fort Wayne, IN",
-      "Callout": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/6th-annual-2026-purple-door-car-show-and-ice-cream-social/"
-    },
-    {
-      "Event Name": "Rally North America – Day 3",
-      "Date": "2026-07-13",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Traverse City, MI",
-      "Address": "Traverse City, MI",
-      "Closest City": "Detroit, MI",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "Rally North America – Day 2",
-      "Date": "2026-07-13",
-      "Start Time": "9:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "Marquette, MI",
-      "Address": "Marquette, MI",
-      "Closest City": "Chicago, IL",
-      "Callout": "",
-      "Source": "sheet",
-      "Event URL": "Same as above"
-    },
     {
       "Event Name": "Rally North America – Day 4",
       "Date": "2026-07-14",
@@ -241,6 +73,18 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "VirtualPals Meeting for Sally's Crafty & Chat",
+      "Date": "2026-07-15",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/thehumanconnectionhub/events/314569610/"
     },
     {
       "Event Name": "Chicken Eater’s Car Club",
@@ -807,6 +651,30 @@
       "Event URL": "https://carsandcoffeeevents.com/event/oreilly-auto-parts-car-show-sidney-oh/"
     },
     {
+      "Event Name": "Monthly Meet: NKY MS Support Group",
+      "Date": "2026-07-18",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "Kenton Co. Library, Erlanger - 401 Kenton Lands Rd. 401 Kenton Lands Rd., Erlanger, KY",
+      "Address": "Kenton Co. Library, Erlanger - 401 Kenton Lands Rd. 401 Kenton Lands Rd., Erlanger, KY",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/nky-multiple-sclerosis-support-group/events/315545593/"
+    },
+    {
+      "Event Name": "July General Meeting: Campbell County Log Cabin History & Farm Heritage Museum",
+      "Date": "2026-07-18",
+      "Start Time": "10:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "Campbell County Log Cabin History & Farm Heritage Museum - 890 Clay Ridge Rd, Grants Lick, KY",
+      "Address": "Campbell County Log Cabin History & Farm Heritage Museum - 890 Clay Ridge Rd, Grants Lick, KY",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/northern-kentucky-sierra-club/events/314302280/"
+    },
+    {
       "Event Name": "2nd Annual Car Show Urbana Moose Lodge",
       "Date": "2026-07-18",
       "Start Time": "11:00 AM",
@@ -1047,6 +915,18 @@
       "Event URL": "https://warrencountypost.com/g/lebanon-oh/e/329248/waynesville-annual-car-show"
     },
     {
+      "Event Name": "Let's meetup and walk Mt. Airy Forest",
+      "Date": "2026-07-19",
+      "Start Time": "9:30 AM",
+      "End Time": "11:30 AM",
+      "Location": "Mt. Airy Forest Cincinnati - 5083 Colerain Avenue, Cincinnati, OH",
+      "Address": "Mt. Airy Forest Cincinnati - 5083 Colerain Avenue, Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/american-walkers/events/315660633/"
+    },
+    {
       "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-07-19",
       "Start Time": "10:00 AM",
@@ -1261,6 +1141,18 @@
       "Callout": "",
       "Source": "Meetup Cincy Cars",
       "Event URL": "https://www.meetup.com/central-ohio-net-developers-group-condg/events/313792193/"
+    },
+    {
+      "Event Name": "Thursday Meet at the Library",
+      "Date": "2026-07-23",
+      "Start Time": "6:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Kenton County Public Library, Covington Branch - 502 Scott St., Covington, KY",
+      "Address": "Kenton County Public Library, Covington Branch - 502 Scott St., Covington, KY",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/covington-write-meetup-group/events/315624956/"
     },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -2115,6 +2007,18 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-07-31/"
     },
     {
+      "Event Name": "Meetup en West Sixth Covington Haus",
+      "Date": "2026-07-31",
+      "Start Time": "7:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "West Sixth Covington Haus - 100 West Sixth Street, Covington, KY",
+      "Address": "West Sixth Covington Haus - 100 West Sixth Street, Covington, KY",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnatisimos/events/315533197/"
+    },
+    {
       "Event Name": "Southern Indiana Car & Coffee",
       "Date": "2026-08-01",
       "Start Time": "8:00 AM",
@@ -2605,6 +2509,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/the-point-on-main-street-car-show-2/"
+    },
+    {
+      "Event Name": "CCPC's Monthly Meet N' Greet Social Hour(s)",
+      "Date": "2026-08-03",
+      "Start Time": "6:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "",
+      "Address": "",
+      "Closest City": "",
+      "Callout": "",
+      "Source": "Meetup Cincy Cars",
+      "Event URL": "https://www.meetup.com/cincinnati-camera-and-photography-club/events/315562522/"
     },
     {
       "Event Name": "Indian Lake Mcdonald’s the Ultimate Summer Cruise-In",
@@ -3445,6 +3361,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-08-14/"
+    },
+    {
+      "Event Name": "Cincinnati Cars and Coffee",
+      "Date": "2026-08-14",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "Crestview Hills Town Center, Crestview Hills Town Center, 2751 Dixie Hwy | Crestview Hills, KY",
+      "Address": "Crestview Hills Town Center, Crestview Hills Town Center, 2751 Dixie Hwy | Crestview Hills, KY",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-18/"
     },
     {
       "Event Name": "Friday Nights Beavercreek Cruise-In At The Vineyard Church",
@@ -4333,6 +4261,18 @@
       "Callout": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-08-22/"
+    },
+    {
+      "Event Name": "Wyoming Exotic Wheels 2026!",
+      "Date": "2026-08-22",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "400 Wyoming Ave, Cincinnati, OH",
+      "Address": "400 Wyoming Ave, Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/wyoming-exotic-wheels-2026/1999840341418315/"
     },
     {
       "Event Name": "No Flex Car Cruise",
@@ -10333,6 +10273,30 @@
       "Callout": "",
       "Source": "sheet",
       "Event URL": "https://rallynorthamerica.com/rally-events/"
+    },
+    {
+      "Event Name": "Rally North America – Day 2",
+      "Date": "2027-07-13",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Marquette, MI",
+      "Address": "Marquette, MI",
+      "Closest City": "Chicago, IL",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
+    },
+    {
+      "Event Name": "Rally North America – Day 3",
+      "Date": "2027-07-14",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Traverse City, MI",
+      "Address": "Traverse City, MI",
+      "Closest City": "Detroit, MI",
+      "Callout": "",
+      "Source": "sheet",
+      "Event URL": "Same as above"
     }
   ]
 }
