@@ -69,6 +69,34 @@ filters:
   - dance class
   - kids camp
   - school fundraiser
+  - fun run
+  - color run
+  - career fair
+  - book club
+  - craft fair
+  - craft show
+  - art walk
+  - art fair
+  - wine walk
+  - beer festival
+  - brewery tour
+  - happy hour
+  - trivia night
+  - speed dating
+  - hiking
+  - hike
+  - walking tour
+  - photography walk
+  - camera club
+  - pug
+  - dog park
+  - medical marijuana
+  - blood drive
+  - bake sale
+  - quilt
+  - garage sale
+  - rummage sale
+  - open house
   trusted_event_platforms:
   - facebook.com/events
   - eventbrite.com
@@ -77,6 +105,141 @@ filters:
   - scca.com
   - carsandcoffeeevents.com
   - pca.org
+  # --- Content-based automotive classifier (word-boundary matched) ---
+  # STRONG terms qualify an event on their own.
+  automotive_strong_keywords:
+  - car show
+  - cars and coffee
+  - cars & coffee
+  - cars n coffee
+  - car meet
+  - car meetup
+  - auto show
+  - autocross
+  - auto cross
+  - motorsport
+  - motorsports
+  - concours
+  - cruise-in
+  - cruise in
+  - cruise night
+  - car cruise
+  - car club
+  - car rally
+  - road rally
+  - roadrally
+  - rally
+  - rallycross
+  - rally cross
+  - stage rally
+  - driving tour
+  - track day
+  - hpde
+  - time trial
+  - time attack
+  - lapping day
+  - drag racing
+  - drag strip
+  - dyno day
+  - test and tune
+  - test & tune
+  - poker run
+  - hot rod
+  - street rod
+  - muscle car
+  - classic car
+  - exotic car
+  - super car
+  - supercar
+  - hypercar
+  - sports car
+  - vintage car
+  - antique car
+  - import car
+  - tuner car
+  - car festival
+  - swap meet
+  - porsche club
+  - bmw cca
+  - corvette club
+  - mustang club
+  - vehicle show
+  - truck show
+  - gymkhana
+  # CONTEXT tokens: at least one must co-occur for a WEAK keyword to qualify.
+  automotive_context_keywords:
+  - car
+  - cars
+  - auto
+  - autos
+  - automobile
+  - automotive
+  - vehicle
+  - vehicles
+  - truck
+  - trucks
+  - motor
+  - engine
+  - horsepower
+  - coupe
+  - roadster
+  - jdm
+  - porsche
+  - corvette
+  - mustang
+  - camaro
+  - chevrolet
+  - chevy
+  - ford
+  - dodge
+  - mopar
+  - bmw
+  - audi
+  - mercedes
+  - ferrari
+  - lamborghini
+  - porsche
+  - nissan
+  - toyota
+  - honda
+  - subaru
+  - mazda
+  - cadillac
+  - pontiac
+  - volkswagen
+  - jeep
+  - lexus
+  - acura
+  # WEAK keywords qualify ONLY when a context token is also present.
+  automotive_weak_keywords:
+  - meet
+  - meetup
+  - meet-up
+  - meet up
+  - cruise
+  - cruisin
+  - show
+  - rally
+  - solo
+  - euro
+  - muscle
+  - tuner
+  - classic
+  - import
+  - exotic
+  - rod
+  - tour
+  # Sources trusted as automotive even when a title lacks car keywords
+  # (club calendars, sanctioning bodies, registration platforms). Matched as a
+  # case-insensitive substring against the event's Source name.
+  car_dedicated_sources:
+  - OVR PCA
+  - MotorsportReg
+  - TrackRabbit
+  - SCCA
+  - American Rally
+  - Touring rally organizers
+  - Regional rallies
 categorization:
   # rally = multi-day/destination driving events worth a longer trip (600 mi cap).
   # Bare "cruise"/"tour" removed: they matched every weekly Cruise-In and
@@ -130,6 +293,16 @@ sources:
   tab: Events
 - type: facebook_page_events
   name: Facebook Page Events (Graph API sheet/env IDs)
+# Scrolls the logged-in Facebook "Most Recent" home feed and harvests event links.
+# Opt-in: requires ENABLE_FACEBOOK_SCROLL=1, Playwright, and a saved session in
+# FACEBOOK_SESSION_STATE (see README). No-op otherwise, so the default cron is
+# unaffected. Discovered events flow through the same automotive/distance/date
+# filters as every other source.
+- type: facebook_events_scroll
+  name: Facebook Feed Scroll
+  scrolls: 20          # feed scroll steps (more = deeper history, slower)
+  scroll_pause_ms: 2000  # wait between scrolls so lazy-loaded posts render
+  max_events: 40       # cap on event pages fetched/parsed per run
 - type: serpapi_google_events
   name: Google Events (SerpAPI) [serpapi_google_events]
 # Google's dedicated Events engine, aimed at each major metro within the radius.

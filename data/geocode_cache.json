@@ -3631,6 +3631,480 @@
     "lat": "41.8463769",
     "lon": "-87.6612694"
   },
+  "addr::minford dairy bar - minford, oh 45653": {
+    "formatted": "10667 State Route 139, Minford, OH 45653",
+    "latlon": [
+      38.8591269,
+      -82.8622393
+    ]
+  },
+  "addr::alexandria village green shopping center - alexandria, ky 41001": null,
+  "addr::jefferson street, martinsville, in 46151": {
+    "formatted": "North Jefferson Street, Martinsville, IN 46151",
+    "latlon": [
+      39.4283177,
+      -86.4273226
+    ]
+  },
+  "addr::mid-ohio sports car course": {
+    "formatted": "7721 Steam Corners Road, Lexington, OH 44904",
+    "latlon": [
+      40.6890085,
+      -82.6363553
+    ]
+  },
+  "addr::colin’s coffee - 2812 fishinger rd, upper arlington, 43220, columbus, oh": null,
+  "addr::louisville, ky": {
+    "formatted": "",
+    "latlon": [
+      38.2542376,
+      -85.759407
+    ]
+  },
+  "addr::s pearl st, cicero, in 46034": {
+    "formatted": "South Pearl Street, Cicero, IN 46034",
+    "latlon": [
+      40.1265823,
+      -86.017653
+    ]
+  },
+  "addr::north vernon, in 47265": {
+    "formatted": "",
+    "latlon": [
+      39.006165,
+      -85.6235796
+    ]
+  },
+  "addr::danville town square": {
+    "formatted": "Town Square, Danville, WV 25053",
+    "latlon": [
+      38.0786966,
+      -81.8339186
+    ]
+  },
+  "addr::sellersburg, in 47172": {
+    "formatted": "",
+    "latlon": [
+      38.3979718,
+      -85.7550735
+    ]
+  },
+  "addr::horsepower farm middletown": null,
+  "addr::austin landing blvd, miamisburg, oh 45342": null,
+  "addr::austin landing": {
+    "formatted": "",
+    "latlon": [
+      33.6834326,
+      -96.6245055
+    ]
+  },
+  "addr::sportsdrome speedway, louisville, ky": null,
+  "addr::shelby county fairgrounds, sidney, oh 45365": null,
+  "addr::court st, circleville, oh 43113": {
+    "formatted": "South Court Street, Circleville, OH 43113",
+    "latlon": [
+      39.6008433,
+      -82.9456353
+    ]
+  },
+  "addr::clayton, indiana": {
+    "formatted": "",
+    "latlon": [
+      39.6892129,
+      -86.5224984
+    ]
+  },
+  "addr::carrie gaulbert cox park 3730 river road louisville ky 40207, louisville, ky": null,
+  "addr::2726 riverside drive, cincinnati, oh": {
+    "formatted": "2726 Riverside Drive, Cincinnati, OH 45202",
+    "latlon": [
+      39.1227724,
+      -84.4549396
+    ]
+  },
+  "addr::front street, new richmond, oh 45157": {
+    "formatted": "Front Street, New Richmond, OH 45157",
+    "latlon": [
+      38.9518434,
+      -84.2842352
+    ]
+  },
+  "addr::8901 u.s. 42 hwy, union, ky": null,
+  "addr::8300 four bridges dr liberty township, oh": {
+    "formatted": "8300 Four Bridges Drive, Liberty Township, OH 45044",
+    "latlon": [
+      39.376934,
+      -84.346022
+    ]
+  },
+  "addr::ohio expo center - east 17th ave., columbus, oh 43211": {
+    "formatted": "717 East 17th Avenue, Columbus, OH 43211",
+    "latlon": [
+      40.0029556,
+      -82.9913182
+    ]
+  },
+  "addr::historical charlestown city square - charlestown, in 47111": null,
+  "addr::manpower park - jackson, oh 45640": null,
+  "addr::indiana state fairgrounds & event center": null,
+  "addr::storming crab, louisville, ky": {
+    "formatted": "4809 Outer Loop, Louisville, KY 40219",
+    "latlon": [
+      38.1385832,
+      -85.6726221
+    ]
+  },
+  "addr::bardstown nelson county airport - bardstown, ky 40004": null,
+  "addr::athens, oh (launch)": {
+    "formatted": "Lake Snowden Road, Lee Township, OH 45710",
+    "latlon": [
+      39.2446338,
+      -82.1932222
+    ]
+  },
+  "addr::scott county fair grounds - highway 31, scottsburg, in 47170": null,
+  "addr::west chester": {
+    "formatted": "",
+    "latlon": [
+      39.9597389,
+      -75.6044609
+    ]
+  },
+  "addr::oakley greens, cincinnati, oh": {
+    "formatted": "3065 Vandercar Way, Cincinnati, OH 45209",
+    "latlon": [
+      39.1581686,
+      -84.431354
+    ]
+  },
+  "addr::downtown hillsboro ohio - hillsboro, oh 45133": null,
+  "addr::ohio expo center 717 e 11th ave columbus oh 43211, columbus, oh": null,
+  "addr::marquette, mi": {
+    "formatted": "",
+    "latlon": [
+      46.4481521,
+      -87.6305899
+    ]
+  },
+  "addr::hungry buffalo restaurant": {
+    "formatted": "12762 Grey Street, Logan, OH 43138",
+    "latlon": [
+      39.5438522,
+      -82.4488106
+    ]
+  },
+  "addr::traverse city, mi": {
+    "formatted": "",
+    "latlon": [
+      44.7606481,
+      -85.6165976
+    ]
+  },
+  "addr::frankenmuth, mi": {
+    "formatted": "",
+    "latlon": [
+      43.3323684,
+      -83.7392288
+    ]
+  },
+  "addr::los costenos mexican restaurant - middletown, in 47356": null,
+  "addr::mount gilead, oh": {
+    "formatted": "",
+    "latlon": [
+      40.5492265,
+      -82.8274015
+    ]
+  },
+  "addr::s main st, scottsburg, in 47170": {
+    "formatted": "South Main Street, Scottsburg, IN 47170",
+    "latlon": [
+      38.6778636,
+      -85.7699675
+    ]
+  },
+  "addr::7140 taylor street - liberty township, ohio 45069, liberty township, ohio 45069, oh 45069, cincinnati, oh": null,
+  "addr::national museum of the u.s. air force, dayton, oh": {
+    "formatted": "1100 Spaatz Street, Dayton, OH 45433",
+    "latlon": [
+      39.7802236,
+      -84.1080722
+    ]
+  },
+  "addr::location will be sent to ticket holders.": null,
+  "addr::lancaster pike, circleville, oh 43113": {
+    "formatted": "Lancaster Pike, Circleville, OH 43113",
+    "latlon": [
+      39.6050061,
+      -82.9167753
+    ]
+  },
+  "addr::national museum of the u.s. air force 1100 spaatz st. wright-patterson afb oh 45433, dayton, oh": {
+    "formatted": "1100 Spaatz Street, Dayton, OH 45433",
+    "latlon": [
+      39.7802236,
+      -84.1080722
+    ]
+  },
+  "addr::edgewater sports park": null,
+  "addr::kuhnle motorsports park": null,
+  "addr::lewis & clark pkwy, clarksville, in 47129": {
+    "formatted": "East Lewis and Clark Parkway, Clarksville, IN 47129",
+    "latlon": [
+      38.3166438,
+      -85.7574581
+    ]
+  },
+  "addr::erlanger lions club 5996 belair dr., cincinnati, oh": null,
+  "addr::main street waynesville, waynesville, oh 45068": {
+    "formatted": "North Main Street, Waynesville, OH 45068",
+    "latlon": [
+      39.5343535,
+      -84.0799188
+    ]
+  },
+  "addr::downtown waynesville main street waynesville oh 45068, dayton, oh": null,
+  "addr::magnolia springs loveland senior living": null,
+  "addr::cincinnati, oh": {
+    "formatted": "",
+    "latlon": [
+      39.1012809,
+      -84.5127405
+    ]
+  },
+  "addr::graham elementary school - saint paris, oh 43072": null,
+  "addr::community park east - fairborn 691 e. dayton-yellow springs rd fairborn oh 45324, dayton, oh": null,
+  "addr::knowledge services": null,
+  "addr::get fit athletic club - fishers, in 46037": null,
+  "addr::hermitage farm": {
+    "formatted": "",
+    "latlon": [
+      29.0686881,
+      -81.3555379
+    ]
+  },
+  "addr::the old walls drive in - cannelton, in 47520": null,
+  "addr::lebanon rd., danville, ky 40422": {
+    "formatted": "Lebanon Road, Danville, KY 40422",
+    "latlon": [
+      37.6188991,
+      -84.8309097
+    ]
+  },
+  "addr::scrub-a-truck": null,
+  "addr::launch cincinnati, oh": {
+    "formatted": "boat launch, Cincinnati, OH 45228",
+    "latlon": [
+      39.0882425,
+      -84.4287215
+    ]
+  },
+  "addr::chattanooga, tn": {
+    "formatted": "",
+    "latlon": [
+      35.0457219,
+      -85.3094883
+    ]
+  },
+  "addr::bolton field - columbus, ohio ktzr": null,
+  "addr::greenville, sc": {
+    "formatted": "",
+    "latlon": [
+      34.851354,
+      -82.3984882
+    ]
+  },
+  "addr::williamsport, oh 43164": {
+    "formatted": "",
+    "latlon": [
+      39.5858953,
+      -83.1204647
+    ]
+  },
+  "addr::robert l. schuler sports complex": null,
+  "addr::charlotte, nc": {
+    "formatted": "",
+    "latlon": [
+      35.2272086,
+      -80.8430827
+    ]
+  },
+  "addr::miami valley gaming, dayton, oh": null,
+  "addr::wilmington, oh": {
+    "formatted": "",
+    "latlon": [
+      39.4453393,
+      -83.8285375
+    ]
+  },
+  "addr::darana raceway- xenia, ohio": null,
+  "addr::brookville indiana town park - corner of 8th street & river street, brookville, in 47012": null,
+  "addr::maple wood park - centerville, in 47330": null,
+  "addr::lucas oil indianapolis raceway park - 10267 east u s highway 136, brownsburg, in": null,
+  "addr::downtown cynthiana - 141 east pike street, suite 2, cynthiana, ky 41031": null,
+  "addr::2nd st. miamisburg oh, dayton, oh": null,
+  "addr::downtown ripley - main st, ripley, oh 45167": null,
+  "addr::eclipse window tinting, cincinnati ohio": null,
+  "addr::4980 zion rd, cleves, oh": null,
+  "addr::land-grant brewing company, columbus, oh": {
+    "formatted": "424 West Town Street, Columbus, OH 43215",
+    "latlon": [
+      39.957872,
+      -83.0115076
+    ]
+  },
+  "addr::cox park": {
+    "formatted": "",
+    "latlon": [
+      38.2855241,
+      -85.6897389
+    ]
+  },
+  "addr::slate performance automotive": null,
+  "addr::historic crew stadium, columbus, oh": {
+    "formatted": "1 Black and Gold Boulevard, Columbus, OH 43211",
+    "latlon": [
+      40.009468,
+      -82.9911382
+    ]
+  },
+  "addr::butler county fair, cincinnati, oh": null,
+  "addr::johnson co. fairgrounds - franklin, in 46131": null,
+  "addr::downtown union city, in - union city, in 47390": null,
+  "addr::vfw's cabana on the whitewater": null,
+  "addr::main st, laurelville, oh 43135": {
+    "formatted": "Main Street, Laurelville, OH 43135",
+    "latlon": [
+      39.4706091,
+      -82.739548
+    ]
+  },
+  "addr::main st downtown miamisburg": null,
+  "addr::creitz park - north on foote st. to creitz park, cambridge city, in 47327": null,
+  "addr::germania society": {
+    "formatted": "Flushing Avenue, New York, NY 11237",
+    "latlon": [
+      40.7109086,
+      -73.9200168
+    ]
+  },
+  "addr::206w dayton-yellow springs rd, fairborn, oh 45324": {
+    "formatted": "Dayton Yellow Springs Road, Fairborn, OH 45324",
+    "latlon": [
+      39.7843521,
+      -84.0094999
+    ]
+  },
+  "addr::2669 e kemper road, cincinnati, oh": null,
+  "addr::4521 spring grove ave, cincinnati, oh": {
+    "formatted": "4521 Spring Grove Avenue, Cincinnati, OH 45223",
+    "latlon": [
+      39.1642798,
+      -84.5230149
+    ]
+  },
+  "addr::24 miami st., hamilton, oh": {
+    "formatted": "Seitz Street, Cincinnati, OH 45210",
+    "latlon": [
+      39.1156097,
+      -84.511665
+    ]
+  },
+  "addr::launch washington, dc": null,
+  "addr::washington, dc": {
+    "formatted": "",
+    "latlon": [
+      38.8950982,
+      -77.0363849
+    ]
+  },
+  "addr::bristol, tn": {
+    "formatted": "",
+    "latlon": [
+      36.5945034,
+      -82.1885212
+    ]
+  },
+  "addr::knoxville, tn": {
+    "formatted": "",
+    "latlon": [
+      35.9603948,
+      -83.9210261
+    ]
+  },
+  "addr::nashville, tn": {
+    "formatted": "",
+    "latlon": [
+      36.1622767,
+      -86.7742984
+    ]
+  },
+  "addr::fontana village resort & marina": null,
+  "addr::9225 priority way w dr indianapolis, in 46240": {
+    "formatted": "9225 Priority Way West Drive, Indianapolis, IN 46240",
+    "latlon": [
+      39.9224008,
+      -86.1066417
+    ]
+  },
+  "addr::atlanta, ga": {
+    "formatted": "",
+    "latlon": [
+      33.7544657,
+      -84.3898151
+    ]
+  },
+  "addr::asheville, nc": {
+    "formatted": "",
+    "latlon": [
+      35.595363,
+      -82.5508407
+    ]
+  },
+  "addr::columbus, oh": {
+    "formatted": "",
+    "latlon": [
+      39.9622601,
+      -83.0007065
+    ]
+  },
+  "addr::indianapolis, in": {
+    "formatted": "",
+    "latlon": [
+      39.7683331,
+      -86.1583502
+    ]
+  },
+  "addr::dayton, oh": {
+    "formatted": "",
+    "latlon": [
+      39.7589478,
+      -84.1916069
+    ]
+  },
+  "addr::smoky mountains, tn (launch)": null,
+  "addr::blue ridge, ga": {
+    "formatted": "",
+    "latlon": [
+      34.863972,
+      -84.324087
+    ]
+  },
+  "addr::lexington, oh": {
+    "formatted": "",
+    "latlon": [
+      40.6787196,
+      -82.5827749
+    ]
+  },
+  "addr::chillicothe, oh": {
+    "formatted": "",
+    "latlon": [
+      39.3331197,
+      -82.9824019
+    ]
+  },
+  "addr::southern ohio / ky backroads": null,
+  "addr::tennessee / appalachia region": null,
   "Morrow, OH": {
     "lat": "40.4574358",
     "lon": "-82.7771661"

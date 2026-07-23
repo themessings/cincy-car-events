@@ -41,7 +41,7 @@ try:
 except Exception:
     Image = ImageOps = None
 
-from scripts.facebook_event_parser import parse_facebook_event_page
+from scripts.facebook_event_parser import parse_facebook_event_html, parse_facebook_event_page
 from scripts.facebook_token_manager import TokenManager
 
 # -------------------------
@@ -583,7 +583,10 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
     url = f"https://graph.facebook.com/v18.0/{event_id}"
     params = {
         "access_token": get_facebook_access_token(),
-        "fields": "name,start_time,end_time,place,timezone,description,ticket_uri",
+        "fields": (
+            "name,start_time,end_time,place,timezone,description,ticket_uri,"
+            "attending_count,interested_count,maybe_count"
+        ),
     }
 
     r = requests.get(url, params=params, timeout=30)
@@ -597,24 +600,35 @@ def fetch_facebook_event_via_graph(event_id: str) -> Optional[dict]:
 
     place = item.get("place") or {}
     location = clean_ws(place.get("name", ""))
+    full_address = ""
 
     if place.get("location"):
         loc = place["location"]
         parts = [loc.get("street"), loc.get("city"), loc.get("state"), loc.get("zip")]
-        normalized_address = ", ".join(clean_ws(str(p)) for p in parts if clean_ws(str(p)))
-        location = simplify_location(location, normalized_address) or location
+        full_address = ", ".join(clean_ws(str(p)) for p in parts if clean_ws(str(p)))
+        location = simplify_location(location, full_address) or location
 
     if not title or not start_dt:
         return None
+
+    def _as_int(value) -> Optional[int]:
+        try:
+            return int(value)
+        except Exception:
+            return None
 
     return {
         "title": title,
         "start_dt": start_dt,
         "end_dt": end_dt or (start_dt + timedelta(hours=2)),
         "location": location,
+        "address": full_address,
         "url": f"https://www.facebook.com/events/{event_id}",
         "description": clean_ws(str(item.get("description", "") or ""))[:2000],
         "ticket_uri": clean_ws(str(item.get("ticket_uri", "") or "")),
+        "attending_count": _as_int(item.get("attending_count")),
+        "interested_count": _as_int(item.get("interested_count")),
+        "maybe_count": _as_int(item.get("maybe_count")),
     }
 
 
@@ -786,6 +800,13 @@ class EventItem:
     last_seen_iso: str
     callout: str = ""  # e.g. "Registration required" / "Tickets required"
     closest_city: str = ""  # nearest major city, e.g. "Cincinnati, OH"
+    address: str = ""  # full street address (looked up when the source lacks one)
+    attending_count: Optional[int] = None  # Facebook "going" count when known
+    interested_count: Optional[int] = None  # Facebook "interested" count when known
+    popularity: Optional[int] = None  # 0-100 heuristic score (higher = bigger)
+    size: str = ""  # tier label: Major / Regional / Local / Small
+    description: str = ""  # short blurb captured during enrichment (not exported)
+    date_verified: str = ""  # "" / "verified" / "corrected" / "unconfirmed"
 
 
 def event_item_from_stored_row(row: dict) -> Optional[EventItem]:
@@ -1996,6 +2017,127 @@ def categorize(title: str, location: str, cfg: dict) -> str:
     return "local"
 
 
+# -------------------------
+# Automotive classification (content-based, word-boundary matched)
+# -------------------------
+# The automotive signal is judged from the event's CONTENT (title / description /
+# location) — never the source name. Historically the source name "Meetup Cincy
+# Cars" (contains "cars") auto-passed every unrelated meetup, and naive substring
+# matching let "car" match "health<car>e" / "s<car>ecrow" / "<car>eer". Both are
+# fixed here with word-boundary regexes and a tiered keyword model.
+
+# STRONG terms qualify an event on their own.
+AUTO_STRONG_DEFAULTS = [
+    "car show", "cars and coffee", "cars & coffee", "cars n coffee", "car meet",
+    "car meetup", "auto show", "autocross", "auto cross", "motorsport", "motorsports",
+    "concours", "cruise-in", "cruise in", "cruise night", "car cruise", "car club",
+    "car rally", "road rally", "roadrally", "rally", "rallycross", "rally cross",
+    "stage rally", "driving tour", "track day",
+    "hpde", "time trial", "time attack", "lapping day", "drag racing", "drag strip",
+    "dyno day", "test and tune", "test & tune", "poker run", "hot rod", "street rod",
+    "muscle car", "classic car", "exotic car", "super car", "supercar", "hypercar",
+    "sports car", "vintage car", "antique car", "import car", "tuner car",
+    "car festival", "swap meet", "porsche club", "bmw cca", "corvette club",
+    "mustang club", "vehicle show", "truck show", "gymkhana",
+]
+# CONTEXT tokens make an ambiguous WEAK keyword qualify.
+AUTO_CONTEXT_DEFAULTS = [
+    "car", "cars", "auto", "autos", "automobile", "automotive", "vehicle", "vehicles",
+    "truck", "trucks", "motor", "engine", "horsepower", "coupe", "roadster", "jdm",
+    "porsche", "corvette", "mustang", "camaro", "chevrolet", "chevy", "ford", "dodge",
+    "mopar", "bmw", "audi", "mercedes", "ferrari", "lamborghini", "nissan", "toyota",
+    "honda", "subaru", "mazda", "cadillac", "pontiac", "volkswagen", "jeep", "lexus",
+    "acura",
+]
+# WEAK keywords qualify ONLY when a CONTEXT token co-occurs.
+AUTO_WEAK_DEFAULTS = [
+    "meet", "meetup", "meet-up", "meet up", "cruise", "cruisin", "show", "rally",
+    "solo", "euro", "muscle", "tuner", "classic", "import", "exotic", "rod", "tour",
+]
+# HARD exclusions always drop the event and cannot be overridden by a car keyword.
+AUTO_HARD_EXCLUSION_DEFAULTS = [
+    "5k", "10k", "half marathon", "marathon", "fun run", "color run", "job fair",
+    "hiring event", "career fair", "church service", "yoga", "kids camp",
+    "food pantry", "music track", "spotify track", "medical marijuana",
+    "speed dating", "book club", "blood drive", "dance class",
+    # non-car "rally" senses (bare "rally" is otherwise a strong car keyword)
+    "pep rally", "political rally", "prayer rally", "protest rally", "campaign rally",
+]
+
+_AUTO_PATTERN_CACHE: Dict[str, "re.Pattern"] = {}
+
+
+def _auto_normalize_text(value: str) -> str:
+    text = clean_ws(str(value or "")).lower()
+    text = text.replace("&", " and ")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _auto_keyword_pattern(keyword: str) -> "re.Pattern":
+    key = clean_ws(str(keyword)).lower()
+    cached = _AUTO_PATTERN_CACHE.get(key)
+    if cached is not None:
+        return cached
+    norm = key.replace("&", " and ")
+    norm = re.sub(r"[\s\-]+", " ", norm).strip()
+    tokens = [re.escape(tok) for tok in norm.split(" ") if tok]
+    if not tokens:
+        pattern = re.compile(r"(?!x)x")  # never matches
+    else:
+        body = r"[\s\-]+".join(tokens)
+        # Boundaries are alnum-aware so "car" does NOT match "scarecrow"/"career".
+        pattern = re.compile(rf"(?<![a-z0-9]){body}(?![a-z0-9])")
+    _AUTO_PATTERN_CACHE[key] = pattern
+    return pattern
+
+
+def _auto_keywords(cfg: Optional[dict], key: str, defaults: List[str]) -> List[str]:
+    filters = (cfg or {}).get("filters", {}) if isinstance(cfg, dict) else {}
+    values = filters.get(key)
+    if not values:
+        values = defaults
+    return [clean_ws(str(k)).lower() for k in values if clean_ws(str(k))]
+
+
+def _auto_first_match(text: str, keywords: List[str]) -> str:
+    for kw in keywords:
+        if _auto_keyword_pattern(kw).search(text):
+            return kw
+    return ""
+
+
+def automotive_content_verdict(
+    title: str, location: str = "", description: str = "", cfg: Optional[dict] = None
+) -> Tuple[str, str]:
+    """Classify an event from its content. Returns (verdict, reason) where
+    verdict is 'keep' (clear automotive signal), 'drop' (excluded / clearly not),
+    or 'unknown' (no signal either way — caller decides using source trust)."""
+    text = _auto_normalize_text(f"{title} {location} {description}")
+    if not text:
+        return "drop", "empty_text"
+
+    hard_hit = _auto_first_match(text, AUTO_HARD_EXCLUSION_DEFAULTS)
+    if hard_hit:
+        return "drop", f"hard_exclusion:{hard_hit}"
+
+    strong_hit = _auto_first_match(text, _auto_keywords(cfg, "automotive_strong_keywords", AUTO_STRONG_DEFAULTS))
+    if strong_hit:
+        # A clear car term overrides soft (config) exclusions like "farmers market".
+        return "keep", f"strong:{strong_hit}"
+
+    excl_hit = _auto_first_match(text, _auto_keywords(cfg, "non_automotive_exclude_keywords", []))
+    if excl_hit:
+        return "drop", f"exclude_keyword:{excl_hit}"
+
+    weak_hit = _auto_first_match(text, _auto_keywords(cfg, "automotive_weak_keywords", AUTO_WEAK_DEFAULTS))
+    if weak_hit:
+        context_hit = _auto_first_match(text, _auto_keywords(cfg, "automotive_context_keywords", AUTO_CONTEXT_DEFAULTS))
+        if context_hit:
+            return "keep", f"weak+context:{weak_hit}+{context_hit}"
+
+    return "unknown", "no_automotive_signal"
+
+
 def is_automotive_event(
     title: str,
     location: str = "",
@@ -2003,40 +2145,22 @@ def is_automotive_event(
     *_unused,
     **_unused_kw,
 ) -> bool:
-    """Best-effort keyword gate with backwards-compatible signature."""
-    text = clean_ws(f"{title} {location}").lower()
-    if not text:
-        return False
+    """Best-effort keyword gate with backwards-compatible signature.
 
-    if not cfg:
-        return True
-
-    categorization = cfg.get("categorization", {})
-    keywords = [
-        *(categorization.get("local_keywords", []) or []),
-        *(categorization.get("rally_keywords", []) or []),
-    ]
-    if not keywords:
-        return True
-
-    return any(clean_ws(k).lower() in text for k in keywords if clean_ws(k))
+    Lenient: only rejects events that are excluded or clearly non-automotive;
+    keeps 'unknown' events (no signal either way)."""
+    verdict, _ = automotive_content_verdict(title, location, cfg=cfg)
+    return verdict != "drop"
 
 
 def is_automotive_event_safe(title: str, location: str, cfg: dict) -> bool:
-    """Deterministic automotive keyword check used by main() filtering."""
-    text = clean_ws(f"{title} {location}").lower()
-    if not text:
-        return False
+    """Strict automotive check used by main() filtering of existing/merged events.
 
-    categorization = (cfg or {}).get("categorization", {})
-    keywords = [
-        *(categorization.get("local_keywords", []) or []),
-        *(categorization.get("rally_keywords", []) or []),
-    ]
-    if not keywords:
-        return True
-
-    return any(clean_ws(k).lower() in text for k in keywords if clean_ws(k))
+    Requires a positive automotive signal from the event content; 'unknown'
+    events are rejected here so previously-leaked non-car rows get cleaned out.
+    Car-dedicated/bypass sources are exempted by the caller before this runs."""
+    verdict, _ = automotive_content_verdict(title, location, cfg=cfg)
+    return verdict == "keep"
 
 
 def filter_existing_automotive_events(existing: List[EventItem], cfg: dict) -> List[EventItem]:
@@ -2046,48 +2170,49 @@ def filter_existing_automotive_events(existing: List[EventItem], cfg: dict) -> L
     if dropped:
         log(f"🧹 Filtered out {dropped} non-automotive persisted events before merge.")
     return filtered
-def evaluate_automotive_focus_event(title: str, location: str, source: str, url: str, cfg: dict) -> Tuple[bool, str]:
-    """Returns (is_allowed, reason) for automotive filtering transparency."""
+def source_is_car_dedicated(source: str, cfg: Optional[dict]) -> str:
+    """Return the matched car-dedicated source substring, or "" if none.
+
+    Car-dedicated sources (club calendars, sanctioning bodies, registration
+    platforms) are trusted as automotive even when a title lacks car keywords."""
+    source_l = clean_ws(str(source)).lower()
+    if not source_l:
+        return ""
+    filters = (cfg or {}).get("filters", {}) if isinstance(cfg, dict) else {}
+    for sub in (filters.get("car_dedicated_sources", []) or []):
+        sub_l = clean_ws(str(sub)).lower()
+        if sub_l and sub_l in source_l:
+            return sub_l
+    return ""
+
+
+def evaluate_automotive_focus_event(
+    title: str, location: str, source: str, url: str, cfg: dict, description: str = ""
+) -> Tuple[bool, str]:
+    """Returns (is_allowed, reason) for automotive filtering transparency.
+
+    The automotive signal comes from event CONTENT (title/description/location),
+    not the source name. 'unknown' events are admitted only when they come from a
+    car-dedicated source or a trusted event platform URL."""
+    verdict, reason = automotive_content_verdict(title, location, description, cfg=cfg)
+    if verdict == "keep":
+        return True, reason
+    if verdict == "drop":
+        return False, reason
+
+    # verdict == "unknown": lean on source/platform trust, else drop.
+    dedicated = source_is_car_dedicated(source, cfg)
+    if dedicated:
+        return True, f"car_dedicated_source:{dedicated}"
+
     filters = (cfg or {}).get("filters", {})
-    text = clean_ws(f"{title} {location} {source} {url}").lower()
-    if not text:
-        return False, "empty_text"
-
-    focus_keywords = [clean_ws(k).lower() for k in (filters.get("automotive_focus_keywords", []) or []) if clean_ws(k)]
-    exclude_keywords = [clean_ws(k).lower() for k in (filters.get("non_automotive_exclude_keywords", []) or []) if clean_ws(k)]
-
-    default_trusted = [
-        "facebook.com/events",
-        "eventbrite.com",
-        "motorsportreg.com",
-        "trackrabbit.com",
-        "scca.com",
-        "carsandcoffeeevents.com",
-        "pca.org",
-    ]
-    trusted_platforms = [
-        clean_ws(k).lower() for k in (filters.get("trusted_event_platforms", default_trusted) or []) if clean_ws(k)
-    ]
-
-    hard_exclusions = [
-        "5k", "10k", "half marathon", "marathon", "music track", "spotify track", "job fair", "hiring event",
-        "church service", "yoga", "kids camp", "food pantry",
-    ]
-
-    for x in hard_exclusions:
-        if x in text:
-            return False, f"hard_exclusion:{x}"
-
-    for x in exclude_keywords:
-        if x in text:
-            return False, f"exclude_keyword:{x}"
-
-    for k in focus_keywords:
-        if k in text:
-            return True, f"focus_keyword:{k}"
-
+    url_l = clean_ws(str(url)).lower()
+    trusted_platforms = [clean_ws(k).lower() for k in (filters.get("trusted_event_platforms", []) or []) if clean_ws(k)]
     for k in trusted_platforms:
-        if k in text:
+        # Require the platform in the URL (not the source name) so a car-scoped
+        # discovery query on eventbrite/facebook keeps its structured event pages
+        # without blanket-passing every unrelated event from that domain.
+        if k and k in url_l:
             return True, f"trusted_platform:{k}"
 
     return False, "no_automotive_keyword_match"
@@ -2957,6 +3082,146 @@ def collect_facebook_page_events(source: dict, diagnostics: Optional[dict] = Non
     for e in events:
         e["source"] = source_name
     return events
+
+
+def facebook_scroll_enabled() -> bool:
+    """Feed scrolling is opt-in: it needs Playwright + a saved logged-in session."""
+    return clean_ws(os.getenv("ENABLE_FACEBOOK_SCROLL", "0")).lower() in {"1", "true", "yes", "y", "on"}
+
+
+def _facebook_event_dict_from_parsed(parsed: dict, fallback_url: str, source_name: str) -> Optional[dict]:
+    """Adapt a facebook_event_parser payload into the pipeline's raw-event dict shape."""
+    if not parsed or not parsed.get("title") or not parsed.get("start_dt"):
+        return None
+    return {
+        "title": parsed.get("title", ""),
+        "start_dt": parsed.get("start_dt"),
+        "end_dt": parsed.get("end_dt"),
+        "location": simplify_location(parsed.get("location", ""), parsed.get("address", "")),
+        "url": parsed.get("canonical_url") or parsed.get("url") or fallback_url,
+        "source": source_name,
+        "host": parsed.get("host", ""),
+    }
+
+
+def collect_facebook_events_scroll(source: dict, url_cache: Dict[str, dict], diagnostics: Optional[dict] = None) -> List[dict]:
+    """Scroll the logged-in Facebook home feed and harvest event links.
+
+    Discovery happens in a headless Playwright session authenticated with a saved
+    ``storageState`` (env ``FACEBOOK_SESSION_STATE``); parsing, caching, and all
+    downstream filtering (automotive focus, distance caps, date window) reuse the
+    existing pipeline. Opt-in via ``ENABLE_FACEBOOK_SCROLL=1`` — otherwise this is
+    a no-op so the default cron is unaffected.
+    """
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("parse_failures", 0)
+    source_name = source.get("name", "Facebook Feed Scroll")
+
+    if not facebook_scroll_enabled():
+        diagnostics["reason"] = "disabled_by_flag"
+        log("ℹ️ Facebook feed scroll disabled; set ENABLE_FACEBOOK_SCROLL=1 to enable.")
+        return []
+
+    try:
+        from scripts import facebook_feed_scraper as fb_scraper
+    except Exception as ex:
+        diagnostics["reason"] = "scraper_import_failed"
+        log(f"⚠️ Facebook feed scraper unavailable: {ex}")
+        return []
+
+    storage_state = fb_scraper.load_storage_state()
+    if not storage_state:
+        diagnostics["reason"] = "disabled_missing_session"
+        log("⚠️ Skipping Facebook feed scroll: no saved session (set FACEBOOK_SESSION_STATE).")
+        return []
+
+    def _tune(key: str, env: str, default: int) -> int:
+        try:
+            return int(source.get(key, os.getenv(env, default)) or default)
+        except (TypeError, ValueError):
+            return default
+
+    scrolls = _tune("scrolls", "FACEBOOK_SCROLL_COUNT", 20)
+    scroll_pause_ms = _tune("scroll_pause_ms", "FACEBOOK_SCROLL_PAUSE_MS", 2000)
+    max_events = _tune("max_events", "FACEBOOK_SCROLL_MAX_EVENTS", 40)
+    feed_url = clean_ws(source.get("feed_url") or os.getenv("FACEBOOK_FEED_URL") or fb_scraper.DEFAULT_FEED_URL)
+
+    result = fb_scraper.scrape_feed(
+        storage_state=storage_state,
+        feed_url=feed_url,
+        scrolls=scrolls,
+        scroll_pause_ms=scroll_pause_ms,
+        max_events=max_events,
+        logger=log,
+    )
+
+    if not result.event_urls:
+        diagnostics["reason"] = result.reason or "no_results_from_search"
+        return []
+
+    FACEBOOK_COVERAGE["urls_discovered"] = int(FACEBOOK_COVERAGE.get("urls_discovered", 0) or 0) + result.discovered
+
+    out: List[dict] = []
+    now = datetime.now(tz=tz.gettz("America/New_York"))
+    for raw_url in result.event_urls:
+        event_url = normalize_facebook_event_url(raw_url) or raw_url
+        diagnostics["raw_candidates"] += 1
+
+        cached = url_cache.get(event_url)
+        if cached:
+            try:
+                last = datetime.fromisoformat(cached.get("fetched_at_iso"))
+                if (now - last) < timedelta(hours=24) and cached.get("event"):
+                    e = cached["event"]
+                    out.append({
+                        "title": e.get("title", ""),
+                        "start_dt": datetime.fromisoformat(e["start_iso"]),
+                        "end_dt": datetime.fromisoformat(e["end_iso"]),
+                        "location": e.get("location", ""),
+                        "url": e.get("url", event_url),
+                        "source": source_name,
+                        "facebook_event_id": e.get("facebook_event_id", ""),
+                    })
+                    continue
+            except Exception:
+                pass
+
+        ev = None
+        html = result.pages.get(raw_url) or result.pages.get(event_url)
+        if html:
+            parsed, _reason = parse_facebook_event_html(event_url, html)
+            ev = _facebook_event_dict_from_parsed(parsed, event_url, source_name)
+
+        if ev is None:
+            # Fall back to an unauthenticated fetch (public events are often readable).
+            parsed_page, fail_reason = parse_facebook_event_page(event_url, log)
+            ev = _facebook_event_dict_from_parsed(parsed_page, event_url, source_name)
+            if ev is None:
+                diagnostics["parse_failures"] += 1
+                FACEBOOK_COVERAGE["urls_failed"] = int(FACEBOOK_COVERAGE.get("urls_failed", 0) or 0) + 1
+                FACEBOOK_COVERAGE["failure_reasons"][fail_reason] += 1
+                url_cache[event_url] = {"fetched_at_iso": now.isoformat(), "event": None, "failure_reason": fail_reason}
+                continue
+
+        out.append(ev)
+        FACEBOOK_COVERAGE["urls_parsed"] = int(FACEBOOK_COVERAGE.get("urls_parsed", 0) or 0) + 1
+        url_cache[event_url] = {
+            "fetched_at_iso": now.isoformat(),
+            "event": {
+                "title": ev["title"],
+                "start_iso": ev["start_dt"].isoformat(),
+                "end_iso": ev["end_dt"].isoformat(),
+                "location": ev.get("location", ""),
+                "url": ev.get("url", event_url),
+                "facebook_event_id": ev.get("facebook_event_id", ""),
+            },
+        }
+
+    if not out and diagnostics.get("reason") is None:
+        diagnostics["reason"] = "parsing_schema_changed"
+    log(f"📘 Facebook feed scroll: discovered={result.discovered} parsed={len(out)} scrolls={result.scrolls_done}")
+    return out
 
 
 # -------------------------
@@ -3956,6 +4221,7 @@ def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
                 "start_dt": start_dt,
                 "end_dt": end_dt or (start_dt + timedelta(hours=2)),
                 "location": location_from_obj(obj.get("location") or {}),
+                "description": clean_ws(str(obj.get("description") or ""))[:2000],
                 "url": clean_ws(obj.get("url") or canonical_url or page_url),
             })
 
@@ -4399,7 +4665,9 @@ def to_event_items(
 
         bypass_automotive_filter = bool(e.get("bypass_automotive_filter"))
         if not bypass_automotive_filter:
-            allowed, auto_reason = evaluate_automotive_focus_event(title, location, source, url, cfg)
+            allowed, auto_reason = evaluate_automotive_focus_event(
+                title, location, source, url, cfg, description=clean_ws(str(e.get("description", "") or ""))
+            )
             if not allowed:
                 drop_reasons[f"non_automotive:{auto_reason}"] += 1
                 if source_counter is not None:
@@ -4525,6 +4793,534 @@ def dedupe_merge(
     return sorted(merged.values(), key=sort_key)
 
 
+# -------------------------
+# Export enrichment
+#   1. open each event link and confirm/correct its date & time
+#   2. look up a full street address when the source only gave a venue/city
+#   3. pull Facebook "going/interested" counts and score every event's size
+#   4. merge same-day near-duplicates that slipped past exact dedupe
+# -------------------------
+
+US_STATE_NAME_TO_ABBR = {
+    "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR", "california": "CA",
+    "colorado": "CO", "connecticut": "CT", "delaware": "DE", "florida": "FL", "georgia": "GA",
+    "hawaii": "HI", "idaho": "ID", "illinois": "IL", "indiana": "IN", "iowa": "IA", "kansas": "KS",
+    "kentucky": "KY", "louisiana": "LA", "maine": "ME", "maryland": "MD", "massachusetts": "MA",
+    "michigan": "MI", "minnesota": "MN", "mississippi": "MS", "missouri": "MO", "montana": "MT",
+    "nebraska": "NE", "nevada": "NV", "new hampshire": "NH", "new jersey": "NJ", "new mexico": "NM",
+    "new york": "NY", "north carolina": "NC", "north dakota": "ND", "ohio": "OH", "oklahoma": "OK",
+    "oregon": "OR", "pennsylvania": "PA", "rhode island": "RI", "south carolina": "SC",
+    "south dakota": "SD", "tennessee": "TN", "texas": "TX", "utah": "UT", "vermont": "VT",
+    "virginia": "VA", "washington": "WA", "west virginia": "WV", "wisconsin": "WI", "wyoming": "WY",
+    "district of columbia": "DC",
+}
+
+
+def _has_full_street_address(text: str) -> bool:
+    """True when text already looks like 'NN Street, City, ST ZIP'."""
+    return bool(US_ADDR_FULL_RE.search(clean_ws(text)))
+
+
+def _span_days(start_iso: str, end_iso: str) -> int:
+    start = parse_iso_datetime_safe(start_iso)
+    end = parse_iso_datetime_safe(end_iso)
+    if not start or not end:
+        return 1
+    return max(1, (end.date() - start.date()).days + 1)
+
+
+def geocode_full_address(location: str, city_state: str, cache: Dict[str, dict]) -> Tuple[str, Optional[Tuple[float, float]]]:
+    """Best-effort full street address via Nominatim.
+
+    Returns (formatted_address, latlon). formatted_address is "" when no trusted
+    street-level match exists (caller then keeps the venue text). Cached under an
+    'addr::' namespace inside the geocode cache. MUST be called serially —
+    Nominatim's usage policy caps requests at 1/second."""
+    loc = clean_ws(location)
+    if not loc:
+        return "", None
+
+    existing = US_ADDR_FULL_RE.search(loc)
+    if existing:
+        return _format_address_candidate(existing.group(1), require_zip=True) or clean_ws(existing.group(1)), None
+
+    expected_state = ""
+    m = re.search(rf",\s*({US_STATE_ABBR_RE})\b", f"{city_state} {loc}", flags=re.IGNORECASE)
+    if m:
+        expected_state = m.group(1).upper()
+
+    query = loc
+    if city_state and clean_ws(city_state).lower() not in loc.lower():
+        query = f"{loc}, {city_state}"
+    key = f"addr::{query.lower()}"
+    if key in cache:
+        v = cache.get(key)
+        if not v:
+            return "", None
+        latlon = tuple(v["latlon"]) if v.get("latlon") else None
+        return v.get("formatted", ""), latlon
+
+    try:
+        r = requests.get(
+            "https://nominatim.openstreetmap.org/search",
+            params={"q": query, "format": "jsonv2", "limit": 1, "addressdetails": 1, "countrycodes": "us"},
+            headers={"User-Agent": "cincy-car-events-bot/1.0 (github actions)"},
+            timeout=20,
+        )
+        r.raise_for_status()
+        data = r.json()
+        time.sleep(1.1)  # Nominatim politeness: <=1 req/sec
+    except Exception as ex:
+        cache[key] = None
+        log(f"⚠️ Address lookup failed for '{query}': {clean_ws(str(ex))[:120]}")
+        return "", None
+
+    if not data:
+        cache[key] = None
+        return "", None
+
+    top = data[0]
+    addr = top.get("address", {}) or {}
+    try:
+        latlon = (float(top["lat"]), float(top["lon"]))
+    except Exception:
+        latlon = None
+
+    state_raw = clean_ws(str(addr.get("state", "")))
+    state = US_STATE_NAME_TO_ABBR.get(state_raw.lower(), state_raw.upper() if len(state_raw) == 2 else "")
+    if expected_state and state and state != expected_state:
+        # Wrong state -> untrusted; keep coords for distance but no address text.
+        cache[key] = {"formatted": "", "latlon": list(latlon) if latlon else None}
+        return "", latlon
+
+    road = clean_ws(str(addr.get("road", "")))
+    house = clean_ws(str(addr.get("house_number", "")))
+    city = clean_ws(str(
+        addr.get("city") or addr.get("town") or addr.get("village")
+        or addr.get("hamlet") or addr.get("municipality") or addr.get("county") or ""
+    ))
+    zipc = clean_ws(str(addr.get("postcode", "")))[:10]
+
+    if not road:
+        # No street-level detail -> don't fabricate a street address.
+        cache[key] = {"formatted": "", "latlon": list(latlon) if latlon else None}
+        return "", latlon
+
+    street = clean_ws(f"{house} {road}").strip()
+    tail = clean_ws(f"{state} {zipc}").strip()
+    formatted = ", ".join(p for p in [street, city, tail] if clean_ws(p))
+    cache[key] = {"formatted": formatted, "latlon": list(latlon) if latlon else None}
+    return formatted, latlon
+
+
+_DATE_VERIFY_SKIP_HOSTS = ("facebook.com", "instagram.com", "meetup.com")
+
+
+def verify_event_datetime_via_link(event: dict, url_cache: Dict[str, dict], allow_fb_graph: bool = True) -> Optional[dict]:
+    """Open the event link and extract an authoritative date/time + details.
+
+    Returns a dict with start_iso/end_iso (+ optional location/description/
+    attendance) or None when the page yields nothing confident. Cached per URL
+    under a 'verify::' namespace with a 7-day freshness window."""
+    url = clean_ws(str(event.get("url", "") or event.get("link", "")))
+    if not url:
+        return None
+    norm = _normalize_link_for_export_dedupe(url) or url
+    key = f"verify::{norm}"
+    now = datetime.now(tz=EST_TZ)
+    cached = url_cache.get(key)
+    if isinstance(cached, dict) and cached.get("checked_at_iso"):
+        try:
+            if (now - datetime.fromisoformat(cached["checked_at_iso"])) < timedelta(days=7):
+                return cached.get("result")
+        except Exception:
+            pass
+
+    result: Optional[dict] = None
+
+    event_id = extract_facebook_event_id(url)
+    if event_id and allow_fb_graph and facebook_graph_usable():
+        g = fetch_facebook_event_via_graph(event_id)
+        if g and g.get("start_dt"):
+            start_dt = g["start_dt"]
+            end_dt = g.get("end_dt") or (start_dt + timedelta(hours=2))
+            result = {
+                "start_iso": start_dt.isoformat(),
+                "end_iso": end_dt.isoformat(),
+                "location": clean_ws(g.get("location", "")),
+                "address": clean_ws(g.get("address", "")),
+                "description": clean_ws(g.get("description", "")),
+                "attending_count": g.get("attending_count"),
+                "interested_count": g.get("interested_count"),
+                "provider": "facebook_graph",
+                "confident": True,
+            }
+
+    if result is None:
+        host = (urlparse(url if "://" in url else f"https://{url}").netloc or "").lower()
+        if not any(h in host for h in _DATE_VERIFY_SKIP_HOSTS):
+            parsed: List[dict] = []
+            try:
+                resp = requests.get(url, headers=DEFAULT_HTTP_HEADERS, timeout=20)
+                resp.raise_for_status()
+                parsed = parse_schema_org_events_from_html(url, resp.text or "")
+            except Exception:
+                parsed = []
+            if parsed:
+                best = parsed[0]
+                start_dt = best.get("start_dt")
+                if start_dt:
+                    end_dt = best.get("end_dt") or (start_dt + timedelta(hours=2))
+                    # Confident only when the page carried a real clock time.
+                    confident = not (start_dt.hour == 0 and start_dt.minute == 0)
+                    result = {
+                        "start_iso": start_dt.isoformat(),
+                        "end_iso": end_dt.isoformat(),
+                        "location": clean_ws(best.get("location", "")),
+                        "description": clean_ws(best.get("description", "")),
+                        "provider": "schema_org",
+                        "confident": confident,
+                    }
+
+    url_cache[key] = {"checked_at_iso": now.isoformat(), "result": result}
+    return result
+
+
+_POP_BIG_TITLE = {
+    "nationals": 30, "national": 20, "championship": 26, "world": 16, "invitational": 20,
+    "concours": 26, "goodguys": 30, "nsra": 26, "sema": 30, "mecum": 30,
+    "barrett-jackson": 32, "spectacular": 16, "grand national": 30, "hall of fame": 12,
+}
+_POP_FEST = {"festival": 14, "expo": 16, "jamboree": 14, "showdown": 10, "extravaganza": 14}
+_POP_VENUE = {
+    "speedway": 20, "raceway": 20, "dragway": 18, "motorsports park": 20, "motor speedway": 22,
+    "fairgrounds": 16, "convention center": 18, "expo center": 18, "coliseum": 16, "stadium": 16,
+}
+_POP_SMALL = {
+    "cars and coffee": -6, "cars & coffee": -6, "cruise-in": -6, "cruise in": -6,
+    "cruise night": -6, "monthly": -8, "weekly": -8, "meetup": -4, "meet up": -4,
+}
+
+
+def _pop_has(text: str, keyword: str) -> bool:
+    return bool(_auto_keyword_pattern(keyword).search(text))
+
+
+def _fmt_count(value) -> str:
+    try:
+        n = int(value)
+    except Exception:
+        return ""
+    if n < 0:
+        return ""
+    if n >= 1000:
+        s = f"{n / 1000.0:.1f}".rstrip("0").rstrip(".")
+        return f"{s}k"
+    return str(n)
+
+
+def _as_optional_int(value) -> Optional[int]:
+    if value is None or value == "":
+        return None
+    try:
+        return int(float(value))
+    except Exception:
+        return None
+
+
+def attendance_string(attending: Optional[int], interested: Optional[int]) -> str:
+    parts = []
+    if isinstance(attending, int) and attending > 0:
+        parts.append(f"{_fmt_count(attending)} going")
+    if isinstance(interested, int) and interested > 0:
+        parts.append(f"{_fmt_count(interested)} interested")
+    return " · ".join(parts)
+
+
+def _fb_reach_score(attending: Optional[int], interested: Optional[int]) -> int:
+    a = attending if isinstance(attending, int) else 0
+    i = interested if isinstance(interested, int) else 0
+    if a <= 0 and i <= 0:
+        return 0
+    reach = a + 0.5 * i
+    for threshold, score in ((2000, 96), (1000, 88), (500, 78), (250, 66), (100, 54), (40, 44), (1, 32)):
+        if reach >= threshold:
+            return score
+    return 0
+
+
+def compute_popularity_and_size(event: dict) -> Tuple[int, str, str]:
+    """Return (popularity_0_100, size_label, attendance_string).
+
+    Popularity blends real Facebook engagement (when known) with a heuristic
+    from multi-day span, marquee/venue signals, and recurring/local cues so the
+    biggest events float to the top when the column is sorted descending."""
+    title = clean_ws(str(event.get("title") or event.get("Event Name") or ""))
+    venue = clean_ws(str(
+        event.get("address") or event.get("Address") or event.get("location") or event.get("Location") or ""
+    ))
+    text = _auto_normalize_text(f"{title} {venue}")
+
+    attending = _as_optional_int(event.get("attending_count"))
+    interested = _as_optional_int(event.get("interested_count"))
+    attendance = attendance_string(attending, interested)
+
+    span = _span_days(str(event.get("start_iso", "")), str(event.get("end_iso", "")))
+
+    score = 32
+    if span >= 3:
+        score += 34
+    elif span == 2:
+        score += 20
+
+    score += max([v for k, v in _POP_BIG_TITLE.items() if _pop_has(text, k)] or [0])
+    if re.search(r"(?<![a-z0-9])\d{1,3}(?:st|nd|rd|th)(?![a-z0-9])", text) or _pop_has(text, "annual"):
+        score += 14
+    score += max([v for k, v in _POP_FEST.items() if _pop_has(text, k)] or [0])
+    score += max([v for k, v in _POP_VENUE.items() if _pop_has(text, k)] or [0])
+    score += sum(v for k, v in _POP_SMALL.items() if _pop_has(text, k))
+
+    heuristic = max(6, min(98, score))
+    popularity = max(0, min(100, int(round(max(heuristic, _fb_reach_score(attending, interested))))))
+
+    if popularity >= 75:
+        size = "Major"
+    elif popularity >= 50:
+        size = "Regional"
+    elif popularity >= 25:
+        size = "Local"
+    else:
+        size = "Small"
+    return popularity, size, attendance
+
+
+_TITLE_STOPWORDS = {
+    "the", "a", "an", "of", "at", "in", "on", "and", "for", "to", "with", "car", "cars",
+    "show", "annual", "event", "meet", "2025", "2026", "2027", "presented", "by",
+}
+
+
+def _title_tokens(title: str) -> set:
+    tokens = re.findall(r"[a-z0-9]+", _auto_normalize_text(title))
+    # Keep single digits ("Day 3" vs "Day 4") — they distinguish series entries.
+    return {tok for tok in tokens if tok not in _TITLE_STOPWORDS and (len(tok) >= 2 or tok.isdigit())}
+
+
+def _row_richness(row: dict) -> tuple:
+    """Higher is better — used to pick which near-duplicate to keep."""
+    return (
+        1 if clean_ws(str(row.get("address", ""))) and _has_full_street_address(str(row.get("address", ""))) else 0,
+        1 if _as_optional_int(row.get("attending_count")) or _as_optional_int(row.get("interested_count")) else 0,
+        1 if clean_ws(str(row.get("url", "") or row.get("link", ""))) else 0,
+        len(clean_ws(str(row.get("location", "")))),
+        1 if clean_ws(str(row.get("callout", ""))) else 0,
+    )
+
+
+def merge_same_day_near_duplicates(rows: List[dict]) -> List[dict]:
+    """Merge events on the same calendar day in the same city whose titles are
+    strongly similar but not identical (e.g. '57th NSRA Street Rod Nationals' vs
+    '57th Annual Street Rod Nationals'). Conservative: requires same date, same
+    closest-city, Jaccard>=0.6 on distinctive title tokens, and >=2 shared tokens.
+    Recurring same-name events on different dates never collide (date is in key)."""
+    if not rows:
+        return []
+
+    def day_key(row: dict) -> str:
+        dt = parse_iso_datetime_safe(str(row.get("start_iso", "")))
+        return dt.date().isoformat() if dt else ""
+
+    groups: List[List[int]] = []
+    meta = []
+    for idx, row in enumerate(rows):
+        meta.append({
+            "day": day_key(row),
+            "city": _auto_normalize_text(str(row.get("closest_city", "")) or str(row.get("city_state", ""))),
+            "tokens": _title_tokens(str(row.get("title", ""))),
+        })
+
+    used = [False] * len(rows)
+    survivors: List[dict] = []
+    merged_count = 0
+    for i in range(len(rows)):
+        if used[i]:
+            continue
+        cluster = [i]
+        used[i] = True
+        for j in range(i + 1, len(rows)):
+            if used[j]:
+                continue
+            if not meta[i]["day"] or meta[i]["day"] != meta[j]["day"]:
+                continue
+            if meta[i]["city"] and meta[j]["city"] and meta[i]["city"] != meta[j]["city"]:
+                continue
+            a, b = meta[i]["tokens"], meta[j]["tokens"]
+            if not a or not b:
+                continue
+            diff = a ^ b
+            # Titles differing only by a number are distinct occurrences of a
+            # series, not duplicates: "Day 3" vs "Day 4", "Meet 2" vs "Meet 4".
+            if diff and all(tok.isdigit() for tok in diff):
+                continue
+            shared = a & b
+            union = a | b
+            if len(shared) >= 2 and (len(shared) / len(union)) >= 0.6:
+                cluster.append(j)
+                used[j] = True
+        if len(cluster) == 1:
+            survivors.append(rows[i])
+            continue
+        merged_count += len(cluster) - 1
+        keep = max(cluster, key=lambda k: _row_richness(rows[k]))
+        base = dict(rows[keep])
+        for k in cluster:
+            other = rows[k]
+            for field in ("address", "url", "callout", "location", "description"):
+                if not clean_ws(str(base.get(field, ""))) and clean_ws(str(other.get(field, ""))):
+                    base[field] = other[field]
+            for field in ("attending_count", "interested_count"):
+                if base.get(field) is None and other.get(field) is not None:
+                    base[field] = other[field]
+            base_src = clean_ws(str(base.get("source", "")))
+            other_src = clean_ws(str(other.get("source", "")))
+            if other_src and other_src not in base_src:
+                base["source"] = clean_ws(f"{base_src}; {other_src}") if base_src else other_src
+        survivors.append(base)
+
+    if merged_count:
+        log(f"🧹 Near-duplicate merge: combined {merged_count} same-day similar-title rows")
+    return survivors
+
+
+def enrich_events_for_export(
+    events: List[dict],
+    geocache: Dict[str, dict],
+    url_cache: Dict[str, dict],
+    cfg: dict,
+    *,
+    verify_dates: bool = True,
+    lookup_addresses: bool = True,
+    fetch_facebook: bool = True,
+    revet_automotive: bool = True,
+    max_workers: int = 6,
+    trusted_sources: Optional[set] = None,
+) -> List[dict]:
+    """Run the four export-quality passes over the final event list.
+
+    Mutates and returns a list of event dicts (asdict(EventItem) shape)."""
+    trusted_sources = trusted_sources or set()
+
+    def _trusted(source: str) -> bool:
+        name = clean_ws(str(source))
+        return (name in trusted_sources) or bool(source_is_car_dedicated(name, cfg))
+
+    # 1) Verify date/time via the event link (parallel across events; cached).
+    if verify_dates:
+        from concurrent.futures import ThreadPoolExecutor
+
+        allow_fb = fetch_facebook and facebook_graph_usable()
+        targets = [ev for ev in events if clean_ws(str(ev.get("url", "")))]
+        results: List[Tuple[dict, Optional[dict]]] = []
+        if targets:
+            with ThreadPoolExecutor(max_workers=max_workers) as pool:
+                results = list(
+                    pool.map(
+                        lambda ev: (ev, verify_event_datetime_via_link(ev, url_cache, allow_fb_graph=allow_fb)),
+                        targets,
+                    )
+                )
+        verified = corrected = unconfirmed = 0
+        for ev, res in results:
+            if not res:
+                ev["date_verified"] = "unconfirmed"
+                unconfirmed += 1
+                continue
+            new_start = parse_iso_datetime_safe(str(res.get("start_iso", "")))
+            if new_start and res.get("confident"):
+                old_start = parse_iso_datetime_safe(str(ev.get("start_iso", "")))
+                changed = (
+                    old_start is None
+                    or old_start.date() != new_start.date()
+                    or abs((new_start - old_start).total_seconds()) > 3600
+                )
+                if changed:
+                    ev["start_iso"] = new_start.isoformat()
+                    new_end = parse_iso_datetime_safe(str(res.get("end_iso", "")))
+                    if new_end and new_end > new_start:
+                        ev["end_iso"] = new_end.isoformat()
+                    ev["date_verified"] = "corrected"
+                    corrected += 1
+                else:
+                    ev["date_verified"] = "verified"
+                    verified += 1
+            else:
+                ev["date_verified"] = ev.get("date_verified") or "unconfirmed"
+            # Backfill details discovered on the page.
+            if res.get("description") and not clean_ws(str(ev.get("description", ""))):
+                ev["description"] = clean_ws(str(res["description"]))[:2000]
+            if res.get("location") and not clean_ws(str(ev.get("location", ""))):
+                ev["location"] = res["location"]
+            if res.get("address") and not clean_ws(str(ev.get("address", ""))):
+                ev["address"] = res["address"]
+            for count_key in ("attending_count", "interested_count"):
+                if res.get(count_key) is not None:
+                    ev[count_key] = res[count_key]
+        log(f"🔗 Link date-check: verified={verified} corrected={corrected} unconfirmed={unconfirmed} (of {len(targets)} with links)")
+
+    # 2) Re-vet automotive using any description we just fetched (drop non-car).
+    if revet_automotive:
+        kept: List[dict] = []
+        dropped = 0
+        examples: List[str] = []
+        for ev in events:
+            if _trusted(ev.get("source", "")) or bool(ev.get("bypass_automotive_filter")):
+                kept.append(ev)
+                continue
+            verdict, reason = automotive_content_verdict(
+                str(ev.get("title", "")), str(ev.get("location", "")), str(ev.get("description", "")), cfg=cfg
+            )
+            if verdict == "keep":
+                kept.append(ev)
+            else:
+                dropped += 1
+                if len(examples) < 5:
+                    examples.append(f"{clean_ws(str(ev.get('title', '')))[:60]} ({reason})")
+        events = kept
+        if dropped:
+            log(f"🧹 Export re-vet removed non-automotive events: {dropped}")
+            log(f"   Examples: {examples}")
+
+    # 3) Merge same-day near-duplicates missed by exact dedupe.
+    events = merge_same_day_near_duplicates(events)
+
+    # 4) Full-address lookup (serial — Nominatim allows <=1 req/sec) then scoring.
+    if lookup_addresses:
+        filled = 0
+        for ev in events:
+            current = clean_ws(str(ev.get("address", "")))
+            if current and _has_full_street_address(current):
+                continue
+            location = clean_ws(str(ev.get("location", ""))) or current
+            formatted, latlon = geocode_full_address(location, clean_ws(str(ev.get("city_state", ""))), geocache)
+            if formatted:
+                ev["address"] = formatted
+                filled += 1
+                if latlon and (ev.get("lat") is None or ev.get("lon") is None):
+                    ev["lat"], ev["lon"] = latlon
+            elif not current:
+                ev["address"] = location
+        if filled:
+            log(f"🏠 Full address looked up for {filled} events")
+
+    for ev in events:
+        popularity, size, attendance = compute_popularity_and_size(ev)
+        ev["popularity"] = popularity
+        ev["size"] = size
+        ev["attendance"] = attendance
+
+    return events
+
+
 def write_csv(events: List[dict], path: str) -> None:
     fields = [
         "Event Name",
@@ -4535,11 +5331,14 @@ def write_csv(events: List[dict], path: str) -> None:
         "Address",
         "Closest City",
         "Callout",
+        "Size",
+        "Popularity",
+        "Attendance",
         "Source",
         "Event URL",
     ]
     with open(path, "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fields)
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         w.writeheader()
         for ev in events:
             w.writerow(ev)
@@ -4555,6 +5354,9 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "Address",
         "Closest City",
         "Callout",
+        "Size",
+        "Popularity",
+        "Attendance",
         "Source",
         "Event URL",
     ]
@@ -4565,13 +5367,19 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "end_time": ["end_time", "endtime", "End Time", "end time"],
         "categ": ["categ", "category", "type"],
         "miles_from_c": ["miles_from_c", "miles_from_cincy", "miles", "distance", "mileage"],
-        "location": ["location", "venue", "address", "Location"],
+        "location": ["location", "venue", "Location"],
+        "address": ["address", "Address", "full_address"],
         "link": ["link", "url", "event_url", "eventlink", "Event URL", "event url"],
         "source": ["source", "event_source", "source_name", "pulled_from", "Source"],
         "start_dt": ["start_iso", "iso", "start", "start_datetime", "startdatetime", "Start ISO", "start iso"],
         "end_dt": ["end_iso", "end", "end_datetime", "enddatetime", "End ISO", "end iso"],
         "closest_city": ["Closest City", "closest_city", "closest city"],
         "callout": ["Callout", "callout", "call_out", "call out"],
+        "size": ["size", "Size"],
+        "popularity": ["popularity", "Popularity", "popularity_score"],
+        "attendance": ["attendance", "Attendance"],
+        "attending_count": ["attending_count"],
+        "interested_count": ["interested_count"],
         "lat": ["lat", "latitude"],
         "lon": ["lon", "lng", "longitude"],
     }
@@ -4623,8 +5431,10 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         normalized = {col: "" for col in required_headers}
         normalized["Event Name"] = pick_value(row, alias_map["title"])
         raw_location = pick_value(row, alias_map["location"])
-        normalized["Location"] = raw_location
-        normalized["Address"] = raw_location
+        explicit_address = pick_value(row, alias_map["address"])
+        normalized["Location"] = raw_location or explicit_address
+        # Address is the full street address when we have one, else the venue text.
+        normalized["Address"] = explicit_address or raw_location
         normalized["Event URL"] = pick_value(row, alias_map["link"])
         normalized["Source"] = normalize_source(pick_value(row, alias_map["source"]) or "")
 
@@ -4644,6 +5454,30 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
             pick_value(row, alias_map["callout"])
             or detect_registration_callout(normalized["Event Name"], raw_location)
         )
+
+        # Size / Popularity / Attendance: use enriched values when present,
+        # otherwise compute a heuristic so every row (incl. manual sheet rows)
+        # is scored and sortable.
+        existing_size = pick_value(row, alias_map["size"])
+        existing_pop = pick_value(row, alias_map["popularity"])
+        existing_att = pick_value(row, alias_map["attendance"])
+        if existing_size and existing_pop:
+            normalized["Size"] = existing_size
+            normalized["Popularity"] = existing_pop
+            normalized["Attendance"] = existing_att
+        else:
+            calc_pop, calc_size, calc_att = compute_popularity_and_size({
+                "title": normalized["Event Name"],
+                "location": normalized["Location"],
+                "address": normalized["Address"],
+                "start_iso": pick_value(row, alias_map["start_dt"]),
+                "end_iso": pick_value(row, alias_map["end_dt"]),
+                "attending_count": pick_value(row, alias_map["attending_count"]),
+                "interested_count": pick_value(row, alias_map["interested_count"]),
+            })
+            normalized["Size"] = existing_size or calc_size
+            normalized["Popularity"] = existing_pop or str(calc_pop)
+            normalized["Attendance"] = existing_att or calc_att
 
         date_text = pick_value(row, alias_map["date"])
         start_time_text = pick_value(row, alias_map["start_time"])
@@ -4796,45 +5630,117 @@ def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
     sheets.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id, body=requests_body).execute()
 
 
-def verify_usps_address(location_text: str, city_state_text: str) -> Dict[str, str]:
-    """Return normalized USPS verification columns for the Events export.
+def _extract_address_components(text: str, city_state: str = "") -> Tuple[str, str, str]:
+    """Best-effort (street, city, state) from a venue/address string.
 
-    USPS validation is optional and can be enabled later; for now this helper
-    guarantees stable output fields and prevents runtime failures when address
-    verification is unavailable.
-    """
-    street = clean_ws(location_text)
-    city_state = clean_ws(city_state_text)
-
-    if not street:
-        return {
-            "status": "skipped_missing_location",
-            "street": "",
-            "city": "",
-            "state": "",
-            "zip5": "",
-            "zip4": "",
-            "formatted": "",
-            "error": "",
-        }
-
+    Prefers a US street-address pattern ("NNN Street, City, ST") found inside the
+    text; falls back to the city_state hint for city/state when the free text
+    lacks them."""
+    raw = clean_ws(text)
+    street = ""
     city = ""
     state = ""
-    m = re.match(r"^(.+?),\s*([A-Za-z]{2})$", city_state)
-    if m:
-        city = clean_ws(m.group(1))
-        state = clean_ws(m.group(2)).upper()
 
-    formatted_parts = [part for part in (street, city_state) if part]
+    hint = re.match(rf"^\s*(.+?),\s*({US_STATE_ABBR_RE})\s*$", clean_ws(city_state), flags=re.IGNORECASE)
+    if hint:
+        city = clean_ws(hint.group(1))
+        state = hint.group(2).upper()
+
+    full = re.search(
+        rf"(\d{{1,6}}\s+[^,]+?),\s*([^,]+?),\s*({US_STATE_ABBR_RE})\b",
+        raw,
+        flags=re.IGNORECASE,
+    )
+    if full:
+        street = clean_ws(full.group(1))
+        city = clean_ws(full.group(2)) or city
+        state = full.group(3).upper()
+        return street, city, state
+
+    street_only = re.search(
+        r"(\d{1,6}\s+[A-Za-z0-9.\-' ]+?"
+        r"(?:street|st|avenue|ave|road|rd|drive|dr|boulevard|blvd|lane|ln|way|pike|"
+        r"highway|hwy|court|ct|parkway|pkwy|circle|cir|trail|terrace|place|pl))\b",
+        raw,
+        flags=re.IGNORECASE,
+    )
+    if street_only:
+        street = clean_ws(street_only.group(1))
+    return street, city, state
+
+
+def verify_usps_address(location_text: str, city_state_text: str) -> Dict[str, str]:
+    """Verify/normalize a street address via the USPS Web Tools API.
+
+    Optional and off by default: without a ``USPS_USER_ID`` env var this returns
+    status ``unverified_missing_usps_user_id`` and makes no network call, so the
+    pipeline is unaffected. When configured, it returns USPS-canonical
+    street/city/state/ZIP+4 fields for the export."""
+    street_in = clean_ws(location_text)
+    if not street_in:
+        return {
+            "status": "skipped_missing_location",
+            "street": "", "city": "", "state": "", "zip5": "", "zip4": "",
+            "formatted": "", "error": "",
+        }
+
+    street, city, state = _extract_address_components(location_text, city_state_text)
+    user_id = clean_ws(os.getenv("USPS_USER_ID", ""))
+    if not user_id:
+        return {
+            "status": "unverified_missing_usps_user_id",
+            "street": street or street_in, "city": city, "state": state,
+            "zip5": "", "zip4": "",
+            "formatted": ", ".join(p for p in (street or street_in, clean_ws(city_state_text)) if p),
+            "error": "Missing USPS_USER_ID",
+        }
+
+    xml = (
+        f'<AddressValidateRequest USERID="{html.escape(user_id, quote=True)}">'
+        f"<Address ID='0'><Address1></Address1>"
+        f"<Address2>{html.escape(street or street_in)}</Address2>"
+        f"<City>{html.escape(city)}</City><State>{html.escape(state)}</State>"
+        f"<Zip5></Zip5><Zip4></Zip4></Address></AddressValidateRequest>"
+    )
+    try:
+        resp = requests.get(
+            "https://secure.shippingapis.com/ShippingAPI.dll",
+            params={"API": "Verify", "XML": xml},
+            timeout=20,
+        )
+        resp.raise_for_status()
+        root = ET.fromstring(resp.text)
+    except Exception as ex:
+        return {
+            "status": "error", "street": street or street_in, "city": city, "state": state,
+            "zip5": "", "zip4": "", "formatted": "", "error": clean_ws(str(ex))[:200],
+        }
+
+    err = root.find(".//Error")
+    if err is not None:
+        return {
+            "status": "not_found", "street": street or street_in, "city": city, "state": state,
+            "zip5": "", "zip4": "",
+            "formatted": "", "error": clean_ws((err.findtext("Description") or "USPS returned an error")),
+        }
+
+    def _txt(tag: str) -> str:
+        node = root.find(f".//{tag}")
+        return clean_ws(node.text) if node is not None and node.text else ""
+
+    out_street = _txt("Address2")
+    out_city = _txt("City")
+    out_state = _txt("State")
+    zip5 = _txt("Zip5")
+    zip4 = _txt("Zip4")
+    tail = f"{out_state} {zip5}".strip()
+    if zip4:
+        tail = f"{tail}-{zip4}"
+    formatted = ", ".join(p for p in (out_street, out_city, tail) if clean_ws(p))
     return {
-        "status": "not_configured",
-        "street": street,
-        "city": city,
-        "state": state,
-        "zip5": "",
-        "zip4": "",
-        "formatted": ", ".join(formatted_parts),
-        "error": "USPS verification not configured",
+        "status": "verified",
+        "street": out_street, "city": out_city, "state": out_state,
+        "zip5": zip5, "zip4": zip4, "formatted": formatted, "error": "",
     }
 
 MANUAL_SOURCE_TOKENS = {"manual", "manually_added", "user", "user_added"}
@@ -4876,7 +5782,7 @@ def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[d
     try:
         resp = sheets.spreadsheets().values().get(
             spreadsheetId=spreadsheet_id,
-            range="Events!A1:J4000",
+            range="Events!A1:M4000",
         ).execute()
     except Exception as ex:
         log(f"⚠️ Unable to read existing Events tab for manual-row preservation: {ex}")
@@ -4956,7 +5862,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         values.append([ev.get(h, "") for h in headers])
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
-    clear_range = "Events!A1:J"
+    clear_range = "Events!A1:M"
     sheets.spreadsheets().values().clear(
         spreadsheetId=spreadsheet_id,
         range=clear_range,
@@ -4971,11 +5877,11 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
         body={"values": values},
     ).execute()
 
-    # 3) Write a visible update stamp (column K is outside your table)
+    # 3) Write a visible update stamp (column O is outside the A:M table)
     stamp = f"Updated by bot: {now_et_iso()} | rows={len(values)-1}"
     sheets.spreadsheets().values().update(
         spreadsheetId=spreadsheet_id,
-        range="Events!K1",
+        range="Events!O1",
         valueInputOption="RAW",
         body={"values": [[stamp]]},
     ).execute()
@@ -4989,7 +5895,7 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
     log(f"🧽 Cleared Events sheet range {clear_range} then wrote {len(values)-1} rows")
     log(f"   Wrote {len(values)-1} events to Events!A1")
     log(f"   Preview A1:C5 = {got}")
-    log(f"   Stamp written to Events!J1 = {stamp}")
+    log(f"   Stamp written to Events!O1 = {stamp}")
 
 
 
@@ -5098,11 +6004,19 @@ def main():
         and clean_ws(str(src.get("bypass_automotive_filter", ""))).lower() in {"1", "true", "yes", "y"}
     }
 
+    def _source_trusted_automotive(source_name: str) -> bool:
+        """Bypass-flagged sources plus car-dedicated sources are trusted as
+        automotive even when a specific title lacks car keywords."""
+        name = clean_ws(str(source_name))
+        if name in source_bypass_automotive:
+            return True
+        return bool(source_is_car_dedicated(name, cfg))
+
     existing_before_focus_filter = len(existing)
     existing = [
         e
         for e in existing
-        if (e.source in source_bypass_automotive) or is_automotive_event_safe(e.title, e.location, cfg)
+        if _source_trusted_automotive(e.source) or is_automotive_event_safe(e.title, e.location, cfg)
     ]
     dropped_existing_non_automotive = existing_before_focus_filter - len(existing)
     if dropped_existing_non_automotive:
@@ -5151,6 +6065,8 @@ def main():
                 raw_events.extend(collect_screenshot_folder_events(source_with_context, diagnostics=diagnostics))
             elif stype == "facebook_page_events":
                 raw_events.extend(collect_facebook_page_events(source_with_context, diagnostics=diagnostics))
+            elif stype == "facebook_events_scroll":
+                raw_events.extend(collect_facebook_events_scroll(source_with_context, url_cache, diagnostics=diagnostics))
             elif stype == "web_search_serpapi":
                 raw_events.extend(collect_web_search_serpapi(source_with_context, url_cache, diagnostics=diagnostics))
             elif stype == "web_search_facebook_events_serpapi":
@@ -5229,7 +6145,7 @@ def main():
     merged = [
         ev
         for ev in merged
-        if (ev.source in source_bypass_automotive) or is_automotive_event_safe(ev.title, ev.location, cfg)
+        if _source_trusted_automotive(ev.source) or is_automotive_event_safe(ev.title, ev.location, cfg)
     ]
     dropped_merged_non_automotive = merged_before_focus_filter - len(merged)
     if dropped_merged_non_automotive:
@@ -5297,6 +6213,30 @@ def main():
         log(f"🗺️ Closest City backfilled for {closest_city_backfilled} events")
 
     merged_dicts = dedupe_export_rows(merged_dicts)
+
+    # Export-quality enrichment: verify each event's date/time against its link,
+    # look up a full street address, pull Facebook attendance, score popularity,
+    # and merge same-day near-duplicates. Trusted (bypass/car-dedicated) sources
+    # are exempt from the automotive re-vet.
+    enrich_enabled = clean_ws(os.getenv("ENABLE_EXPORT_ENRICHMENT", "1")).lower() not in ("0", "false", "no")
+    if enrich_enabled:
+        try:
+            merged_dicts = enrich_events_for_export(
+                merged_dicts,
+                geocache,
+                url_cache,
+                cfg,
+                verify_dates=clean_ws(os.getenv("ENABLE_LINK_DATE_CHECK", "1")).lower() not in ("0", "false", "no"),
+                lookup_addresses=clean_ws(os.getenv("ENABLE_ADDRESS_LOOKUP", "1")).lower() not in ("0", "false", "no"),
+                fetch_facebook=True,
+                revet_automotive=True,
+                max_workers=parse_int_env("EXPORT_ENRICH_WORKERS", 6),
+                trusted_sources=source_bypass_automotive,
+            )
+        except Exception as ex:
+            log_exception_context("Export enrichment failed (continuing with un-enriched rows)", ex)
+    else:
+        log("ℹ️ Export enrichment disabled (ENABLE_EXPORT_ENRICHMENT=0).")
 
     geocache = prune_cache_by_age(geocache, now_et, days=180, label="geocode_cache")
     url_cache = prune_cache_by_age(url_cache, now_et, days=180, label="url_cache")

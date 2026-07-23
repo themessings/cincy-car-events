@@ -1,5 +1,6 @@
 import json
 import unittest
+import yaml
 from collections import Counter
 from datetime import datetime
 from dateutil import tz
@@ -27,8 +28,13 @@ from scripts.events_collector import (
     load_facebook_targets,
     collect_ics,
     collect_google_sheet_events_import,
+    collect_serpapi_google_events,
     _parse_google_sheet_events_rows,
     to_event_items,
+    automotive_content_verdict,
+    compute_popularity_and_size,
+    merge_same_day_near_duplicates,
+    enrich_events_for_export,
     simplify_location,
     parse_dt,
     _extract_address_components,
@@ -354,8 +360,14 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         self.assertEqual(out[0].get("source_group_name"), "Cincy Cars Club")
 
     def test_main_calls_load_facebook_targets_with_force_reload(self):
+        cfg = {
+            "home": {"lat": 39.1031, "lon": -84.512},
+            "filters": {"lookahead_days": -1, "drop_past_days": 7, "local_max_miles": 105, "rally_max_miles": 600},
+            "categorization": {"local_keywords": [], "rally_keywords": []},
+            "sources": [],
+        }
         with patch("scripts.events_collector.load_facebook_targets", return_value={"page": [], "group": [], "non_facebook": []}) as mock_targets, patch(
-            "scripts.events_collector.load_yaml", return_value={"sources": []}
+            "scripts.events_collector.load_yaml", return_value=cfg
         ), patch(
             "scripts.events_collector.load_json", return_value={"events": []}
         ), patch(
@@ -364,6 +376,8 @@ class FacebookDiagnosticsTests(unittest.TestCase):
             "scripts.events_collector.to_event_items", return_value=[]
         ), patch(
             "scripts.events_collector.dedupe_merge", return_value=[]
+        ), patch(
+            "scripts.events_collector.enrich_events_for_export", side_effect=lambda events, *a, **k: events
         ), patch(
             "scripts.events_collector.save_json"
         ), patch(
@@ -425,6 +439,8 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         ), patch(
             "scripts.events_collector.prune_past_events", side_effect=lambda rows, now: rows
         ), patch(
+            "scripts.events_collector.enrich_events_for_export", side_effect=lambda events, *a, **k: events
+        ), patch(
             "scripts.events_collector.save_json"
         ) as mock_save, patch(
             "scripts.events_collector.write_csv"
@@ -438,7 +454,8 @@ class FacebookDiagnosticsTests(unittest.TestCase):
         payload_call = next(call for call in mock_save.call_args_list if str(call.args[0]).endswith("events.json"))
         payload = payload_call.args[1]
         self.assertEqual(payload["count"], 1)
-        self.assertEqual(payload["events"][0]["title"], "Downtown runnaz meet #2")
+        # Payload rows use the normalized export schema ("Event Name", not "title").
+        self.assertEqual(payload["events"][0]["Event Name"], "Downtown runnaz meet #2")
     def test_load_facebook_targets_accepts_force_reload(self):
         with patch("scripts.events_collector.load_facebook_pages", return_value=[]):
             out = load_facebook_targets(force_reload=True)
@@ -689,3 +706,160 @@ class AddressVerificationTests(unittest.TestCase):
         self.assertEqual(out["status"], "verified")
         self.assertEqual(out["zip5"], "45202")
         self.assertIn("CINCINNATI", out["formatted"])
+
+
+CFG = {
+    "filters": {
+        "non_automotive_exclude_keywords": ["farmers market"],
+        "car_dedicated_sources": ["OVR PCA", "SCCA"],
+        "trusted_event_platforms": ["facebook.com/events", "eventbrite.com"],
+    }
+}
+
+
+class AutomotiveVerdictTests(unittest.TestCase):
+    def test_word_boundary_avoids_substring_false_positives(self):
+        # "car" must NOT match inside healthcare / scarecrow / career.
+        self.assertEqual(automotive_content_verdict("Healthcare Career Fair", cfg=CFG)[0], "drop")
+        self.assertEqual(automotive_content_verdict("Scarecrow Festival", cfg=CFG)[0], "unknown")
+
+    def test_generic_meet_is_not_automotive(self):
+        # "meeting"/"meetup"/"meet up" must never read as the car keyword "meet".
+        self.assertNotEqual(automotive_content_verdict("Pug Meet Up Play Date", cfg=CFG)[0], "keep")
+        self.assertNotEqual(automotive_content_verdict("July Meeting - Lightning Talks", cfg=CFG)[0], "keep")
+
+    def test_full_config_excludes_known_non_car_meetups(self):
+        # With the real exclusion list, obvious non-car meetups are hard-dropped.
+        full_cfg = yaml.safe_load(open(Path(__file__).resolve().parents[1] / "config" / "sources.yml"))
+        self.assertEqual(automotive_content_verdict("Pug Meet Up Play Date", cfg=full_cfg)[0], "drop")
+        self.assertEqual(automotive_content_verdict("Medical Marijuana Meetup", cfg=full_cfg)[0], "drop")
+
+    def test_weak_keyword_needs_car_context(self):
+        # "meet" alone -> unknown; "car meet" / "BMW meet" -> keep.
+        self.assertEqual(automotive_content_verdict("Downtown Meet", cfg=CFG)[0], "unknown")
+        self.assertEqual(automotive_content_verdict("Exotic Car Meet", cfg=CFG)[0], "keep")
+
+    def test_strong_keyword_keeps(self):
+        for title in ("Cars and Coffee Cincinnati", "Northside Autocross", "BMW Car Club Meet"):
+            self.assertEqual(automotive_content_verdict(title, cfg=CFG)[0], "keep", title)
+
+    def test_strong_overrides_soft_exclusion_but_not_hard(self):
+        # A real car show at a farmers market survives (soft exclude); a job fair does not (hard).
+        self.assertEqual(automotive_content_verdict("Classic Car Show at the Farmers Market", cfg=CFG)[0], "keep")
+        self.assertEqual(automotive_content_verdict("Car Show Hiring Event", cfg=CFG)[0], "drop")
+
+    def test_source_name_does_not_grant_automotive_signal(self):
+        # Source "Meetup Cincy Cars" contains "cars" but must not pass a pug meetup.
+        ok, _ = evaluate_automotive_focus_event(
+            "Pug Meet Up Play Date", "", "Meetup Cincy Cars", "https://meetup.com/pugs", CFG
+        )
+        self.assertFalse(ok)
+
+    def test_car_dedicated_source_trusted_without_keyword(self):
+        # Title has no car keyword at all -> only the car-dedicated source keeps it.
+        self.assertEqual(automotive_content_verdict("Annual Member Picnic", cfg=CFG)[0], "unknown")
+        ok, reason = evaluate_automotive_focus_event(
+            "Annual Member Picnic", "", "OVR PCA Social Events (ICS)", "https://x/y", CFG
+        )
+        self.assertTrue(ok)
+        self.assertIn("car_dedicated_source", reason)
+
+    def test_description_rescues_generic_title(self):
+        ok, _ = evaluate_automotive_focus_event(
+            "Summer Showdown", "", "Eventbrite Cincy", "https://eventbrite.com/e/1",
+            CFG, description="Bring your muscle car and classic auto to this show.",
+        )
+        self.assertTrue(ok)
+
+
+class PopularityTests(unittest.TestCase):
+    def test_multiday_nationals_is_major(self):
+        pop, size, _ = compute_popularity_and_size({
+            "title": "57th Annual NSRA Street Rod Nationals",
+            "location": "Kentucky Exposition Center, Louisville, KY",
+            "start_iso": "2026-08-01T09:00:00-04:00",
+            "end_iso": "2026-08-03T17:00:00-04:00",
+        })
+        self.assertEqual(size, "Major")
+        self.assertGreaterEqual(pop, 75)
+
+    def test_weekly_cars_and_coffee_is_small_side(self):
+        pop, size, _ = compute_popularity_and_size({
+            "title": "Weekly Cars and Coffee",
+            "location": "Kings Auto Mall",
+            "start_iso": "2026-05-02T08:00:00-04:00",
+            "end_iso": "2026-05-02T10:00:00-04:00",
+        })
+        self.assertIn(size, {"Small", "Local"})
+        self.assertLess(pop, 50)
+
+    def test_facebook_counts_drive_attendance_and_popularity(self):
+        pop, size, attendance = compute_popularity_and_size({
+            "title": "Cars and Coffee",
+            "location": "Downtown",
+            "start_iso": "2026-05-02T08:00:00-04:00",
+            "end_iso": "2026-05-02T10:00:00-04:00",
+            "attending_count": 600,
+            "interested_count": 2400,
+        })
+        self.assertIn("600 going", attendance)
+        self.assertIn("2.4k interested", attendance)
+        self.assertGreaterEqual(pop, 75)  # big FB engagement outranks the small-event heuristic
+
+
+class NearDuplicateMergeTests(unittest.TestCase):
+    def _row(self, title, url="", address="", closest="Louisville, KY", start="2026-08-01T09:00:00-04:00"):
+        return {"title": title, "url": url, "address": address, "closest_city": closest, "start_iso": start, "location": ""}
+
+    def test_merges_same_day_similar_titles(self):
+        rows = [
+            self._row("57th NSRA Street Rod Nationals", url="https://a"),
+            self._row("57th Annual Street Rod Nationals", address="937 Phillips Ln, Louisville, KY 40209"),
+        ]
+        out = merge_same_day_near_duplicates(rows)
+        self.assertEqual(len(out), 1)
+        # Keeps the richer row (the one with a full address).
+        self.assertIn("Phillips", out[0]["address"])
+
+    def test_keeps_recurring_events_on_different_dates(self):
+        rows = [
+            self._row("Cars and Coffee Cincinnati", start="2026-05-02T08:00:00-04:00", closest="Cincinnati, OH"),
+            self._row("Cars and Coffee Cincinnati", start="2026-05-09T08:00:00-04:00", closest="Cincinnati, OH"),
+        ]
+        out = merge_same_day_near_duplicates(rows)
+        self.assertEqual(len(out), 2)
+
+    def test_keeps_different_events_same_day(self):
+        rows = [
+            self._row("Goodguys Nationals", closest="Columbus, OH"),
+            self._row("Pancake Breakfast Cruise In", closest="Columbus, OH"),
+        ]
+        out = merge_same_day_near_duplicates(rows)
+        self.assertEqual(len(out), 2)
+
+    def test_does_not_merge_numbered_series_on_same_day(self):
+        # "Day 3" vs "Day 4" differ only by a digit -> distinct occurrences.
+        rows = [
+            self._row("Rally North America - Day 3", closest="Cincinnati, OH"),
+            self._row("Rally North America - Day 4", closest="Cincinnati, OH"),
+        ]
+        out = merge_same_day_near_duplicates(rows)
+        self.assertEqual(len(out), 2)
+
+
+class ExportEnrichmentTests(unittest.TestCase):
+    def test_revet_drops_non_car_and_scores_rows(self):
+        events = [
+            {"title": "Cars and Coffee", "location": "Cincinnati, OH", "source": "Eventbrite Cincy",
+             "start_iso": "2026-05-02T08:00:00-04:00", "end_iso": "2026-05-02T10:00:00-04:00", "url": ""},
+            {"title": "Downtown Wine Walk", "location": "Cincinnati, OH", "source": "Eventbrite Cincy",
+             "start_iso": "2026-05-02T18:00:00-04:00", "end_iso": "2026-05-02T21:00:00-04:00", "url": ""},
+        ]
+        out = enrich_events_for_export(
+            events, {}, {}, CFG,
+            verify_dates=False, lookup_addresses=False, fetch_facebook=False, revet_automotive=True,
+        )
+        titles = {e["title"] for e in out}
+        self.assertIn("Cars and Coffee", titles)
+        self.assertNotIn("Downtown Wine Walk", titles)
+        self.assertTrue(all("popularity" in e and "size" in e for e in out))
