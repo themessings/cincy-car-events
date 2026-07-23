@@ -4348,5 +4348,72 @@
   "91355, USA": {
     "lat": "34.4010099",
     "lon": "-118.5533507"
+  },
+  "addr::colin’s coffee - 2812 fishinger rd, upper arlington, 43220": {
+    "formatted": "2812 Fishinger Road, Upper Arlington, OH 43221",
+    "latlon": [
+      40.0306913,
+      -83.0910774
+    ]
+  },
+  "addr::community park east - fairborn 691 e. dayton-yellow springs rd fairborn oh 45324": null,
+  "addr::storming crab": {
+    "formatted": "4809 Outer Loop, Louisville, KY 40219",
+    "latlon": [
+      38.1385832,
+      -85.6726221
+    ]
+  },
+  "addr::miami valley gaming": {
+    "formatted": "Union Road, Monroe, OH 45050",
+    "latlon": [
+      39.4432434,
+      -84.3200068
+    ]
+  },
+  "addr::quaker steak and lube 3737 stone creek blvd cincinnati oh 45251": null,
+  "addr::crestview hills town center, crestview hills town center, 2751 dixie hwy | crestview hills, ky": {
+    "formatted": "Dixie Highway, Crestview Hills, KY 41017",
+    "latlon": [
+      39.026104,
+      -84.5814972
+    ]
+  },
+  "addr::johnson county park 7248 s. picnic dr. nineveh in 46164": null,
+  "addr::7140 taylor street - liberty township, ohio 45069, liberty township, ohio 45069, oh 45069": null,
+  "addr::2nd st. miamisburg oh": {
+    "formatted": "South 2nd Street, Miamisburg, OH 45342",
+    "latlon": [
+      39.6389549,
+      -84.2878563
+    ]
+  },
+  "addr::400 wyoming ave, cincinnati, oh": {
+    "formatted": "Wyoming Avenue, Cincinnati, OH 45214",
+    "latlon": [
+      39.1238133,
+      -84.5742458
+    ]
+  },
+  "addr::land-grant brewing company": {
+    "formatted": "424 West Town Street, Columbus, OH 43215",
+    "latlon": [
+      39.957872,
+      -83.0115076
+    ]
+  },
+  "addr::historic crew stadium": {
+    "formatted": "1 Black and Gold Boulevard, Columbus, OH 43211",
+    "latlon": [
+      40.009468,
+      -82.9911382
+    ]
+  },
+  "addr::butler county fair": {
+    "formatted": "",
+    "latlon": [
+      39.3033258,
+      -84.5175541
+    ]
   }
 }
