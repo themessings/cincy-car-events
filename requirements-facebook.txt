@@ -1,0 +1,10 @@
+# Optional dependencies for the opt-in Facebook feed-scroll source
+# (type: facebook_events_scroll, gated by ENABLE_FACEBOOK_SCROLL=1).
+#
+# Install locally with:
+#   pip install -r requirements-facebook.txt
+#   python -m playwright install chromium
+#
+# In CI these are installed by the gated "Install Facebook feed-scroll runtime"
+# step in .github/workflows/car_events.yml.
+playwright==1.49.0

@@ -12961,5 +12961,3595 @@
   "https://www.grubhub.com/restaurant/rallys-4115-glenway-ave-cincinnati/2928344": {
     "fetched_at_iso": "2026-07-02T09:56:47.683612-04:00",
     "events": []
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-02/": {
+    "checked_at_iso": "2026-07-22T22:07:46.523459-04:00",
+    "result": {
+      "start_iso": "2026-07-02T17:00:00-04:00",
+      "end_iso": "2026-07-02T20:00:00-04:00",
+      "location": "Jefferson Street Jefferson Street Martinsville IN 46151",
+      "description": "Martinsville Cruise-in on the Square will take place in downtown Martinsville, running from 5:00 PM to 9:00 PM. Show parking will occupy Jefferson Street, stretching from Pike Street down toward...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://facebook.com/events/s/the-honda-indy-200-at-mid-ohio/817933141361693/": {
+    "checked_at_iso": "2026-07-22T22:07:48.011019-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-07-02/": {
+    "checked_at_iso": "2026-07-22T22:07:46.523237-04:00",
+    "result": {
+      "start_iso": "2026-07-02T17:00:00-04:00",
+      "end_iso": "2026-07-02T20:00:00-04:00",
+      "location": "Minford Dairy Bar Minford OH 45653",
+      "description": "Minford Dairy Bar hosts a weekly Cruise-In event every Thursday, featuring classic cars, muscle cars, trucks, and bikes. Attendees are encouraged to bring their rides and hang out, enjoying food,...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://kingoftheroads.events/": {
+    "checked_at_iso": "2026-07-22T22:07:48.031183-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/renegades-up-car-truck-bike-cr/2869461123391324/": {
+    "checked_at_iso": "2026-07-22T22:07:48.076816-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-07-02/": {
+    "checked_at_iso": "2026-07-22T22:07:46.523082-04:00",
+    "result": {
+      "start_iso": "2026-07-02T16:00:00-04:00",
+      "end_iso": "2026-07-02T19:00:00-04:00",
+      "location": "PREMIER Classic Auto Restoration 251 Eastwood Road Williamsburg OH 45176",
+      "description": "Every Thursday starting May 7, 2026, from 4 PM, the Premier Car &#038; Truck Cruise-In will take place at Premier Classic Auto Restoration. A food truck will be onsite.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/rockin-randalls-cruise-in/2026-07-02/": {
+    "checked_at_iso": "2026-07-22T22:07:46.523806-04:00",
+    "result": {
+      "start_iso": "2026-07-02T17:00:00-04:00",
+      "end_iso": "2026-07-02T20:00:00-04:00",
+      "location": "Liberty Countrymark 404 N Main Street Liberty IN 47353",
+      "description": "Rockin Randall&#8217;s CRUISE-IN will take place at Liberty Country Mark. The event is scheduled for every first Thursday, starting at 5:00 PM. Attendees can expect trophies, dash plaques, and door...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-07-02/": {
+    "checked_at_iso": "2026-07-22T22:07:46.523346-04:00",
+    "result": {
+      "start_iso": "2026-07-02T18:00:00-04:00",
+      "end_iso": "2026-07-02T21:00:00-04:00",
+      "location": "Alexandria Village Green Shopping Center Alexandria KY 41001",
+      "description": "The Alexandria Cruise-In will take place every Thursday from 5 p.m. to 8 p.m., starting May 7, 2026. The event will be held at the Alexandria Village Green Shopping Center....",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://facebook.com/events/s/car-show/1370098474930018/": {
+    "checked_at_iso": "2026-07-22T22:07:48.111408-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/renegades-up-car-truck-bike-8-mile-cruise-show/": {
+    "checked_at_iso": "2026-07-22T22:07:48.111098-04:00",
+    "result": {
+      "start_iso": "2026-07-03T16:00:00-04:00",
+      "end_iso": "2026-07-03T19:00:00-04:00",
+      "location": "Ohio Valley Antique Mall 7285 Dixie Highway Fairfield OH 45014",
+      "description": "Renegades Up! Car Truck &amp; Bike 8 Mile Cruise &amp; Show will take place on July 3, 2026, at the Ohio Valley Antique Mall. The event features a police escort...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/renegades-up-car-truck-bike-cruise-show/": {
+    "checked_at_iso": "2026-07-22T22:07:48.090966-04:00",
+    "result": {
+      "start_iso": "2026-07-03T16:00:00-04:00",
+      "end_iso": "2026-07-03T19:00:00-04:00",
+      "location": "BTW Community Center 1140 S. Front St. Hamilton OH 45011",
+      "description": "Renegades Up! will host a free 8-mile cruise and show for cars, trucks, and bikes. The event will feature a police escort. It is scheduled for July 3, 2026, from...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://facebook.com/events/s/july-26-first-friday-cruise-in/970294782079224/": {
+    "checked_at_iso": "2026-07-22T22:07:49.535599-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-07-03/": {
+    "checked_at_iso": "2026-07-22T22:07:48.111439-04:00",
+    "result": {
+      "start_iso": "2026-07-03T17:00:00-04:00",
+      "end_iso": "2026-07-03T20:00:00-04:00",
+      "location": "North Vernon North Vernon IN 47265",
+      "description": "Wheels &amp; Whoppers is a recurring event hosted by Joe Cole every Friday from 5 to 10 PM at Burger King.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-07-03/": {
+    "checked_at_iso": "2026-07-22T22:07:48.076861-04:00",
+    "result": {
+      "start_iso": "2026-07-03T16:00:00-04:00",
+      "end_iso": "2026-07-03T19:00:00-04:00",
+      "location": "Beavercreek 4051 Indian Ripple Road Beavercreek OH 45440",
+      "description": "The Vineyard Church will host the Friday Nights Beavercreek Cruise-In starting at 4 PM. The event features classic cars and hot rods, along with food and socializing opportunities.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-07-03/": {
+    "checked_at_iso": "2026-07-22T22:07:48.011155-04:00",
+    "result": {
+      "start_iso": "2026-07-03T07:30:00-04:00",
+      "end_iso": "2026-07-03T09:30:00-04:00",
+      "location": "Colin&#8217;s Coffee 2812 Fishinger Rd Upper Arlington 43220",
+      "description": "A weekly gathering of car enthusiasts &#8211; year-round, rain or shine &#8211; celebrating all things automotive! Every make, every model, every weekend. All are welcome.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://facebook.com/events/s/southern-indiana-car-coffee/2441859379604400/": {
+    "checked_at_iso": "2026-07-22T22:07:49.650026-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/independence-day-cars-coffee/3995639957406669/": {
+    "checked_at_iso": "2026-07-22T22:07:49.650060-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/2026-meet-4/1365680135475005/": {
+    "checked_at_iso": "2026-07-22T22:07:49.650082-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/4th-annual-grace-baptist-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:48.271547-04:00",
+    "result": {
+      "start_iso": "2026-07-03T17:00:00-04:00",
+      "end_iso": "2026-07-03T20:00:00-04:00",
+      "location": "Grace Baptist Church 2649 Q Ave New Castle IN 47362",
+      "description": "The 4th Annual Grace Baptist Car Show will take place on July 3, 2026, from 5:00 PM to 9:00 PM at Grace Baptist Church. Participants can enter for $10, with...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk": {
+    "checked_at_iso": "2026-07-22T22:07:49.650100-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:50.869682-04:00",
+    "result": {
+      "start_iso": "2026-07-04T08:00:00-04:00",
+      "end_iso": "2026-07-04T10:30:00-04:00",
+      "location": "Crestview Hills Town Center 2791 Town Center Blvd Crestview Hills KY 41017",
+      "description": "&#8220;Cincinnati Cars and Coffee&#8221; is a not for profit event to support the Greater Cincinnati Automotive Community. Located at the Crestview Hills Town Center, Cincinnati Cars and Coffee is every...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-07-03/": {
+    "checked_at_iso": "2026-07-22T22:07:49.638702-04:00",
+    "result": {
+      "start_iso": "2026-07-03T19:00:00-04:00",
+      "end_iso": "2026-07-03T23:00:00-04:00",
+      "location": "Bittersweet Center 8651 Preston Hwy Louisville KY 40219",
+      "description": "We’re expanding to new spots. Come out and kick it with us this Friday &amp; Saturday Night and every Friday &amp; Saturday Night at Bittersweet Shopping Center on Preston across...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:49.687558-04:00",
+    "result": {
+      "start_iso": "2026-07-04T08:00:00-04:00",
+      "end_iso": "2026-07-04T12:00:00-04:00",
+      "location": "Horsepower Farm Middletown 2227 Trinity Dr Monroe OH 45044",
+      "description": "Come and join us for Cars and Coffee Saturday at Horsepower Farm. Rain or Shine 8 AM-12 PM. Free Coffee and Donuts, donations accepted to support our charities. Thanks again...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/mcdonalds-sellersburg-2026-summer-car-shows/2026-07-03/": {
+    "checked_at_iso": "2026-07-22T22:07:49.535638-04:00",
+    "result": {
+      "start_iso": "2026-07-03T18:00:00-04:00",
+      "end_iso": "2026-07-03T21:00:00-04:00",
+      "location": "Sellersburg Sellersburg IN 47172",
+      "description": "The McDonald&#8217;s in Sellersburg will host a summer car show on the first Friday of each month from April to October. The events will begin at 6 p.m. each evening....",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-07-03/": {
+    "checked_at_iso": "2026-07-22T22:07:49.614977-04:00",
+    "result": {
+      "start_iso": "2026-07-03T19:00:00-04:00",
+      "end_iso": "2026-07-03T22:00:00-04:00",
+      "location": "Rip Rap Roadhouse 6024 Rip Rap Rd Dayton OH 45424",
+      "description": "KB Octane hosts Rip Rap Friday Night Cruise-In every Friday from 7 PM to 10 PM at Rip Rap Roadhouse. The event features food from Shake Shack, various vendors, and...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://facebook.com/events/s/no-limits-937-team-at-dayton-c/942074965601188/": {
+    "checked_at_iso": "2026-07-22T22:07:51.156263-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:51.146551-04:00",
+    "result": {
+      "start_iso": "2026-07-04T08:00:00-04:00",
+      "end_iso": "2026-07-04T11:00:00-04:00",
+      "location": "Lawrenceburg 68 Doughty Rd Lawrenceburg IN 47025",
+      "description": "Join us every Saturday morning at 4Speed on 50 located on Route 50 in Lawrenceburg Indiana, 1 mile west of the Hollywood casino. We will have FREE coffee, music, give...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://facebook.com/events/s/mid-summer-bash/788925330830163/": {
+    "checked_at_iso": "2026-07-22T22:07:52.606842-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:51.127881-04:00",
+    "result": {
+      "start_iso": "2026-07-04T08:00:00-04:00",
+      "end_iso": "2026-07-04T11:00:00-04:00",
+      "location": "3650 Olentangy River Road 3650 Olentangy River Road Columbus OH 43085",
+      "description": "Columbus Cars &#038; Coffee is a weekly event that gathers car enthusiasts to discuss their interest in vehicles while enjoying coffee. The meetings take place every Saturday from 8 am...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-n-coffee-meetup-1st-saturdays/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:51.156288-04:00",
+    "result": {
+      "start_iso": "2026-07-04T08:30:00-04:00",
+      "end_iso": "2026-07-04T11:00:00-04:00",
+      "location": "The Ohio State University Wexner Medical Center 3650 Olentangy River Rd Columbus OH 43214",
+      "description": "The Buckeye Lambda Cars &#038; Coffee Meetup will take place on the first Saturday of each month alongside the established Columbus Cars &#038; Coffee event. Participants will gather on the...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/southern-indiana-cars-and-coffee/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:51.136142-04:00",
+    "result": {
+      "start_iso": "2026-07-04T08:00:00-04:00",
+      "end_iso": "2026-07-04T10:00:00-04:00",
+      "location": "Storming Crabs &#8211; Clarksville, IN 1360 Veterans Pkwy Clarksville IN 47129",
+      "description": "Southern Indiana Cars &amp; Coffee – The Ultimate Gearhead Gathering! Start your engines and wake up your Saturday mornings with Southern Indiana Cars &amp; Coffee, sponsored by 5 Diamond Detailing!...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:51.069548-04:00",
+    "result": {
+      "start_iso": "2026-07-04T08:00:00-04:00",
+      "end_iso": "2026-07-04T12:00:00-04:00",
+      "location": "The Ohio State University Wexner Medical Center 3650 Olentangy River Rd Columbus OH 43214",
+      "description": "A weekly gathering of car enthusiasts &#8211; year-round, rain or shine &#8211; celebrating all things automotive! Every make, every model, every weekend. All are welcome.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:52.606904-04:00",
+    "result": {
+      "start_iso": "2026-07-04T09:00:00-04:00",
+      "end_iso": "2026-07-04T12:00:00-04:00",
+      "location": "The City Apartments 2875 Olentangy River Road Columbus OH 43202",
+      "description": "Home of Columbus Cars &amp; Coffee, every Saturday morning! Meet your friends at The City&#8230;rain, snow or shine.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://facebook.com/events/s/america-250-car-tractor-show/1995134004729510/": {
+    "checked_at_iso": "2026-07-22T22:07:54.169561-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/redbone-kustoms-presents-july-4th-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:52.671494-04:00",
+    "result": {
+      "start_iso": "2026-07-04T09:00:00-04:00",
+      "end_iso": "2026-07-04T12:00:00-04:00",
+      "location": "Blanchester Municipal 318 E Main St. Blanchester OH 45107",
+      "description": "Redbone Kustoms will host the July 4th Car Show at Blanchester Municipal. The event features Top 20 Awards. The car show is scheduled for July 4, 2026, from 9:00 AM...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/lexington-ky-cars-and-coffee/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:52.692101-04:00",
+    "result": {
+      "start_iso": "2026-07-04T09:00:00-04:00",
+      "end_iso": "2026-07-04T11:00:00-04:00",
+      "location": "Southland Christian Church &#8211; Lexington Campus 2349 Richmond Rd Lexington KY 40502",
+      "description": "We meet every first Saturday from 9-11 am. Events are posted the Monday prior. All makes/models welcome.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://www.meetup.com/lets-meet-at-the-park/events/315020742/": {
+    "checked_at_iso": "2026-07-22T22:07:54.204631-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/first-saturday-cars-and-coffee-lexington/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:52.682443-04:00",
+    "result": {
+      "start_iso": "2026-07-04T09:00:00-04:00",
+      "end_iso": "2026-07-04T11:00:00-04:00",
+      "location": "Blue Grass Stockyards Regional Marketplace 4561 Iron Works Pike Lexington KY 40511",
+      "description": "Our FSCC monthly gathering will be at our regular location, the Blue Grass Stockyards Regional Marketplace located at 4561 Iron Works Pike, Lexington, KY 40511. We will meet at the...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/muncie-cars-coffee-2026-season-10/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:52.742882-04:00",
+    "result": {
+      "start_iso": "2026-07-04T09:00:00-04:00",
+      "end_iso": "2026-07-04T12:00:00-04:00",
+      "location": "Muncie 3820 West Jackson Street Muncie IN 47302",
+      "description": "The 10th Anniversary of Muncie Cars &#038; Coffee will be held, celebrating a gathering of octane and caffeine enthusiasts. The event welcomes all makes, models, and years of vehicles. Participants...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/oreilly-auto-parts-car-show-west-milton-oh/": {
+    "checked_at_iso": "2026-07-22T22:07:54.193759-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:54.218826-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/bluegrass-outlawz-car-meet/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:54.204654-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/city-of-richmond-old-school-customs-cruisin-for-250-years-of-celebrating-america/": {
+    "checked_at_iso": "2026-07-22T22:07:54.243891-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/bewleys-garage-4th-of-july-cru/1768925360763360/": {
+    "checked_at_iso": "2026-07-22T22:07:54.276279-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:54.254260-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/take-back-the-strip-circleville-cruise-nights/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:54.254528-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/shelby-county-car-club-presents-monthly-cruise-in/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:54.255393-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:54.276313-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-07-05/": {
+    "checked_at_iso": "2026-07-22T22:07:54.287778-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-07-04/": {
+    "checked_at_iso": "2026-07-22T22:07:54.287321-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/freedom-fest-cruise-in/": {
+    "checked_at_iso": "2026-07-22T22:07:54.305202-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/the-point-on-main-street-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:54.313481-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/sunday-cruise-ins-with-nostalg/784721667583367/": {
+    "checked_at_iso": "2026-07-22T22:07:54.341561-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/cincinnati-camera-and-photography-club/events/312920370/": {
+    "checked_at_iso": "2026-07-22T22:07:54.341598-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-07-05/": {
+    "checked_at_iso": "2026-07-22T22:07:54.313382-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/firecracker-cruise-in/": {
+    "checked_at_iso": "2026-07-22T22:07:54.329511-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-07-07/": {
+    "checked_at_iso": "2026-07-22T22:07:54.341621-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/cincinnati-medical-marijuana-meetup/events/315431863/": {
+    "checked_at_iso": "2026-07-22T22:07:54.370996-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/thehumanconnectionhub/events/314569608/": {
+    "checked_at_iso": "2026-07-22T22:07:54.371027-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-07-07/": {
+    "checked_at_iso": "2026-07-22T22:07:54.349823-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-4/": {
+    "checked_at_iso": "2026-07-22T22:07:54.370625-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-07-08/": {
+    "checked_at_iso": "2026-07-22T22:07:54.371050-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/monthly-car-bike-lunch-cruise-in/2026-07-08/": {
+    "checked_at_iso": "2026-07-22T22:07:54.383372-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-07-08/": {
+    "checked_at_iso": "2026-07-22T22:07:54.404083-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-07-08/": {
+    "checked_at_iso": "2026-07-22T22:07:54.403779-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/daredevil-brewing-co-speedway-cruise-in/2026-07-08/": {
+    "checked_at_iso": "2026-07-22T22:07:54.418364-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-07-09/": {
+    "checked_at_iso": "2026-07-22T22:07:54.443384-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-07-09/": {
+    "checked_at_iso": "2026-07-22T22:07:54.442962-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/queencitysocialclub/events/315397590/": {
+    "checked_at_iso": "2026-07-22T22:07:54.475121-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-07-09/": {
+    "checked_at_iso": "2026-07-22T22:07:54.447222-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-09/": {
+    "checked_at_iso": "2026-07-22T22:07:54.474981-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cincinnati-region-it-spectacul/830259446262201/": {
+    "checked_at_iso": "2026-07-22T22:07:54.505149-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-07-10/": {
+    "checked_at_iso": "2026-07-22T22:07:54.505198-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/goodguys-28th-summit-racing-nationals-presented-by-grundy-insurance/": {
+    "checked_at_iso": "2026-07-22T22:07:54.533135-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-5/": {
+    "checked_at_iso": "2026-07-22T22:07:54.567855-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/cincinnati-nky-ladies-50/events/315122717/": {
+    "checked_at_iso": "2026-07-22T22:07:54.590878-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-07-10/": {
+    "checked_at_iso": "2026-07-22T22:07:54.590934-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/50s-cruise-in/": {
+    "checked_at_iso": "2026-07-22T22:07:54.618029-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-07-10/": {
+    "checked_at_iso": "2026-07-22T22:07:54.650458-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indiana-cruisers-monthly-cruise-the-square/2026-07-10/": {
+    "checked_at_iso": "2026-07-22T22:07:54.678257-04:00",
+    "result": null
+  },
+  "verify::https://calendar.google.com/calendar/ical/c_a760e8990a957e0b46577b4d91cc8fe42b0e84feb0447077ed79c1fdde24939d%40group.calendar.google.com/public/basic.ics": {
+    "checked_at_iso": "2026-07-22T22:07:54.475161-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/jackson-county-gear-grinders-muscle-hustle/2026-07-10/": {
+    "checked_at_iso": "2026-07-22T22:07:54.708474-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cruise-in-dream-maker-realty/": {
+    "checked_at_iso": "2026-07-22T22:07:54.729668-04:00",
+    "result": null
+  },
+  "verify::https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course": {
+    "checked_at_iso": "2026-07-22T22:07:54.483987-04:00",
+    "result": {
+      "start_iso": "2026-07-10T01:00:00-04:00",
+      "end_iso": "2026-07-11T00:59:59-04:00",
+      "location": "",
+      "description": "",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://facebook.com/events/s/indyscca-solo-points-event-4-i/1367301258490955/": {
+    "checked_at_iso": "2026-07-22T22:07:54.777492-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cincinnati-region-scca-1-hour-/752294304636527/": {
+    "checked_at_iso": "2026-07-22T22:07:54.777536-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/": {
+    "checked_at_iso": "2026-07-22T22:07:54.777565-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-07-10/": {
+    "checked_at_iso": "2026-07-22T22:07:54.751668-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-07-10/": {
+    "checked_at_iso": "2026-07-22T22:07:54.777318-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:54.777617-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:54.801166-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cincy-cool-cars-club-car-show/1223464389322097/": {
+    "checked_at_iso": "2026-07-22T22:07:54.838458-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:54.813078-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:54.812945-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincy-cool-city-cars-club-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:54.838510-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fly-in-drive-in-breakfast/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:54.846278-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/impd-north-district-presents-horsepower-and-heroes-car-show-cruise-in/": {
+    "checked_at_iso": "2026-07-22T22:07:54.847478-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/beaters-beauties-2026-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:54.889460-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:54.889312-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/the-morning-cruise/": {
+    "checked_at_iso": "2026-07-22T22:07:54.932020-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/richmond-ky-cars-coffee/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:54.927033-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warrior-wheels-custom-classic-car-truck-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:07:54.971594-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/jeff-340-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:54.971359-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/cincyhikingsocialclub/events/315413020/": {
+    "checked_at_iso": "2026-07-22T22:07:55.023880-04:00",
+    "result": null
+  },
+  "verify::https://rallynorthamerica.com/rally-events/": {
+    "checked_at_iso": "2026-07-22T22:07:54.876486-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/destination-cars-and-coffee/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:55.024042-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/7th-annual-freaki-tiki-kustom-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:55.024314-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/stance-car-cookout-3/858520520401623/": {
+    "checked_at_iso": "2026-07-22T22:07:55.076281-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/ultimate-auto-show-oakley/1658836658585759/": {
+    "checked_at_iso": "2026-07-22T22:07:55.076438-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/ultimate-auto-show-at-oakley-g/1658836658585759/": {
+    "checked_at_iso": "2026-07-22T22:07:55.076501-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/classic-car-show-9/": {
+    "checked_at_iso": "2026-07-22T22:07:55.075889-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/street-kingz-motorfest-part-3-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:55.075031-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:55.076530-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hillsboro-round-town-cruisers-cruise-nights-2026-2/": {
+    "checked_at_iso": "2026-07-22T22:07:55.122234-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-07-11/": {
+    "checked_at_iso": "2026-07-22T22:07:55.127082-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/mccordsville-cars-coffee/2026-07-12/": {
+    "checked_at_iso": "2026-07-22T22:07:55.127346-04:00",
+    "result": null
+  },
+  "verify::https://same as above": {
+    "checked_at_iso": "2026-07-22T22:07:55.169640-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-07-12/": {
+    "checked_at_iso": "2026-07-22T22:07:55.169969-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-07-12/": {
+    "checked_at_iso": "2026-07-22T22:07:55.169829-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/hhcc-x-porsche-club/1543769710548111/": {
+    "checked_at_iso": "2026-07-22T22:07:55.265906-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hot-rod-car-show-cruise-in-at-one-more-lounge/2026-07-12/": {
+    "checked_at_iso": "2026-07-22T22:07:55.265976-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/6th-annual-2026-purple-door-car-show-and-ice-cream-social/": {
+    "checked_at_iso": "2026-07-22T22:07:55.266147-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-07-14/": {
+    "checked_at_iso": "2026-07-22T22:07:55.327268-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/cingles-net-a-social-network-for-cincinnati-singles-over-45/events/315403347/": {
+    "checked_at_iso": "2026-07-22T22:07:55.401342-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-07-14/": {
+    "checked_at_iso": "2026-07-22T22:07:55.329622-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/four-bridges-cruise-in/2026-07-15/": {
+    "checked_at_iso": "2026-07-22T22:07:55.401869-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-07-15/": {
+    "checked_at_iso": "2026-07-22T22:07:55.401494-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-07-15/": {
+    "checked_at_iso": "2026-07-22T22:07:55.444682-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-07-15/": {
+    "checked_at_iso": "2026-07-22T22:07:55.444491-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-07-15/": {
+    "checked_at_iso": "2026-07-22T22:07:55.480475-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2026-arthritis-foundation-charity-auto-show/": {
+    "checked_at_iso": "2026-07-22T22:07:55.480634-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-07-16/": {
+    "checked_at_iso": "2026-07-22T22:07:55.526114-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-07-16/": {
+    "checked_at_iso": "2026-07-22T22:07:55.528874-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/festival-of-the-bells-car-truck-and-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:07:54.169610-04:00",
+    "result": {
+      "start_iso": "2026-07-04T10:00:00-04:00",
+      "end_iso": "2026-07-04T13:00:00-04:00",
+      "location": "Hillsboro 338 W Main St Hillsboro OH 45133",
+      "description": "The Festival of the Bells Car, Truck and Bike Show will take place in Hillsboro, Ohio, on July 4, 2026, from 10 a.m. to 2 p.m. Registration is onsite only,...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://www.meetup.com/cincinnati-pugs/events/314738888/": {
+    "checked_at_iso": "2026-07-22T22:07:55.591015-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-07-16/": {
+    "checked_at_iso": "2026-07-22T22:07:55.560499-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-16/": {
+    "checked_at_iso": "2026-07-22T22:07:55.563726-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/mt-gileads-annual-downtown-car/1011093661852820/": {
+    "checked_at_iso": "2026-07-22T22:07:55.672126-04:00",
+    "result": null
+  },
+  "verify::https://things-to-lou.com/events/nolimit-car-club-presents-firework-bash-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:54.287033-04:00",
+    "result": {
+      "start_iso": "2026-07-04T18:00:00-04:00",
+      "end_iso": "2026-07-04T21:00:00-04:00",
+      "location": "Carrie Gaulbert Cox Park 3730 River Road Louisville KY 40207",
+      "description": "&lt;p&gt;📅 July 4th ⏰ Meet starts @ 6PM 🎆 Fireworks @ 8:30PM More info here&lt;/p&gt;\\n",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.591055-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.671878-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/shepherdsville-cruise-in/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.672171-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/austin-dairy-queen-cruise-in/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.687936-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.685477-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/igniters-street-rods-friday-night-2026-summer-cruise-ins/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.773558-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/music-in-the-park-cruise-in-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:55.776944-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1280772053912863/": {
+    "checked_at_iso": "2026-07-22T22:07:55.825808-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/scottsburg-square-cruise-in/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.789198-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.789689-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.825922-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-07-17/": {
+    "checked_at_iso": "2026-07-22T22:07:55.825547-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.896599-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.896403-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/piqua-cars-coffee-x-brewed-brothers-coffee-2/": {
+    "checked_at_iso": "2026-07-22T22:07:55.912521-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-and-coffee/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.912341-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/gdcc-corvettes-coffee-at-natio/1835544663779664/": {
+    "checked_at_iso": "2026-07-22T22:07:55.961394-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/58th-annual-car-and-truck-show/": {
+    "checked_at_iso": "2026-07-22T22:07:55.931116-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.945424-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.961778-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hilliard-cars-and-coffee/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.974748-04:00",
+    "result": null
+  },
+  "verify::https://ticketnetwork.lusg.net/c/7381352/132208/2322?intsrc=APIG_896&prodsku=7494044&u=https%3A%2F%2Fwww.ticketnetwork.com%2Fen%2Fp%2F7494044": {
+    "checked_at_iso": "2026-07-22T22:07:55.169454-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-coffee-in-circleville/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.985843-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/umtr-at-edgewater-sports-park-/1222465236458437/": {
+    "checked_at_iso": "2026-07-22T22:07:56.023212-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/cincinnati-pugs/events/314738815/": {
+    "checked_at_iso": "2026-07-22T22:07:56.023279-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/sons-of-poseidon/events/312824581/": {
+    "checked_at_iso": "2026-07-22T22:07:56.023312-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/springfield-cars-and-coffee/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:55.992123-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2026-keeneland-concours-delegance/": {
+    "checked_at_iso": "2026-07-22T22:07:56.006671-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/oreilly-auto-parts-car-show-sidney-oh/": {
+    "checked_at_iso": "2026-07-22T22:07:56.023342-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/the-ohio-challengefka-balloonf/1539516784017605/": {
+    "checked_at_iso": "2026-07-22T22:07:56.060345-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-annual-car-show-urbana-moose-lodge/": {
+    "checked_at_iso": "2026-07-22T22:07:56.032137-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/sunset-showoff-8-at-kuhnle-mot/4130639707200382/": {
+    "checked_at_iso": "2026-07-22T22:07:56.066869-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/17th-annual-plumwood-c-c-c-u-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.041369-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/ohio-river-street-rodders-cruise-in-2/": {
+    "checked_at_iso": "2026-07-22T22:07:56.079149-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:56.066923-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/the-ohio-challengefka-balloonfest-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.060441-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:56.123832-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hillsboro-round-town-cruisers-cruise-nights-2026-3/": {
+    "checked_at_iso": "2026-07-22T22:07:56.124045-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/clarksville-steak-n-shake-cruise-in/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:56.211971-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:56.212607-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:56.212187-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/read-details-kenton-county-she/1226997656251881/": {
+    "checked_at_iso": "2026-07-22T22:07:56.269664-04:00",
+    "result": null
+  },
+  "verify::https://www.daytonlocal.com/events/corvette-cruise-in-air-force-museum/": {
+    "checked_at_iso": "2026-07-22T22:07:56.007944-04:00",
+    "result": {
+      "start_iso": "2026-08-15T09:00:00-04:00",
+      "end_iso": "2026-08-15T11:00:00-04:00",
+      "location": "National Museum of the U.S. Air Force 1100 Spaatz St. Wright-Patterson AFB OH 45433",
+      "description": "🚗🛩️ Corvette Cruise-In #1 – at the National Museum of the U.S. Air Force! 🛩️🚗 Free to spectators at the Air Force Museum!",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/octane-lexington/2026-07-18/": {
+    "checked_at_iso": "2026-07-22T22:07:56.269333-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fairfield-cars-and-coffee-2026/2026-07-19/": {
+    "checked_at_iso": "2026-07-22T22:07:56.269721-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-07-19/": {
+    "checked_at_iso": "2026-07-22T22:07:56.270112-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/downtown-waynesville-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.290204-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/anything-on-wheels-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.331807-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-07-19/": {
+    "checked_at_iso": "2026-07-22T22:07:56.332716-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/treaty-city-motorcycle-club-2026-car-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.343788-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in-2/2026-07-19/": {
+    "checked_at_iso": "2026-07-22T22:07:56.386702-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/pharaohs-of-kentucky-hooters-car-show/2026-07-19/": {
+    "checked_at_iso": "2026-07-22T22:07:56.396669-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-07-21/": {
+    "checked_at_iso": "2026-07-22T22:07:56.397135-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/classic-car-and-hot-rod-cruise/1512905010488992/": {
+    "checked_at_iso": "2026-07-22T22:07:56.437235-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-07-21/": {
+    "checked_at_iso": "2026-07-22T22:07:56.417281-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-07-22/": {
+    "checked_at_iso": "2026-07-22T22:07:56.436828-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-07-22/": {
+    "checked_at_iso": "2026-07-22T22:07:56.437302-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-07-22/": {
+    "checked_at_iso": "2026-07-22T22:07:56.473171-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-07-23/": {
+    "checked_at_iso": "2026-07-22T22:07:56.485335-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/gcpl-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.484807-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-07-23/": {
+    "checked_at_iso": "2026-07-22T22:07:56.544222-04:00",
+    "result": null
+  },
+  "verify::https://www.meetup.com/central-ohio-net-developers-group-condg/events/313792193/": {
+    "checked_at_iso": "2026-07-22T22:07:56.588211-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-23/": {
+    "checked_at_iso": "2026-07-22T22:07:56.562335-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-07-23/": {
+    "checked_at_iso": "2026-07-22T22:07:56.561898-04:00",
+    "result": null
+  },
+  "verify::https://—": {
+    "checked_at_iso": "2026-07-22T22:07:56.594462-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-07-24/": {
+    "checked_at_iso": "2026-07-22T22:07:56.588263-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-6/": {
+    "checked_at_iso": "2026-07-22T22:07:56.594837-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-07-24/": {
+    "checked_at_iso": "2026-07-22T22:07:56.594965-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/christmas-in-july-car-and-vendor-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.678441-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-07-24/": {
+    "checked_at_iso": "2026-07-22T22:07:56.695423-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/roundtown-cruisers-free-for-cruisers-and-spectators-2/2026-07-24/": {
+    "checked_at_iso": "2026-07-22T22:07:56.695229-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-07-24/": {
+    "checked_at_iso": "2026-07-22T22:07:56.724645-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/whipz-indiana-car-club-meet-n-greet-light-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.744614-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-07-24/": {
+    "checked_at_iso": "2026-07-22T22:07:56.744375-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-07-25/": {
+    "checked_at_iso": "2026-07-22T22:07:56.792240-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-07-25/": {
+    "checked_at_iso": "2026-07-22T22:07:56.791646-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-07-25/": {
+    "checked_at_iso": "2026-07-22T22:07:56.837707-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-07-25/": {
+    "checked_at_iso": "2026-07-22T22:07:56.838563-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/indianapolis-cars-coffee-hoste/971155262234357/": {
+    "checked_at_iso": "2026-07-22T22:07:56.911313-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/72nd-annual-antique-classic-ca/1028501906270938/": {
+    "checked_at_iso": "2026-07-22T22:07:56.911389-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/19th-annual-cowan-lions-club-car-truck-tractor-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.905935-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/8th-annual-back-the-heroes-rumble/": {
+    "checked_at_iso": "2026-07-22T22:07:56.911429-04:00",
+    "result": null
+  },
+  "verify::https://warrencountypost.com/g/lebanon-oh/e/329248/waynesville-annual-car-show": {
+    "checked_at_iso": "2026-07-22T22:07:56.332449-04:00",
+    "result": {
+      "start_iso": "2026-07-19T09:00:00-04:00",
+      "end_iso": "2026-07-19T11:00:00-04:00",
+      "location": "Downtown Waynesville Main Street Waynesville OH 45068",
+      "description": "The Waynesville Annual Car Show returns Sunday, July 19th 2026 from 9 AM to 1 PM, bringing that old-fashioned charm",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/annual-car-truck-bike-and-jeep-show/": {
+    "checked_at_iso": "2026-07-22T22:07:56.971513-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-07-25/": {
+    "checked_at_iso": "2026-07-22T22:07:56.971295-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/16th-whitetrash-and-whitewalls-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.022702-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-indiana-cars-and-coffee/2026-07-25/": {
+    "checked_at_iso": "2026-07-22T22:07:57.050114-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/whipz-indiana-car-club-7th-annual-open-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.050497-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/classic-axles-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.088250-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cars-in-the-commonwealth-2026-/905037448526758/": {
+    "checked_at_iso": "2026-07-22T22:07:57.191027-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/dublin-community-club-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.111391-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/8th-annual-officer-ciera-greene-memorial-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.111226-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/clayton-homes-of-chillicothe-second-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.191074-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2026-greene-county-parks-trails-classic-cars-cruise-ins/": {
+    "checked_at_iso": "2026-07-22T22:07:57.194405-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/zanesfield-summer-block-party/": {
+    "checked_at_iso": "2026-07-22T22:07:57.194783-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/butcher-block-presents-25th-july-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.217906-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-07-25/": {
+    "checked_at_iso": "2026-07-22T22:07:57.223181-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/car-chitecture-2026/": {
+    "checked_at_iso": "2026-07-22T22:07:57.227647-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/the-stable-summer-car-show-cruise-in-series-2/": {
+    "checked_at_iso": "2026-07-22T22:07:57.254039-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-coffee/2026-07-26/": {
+    "checked_at_iso": "2026-07-22T22:07:57.263408-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-07-25/": {
+    "checked_at_iso": "2026-07-22T22:07:57.263220-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-07-26/": {
+    "checked_at_iso": "2026-07-22T22:07:57.287894-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/southern-indiana-bar-crawl-poker-run/": {
+    "checked_at_iso": "2026-07-22T22:07:57.303071-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/limbo-contest-car-show-hosted-/1714091790036797/": {
+    "checked_at_iso": "2026-07-22T22:07:57.343378-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-07-26/": {
+    "checked_at_iso": "2026-07-22T22:07:57.303212-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chasing-dreams-for-kids-2nd-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.325569-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-07-28/": {
+    "checked_at_iso": "2026-07-22T22:07:57.343431-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-07-28/": {
+    "checked_at_iso": "2026-07-22T22:07:57.344375-04:00",
+    "result": null
+  },
+  "verify::https://www.greenecountyohio.org/event/wt-%26-ww-car-show/2572/": {
+    "checked_at_iso": "2026-07-22T22:07:56.760756-04:00",
+    "result": {
+      "start_iso": "2026-07-25T00:00:00-04:00",
+      "end_iso": "2026-07-25T00:00:00-04:00",
+      "location": "Community Park East - Fairborn 691 E. Dayton-Yellow Springs Rd Fairborn OH 45324",
+      "description": "Rev up your engines and cruise on over for a day of classic style, modern muscle, and everything in between! This car show brings together beautifully...",
+      "provider": "schema_org",
+      "confident": false
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-07-29/": {
+    "checked_at_iso": "2026-07-22T22:07:57.371529-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-07-29/": {
+    "checked_at_iso": "2026-07-22T22:07:57.371374-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-07-29/": {
+    "checked_at_iso": "2026-07-22T22:07:57.387526-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-07-29/": {
+    "checked_at_iso": "2026-07-22T22:07:57.405651-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-07-30/": {
+    "checked_at_iso": "2026-07-22T22:07:57.411850-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-07-30/": {
+    "checked_at_iso": "2026-07-22T22:07:57.429779-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-07-30/": {
+    "checked_at_iso": "2026-07-22T22:07:57.437434-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-30/": {
+    "checked_at_iso": "2026-07-22T22:07:57.478027-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-07-31/": {
+    "checked_at_iso": "2026-07-22T22:07:57.481039-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-7/": {
+    "checked_at_iso": "2026-07-22T22:07:57.505301-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/6th-annual-midwest-truck-nationals/": {
+    "checked_at_iso": "2026-07-22T22:07:57.509981-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-07-31/": {
+    "checked_at_iso": "2026-07-22T22:07:57.532618-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/roundtown-cruisers-free-for-cruisers-and-spectators/2026-07-31/": {
+    "checked_at_iso": "2026-07-22T22:07:57.546476-04:00",
+    "result": null
+  },
+  "verify::https://www.therechargerally.com/": {
+    "checked_at_iso": "2026-07-22T22:07:57.405776-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-07-31/": {
+    "checked_at_iso": "2026-07-22T22:07:57.563404-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in/2026-07-31/": {
+    "checked_at_iso": "2026-07-22T22:07:57.574169-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-07-31/": {
+    "checked_at_iso": "2026-07-22T22:07:57.599602-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-07-31/": {
+    "checked_at_iso": "2026-07-22T22:07:57.605171-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.612253-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.642556-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.628329-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.647349-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/dayton-cars-and-coffee-5-augus/1317688127222980/": {
+    "checked_at_iso": "2026-07-22T22:07:57.670798-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/southern-indiana-cars-and-coffee/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.653412-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/7th-annual-motors-and-rotors/3902418063394968/": {
+    "checked_at_iso": "2026-07-22T22:07:57.677902-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/spokes-to-speed-100-years-of-wheels/": {
+    "checked_at_iso": "2026-07-22T22:07:57.670647-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-n-coffee-meetup-1st-saturdays/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.670829-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.670322-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.677951-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/3rd-annual-woodys-radiator-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.696370-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/pickaway-county-32nd-degree-masons-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.696282-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/first-saturday-cars-and-coffee-lexington/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.696609-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lexington-ky-cars-and-coffee/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.708460-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/muncie-cars-coffee-2026-season-10/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.724732-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/sycamore-township-car-show/3546024762219789/": {
+    "checked_at_iso": "2026-07-22T22:07:57.756835-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/great-lakes-rockabilly-road-trip/": {
+    "checked_at_iso": "2026-07-22T22:07:57.725520-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/woodford-4-warriors/": {
+    "checked_at_iso": "2026-07-22T22:07:57.731251-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/united-car-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.725034-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/pickaway-county-32nd-degree-masons-present-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.757029-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.758162-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/bluegrass-outlawz-car-meet/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.757393-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rally-4-heroes/": {
+    "checked_at_iso": "2026-07-22T22:07:57.756872-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/take-back-the-strip-circleville-cruise-nights/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.785672-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.787301-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.785562-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/shelby-county-car-club-presents-monthly-cruise-in/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.786991-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/lfp-mvg-annual-car-show/1529777211997097/": {
+    "checked_at_iso": "2026-07-22T22:07:57.823457-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/44th-annual-all-ford-show/": {
+    "checked_at_iso": "2026-07-22T22:07:57.822504-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-08-02/": {
+    "checked_at_iso": "2026-07-22T22:07:57.823490-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-08-02/": {
+    "checked_at_iso": "2026-07-22T22:07:57.823080-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-08-01/": {
+    "checked_at_iso": "2026-07-22T22:07:57.822286-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/the-point-on-main-street-car-show-2/": {
+    "checked_at_iso": "2026-07-22T22:07:57.849987-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-08-05/": {
+    "checked_at_iso": "2026-07-22T22:07:57.851454-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-08-04/": {
+    "checked_at_iso": "2026-07-22T22:07:57.850413-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-08-04/": {
+    "checked_at_iso": "2026-07-22T22:07:57.851189-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/57th-nsra-street-rod-nationals/1204385181605828/": {
+    "checked_at_iso": "2026-07-22T22:07:57.877431-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-08-05/": {
+    "checked_at_iso": "2026-07-22T22:07:57.872885-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-08-05/": {
+    "checked_at_iso": "2026-07-22T22:07:57.876212-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rpm-performance-cruise-in/2026-08-05/": {
+    "checked_at_iso": "2026-07-22T22:07:57.876466-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/57th-annual-street-rod-nationals/": {
+    "checked_at_iso": "2026-07-22T22:07:57.877470-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-08-06/": {
+    "checked_at_iso": "2026-07-22T22:07:57.893609-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-08-06/": {
+    "checked_at_iso": "2026-07-22T22:07:57.901750-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-08-06/": {
+    "checked_at_iso": "2026-07-22T22:07:57.907022-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-08-06/": {
+    "checked_at_iso": "2026-07-22T22:07:57.910130-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rockin-randalls-cruise-in/2026-08-06/": {
+    "checked_at_iso": "2026-07-22T22:07:57.927851-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-08-07/": {
+    "checked_at_iso": "2026-07-22T22:07:57.930259-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-08-07/": {
+    "checked_at_iso": "2026-07-22T22:07:57.949561-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rumble-in-the-burg/": {
+    "checked_at_iso": "2026-07-22T22:07:57.965682-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-08-07/": {
+    "checked_at_iso": "2026-07-22T22:07:57.964478-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/mcdonalds-sellersburg-2026-summer-car-shows/2026-08-07/": {
+    "checked_at_iso": "2026-07-22T22:07:57.982379-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-08-07/": {
+    "checked_at_iso": "2026-07-22T22:07:57.999040-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-08-07/": {
+    "checked_at_iso": "2026-07-22T22:07:57.998680-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hoodlums-in-the-holler-car-show-extravaganza/": {
+    "checked_at_iso": "2026-07-22T22:07:58.017339-04:00",
+    "result": null
+  },
+  "verify::https://www.dynastyautoevents.com/event-details/dynasty-rally-2026": {
+    "checked_at_iso": "2026-07-22T22:07:55.961474-04:00",
+    "result": {
+      "start_iso": "2026-07-18T09:00:00-04:00",
+      "end_iso": "2026-07-20T18:00:00-04:00",
+      "location": "Location will be sent to ticket holders.",
+      "description": "Year 5 is here! Are you ready?",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.031601-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.042617-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.055300-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.058629-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cider-run-2026/": {
+    "checked_at_iso": "2026-07-22T22:07:58.069017-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/umtr-at-darana-raceway-kilkare/931346839710801/": {
+    "checked_at_iso": "2026-07-22T22:07:58.095363-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fly-in-drive-in-breakfast/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.076556-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/ft-thomas-corvette-club-25th-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.082345-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.095394-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/vettes-rods-classics-charity-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.106507-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/amvets-post-61-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.106427-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/richmond-ky-cars-coffee/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.121394-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/the-morning-cruise-2/": {
+    "checked_at_iso": "2026-07-22T22:07:58.135042-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-and-coffee-columbus/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.135170-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tanls-6th-annual-summer-dayz-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.145875-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/woodmen-wheels-car-show-outdoor-vendor-fair/": {
+    "checked_at_iso": "2026-07-22T22:07:58.156425-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/destination-cars-and-coffee/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.173180-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.186726-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-08-08/": {
+    "checked_at_iso": "2026-07-22T22:07:58.195716-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/benjamin-oglesby-memorial-car-truck-and-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.211543-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-08-09/": {
+    "checked_at_iso": "2026-07-22T22:07:58.219071-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-08-09/": {
+    "checked_at_iso": "2026-07-22T22:07:58.234254-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/5th-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.244829-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hot-rod-car-show-cruise-in-at-one-more-lounge/2026-08-09/": {
+    "checked_at_iso": "2026-07-22T22:07:58.260006-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-08-11/": {
+    "checked_at_iso": "2026-07-22T22:07:58.270280-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-08-11/": {
+    "checked_at_iso": "2026-07-22T22:07:58.289171-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-08-12/": {
+    "checked_at_iso": "2026-07-22T22:07:58.299183-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/monthly-car-bike-lunch-cruise-in/2026-08-12/": {
+    "checked_at_iso": "2026-07-22T22:07:58.315278-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-08-12/": {
+    "checked_at_iso": "2026-07-22T22:07:58.323295-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-08-12/": {
+    "checked_at_iso": "2026-07-22T22:07:58.343262-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/daredevil-brewing-co-speedway-cruise-in/2026-08-12/": {
+    "checked_at_iso": "2026-07-22T22:07:58.349937-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-08-12/": {
+    "checked_at_iso": "2026-07-22T22:07:58.375350-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-08-13/": {
+    "checked_at_iso": "2026-07-22T22:07:58.387701-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-08-13/": {
+    "checked_at_iso": "2026-07-22T22:07:58.405460-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-08-13/": {
+    "checked_at_iso": "2026-07-22T22:07:58.416298-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-08-13/": {
+    "checked_at_iso": "2026-07-22T22:07:58.428402-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-08-14/": {
+    "checked_at_iso": "2026-07-22T22:07:58.444191-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-08-14/": {
+    "checked_at_iso": "2026-07-22T22:07:58.462343-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-08-14/": {
+    "checked_at_iso": "2026-07-22T22:07:58.472811-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indiana-cruisers-monthly-cruise-the-square/2026-08-14/": {
+    "checked_at_iso": "2026-07-22T22:07:58.490115-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/jackson-county-gear-grinders-muscle-hustle/2026-08-14/": {
+    "checked_at_iso": "2026-07-22T22:07:58.502670-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-08-14/": {
+    "checked_at_iso": "2026-07-22T22:07:58.523119-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cruise-in-dream-maker-realty-2/": {
+    "checked_at_iso": "2026-07-22T22:07:58.520296-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-08-14/": {
+    "checked_at_iso": "2026-07-22T22:07:58.550330-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.550487-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.590161-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.590024-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-and-coffee/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.616583-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.618735-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.645239-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2026-hoosier-truck-rally/": {
+    "checked_at_iso": "2026-07-22T22:07:58.643922-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hilliard-cars-and-coffee/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.673131-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-coffee-in-circleville/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.673285-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/logan-elm-music-boosters-annual-cars-trucks-motorcycles-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.701737-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/springfield-cars-and-coffee/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.701232-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.733282-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/30th-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.733138-04:00",
+    "result": null
+  },
+  "verify::https://visitindiana.in.gov/event/woodmen-wheels-car-show-and-outdoor-vendor-fair/30922/": {
+    "checked_at_iso": "2026-07-22T22:07:58.028100-04:00",
+    "result": {
+      "start_iso": "2026-08-08T00:00:00-04:00",
+      "end_iso": "2026-08-08T00:00:00-04:00",
+      "location": "Greenwood High School 615 W. Smith Valley Road Greenwood IN 46142",
+      "description": "Rev up your engines and bring the whole family out to the Woodmen Wheels Car Show &amp; Outdoor Vendor Fair on Saturday, August 8th, 2026 at Greenwood...",
+      "provider": "schema_org",
+      "confident": false
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/event/hillsboro-round-town-cruisers-cruise-nights-2026-4/": {
+    "checked_at_iso": "2026-07-22T22:07:58.758864-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.758704-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/car-show-26/": {
+    "checked_at_iso": "2026-07-22T22:07:58.816849-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/clarksville-steak-n-shake-cruise-in/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.823931-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-annual-charlie-lyons-car-cruise/": {
+    "checked_at_iso": "2026-07-22T22:07:58.817026-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/octane-lexington/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.845363-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.845175-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-08-15/": {
+    "checked_at_iso": "2026-07-22T22:07:58.844880-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/mccordsville-cars-coffee/2026-08-16/": {
+    "checked_at_iso": "2026-07-22T22:07:58.870076-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/erlanger-lions-club-1st-annual-car-charity-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.869781-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fairfield-cars-and-coffee-2026/2026-08-16/": {
+    "checked_at_iso": "2026-07-22T22:07:58.870491-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-08-16/": {
+    "checked_at_iso": "2026-07-22T22:07:58.896072-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/st-marys-summerfest-cruise-in/": {
+    "checked_at_iso": "2026-07-22T22:07:58.896997-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-08-16/": {
+    "checked_at_iso": "2026-07-22T22:07:58.896596-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/pharaohs-of-kentucky-hooters-car-show/2026-08-16/": {
+    "checked_at_iso": "2026-07-22T22:07:58.920324-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/aladdin-shrines-car-truck-bike-jeep-show/": {
+    "checked_at_iso": "2026-07-22T22:07:58.919180-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in-2/2026-08-16/": {
+    "checked_at_iso": "2026-07-22T22:07:58.919493-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-08-18/": {
+    "checked_at_iso": "2026-07-22T22:07:58.946310-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-08-18/": {
+    "checked_at_iso": "2026-07-22T22:07:58.946626-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-08-19/": {
+    "checked_at_iso": "2026-07-22T22:07:58.947213-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-08-19/": {
+    "checked_at_iso": "2026-07-22T22:07:58.974539-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-08-19/": {
+    "checked_at_iso": "2026-07-22T22:07:58.976403-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/four-bridges-cruise-in/2026-08-19/": {
+    "checked_at_iso": "2026-07-22T22:07:58.974233-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-08-20/": {
+    "checked_at_iso": "2026-07-22T22:07:59.004471-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/northridge-lions-club-cruise-in-2/": {
+    "checked_at_iso": "2026-07-22T22:07:59.004894-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-08-20/": {
+    "checked_at_iso": "2026-07-22T22:07:59.003980-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.035570-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-08-20/": {
+    "checked_at_iso": "2026-07-22T22:07:59.034485-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-08-20/": {
+    "checked_at_iso": "2026-07-22T22:07:59.034175-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.062114-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/centerville-archway-days-vehicle-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.062674-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/shepherdsville-cruise-in/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.062938-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.088081-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/igniters-street-rods-friday-night-2026-summer-cruise-ins/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.097613-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/austin-dairy-queen-cruise-in/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.094763-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/scottsburg-square-cruise-in/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.114651-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.137358-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-08-21/": {
+    "checked_at_iso": "2026-07-22T22:07:59.137218-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-08-22/": {
+    "checked_at_iso": "2026-07-22T22:07:59.167355-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-08-22/": {
+    "checked_at_iso": "2026-07-22T22:07:59.184926-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-08-22/": {
+    "checked_at_iso": "2026-07-22T22:07:59.185541-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-08-22/": {
+    "checked_at_iso": "2026-07-22T22:07:59.207927-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cynthiana-rod-run/": {
+    "checked_at_iso": "2026-07-22T22:07:59.228997-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-08-22/": {
+    "checked_at_iso": "2026-07-22T22:07:59.228049-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/2nd-st-car-meet-downtown-miami/2115866132522790/": {
+    "checked_at_iso": "2026-07-22T22:07:59.251092-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-indiana-cars-and-coffee/2026-08-22/": {
+    "checked_at_iso": "2026-07-22T22:07:59.237241-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-08-22/": {
+    "checked_at_iso": "2026-07-22T22:07:59.251145-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/purple-door-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.250867-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-08-22/": {
+    "checked_at_iso": "2026-07-22T22:07:59.258717-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-08-23/": {
+    "checked_at_iso": "2026-07-22T22:07:59.284452-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-coffee-2/2026-08-23/": {
+    "checked_at_iso": "2026-07-22T22:07:59.283647-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/park-and-rides-2026-for-heroes/": {
+    "checked_at_iso": "2026-07-22T22:07:59.294380-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-08-23/": {
+    "checked_at_iso": "2026-07-22T22:07:59.312127-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/12th-annual-sweet-n-low-customs-wheels-of-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.312615-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/andons-pub-1st-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.319596-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-08-25/": {
+    "checked_at_iso": "2026-07-22T22:07:59.336368-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-08-25/": {
+    "checked_at_iso": "2026-07-22T22:07:59.336266-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-08-26/": {
+    "checked_at_iso": "2026-07-22T22:07:59.346504-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-08-26/": {
+    "checked_at_iso": "2026-07-22T22:07:59.356600-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-08-26/": {
+    "checked_at_iso": "2026-07-22T22:07:59.356339-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-08-26/": {
+    "checked_at_iso": "2026-07-22T22:07:59.369216-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-08-27/": {
+    "checked_at_iso": "2026-07-22T22:07:59.379821-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-08-27/": {
+    "checked_at_iso": "2026-07-22T22:07:59.379730-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-08-27/": {
+    "checked_at_iso": "2026-07-22T22:07:59.407517-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-08-28/": {
+    "checked_at_iso": "2026-07-22T22:07:59.459827-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-08-27/": {
+    "checked_at_iso": "2026-07-22T22:07:59.459256-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-08-28/": {
+    "checked_at_iso": "2026-07-22T22:07:59.491501-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-08-28/": {
+    "checked_at_iso": "2026-07-22T22:07:59.509543-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/roundtown-cruisers-free-for-cruisers-and-spectators/2026-08-28/": {
+    "checked_at_iso": "2026-07-22T22:07:59.508843-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in/2026-08-28/": {
+    "checked_at_iso": "2026-07-22T22:07:59.521099-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/4th-annual-new-castle-first-assembly-cruise-in/": {
+    "checked_at_iso": "2026-07-22T22:07:59.532508-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-08-28/": {
+    "checked_at_iso": "2026-07-22T22:07:59.536377-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-08-28/": {
+    "checked_at_iso": "2026-07-22T22:07:59.546043-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.560897-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.566299-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.574436-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/bob-groh-memorial-car-truck-motorcycle-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.585473-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.592391-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.596863-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/corvette-connection-greater-ci/1429612775369342/": {
+    "checked_at_iso": "2026-07-22T22:07:59.627489-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/zion-cmc-cruise-in/27967158486235192/": {
+    "checked_at_iso": "2026-07-22T22:07:59.627543-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/4th-annual-car-and-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.621686-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/vaded-street-circuit-ohio-2026/4616674298560484/": {
+    "checked_at_iso": "2026-07-22T22:07:59.649864-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cruzin-for-autism-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.618133-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/calvary-christian-church-2nd-annual-drive-for-hope-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.627578-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.651768-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/american-legion-st-marys-car-cruz-in/": {
+    "checked_at_iso": "2026-07-22T22:07:59.650294-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/11th-annual-crafts-and-critters-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.649912-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.682230-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.681905-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/ohio-river-street-rodders-cruise-in-3/": {
+    "checked_at_iso": "2026-07-22T22:07:59.681373-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-08-29/": {
+    "checked_at_iso": "2026-07-22T22:07:59.708180-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-08-30/": {
+    "checked_at_iso": "2026-07-22T22:07:59.715095-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-coffee/2026-08-30/": {
+    "checked_at_iso": "2026-07-22T22:07:59.714937-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-08-30/": {
+    "checked_at_iso": "2026-07-22T22:07:59.736512-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/6th-annual-motor-madness-charity-car-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.739915-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-09-01/": {
+    "checked_at_iso": "2026-07-22T22:07:59.743035-04:00",
+    "result": null
+  },
+  "verify::https://cincyscca.com/rally-cross/": {
+    "checked_at_iso": "2026-07-22T22:07:57.937048-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-09-01/": {
+    "checked_at_iso": "2026-07-22T22:07:59.757643-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/nhra-us-nationals/2060031824913660/": {
+    "checked_at_iso": "2026-07-22T22:07:59.786672-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-09-02/": {
+    "checked_at_iso": "2026-07-22T22:07:59.765154-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-09-02/": {
+    "checked_at_iso": "2026-07-22T22:07:59.770526-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-09-02/": {
+    "checked_at_iso": "2026-07-22T22:07:59.783611-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rpm-performance-cruise-in/2026-09-02/": {
+    "checked_at_iso": "2026-07-22T22:07:59.784049-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-09-03/": {
+    "checked_at_iso": "2026-07-22T22:07:59.786724-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-09-03/": {
+    "checked_at_iso": "2026-07-22T22:07:59.790730-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/nhra-us-nationals/1280461794242719/": {
+    "checked_at_iso": "2026-07-22T22:07:59.818250-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-09-03/": {
+    "checked_at_iso": "2026-07-22T22:07:59.797186-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-09-04/": {
+    "checked_at_iso": "2026-07-22T22:07:59.818312-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-09-04/": {
+    "checked_at_iso": "2026-07-22T22:07:59.815789-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rockin-randalls-cruise-in/2026-09-03/": {
+    "checked_at_iso": "2026-07-22T22:07:59.815218-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-09-03/": {
+    "checked_at_iso": "2026-07-22T22:07:59.814770-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-09-04/": {
+    "checked_at_iso": "2026-07-22T22:07:59.821126-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.850884-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/mcdonalds-sellersburg-2026-summer-car-shows/2026-09-04/": {
+    "checked_at_iso": "2026-07-22T22:07:59.846931-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-09-04/": {
+    "checked_at_iso": "2026-07-22T22:07:59.847108-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-09-04/": {
+    "checked_at_iso": "2026-07-22T22:07:59.847782-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.847932-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/the-fast-parts-grand-prix-at-m/1173981004805186/": {
+    "checked_at_iso": "2026-07-22T22:07:59.884192-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.878940-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.882942-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-n-coffee-meetup-1st-saturdays/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.884237-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.882252-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/southern-indiana-cars-and-coffee/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.882698-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kruegers-second-annual-car-truck-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:07:59.921692-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lexington-ky-cars-and-coffee/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.922491-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/first-saturday-cars-and-coffee-lexington/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.922396-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.910026-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hometown-heroes-car-show-mechanicsburg/": {
+    "checked_at_iso": "2026-07-22T22:07:59.921583-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/kentuckiana-showdown/750300924600734/": {
+    "checked_at_iso": "2026-07-22T22:07:59.965806-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hullabaloo/": {
+    "checked_at_iso": "2026-07-22T22:07:59.957833-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/muncie-cars-coffee-2026-season-10/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.957964-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/bluegrass-outlawz-car-meet/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.966115-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cars-night-out-sept/2908856852642683/": {
+    "checked_at_iso": "2026-07-22T22:07:59.997996-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/all-out-war-motorsports-festiv/2317196702145427/": {
+    "checked_at_iso": "2026-07-22T22:07:59.998046-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/conkey-classic/": {
+    "checked_at_iso": "2026-07-22T22:07:59.965853-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.966450-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/take-back-the-strip-circleville-cruise-nights/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.995321-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.998078-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/shelby-county-car-club-presents-monthly-cruise-in/2026-09-05/": {
+    "checked_at_iso": "2026-07-22T22:07:59.997478-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-06/": {
+    "checked_at_iso": "2026-07-22T22:08:00.000258-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-09-06/": {
+    "checked_at_iso": "2026-07-22T22:07:59.998977-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-09-08/": {
+    "checked_at_iso": "2026-07-22T22:08:00.026003-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/monthly-car-bike-lunch-cruise-in/2026-09-09/": {
+    "checked_at_iso": "2026-07-22T22:08:00.035470-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-09-08/": {
+    "checked_at_iso": "2026-07-22T22:08:00.034079-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-09-09/": {
+    "checked_at_iso": "2026-07-22T22:08:00.036538-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-09-09/": {
+    "checked_at_iso": "2026-07-22T22:08:00.034416-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-09-10/": {
+    "checked_at_iso": "2026-07-22T22:08:00.064203-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-09-10/": {
+    "checked_at_iso": "2026-07-22T22:08:00.064685-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-09-09/": {
+    "checked_at_iso": "2026-07-22T22:08:00.060188-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/daredevil-brewing-co-speedway-cruise-in/2026-09-09/": {
+    "checked_at_iso": "2026-07-22T22:08:00.063281-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-09-09/": {
+    "checked_at_iso": "2026-07-22T22:08:00.063677-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-09-10/": {
+    "checked_at_iso": "2026-07-22T22:08:00.098117-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-09-10/": {
+    "checked_at_iso": "2026-07-22T22:08:00.102381-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-09-11/": {
+    "checked_at_iso": "2026-07-22T22:08:00.102505-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-09-11/": {
+    "checked_at_iso": "2026-07-22T22:08:00.103771-04:00",
+    "result": null
+  },
+  "verify::https://ridewithrandy.org/": {
+    "checked_at_iso": "2026-07-22T22:08:00.102892-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-09-11/": {
+    "checked_at_iso": "2026-07-22T22:08:00.129528-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indiana-cruisers-monthly-cruise-the-square/2026-09-11/": {
+    "checked_at_iso": "2026-07-22T22:08:00.137910-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/jackson-county-gear-grinders-muscle-hustle/2026-09-11/": {
+    "checked_at_iso": "2026-07-22T22:08:00.138344-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-09-11/": {
+    "checked_at_iso": "2026-07-22T22:08:00.139086-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-09-11/": {
+    "checked_at_iso": "2026-07-22T22:08:00.140578-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.164658-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.163012-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.162895-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fly-in-drive-in-breakfast/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.171914-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.171139-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/dallara-cars-coffee/": {
+    "checked_at_iso": "2026-07-22T22:08:00.191014-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.201375-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/springfield-cars-and-coffee/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.202081-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/24th-annual-rcc-car-show-reunion/": {
+    "checked_at_iso": "2026-07-22T22:08:00.225253-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/bristol-village-2026-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.225906-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/gratis-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.236492-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/westside-lowriders-annual-picn/26043252652002417/": {
+    "checked_at_iso": "2026-07-22T22:08:00.269576-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/miami-meadows-park-veterans-appreciation-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.245260-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/4th-annual-chasing-sunsets-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.258537-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/destination-cars-and-coffee/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.258752-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/richmond-ky-cars-coffee/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.252993-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/south-bloomfield-elementary-ptos-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.269627-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cruisin-for-christ-2nd-annual-car-truck-and-motorcycle-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.276585-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cruisen-for-cancer/": {
+    "checked_at_iso": "2026-07-22T22:08:00.285947-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.286745-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.287299-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.295567-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-09-12/": {
+    "checked_at_iso": "2026-07-22T22:08:00.303383-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-09-13/": {
+    "checked_at_iso": "2026-07-22T22:08:00.312086-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-13/": {
+    "checked_at_iso": "2026-07-22T22:08:00.318859-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-british-car-day/": {
+    "checked_at_iso": "2026-07-22T22:08:00.316917-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/united-ford-owners-15th-annual-all-ohio-ford-show-2026/": {
+    "checked_at_iso": "2026-07-22T22:08:00.324741-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/luvd-ones-ohio-pony-wagon-day-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.333863-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hot-rod-car-show-cruise-in-at-one-more-lounge/2026-09-13/": {
+    "checked_at_iso": "2026-07-22T22:08:00.339137-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in-2/2026-09-13/": {
+    "checked_at_iso": "2026-07-22T22:08:00.343795-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-8/": {
+    "checked_at_iso": "2026-07-22T22:08:00.345863-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-09-15/": {
+    "checked_at_iso": "2026-07-22T22:08:00.354502-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-09-15/": {
+    "checked_at_iso": "2026-07-22T22:08:00.362393-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-09-16/": {
+    "checked_at_iso": "2026-07-22T22:08:00.365398-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/four-bridges-cruise-in/2026-09-16/": {
+    "checked_at_iso": "2026-07-22T22:08:00.371015-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-09-16/": {
+    "checked_at_iso": "2026-07-22T22:08:00.373681-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-09-16/": {
+    "checked_at_iso": "2026-07-22T22:08:00.381270-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-09-17/": {
+    "checked_at_iso": "2026-07-22T22:08:00.387005-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-09-17/": {
+    "checked_at_iso": "2026-07-22T22:08:00.393221-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/northridge-lions-club-cruise-in-3/": {
+    "checked_at_iso": "2026-07-22T22:08:00.400050-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-09-17/": {
+    "checked_at_iso": "2026-07-22T22:08:00.403204-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-09-17/": {
+    "checked_at_iso": "2026-07-22T22:08:00.413774-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/the-hoosier-2026-vintage-wheels-swap-meet-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.423546-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.430938-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.435898-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cruise-in-to-butler-township/": {
+    "checked_at_iso": "2026-07-22T22:08:00.437361-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/shepherdsville-cruise-in/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.450081-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-9/": {
+    "checked_at_iso": "2026-07-22T22:08:00.449685-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/igniters-street-rods-friday-night-2026-summer-cruise-ins/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.462390-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.457628-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/austin-dairy-queen-cruise-in/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.462030-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/indianapolis-cars-coffee-hoste/2179168556173345/": {
+    "checked_at_iso": "2026-07-22T22:08:00.491653-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.478096-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/scottsburg-square-cruise-in/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.477740-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-09-18/": {
+    "checked_at_iso": "2026-07-22T22:08:00.489196-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.491702-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.491905-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.512579-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-and-coffee/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.522426-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.524236-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.529767-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommys-mccar-show-sponsored-by-mcdonalds/": {
+    "checked_at_iso": "2026-07-22T22:08:00.529486-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hilliard-cars-and-coffee/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.539079-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/9lincolns-3rd-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.555541-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-coffee-in-circleville/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.554276-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/delhi-street-rodders-car-show/1504155877799366/": {
+    "checked_at_iso": "2026-07-22T22:08:00.588487-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/waldron-lodge-217-presents-third-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.560684-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midwest-fest-10-car-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.562597-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hog-heaven-cruise-in/": {
+    "checked_at_iso": "2026-07-22T22:08:00.560411-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.588536-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/clarksville-steak-n-shake-cruise-in/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.596357-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/downtown-union-city-cruse-in/": {
+    "checked_at_iso": "2026-07-22T22:08:00.588339-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hillsboro-round-town-cruisers-cruise-nights-2026-5/": {
+    "checked_at_iso": "2026-07-22T22:08:00.595994-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/caesar-ford-ranger-classic/": {
+    "checked_at_iso": "2026-07-22T22:08:00.595855-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.616824-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fifth-annual-speak-for-the-unspoken-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.623889-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/mccordsville-cars-coffee/2026-09-20/": {
+    "checked_at_iso": "2026-07-22T22:08:00.627139-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/octane-lexington/2026-09-19/": {
+    "checked_at_iso": "2026-07-22T22:08:00.623722-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fairfield-cars-and-coffee-2026/2026-09-20/": {
+    "checked_at_iso": "2026-07-22T22:08:00.627407-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-09-20/": {
+    "checked_at_iso": "2026-07-22T22:08:00.645945-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-20/": {
+    "checked_at_iso": "2026-07-22T22:08:00.651329-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friends-of-ohio-k9-5th-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.654666-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/pharaohs-of-kentucky-hooters-car-show/2026-09-20/": {
+    "checked_at_iso": "2026-07-22T22:08:00.661375-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midwestfest-10-car-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.661240-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-09-22/": {
+    "checked_at_iso": "2026-07-22T22:08:00.673541-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-09-22/": {
+    "checked_at_iso": "2026-07-22T22:08:00.680912-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-09-23/": {
+    "checked_at_iso": "2026-07-22T22:08:00.687990-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-09-23/": {
+    "checked_at_iso": "2026-07-22T22:08:00.684257-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-09-23/": {
+    "checked_at_iso": "2026-07-22T22:08:00.689959-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-09-23/": {
+    "checked_at_iso": "2026-07-22T22:08:00.706735-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-09-24/": {
+    "checked_at_iso": "2026-07-22T22:08:00.710411-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-09-24/": {
+    "checked_at_iso": "2026-07-22T22:08:00.722029-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-09-24/": {
+    "checked_at_iso": "2026-07-22T22:08:00.723415-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-09-24/": {
+    "checked_at_iso": "2026-07-22T22:08:00.722185-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-09-25/": {
+    "checked_at_iso": "2026-07-22T22:08:00.735621-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-09-25/": {
+    "checked_at_iso": "2026-07-22T22:08:00.748124-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in/2026-09-25/": {
+    "checked_at_iso": "2026-07-22T22:08:00.761702-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-09-25/": {
+    "checked_at_iso": "2026-07-22T22:08:00.761157-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/roundtown-cruisers-free-for-cruisers-and-spectators/2026-09-25/": {
+    "checked_at_iso": "2026-07-22T22:08:00.760012-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-09-25/": {
+    "checked_at_iso": "2026-07-22T22:08:00.769574-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.788511-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-09-25/": {
+    "checked_at_iso": "2026-07-22T22:08:00.788311-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.794007-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.796611-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.794671-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.818417-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-indiana-cars-and-coffee/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.827856-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hoosier-mustang-club-fall-festival-car-truck-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.832313-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/thundercruise-car-bike-meet/1182278670391763/": {
+    "checked_at_iso": "2026-07-22T22:08:00.859927-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/bulldog-auto-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.832839-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/mid-west-dayton-club-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.833362-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.859977-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/generations-church-first-annual-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.852691-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/ohio-river-street-rodders-cruise-in-4/": {
+    "checked_at_iso": "2026-07-22T22:08:00.862275-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.865212-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/8th-annual-car-show-sponsored-by-the-laurelville-fire-dept/": {
+    "checked_at_iso": "2026-07-22T22:08:00.852436-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cincinnati-vwporsche-reunion-2/758822510614568/": {
+    "checked_at_iso": "2026-07-22T22:08:00.892972-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.885094-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-09-26/": {
+    "checked_at_iso": "2026-07-22T22:08:00.889895-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/joe-show-car-truck-and-bike-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.891210-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-coffee/2026-09-27/": {
+    "checked_at_iso": "2026-07-22T22:08:00.890954-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-09-27/": {
+    "checked_at_iso": "2026-07-22T22:08:00.893032-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-27/": {
+    "checked_at_iso": "2026-07-22T22:08:00.911200-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indian-lake-mcdonalds-the-ultimate-summer-cruise-in/2026-09-29/": {
+    "checked_at_iso": "2026-07-22T22:08:00.920119-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/7th-annual-james-miller-memorial-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:00.919789-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-09-29/": {
+    "checked_at_iso": "2026-07-22T22:08:00.920209-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-09-30/": {
+    "checked_at_iso": "2026-07-22T22:08:00.927644-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-09-30/": {
+    "checked_at_iso": "2026-07-22T22:08:00.940839-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-10-01/": {
+    "checked_at_iso": "2026-07-22T22:08:00.950222-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-09-30/": {
+    "checked_at_iso": "2026-07-22T22:08:00.949830-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-10-01/": {
+    "checked_at_iso": "2026-07-22T22:08:00.950584-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-10-01/": {
+    "checked_at_iso": "2026-07-22T22:08:00.961320-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-10-01/": {
+    "checked_at_iso": "2026-07-22T22:08:00.971217-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rockin-randalls-cruise-in/2026-10-01/": {
+    "checked_at_iso": "2026-07-22T22:08:00.981407-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-10-02/": {
+    "checked_at_iso": "2026-07-22T22:08:00.985569-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-10-02/": {
+    "checked_at_iso": "2026-07-22T22:08:00.983831-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/southern-indiana-car-coffee/2441859389604399/": {
+    "checked_at_iso": "2026-07-22T22:08:01.013683-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-10-02/": {
+    "checked_at_iso": "2026-07-22T22:08:00.984031-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/mcdonalds-sellersburg-2026-summer-car-shows/2026-10-02/": {
+    "checked_at_iso": "2026-07-22T22:08:00.995340-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-10-02/": {
+    "checked_at_iso": "2026-07-22T22:08:01.004138-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.014456-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.013753-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-10-02/": {
+    "checked_at_iso": "2026-07-22T22:08:01.013448-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.026953-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.037737-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/southern-indiana-cars-and-coffee/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.051517-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.051800-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/restoration-church-6th-annual-car-show-2026/": {
+    "checked_at_iso": "2026-07-22T22:08:01.052036-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-n-coffee-meetup-1st-saturdays/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.063566-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.072172-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/first-saturday-cars-and-coffee-lexington/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.079526-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/": {
+    "checked_at_iso": "2026-07-22T22:08:01.107639-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/muncie-cars-coffee-2026-season-10/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.082664-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lexington-ky-cars-and-coffee/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.082595-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rpm-transmissions-5th-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:01.097572-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fairborn-city-church-2nd-annual-open-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:01.099057-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/6th-annual-car-show-and-gun-giveaway/": {
+    "checked_at_iso": "2026-07-22T22:08:01.107667-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.117730-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/bluegrass-outlawz-car-meet/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.117332-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/take-back-the-strip-circleville-cruise-nights/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.125279-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/shelby-county-car-club-presents-monthly-cruise-in/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.133937-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-03/": {
+    "checked_at_iso": "2026-07-22T22:08:01.143872-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-04/": {
+    "checked_at_iso": "2026-07-22T22:08:01.152198-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-10-06/": {
+    "checked_at_iso": "2026-07-22T22:08:01.157298-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/5th-floyd-central-band-car-show-2026/": {
+    "checked_at_iso": "2026-07-22T22:08:01.156197-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-04/": {
+    "checked_at_iso": "2026-07-22T22:08:01.149936-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-10-07/": {
+    "checked_at_iso": "2026-07-22T22:08:01.173205-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-10-07/": {
+    "checked_at_iso": "2026-07-22T22:08:01.187354-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-10-07/": {
+    "checked_at_iso": "2026-07-22T22:08:01.191544-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/rpm-performance-cruise-in/2026-10-07/": {
+    "checked_at_iso": "2026-07-22T22:08:01.191901-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-10-07/": {
+    "checked_at_iso": "2026-07-22T22:08:01.191969-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-10-08/": {
+    "checked_at_iso": "2026-07-22T22:08:01.203279-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-10-08/": {
+    "checked_at_iso": "2026-07-22T22:08:01.227895-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-10-08/": {
+    "checked_at_iso": "2026-07-22T22:08:01.234279-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-10-08/": {
+    "checked_at_iso": "2026-07-22T22:08:01.233921-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-10-09/": {
+    "checked_at_iso": "2026-07-22T22:08:01.235428-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-10-09/": {
+    "checked_at_iso": "2026-07-22T22:08:01.234766-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-10-09/": {
+    "checked_at_iso": "2026-07-22T22:08:01.255726-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-10-09/": {
+    "checked_at_iso": "2026-07-22T22:08:01.265746-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-10-09/": {
+    "checked_at_iso": "2026-07-22T22:08:01.265504-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/jackson-county-gear-grinders-muscle-hustle/2026-10-09/": {
+    "checked_at_iso": "2026-07-22T22:08:01.265087-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/indiana-cruisers-monthly-cruise-the-square/2026-10-09/": {
+    "checked_at_iso": "2026-07-22T22:08:01.264695-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.279114-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.290083-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.289974-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fly-in-drive-in-breakfast/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.294048-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.293362-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.303015-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/springfield-cars-and-coffee/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.320117-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/destination-cars-and-coffee/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.321713-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/richmond-ky-cars-coffee/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.320260-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-annual-david-landman-memorial-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:01.321943-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friends-for-paws-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:01.340447-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/merchants-cruise-in-fort-street-car-classics/": {
+    "checked_at_iso": "2026-07-22T22:08:01.357633-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.357833-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.357330-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/ohio-river-street-rodders-cruise-in-5/": {
+    "checked_at_iso": "2026-07-22T22:08:01.357119-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cruise-in-car-show/1439212361072214/": {
+    "checked_at_iso": "2026-07-22T22:08:01.392263-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.371923-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-10/": {
+    "checked_at_iso": "2026-07-22T22:08:01.389653-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-11/": {
+    "checked_at_iso": "2026-07-22T22:08:01.390022-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hot-rod-car-show-cruise-in-at-one-more-lounge/2026-10-11/": {
+    "checked_at_iso": "2026-07-22T22:08:01.392303-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-11/": {
+    "checked_at_iso": "2026-07-22T22:08:01.390902-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in-2/2026-10-11/": {
+    "checked_at_iso": "2026-07-22T22:08:01.398108-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-10-14/": {
+    "checked_at_iso": "2026-07-22T22:08:01.421976-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-10-13/": {
+    "checked_at_iso": "2026-07-22T22:08:01.421596-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-10-14/": {
+    "checked_at_iso": "2026-07-22T22:08:01.425316-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/monthly-car-bike-lunch-cruise-in/2026-10-14/": {
+    "checked_at_iso": "2026-07-22T22:08:01.424928-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-10-14/": {
+    "checked_at_iso": "2026-07-22T22:08:01.425754-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/daredevil-brewing-co-speedway-cruise-in/2026-10-14/": {
+    "checked_at_iso": "2026-07-22T22:08:01.458351-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-10-15/": {
+    "checked_at_iso": "2026-07-22T22:08:01.460190-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-10-15/": {
+    "checked_at_iso": "2026-07-22T22:08:01.460798-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/10th-anniversary-bash-cruise-i/2757384507959711/": {
+    "checked_at_iso": "2026-07-22T22:08:01.489408-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-10-15/": {
+    "checked_at_iso": "2026-07-22T22:08:01.459188-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-10-15/": {
+    "checked_at_iso": "2026-07-22T22:08:01.458659-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.483975-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/shepherdsville-cruise-in/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.489452-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.491316-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/austin-dairy-queen-cruise-in/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.491795-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.488969-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/igniters-street-rods-friday-night-2026-summer-cruise-ins/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.513199-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.519405-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/scottsburg-square-cruise-in/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.517268-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-10-16/": {
+    "checked_at_iso": "2026-07-22T22:08:01.519242-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.519689-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.538046-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.547751-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-and-coffee/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.547357-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.548337-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.547004-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hilliard-cars-and-coffee/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.565617-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cars-and-coffee-columbus/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.577718-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lighthouse-church-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:01.579756-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/capital-city-classic-auto-club-classic-car-cruise-in/": {
+    "checked_at_iso": "2026-07-22T22:08:01.580375-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/sidney-first-naz-fall-harvest-festival-anything-on-wheels-car-cruise/": {
+    "checked_at_iso": "2026-07-22T22:08:01.580157-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.596150-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/hillsboro-round-town-cruisers-cruise-nights-2026-6/": {
+    "checked_at_iso": "2026-07-22T22:08:01.604046-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/clarksville-steak-n-shake-cruise-in/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.605477-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.606950-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/octane-lexington/2026-10-17/": {
+    "checked_at_iso": "2026-07-22T22:08:01.607057-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-18/": {
+    "checked_at_iso": "2026-07-22T22:08:01.631897-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/pharaohs-of-kentucky-hooters-car-show/2026-10-18/": {
+    "checked_at_iso": "2026-07-22T22:08:01.632817-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-18/": {
+    "checked_at_iso": "2026-07-22T22:08:01.632456-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/fairfield-cars-and-coffee-2026/2026-10-18/": {
+    "checked_at_iso": "2026-07-22T22:08:01.631802-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-10-21/": {
+    "checked_at_iso": "2026-07-22T22:08:01.662310-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/four-bridges-cruise-in/2026-10-21/": {
+    "checked_at_iso": "2026-07-22T22:08:01.662573-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-10-20/": {
+    "checked_at_iso": "2026-07-22T22:08:01.661640-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-10-21/": {
+    "checked_at_iso": "2026-07-22T22:08:01.663554-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-10-21/": {
+    "checked_at_iso": "2026-07-22T22:08:01.686514-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-10-22/": {
+    "checked_at_iso": "2026-07-22T22:08:01.687465-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-10-22/": {
+    "checked_at_iso": "2026-07-22T22:08:01.687262-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-10-21/": {
+    "checked_at_iso": "2026-07-22T22:08:01.687133-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/": {
+    "checked_at_iso": "2026-07-22T22:08:01.723199-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-10-22/": {
+    "checked_at_iso": "2026-07-22T22:08:01.721769-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-10-23/": {
+    "checked_at_iso": "2026-07-22T22:08:01.722980-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-10-23/": {
+    "checked_at_iso": "2026-07-22T22:08:01.723244-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-10-22/": {
+    "checked_at_iso": "2026-07-22T22:08:01.722159-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/indianapolis-cars-coffee-trunk/1305039368396062/": {
+    "checked_at_iso": "2026-07-22T22:08:01.751530-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.751612-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-10-23/": {
+    "checked_at_iso": "2026-07-22T22:08:01.750098-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-10-23/": {
+    "checked_at_iso": "2026-07-22T22:08:01.749589-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-10-23/": {
+    "checked_at_iso": "2026-07-22T22:08:01.749820-04:00",
+    "result": null
+  },
+  "verify::https://gravityrally.com/pages/2026-cancer-awareness-rally": {
+    "checked_at_iso": "2026-07-22T22:08:01.622385-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.785803-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.785674-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.788511-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.786413-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-indiana-cars-and-coffee/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.833149-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.833868-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/danville-professional-firefighters-car-show/": {
+    "checked_at_iso": "2026-07-22T22:08:01.833622-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/midnight-motors-auto-club-bi-weekly-meet/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.835584-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.834182-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-24/": {
+    "checked_at_iso": "2026-07-22T22:08:01.860731-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-25/": {
+    "checked_at_iso": "2026-07-22T22:08:01.869162-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-25/": {
+    "checked_at_iso": "2026-07-22T22:08:01.869063-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-coffee/2026-10-25/": {
+    "checked_at_iso": "2026-07-22T22:08:01.867991-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/mccordsville-cars-coffee/2026-10-25/": {
+    "checked_at_iso": "2026-07-22T22:08:01.868869-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-10-27/": {
+    "checked_at_iso": "2026-07-22T22:08:01.887275-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/djs-cruise-in-night/2026-10-28/": {
+    "checked_at_iso": "2026-07-22T22:08:01.895420-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/warehouse-wednesdays/2026-10-28/": {
+    "checked_at_iso": "2026-07-22T22:08:01.895599-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-10-29/": {
+    "checked_at_iso": "2026-07-22T22:08:01.896345-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-10-28/": {
+    "checked_at_iso": "2026-07-22T22:08:01.895014-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-10-29/": {
+    "checked_at_iso": "2026-07-22T22:08:01.915727-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-10-29/": {
+    "checked_at_iso": "2026-07-22T22:08:01.922445-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-10-30/": {
+    "checked_at_iso": "2026-07-22T22:08:01.923119-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-10-30/": {
+    "checked_at_iso": "2026-07-22T22:08:01.927645-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-10-29/": {
+    "checked_at_iso": "2026-07-22T22:08:01.922759-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-10-30/": {
+    "checked_at_iso": "2026-07-22T22:08:01.949216-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/read-details-coldwell-banker-4/1416195726981667/": {
+    "checked_at_iso": "2026-07-22T22:08:01.983087-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-10-30/": {
+    "checked_at_iso": "2026-07-22T22:08:01.948988-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in/2026-10-30/": {
+    "checked_at_iso": "2026-07-22T22:08:01.946002-04:00",
+    "result": null
+  },
+  "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-10-30/": {
+    "checked_at_iso": "2026-07-22T22:08:01.945643-04:00",
+    "result": null
+  },
+  "verify::https://corsarally.com/events/dragon/": {
+    "checked_at_iso": "2026-07-22T22:08:01.949730-04:00",
+    "result": null
+  },
+  "verify::https://www.scca.com/pages/road-rally": {
+    "checked_at_iso": "2026-07-22T22:08:01.983222-04:00",
+    "result": null
+  },
+  "verify::https://corsarally.com/": {
+    "checked_at_iso": "2026-07-22T22:08:02.952800-04:00",
+    "result": null
+  },
+  "verify::https://www.americanrallyassociation.org/sofr": {
+    "checked_at_iso": "2026-07-22T22:08:03.084989-04:00",
+    "result": null
   }
 }

@@ -1,3 +1,8 @@
 .venv/
 __pycache__/
 *.pyc
+
+# One-time cleaner scratch outputs (see scripts/clean_events.py)
+/data/events.cleaned.csv
+/data/events.cleaned.json
+/data/clean_events.log
