@@ -1,10 +1,4 @@
 Event Name,Date,Start Time,End Time,Location,Address,Closest City,Callout,Size,Popularity,Attendance,Source,Event URL
-Recharge Rally – Day 2,2026-07-30,9:00 AM,11:00 AM,"Chattanooga, TN","Chattanooga, TN","Knoxville, TN",,Local,32,,sheet,Same as above
-Recharge Rally – Day 1,2026-07-30,9:00 AM,11:00 AM,"Launch Cincinnati, OH","boat launch, Cincinnati, OH 45228","Cincinnati, OH",,Local,32,,sheet,https://www.therechargerally.com/
-Premier Car & Truck Cruise-In,2026-07-30,4:00 PM,7:00 PM,"PREMIER Classic Auto Restoration - 251 Eastwood Road, Williamsburg, OH 45176","251 Eastwood Road, Williamsburg, OH 45176","Cincinnati, OH",,Small,20,,CarsAndCoffeeEvents API (OH/KY/IN),https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-07-30/
-Minford Dairy Bar Cruise In,2026-07-30,5:00 PM,8:00 PM,"Minford Dairy Bar - Minford, OH 45653","10667 State Route 139, Minford, OH 45653","Charleston, WV",,Small,20,,CarsAndCoffeeEvents API (OH/KY/IN),https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-07-30/
-Alexandria Cruise-In,2026-07-30,5:00 PM,8:00 PM,"Alexandria Village Green Shopping Center - Alexandria, KY 41001","Alexandria Village Green Shopping Center - Alexandria, KY 41001","Cincinnati, OH",,Small,20,,CarsAndCoffeeEvents API (OH/KY/IN),https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-07-30/
-Martinsville Cruise-in on the Square,2026-07-30,5:00 PM,8:00 PM,"Jefferson Street, Martinsville, IN 46151","North Jefferson Street, Martinsville, IN 46151","Indianapolis, IN",,Small,20,,CarsAndCoffeeEvents API (OH/KY/IN),https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-07-30/
 Columbus Cars & Coffee Fridays,2026-07-31,7:30 AM,9:30 AM,"Colin’s Coffee - 2812 Fishinger Rd, Upper Arlington, 43220","2812 Fishinger Road, Upper Arlington, OH 43221","Columbus, OH",,Small,20,,CarsAndCoffeeEvents API (OH/KY/IN),https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-07-31/
 Recharge Rally – Day 3,2026-07-31,9:00 AM,11:00 AM,"Greenville, SC","Greenville, SC","Knoxville, TN",,Local,32,,sheet,Same as above
 Car Cruise-In and Kit Haymond Concert,2026-07-31,9:00 AM,12:00 PM,"237 W Monroe St, Franklin, IN 46131","237 W Monroe St, Franklin, IN 46131","Indianapolis, IN",,Small,20,,CarsAndCoffeeEvents API (OH/KY/IN),https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-7/
@@ -695,3 +689,4 @@ Rally North America – Day 3,2027-07-14,9:00 AM,11:00 AM,"Traverse City, MI","T
 Rally North America – Day 4,2027-07-15,9:00 AM,11:00 AM,"Frankenmuth, MI","Frankenmuth, MI","Detroit, MI",,Local,32,,sheet,Same as above
 Cincy Car Cruise Rally,2027-07-25,9:00 AM,11:00 AM,"Cincinnati, OH","Cincinnati, OH","Cincinnati, OH",,Local,32,,sheet,—
 Recharge Rally – Day 1,2027-07-30,9:00 AM,11:00 AM,"Launch Cincinnati, OH","boat launch, Cincinnati, OH 45228","Cincinnati, OH",,Local,32,,sheet,https://www.therechargerally.com/
+Recharge Rally – Day 2,2027-07-31,9:00 AM,11:00 AM,"Chattanooga, TN","Chattanooga, TN","Knoxville, TN",,Local,32,,sheet,Same as above
