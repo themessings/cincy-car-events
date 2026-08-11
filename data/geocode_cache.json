@@ -4636,5 +4636,62 @@
     "lat": "34.0900031",
     "lon": "-117.4672192"
   },
-  "addr::4860 premier way, west chester, oh": null
+  "addr::4860 premier way, west chester, oh": null,
+  "46032, USA": {
+    "lat": "39.9615583",
+    "lon": "-86.1586132"
+  },
+  "47586, USA": {
+    "lat": "37.9775310",
+    "lon": "-86.7390498"
+  },
+  "45242, USA": {
+    "lat": "39.2412824",
+    "lon": "-84.3722109"
+  },
+  "addr::quaker steak and lube colerain, oh": null,
+  "addr::ralph's american grill": {
+    "formatted": "Gano Road, Lumberton, OH 45177",
+    "latlon": [
+      39.5229105,
+      -83.8438437
+    ]
+  },
+  "addr::johnson county parks and recreation – shelter area - 7248 south picnic drive - heartnut shelter area, nineveh, 46164": null,
+  "addr::4480 lake forest dr, ste 314, cincinnati, oh, , ohio 45242": null,
+  "addr::national museum of the u.s. air force": {
+    "formatted": "1100 Spaatz Street, Dayton, OH 45433",
+    "latlon": [
+      39.7802236,
+      -84.1080722
+    ]
+  },
+  "addr::fōwling warehouse cincinnati": {
+    "formatted": "2940 Highland Avenue, Cincinnati, OH 45212",
+    "latlon": [
+      39.1687824,
+      -84.4336261
+    ]
+  },
+  "addr::liberty collective": {
+    "formatted": "3537 Commercial Street Southeast, Salem, OR 97302",
+    "latlon": [
+      44.9037889,
+      -123.0414378
+    ]
+  },
+  "addr::main event": {
+    "formatted": "Main Event, Town of Birch, WI",
+    "latlon": [
+      45.3296237,
+      -89.5878564
+    ]
+  },
+  "addr::pinball garage": {
+    "formatted": "113 North 3rd Street, Hamilton, OH 45011",
+    "latlon": [
+      39.4005805,
+      -84.560094
+    ]
+  }
 }
