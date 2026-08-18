@@ -4704,5 +4704,10 @@
       39.1597752,
       -84.4024037
     ]
-  }
+  },
+  "Franklin, OH": {
+    "lat": "39.5589474",
+    "lon": "-84.3041074"
+  },
+  "addr::downtown franklin ohio - 400 s. main street, franklin, oh": null
 }
