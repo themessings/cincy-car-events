@@ -1,82 +1,7 @@
 {
-  "generated_at_iso": "2026-08-20T08:58:52.017853-04:00",
-  "count": 705,
+  "generated_at_iso": "2026-08-21T07:26:56.206755-04:00",
+  "count": 701,
   "events": [
-    {
-      "Event Name": "Premier Car & Truck Cruise-In",
-      "Date": "2026-08-20",
-      "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "PREMIER Classic Auto Restoration - 251 Eastwood Road, Williamsburg, OH 45176",
-      "Address": "251 Eastwood Road, Williamsburg, OH 45176",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-08-20/"
-    },
-    {
-      "Event Name": "Minford Dairy Bar Cruise In",
-      "Date": "2026-08-20",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Minford Dairy Bar - Minford, OH 45653",
-      "Address": "10667 State Route 139, Minford, OH 45653",
-      "Closest City": "Charleston, WV",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-08-20/"
-    },
-    {
-      "Event Name": "Northridge Lions Club Cruise In",
-      "Date": "2026-08-20",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Carla’s Roadside Diner - 2590 Derr Rd, Springfield, OH 45501",
-      "Address": "2590 Derr Rd, Springfield, OH 45501",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/northridge-lions-club-cruise-in-2/"
-    },
-    {
-      "Event Name": "Alexandria Cruise-In",
-      "Date": "2026-08-20",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Alexandria Village Green Shopping Center - Alexandria, KY 41001",
-      "Address": "Alexandria Village Green Shopping Center - Alexandria, KY 41001",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-08-20/"
-    },
-    {
-      "Event Name": "Martinsville Cruise-in on the Square",
-      "Date": "2026-08-20",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Jefferson Street, Martinsville, IN 46151",
-      "Address": "North Jefferson Street, Martinsville, IN 46151",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-08-20/"
-    },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
       "Date": "2026-08-21",
@@ -1981,6 +1906,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "McCordsville Cars & Coffee",
+      "Date": "2026-09-06",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "McCord Square - 5811 Main St., McCordsville, IN 46055",
+      "Address": "5811 Main St., McCordsville, IN 46055",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/mccordsville-cars-coffee/2026-11-29/"
     },
     {
       "Event Name": "Euro Cars and Cocoa",
@@ -4336,6 +4276,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/cincinnati-vwporsche-reunion-2/758822510614568/"
+    },
+    {
+      "Event Name": "35th Annual VW & Porsche Reunion Show",
+      "Date": "2026-09-27",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "Germania Park • - 3529 Kemper Road, Cincinnati, OH 45251",
+      "Address": "3529 Kemper Road, Cincinnati, OH 45251",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "46",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/35th-annual-vw-porsche-reunion/1779246243286414/"
     },
     {
       "Event Name": "Euro Cars and Cocoa",
@@ -7428,21 +7383,6 @@
       "Event URL": "https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-11-04/"
     },
     {
-      "Event Name": "Los Costenos Cruise In",
-      "Date": "2026-06-17",
-      "Start Time": "6:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "Los Costenos Mexican Restaurant - Middletown, IN 47356",
-      "Address": "Los Costenos Mexican Restaurant - Middletown, IN 47356",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-11-04/"
-    },
-    {
       "Event Name": "Columbus Cars & Coffee Fridays",
       "Date": "2026-11-06",
       "Start Time": "7:30 AM",
@@ -7546,36 +7486,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-11-07/"
-    },
-    {
-      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
-      "Date": "2027-08-14",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
-      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-11-07/"
-    },
-    {
-      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
-      "Date": "2027-01-02",
-      "Start Time": "8:30 AM",
-      "End Time": "12:00 PM",
-      "Location": "The Ohio State University Wexner Medical Center - 3650 Olentangy River Rd, Columbus, OH 43214",
-      "Address": "3650 Olentangy River Rd, Columbus, OH 43214",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "42",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-n-coffee-meetup-1st-saturdays/2026-11-07/"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 2",
@@ -7771,21 +7681,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-11-11/"
-    },
-    {
-      "Event Name": "Monthly Car & Bike Lunch Cruise In",
-      "Date": "2027-07-14",
-      "Start Time": "11:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
-      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "12",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/monthly-car-bike-lunch-cruise-in/2026-11-11/"
     },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -8236,21 +8131,6 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
-      "Event Name": "McCordsville Cars & Coffee",
-      "Date": "2026-09-06",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "McCord Square - 5811 Main St., McCordsville, IN 46055",
-      "Address": "5811 Main St., McCordsville, IN 46055",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/mccordsville-cars-coffee/2026-11-29/"
     },
     {
       "Event Name": "ACKY Cars and Coffee",
@@ -8731,6 +8611,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
+      "Date": "2027-01-02",
+      "Start Time": "8:30 AM",
+      "End Time": "12:00 PM",
+      "Location": "The Ohio State University Wexner Medical Center - 3650 Olentangy River Rd, Columbus, OH 43214",
+      "Address": "3650 Olentangy River Rd, Columbus, OH 43214",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "42",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-n-coffee-meetup-1st-saturdays/2026-11-07/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -9618,6 +9513,21 @@
       "Event URL": "Same as above"
     },
     {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2027-07-14",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/monthly-car-bike-lunch-cruise-in/2026-11-11/"
+    },
+    {
       "Event Name": "Rally North America – Day 4",
       "Date": "2027-07-15",
       "Start Time": "9:00 AM",
@@ -9781,6 +9691,21 @@
       "Attendance": "",
       "Source": "sheet",
       "Event URL": "https://cincyscca.com/rally-cross/"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
+      "Date": "2027-08-14",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-11-07/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -10565,6 +10490,21 @@
     {
       "Event Name": "Cars at Madison Square",
       "Date": "2028-08-12",
+      "Start Time": "11:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "5350 Medpace Way",
+      "Address": "5350 Medpace Way, Cincinnati, OH 45227",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cars at Madison Square",
+      "Date": "2028-08-19",
       "Start Time": "11:00 AM",
       "End Time": "2:00 PM",
       "Location": "5350 Medpace Way",
