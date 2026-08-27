@@ -1,6 +1,6 @@
 {
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-08-25T07:28:26.193196-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
@@ -21,10 +21,6 @@
   },
   "https://www.eventbrite.com/d/united-states--ohio/car-show/": {
     "fetched_at_iso": "2026-03-06T06:28:59.216928-05:00",
-    "events": []
-  },
-  "https://www.eventbrite.com/d/oh--mason/car-show/": {
-    "fetched_at_iso": "2026-02-28T06:22:03.618088-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--delaware/columbus-cars-and-coffee-f9/": {
@@ -110,7 +106,7 @@
     ]
   },
   "https://www.americanrallyassociation.org/2026-ara-schedule": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://www.sandhillsmotoringexpo.com/": {
@@ -118,7 +114,7 @@
     "events": []
   },
   "https://rallynorthamerica.com/drives-events/": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": []
   },
   "https://www.facebook.com/groups/ncrallycross/posts/24327648043598609/": {
@@ -130,11 +126,11 @@
     "events": []
   },
   "https://www.scca.com/pages/road-rally-events": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://www.facebook.com/indyhoodrats/posts/road-rally-to-the-famous-11-mile-long-tail-of-the-dragon-located-in-vonore-tenne/867730542516222/": {
@@ -142,7 +138,7 @@
     "events": []
   },
   "https://www.greatrace.com/": {
-    "fetched_at_iso": "2026-08-25T07:27:28.918731-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:44.245531-04:00",
     "events": []
   },
   "https://www.scca.com/events/2008957-ohio-valley-summer-sprints-regional-road-race-2026-mid-ohio-sports-car-course": {
@@ -158,11 +154,11 @@
     ]
   },
   "https://www.scca.com/pages/road-rally-national-championship": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": []
   },
   "https://www.scca.com/events/2009084-ohio-region-2026-winter-roadrally-dibellas-subs-solon": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": [
       {
         "title": "Ohio Region 2026 Winter RoadRally @ DiBella’s Subs - Solon",
@@ -178,7 +174,7 @@
     "events": []
   },
   "https://cincyscca.com/road-rally/": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": []
   },
   "https://cincyscca.com/rally-cross/": {
@@ -202,7 +198,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/sofr": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/american-rally-association-announces-2026-schedule": {
@@ -210,7 +206,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/live": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/copy-of-2025-championship-standings": {
@@ -230,19 +226,19 @@
     "events": []
   },
   "https://www.dynastyautoevents.com/": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": []
   },
   "https://www.therechargerally.com/": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-tickets": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-dash-2025": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": [
       {
         "title": "Dynasty Dash 2025",
@@ -278,11 +274,11 @@
     ]
   },
   "https://rallynorthamerica.com/rally-events/": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": []
   },
   "https://gravityrally.com/pages/2026-cancer-awareness-rally": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-the-cincinnati-auto-expo": {
@@ -347,7 +343,7 @@
     "events": []
   },
   "https://www.scca.com/pages/road-rally": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/ara-s-summer-starts-with-southern-ohio-forest-rally": {
@@ -495,7 +491,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-08-25T07:28:26.193196-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/hybridcars/is/": {
@@ -565,15 +561,15 @@
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/car-show/": {
-    "fetched_at_iso": "2026-08-25T07:28:26.193196-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/car-shows/": {
-    "fetched_at_iso": "2026-08-25T07:28:26.193196-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-shows/": {
-    "fetched_at_iso": "2026-08-23T07:22:04.492020-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/classic-car-show/": {
@@ -585,11 +581,11 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/southern-indiana": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/ohio-valley": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?loc=Louisville&country=US&lat=38.20&lng=-85.74&radius=180": {
@@ -597,11 +593,11 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/indianapolis": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/central-kentucky": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?country=US&radius=180&lat=39.25&lng=-84.38&loc=Cincinnati&page=2": {
@@ -613,7 +609,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/western-ohio": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?country=US&radius=180&lat=39.78036&lng=-86.04276&loc=Indianapolis&page=4": {
@@ -629,7 +625,7 @@
     "events": []
   },
   "https://www.scca.com/events/2005350-kentucky-region-autocross-test-and-tune-points-event-1-ncm-motorsports-park": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": [
       {
         "title": "Kentucky Region Autocross Test and Tune & Points Event #1 @ NCM Motorsports Park",
@@ -665,7 +661,7 @@
     "events": []
   },
   "https://www.scca.com/pages/autocross": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": []
   },
   "https://www.dragdriverepeat.com/eventlist-2026": {
@@ -685,7 +681,7 @@
     "events": []
   },
   "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": [
       {
         "title": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
@@ -701,7 +697,7 @@
     "events": []
   },
   "https://www.scca.com/events/1998559-western-ohio-region-points-event-1-autocross-event-kil-kare-raceway": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": [
       {
         "title": "Western Ohio Region Points Event 1 Autocross Event @ Kil-Kare Raceway",
@@ -713,7 +709,7 @@
     ]
   },
   "https://www.scca.com/events/1998988-ohio-valley-rallycross-points-events-4-and-5-ross-county-fairgrounds": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": [
       {
         "title": "Ohio Valley RallyCross Points Events 4 and 5 @ Ross County Fairgrounds",
@@ -761,7 +757,7 @@
     "events": []
   },
   "https://www.scca.com/events/2008042-indianapolis-autocross-subaru-challenge-subaru-of-indiana-automotive": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": [
       {
         "title": "Indianapolis Autocross Subaru Challenge @ Subaru of Indiana Automotive",
@@ -1088,18 +1084,6 @@
     "fetched_at_iso": "2026-05-31T08:11:39.826612-04:00",
     "events": []
   },
-  "https://www.meetup.com/ko-KR/central-kentucky-backpackers/": {
-    "fetched_at_iso": "2026-02-28T06:19:30.116235-05:00",
-    "events": [
-      {
-        "title": "4 days, 3 nights backpacking the Savage Gulf in Tennessee",
-        "start_iso": "2026-04-10T08:00:00-04:00",
-        "end_iso": "2026-04-13T11:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/central-kentucky-backpackers/events/313378154/"
-      }
-    ]
-  },
   "https://www.meetup.com/es-ES/topics/wholesale-real-estate/": {
     "fetched_at_iso": "2026-03-04T12:14:25.503153-05:00",
     "events": [
@@ -1233,123 +1217,12 @@
     "fetched_at_iso": "2026-05-31T08:11:39.826612-04:00",
     "events": []
   },
-  "https://www.meetup.com/tr-tr/topics/storytelling-games/": {
-    "fetched_at_iso": "2026-02-28T06:19:30.116235-05:00",
-    "events": [
-      {
-        "title": "BingoBASH Benefit 🤑💰",
-        "start_iso": "2026-02-28T12:00:00-05:00",
-        "end_iso": "2026-02-28T17:30:00-05:00",
-        "location": "Elwell Family Food Center 3000 East Grand Avenue, Des Moines, IA 50317 Des Moines IA 50317",
-        "url": "https://www.meetup.com/tr-TR/destiny-divas-of-des-moines-ddd/events/313308209/"
-      },
-      {
-        "title": "Pathfinder Society at Atlas Games",
-        "start_iso": "2026-02-28T16:00:00-05:00",
-        "end_iso": "2026-02-28T20:00:00-05:00",
-        "location": "Atlas Games 510 SW 3rd St, Ste B, Ankeny, IA 50023 Ankeny IA 50023",
-        "url": "https://www.meetup.com/tr-TR/pathfinder-starfinder-iowa/events/313407722/"
-      },
-      {
-        "title": "Dane's Group",
-        "start_iso": "2026-02-28T12:30:00-05:00",
-        "end_iso": "2026-02-28T14:30:00-05:00",
-        "location": "",
-        "url": "https://www.meetup.com/tr-TR/des-moines-515-dice-dungeon-and-dragons/events/313268608/"
-      },
-      {
-        "title": "Nature Walk at Voas Nature Area",
-        "start_iso": "2026-02-28T10:00:00-05:00",
-        "end_iso": "2026-02-28T11:30:00-05:00",
-        "location": "Voas Nature Area 19340 Lexington Rd, Minburn, IA 50167 Minburn IA 50167",
-        "url": "https://www.meetup.com/tr-TR/centering-nature-walks/events/313281147/"
-      },
-      {
-        "title": "Day Hiking Adventure: Bluffs, River & High Trestle Bridge Near Madrid",
-        "start_iso": "2026-02-28T12:00:00-05:00",
-        "end_iso": "2026-02-28T16:00:00-05:00",
-        "location": "",
-        "url": "https://www.meetup.com/tr-TR/iowa-explorers-club/events/313294524/"
-      },
-      {
-        "title": "Term 2 classes start March 1st",
-        "start_iso": "2026-03-01T11:00:00-05:00",
-        "end_iso": "2026-03-01T21:00:00-05:00",
-        "location": "xBk Annex 1163 24th St, Unit B, Des Moines, IA 50311 Des Moines IA 50311",
-        "url": "https://www.meetup.com/tr-TR/des-moines-improv-meetup-group/events/313191892/"
-      },
-      {
-        "title": "Fun & easy way to play more tennis (please read event description for details)",
-        "start_iso": "2026-02-28T20:00:00-05:00",
-        "end_iso": "2026-02-28T22:00:00-05:00",
-        "location": "",
-        "url": "https://www.meetup.com/tr-TR/playyourcourt-des-moines-tennis/events/313273018/"
-      },
-      {
-        "title": "Bienvenidos a charla en Español.",
-        "start_iso": "2026-03-03T19:30:00-05:00",
-        "end_iso": "2026-03-03T21:00:00-05:00",
-        "location": "El Fogon 1250 8th St, West Des Moines, IA 50265 West Des Moines IA 50265",
-        "url": "https://www.meetup.com/tr-TR/des-moines-spanish-conversation-group/events/313318447/"
-      },
-      {
-        "title": "Bar Crawl hosted by Robyn at the Fitz",
-        "start_iso": "2026-03-14T17:00:00-04:00",
-        "end_iso": "2026-03-14T19:00:00-04:00",
-        "location": "Lachele's Fine FOods 3621 6th Ave., Des Moines, IA 50313 Des Moines IA 50313",
-        "url": "https://www.meetup.com/tr-TR/waukee-wine-tasting-group/events/312857529/"
-      },
-      {
-        "title": "Django (All French, No Attitude)",
-        "start_iso": "2026-03-13T18:45:00-04:00",
-        "end_iso": "2026-03-13T20:45:00-04:00",
-        "location": "1420 Locust St 1420 Locust St, Des Moines, IA 50309 Des Moines IA 50309",
-        "url": "https://www.meetup.com/tr-TR/des-moines-meet-friends-meetup-group/events/313106451/"
-      },
-      {
-        "title": "Drinking Liberally Weekly Meetup",
-        "start_iso": "2026-03-05T21:00:00-05:00",
-        "end_iso": "2026-03-05T23:00:00-05:00",
-        "location": "The Station On Ingersoll 3124 Ingersoll Ave, Des Moines, IA 50312 Des Moines IA 50312",
-        "url": "https://www.meetup.com/tr-TR/living-liberally-drinking-liberally-des-moines/events/313351186/"
-      },
-      {
-        "title": "Shut Up & Write!® Des Moines",
-        "start_iso": "2026-03-03T19:15:00-05:00",
-        "end_iso": "2026-03-03T20:45:00-05:00",
-        "location": "Johnston Public Library 6700 Merle Hay Rd, Johnston, IA 50131 Johnston IA 50131",
-        "url": "https://www.meetup.com/tr-TR/shutupandwritedesmoines/events/313499007/"
-      },
-      {
-        "title": "UFO Fridays at Smokey Row",
-        "start_iso": "2026-03-06T17:30:00-05:00",
-        "end_iso": "2026-03-06T21:30:00-05:00",
-        "location": "",
-        "url": "https://www.meetup.com/tr-TR/metroknitters/events/313360668/"
-      },
-      {
-        "title": "Open House",
-        "start_iso": "2026-03-03T20:00:00-05:00",
-        "end_iso": "2026-03-03T23:00:00-05:00",
-        "location": "Area515 108 Jefferson Ave, Des Moines, ia 50314 Des Moines ia 50314",
-        "url": "https://www.meetup.com/tr-TR/area515/events/313319168/"
-      }
-    ]
-  },
-  "https://www.instagram.com/p/DVL2ZPqDg_Y/": {
-    "fetched_at_iso": "2026-02-28T06:19:53.075860-05:00",
-    "events": []
-  },
   "https://www.instagram.com/reel/DU_0rq_DBhC/": {
     "fetched_at_iso": "2026-08-25T07:27:28.918731-04:00",
     "events": []
   },
   "https://www.thebooneforestrally.org/": {
     "fetched_at_iso": "2026-03-06T06:29:19.696729-05:00",
-    "events": []
-  },
-  "https://www.ssrfanatic.com/threads/20th-anniversary-laughlin-rally-2026.274354/page-2": {
-    "fetched_at_iso": "2026-02-28T06:19:53.075860-05:00",
     "events": []
   },
   "https://grassrootsmotorsports.com/forum/grm/rallycross-in-nc-surrounding-states/120599/page1/": {
@@ -1361,7 +1234,7 @@
     "events": []
   },
   "https://www.scca.com/events/2009582-southern-indiana-road-rally-1-more-scrambled-legs-hardee-s-evansville": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": [
       {
         "title": "Southern Indiana Road Rally #1 More Scrambled Legs @ Hardee's - Evansville",
@@ -1397,7 +1270,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/cincinnati": {
-    "fetched_at_iso": "2026-07-30T10:53:08.635836-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/kentucky": {
@@ -1405,11 +1278,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/events/1010ths-hpde-august-20th-2026-mid-ohio-sports-car-course-motorsports-542992": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
-    "events": []
-  },
-  "https://www.motorsportreg.com/events/2025-hpde-at-ncm-motorsports-park-bmw-cca-heart-of-dixie-298047": {
-    "fetched_at_iso": "2026-02-28T06:22:09.175907-05:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/events/kentucky-road-rally-longnecks-sports-grill-hebron-scca-cincinnati-573507": {
@@ -1912,7 +1781,7 @@
     "events": []
   },
   "https://www.scca.com/pages/rallycross": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/roller-blading/us/": {
@@ -2215,7 +2084,7 @@
     "events": []
   },
   "https://www.scca.com/events/1998943-northwestern-ohio-region-event-6-autocross-toledo-express-airport": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": [
       {
         "title": "Northwestern Ohio Region - Event 6 - Autocross @ Toledo Express Airport",
@@ -2659,7 +2528,7 @@
     "events": []
   },
   "https://rallynorthamerica.com/": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/no-limit-car-show-tickets-1984486431337": {
@@ -2831,7 +2700,7 @@
     ]
   },
   "https://www.americanrallyassociation.org/event-results": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--kentucky/cincinnati-ohio/": {
@@ -3613,7 +3482,7 @@
     ]
   },
   "https://www.americanrallyassociation.org/boone-forest-rally": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://www.meetup.com/northern-kentucky-sierra-club/": {
@@ -3651,7 +3520,7 @@
     "events": []
   },
   "https://www.scca.com/pages/i-want-to-rallycross": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": []
   },
   "https://www.scca.com/events/2001480-ohio-valley-region-rallycross-pe-3-joe-s-speedway": {
@@ -3999,7 +3868,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1987276963895": {
-    "fetched_at_iso": "2026-08-25T07:28:26.193196-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/events/lrjgqtyjcgblc/": {
@@ -4035,7 +3904,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/ky--independence/car-shows/": {
-    "fetched_at_iso": "2026-08-25T07:26:57.204945-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:28.779462-04:00",
     "events": []
   },
   "https://www.meetup.com/cincy-hiking-and-social-club-20s-30s-40s/": {
@@ -4222,7 +4091,7 @@
     "events": []
   },
   "https://www.thscc.com/programs/rallycross": {
-    "fetched_at_iso": "2026-08-25T07:27:28.918731-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:44.245531-04:00",
     "events": []
   },
   "https://www.eventbrite.com/o/concours-devou-110823766751": {
@@ -4246,7 +4115,7 @@
     "events": []
   },
   "https://www.scca.com/events/2009834-2026-scca-great-lakes-rallycross-divisional-challenge-appalachian-overland-triangle": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": [
       {
         "title": "2026 SCCA Great Lakes RallyCross Divisional Challenge @ Appalachian Overland Triangle",
@@ -4274,7 +4143,7 @@
     ]
   },
   "https://www.eventbrite.com/d/ky--florence/car-shows/": {
-    "fetched_at_iso": "2026-08-25T07:26:57.204945-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:28.779462-04:00",
     "events": []
   },
   "https://www.meetup.com/en-AU/daytonhikers/": {
@@ -4581,7 +4450,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/neohio": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.scca.com/events/page/6?categories=rally%2Csolo%2Cstarting-line%2Cprosolo%2Cautocross-5%2Ctrackdays%2Cregional-track-event%2Ctrackdays-2%2Ctrack-events%2Ctrack-night&within=100": {
@@ -5054,7 +4923,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/events/buckeye-bmw-cca-mid-ohio-hpde-2026-sports-car-course-driving-events-090599": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://drivenasa.com/autocross/": {
@@ -5090,7 +4959,7 @@
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-rally-2026": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": [
       {
         "title": "Dynasty Rally 2026",
@@ -5158,7 +5027,7 @@
     "events": []
   },
   "https://cincyscca.com/rallycross/2026-rallycross-schedule-and-results/": {
-    "fetched_at_iso": "2026-08-25T07:27:50.947409-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:12.030079-04:00",
     "events": []
   },
   "https://www.scca.com/events/2009926-2026-appalachian-triangle-rallycross-event-2-appalachian-overland-triangle": {
@@ -5178,7 +5047,7 @@
     "events": []
   },
   "https://sneakattackrally.com/ARA/entryList.html?ohio": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://local12.com/": {
@@ -5198,7 +5067,7 @@
     "events": []
   },
   "https://24hoursoflemons.com/lemons-rally/": {
-    "fetched_at_iso": "2026-08-25T07:27:28.918731-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:44.245531-04:00",
     "events": []
   },
   "https://www.youtube.com/watch?v=W0nh0kaDJjo": {
@@ -5206,7 +5075,7 @@
     "events": []
   },
   "https://www.sandblastrally.com/": {
-    "fetched_at_iso": "2026-08-25T07:27:28.918731-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:44.245531-04:00",
     "events": []
   },
   "https://en.wikipedia.org/wiki/Car": {
@@ -5886,7 +5755,7 @@
     "events": []
   },
   "https://www.scca.com/events/1994206-central-kentucky-summer-autocross-at-the-pad-lfucg": {
-    "fetched_at_iso": "2026-08-25T07:28:59.172190-04:00",
+    "fetched_at_iso": "2026-08-27T12:39:08.566629-04:00",
     "events": [
       {
         "title": "Central Kentucky Summer Autocross at the PAD @ LFUCG",
@@ -6258,7 +6127,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/ky--florence/northern-ky-speed-dating/": {
-    "fetched_at_iso": "2026-08-23T07:20:21.655892-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:28.779462-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/job-fairs/": {
@@ -6899,22 +6768,8 @@
     ]
   },
   "https://www.meetup.com/i-d-be-game-for-that/": {
-    "fetched_at_iso": "2026-08-25T07:26:59.219572-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
     "events": [
-      {
-        "title": "Trivia & a Movie in the Park",
-        "start_iso": "2026-08-25T19:00:00-04:00",
-        "end_iso": "2026-08-25T22:30:00-04:00",
-        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/i-d-be-game-for-that/events/315995814/"
-      },
-      {
-        "title": "Euchre Wednesday ($10 Buy-in)",
-        "start_iso": "2026-08-26T18:15:00-04:00",
-        "end_iso": "2026-08-26T21:15:00-04:00",
-        "location": "Wiedemann’s Fine Beer, Brewery & Pub 4811 Vine St, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/i-d-be-game-for-that/events/316221680/"
-      },
       {
         "title": "Trivia & a Movie in the Park",
         "start_iso": "2026-09-01T19:00:00-04:00",
@@ -7597,7 +7452,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/post/hotly-contested-unpredictable-ara-national-championship-set-to-continue-at-southern-ohio": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=33": {
@@ -7649,7 +7504,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/post/quintero-takes-first-win-as-block-assumes-championship-lead-at-southern-ohio-forest-rally": {
-    "fetched_at_iso": "2026-08-25T07:28:03.787759-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/events--today/?page=2": {
@@ -15632,7 +15487,7 @@
     "events": []
   },
   "https://www.therechargerally.com/rechargerallynine": {
-    "fetched_at_iso": "2026-08-25T07:28:11.142703-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:36.279334-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=18": {
@@ -16302,7 +16157,7 @@
     "events": []
   },
   "https://www.meetup.com/sierraoutings/events/315717913/": {
-    "fetched_at_iso": "2026-08-25T07:26:59.219572-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
     "events": [
       {
         "title": "Paddle the Mill Creek",
@@ -16366,7 +16221,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/columbus-sports-car-club": {
-    "fetched_at_iso": "2026-08-25T07:28:31.063535-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:59.414158-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/rally/": {
@@ -16510,11 +16365,11 @@
     ]
   },
   "https://www.meetup.com/topics/artificial-intelligence-ai/us/": {
-    "fetched_at_iso": "2026-08-25T07:26:59.219572-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
     "events": []
   },
   "https://www.meetup.com/gohio-adventures-around-columbus/": {
-    "fetched_at_iso": "2026-08-25T07:26:59.219572-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
     "events": [
       {
         "title": "Morning people unite!! 🐤 ☕ + 💬 @ Koffee Paradise Linworth",
@@ -16649,7 +16504,7 @@
     ]
   },
   "https://www.meetup.com/i-d-be-game-for-that/events/hznvxtyjclbpb/": {
-    "fetched_at_iso": "2026-08-25T07:26:59.219572-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
     "events": [
       {
         "title": "Trivia & a Movie in the Park",
@@ -16706,7 +16561,7 @@
     ]
   },
   "https://www.facebook.com/RallyNorthAmerica/posts/join-rally-north-america-drives-15-for-four-unforgettable-days-of-incredible-roa/1480700194084508/": {
-    "fetched_at_iso": "2026-08-25T07:27:28.918731-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:44.245531-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/open-road?srsltid=AfmBOoqJq2JzRoEL1RLjWuzzMqZzCuQiI7w5E6NmhCeRJtrZOeqpa5r7": {
@@ -16811,15 +16666,15 @@
     "result": null
   },
   "verify::https://facebook.com/events/s/hamilton-octane-fest-2026/1848193206140393/": {
-    "checked_at_iso": "2026-08-20T08:58:36.028760-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.831321-04:00",
     "result": null
   },
   "verify::https://facebook.com/events/s/2026-meet-6/1042348471859752/": {
-    "checked_at_iso": "2026-08-20T08:58:36.029199-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.832324-04:00",
     "result": null
   },
   "verify::https://facebook.com/events/s/no-limits-937-team-at-hamilton/1914645399212536/": {
-    "checked_at_iso": "2026-08-20T08:58:36.029577-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.835279-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/johnson-county-parks-and-recreation-30th-annual-car-show/": {
@@ -16834,7 +16689,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-11-04/": {
-    "checked_at_iso": "2026-08-20T08:58:36.048245-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.845951-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-11-03/": {
@@ -16904,7 +16759,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-11-06/": {
-    "checked_at_iso": "2026-08-20T08:58:36.619690-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.846893-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/alexandria-cruise-in/2026-11-05/": {
@@ -16941,15 +16796,15 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-11-06/": {
-    "checked_at_iso": "2026-08-20T08:58:36.962122-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.848016-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-11-07/": {
-    "checked_at_iso": "2026-08-20T08:58:37.133695-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.850160-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-11-07/": {
-    "checked_at_iso": "2026-08-20T08:58:37.423916-04:00",
+    "checked_at_iso": "2026-08-27T12:39:16.289197-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-11-06/": {
@@ -16997,30 +16852,30 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-11-07/": {
-    "checked_at_iso": "2026-08-20T08:58:37.337848-04:00",
+    "checked_at_iso": "2026-08-27T12:39:15.402401-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-11-07/": {
-    "checked_at_iso": "2026-08-20T08:58:37.449295-04:00",
+    "checked_at_iso": "2026-08-27T12:39:24.857858-04:00",
     "result": {
-      "start_iso": "2027-08-14T08:00:00-04:00",
-      "end_iso": "2027-08-14T12:00:00-04:00",
-      "location": "3650 Olentangy River Road 3650 Olentangy River Road Columbus OH 43085",
+      "start_iso": "2026-08-29T08:00:00-04:00",
+      "end_iso": "2026-08-29T12:00:00-04:00",
+      "location": "Medical Building 3650 Olentangy River Road Columbus OH 43085",
       "description": "Columbus Cars & Coffee is a weekly event that gathers car enthusiasts to discuss their interest in vehicles while enjoying coffee. The meetings take place every Saturday from 8 am to 12 pm at 3650 Olentangy River Road in Columbus. This event is hosted at a medical office building that is closed on weekends, providing a spacious and private parking area for attendees.",
       "provider": "schema_org",
       "confident": true
     }
   },
   "verify::https://carsandcoffeeevents.com/event/first-saturday-cars-and-coffee-lexington/2026-11-07/": {
-    "checked_at_iso": "2026-08-20T08:58:38.279085-04:00",
+    "checked_at_iso": "2026-08-27T12:39:16.411245-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/southern-indiana-cars-and-coffee/2026-11-07/": {
-    "checked_at_iso": "2026-08-20T08:58:37.009656-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.849045-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/lexington-ky-cars-and-coffee/2026-11-07/": {
-    "checked_at_iso": "2026-08-20T08:58:38.337210-04:00",
+    "checked_at_iso": "2026-08-27T12:39:16.476218-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-11-07/": {
@@ -17046,11 +16901,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/capitol-city-corvette-club-presents-cars-on-the-green-car-truck-bike-jeep-show/": {
-    "checked_at_iso": "2026-08-20T08:58:38.075740-04:00",
+    "checked_at_iso": "2026-08-27T12:39:16.365763-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-11-07/": {
-    "checked_at_iso": "2026-08-20T08:58:38.856446-04:00",
+    "checked_at_iso": "2026-08-27T12:39:16.582429-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/springfield-cars-and-coffee/2026-11-07/": {
@@ -17087,7 +16942,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-11-11/": {
-    "checked_at_iso": "2026-08-20T08:58:39.139563-04:00",
+    "checked_at_iso": "2026-08-27T12:39:17.489717-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/monthly-car-bike-lunch-cruise-in/2026-11-11/": {
@@ -17124,7 +16979,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-08/": {
-    "checked_at_iso": "2026-08-20T08:58:38.925423-04:00",
+    "checked_at_iso": "2026-08-27T12:39:16.620931-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/hot-rod-car-show-cruise-in-at-one-more-lounge/2026-11-08/": {
@@ -17172,7 +17027,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-11-13/": {
-    "checked_at_iso": "2026-08-20T08:58:40.045248-04:00",
+    "checked_at_iso": "2026-08-27T12:39:17.537267-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/daredevil-brewing-co-speedway-cruise-in/2026-11-11/": {
@@ -17220,7 +17075,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-11-13/": {
-    "checked_at_iso": "2026-08-20T08:58:40.396163-04:00",
+    "checked_at_iso": "2026-08-27T12:39:17.969139-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-11-12/": {
@@ -17235,7 +17090,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-11-14/": {
-    "checked_at_iso": "2026-08-20T08:58:40.587568-04:00",
+    "checked_at_iso": "2026-08-27T12:39:18.064250-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-11-13/": {
@@ -17283,15 +17138,15 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-11-14/": {
-    "checked_at_iso": "2026-08-20T08:58:41.084005-04:00",
+    "checked_at_iso": "2026-08-27T12:39:18.957446-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/fairfield-cars-and-coffee-2026/2026-11-15/": {
-    "checked_at_iso": "2026-08-20T08:58:41.185367-04:00",
+    "checked_at_iso": "2026-08-27T12:39:19.039933-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-11-14/": {
-    "checked_at_iso": "2026-08-20T08:58:40.543193-04:00",
+    "checked_at_iso": "2026-08-27T12:39:18.017669-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-11-14/": {
@@ -17306,7 +17161,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-11-18/": {
-    "checked_at_iso": "2026-08-20T08:58:41.584631-04:00",
+    "checked_at_iso": "2026-08-27T12:39:19.300608-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-11-14/": {
@@ -17332,11 +17187,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/destination-cars-and-coffee/2026-11-14/": {
-    "checked_at_iso": "2026-08-20T08:58:40.731190-04:00",
+    "checked_at_iso": "2026-08-27T12:39:18.111457-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-15/": {
-    "checked_at_iso": "2026-08-20T08:58:41.192943-04:00",
+    "checked_at_iso": "2026-08-27T12:39:19.226794-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-11-17/": {
@@ -17373,7 +17228,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-11-20/": {
-    "checked_at_iso": "2026-08-20T08:58:42.749202-04:00",
+    "checked_at_iso": "2026-08-27T12:39:19.342863-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/los-costenos-cruise-in/2026-11-18/": {
@@ -17432,7 +17287,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-11-20/": {
-    "checked_at_iso": "2026-08-20T08:58:43.200390-04:00",
+    "checked_at_iso": "2026-08-27T12:39:19.392738-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-11-20/": {
@@ -17447,7 +17302,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-11-21/": {
-    "checked_at_iso": "2026-08-20T08:58:43.263252-04:00",
+    "checked_at_iso": "2026-08-27T12:39:20.463012-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-11-20/": {
@@ -17495,7 +17350,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-11-21/": {
-    "checked_at_iso": "2026-08-20T08:58:43.243574-04:00",
+    "checked_at_iso": "2026-08-27T12:39:19.848803-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/clarksville-steak-n-shake-cruise-in/2026-11-21/": {
@@ -17521,11 +17376,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-11-21/": {
-    "checked_at_iso": "2026-08-20T08:58:44.152464-04:00",
+    "checked_at_iso": "2026-08-27T12:39:20.691639-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/octane-lexington/2026-11-21/": {
-    "checked_at_iso": "2026-08-20T08:58:44.153492-04:00",
+    "checked_at_iso": "2026-08-27T12:39:20.909312-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-11-21/": {
@@ -17540,7 +17395,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-22/": {
-    "checked_at_iso": "2026-08-20T08:58:44.246666-04:00",
+    "checked_at_iso": "2026-08-27T12:39:20.955315-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-the-city/2026-11-21/": {
@@ -17555,11 +17410,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/hilliard-cars-and-coffee/2026-11-21/": {
-    "checked_at_iso": "2026-08-20T08:58:43.544792-04:00",
+    "checked_at_iso": "2026-08-27T12:39:20.514398-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-11-25/": {
-    "checked_at_iso": "2026-08-20T08:58:44.401168-04:00",
+    "checked_at_iso": "2026-08-27T12:39:21.047362-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-11-21/": {
@@ -17640,7 +17495,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-11-27/": {
-    "checked_at_iso": "2026-08-20T08:58:45.271599-04:00",
+    "checked_at_iso": "2026-08-27T12:39:21.303080-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-11-26/": {
@@ -17666,7 +17521,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-11-27/": {
-    "checked_at_iso": "2026-08-20T08:58:45.635441-04:00",
+    "checked_at_iso": "2026-08-27T12:39:21.482555-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-11-26/": {
@@ -17681,7 +17536,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-11-28/": {
-    "checked_at_iso": "2026-08-20T08:58:45.841092-04:00",
+    "checked_at_iso": "2026-08-27T12:39:22.004451-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-11-27/": {
@@ -17718,11 +17573,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/ohio-ford-expo-super-swap/": {
-    "checked_at_iso": "2026-08-20T08:58:45.988033-04:00",
+    "checked_at_iso": "2026-08-27T12:39:22.051803-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-11-28/": {
-    "checked_at_iso": "2026-08-20T08:58:46.250032-04:00",
+    "checked_at_iso": "2026-08-27T12:39:22.098715-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/kb-octane-presents-rip-rap-friday-night-cruise-in/2026-11-27/": {
@@ -17737,7 +17592,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-11-28/": {
-    "checked_at_iso": "2026-08-20T08:58:45.831982-04:00",
+    "checked_at_iso": "2026-08-27T12:39:21.781657-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-11-28/": {
@@ -17774,7 +17629,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-12-02/": {
-    "checked_at_iso": "2026-08-20T08:58:46.889947-04:00",
+    "checked_at_iso": "2026-08-27T12:39:22.317107-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/liberty-center-cars-coffee/2026-11-29/": {
@@ -17789,7 +17644,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/mccordsville-cars-coffee/2026-11-29/": {
-    "checked_at_iso": "2026-08-20T08:58:46.572644-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.836699-04:00",
     "result": {
       "start_iso": "2026-09-06T08:00:00-04:00",
       "end_iso": "2026-09-06T11:00:00-04:00",
@@ -17800,7 +17655,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-29/": {
-    "checked_at_iso": "2026-08-20T08:58:46.744517-04:00",
+    "checked_at_iso": "2026-08-27T12:39:22.267869-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-12-01/": {
@@ -17848,7 +17703,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-12-04/": {
-    "checked_at_iso": "2026-08-20T08:58:47.687333-04:00",
+    "checked_at_iso": "2026-08-27T12:39:22.532105-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/premier-car-truck-cruise-in/2026-12-03/": {
@@ -17896,7 +17751,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/cars-and-coffee-saturday-at-horsepower-farm/2026-12-05/": {
-    "checked_at_iso": "2026-08-20T08:58:47.929017-04:00",
+    "checked_at_iso": "2026-08-27T12:39:23.059508-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/rockin-randalls-cruise-in/2026-12-03/": {
@@ -17911,7 +17766,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-12-05/": {
-    "checked_at_iso": "2026-08-20T08:58:48.220177-04:00",
+    "checked_at_iso": "2026-08-27T12:39:23.252837-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-12-04/": {
@@ -17970,11 +17825,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-12-05/": {
-    "checked_at_iso": "2026-08-20T08:58:48.044564-04:00",
+    "checked_at_iso": "2026-08-27T12:39:23.105652-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-12-04/": {
-    "checked_at_iso": "2026-08-20T08:58:47.872496-04:00",
+    "checked_at_iso": "2026-08-27T12:39:22.925190-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-3650-olentangy-river-road/2026-12-05/": {
@@ -18022,11 +17877,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/first-saturday-cars-and-coffee-lexington/2026-12-05/": {
-    "checked_at_iso": "2026-08-20T08:58:49.205693-04:00",
+    "checked_at_iso": "2026-08-27T12:39:23.285122-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-12-05/": {
-    "checked_at_iso": "2026-08-20T08:58:49.686912-04:00",
+    "checked_at_iso": "2026-08-27T12:39:23.965862-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/muncie-cars-coffee-2026-season-10/2026-12-05/": {
@@ -18041,11 +17896,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/lexington-ky-cars-and-coffee/2026-12-05/": {
-    "checked_at_iso": "2026-08-20T08:58:49.207889-04:00",
+    "checked_at_iso": "2026-08-27T12:39:23.447806-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-12-09/": {
-    "checked_at_iso": "2026-08-20T08:58:49.929003-04:00",
+    "checked_at_iso": "2026-08-27T12:39:24.375438-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/bluegrass-outlawz-car-meet/2026-12-05/": {
@@ -18082,7 +17937,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-12-06/": {
-    "checked_at_iso": "2026-08-20T08:58:49.742002-04:00",
+    "checked_at_iso": "2026-08-27T12:39:24.257106-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-12-08/": {
@@ -18142,7 +17997,7 @@
     "events": []
   },
   "verify::https://facebook.com/events/s/wyler-fastlane-2026/1029342319990551/": {
-    "checked_at_iso": "2026-08-20T08:58:36.039348-04:00",
+    "checked_at_iso": "2026-08-27T12:39:14.841641-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/minford-dairy-bar-cruise-in/2026-12-10/": {
@@ -18168,7 +18023,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-12-11/": {
-    "checked_at_iso": "2026-08-20T08:58:50.742275-04:00",
+    "checked_at_iso": "2026-08-27T12:39:24.717979-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/friday-nights-beavercreek-cruise-in-at-the-vineyard-church/2026-12-11/": {
@@ -18194,7 +18049,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/event/no-flex-car-cruise/2026-12-11/": {
-    "checked_at_iso": "2026-08-20T08:58:51.147244-04:00",
+    "checked_at_iso": "2026-08-27T12:39:24.823359-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/martinsville-cruise-in-on-the-square/2026-12-10/": {
@@ -18443,15 +18298,8 @@
     }
   },
   "https://www.meetup.com/dine-dash/": {
-    "fetched_at_iso": "2026-08-25T07:26:59.219572-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
     "events": [
-      {
-        "title": "Dinner at Cozy’s Cafe",
-        "start_iso": "2026-08-26T19:00:00-04:00",
-        "end_iso": "2026-08-26T21:00:00-04:00",
-        "location": "Cozy's Cafe 6440 Cincinnati Dayton Road, Liberty Township, OH Liberty Township OH",
-        "url": "https://www.meetup.com/dine-dash/events/315880843/"
-      },
       {
         "title": "Velvet Crush at Phone booth",
         "start_iso": "2026-08-28T20:00:00-04:00",
@@ -18472,6 +18320,13 @@
         "end_iso": "2026-09-04T23:00:00-04:00",
         "location": "Austin Landing 10050 Innovation Drive, Miamisburg, OH Miamisburg OH",
         "url": "https://www.meetup.com/dine-dash/events/315799971/"
+      },
+      {
+        "title": "Labor Day Pool Party at Scott's",
+        "start_iso": "2026-09-07T11:00:00-04:00",
+        "end_iso": "2026-09-07T21:00:00-04:00",
+        "location": "Carlisle Ohio Martz-Paulin Rd., Carlisle, OH Carlisle OH",
+        "url": "https://www.meetup.com/dine-dash/events/314818592/"
       }
     ]
   },
@@ -18492,14 +18347,14 @@
     "events": []
   },
   "https://www.meetup.com/find/us--in--indianapolis/information-security/": {
-    "fetched_at_iso": "2026-08-25T07:26:59.219572-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
     "events": [
       {
-        "title": "(CS)²AI Online™ Symposium: ICS/OT Cyber Security for Oil & Gas Sector",
-        "start_iso": "2026-08-26T13:00:00-04:00",
-        "end_iso": "2026-08-26T15:00:00-04:00",
+        "title": "(CS)²AI Online™ Seminar: Cyber, ZTA & AI for Critical Infrastructure",
+        "start_iso": "2026-09-02T13:00:00-04:00",
+        "end_iso": "2026-09-02T15:00:00-04:00",
         "location": "",
-        "url": "https://www.meetup.com/cincinnati-cyber-security-for-control-systems/events/316104854/"
+        "url": "https://www.meetup.com/cincinnati-cyber-security-for-control-systems/events/316297363/"
       },
       {
         "title": "IT / NERD Happy Hour",
@@ -18507,13 +18362,6 @@
         "end_iso": "2026-09-09T18:30:00-04:00",
         "location": "Ale Emporium 8617 Allisonville Rd, Indianapolis, IN Indianapolis IN",
         "url": "https://www.meetup.com/nerd-happy-hour/events/314065034/"
-      },
-      {
-        "title": "Downtown Code and Coffee",
-        "start_iso": "2026-08-27T07:00:00-04:00",
-        "end_iso": "2026-08-27T09:00:00-04:00",
-        "location": "707 Fulton St 707 Fulton St, Indianapolis, IN Indianapolis IN",
-        "url": "https://www.meetup.com/indianapolis-downtown-code-and-coffee/events/316016620/"
       },
       {
         "title": "Learn More About Cisco, Cloud, AI, and Security",
@@ -18538,17 +18386,10 @@
       },
       {
         "title": "Broad Ripple Code & Coffee",
-        "start_iso": "2026-08-26T08:00:00-04:00",
-        "end_iso": "2026-08-26T10:00:00-04:00",
+        "start_iso": "2026-09-09T08:00:00-04:00",
+        "end_iso": "2026-09-09T10:00:00-04:00",
         "location": "Java House 965 E. 64th St,, Indianapolis, IN Indianapolis IN",
-        "url": "https://www.meetup.com/indianapolis-virtual-code-and-coffee/events/316002593/"
-      },
-      {
-        "title": "What Comes After Vibe Coding?",
-        "start_iso": "2026-08-25T18:30:00-04:00",
-        "end_iso": "2026-08-25T20:30:00-04:00",
-        "location": "E-gineering Annex, Suite 110 8415 Allison Pointe Boulevard, Indianapolis, IN Indianapolis IN",
-        "url": "https://www.meetup.com/indyaws/events/314436815/"
+        "url": "https://www.meetup.com/indianapolis-virtual-code-and-coffee/events/316196504/"
       },
       {
         "title": "Indy BI User Group Meeting",
@@ -18572,28 +18413,42 @@
         "url": "https://www.meetup.com/indianapolis-downtown-code-and-coffee/events/312181264/"
       },
       {
+        "title": "(CS)²AI Author Spotlight™: Cassie Crossley",
+        "start_iso": "2026-09-09T13:00:00-04:00",
+        "end_iso": "2026-09-09T15:00:00-04:00",
+        "location": "",
+        "url": "https://www.meetup.com/cincinnati-cyber-security-for-control-systems/events/316297523/"
+      },
+      {
         "title": "Fishers Code & Coffee",
-        "start_iso": "2026-08-25T07:00:00-04:00",
-        "end_iso": "2026-08-25T09:00:00-04:00",
+        "start_iso": "2026-09-01T07:00:00-04:00",
+        "end_iso": "2026-09-01T09:00:00-04:00",
         "location": "The Well Coffeehouse Fishers 8890 E 116th St #120, Fishers, IN Fishers IN",
-        "url": "https://www.meetup.com/fishers-code-coffee/events/315986366/"
+        "url": "https://www.meetup.com/fishers-code-coffee/events/316083494/"
+      },
+      {
+        "title": "September 2026 CINLUG Meeting — Local Knowledge & Mesh Radios",
+        "start_iso": "2026-09-02T18:30:00-04:00",
+        "end_iso": "2026-09-02T20:30:00-04:00",
+        "location": "Moser Consulting 6220 Castleway West Drive, Indianapolis, in Indianapolis in",
+        "url": "https://www.meetup.com/cinlug/events/316230156/"
       }
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page\\u003d19": {
-    "fetched_at_iso": "2026-08-25T07:26:57.204945-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--auto-boat-and-air--events--next-month/car-show/": {
-    "fetched_at_iso": "2026-08-25T07:28:26.193196-04:00",
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/cincinnati-speed-dating/?page\\u003d5": {
-    "fetched_at_iso": "2026-08-25T07:26:57.204945-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:28.779462-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/purple-passion-all-white-day-party/": {
-    "fetched_at_iso": "2026-08-25T07:26:57.204945-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:28.779462-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-downtown-hamilton/?page\\u003d4": {
@@ -18605,7 +18460,62 @@
     "events": []
   },
   "https://www.meetup.com/topics/pharmaceutical-sciences/": {
-    "fetched_at_iso": "2026-08-25T07:26:59.219572-04:00",
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
     "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page\\u003d7": {
+    "fetched_at_iso": "2026-08-27T12:37:28.779462-04:00",
+    "events": []
+  },
+  "https://www.meetup.com/55-fun-friends/events/315919254/?recId\\u003dd426c3f5-9169-4fb1-a9c2-c350e54f881e\\u0026recSource\\u003devent-search\\u0026searchId\\u003d1ca2fb88-3a4e-4f45-a8d8-29aa02b804e4\\u0026eventOrigin\\u003dfind_page%24all": {
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
+    "events": []
+  },
+  "https://www.meetup.com/fr-fr/i-d-be-game-for-that/?eventOrigin\\u003dcity_popular_groups": {
+    "fetched_at_iso": "2026-08-27T12:37:30.698710-04:00",
+    "events": [
+      {
+        "title": "Trivia & a Movie in the Park",
+        "start_iso": "2026-09-01T19:00:00-04:00",
+        "end_iso": "2026-09-01T22:30:00-04:00",
+        "location": "Washington Park race, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/fr-FR/i-d-be-game-for-that/events/316092204/"
+      },
+      {
+        "title": "Space Hulk First Edition - Introduction to the Board Game",
+        "start_iso": "2026-09-27T13:00:00-04:00",
+        "end_iso": "2026-09-27T17:00:00-04:00",
+        "location": "Tactical Retreat Gaming 431 Ohio Pike Suite: 144, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/fr-FR/i-d-be-game-for-that/events/316262587/"
+      }
+    ]
+  },
+  "https://www.google.com/goto?url=CAESYwHrOzAVZBmPPqWBITCZ8YoSkGaH7WLGo4WdCs8LyF91SNYtCbs-8-p6cWyjWKl3vjta7g_rtZXH3wzjOeh9m5w833LgEEfy2PyuAeGluvTtSynfkuGAziHl1FzzOHElko0fvw": {
+    "fetched_at_iso": "2026-08-27T12:37:44.245531-04:00",
+    "events": []
+  },
+  "https://sneakattackrally.com/ARA/entryList.html?rally\\u003dolympus": {
+    "fetched_at_iso": "2026-08-27T12:38:26.043606-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page\\u003d21": {
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page\\u003d3": {
+    "fetched_at_iso": "2026-08-27T12:38:54.655636-04:00",
+    "events": []
+  },
+  "verify::https://facebook.com/events/s/no-limits-937-cars-coffee/1728274965168803/": {
+    "checked_at_iso": "2026-08-27T12:39:14.839162-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1202419291741078/": {
+    "checked_at_iso": "2026-08-27T12:39:14.839977-04:00",
+    "result": null
+  },
+  "verify::https://facebook.com/events/s/concours-devou-2026/1034478555767894/": {
+    "checked_at_iso": "2026-08-27T12:39:14.841776-04:00",
+    "result": null
   }
 }

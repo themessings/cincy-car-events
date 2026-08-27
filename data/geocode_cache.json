@@ -4709,5 +4709,12 @@
     "lat": "39.5589474",
     "lon": "-84.3041074"
   },
-  "addr::downtown franklin ohio - 400 s. main street, franklin, oh": null
+  "addr::downtown franklin ohio - 400 s. main street, franklin, oh": null,
+  "addr::7160 taylor street liberty township, oh 45069": {
+    "formatted": "7160 Taylor Street, Liberty Township, OH 45069",
+    "latlon": [
+      39.3718138,
+      -84.3754367
+    ]
+  }
 }
