@@ -5085,5 +5085,84 @@
       39.0882425,
       -84.4287215
     ]
-  }
+  },
+  "12762, USA": {
+    "lat": "41.6644683",
+    "lon": "-74.8030332"
+  },
+  "46767, USA": {
+    "lat": "41.4492846",
+    "lon": "-85.5761136"
+  },
+  "42134, USA": {
+    "lat": "36.7212579",
+    "lon": "-86.5685528"
+  },
+  "Elizabethtown, KY": {
+    "lat": "37.6939520",
+    "lon": "-85.8591285"
+  },
+  "42728, USA": {
+    "lat": "37.1023381",
+    "lon": "-85.2931854"
+  },
+  "Ste 329, MA": {
+    "lat": "46.4976734",
+    "lon": "-84.3476583"
+  },
+  "47305, USA": {
+    "lat": "40.1934842",
+    "lon": "-85.3856635"
+  },
+  "46237, USA": {
+    "lat": "39.6764592",
+    "lon": "-86.0744459"
+  },
+  "46764, USA": {
+    "lat": "41.2155273",
+    "lon": "-85.6203615"
+  },
+  "65957, USA": {
+    "lat": "30.6972412",
+    "lon": "-88.1892334"
+  },
+  "46770, USA": {
+    "lat": "40.8640977",
+    "lon": "-85.3052325"
+  },
+  "46628, USA": {
+    "lat": "41.7162673",
+    "lon": "-86.3238413"
+  },
+  "addr::burger king north vernon in 47265": {
+    "formatted": "47 East Main Street, North Vernon, IN 47265",
+    "latlon": [
+      39.004752,
+      -85.6266592
+    ]
+  },
+  "addr::mcdonald’s sellersburg in 47172": {
+    "formatted": "102 Enterprise Way, Sellersburg, IN 47172",
+    "latlon": [
+      38.3914261,
+      -85.7657167
+    ]
+  },
+  "addr::storming crab 1360 veterans pkwy, clarksville jeffersonville in 47129": null,
+  "addr::court st court st circleville oh 43113, circleville, oh": {
+    "formatted": "South Court Street, Circleville, OH 43113",
+    "latlon": [
+      39.6008433,
+      -82.9456353
+    ]
+  },
+  "addr::jefferson street jefferson street martinsville in 46151, martinsville, in": null,
+  "addr::alexandria village green shopping center alexandria ky 41001": null,
+  "addr::historical charlestown city square charlestown in 47111": null,
+  "addr::manpower park jackson oh 45640": null,
+  "addr::bardstown nelson county airport bardstown ky 40004": null,
+  "addr::dallara experience hub 1201 n main st, indianapolis speedway in 46224": null,
+  "addr::johnson co. fairgrounds franklin in 46131": null,
+  "addr::downtown union city union city in 47390": null,
+  "addr::980 lewis & clark pkwy lewis & clark pkwy clarksville in 47129, clarksville, in": null
 }
