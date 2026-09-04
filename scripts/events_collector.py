@@ -430,6 +430,12 @@ def extract_facebook_event_id(url: str) -> Optional[str]:
     if m:
         return m.group(1)
 
+    # Newer share-link format: /events/s/<slug>/<id>/ — the ID is the last
+    # run of digits in the path, not right after "/events/".
+    m = re.search(r"/events/s/[^/]+/(\d+)", path)
+    if m:
+        return m.group(1)
+
     if path.rstrip("/").lower().endswith("/event.php"):
         eid = clean_ws((parse_qs(parsed.query).get("eid") or [""])[0])
         if eid.isdigit():
@@ -4229,6 +4235,31 @@ def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
             return clean_ws(" ".join(x for x in [loc_name, addr_str] if x))
         return clean_ws(str(loc))
 
+    def address_from_obj(loc) -> str:
+        """A clean 'street, city, ST zip' string straight from the page's own
+        structured PostalAddress — the same data location_from_obj() above
+        already reads, just kept comma-formatted instead of space-joined so
+        it's recognizable as a full street address downstream."""
+        if isinstance(loc, list):
+            for item in loc:
+                found = address_from_obj(item)
+                if found:
+                    return found
+            return ""
+        if not isinstance(loc, dict):
+            return ""
+        addr = loc.get("address") or {}
+        if not isinstance(addr, dict):
+            return ""
+        street = clean_ws(str(addr.get("streetAddress") or ""))
+        city = clean_ws(str(addr.get("addressLocality") or ""))
+        region = clean_ws(str(addr.get("addressRegion") or ""))
+        postal = clean_ws(str(addr.get("postalCode") or ""))
+        if not (street and city and region):
+            return ""
+        tail = clean_ws(f"{region} {postal}")
+        return ", ".join(p for p in (street, city, tail) if p)
+
     for s in scripts:
         txt = s.get_text(strip=True)
         if not txt:
@@ -4256,6 +4287,7 @@ def parse_schema_org_events_from_html(page_url: str, html: str) -> List[dict]:
                 "start_dt": start_dt,
                 "end_dt": end_dt or (start_dt + timedelta(hours=2)),
                 "location": location_from_obj(obj.get("location") or {}),
+                "address": address_from_obj(obj.get("location") or {}),
                 "description": clean_ws(str(obj.get("description") or ""))[:2000],
                 "url": clean_ws(obj.get("url") or canonical_url or page_url),
             })
@@ -5014,6 +5046,7 @@ def verify_event_datetime_via_link(event: dict, url_cache: Dict[str, dict], allo
                         "start_iso": start_dt.isoformat(),
                         "end_iso": end_dt.isoformat(),
                         "location": clean_ws(best.get("location", "")),
+                        "address": clean_ws(best.get("address", "")),
                         "description": clean_ws(best.get("description", "")),
                         "provider": "schema_org",
                         "confident": confident,
