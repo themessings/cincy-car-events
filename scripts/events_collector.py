@@ -6423,11 +6423,17 @@ def verify_parent_access(drive, parent_id: str) -> bool:
 
 
 def _execute_sheets_request(request, *, context: str, max_attempts: int = 5):
-    """Execute a googleapiclient Sheets request, retrying on transient (429/5xx) errors.
+    """Execute a googleapiclient Sheets request, retrying on transient (429/5xx)
+    errors and on raw network failures (timeouts, connection resets).
 
     Google's Sheets API returns occasional 503s ("service currently unavailable")
     that clear up within seconds; without a retry, one of these kills the whole
-    collector run after it already did all the work of gathering events."""
+    collector run after it already did all the work of gathering events. A raw
+    socket/SSL timeout (TimeoutError etc., all OSError subclasses) happens
+    before any HTTP response exists at all, so it never reaches the HttpError
+    branch below — confirmed live 2026-09-04, a run lost 380 fully-processed
+    events to an uncaught "TimeoutError: The read operation timed out" on the
+    very last Sheets call."""
     for attempt in range(max_attempts):
         try:
             return request.execute()
@@ -6440,6 +6446,13 @@ def _execute_sheets_request(request, *, context: str, max_attempts: int = 5):
             if status in (429, 500, 502, 503, 504) and attempt < max_attempts - 1:
                 delay = (2 ** attempt) * 1.5
                 log(f"⚠️ Google Sheets API {status} on {context}, retrying in {delay:.1f}s (attempt {attempt + 1}/{max_attempts})")
+                time.sleep(delay)
+                continue
+            raise
+        except OSError as ex:
+            if attempt < max_attempts - 1:
+                delay = (2 ** attempt) * 1.5
+                log(f"⚠️ Network error on {context} ({ex.__class__.__name__}: {ex}), retrying in {delay:.1f}s (attempt {attempt + 1}/{max_attempts})")
                 time.sleep(delay)
                 continue
             raise
