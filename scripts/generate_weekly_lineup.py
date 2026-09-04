@@ -434,12 +434,40 @@ def download_file(url: str, dest_path: str, timeout=30):
     with open(dest_path, "wb") as f:
         f.write(r.content)
 
-def upload_to_folder(drive_service, folder_id: str, local_path: str) -> str:
-    filename = os.path.basename(local_path)
-    file_metadata = {"name": filename, "parents": [folder_id]}
+def upload_to_folder(drive_service, folder_id: str, local_path: str, drive_filename: Optional[str] = None) -> str:
+    """Upload local_path into folder_id under drive_filename (or the local
+    basename if not given), overwriting any existing file of that name.
+
+    Service accounts have no Drive storage quota of their own and can only
+    create new files inside a Shared Drive (unavailable on a personal
+    account) — but updating an *existing* file's content never touches
+    quota, since no new file is being created. So this always targets a
+    fixed filename and updates it in place rather than creating a fresh
+    dated file every run; see DRIVE_OUTPUT_FOLDER_ID's pre-seeded files
+    (created once, by hand, under the real account) for why those specific
+    names must keep matching what's already sitting in that folder."""
+    filename = drive_filename or os.path.basename(local_path)
     media = MediaFileUpload(local_path, resumable=True)
+
+    existing = drive_service.files().list(
+        q=f"name = '{filename}' and '{folder_id}' in parents and trashed = false",
+        fields="files(id)",
+        supportsAllDrives=True,
+        includeItemsFromAllDrives=True,
+    ).execute().get("files", [])
+
+    if existing:
+        updated = drive_service.files().update(
+            fileId=existing[0]["id"], media_body=media, fields="id,webViewLink", supportsAllDrives=True
+        ).execute()
+        return updated["webViewLink"]
+
+    print(f"[WARN] No pre-seeded '{filename}' found in the target folder — "
+          f"creating it fresh, which needs Drive storage quota the service "
+          f"account doesn't have and will likely fail. Seed this filename "
+          f"once under the real account first (see DRIVE_OUTPUT_FOLDER_ID).")
     created = drive_service.files().create(
-        body=file_metadata, media_body=media, fields="id,webViewLink", supportsAllDrives=True
+        body={"name": filename, "parents": [folder_id]}, media_body=media, fields="id,webViewLink", supportsAllDrives=True
     ).execute()
     return created["webViewLink"]
 
@@ -1790,12 +1818,24 @@ caption = make_caption(selected_dates, events_by_date_city_full, events_selected
 with open(out_caption_path, "w", encoding="utf-8") as f:
     f.write(caption)
 
+# Fixed names, not date-stamped: the service account can only overwrite an
+# existing file (no create quota of its own), so these must keep matching
+# whatever was pre-seeded once under the real account in DRIVE_OUTPUT_FOLDER_ID.
+DRIVE_SLIDE_NAME_PREFIX = "apex_weekly_lineup_slide"
+DRIVE_CAPTION_NAME = "apex_weekly_lineup_caption.txt"
+DRIVE_SEEDED_SLIDE_COUNT = 6
+
 slide_links = []
 txt_link = ""
 try:
-    for p in slide_paths:
-        slide_links.append(upload_to_folder(drive_service, TARGET_FOLDER_ID, p))
-    txt_link = upload_to_folder(drive_service, TARGET_FOLDER_ID, out_caption_path)
+    if len(slide_paths) > DRIVE_SEEDED_SLIDE_COUNT:
+        print(f"[WARN] {len(slide_paths)} slides this week, but only "
+              f"{DRIVE_SEEDED_SLIDE_COUNT} pre-seeded Drive filenames exist — "
+              f"the extra ones will fail to upload until more are seeded.")
+    for i, p in enumerate(slide_paths, start=1):
+        drive_name = f"{DRIVE_SLIDE_NAME_PREFIX}_{i:02d}.jpg"
+        slide_links.append(upload_to_folder(drive_service, TARGET_FOLDER_ID, p, drive_filename=drive_name))
+    txt_link = upload_to_folder(drive_service, TARGET_FOLDER_ID, out_caption_path, drive_filename=DRIVE_CAPTION_NAME)
 except Exception as ex:
     print(f"[WARN] Drive upload failed partway through: {ex}")
     print("[WARN] Outputs are still local (see the 'apex-weekly-lineup' GitHub Actions artifact).")
