@@ -5827,6 +5827,11 @@ def enrich_events_for_export(
             formatted, latlon = (override_hit, None) if override_hit else geocode_full_address(location, city_state, geocache)
             if override_hit:
                 overridden += 1
+                # A manually researched override is trusted as "validated"
+                # even without a strict house number (a park or town square
+                # commonly doesn't have one) — the no-address deletion pass
+                # later must not throw these back out for that.
+                ev["address_verified_via"] = "manual_override"
             elif formatted and latlon:
                 tier = _address_trust_tier(ev)
 
@@ -5939,6 +5944,33 @@ def enrich_events_for_export(
         address = clean_ws(str(ev.get("address", "")))
         if _has_full_street_address(address):
             ev["location"] = address
+
+    # 7) A fixed-venue event we still can't place with a real street address
+    # after every resolution attempt (link, geocoding, manual overrides)
+    # isn't verified data — drop it rather than publish just a city/state.
+    # Route-based touring rallies are exempt: "Chattanooga, TN" for one leg
+    # of a multi-day rally IS the complete, correct answer, not a fallback
+    # we failed to improve on. Only runs when address lookup itself ran —
+    # a caller that opted out of address enrichment entirely shouldn't have
+    # every event deleted for lacking one.
+    if lookup_addresses:
+        kept_with_address: List[dict] = []
+        dropped_no_address = 0
+        dropped_examples: List[str] = []
+        for ev in events:
+            address = clean_ws(str(ev.get("address", "")))
+            is_rally = ev.get("category") == "rally" or categorize(str(ev.get("title", "")), str(ev.get("location", "")), cfg) == "rally"
+            is_manually_verified = ev.get("address_verified_via") == "manual_override"
+            if is_rally or is_manually_verified or _has_full_street_address(address):
+                kept_with_address.append(ev)
+            else:
+                dropped_no_address += 1
+                if len(dropped_examples) < 15:
+                    dropped_examples.append(clean_ws(str(ev.get("title", ""))))
+        events = kept_with_address
+        if dropped_no_address:
+            log(f"🧹 Dropped {dropped_no_address} event(s) with no confirmed full street address (not a touring rally)")
+            log(f"   Examples: {dropped_examples}")
 
     for ev in events:
         popularity, size, attendance = compute_popularity_and_size(ev)

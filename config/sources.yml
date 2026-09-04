@@ -20,7 +20,7 @@ venue_address_overrides:
   "VFW's Cabana on the Whitewater": "9160 Lawrenceburg Rd, Harrison, OH 45030"
   "Germania Society": "3529 W Kemper Rd, Cincinnati, OH 45251"
   "Alexandria Village Green Shopping Center": "7001 Alexandria Pike, Alexandria, KY 41001"
-  "Bardstown Nelson County Airport": "1924-B Boston Rd, Bardstown, KY 40004"
+  "Bardstown Nelson County Airport": "1924 Boston Rd, Bardstown, KY 40004"
   "Johnson Co. Fairgrounds": "250 Fairground St, Franklin, IN 46131"
   "Butler County Fair": "1715 Fairgrove Ave, Hamilton, OH 45011"
   # No confirmed house number for these two (parks/squares commonly lack
@@ -41,6 +41,11 @@ title_address_overrides:
   "Destination Cars and Coffee": "201 Holiday Dr, Wilmington, OH 45177"
   "Cars and Coffee Saturday at Horsepower Farm": "2227 Trinity Dr, Middletown, OH 45044"
   "RallyCross – Edgewater": "4819 E Miami River Rd, Cleves, OH 45002"
+  "Kentuckiana Showdown": "3730 River Rd, Louisville, KY 40207"
+  "Bristol Village 2026 Car Show": "625 E 5th St, Waverly, OH 45690"
+  "Cincinnati British Car Day": "301 Wessel Dr, Fairfield, OH 45014"
+  "MIDWESTFEST 10 CAR & BIKE SHOW": "7300 E Troy Ave, Indianapolis, IN 46239"
+  "Thundercruise! - Car & Bike Meet": "1 S Main St, Miamisburg, OH 45342"
 filters:
   # ~1h45m drive from Cincinnati: 105 straight-line miles keeps Dayton, Columbus,
   # Louisville, Lexington, and Indianapolis while dropping Cleveland/Nashville noise.
