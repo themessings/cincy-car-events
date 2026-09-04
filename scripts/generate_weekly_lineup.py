@@ -1691,7 +1691,7 @@ def make_caption(
     seen_regions = set()
     for e in events_selected:
         seen_regions.add(e.region)
-    ordered_regions = [r for r in REGION_PRIORITY if r in seen_regions]
+    ordered_regions = [r for r in REGION_PRIORITY if r in seen_regions and r != "Other"]
     market_names = [REGION_DISPLAY_NAME.get(r, r) for r in ordered_regions]
 
     n = len(market_names)
