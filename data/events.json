@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-04T11:24:22.274769-04:00",
-  "count": 361,
+  "generated_at_iso": "2026-09-04T11:42:18.858554-04:00",
+  "count": 362,
   "events": [
     {
       "Event Name": "NHRA US Nationals",
@@ -78,19 +78,19 @@
       "Event URL": "https://carsandcoffeeevents.com/events/kb-octane-presents-rip-rap-friday-night-cruise-in"
     },
     {
-      "Event Name": "Krueger's Second Annual Car, Truck, &amp; Bike Show",
+      "Event Name": "Krueger’s Second Annual Car, Truck, & Bike Show",
       "Date": "2026-09-05",
-      "Start Time": "12:00 AM",
-      "End Time": "12:00 AM",
-      "Location": "7220 N Dixie Dr, Dayton, OH 45414-2708, United States, Dayton, OH",
-      "Address": "7220 N Dixie Dr, Dayton, OH 45414-2708, United States, Dayton, OH",
+      "Start Time": "9:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "7220 N Dixie Dr., Dayton, OH 45401",
+      "Address": "7220 N Dixie Dr., Dayton, OH 45401",
       "Closest City": "Dayton, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://allevents.in/dayton/car-shows"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/kruegers-second-car-truck-bike-show-2026-09-05"
     },
     {
       "Event Name": "Southern Indiana Cars & Coffee",
@@ -198,19 +198,19 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
+      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
       "Date": "2026-09-05",
-      "Start Time": "8:00 AM",
+      "Start Time": "8:30 AM",
       "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
-      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
       "Closest City": "Columbus, OH",
       "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
+      "Size": "Local",
+      "Popularity": "42",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-09-05"
     },
     {
       "Event Name": "Hometown Heroes Car Show – Mechanicsburg",
@@ -1222,15 +1222,15 @@
       "Date": "2026-09-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7160 Taylor Street, Liberty Township, OH 45069",
-      "Address": "7160 Taylor Street, Liberty Township, OH 45069",
+      "Location": "7160 Taylor St, Liberty Township, OH 45069",
+      "Address": "7160 Taylor St, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1202419291741078/"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -3751,6 +3751,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-04-14"
+    },
+    {
+      "Event Name": "KYANA Swap Meet",
+      "Date": "2027-04-17",
+      "Start Time": "8:00 AM",
+      "End Time": "4:00 PM",
+      "Location": "937 Phillips Ln., Louisville, KY 40209",
+      "Address": "937 Phillips Ln., Louisville, KY 40209",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Regional",
+      "Popularity": "52",
+      "Attendance": "",
+      "Source": "Google Events - Louisville",
+      "Event URL": "https://www.kyanaswapmeet.com/"
     },
     {
       "Event Name": "Hoosier Rally (SCCA)",
