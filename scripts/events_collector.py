@@ -5442,6 +5442,13 @@ def enrich_events_for_export(
         home_lon = cfg["home"]["lon"]
         local_max = float(cfg["filters"]["local_max_miles"])
         rally_max = float(cfg["filters"]["rally_max_miles"])
+        # This is a *sanity* check, not the local/rally inclusion filter: plenty
+        # of legitimate "local" events (a track day at Mid-Ohio, 146mi out) sail
+        # past local_max already, because the earlier ingestion-time geocode
+        # often has no coordinates to filter on. Only reject geocodes that are
+        # implausible outright (a same-named venue clear across the country),
+        # not ones merely farther than the everyday local radius.
+        geocode_sanity_max = max(local_max * 3, 300.0)
         filled = 0
         rejected_far = 0
         for ev in events:
@@ -5455,7 +5462,8 @@ def enrich_events_for_export(
                 # same-named business clear across the country; reject any
                 # geocode that lands implausibly far from Cincinnati rather
                 # than trust it just because Nominatim returned a hit.
-                allowed_max = rally_max if ev.get("category") == "rally" else local_max
+                is_rally = ev.get("category") == "rally" or categorize(str(ev.get("title", "")), location, cfg) == "rally"
+                allowed_max = rally_max if is_rally else geocode_sanity_max
                 if miles_from_home(latlon[0], latlon[1], home_lat, home_lon) > allowed_max:
                     log(f"⚠️ Rejected implausible geocode for '{clean_ws(str(ev.get('title', '')))}': '{location}' -> {formatted}")
                     rejected_far += 1
