@@ -5530,7 +5530,12 @@ def merge_nearby_overlapping_duplicates(rows: List[dict], max_miles: float = 1.0
         return start, end
 
     def coords(row: dict) -> Optional[Tuple[float, float]]:
-        lat, lon = row.get("lat"), row.get("lon")
+        # address_lat/lon specifically means "this is where the resolved
+        # Address geocodes to" — plain lat/lon can instead hold a coarse,
+        # city-level point from ingestion (e.g. a bare "Cincinnati, OH"
+        # city_state hint) that would make two unrelated events across town
+        # look like they're at the same spot.
+        lat, lon = row.get("address_lat"), row.get("address_lon")
         if lat is None or lon is None:
             return None
         try:
@@ -5861,6 +5866,16 @@ def enrich_events_for_export(
                     filled += 1
                 if latlon and (ev.get("lat") is None or ev.get("lon") is None):
                     ev["lat"], ev["lon"] = latlon
+                if latlon:
+                    # Dedicated field for "this is precisely the resolved
+                    # Address's own coordinates" — ev["lat"]/["lon"] can
+                    # already hold a coarse, city-level geocode from
+                    # ingestion (e.g. from a bare "Cincinnati, OH" city_state
+                    # hint) that the check above won't overwrite, and two
+                    # unrelated events sharing that same coarse point would
+                    # otherwise look like they're "at the same address" to
+                    # any distance-based comparison.
+                    ev["address_lat"], ev["address_lon"] = latlon
 
             # Guarantee Closest City now, using any lat/lon just resolved
             # above (falls back to a state found in the text, then home).
