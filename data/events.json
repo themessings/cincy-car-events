@@ -1,5 +1,5 @@
 {
-  "generated_at_iso": "2026-09-04T10:16:45.328679-04:00",
+  "generated_at_iso": "2026-09-04T10:41:06.287730-04:00",
   "count": 362,
   "events": [
     {
@@ -78,19 +78,19 @@
       "Event URL": "https://carsandcoffeeevents.com/events/kb-octane-presents-rip-rap-friday-night-cruise-in"
     },
     {
-      "Event Name": "Krueger’s Second Annual Car, Truck, & Bike Show",
+      "Event Name": "Krueger's Second Annual Car, Truck, &amp; Bike Show",
       "Date": "2026-09-05",
-      "Start Time": "9:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "7220 N Dixie Dr., Dayton, OH 45401",
-      "Address": "7220 N Dixie Dr., Dayton, OH 45401",
+      "Start Time": "12:00 AM",
+      "End Time": "12:00 AM",
+      "Location": "7220 N Dixie Dr, Dayton, OH 45414-2708, United States, Dayton, OH",
+      "Address": "7220 N Dixie Dr, Dayton, OH 45414-2708, United States, Dayton, OH",
       "Closest City": "Dayton, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/kruegers-second-car-truck-bike-show-2026-09-05"
+      "Source": "Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://allevents.in/dayton/car-shows"
     },
     {
       "Event Name": "Southern Indiana Cars & Coffee",
@@ -183,21 +183,6 @@
       "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-starbucks-in-westerville-2026-06-20"
     },
     {
-      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
-      "Date": "2026-09-05",
-      "Start Time": "8:30 AM",
-      "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "42",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-09-05"
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-09-05",
       "Start Time": "8:00 AM",
@@ -211,6 +196,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20"
     },
     {
       "Event Name": "Hometown Heroes Car Show – Mechanicsburg",
@@ -243,19 +243,19 @@
       "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-with-eagle-chevrolet-gmc"
     },
     {
-      "Event Name": "Muncie Cars & Coffee 2026 – Season 10",
+      "Event Name": "Muncie Cars & Coffee 2026 - Season 10",
       "Date": "2026-09-05",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "100 E Charles St, Muncie, IN 47302",
-      "Address": "100 E Charles St, Muncie, IN 47302",
+      "Location": "100 E Charles St, Muncie, IN 47305",
+      "Address": "100 E Charles St, Muncie, IN 47305",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-09-05"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10"
     },
     {
       "Event Name": "Hullabaloo",
@@ -1218,19 +1218,19 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
+      "Event Name": "Liberty Center Cars and Coffee",
       "Date": "2026-09-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7160 Taylor St, Liberty Township, OH 45069",
-      "Address": "7160 Taylor St, Liberty Township, OH 45069",
+      "Location": "7140 Taylor Street, Liberty Township, OH 45069",
+      "Address": "7140 Taylor Street, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-09-19"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
