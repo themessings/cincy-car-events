@@ -4598,23 +4598,28 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
                 start_dt = start_dt.replace(tzinfo=et_tz)
             elif start_dt:
                 start_dt = start_dt.astimezone(et_tz)
-            if not start_dt:
-                diagnostics["parse_failures"] += 1
-                log(f"⚠️ SerpAPI google_events date parse failed: title='{title[:80]}' when='{when}'")
-                continue
 
-            end_dt = start_dt + timedelta(hours=2)
+            end_dt = (start_dt + timedelta(hours=2)) if start_dt else None
             venue = _stringify_location_like(item.get("venue") or item.get("event_location") or "")
             address = _stringify_location_like(item.get("address") or item.get("location") or "")
             location_text = simplify_location(venue, address)
             url = clean_ws(item.get("link") or item.get("event_link") or item.get("website") or item.get("url") or "")
 
+            # Google's own inline "date.when" is frequently missing for these
+            # broad discovery queries (it surfaces plenty of calendar/listing
+            # pages, not just single clean events) — try the item's own link
+            # for real schema.org date data BEFORE giving up on it, not after.
             enriched = enrich_event_from_source_url(url) if url else None
             if enriched:
                 title = clean_ws(enriched.get("title") or title)
                 start_dt = enriched.get("start_dt") or start_dt
                 end_dt = enriched.get("end_dt") or end_dt
                 location_text = clean_ws(enriched.get("location") or location_text)
+
+            if not start_dt:
+                diagnostics["parse_failures"] += 1
+                log(f"⚠️ SerpAPI google_events date parse failed: title='{title[:80]}' when='{when}'")
+                continue
 
             dedupe_key = (title.lower(), start_dt.isoformat()[:16], location_text.lower())
             if dedupe_key in seen:
