@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-04T08:29:08.030248-04:00",
-  "count": 484,
+  "generated_at_iso": "2026-09-04T08:38:56.400637-04:00",
+  "count": 489,
   "events": [
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -198,21 +198,6 @@
       "Event URL": "https://facebook.com/events/s/the-fast-parts-grand-prix-at-m/1173981004805186/"
     },
     {
-      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
-      "Date": "2026-09-05",
-      "Start Time": "8:30 AM",
-      "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "42",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-09-05"
-    },
-    {
       "Event Name": "Lawrenceburg Cars & Coffee",
       "Date": "2026-09-05",
       "Start Time": "8:00 AM",
@@ -241,6 +226,36 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/events/outback-in-the-midwest-cars-n-coffee"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "691 N. Cleveland Ave, Columbus, OH 43085",
+      "Address": "691 N. Cleveland Ave, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-starbucks-in-westerville-2026-06-20"
     },
     {
       "Event Name": "Krueger’s Second Annual Car, Truck, & Bike Show",
@@ -682,8 +697,8 @@
       "Date": "2026-09-10",
       "Start Time": "5:00 PM",
       "End Time": "8:00 PM",
-      "Location": "Alexandria Village Green Shopping Center Alexandria KY 41001",
-      "Address": "Cincinnati, OH",
+      "Location": "7001 Alexandria Pike, Alexandria, KY 41001",
+      "Address": "7001 Alexandria Pike, Alexandria, KY 41001",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
@@ -728,7 +743,7 @@
       "Start Time": "5:00 PM",
       "End Time": "5:00 PM",
       "Location": "Historical Charlestown City Square Charlestown IN 47111",
-      "Address": "Louisville, KY",
+      "Address": "Main Cross Street, Charlestown, IN 47111",
       "Closest City": "Louisville, KY",
       "Callout": "",
       "Size": "Small",
@@ -743,7 +758,7 @@
       "Start Time": "5:30 PM",
       "End Time": "9:00 PM",
       "Location": "Manpower Park Jackson OH 45640",
-      "Address": "Columbus, OH",
+      "Address": "East Main Street, Jackson, OH 45640",
       "Closest City": "Columbus, OH",
       "Callout": "",
       "Size": "Local",
@@ -863,7 +878,7 @@
       "Start Time": "8:30 AM",
       "End Time": "10:30 AM",
       "Location": "Bardstown Nelson County Airport Bardstown KY 40004",
-      "Address": "Louisville, KY",
+      "Address": "1924-B Boston Rd, Bardstown, KY 40004",
       "Closest City": "Louisville, KY",
       "Callout": "",
       "Size": "Local",
@@ -948,21 +963,6 @@
       "Event URL": "https://carsandcoffeeevents.com/events/gratis-car-show"
     },
     {
-      "Event Name": "Cruise’n For Cancer",
-      "Date": "2026-09-12",
-      "Start Time": "1:00 PM",
-      "End Time": "5:00 PM",
-      "Location": "450 Victor Stier Dr, Milford, OH 45150",
-      "Address": "450 Victor Stier Dr, Milford, OH 45150",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "Registration required",
-      "Size": "Local",
-      "Popularity": "32",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cruisen-for-cancer"
-    },
-    {
       "Event Name": "4th Annual Chasing Sunsets Car Show",
       "Date": "2026-09-12",
       "Start Time": "9:00 AM",
@@ -1023,6 +1023,21 @@
       "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-26"
     },
     {
+      "Event Name": "Miami Meadows Park Veterans Appreciation Car Show",
+      "Date": "2026-09-12",
+      "Start Time": "9:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "1546 OH-131, Milford, OH 45150",
+      "Address": "1546 OH-131, Milford, OH 45150",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/miami-meadows-park-veterans-appreciation-car-show-2026-09-12"
+    },
+    {
       "Event Name": "Destination Cars and Coffee",
       "Date": "2026-09-12",
       "Start Time": "10:00 AM",
@@ -1042,8 +1057,8 @@
       "Date": "2026-09-12",
       "Start Time": "11:00 AM",
       "End Time": "5:00 PM",
-      "Location": "Butler County Fair",
-      "Address": "Cincinnati, OH",
+      "Location": "1715 Fairgrove Ave, Hamilton, OH 45011",
+      "Address": "1715 Fairgrove Ave, Hamilton, OH 45011",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Local",
@@ -1096,6 +1111,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/events/cruisin-for-christ-2nd-annual-car-truck-and-motorcycle-show"
+    },
+    {
+      "Event Name": "Cruise’n For Cancer",
+      "Date": "2026-09-12",
+      "Start Time": "1:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "450 Victor Stier Dr, Milford, OH 45150",
+      "Address": "450 Victor Stier Dr, Milford, OH 45150",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "Registration required",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/cruisen-for-cancer"
     },
     {
       "Event Name": "Kettering Saturday Night Cruise-In",
@@ -1357,8 +1387,8 @@
       "Date": "2026-09-18",
       "Start Time": "7:00 AM",
       "End Time": "6:00 PM",
-      "Location": "Johnson Co. Fairgrounds Franklin IN 46131",
-      "Address": "Indianapolis, IN",
+      "Location": "250 Fairground St, Franklin, IN 46131",
+      "Address": "250 Fairground St, Franklin, IN 46131",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Local",
@@ -1591,6 +1621,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-19"
+    },
+    {
+      "Event Name": "Indianapolis Cars and Coffee",
+      "Date": "2026-09-19",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "9111 Haverstick Rd, Indianapolis, IN 46240",
+      "Address": "9111 Haverstick Rd, Indianapolis, IN 46240",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Tommy’s Mccar Show Sponsored By Mcdonald’s",
@@ -2358,21 +2403,6 @@
       "Event URL": "https://facebook.com/events/s/35th-annual-vw-porsche-reunion/1779246243286414/"
     },
     {
-      "Event Name": "Wyler FastLane 2026",
-      "Date": "2026-09-27",
-      "Start Time": "9:30 AM",
-      "End Time": "12:30 PM",
-      "Location": "1301 Western Ave, Cincinnati, OH 45203-1118",
-      "Address": "1301 Western Ave, Cincinnati, OH 45203-1118",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "32",
-      "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS); iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/wyler-fastlane-2026/1029342319990551/"
-    },
-    {
       "Event Name": "Cars & Coffee",
       "Date": "2026-09-27",
       "Start Time": "8:00 AM",
@@ -2388,6 +2418,21 @@
       "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-32"
     },
     {
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Date": "2026-09-27",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH 45202",
+      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
       "Event Name": "Euro Cars and Cocoa",
       "Date": "2026-09-27",
       "Start Time": "9:00 AM",
@@ -2401,6 +2446,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-09-27/"
+    },
+    {
+      "Event Name": "Wyler FastLane 2026",
+      "Date": "2026-09-27",
+      "Start Time": "9:30 AM",
+      "End Time": "12:30 PM",
+      "Location": "1301 Western Ave, Cincinnati, OH 45203-1118",
+      "Address": "1301 Western Ave, Cincinnati, OH 45203-1118",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/wyler-fastlane-2026/1029342319990551/"
     },
     {
       "Event Name": "7th Annual James Miller Memorial Car Show",
@@ -3183,19 +3243,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-10/"
     },
     {
-      "Event Name": "'Cruise In' Car Show",
+      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-11",
-      "Start Time": "11:00 AM",
-      "End Time": "3:00 PM",
-      "Location": "4521 Spring Grove Avenue, Cincinnati, OH 45223",
-      "Address": "4521 Spring Grove Avenue, Cincinnati, OH 45223",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "2726 Riverside Drive, Cincinnati, OH 45202",
+      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS); iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cruise-in-car-show/1439212361072214/"
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
       "Event Name": "Euro Cars and Cocoa",
@@ -3211,6 +3271,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-11/"
+    },
+    {
+      "Event Name": "'Cruise In' Car Show",
+      "Date": "2026-10-11",
+      "Start Time": "11:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "4521 Spring Grove Avenue, Cincinnati, OH 45223",
+      "Address": "4521 Spring Grove Avenue, Cincinnati, OH 45223",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS); iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cruise-in-car-show/1439212361072214/"
     },
     {
       "Event Name": "Chicken Eater’s Car Club",
