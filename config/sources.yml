@@ -269,13 +269,15 @@ discovery:
   - site:facebook.com/events (Ohio OR "Northern Kentucky" OR NKY) (cars OR "car show" OR "cars and coffee" OR rally)
   - site:facebook.com/events (regional rally OR "driving tour") (ohio OR kentucky OR indiana OR tennessee OR michigan)
 sources:
-# carsandcoffeeevents.com switched to scraping-hostile cards; its WordPress REST
-# API is open and returns full venue/address/cost/description data instead.
-- type: tribe_events_api
+# carsandcoffeeevents.com migrated off WordPress to a Laravel app (confirmed
+# 2026-09: /wp-json/ 404s entirely now). Its per-state landing pages are still
+# server-rendered and paginate via ?page=N; each linked event page carries a
+# full schema.org address, which parse_schema_org_events_from_html() reads.
+- type: cars_and_coffee_site
   name: CarsAndCoffeeEvents API (OH/KY/IN)
   url: https://carsandcoffeeevents.com
-  categories: [ohio, kentucky, indiana]
-  lookahead_days: 120
+  states: [ohio, kentucky, indiana]
+  max_pages: 6
   bypass_automotive_filter: true
 - type: ics
   name: OVR PCA Social Events (ICS)

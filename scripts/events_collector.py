@@ -2574,6 +2574,107 @@ def collect_tribe_events_api(source: dict, diagnostics: Optional[dict] = None) -
     return out
 
 
+_CAC_EVENT_LINK_RE = re.compile(r'href="(/events/[^"?#]+)"')
+
+
+def collect_cars_and_coffee_events_site(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
+    """Collect events from carsandcoffeeevents.com's current site.
+
+    Replaces the old WordPress "Tribe Events" REST API integration — the
+    site migrated off WordPress to a Laravel app and that endpoint now 404s
+    permanently (confirmed: /wp-json/ itself is gone). Its per-state landing
+    pages (/<state>-car-and-bike-events) are still server-rendered and
+    paginate via ?page=N; each linked /events/<slug> page carries a full
+    schema.org Event JSON-LD block, including a structured street address,
+    which parse_schema_org_events_from_html() already extracts."""
+    diagnostics = diagnostics if diagnostics is not None else {}
+    diagnostics.setdefault("raw_candidates", 0)
+    diagnostics.setdefault("parse_failures", 0)
+
+    base_url = clean_ws(source.get("url", "")).rstrip("/")
+    states = source.get("states") or []
+    if not base_url or not states:
+        diagnostics["reason"] = "missing_env"
+        return []
+
+    max_pages = int(source.get("max_pages", 6))
+    source_name = source.get("name", "Cars and Coffee Events")
+    bypass = bool(source.get("bypass_automotive_filter", False))
+
+    event_paths: List[str] = []
+    seen_paths = set()
+    for state_slug in states:
+        empty_streak = 0
+        for page in range(1, max_pages + 1):
+            list_url = f"{base_url}/{state_slug}-car-and-bike-events?page={page}"
+            try:
+                html = fetch_text(list_url)
+            except Exception as ex:
+                log(f"⚠️ {source_name}: failed to fetch {state_slug} page {page}: {clean_ws(str(ex))[:120]}")
+                break
+            links = list(dict.fromkeys(_CAC_EVENT_LINK_RE.findall(html)))
+            new_links = [p for p in links if p not in seen_paths]
+            if not new_links:
+                empty_streak += 1
+                if empty_streak >= 2:
+                    break
+            else:
+                empty_streak = 0
+                seen_paths.update(new_links)
+                event_paths.extend(new_links)
+            time.sleep(0.3)
+
+    log(f"   {source_name}: discovered {len(event_paths)} event page(s) across {len(states)} state page(s)")
+
+    out: List[dict] = []
+    for path in event_paths:
+        url = f"{base_url}{path}"
+        diagnostics["raw_candidates"] += 1
+        try:
+            html = fetch_text(url)
+            parsed = parse_schema_org_events_from_html(url, html)
+        except Exception as ex:
+            diagnostics["parse_failures"] += 1
+            log(f"⚠️ {source_name}: failed to fetch/parse {url}: {clean_ws(str(ex))[:120]}")
+            time.sleep(0.2)
+            continue
+        if not parsed:
+            diagnostics["parse_failures"] += 1
+            time.sleep(0.2)
+            continue
+
+        best = parsed[0]
+        address = clean_ws(str(best.get("address", "")))
+        city_state = ""
+        geocode_query = None
+        m = re.match(rf"^[^,]+,\s*([^,]+),\s*({US_STATE_ABBR_RE})\s*(\d{{5}})?", address, flags=re.IGNORECASE)
+        if m:
+            city_state = f"{clean_ws(m.group(1))}, {m.group(2).upper()}"
+            if m.group(3):
+                geocode_query = f"{m.group(3)}, USA"
+        if not geocode_query and city_state:
+            geocode_query = city_state
+
+        out.append({
+            "title": best["title"],
+            "start_dt": best["start_dt"],
+            "end_dt": best.get("end_dt") or (best["start_dt"] + timedelta(hours=2)),
+            "location": clean_ws(str(best.get("location", ""))),
+            "address": address,
+            "city_state": city_state,
+            "geocode_query": geocode_query,
+            "description": clean_ws(str(best.get("description", ""))),
+            "url": url,
+            "source": source_name,
+            "bypass_automotive_filter": bypass,
+        })
+        time.sleep(0.2)
+
+    if diagnostics.get("reason") is None and not out:
+        diagnostics["reason"] = "no_results_from_search"
+    return out
+
+
 def _extract_wordpress_event_datetimes(row, fallback_start_dt: Optional[datetime]) -> Tuple[Optional[datetime], Optional[datetime]]:
     """
     Extract start/end datetimes from WordPress/The Events Calendar list rows.
@@ -6480,6 +6581,8 @@ def main():
                 raw_events.extend(collect_carsandcoffeeevents_ohio(source_with_context))
             elif stype == "tribe_events_api":
                 raw_events.extend(collect_tribe_events_api(source_with_context, diagnostics=diagnostics))
+            elif stype == "cars_and_coffee_site":
+                raw_events.extend(collect_cars_and_coffee_events_site(source_with_context, diagnostics=diagnostics))
             elif stype == "html_wordpress_events_list":
                 raw_events.extend(collect_wordpress_events_series(source_with_context))
             elif stype == "ics":
