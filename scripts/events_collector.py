@@ -5451,6 +5451,7 @@ def enrich_events_for_export(
         geocode_sanity_max = max(local_max * 3, 300.0)
         filled = 0
         rejected_far = 0
+        logged_rejections: set = set()
         for ev in events:
             current = clean_ws(str(ev.get("address", "")))
             if current and _has_full_street_address(current):
@@ -5465,7 +5466,10 @@ def enrich_events_for_export(
                 is_rally = ev.get("category") == "rally" or categorize(str(ev.get("title", "")), location, cfg) == "rally"
                 allowed_max = rally_max if is_rally else geocode_sanity_max
                 if miles_from_home(latlon[0], latlon[1], home_lat, home_lon) > allowed_max:
-                    log(f"⚠️ Rejected implausible geocode for '{clean_ws(str(ev.get('title', '')))}': '{location}' -> {formatted}")
+                    rejection_key = (location.lower(), formatted.lower())
+                    if rejection_key not in logged_rejections:
+                        logged_rejections.add(rejection_key)
+                        log(f"⚠️ Rejected implausible geocode for '{clean_ws(str(ev.get('title', '')))}': '{location}' -> {formatted}")
                     rejected_far += 1
                     formatted, latlon = "", None
             if formatted:
