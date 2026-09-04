@@ -2577,6 +2577,18 @@ def collect_tribe_events_api(source: dict, diagnostics: Optional[dict] = None) -
 _CAC_EVENT_LINK_RE = re.compile(r'href="(/events/[^"?#]+)"')
 
 
+def _fetch_text_fast(url: str, timeout: float = 12.0) -> str:
+    """A single-attempt, short-timeout GET — deliberately NOT fetch_text()'s
+    3-attempt/35s-per-attempt retry policy. That policy turns a site that has
+    started silently blocking us (hanging every connection instead of
+    refusing it outright) into a ~110-second cost per URL; over hundreds of
+    URLs that is hours, not minutes. Fail fast here and let the caller's
+    circuit breaker decide whether to keep going."""
+    r = requests.get(url, headers=DEFAULT_HTTP_HEADERS, timeout=timeout)
+    r.raise_for_status()
+    return r.text
+
+
 def collect_cars_and_coffee_events_site(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
     """Collect events from carsandcoffeeevents.com's current site.
 
@@ -2586,7 +2598,12 @@ def collect_cars_and_coffee_events_site(source: dict, diagnostics: Optional[dict
     pages (/<state>-car-and-bike-events) are still server-rendered and
     paginate via ?page=N; each linked /events/<slug> page carries a full
     schema.org Event JSON-LD block, including a structured street address,
-    which parse_schema_org_events_from_html() already extracts."""
+    which parse_schema_org_events_from_html() already extracts.
+
+    Bails out via a consecutive-failure circuit breaker rather than retrying
+    forever if the site starts blocking/rate-limiting us mid-crawl (observed
+    2026-09-04: a run hit GitHub Actions' 6-hour job cap because hundreds of
+    URLs each cost ~110s failing before this breaker existed)."""
     diagnostics = diagnostics if diagnostics is not None else {}
     diagnostics.setdefault("raw_candidates", 0)
     diagnostics.setdefault("parse_failures", 0)
@@ -2598,20 +2615,33 @@ def collect_cars_and_coffee_events_site(source: dict, diagnostics: Optional[dict
         return []
 
     max_pages = int(source.get("max_pages", 6))
+    max_consecutive_failures = int(source.get("max_consecutive_failures", 5))
     source_name = source.get("name", "Cars and Coffee Events")
     bypass = bool(source.get("bypass_automotive_filter", False))
 
     event_paths: List[str] = []
     seen_paths = set()
+    blocked = False
     for state_slug in states:
+        if blocked:
+            break
         empty_streak = 0
+        consecutive_failures = 0
         for page in range(1, max_pages + 1):
             list_url = f"{base_url}/{state_slug}-car-and-bike-events?page={page}"
             try:
-                html = fetch_text(list_url)
+                html = _fetch_text_fast(list_url)
+                consecutive_failures = 0
             except Exception as ex:
+                consecutive_failures += 1
                 log(f"⚠️ {source_name}: failed to fetch {state_slug} page {page}: {clean_ws(str(ex))[:120]}")
-                break
+                if consecutive_failures >= max_consecutive_failures:
+                    log(f"⚠️ {source_name}: {consecutive_failures} consecutive failures during discovery — site likely blocking us, stopping discovery early.")
+                    blocked = True
+                    diagnostics["reason"] = "blocked_or_rate_limited"
+                    break
+                time.sleep(0.5)
+                continue
             links = list(dict.fromkeys(_CAC_EVENT_LINK_RE.findall(html)))
             new_links = [p for p in links if p not in seen_paths]
             if not new_links:
@@ -2627,16 +2657,25 @@ def collect_cars_and_coffee_events_site(source: dict, diagnostics: Optional[dict
     log(f"   {source_name}: discovered {len(event_paths)} event page(s) across {len(states)} state page(s)")
 
     out: List[dict] = []
-    for path in event_paths:
+    consecutive_failures = 0
+    aborted_remaining = 0
+    for idx, path in enumerate(event_paths):
+        if consecutive_failures >= max_consecutive_failures:
+            aborted_remaining = len(event_paths) - idx
+            log(f"⚠️ {source_name}: {consecutive_failures} consecutive failures — site likely blocking us, aborting remaining {aborted_remaining} page(s) rather than retrying each one.")
+            diagnostics["reason"] = "blocked_or_rate_limited"
+            break
         url = f"{base_url}{path}"
         diagnostics["raw_candidates"] += 1
         try:
-            html = fetch_text(url)
+            html = _fetch_text_fast(url)
             parsed = parse_schema_org_events_from_html(url, html)
+            consecutive_failures = 0
         except Exception as ex:
+            consecutive_failures += 1
             diagnostics["parse_failures"] += 1
             log(f"⚠️ {source_name}: failed to fetch/parse {url}: {clean_ws(str(ex))[:120]}")
-            time.sleep(0.2)
+            time.sleep(0.3)
             continue
         if not parsed:
             diagnostics["parse_failures"] += 1
