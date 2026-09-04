@@ -4916,5 +4916,174 @@
   "Laurelville, OH": {
     "lat": "39.4733970",
     "lon": "-82.7393363"
+  },
+  "43221, USA": {
+    "lat": "40.0155731",
+    "lon": "-83.0530260"
+  },
+  "Sellersburg, IN": {
+    "lat": "38.3979718",
+    "lon": "-85.7550735"
+  },
+  "44904, USA": {
+    "lat": "40.6777734",
+    "lon": "-82.5896019"
+  },
+  "62545, USA": {
+    "lat": "39.7835267",
+    "lon": "-89.3918017"
+  },
+  "45227, USA": {
+    "lat": "39.1537458",
+    "lon": "-84.3871752"
+  },
+  "St. Louis, MO": {
+    "lat": "38.6254063",
+    "lon": "-90.1900090"
+  },
+  "62859, USA": {
+    "lat": "38.0913295",
+    "lon": "-88.5370176"
+  },
+  "Downtown Union City, IN": {
+    "lat": "37.7892122",
+    "lon": "-122.4033514"
+  },
+  "Cambridge City, IN": {
+    "lat": "39.8129285",
+    "lon": "-85.1708971"
+  },
+  "Pittsburgh, PA": {
+    "lat": "40.4406968",
+    "lon": "-80.0025666"
+  },
+  "45223, USA": {
+    "lat": "39.1615604",
+    "lon": "-84.5436883"
+  },
+  "45210, USA": {
+    "lat": "39.1124623",
+    "lon": "-84.5120497"
+  },
+  "45710, USA": {
+    "lat": "39.2157697",
+    "lon": "-82.2029608"
+  },
+  "45228, USA": {
+    "lat": "39.0765090",
+    "lon": "-84.4256573"
+  },
+  "addr::sellersburg, in": {
+    "formatted": "",
+    "latlon": [
+      38.3979718,
+      -85.7550735
+    ]
+  },
+  "addr::clarksville, in": {
+    "formatted": "",
+    "latlon": [
+      38.2967791,
+      -85.7602087
+    ]
+  },
+  "addr::lexington, ky": {
+    "formatted": "",
+    "latlon": [
+      38.0464066,
+      -84.4970393
+    ]
+  },
+  "addr::eastern avenue, richmond, ky 40475": {
+    "formatted": "Eastern Avenue, Richmond, KY 40475",
+    "latlon": [
+      37.7360799,
+      -84.313664
+    ]
+  },
+  "Richmond, KY": {
+    "lat": "37.7478572",
+    "lon": "-84.2946539"
+  },
+  "addr::north jefferson street, martinsville, in 46151": {
+    "formatted": "North Jefferson Street, Martinsville, IN 46151",
+    "latlon": [
+      39.431004,
+      -86.4273552
+    ]
+  },
+  "addr::south main street, scottsburg, in 47170": {
+    "formatted": "South Main Street, Scottsburg, IN 47170",
+    "latlon": [
+      38.6778636,
+      -85.7699675
+    ]
+  },
+  "addr::east lewis and clark parkway, clarksville, in 47129": {
+    "formatted": "East Lewis and Clark Parkway, Clarksville, IN 47129",
+    "latlon": [
+      38.3166438,
+      -85.7574581
+    ]
+  },
+  "addr::main street, laurelville, oh 43135": {
+    "formatted": "Main Street, Laurelville, OH 43135",
+    "latlon": [
+      39.4706091,
+      -82.739548
+    ]
+  },
+  "addr::cambridge city, in": {
+    "formatted": "",
+    "latlon": [
+      39.8129285,
+      -85.1708971
+    ]
+  },
+  "addr::dayton yellow springs road, fairborn, oh 45324": {
+    "formatted": "Dayton Yellow Springs Road, Fairborn, OH 45324",
+    "latlon": [
+      39.7832168,
+      -83.9985466
+    ]
+  },
+  "addr::south court street, circleville, oh 43113": {
+    "formatted": "South Court Street, Circleville, OH 43113",
+    "latlon": [
+      39.6008433,
+      -82.9456353
+    ]
+  },
+  "addr::seitz street, cincinnati, oh 45210": {
+    "formatted": "Seitz Street, Cincinnati, OH 45210",
+    "latlon": [
+      39.1156097,
+      -84.511665
+    ]
+  },
+  "addr::smoky mountains, tn": {
+    "formatted": "",
+    "latlon": [
+      35.63422,
+      -83.402366
+    ]
+  },
+  "addr::lake snowden road, lee township, oh 45710": {
+    "formatted": "Lake Snowden Road, Lee Township, OH 45710",
+    "latlon": [
+      39.2412199,
+      -82.1908725
+    ]
+  },
+  "Lee Township, OH": {
+    "lat": "39.2474636",
+    "lon": "-82.2260355"
+  },
+  "addr::boat launch, cincinnati, oh 45228": {
+    "formatted": "boat launch, Cincinnati, OH 45228",
+    "latlon": [
+      39.0882425,
+      -84.4287215
+    ]
   }
 }
