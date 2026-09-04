@@ -1943,34 +1943,12 @@ def _extract_venue_prefix(text: str, formatted_address: str) -> str:
     return prefix
 
 
-_STREET_ADDRESS_START_RE = re.compile(
-    r"\d{1,6}\s+[A-Za-z0-9.\-' ]+?\b(?:street|st|avenue|ave|road|rd|drive|dr|boulevard|blvd|"
-    r"lane|ln|way|pike|highway|hwy|court|ct|parkway|pkwy|circle|cir|trail|terrace|place|pl)\b",
-    re.IGNORECASE,
-)
-
 # A genuinely clean "City, ST" string only — not just any text that happens to
 # END that way. guess_city_state() falls back to returning its raw input
 # unparsed when it can't confidently extract a city, so a caller can't treat
 # a truthy city_state as automatically usable; it might still be the whole
 # "Venue Name - City, ST" the source scraped.
 _CLEAN_CITY_STATE_RE = re.compile(rf"^[A-Za-z][A-Za-z .'’]*,\s*({US_STATE_ABBR_RE})$")
-
-
-def _reconcile_location_with_address(location: str, address: str) -> str:
-    """Drop a street-address fragment embedded in Location once we have a
-    confirmed Address, so the two columns can't state conflicting street-level
-    facts (e.g. Location carrying a source page's stale ZIP that differs from
-    the geocoded one). Keeps the venue-name prefix; leaves Location alone when
-    it has no venue name of its own (it just *is* the address already)."""
-    text = clean_ws(location)
-    if not text or not clean_ws(address):
-        return text
-    m = _STREET_ADDRESS_START_RE.search(text)
-    if not m:
-        return text
-    venue = clean_ws(text[: m.start()]).strip(" ,-–—")
-    return venue or text
 
 
 def clean_location(raw: str) -> str:
@@ -5601,22 +5579,13 @@ def enrich_events_for_export(
     #    same day + street address even when their titles are unrelated.
     events = merge_same_day_same_address_duplicates(events)
 
-    # 6) Make Location and Address agree: once Address is a confirmed full
-    #    street address, drop any stale street/ZIP text embedded in Location
-    #    (a source page's own text can drift from what the venue geocodes to,
-    #    e.g. a ZIP off by one) so the two columns never contradict each other.
-    reconciled = 0
+    # 6) Location and Address are the same field now: a separate venue-label
+    # Location made same-place duplicates harder to catch when a source's
+    # venue text didn't match the confirmed Address exactly. Address already
+    # resolves to the best available full street/city/state/zip (or the
+    # safest fallback when one can't be confirmed) — Location mirrors it.
     for ev in events:
-        address = clean_ws(str(ev.get("address", "")))
-        if not address or not _has_full_street_address(address):
-            continue
-        location = clean_ws(str(ev.get("location", "")))
-        new_location = _reconcile_location_with_address(location, address)
-        if new_location != location:
-            ev["location"] = new_location
-            reconciled += 1
-    if reconciled:
-        log(f"🧹 Reconciled Location text with confirmed Address for {reconciled} events")
+        ev["location"] = clean_ws(str(ev.get("address", "")))
 
     for ev in events:
         popularity, size, attendance = compute_popularity_and_size(ev)
