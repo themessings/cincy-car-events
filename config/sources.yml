@@ -16,6 +16,19 @@ venue_address_overrides:
   "Southland Christian Church": "2349 Richmond Rd, Lexington, KY 40502"
   "Destination Outlets": "201 Holiday Dr, Wilmington, OH 45177"
   "Edgewater Sports Park": "4819 E Miami River Rd, Cleves, OH 45002"
+# Same idea, matched by Event Name instead of Location — for events whose
+# Location text was already overwritten with a bare city/state by a prior
+# run (before Location was fixed to leave the venue name alone until a real
+# address is known), so there's no venue text left to match against.
+title_address_overrides:
+  "No Flex Car Cruise": "8651 Preston Hwy, Louisville, KY 40219"
+  "Chicken Eater's Car Club": "440 Eastern Byp, Richmond, KY 40475"
+  "Cincinnati Cars and Coffee": "2791 Town Center Blvd, Crestview Hills, KY 41017"
+  "First Saturday Cars and Coffee Lexington": "4561 Iron Works Pike, Lexington, KY 40511"
+  "Lexington KY Cars and Coffee": "2349 Richmond Rd, Lexington, KY 40502"
+  "Destination Cars and Coffee": "201 Holiday Dr, Wilmington, OH 45177"
+  "Cars and Coffee Saturday at Horsepower Farm": "2227 Trinity Dr, Middletown, OH 45044"
+  "RallyCross – Edgewater": "4819 E Miami River Rd, Cleves, OH 45002"
 filters:
   # ~1h45m drive from Cincinnati: 105 straight-line miles keeps Dayton, Columbus,
   # Louisville, Lexington, and Indianapolis while dropping Cleveland/Nashville noise.

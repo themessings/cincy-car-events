@@ -5626,6 +5626,16 @@ def enrich_events_for_export(
             for k, v in (cfg.get("venue_address_overrides") or {}).items()
             if clean_ws(str(k)) and clean_ws(str(v))
         }
+        def _title_override_key(title: str) -> str:
+            # Apostrophe-insensitive: config keys are typed with straight
+            # quotes, but scraped titles commonly use curly ones ('Eater's').
+            return _normalize_title_for_export_dedupe(re.sub(r"[‘’']", "", str(title)))
+
+        title_overrides = {
+            _title_override_key(k): clean_ws(str(v))
+            for k, v in (cfg.get("title_address_overrides") or {}).items()
+            if clean_ws(str(k)) and clean_ws(str(v))
+        }
         filled = 0
         overridden = 0
         rejected_far = 0
@@ -5640,9 +5650,13 @@ def enrich_events_for_export(
             city_state = clean_ws(str(ev.get("city_state", "")))
 
             # Manually researched venue address: skip geocoding entirely when
-            # the location text names a venue we already know the address of.
+            # the location text names a venue we already know the address of,
+            # or (fallback) the event title matches a known recurring event
+            # whose Location text no longer carries the venue name.
             location_lower = location.lower()
             override_hit = next((v for k, v in venue_overrides.items() if k in location_lower), None)
+            if not override_hit:
+                override_hit = title_overrides.get(_title_override_key(str(ev.get("title", ""))))
 
             formatted, latlon = (override_hit, None) if override_hit else geocode_full_address(location, city_state, geocache)
             if override_hit:
@@ -5730,13 +5744,18 @@ def enrich_events_for_export(
     #    same day + street address even when their titles are unrelated.
     events = merge_same_day_same_address_duplicates(events)
 
-    # 6) Location and Address are the same field now: a separate venue-label
-    # Location made same-place duplicates harder to catch when a source's
-    # venue text didn't match the confirmed Address exactly. Address already
-    # resolves to the best available full street/city/state/zip (or the
-    # safest fallback when one can't be confirmed) — Location mirrors it.
+    # 6) Once Address is a confirmed full street address, Location mirrors it
+    # exactly — a separate venue-label Location made same-place duplicates
+    # harder to catch when a source's venue text didn't match the address.
+    # For events still on the city/state fallback, Location is LEFT ALONE:
+    # overwriting it here would permanently destroy the original venue name
+    # (e.g. "Bittersweet Center") the moment it round-trips through a saved
+    # run, which is exactly the text venue_address_overrides above needs to
+    # match against on a future run once that venue gets researched.
     for ev in events:
-        ev["location"] = clean_ws(str(ev.get("address", "")))
+        address = clean_ws(str(ev.get("address", "")))
+        if _has_full_street_address(address):
+            ev["location"] = address
 
     for ev in events:
         popularity, size, attendance = compute_popularity_and_size(ev)
