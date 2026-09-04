@@ -327,9 +327,14 @@ sources:
 # server-rendered and paginate via ?page=N; each linked event page carries a
 # full schema.org address, which parse_schema_org_events_from_html() reads.
 - type: cars_and_coffee_site
-  name: CarsAndCoffeeEvents API (OH/KY/IN)
+  name: CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)
   url: https://carsandcoffeeevents.com
-  states: [ohio, kentucky, indiana]
+  # West Virginia and Tennessee added 2026-09: the existing ~105-mile local
+  # radius already reaches into parts of both states, but the direct site
+  # crawl previously only visited OH/KY/IN state landing pages, so events
+  # there were never discovered even when in range. The existing distance
+  # filter (unaffected by this change) still drops anything too far out.
+  states: [ohio, kentucky, indiana, west-virginia, tennessee]
   # Confirmed depth needed to fully exhaust each state's current listing
   # (2026-09): Ohio ~23 pages, Indiana ~15, Kentucky ~9. The empty-streak
   # cutoff in collect_cars_and_coffee_events_site() stops each state as soon
@@ -351,6 +356,22 @@ sources:
 - type: google_sheet_events_import
   name: Google Sheet Events Import
   tab: Events
+# Hand-verified one-off events with no live crawlable source. Each entry is a
+# single concrete date confirmed directly from the host's own page — never a
+# recurrence guess. (2026-09: carsandcoffeeevents.com's dead pre-migration
+# listing for this host had been silently republishing a stale weekly-guess
+# date for months; the real next date was confirmed from a screenshot of the
+# host's own Facebook event page.)
+- type: manual_events
+  name: Manually Verified Events
+  events:
+    - title: Euro Cars and Cocoa
+      location: The Cocoa Muse, 600 W Loveland Ave, Loveland, OH 45140-2359
+      city_state: Loveland, OH
+      date: "2026-09-13"
+      start_time: "9:00 AM"
+      end_time: "12:00 PM"
+      url: https://www.facebook.com/events/3994106880896076/
 - type: facebook_page_events
   name: Facebook Page Events (Graph API sheet/env IDs)
 # Scrolls the logged-in Facebook "Most Recent" home feed and harvests event links.

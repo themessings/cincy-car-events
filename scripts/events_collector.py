@@ -55,6 +55,7 @@ EVENTS_JSON_PATH = os.path.join(DATA_DIR, "events.json")
 EVENTS_CSV_PATH = os.path.join(DATA_DIR, "events.csv")
 GEOCODE_CACHE_PATH = os.path.join(DATA_DIR, "geocode_cache.json")
 URL_CACHE_PATH = os.path.join(DATA_DIR, "url_cache.json")
+SOURCE_HEALTH_PATH = os.path.join(DATA_DIR, "source_health.json")
 
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(RUNS_DIR, exist_ok=True)
@@ -1092,6 +1093,55 @@ def collect_screenshot_folder_events(source: dict, diagnostics: Optional[dict] =
     return out
 
 
+def collect_manual_events(source: dict, diagnostics: Optional[dict] = None) -> List[dict]:
+    """One-off, hand-verified events with no live crawlable source.
+
+    Only use this for a real event confirmed directly from the host's own
+    page (e.g. a screenshot). Each config entry is a single concrete date —
+    never a recurrence guess, since an auto-generated recurring series from
+    a source that can't be re-verified is exactly the bug this exists to avoid.
+    """
+    diagnostics = diagnostics if diagnostics is not None else {}
+    entries = source.get("events", []) or []
+    out: List[dict] = []
+    for entry in entries:
+        title = clean_ws(entry.get("title", ""))
+        date_text = clean_ws(str(entry.get("date", "")))
+        if not title or not date_text:
+            continue
+        start_time = clean_ws(str(entry.get("start_time", ""))) or "9:00 AM"
+        try:
+            start_dt = dateutil_parser.parse(f"{date_text} {start_time}")
+        except Exception:
+            continue
+        if start_dt.tzinfo is None:
+            start_dt = start_dt.replace(tzinfo=EST_TZ)
+
+        end_dt = None
+        end_time = clean_ws(str(entry.get("end_time", "")))
+        if end_time:
+            try:
+                end_dt = dateutil_parser.parse(f"{date_text} {end_time}")
+                if end_dt.tzinfo is None:
+                    end_dt = end_dt.replace(tzinfo=EST_TZ)
+            except Exception:
+                end_dt = None
+        if not end_dt or end_dt <= start_dt:
+            end_dt = start_dt + timedelta(hours=3)
+
+        out.append({
+            "title": title,
+            "start_dt": start_dt,
+            "end_dt": end_dt,
+            "location": clean_ws(entry.get("location", "")),
+            "city_state": clean_ws(entry.get("city_state", "")),
+            "url": clean_ws(entry.get("url", "")),
+            "source": "manual_verified",
+        })
+    diagnostics["parsed_events"] = len(out)
+    if not out:
+        diagnostics["reason"] = "no_results_from_search"
+    return out
 
 
 def parse_iso_datetime_safe(raw_value: str, et_tz=None) -> Optional[datetime]:
@@ -1247,11 +1297,20 @@ TICKET_NEGATIONS = (
     "no ticket", "free admission", "free entry", "free to attend",
     "free event", "no admission",
 )
+RAIN_OR_SHINE_KEYWORDS = (
+    "rain or shine", "rain-or-shine", "regardless of weather", "come rain or shine",
+)
+FREE_EVENT_KEYWORDS = (
+    "free event", "free admission", "free entry", "free to attend",
+    "no admission fee", "no cover charge",
+)
 
 
 def detect_registration_callout(*texts: str, ticket_url: str = "") -> str:
     """Best-effort detection for the export "Callout" column: does the event
-    appear to require registration and/or tickets? Returns "" when no signal."""
+    appear to require registration and/or tickets, run rain or shine, or cost
+    nothing to attend? Composes every applicable callout, joined with " · ".
+    Returns "" when no signal."""
     blob = " ".join(clean_ws(str(t)).lower() for t in texts if t)
 
     reg_negated = any(p in blob for p in REGISTRATION_NEGATIONS)
@@ -1259,14 +1318,21 @@ def detect_registration_callout(*texts: str, ticket_url: str = "") -> str:
 
     has_reg = (not reg_negated) and any(k in blob for k in REGISTRATION_KEYWORDS)
     has_tix = bool(clean_ws(ticket_url)) or ((not tix_negated) and any(k in blob for k in TICKET_KEYWORDS))
+    has_rain_or_shine = any(k in blob for k in RAIN_OR_SHINE_KEYWORDS)
+    has_free = any(k in blob for k in FREE_EVENT_KEYWORDS)
 
+    callouts: List[str] = []
     if has_reg and has_tix:
-        return "Registration & tickets required"
-    if has_reg:
-        return "Registration required"
-    if has_tix:
-        return "Tickets required"
-    return ""
+        callouts.append("Registration & tickets required")
+    elif has_reg:
+        callouts.append("Registration required")
+    elif has_tix:
+        callouts.append("Tickets required")
+    if has_free:
+        callouts.append("Free event")
+    if has_rain_or_shine:
+        callouts.append("Rain or shine")
+    return " · ".join(callouts)
 
 
 def extract_facebook_page_identifier(page_url: str) -> str:
@@ -4813,6 +4879,46 @@ def log_source_health_summary(source_run_stats: List[dict]) -> None:
     if skipped:
         msg = ", ".join(s["name"] for s in skipped)
         log(f"⚪ Skipped sources: {msg}")
+
+
+def update_source_health(source_run_stats: List[dict]) -> List[str]:
+    """Persist per-source consecutive-zero-yield run counts and return loud alerts
+    for any previously-productive source that has now gone silent for 2+ runs in a row.
+
+    This is the pattern behind nearly every major bug found so far this session
+    (dead WordPress API, deprecated SerpAPI engine, dead Facebook token, dead
+    pre-migration URLs): a source silently returns zero and nobody notices for weeks.
+    """
+    health = load_json(SOURCE_HEALTH_PATH, {})
+    alerts: List[str] = []
+    for stat in source_run_stats:
+        status = stat.get("status")
+        if status == "skipped":
+            continue
+        name = stat.get("name", "")
+        if not name:
+            continue
+        collected = int(stat.get("collected", 0)) if status == "ok" else 0
+        entry = health.get(name) or {"ever_productive": False, "consecutive_zero_runs": 0}
+        if status == "ok" and collected > 0:
+            entry["ever_productive"] = True
+            entry["consecutive_zero_runs"] = 0
+        else:
+            entry["consecutive_zero_runs"] = int(entry.get("consecutive_zero_runs", 0)) + 1
+            if entry.get("ever_productive") and entry["consecutive_zero_runs"] >= 2:
+                reason = stat.get("reason") or stat.get("error") or "no_results"
+                alerts.append(
+                    f"🚨 SOURCE HEALTH ALERT: '{name}' has returned 0 events for "
+                    f"{entry['consecutive_zero_runs']} consecutive runs in a row, but used to "
+                    f"work. Last reason seen: {reason}. This source may be broken (dead URL, "
+                    f"expired token, changed page layout, deprecated API) and needs a look."
+                )
+        entry["last_run_iso"] = now_et_iso()
+        entry["last_status"] = status
+        entry["last_collected"] = collected
+        health[name] = entry
+    save_json(SOURCE_HEALTH_PATH, health)
+    return alerts
 # -------------------------
 # Normalize + filter + store
 # -------------------------
@@ -6877,6 +6983,8 @@ def main():
                 raw_events.extend(collect_google_sheet_events_import(source_with_context, diagnostics=diagnostics))
             elif stype == "local_screenshot_folder":
                 raw_events.extend(collect_screenshot_folder_events(source_with_context, diagnostics=diagnostics))
+            elif stype == "manual_events":
+                raw_events.extend(collect_manual_events(source_with_context, diagnostics=diagnostics))
             elif stype == "facebook_page_events":
                 raw_events.extend(collect_facebook_page_events(source_with_context, diagnostics=diagnostics))
             elif stype == "facebook_events_scroll":
@@ -6953,6 +7061,10 @@ def main():
             source_name = stat.get("name", "")
             diag = SOURCE_DIAGNOSTICS.get(source_name, {})
             stat["reason"] = derive_zero_yield_reason(source_name, diag, source_filter_stats.get(source_name, Counter()))
+
+    source_health_alerts = update_source_health(source_run_stats)
+    for alert in source_health_alerts:
+        log(alert)
 
     merged = dedupe_merge(existing, incoming, metrics=pipeline_metrics)
     merged_before_focus_filter = len(merged)
@@ -7084,6 +7196,7 @@ def main():
         "merged_total": len(export_rows),
         "source_stats": source_run_stats,
         "source_failures": source_failures,
+        "source_health_alerts": source_health_alerts,
         "serpapi_enabled": serpapi_enabled,
         "dry_run": clean_ws(os.getenv("COLLECTOR_DRY_RUN", "")).lower() in ("1", "true", "yes", "y"),
         "pipeline_metrics": pipeline_metrics,
