@@ -387,6 +387,11 @@ def format_time_range(start: Optional[dt.time], end: Optional[dt.time]) -> str:
         ampm = "AM" if hour < 12 else "PM"
         h12 = hour % 12 or 12
         return f"{h12}:{minute:02d} {ampm}" if minute else f"{h12}:00 {ampm}"
+    # An end time identical to the start time is a missing-data fallback
+    # (e.g. an event whose real end time was never found), not a real
+    # zero-length event — treat it the same as no end time at all.
+    if end == start:
+        end = None
     block = approx_time_block(start, end)
     if start and end:
         return f"{block} | {fmt(start)}-{fmt(end)}"
@@ -1720,6 +1725,10 @@ def format_time_compact(start: Optional[dt.time], end: Optional[dt.time]) -> str
     def h(t: dt.time) -> str:
         h12 = t.hour % 12 or 12
         return f"{h12}:{t.minute:02d}" if t.minute else f"{h12}"
+    # Same fallback case as format_time_range: a start/end that match
+    # exactly means no real end time was found, not a real instant event.
+    if end == start:
+        end = None
     if start and end:
         ap_s = "AM" if start.hour < 12 else "PM"
         ap_e = "AM" if end.hour < 12 else "PM"
