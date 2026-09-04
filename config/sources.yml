@@ -19,6 +19,15 @@ venue_address_overrides:
   "Slate Performance Automotive": "5802 Elmwood Avenue, Indianapolis, IN 46203"
   "VFW's Cabana on the Whitewater": "9160 Lawrenceburg Rd, Harrison, OH 45030"
   "Germania Society": "3529 W Kemper Rd, Cincinnati, OH 45251"
+  "Alexandria Village Green Shopping Center": "7001 Alexandria Pike, Alexandria, KY 41001"
+  "Bardstown Nelson County Airport": "1924-B Boston Rd, Bardstown, KY 40004"
+  "Johnson Co. Fairgrounds": "250 Fairground St, Franklin, IN 46131"
+  "Butler County Fair": "1715 Fairgrove Ave, Hamilton, OH 45011"
+  # No confirmed house number for these two (parks/squares commonly lack
+  # one), but the street name + correct city is still a real improvement
+  # over the wrong/vague city fallback they were getting before.
+  "Historical Charlestown City Square": "Main Cross Street, Charlestown, IN 47111"
+  "Manpower Park": "East Main Street, Jackson, OH 45640"
 # Same idea, matched by Event Name instead of Location — for events whose
 # Location text was already overwritten with a bare city/state by a prior
 # run (before Location was fixed to leave the venue name alone until a real
