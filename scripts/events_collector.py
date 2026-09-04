@@ -5621,7 +5621,13 @@ def enrich_events_for_export(
         # A second-source disagreement this big means the venue-level geocode
         # almost certainly landed in the wrong city entirely.
         second_source_agreement_miles = 30.0
+        venue_overrides = {
+            clean_ws(str(k)).lower(): clean_ws(str(v))
+            for k, v in (cfg.get("venue_address_overrides") or {}).items()
+            if clean_ws(str(k)) and clean_ws(str(v))
+        }
         filled = 0
+        overridden = 0
         rejected_far = 0
         unverified_other = 0
         closest_city_guaranteed = 0
@@ -5632,8 +5638,16 @@ def enrich_events_for_export(
                 continue
             location = clean_ws(str(ev.get("location", ""))) or current
             city_state = clean_ws(str(ev.get("city_state", "")))
-            formatted, latlon = geocode_full_address(location, city_state, geocache)
-            if formatted and latlon:
+
+            # Manually researched venue address: skip geocoding entirely when
+            # the location text names a venue we already know the address of.
+            location_lower = location.lower()
+            override_hit = next((v for k, v in venue_overrides.items() if k in location_lower), None)
+
+            formatted, latlon = (override_hit, None) if override_hit else geocode_full_address(location, city_state, geocache)
+            if override_hit:
+                overridden += 1
+            elif formatted and latlon:
                 tier = _address_trust_tier(ev)
 
                 # A generic venue name ("Liberty Collective") can match a
@@ -5668,7 +5682,8 @@ def enrich_events_for_export(
                     # above rather than blocking every venue-only "other" row.
             if formatted:
                 ev["address"] = formatted
-                filled += 1
+                if not override_hit:
+                    filled += 1
                 if latlon and (ev.get("lat") is None or ev.get("lon") is None):
                     ev["lat"], ev["lon"] = latlon
 
@@ -5694,6 +5709,8 @@ def enrich_events_for_export(
                 ev["address"] = clean_city_state or clean_ws(str(ev.get("closest_city", "")))
         if filled:
             log(f"🏠 Full address looked up for {filled} events")
+        if overridden:
+            log(f"🏠 Full address applied from manually-researched venue overrides for {overridden} events")
         if rejected_far:
             log(f"🧹 Rejected {rejected_far} geocoded address(es) that landed implausibly far from Cincinnati")
         if unverified_other:

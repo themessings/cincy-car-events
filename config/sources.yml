@@ -2,6 +2,20 @@ home:
   name: Cincinnati, OH
   lat: 39.1031
   lon: -84.512
+# Manually researched addresses for recurring venues that automated geocoding
+# can't resolve on its own (ambiguous/bare business names, or venues Nominatim
+# doesn't have). Matched case-insensitively as a substring of the event's
+# Location text, checked before any geocoding is attempted.
+venue_address_overrides:
+  "Bittersweet Center": "8651 Preston Hwy, Louisville, KY 40219"
+  "Crestview Hills Town Center": "2791 Town Center Blvd, Crestview Hills, KY 41017"
+  "Lee's Famous Recipe": "440 Eastern Byp, Richmond, KY 40475"
+  "Horsepower Farm": "2227 Trinity Dr, Middletown, OH 45044"
+  "Bluegrass Stockyards Regional Marketplace": "4561 Iron Works Pike, Lexington, KY 40511"
+  "Blue Grass Stockyards Regional Marketplace": "4561 Iron Works Pike, Lexington, KY 40511"
+  "Southland Christian Church": "2349 Richmond Rd, Lexington, KY 40502"
+  "Destination Outlets": "201 Holiday Dr, Wilmington, OH 45177"
+  "Edgewater Sports Park": "4819 E Miami River Rd, Cleves, OH 45002"
 filters:
   # ~1h45m drive from Cincinnati: 105 straight-line miles keeps Dayton, Columbus,
   # Louisville, Lexington, and Indianapolis while dropping Cleveland/Nashville noise.
