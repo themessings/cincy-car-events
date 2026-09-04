@@ -291,7 +291,12 @@ sources:
   name: CarsAndCoffeeEvents API (OH/KY/IN)
   url: https://carsandcoffeeevents.com
   states: [ohio, kentucky, indiana]
-  max_pages: 6
+  # Confirmed depth needed to fully exhaust each state's current listing
+  # (2026-09): Ohio ~23 pages, Indiana ~15, Kentucky ~9. The empty-streak
+  # cutoff in collect_cars_and_coffee_events_site() stops each state as soon
+  # as it actually runs dry, so this ceiling only matters for Ohio — Kentucky
+  # and Indiana finish early regardless and aren't slowed down by it.
+  max_pages: 25
   bypass_automotive_filter: true
 - type: ics
   name: OVR PCA Social Events (ICS)
