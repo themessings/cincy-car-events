@@ -623,6 +623,12 @@ try:
 except Exception as ex:
     print(f"[WARN] Could not download Apex logo / resolve target Drive folder: {ex}")
     print("[WARN] Continuing without a logo and without Drive upload; local files will still be produced.")
+    # A failed download can still leave a truncated/empty file behind (the
+    # file is opened for writing before the request runs) — remove it so the
+    # os.path.exists() checks downstream correctly treat this as "no logo"
+    # instead of crashing PIL on a 0-byte file.
+    if os.path.exists(LOGO_PATH):
+        os.remove(LOGO_PATH)
 
 if os.path.exists(LOGO_PATH) and LOGO_FORCE_WHITE:
     try:

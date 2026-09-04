@@ -130,10 +130,16 @@ jobs:
           grep -Fq "✅ Done." data/collector.log
 
       - name: Generate weekly lineup (Apex carousel + caption)
+        # continue-on-error: a lineup-generation bug should show up as a
+        # visibly failed step (unlike relying on tee's exit code, which
+        # would otherwise mask a real crash as success) without blocking the
+        # collector's own data from being committed and pushed below.
+        continue-on-error: true
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
           APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
         run: |
+          set -o pipefail
           python -u scripts/generate_weekly_lineup.py | tee data/lineup.log
 
       - name: Inspect output files
