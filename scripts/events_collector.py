@@ -5312,6 +5312,40 @@ def merge_same_day_same_address_duplicates(rows: List[dict]) -> List[dict]:
     return survivors
 
 
+def _address_trust_tier(ev: dict) -> str:
+    """Accuracy tier for this event's address data: 'ics' (an organizer's own
+    calendar entry — trusted as given), 'facebook' (sourced from, or already
+    confirmed in step 1 against, Facebook's own Graph API — ~90% trusted), or
+    'other' (must be corroborated by a second signal before a specific street
+    address is trusted)."""
+    if ev.get("address_verified_via") == "facebook_graph":
+        return "facebook"
+    source = clean_ws(str(ev.get("source", ""))).lower()
+    if "(ics)" in source or "icloud" in source:
+        return "ics"
+    if "facebook" in source:
+        return "facebook"
+    return "other"
+
+
+def _guarantee_closest_city(ev: dict, cfg: dict) -> str:
+    """Best-effort Closest City when lat/lon geocoding hasn't produced one:
+    fall back to a state found in whatever location text we have, then to the
+    configured home city. Closest City should never be blank on export."""
+    filled = closest_major_city(ev.get("lat"), ev.get("lon"))
+    if filled:
+        return filled
+    text = " ".join(clean_ws(str(ev.get(k, ""))) for k in ("city_state", "address", "location"))
+    m = re.search(rf"\b({US_STATE_ABBR_RE})\b", text, flags=re.IGNORECASE)
+    if m:
+        state = m.group(1).upper()
+        for name, _, _ in MAJOR_CITIES:
+            if name.endswith(f", {state}"):
+                return name
+    home = cfg.get("home", {}) or {}
+    return clean_ws(str(home.get("name", ""))) or "Cincinnati, OH"
+
+
 def enrich_events_for_export(
     events: List[dict],
     geocache: Dict[str, dict],
@@ -5399,6 +5433,8 @@ def enrich_events_for_export(
                     if clean_ws(str(ev.get("address", ""))):
                         address_corrected += 1
                     ev["address"] = page_address
+                if res.get("provider") == "facebook_graph":
+                    ev["address_verified_via"] = "facebook_graph"
             elif page_address and not clean_ws(str(ev.get("address", ""))):
                 ev["address"] = page_address
             for count_key in ("attending_count", "interested_count"):
@@ -5437,6 +5473,13 @@ def enrich_events_for_export(
     events = merge_same_day_near_duplicates(events)
 
     # 4) Full-address lookup (serial — Nominatim allows <=1 req/sec) then scoring.
+    #
+    # Accuracy hierarchy: iCalendar-sourced events are trusted 100% (an
+    # organizer's own calendar entry), Facebook-verified events ~90% (either
+    # sourced from Facebook or already confirmed against Facebook's own Graph
+    # API in step 1) — both skip the extra cross-check below. Everything else
+    # must be corroborated by a second, independent signal (a coarse
+    # city/ZIP-level geocode) before a specific street address is trusted.
     if lookup_addresses:
         home_lat = cfg["home"]["lat"]
         home_lon = cfg["home"]["lon"]
@@ -5449,20 +5492,30 @@ def enrich_events_for_export(
         # implausible outright (a same-named venue clear across the country),
         # not ones merely farther than the everyday local radius.
         geocode_sanity_max = max(local_max * 3, 300.0)
+        # A second-source disagreement this big means the venue-level geocode
+        # almost certainly landed in the wrong city entirely.
+        second_source_agreement_miles = 30.0
         filled = 0
         rejected_far = 0
+        unverified_other = 0
+        closest_city_guaranteed = 0
         logged_rejections: set = set()
         for ev in events:
             current = clean_ws(str(ev.get("address", "")))
             if current and _has_full_street_address(current):
                 continue
             location = clean_ws(str(ev.get("location", ""))) or current
-            formatted, latlon = geocode_full_address(location, clean_ws(str(ev.get("city_state", ""))), geocache)
+            city_state = clean_ws(str(ev.get("city_state", "")))
+            formatted, latlon = geocode_full_address(location, city_state, geocache)
             if formatted and latlon:
+                tier = _address_trust_tier(ev)
+
                 # A generic venue name ("Liberty Collective") can match a
                 # same-named business clear across the country; reject any
                 # geocode that lands implausibly far from Cincinnati rather
-                # than trust it just because Nominatim returned a hit.
+                # than trust it just because Nominatim returned a hit. Applies
+                # to every tier — it's a cheap safety net, not the extra
+                # scrutiny "other"-tier sources get below.
                 is_rally = ev.get("category") == "rally" or categorize(str(ev.get("title", "")), location, cfg) == "rally"
                 allowed_max = rally_max if is_rally else geocode_sanity_max
                 if miles_from_home(latlon[0], latlon[1], home_lat, home_lon) > allowed_max:
@@ -5472,17 +5525,60 @@ def enrich_events_for_export(
                         log(f"⚠️ Rejected implausible geocode for '{clean_ws(str(ev.get('title', '')))}': '{location}' -> {formatted}")
                     rejected_far += 1
                     formatted, latlon = "", None
+                elif tier == "other":
+                    # Verify against a second, independent signal: a coarse
+                    # geocode of just the city/ZIP, ignoring the ambiguous
+                    # venue name that produced `formatted` in the first place.
+                    coarse_query = reliable_geocode_query("", city_state)
+                    coarse_latlon = geocode(coarse_query, geocache) if coarse_query else None
+                    if coarse_latlon:
+                        disagreement = haversine_miles(latlon[0], latlon[1], coarse_latlon[0], coarse_latlon[1])
+                        if disagreement > second_source_agreement_miles:
+                            log(f"⚠️ Unverified geocode (disagrees with city/ZIP by {disagreement:.0f}mi) for '{clean_ws(str(ev.get('title', '')))}': '{location}' -> {formatted}")
+                            unverified_other += 1
+                            formatted, latlon = "", None
+                    # No second signal available (no usable city_state) —
+                    # fall back to the distance-sanity result already applied
+                    # above rather than blocking every venue-only "other" row.
             if formatted:
                 ev["address"] = formatted
                 filled += 1
                 if latlon and (ev.get("lat") is None or ev.get("lon") is None):
                     ev["lat"], ev["lon"] = latlon
-            elif not current:
-                ev["address"] = location
+
+            # Guarantee Closest City now, using any lat/lon just resolved
+            # above (falls back to a state found in the text, then home).
+            if not clean_ws(str(ev.get("closest_city", ""))):
+                filled_city = _guarantee_closest_city(ev, cfg)
+                if filled_city:
+                    ev["closest_city"] = filled_city
+                    closest_city_guaranteed += 1
+
+            if not formatted and not current:
+                # Still couldn't confirm a street-level address: every event
+                # gets a *real*, city-qualified address rather than a bare,
+                # ungeocoded venue label.
+                qualifier = city_state or clean_ws(str(ev.get("closest_city", "")))
+                if qualifier and qualifier.lower() not in location.lower():
+                    ev["address"] = f"{location}, {qualifier}" if location else qualifier
+                else:
+                    ev["address"] = location
         if filled:
             log(f"🏠 Full address looked up for {filled} events")
         if rejected_far:
             log(f"🧹 Rejected {rejected_far} geocoded address(es) that landed implausibly far from Cincinnati")
+        if unverified_other:
+            log(f"🧹 Rejected {unverified_other} unverified geocoded address(es) from non-ICS/Facebook sources")
+        if closest_city_guaranteed:
+            log(f"🗺️ Closest City guaranteed (fallback) for {closest_city_guaranteed} events")
+
+    # Events whose address was already a full street address skipped the loop
+    # above entirely (via `continue`) — make sure they still get Closest City.
+    for ev in events:
+        if not clean_ws(str(ev.get("closest_city", ""))):
+            filled_city = _guarantee_closest_city(ev, cfg)
+            if filled_city:
+                ev["closest_city"] = filled_city
 
     # 5) Now that addresses are resolved, catch duplicates that share the exact
     #    same day + street address even when their titles are unrelated.
