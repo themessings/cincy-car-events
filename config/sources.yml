@@ -16,6 +16,9 @@ venue_address_overrides:
   "Southland Christian Church": "2349 Richmond Rd, Lexington, KY 40502"
   "Destination Outlets": "201 Holiday Dr, Wilmington, OH 45177"
   "Edgewater Sports Park": "4819 E Miami River Rd, Cleves, OH 45002"
+  "Slate Performance Automotive": "5802 Elmwood Avenue, Indianapolis, IN 46203"
+  "VFW's Cabana on the Whitewater": "9160 Lawrenceburg Rd, Harrison, OH 45030"
+  "Germania Society": "3529 W Kemper Rd, Cincinnati, OH 45251"
 # Same idea, matched by Event Name instead of Location — for events whose
 # Location text was already overwritten with a bare city/state by a prior
 # run (before Location was fixed to leave the venue name alone until a real

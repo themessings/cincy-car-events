@@ -5028,6 +5028,39 @@ def _has_full_street_address(text: str) -> bool:
     return bool(US_ADDR_FULL_RE.search(clean_ws(text)))
 
 
+_LOOSE_ADDR_STATE_ALT = "|".join(
+    [US_STATE_ABBR_RE] + [re.escape(name) for name in sorted(US_STATE_NAME_TO_ABBR, key=len, reverse=True)]
+)
+_LOOSE_ADDR_RE = re.compile(
+    r"(\d{1,6}\s+[A-Za-z0-9.'\-]+(?:\s+[A-Za-z0-9.'\-]+)*?\s+"
+    r"(?:street|st|avenue|ave|road|rd|drive|dr|boulevard|blvd|lane|ln|way|pike|"
+    r"highway|hwy|court|ct|parkway|pkwy|circle|cir|trail|terrace|terr|place|pl))"
+    rf"\.?,?\s+([A-Za-z .'\-]+?),?\s+({_LOOSE_ADDR_STATE_ALT})\b\s+(\d{{5}})",
+    re.IGNORECASE,
+)
+
+
+def _extract_address_from_free_text(text: str) -> str:
+    """Pull a full street address out of loosely-formatted text.
+
+    Handles the common case where a source page's structured address
+    components (street, city, state, zip) are all genuinely present in the
+    Location text but only space/dash-joined rather than comma-formatted
+    (e.g. schema.org data rendered as "Storming Crab 1360 Veterans Pkwy,
+    Clarksville Jeffersonville IN 47129"), which the strict comma-anchored
+    US_ADDR_FULL_RE misses even though every piece is right there. A ZIP is
+    required — a match without one isn't trusted as "full" here either."""
+    m = _LOOSE_ADDR_RE.search(clean_ws(text))
+    if not m:
+        return ""
+    street, city, state_raw, zip_code = m.groups()
+    state = state_raw.upper() if len(state_raw) == 2 else US_STATE_NAME_TO_ABBR.get(state_raw.lower(), "")
+    if not state:
+        return ""
+    city = clean_ws(city).strip(" ,-–—")
+    return ", ".join(p for p in (clean_ws(street), city, f"{state} {zip_code}") if p)
+
+
 def _span_days(start_iso: str, end_iso: str) -> int:
     start = parse_iso_datetime_safe(start_iso)
     end = parse_iso_datetime_safe(end_iso)
@@ -5050,6 +5083,10 @@ def geocode_full_address(location: str, city_state: str, cache: Dict[str, dict])
     existing = US_ADDR_FULL_RE.search(loc)
     if existing:
         return _format_address_candidate(existing.group(1), require_zip=True) or clean_ws(existing.group(1)), None
+
+    loose = _extract_address_from_free_text(loc)
+    if loose:
+        return loose, None
 
     expected_state = ""
     m = re.search(rf",\s*({US_STATE_ABBR_RE})\b", f"{city_state} {loc}", flags=re.IGNORECASE)
