@@ -5507,6 +5507,91 @@ def merge_same_day_same_address_duplicates(rows: List[dict]) -> List[dict]:
     return survivors
 
 
+def merge_nearby_overlapping_duplicates(rows: List[dict], max_miles: float = 1.0) -> List[dict]:
+    """Merge events whose times actually overlap (not just the same calendar
+    day) and whose resolved coordinates are within max_miles of each other,
+    even when the address text itself differs (different formatting, a
+    building elsewhere in the same shopping center, a slightly different
+    geocode for the same real venue). Requires BOTH signals — an overlapping
+    time window AND a real coordinate match on both sides — which is
+    intentionally tighter than matching on "same city, same day" alone (that
+    would wrongly collapse the many genuinely distinct car meetups that share
+    a city on a given Saturday)."""
+    if not rows:
+        return []
+
+    def time_range(row: dict) -> Optional[Tuple[datetime, datetime]]:
+        start = parse_iso_datetime_safe(str(row.get("start_iso", "")))
+        if not start:
+            return None
+        end = parse_iso_datetime_safe(str(row.get("end_iso", "")))
+        if not end or end <= start:
+            end = start + timedelta(hours=2)
+        return start, end
+
+    def coords(row: dict) -> Optional[Tuple[float, float]]:
+        lat, lon = row.get("lat"), row.get("lon")
+        if lat is None or lon is None:
+            return None
+        try:
+            return float(lat), float(lon)
+        except (TypeError, ValueError):
+            return None
+
+    ranges = [time_range(r) for r in rows]
+    points = [coords(r) for r in rows]
+
+    used = [False] * len(rows)
+    survivors: List[dict] = []
+    merged_count = 0
+    for i in range(len(rows)):
+        if used[i]:
+            continue
+        if ranges[i] is None or points[i] is None:
+            survivors.append(rows[i])
+            used[i] = True
+            continue
+        cluster = [i]
+        used[i] = True
+        for j in range(i + 1, len(rows)):
+            if used[j] or ranges[j] is None or points[j] is None:
+                continue
+            start_i, end_i = ranges[i]
+            start_j, end_j = ranges[j]
+            if not (start_i < end_j and start_j < end_i):
+                continue
+            if haversine_miles(points[i][0], points[i][1], points[j][0], points[j][1]) <= max_miles:
+                cluster.append(j)
+                used[j] = True
+        if len(cluster) == 1:
+            survivors.append(rows[i])
+            continue
+        merged_count += len(cluster) - 1
+        keep = max(cluster, key=lambda k: _row_richness(rows[k]))
+        base = dict(rows[keep])
+        for k in cluster:
+            other = rows[k]
+            for field in ("address", "url", "callout", "location", "description"):
+                if not clean_ws(str(base.get(field, ""))) and clean_ws(str(other.get(field, ""))):
+                    base[field] = other[field]
+            for field in ("attending_count", "interested_count"):
+                if base.get(field) is None and other.get(field) is not None:
+                    base[field] = other[field]
+            base_src = clean_ws(str(base.get("source", "")))
+            other_src = clean_ws(str(other.get("source", "")))
+            if other_src and other_src not in base_src:
+                base["source"] = clean_ws(f"{base_src}; {other_src}") if base_src else other_src
+
+        removed_titles = [clean_ws(str(rows[k].get("title", ""))) for k in cluster if k != keep]
+        if removed_titles:
+            log(f"🧹 Nearby/overlapping-time duplicate merge: kept '{clean_ws(str(base.get('title', '')))}' over {removed_titles}")
+        survivors.append(base)
+
+    if merged_count:
+        log(f"🧹 Nearby/overlapping-time duplicate merge: combined {merged_count} row(s) within {max_miles}mi with overlapping times")
+    return survivors
+
+
 def _address_trust_tier(ev: dict) -> str:
     """Accuracy tier for this event's address data: 'ics' (an organizer's own
     calendar entry — trusted as given), 'facebook' (sourced from, or already
@@ -5819,6 +5904,13 @@ def enrich_events_for_export(
     # 5) Now that addresses are resolved, catch duplicates that share the exact
     #    same day + street address even when their titles are unrelated.
     events = merge_same_day_same_address_duplicates(events)
+
+    # 5.5) Also catch duplicates whose address TEXT differs (different
+    # formatting, a nearby building in the same complex) but whose resolved
+    # coordinates are within about a mile of each other AND whose times
+    # actually overlap — a real-world same-event signal the exact-string
+    # match above can't see.
+    events = merge_nearby_overlapping_duplicates(events)
 
     # 6) Once Address is a confirmed full street address, Location mirrors it
     # exactly — a separate venue-label Location made same-place duplicates
