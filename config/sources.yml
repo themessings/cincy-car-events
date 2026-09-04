@@ -46,6 +46,13 @@ title_address_overrides:
   "Cincinnati British Car Day": "301 Wessel Dr, Fairfield, OH 45014"
   "MIDWESTFEST 10 CAR & BIKE SHOW": "7300 E Troy Ave, Indianapolis, IN 46239"
   "Thundercruise! - Car & Bike Meet": "1 S Main St, Miamisburg, OH 45342"
+  "Clarksville Steak ‘N Shake Cruise-In": "980 E Lewis and Clark Pkwy, Clarksville, IN 47129"
+  "Mid Ohio Cruisers 2026 Car Show": "1575 Cobblestone Way, Marysville, OH 43040"
+  "Octane – Lexington": "2308 Sir Barton Way, Lexington, KY 40509"
+  # No confirmed exact venue address (a "downtown" cruise-in, no fixed
+  # street number) — the city's own downtown/city-hall address as the
+  # closest real anchor point, still better than a bare city fallback.
+  "Downtown Union City Cruse in": "105 N Columbia St, Union City, IN 47390"
 filters:
   # ~1h45m drive from Cincinnati: 105 straight-line miles keeps Dayton, Columbus,
   # Louisville, Lexington, and Indianapolis while dropping Cleveland/Nashville noise.
