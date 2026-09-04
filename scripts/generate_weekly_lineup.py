@@ -137,7 +137,12 @@ WEATHER_X = 632
 WEATHER_Y = 1088
 WEATHER_W, WEATHER_H = 386, 168
 
-CTA_Y = 1292
+# CTA text is drawn *upward* from this anchor (see make_base_canvas), so it
+# must clear the weather box's bottom edge (WEATHER_Y + WEATHER_H = 1256)
+# even at its full 2-line wrap — 1292 put the first line right through the
+# box border. 1320 leaves a clean ~20px gap above and ~30px below within
+# the 1350px canvas.
+CTA_Y = 1320
 
 # Left column now runs deeper to use the empty lower-left space.
 # Right column still stops above the weather module.
@@ -433,42 +438,66 @@ def download_file(url: str, dest_path: str, timeout=30):
     with open(dest_path, "wb") as f:
         f.write(r.content)
 
-def upload_to_folder(drive_service, folder_id: str, local_path: str, drive_filename: Optional[str] = None) -> str:
-    """Upload local_path into folder_id under drive_filename (or the local
-    basename if not given), overwriting any existing file of that name.
-
-    Service accounts have no Drive storage quota of their own and can only
-    create new files inside a Shared Drive (unavailable on a personal
-    account) — but updating an *existing* file's content never touches
-    quota, since no new file is being created. So this always targets a
-    fixed filename and updates it in place rather than creating a fresh
-    dated file every run; see DRIVE_OUTPUT_FOLDER_ID's pre-seeded files
-    (created once, by hand, under the real account) for why those specific
-    names must keep matching what's already sitting in that folder."""
-    filename = drive_filename or os.path.basename(local_path)
-    media = MediaFileUpload(local_path, resumable=True)
-
-    existing = drive_service.files().list(
-        q=f"name = '{filename}' and '{folder_id}' in parents and trashed = false",
+def _find_in_folder(drive_service, folder_id: str, filename: str, trashed: bool) -> Optional[str]:
+    found = drive_service.files().list(
+        q=f"name = '{filename}' and '{folder_id}' in parents and trashed = {'true' if trashed else 'false'}",
         fields="files(id)",
         supportsAllDrives=True,
         includeItemsFromAllDrives=True,
     ).execute().get("files", [])
+    return found[0]["id"] if found else None
 
-    if existing:
+def upload_to_folder(drive_service, folder_id: str, local_path: str, drive_filename: Optional[str] = None) -> str:
+    """Upload local_path into folder_id under drive_filename (or the local
+    basename if not given), overwriting any existing file of that name —
+    live if it's there, restored from trash if a quiet week parked it there.
+
+    Service accounts have no Drive storage quota of their own and can only
+    create new files inside a Shared Drive (unavailable on a personal
+    account) — but updating an *existing* file's content never touches
+    quota, and neither does trashing/restoring one, since no new file is
+    ever being created. So this always targets a fixed filename and updates
+    it in place rather than creating a fresh dated file every run; see
+    DRIVE_OUTPUT_FOLDER_ID's pre-seeded files (created once, by hand, under
+    the real account) for why those specific names must keep matching
+    what's already sitting in that folder (live or trashed)."""
+    filename = drive_filename or os.path.basename(local_path)
+    media = MediaFileUpload(local_path, resumable=True)
+
+    live_id = _find_in_folder(drive_service, folder_id, filename, trashed=False)
+    if live_id:
         updated = drive_service.files().update(
-            fileId=existing[0]["id"], media_body=media, fields="id,webViewLink", supportsAllDrives=True
+            fileId=live_id, media_body=media, fields="id,webViewLink", supportsAllDrives=True
         ).execute()
         return updated["webViewLink"]
 
-    print(f"[WARN] No pre-seeded '{filename}' found in the target folder — "
-          f"creating it fresh, which needs Drive storage quota the service "
-          f"account doesn't have and will likely fail. Seed this filename "
-          f"once under the real account first (see DRIVE_OUTPUT_FOLDER_ID).")
+    trashed_id = _find_in_folder(drive_service, folder_id, filename, trashed=True)
+    if trashed_id:
+        updated = drive_service.files().update(
+            fileId=trashed_id, body={"trashed": False}, media_body=media,
+            fields="id,webViewLink", supportsAllDrives=True
+        ).execute()
+        return updated["webViewLink"]
+
+    print(f"[WARN] No pre-seeded '{filename}' found (live or trashed) in the target "
+          f"folder — creating it fresh, which needs Drive storage quota the service "
+          f"account doesn't have and will likely fail. Seed this filename once under "
+          f"the real account first (see DRIVE_OUTPUT_FOLDER_ID).")
     created = drive_service.files().create(
         body={"name": filename, "parents": [folder_id]}, media_body=media, fields="id,webViewLink", supportsAllDrives=True
     ).execute()
     return created["webViewLink"]
+
+def trash_unused_drive_slides(drive_service, folder_id: str, used_count: int, max_seeded: int, name_prefix: str) -> None:
+    """Park any pre-seeded slide slot beyond what this week actually needs in
+    the trash, so a quiet week doesn't leave confusing near-blank placeholder
+    images sitting visible in the folder. They come right back (restored,
+    not recreated) the moment a busier week needs them again."""
+    for i in range(used_count + 1, max_seeded + 1):
+        name = f"{name_prefix}_{i:02d}.jpg"
+        live_id = _find_in_folder(drive_service, folder_id, name, trashed=False)
+        if live_id:
+            drive_service.files().update(fileId=live_id, body={"trashed": True}, supportsAllDrives=True).execute()
 
 def make_logo_white(logo_rgba: Image.Image) -> Image.Image:
     rgb = logo_rgba.convert("RGB")
@@ -1835,6 +1864,7 @@ try:
         drive_name = f"{DRIVE_SLIDE_NAME_PREFIX}_{i:02d}.jpg"
         slide_links.append(upload_to_folder(drive_service, TARGET_FOLDER_ID, p, drive_filename=drive_name))
     txt_link = upload_to_folder(drive_service, TARGET_FOLDER_ID, out_caption_path, drive_filename=DRIVE_CAPTION_NAME)
+    trash_unused_drive_slides(drive_service, TARGET_FOLDER_ID, len(slide_paths), DRIVE_SEEDED_SLIDE_COUNT, DRIVE_SLIDE_NAME_PREFIX)
 except Exception as ex:
     print(f"[WARN] Drive upload failed partway through: {ex}")
     print("[WARN] Outputs are still local (see the 'apex-weekly-lineup' GitHub Actions artifact).")
