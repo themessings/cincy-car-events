@@ -493,16 +493,21 @@ def upload_to_folder(drive_service, folder_id: str, local_path: str, drive_filen
     ).execute()
     return created["webViewLink"]
 
-def trash_unused_drive_slides(drive_service, folder_id: str, used_count: int, max_seeded: int, name_prefix: str) -> None:
-    """Park any pre-seeded slide slot beyond what this week actually needs in
-    the trash, so a quiet week doesn't leave confusing near-blank placeholder
-    images sitting visible in the folder. They come right back (restored,
-    not recreated) the moment a busier week needs them again."""
-    for i in range(used_count + 1, max_seeded + 1):
-        name = f"{name_prefix}_{i:02d}.jpg"
-        live_id = _find_in_folder(drive_service, folder_id, name, trashed=False)
-        if live_id:
-            drive_service.files().update(fileId=live_id, body={"trashed": True}, supportsAllDrives=True).execute()
+def render_unused_slide_placeholder(out_path: str) -> None:
+    """A clearly-labeled placeholder for a pre-seeded slide slot this week
+    doesn't need, so it reads as intentionally empty rather than a broken or
+    corrupt image. (Trashing the file instead was tried and doesn't work —
+    Drive returns a 403 "insufficient permissions" when a non-owner tries to
+    trash a file it doesn't own, even with writer/editor access; overwriting
+    its content is a normal edit and always works.)"""
+    img = Image.new("RGB", (CANVAS_W, CANVAS_H), BG)
+    draw = ImageDraw.Draw(img)
+    msg = "Not used this week"
+    bb = draw.textbbox((0, 0), msg, font=FONT_DAY)
+    tx = (CANVAS_W - (bb[2] - bb[0])) // 2
+    ty = (CANVAS_H - (bb[3] - bb[1])) // 2
+    draw.text((tx, ty), msg, font=FONT_DAY, fill=MIDGRAY)
+    img.save(out_path, "JPEG", quality=85)
 
 def make_logo_white(logo_rgba: Image.Image) -> Image.Image:
     rgb = logo_rgba.convert("RGB")
@@ -1872,8 +1877,13 @@ try:
     for i, p in enumerate(slide_paths, start=1):
         drive_name = f"{DRIVE_SLIDE_NAME_PREFIX}_{i:02d}.jpg"
         slide_links.append(upload_to_folder(drive_service, TARGET_FOLDER_ID, p, drive_filename=drive_name))
+    if len(slide_paths) < DRIVE_SEEDED_SLIDE_COUNT:
+        placeholder_path = os.path.join(OUTPUT_DIR, "_unused_slide_placeholder.jpg")
+        render_unused_slide_placeholder(placeholder_path)
+        for i in range(len(slide_paths) + 1, DRIVE_SEEDED_SLIDE_COUNT + 1):
+            drive_name = f"{DRIVE_SLIDE_NAME_PREFIX}_{i:02d}.jpg"
+            upload_to_folder(drive_service, TARGET_FOLDER_ID, placeholder_path, drive_filename=drive_name)
     txt_link = upload_to_folder(drive_service, TARGET_FOLDER_ID, out_caption_path, drive_filename=DRIVE_CAPTION_NAME)
-    trash_unused_drive_slides(drive_service, TARGET_FOLDER_ID, len(slide_paths), DRIVE_SEEDED_SLIDE_COUNT, DRIVE_SLIDE_NAME_PREFIX)
 except Exception as ex:
     print(f"[WARN] Drive upload failed partway through: {ex}")
     print("[WARN] Outputs are still local (see the 'apex-weekly-lineup' GitHub Actions artifact).")
