@@ -56,7 +56,19 @@ TZ_NAME = "America/New_York"
 ORIGIN_LABEL = "45215"
 ORIGIN_COORDS = (39.2400, -84.4570)
 
-LOGO_FILE_ID = "1fJxPxj_fffcn-C-aaKXH-xoi_Se-Sm7w"
+# Confirmed 2026-09-04: this is the "Apex events" subfolder of the project's
+# "Apex Events" Drive folder (the same folder the sheet shortcuts live next
+# to), and it's owned by the collector's own service account
+# (car-events-bot@cincy-car-events-export.iam.gserviceaccount.com), so
+# uploads here always work regardless of what happens to any single file's
+# sharing. The previous LOGO_FILE_ID (1fJxPxj_fffcn-C-aaKXH-xoi_Se-Sm7w) had
+# been deleted at some point, and — because the upload target used to be
+# derived from that file's parent folder — its disappearance silently broke
+# every future run's file uploads along with it, not just the logo. Uploads
+# now target this folder directly; the logo is fetched independently and
+# degrades gracefully on its own if it ever goes missing again.
+DRIVE_OUTPUT_FOLDER_ID = "1dmPUTLlOeBiAZMEqKOB9ZhHAetPllUc_"
+LOGO_FILE_ID = "1euvtAFnXc0GZibUFId9q1D0Fzc_EOmTk"
 LOGO_FORCE_WHITE = True
 
 # ==================== SPOTTID SPONSOR CALLOUT ====================
@@ -608,7 +620,8 @@ if creds is None:
 drive_service = build("drive", "v3", credentials=creds)
 sheets_service = build("sheets", "v4", credentials=creds)
 
-TARGET_FOLDER_ID = None
+TARGET_FOLDER_ID = DRIVE_OUTPUT_FOLDER_ID
+
 try:
     req = drive_service.files().get_media(fileId=LOGO_FILE_ID, supportsAllDrives=True)
     fh = io.FileIO(LOGO_PATH, "wb")
@@ -617,12 +630,9 @@ try:
     while not done:
         _, done = downloader.next_chunk()
     fh.close()
-
-    meta = drive_service.files().get(fileId=LOGO_FILE_ID, fields="parents,name", supportsAllDrives=True).execute()
-    TARGET_FOLDER_ID = meta.get("parents", [None])[0]
 except Exception as ex:
-    print(f"[WARN] Could not download Apex logo / resolve target Drive folder: {ex}")
-    print("[WARN] Continuing without a logo and without Drive upload; local files will still be produced.")
+    print(f"[WARN] Could not download Apex logo (fileId={LOGO_FILE_ID}): {ex}")
+    print("[WARN] Continuing without a logo; slides/caption/Drive upload are unaffected.")
     # A failed download can still leave a truncated/empty file behind (the
     # file is opened for writing before the request runs) — remove it so the
     # os.path.exists() checks downstream correctly treat this as "no logo"
@@ -1782,15 +1792,13 @@ with open(out_caption_path, "w", encoding="utf-8") as f:
 
 slide_links = []
 txt_link = ""
-if TARGET_FOLDER_ID:
-    try:
-        for p in slide_paths:
-            slide_links.append(upload_to_folder(drive_service, TARGET_FOLDER_ID, p))
-        txt_link = upload_to_folder(drive_service, TARGET_FOLDER_ID, out_caption_path)
-    except Exception as ex:
-        print(f"[WARN] Drive upload failed partway through: {ex}")
-else:
-    print("[WARN] No Drive target folder resolved; outputs are local-only (see the 'apex-weekly-lineup' GitHub Actions artifact).")
+try:
+    for p in slide_paths:
+        slide_links.append(upload_to_folder(drive_service, TARGET_FOLDER_ID, p))
+    txt_link = upload_to_folder(drive_service, TARGET_FOLDER_ID, out_caption_path)
+except Exception as ex:
+    print(f"[WARN] Drive upload failed partway through: {ex}")
+    print("[WARN] Outputs are still local (see the 'apex-weekly-lineup' GitHub Actions artifact).")
 
 # Drive time is not shown on the slides/caption. These lines stay in the log
 # only, because drive time still decides the city order and still drops

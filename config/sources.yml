@@ -353,9 +353,14 @@ sources:
   # Joel's curated calendar: every event is included, never distance-dropped.
   # Rows are only removed when they duplicate an existing event (same day+time).
   bypass_distance_filter: true
-- type: google_sheet_events_import
-  name: Google Sheet Events Import
-  tab: Events
+# Manually-maintained "Google Sheet Events Import" source (a separate rally
+# tracker spreadsheet, tab "Events") disconnected 2026-09-04 at Joel's
+# request — no longer in use. It was also the source of a real data bug:
+# several multi-day rallies (Southern Ohio Forest Rally, Dynasty Rally 2026,
+# Corsa America Spring Rally) had duplicated "Day N" rows shifted by one day
+# with wrong years, re-imported unchanged every run since this source was
+# never re-verified. If this comes back, that spreadsheet's data needs a
+# manual cleanup pass first.
 # Hand-verified one-off events with no live crawlable source. Each entry is a
 # single concrete date confirmed directly from the host's own page — never a
 # recurrence guess. (2026-09: carsandcoffeeevents.com's dead pre-migration
