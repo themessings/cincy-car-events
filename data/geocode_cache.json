@@ -5264,5 +5264,16 @@
   "46203, USA": {
     "lat": "39.7404192",
     "lon": "-86.1133840"
-  }
+  },
+  "45414, USA": {
+    "lat": "39.8295486",
+    "lon": "-84.1994054"
+  },
+  "Fort Boonesborough State Park Lexington, KY": null,
+  "45241, USA": {
+    "lat": "39.2752985",
+    "lon": "-84.4147718"
+  },
+  "addr::s main st s main st scottsburg in 47170, scottsburg, in": null,
+  "addr::fort boonesborough state park lexington, ky, lexington ky": null
 }
