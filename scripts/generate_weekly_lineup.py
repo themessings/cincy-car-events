@@ -56,19 +56,18 @@ TZ_NAME = "America/New_York"
 ORIGIN_LABEL = "45215"
 ORIGIN_COORDS = (39.2400, -84.4570)
 
-# Confirmed 2026-09-04: this is the "Apex events" subfolder of the project's
-# "Apex Events" Drive folder (the same folder the sheet shortcuts live next
-# to), and it's owned by the collector's own service account
-# (car-events-bot@cincy-car-events-export.iam.gserviceaccount.com), so
-# uploads here always work regardless of what happens to any single file's
-# sharing. The previous LOGO_FILE_ID (1fJxPxj_fffcn-C-aaKXH-xoi_Se-Sm7w) had
-# been deleted at some point, and — because the upload target used to be
-# derived from that file's parent folder — its disappearance silently broke
-# every future run's file uploads along with it, not just the logo. Uploads
-# now target this folder directly; the logo is fetched independently and
-# degrades gracefully on its own if it ever goes missing again.
-DRIVE_OUTPUT_FOLDER_ID = "1dmPUTLlOeBiAZMEqKOB9ZhHAetPllUc_"
-LOGO_FILE_ID = "1euvtAFnXc0GZibUFId9q1D0Fzc_EOmTk"
+# This is Joel's own "Thursday Post" folder (My Drive root) — the real,
+# actively-used destination for these weekly outputs, confirmed directly by
+# him 2026-09-04 (an earlier attempt targeted a different, disused "Apex
+# events" folder under APEX/Apex Events by mistake). Shared with the
+# collector's own service account
+# (car-events-bot@cincy-car-events-export.iam.gserviceaccount.com) as
+# Editor, with the same fixed-filename set pre-seeded there too, so uploads
+# always work regardless of what happens to any single file's sharing. The
+# logo is fetched independently and degrades gracefully on its own if it
+# ever goes missing.
+DRIVE_OUTPUT_FOLDER_ID = "15Kd4_-eR16U--_E4Uzr0_MF5zBp1SWzI"
+LOGO_FILE_ID = "1GM3Kj9FrPxMxGpn0v6Afe9MvM2TFdWVM"
 LOGO_FORCE_WHITE = True
 
 # ==================== SPOTTID SPONSOR CALLOUT ====================
