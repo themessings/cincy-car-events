@@ -53,6 +53,8 @@ title_address_overrides:
   # street number) — the city's own downtown/city-hall address as the
   # closest real anchor point, still better than a bare city fallback.
   "Downtown Union City Cruse in": "105 N Columbia St, Union City, IN 47390"
+  "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event": "2669 E Kemper Rd, Cincinnati, OH 45241"
+  "Porsche Cruise In - OVRPCA & Eclipse Annual Event": "2669 E Kemper Rd, Cincinnati, OH 45241"
 filters:
   # ~1h45m drive from Cincinnati: 105 straight-line miles keeps Dayton, Columbus,
   # Louisville, Lexington, and Indianapolis while dropping Cleveland/Nashville noise.

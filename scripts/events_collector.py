@@ -4514,13 +4514,18 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
     et_tz = EST_TZ
 
     for idx, htichips in enumerate(htichips_attempts):
+        # SerpApi deprecated the dedicated "google_events" engine (confirmed
+        # 2026-09: it no longer accepts requests at all). Event data is still
+        # available, just via the regular "google" engine's events_results
+        # field — extract_google_events_rows() already looks for that key,
+        # so only the engine name needed to change, not the parsing.
         _, rows = serpapi_search(
             query,
             max_results=60,
             page_size=10,
             return_payload=True,
             max_pages=4,
-            engine="google_events",
+            engine="google",
             query_name="serpapi_google_events",
             location=location,
             gl=gl,
@@ -4532,7 +4537,7 @@ def collect_serpapi_google_events(source: dict, diagnostics: Optional[dict] = No
         if not rows:
             params = {
                 "api_key": SERPAPI_API_KEY,
-                "engine": "google_events",
+                "engine": "google",
                 "q": query,
                 "location": location,
                 "gl": gl,
@@ -6112,7 +6117,12 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
 
         normalized["Callout"] = (
             pick_value(row, alias_map["callout"])
-            or detect_registration_callout(normalized["Event Name"], raw_location)
+            or detect_registration_callout(
+                normalized["Event Name"],
+                raw_location,
+                str(row.get("description", "") or ""),
+                ticket_url=str(row.get("ticket_uri", "") or ""),
+            )
         )
 
         # Size / Popularity / Attendance: use enriched values when present,
