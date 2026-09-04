@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-04T09:54:09.812888-04:00",
-  "count": 338,
+  "generated_at_iso": "2026-09-04T10:06:13.821432-04:00",
+  "count": 349,
   "events": [
     {
       "Event Name": "NHRA US Nationals",
@@ -33,6 +33,36 @@
       "Event URL": "https://carsandcoffeeevents.com/events/friday-nights-beavercreek-cruise-in-at-the-vineyard-church"
     },
     {
+      "Event Name": "Wheels & Whoppers",
+      "Date": "2026-09-04",
+      "Start Time": "5:00 PM",
+      "End Time": "10:00 PM",
+      "Location": "47 East Main Street, North Vernon, IN 47265",
+      "Address": "47 East Main Street, North Vernon, IN 47265",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/wheels-whoppers"
+    },
+    {
+      "Event Name": "McDonald’s Sellersburg 2026 Summer Car Shows",
+      "Date": "2026-09-04",
+      "Start Time": "6:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "102 Enterprise Way, Sellersburg, IN 47172",
+      "Address": "102 Enterprise Way, Sellersburg, IN 47172",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/mcdonalds-sellersburg-2026-summer-car-show-schedule"
+    },
+    {
       "Event Name": "KB Octane Presents: Rip Rap Friday Night Cruise-In",
       "Date": "2026-09-04",
       "Start Time": "7:00 PM",
@@ -48,19 +78,19 @@
       "Event URL": "https://carsandcoffeeevents.com/events/kb-octane-presents-rip-rap-friday-night-cruise-in"
     },
     {
-      "Event Name": "Krueger’s Second Annual Car, Truck, & Bike Show",
+      "Event Name": "Krueger's Second Annual Car, Truck, &amp; Bike Show",
       "Date": "2026-09-05",
-      "Start Time": "9:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "7220 N Dixie Dr., Dayton, OH 45401",
-      "Address": "7220 N Dixie Dr., Dayton, OH 45401",
+      "Start Time": "12:00 AM",
+      "End Time": "12:00 AM",
+      "Location": "7220 N Dixie Dr, Dayton, OH 45414-2708, United States, Dayton, OH",
+      "Address": "7220 N Dixie Dr, Dayton, OH 45414-2708, United States, Dayton, OH",
       "Closest City": "Dayton, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/kruegers-second-car-truck-bike-show-2026-09-05"
+      "Source": "Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); Google Events - Dayton; CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://allevents.in/dayton/car-shows"
     },
     {
       "Event Name": "Southern Indiana Cars & Coffee",
@@ -74,7 +104,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); iCloud Published Calendar (ICS)",
       "Event URL": "https://carsandcoffeeevents.com/events/southern-indiana-cars-coffee"
     },
     {
@@ -119,7 +149,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-05"
     },
     {
@@ -134,7 +164,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/outback-in-the-midwest-cars-n-coffee"
     },
     {
@@ -153,19 +183,19 @@
       "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-starbucks-in-westerville-2026-06-20"
     },
     {
-      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
+      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
       "Date": "2026-09-05",
-      "Start Time": "8:30 AM",
+      "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
       "Closest City": "Columbus, OH",
       "Callout": "",
-      "Size": "Local",
-      "Popularity": "42",
+      "Size": "Small",
+      "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-09-05"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20"
     },
     {
       "Event Name": "Hometown Heroes Car Show – Mechanicsburg",
@@ -194,23 +224,38 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-with-eagle-chevrolet-gmc"
     },
     {
-      "Event Name": "Muncie Cars & Coffee 2026 – Season 10",
+      "Event Name": "Muncie Cars & Coffee 2026 - Season 10",
       "Date": "2026-09-05",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "100 E Charles St, Muncie, IN 47302",
-      "Address": "100 E Charles St, Muncie, IN 47302",
+      "Location": "100 E Charles St, Muncie, IN 47305",
+      "Address": "100 E Charles St, Muncie, IN 47305",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-09-05"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10"
+    },
+    {
+      "Event Name": "Hullabaloo",
+      "Date": "2026-09-05",
+      "Start Time": "9:00 AM",
+      "End Time": "3:00 PM",
+      "Location": "845 Contract Street, Lexington, KY 40502",
+      "Address": "845 Contract Street, Lexington, KY 40502",
+      "Closest City": "Lexington, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/hullabaloo-2026-09-05"
     },
     {
       "Event Name": "Kentuckiana Showdown",
@@ -269,7 +314,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/bluegrass-outlawz-car-meet-2026-09-05"
     },
     {
@@ -299,7 +344,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/shelby-county-car-club-presents-monthly-cruise-in-2026-09-05"
     },
     {
@@ -344,7 +389,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/mccordsville-cars-coffee"
     },
     {
@@ -374,7 +419,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/tommy-and-da-fam-cruise-in"
     },
     {
@@ -423,6 +468,21 @@
       "Event URL": "https://carsandcoffeeevents.com/events/djs-cruise-in-night"
     },
     {
+      "Event Name": "Warehouse Wednesdays",
+      "Date": "2026-09-09",
+      "Start Time": "5:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "4114 Reas Lane, New Albany, IN 47150",
+      "Address": "4114 Reas Lane, New Albany, IN 47150",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/warehouse-wednesdays"
+    },
+    {
       "Event Name": "Daredevil Brewing Co. Speedway Cruise-In",
       "Date": "2026-09-09",
       "Start Time": "6:00 PM",
@@ -434,7 +494,7 @@
       "Size": "Local",
       "Popularity": "40",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/daredevil-brewing-co-speedway-cruise-in-2026-09-09"
     },
     {
@@ -464,7 +524,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/alexandria-cruise-in-2"
     },
     {
@@ -481,6 +541,21 @@
       "Attendance": "",
       "Source": "sheet",
       "Event URL": "https://ridewithrandy.org/"
+    },
+    {
+      "Event Name": "Indiana Cruisers Monthly Cruise The Square",
+      "Date": "2026-09-11",
+      "Start Time": "5:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "Historical Charlestown City Square Charlestown IN 47111",
+      "Address": "Main Cross Street, Charlestown, IN 47111",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "24",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/indiana-cruisers-monthly-cruise-the-square"
     },
     {
       "Event Name": "Jackson County Gear Grinders Muscle Hustle",
@@ -539,8 +614,23 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-12"
+    },
+    {
+      "Event Name": "Fly-In / Drive-In Breakfast",
+      "Date": "2026-09-12",
+      "Start Time": "8:30 AM",
+      "End Time": "10:30 AM",
+      "Location": "1924 Boston Rd, Bardstown, KY 40004",
+      "Address": "1924 Boston Rd, Bardstown, KY 40004",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/fly-in-drive-in-breakfast"
     },
     {
       "Event Name": "Dallara Cars & Coffee",
@@ -554,7 +644,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/dallara-cars-coffee-2026-09-12"
     },
     {
@@ -629,7 +719,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/chasing-sunsets-car-show-2026-09-12"
     },
     {
@@ -659,7 +749,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/richmond-ky-cars-coffee-2026-09-12"
     },
     {
@@ -674,7 +764,7 @@
       "Size": "Local",
       "Popularity": "40",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-26"
     },
     {
@@ -824,7 +914,7 @@
       "Size": "Small",
       "Popularity": "24",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/midnight-motors-auto-club-bi-weekly-meet"
     },
     {
@@ -914,7 +1004,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/hot-rod-car-show-cruise-in-at-one-more-lounge"
     },
     {
@@ -929,7 +1019,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-09-13"
     },
     {
@@ -974,7 +1064,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/the-hoosier-2026-vintage-wheels-swap-meet-show"
     },
     {
@@ -1004,7 +1094,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-09-18"
     },
     {
@@ -1019,7 +1109,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/shepherdsville-cruise-in-2"
     },
     {
@@ -1034,7 +1124,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/austin-dairy-queen-cruise-in"
     },
     {
@@ -1098,19 +1188,19 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
+      "Event Name": "Liberty Center Cars and Coffee",
       "Date": "2026-09-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7160 Taylor St, Liberty Township, OH 45069",
-      "Address": "7160 Taylor St, Liberty Township, OH 45069",
+      "Location": "7140 Taylor Street, Liberty Township, OH 45069",
+      "Address": "7140 Taylor Street, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-09-19"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -1124,7 +1214,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-19"
     },
     {
@@ -1141,6 +1231,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Tommy’s Mccar Show Sponsored By Mcdonald’s",
+      "Date": "2026-09-19",
+      "Start Time": "8:30 AM",
+      "End Time": "3:30 PM",
+      "Location": "7901 US Highway 31 South, Indianapolis, IN 46201",
+      "Address": "7901 US Highway 31 South, Indianapolis, IN 46201",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/tommys-mccar-show-sponsored-by-mcdonalds"
     },
     {
       "Event Name": "9Lincoln’s 3rd Annual Car Show",
@@ -1169,7 +1274,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/winchester-cars-coffee"
     },
     {
@@ -1199,7 +1304,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/waldron-lodge-217-presents-third-annual-car-show"
     },
     {
@@ -1214,7 +1319,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/hog-heaven-cruise-in-2026-09-19"
     },
     {
@@ -1244,8 +1349,23 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/midwest-fest-10-car-bike-show"
+    },
+    {
+      "Event Name": "Downtown Union City Cruse in",
+      "Date": "2026-09-19",
+      "Start Time": "2:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "105 N Columbia St, Union City, IN 47390",
+      "Address": "105 N Columbia St, Union City, IN 47390",
+      "Closest City": "Dayton, OH",
+      "Callout": "Registration required",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/downtown-cruse-in"
     },
     {
       "Event Name": "Delhi Street Rodders Car Show",
@@ -1289,7 +1409,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-19"
     },
     {
@@ -1304,7 +1424,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/mid-ohio-cruisers-2026-car-show"
     },
     {
@@ -1319,7 +1439,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/clarksville-steak-n-shake-cruise-in"
     },
     {
@@ -1334,7 +1454,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/fifth-speak-for-the-unspoken-car-show-2026-09-20"
     },
     {
@@ -1364,7 +1484,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/friends-of-ohio-k9-car-show-2026-09-20"
     },
     {
@@ -1379,7 +1499,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/midwestfest-10-car-bike-show-2026-09-20"
     },
     {
@@ -1394,7 +1514,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-20"
     },
     {
@@ -1409,7 +1529,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/pharaohs-of-kentucky-and-hooters-hooters-car-show"
     },
     {
@@ -1439,8 +1559,23 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-25"
+    },
+    {
+      "Event Name": "Roundtown Cruisers Free For Cruisers And Spectators!",
+      "Date": "2026-09-25",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "9511 Tarlton Road, Tarlton Road Circleville, OH 43113",
+      "Address": "9511 Tarlton Road, Tarlton Road Circleville, OH 43113",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/roundtown-cruisers-free-for-cruisers-and-spectators"
     },
     {
       "Event Name": "2ND ANNUAL BOONESBORO RALLY",
@@ -1499,7 +1634,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-26"
     },
     {
@@ -1514,7 +1649,7 @@
       "Size": "Regional",
       "Popularity": "60",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/hoosier-mustang-club-fall-festival-car-truck-show-2026-09-26"
     },
     {
@@ -1529,7 +1664,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/bulldog-auto-show"
     },
     {
@@ -1544,7 +1679,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/mid-west-dayton-club-car-show"
     },
     {
@@ -1574,7 +1709,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/generations-church-first-car-show-2026-09-26"
     },
     {
@@ -1604,7 +1739,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-26"
     },
     {
@@ -1619,7 +1754,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-09-26"
     },
     {
@@ -1634,7 +1769,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-coffee"
     },
     {
@@ -1679,7 +1814,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-32"
     },
     {
@@ -1724,7 +1859,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/james-miller-memorial-car-show-2026-09-27"
     },
     {
@@ -1769,7 +1904,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/rockin-randalls-cruise-in"
     },
     {
@@ -1799,7 +1934,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/restoration-church-6th-annual-car-show-2026"
     },
     {
@@ -1814,7 +1949,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-03"
     },
     {
@@ -1844,7 +1979,7 @@
       "Size": "Local",
       "Popularity": "42",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-10-03"
     },
     {
@@ -1859,7 +1994,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-10-03"
     },
     {
@@ -1874,7 +2009,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/rpm-transmissions-car-show-2026-10-03"
     },
     {
@@ -1889,7 +2024,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/6th-annual-car-show-and-gun-giveaway"
     },
     {
@@ -1934,7 +2069,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/bluegrass-outlawz-car-meet-2026-10-03"
     },
     {
@@ -1949,7 +2084,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-10-03"
     },
     {
@@ -1964,7 +2099,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/shelby-county-car-club-presents-monthly-cruise-in-2026-10-03"
     },
     {
@@ -1994,7 +2129,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/5th-floyd-central-band-car-show-2026"
     },
     {
@@ -2024,7 +2159,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/rpm-performance-cruise-in"
     },
     {
@@ -2069,7 +2204,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-10"
     },
     {
@@ -2084,7 +2219,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/richmond-ky-cars-coffee-2026-10-10"
     },
     {
@@ -2099,7 +2234,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/david-landman-memorial-car-show-2026-10-10"
     },
     {
@@ -2114,7 +2249,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/friends-for-paws-car-show"
     },
     {
@@ -2144,7 +2279,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/merchants-cruise-in-fort-street-car-classics-2026-10-10"
     },
     {
@@ -2159,7 +2294,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-10-10"
     },
     {
@@ -2204,7 +2339,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-10-14"
     },
     {
@@ -2234,7 +2369,7 @@
       "Size": "Local",
       "Popularity": "40",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/daredevil-brewing-co-speedway-cruise-in-2026-10-14"
     },
     {
@@ -2249,7 +2384,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-17"
     },
     {
@@ -2264,7 +2399,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-10-17"
     },
     {
@@ -2309,8 +2444,23 @@
       "Size": "Local",
       "Popularity": "34",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/cars-and-coffee-columbus"
+    },
+    {
+      "Event Name": "Lighthouse Church Car Show",
+      "Date": "2026-10-17",
+      "Start Time": "10:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "8270 Beech St, Elizabeth, IN 47117",
+      "Address": "8270 Beech St, Elizabeth, IN 47117",
+      "Closest City": "Louisville, KY",
+      "Callout": "Registration required",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/lighthouse-church-car-show"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2339,7 +2489,7 @@
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/sidney-first-naz-fall-harvest-festival-anything-on-wheels-car-cruise-2026-10-17"
     },
     {
@@ -2354,7 +2504,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/capital-city-classic-auto-club-classic-car-cruise-in-2026-10-17"
     },
     {
@@ -2399,7 +2549,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-10-18"
     },
     {
@@ -2564,7 +2714,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/danville-professional-firefighters-car-show"
     },
     {
@@ -2624,7 +2774,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-10-30"
     },
     {
@@ -2684,7 +2834,7 @@
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/steels-wheels-halloween-car-show-2026-10-31"
     },
     {
@@ -2744,7 +2894,7 @@
       "Size": "Local",
       "Popularity": "42",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-11-07"
     },
     {
@@ -2864,7 +3014,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-11-11"
     },
     {
@@ -2928,6 +3078,21 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Ohio Ford Expo",
+      "Date": "2026-11-28",
+      "Start Time": "9:00 AM",
+      "End Time": "4:00 PM",
+      "Location": "717 E. 17th Ave., Columbus, OH 43211",
+      "Address": "717 E. 17th Ave., Columbus, OH 43211",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Regional",
+      "Popularity": "62",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/ohio-ford-expo"
+    },
+    {
       "Event Name": "Cars at Madison Square",
       "Date": "2026-11-28",
       "Start Time": "11:00 AM",
@@ -2969,7 +3134,7 @@
       "Size": "Local",
       "Popularity": "42",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-12-05"
     },
     {
@@ -2999,7 +3164,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-12-09"
     },
     {
@@ -3014,7 +3179,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-12-10"
     },
     {
@@ -3074,7 +3239,7 @@
       "Size": "Local",
       "Popularity": "42",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2027-01-02"
     },
     {
@@ -3119,7 +3284,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-01-13"
     },
     {
@@ -3194,7 +3359,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-02-10"
     },
     {
@@ -3269,7 +3434,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-03-10"
     },
     {
@@ -3389,7 +3554,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-04-14"
     },
     {
@@ -3614,7 +3779,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-05-12"
     },
     {
@@ -3749,7 +3914,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-06-09"
     },
     {
@@ -4064,7 +4229,7 @@
       "Size": "Small",
       "Popularity": "12",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-07-14"
     },
     {
