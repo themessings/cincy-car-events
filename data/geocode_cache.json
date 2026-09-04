@@ -4716,5 +4716,189 @@
       39.3718138,
       -84.3754367
     ]
+  },
+  "Clarksville, IN": {
+    "lat": "38.2967791",
+    "lon": "-85.7602087"
+  },
+  "addr::colin’s coffee": {
+    "formatted": "2812 Fishinger Road, Upper Arlington, OH 43221",
+    "latlon": [
+      40.0306913,
+      -83.0910774
+    ]
+  },
+  "addr::bittersweet center": {
+    "formatted": "Bittersweet Lane, Center Moriches, NY 11934",
+    "latlon": [
+      40.8233909,
+      -72.7817481
+    ]
+  },
+  "addr::storming crabs – clarksville, in": null,
+  "addr::crestview hills town center": {
+    "formatted": "",
+    "latlon": [
+      39.024808,
+      -84.5792737
+    ]
+  },
+  "addr::the ohio state university wexner medical center": {
+    "formatted": "3691,3711,3721,3731 Ridge Mill Drive, Columbus, OH 43026",
+    "latlon": [
+      40.0291456,
+      -83.1132529
+    ]
+  },
+  "addr::mechanicsburg fire department": {
+    "formatted": "West Main Street, Mechanicsburg, IL 62545",
+    "latlon": [
+      39.8094836,
+      -89.3999652
+    ]
+  },
+  "addr::buckeye harley-davidson": null,
+  "addr::blue grass stockyards regional marketplace": null,
+  "addr::southland christian church – lexington campus": null,
+  "addr::mccord square": null,
+  "addr::the cocoa muse": {
+    "formatted": "600 West Loveland Avenue, Loveland, OH 45140",
+    "latlon": [
+      39.2694845,
+      -84.2661659
+    ]
+  },
+  "addr::circuit cafe": {
+    "formatted": "2726 Riverside Drive, Cincinnati, OH 45202",
+    "latlon": [
+      39.1227724,
+      -84.4549396
+    ]
+  },
+  "addr::lee’s famous recipe": {
+    "formatted": "Eastern Avenue, Richmond, KY 40475",
+    "latlon": [
+      37.7358255,
+      -84.313397
+    ]
+  },
+  "addr::mershon’s": {
+    "formatted": "",
+    "latlon": [
+      31.4641009,
+      -82.2573461
+    ]
+  },
+  "addr::destination outlets": {
+    "formatted": "",
+    "latlon": [
+      39.6207624,
+      -83.6015268
+    ]
+  },
+  "addr::aberdeen community park": {
+    "formatted": "",
+    "latlon": [
+      38.6543812,
+      -83.7627751
+    ]
+  },
+  "addr::village green park": {
+    "formatted": "",
+    "latlon": [
+      33.01656,
+      -117.1274653
+    ]
+  },
+  "addr::pastime park": {
+    "formatted": "",
+    "latlon": [
+      42.8395116,
+      -76.9419078
+    ]
+  },
+  "addr::carla’s roadside diner": null,
+  "addr::mcdonalds chillicothe": null,
+  "addr::hilliard detailing garage": null,
+  "addr::hamilton county 4-h fairgrounds": {
+    "formatted": "850E Fairgrounds, Hamilton County, IL 62859",
+    "latlon": [
+      38.0643961,
+      -88.5484661
+    ]
+  },
+  "addr::marion county fairgrounds": {
+    "formatted": "",
+    "latlon": [
+      39.7283815,
+      -86.0375602
+    ]
+  },
+  "addr::caesar ford park": {
+    "formatted": "",
+    "latlon": [
+      39.663318,
+      -83.8317634
+    ]
+  },
+  "addr::hamburg pavilion": {
+    "formatted": "",
+    "latlon": [
+      38.0257414,
+      -84.4192503
+    ]
+  },
+  "addr::bilstein boulevard location": null,
+  "addr::eastbrook plaza": {
+    "formatted": "",
+    "latlon": [
+      39.2246342,
+      -85.8938733
+    ]
+  },
+  "addr::centerville senior high school": {
+    "formatted": "Franklin Avenue, South Boston, VA 24592",
+    "latlon": [
+      36.7304686,
+      -78.910096
+    ]
+  },
+  "addr::zion lutheran church": {
+    "formatted": "140 North Gay Street, Baltimore, MD 21202",
+    "latlon": [
+      39.2916399,
+      -76.6095364
+    ]
+  },
+  "addr::versailles brewing company": {
+    "formatted": "513 Marsailles Road, Versailles, KY 40383",
+    "latlon": [
+      38.0485006,
+      -84.7081777
+    ]
+  },
+  "addr::orthopedic institute of dayton": null,
+  "addr::hardees parking lot": {
+    "formatted": "University Avenue, Dubuque, IA 52001",
+    "latlon": [
+      42.4989395,
+      -90.6940214
+    ]
+  },
+  "addr::floyd central high school": {
+    "formatted": "6575 Old Vincennes Road, Floyd County, IN 47119",
+    "latlon": [
+      38.3335154,
+      -85.9335909
+    ]
+  },
+  "addr::master power transmission": null,
+  "addr::sidney first church of the nazarene": null,
+  "addr::millennium park": {
+    "formatted": "",
+    "latlon": [
+      41.8825754,
+      -87.6225361
+    ]
   }
 }
