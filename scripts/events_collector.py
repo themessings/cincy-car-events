@@ -5663,6 +5663,26 @@ def enrich_events_for_export(
         name = clean_ws(str(source))
         return (name in trusted_sources) or bool(source_is_car_dedicated(name, cfg))
 
+    # 0) Drop events whose only evidence is a dead, pre-migration
+    # carsandcoffeeevents.com URL (/event/<slug>/<date>/ — the old WordPress
+    # "Tribe Events" format). That site migrated to a new platform and this
+    # endpoint 404s permanently now (confirmed 2026-09), so any row still
+    # carrying this exact URL shape has never been re-verified since, and
+    # its date is frequently a stale auto-expanded "weekly recurrence" guess
+    # from the old system rather than the organizer's real current schedule
+    # — confirmed live: "Euro Cars and Cocoa" showed a event every single
+    # Sunday for 8 straight weeks with no gaps, while the real page showed
+    # no event at all on the nearest of those dates. The current collector
+    # (collect_cars_and_coffee_events_site) only ever produces the new
+    # /events/<slug> URL shape, so this pattern can only ever be leftover,
+    # never a false positive against fresh data.
+    dead_url_re = re.compile(r"carsandcoffeeevents\.com/event/[^/]+/\d{4}-\d{2}-\d{2}/?", re.IGNORECASE)
+    before_dead_filter = len(events)
+    events = [ev for ev in events if not dead_url_re.search(clean_ws(str(ev.get("url", ""))))]
+    dropped_dead_source = before_dead_filter - len(events)
+    if dropped_dead_source:
+        log(f"🧹 Dropped {dropped_dead_source} event(s) whose only source was a dead pre-migration carsandcoffeeevents.com link (unverifiable stale date)")
+
     # 1) Verify date/time via the event link (parallel across events; cached).
     if verify_dates:
         from concurrent.futures import ThreadPoolExecutor
