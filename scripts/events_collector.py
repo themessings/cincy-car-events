@@ -129,6 +129,33 @@ def _normalize_location_for_export_dedupe(value: str) -> str:
     return ", ".join(deduped_parts)
 
 
+_STREET_SUFFIX_CANON = {
+    "street": "st", "avenue": "ave", "road": "rd", "drive": "dr",
+    "boulevard": "blvd", "lane": "ln", "highway": "hwy", "parkway": "pkwy",
+    "circle": "cir", "court": "ct", "place": "pl", "terrace": "ter",
+    "trail": "trl", "square": "sq", "turnpike": "tpke",
+}
+_STREET_DIRECTION_CANON = {
+    "north": "n", "south": "s", "east": "e", "west": "w",
+    "northeast": "ne", "northwest": "nw", "southeast": "se", "southwest": "sw",
+}
+_STREET_WORD_CANON = {**_STREET_SUFFIX_CANON, **_STREET_DIRECTION_CANON}
+
+
+def _canonicalize_street_address_for_dedupe(value: str) -> str:
+    """Address match for dedupe, tolerant of formatting noise ('Main Street' vs
+    'Main St', 'Suite 4' vs 'Ste 4') that would otherwise hide an obvious
+    same-address duplicate from a plain string comparison."""
+    text = _normalize_location_for_export_dedupe(value)
+    if not text:
+        return ""
+    text = re.sub(r"[.,#]", " ", text)
+    text = re.sub(r"\b(suite|ste|unit|apt|#)\s*\w*\b", " ", text)
+    words = text.split()
+    words = [_STREET_WORD_CANON.get(w, w) for w in words]
+    return re.sub(r"\s+", " ", " ".join(words)).strip()
+
+
 def _normalize_link_for_export_dedupe(value: str) -> str:
     raw = clean_ws(value)
     if not raw:
@@ -5192,6 +5219,74 @@ def merge_same_day_near_duplicates(rows: List[dict]) -> List[dict]:
     return survivors
 
 
+def merge_same_day_same_address_duplicates(rows: List[dict]) -> List[dict]:
+    """Merge events on the same calendar day at the exact same street address,
+    even when the titles have nothing in common (the same event submitted or
+    scraped under two unrelated names). Requires a full street address
+    (number + street) on both sides — a bare city/venue name is too weak a
+    signal and would wrongly collapse distinct events that just share a city."""
+    if not rows:
+        return []
+
+    def day_key(row: dict) -> str:
+        dt = parse_iso_datetime_safe(str(row.get("start_iso", "")))
+        return dt.date().isoformat() if dt else ""
+
+    def address_key(row: dict) -> str:
+        addr = clean_ws(str(row.get("address", "")))
+        if not addr or not _has_full_street_address(addr):
+            return ""
+        return _canonicalize_street_address_for_dedupe(addr)
+
+    keys = [(day_key(r), address_key(r)) for r in rows]
+    used = [False] * len(rows)
+    survivors: List[dict] = []
+    merged_count = 0
+    for i in range(len(rows)):
+        if used[i]:
+            continue
+        day_i, addr_i = keys[i]
+        if not day_i or not addr_i:
+            survivors.append(rows[i])
+            used[i] = True
+            continue
+        cluster = [i]
+        used[i] = True
+        for j in range(i + 1, len(rows)):
+            if used[j]:
+                continue
+            if keys[j] == (day_i, addr_i):
+                cluster.append(j)
+                used[j] = True
+        if len(cluster) == 1:
+            survivors.append(rows[i])
+            continue
+        merged_count += len(cluster) - 1
+        keep = max(cluster, key=lambda k: _row_richness(rows[k]))
+        base = dict(rows[keep])
+        for k in cluster:
+            other = rows[k]
+            for field in ("address", "url", "callout", "location", "description"):
+                if not clean_ws(str(base.get(field, ""))) and clean_ws(str(other.get(field, ""))):
+                    base[field] = other[field]
+            for field in ("attending_count", "interested_count"):
+                if base.get(field) is None and other.get(field) is not None:
+                    base[field] = other[field]
+            base_src = clean_ws(str(base.get("source", "")))
+            other_src = clean_ws(str(other.get("source", "")))
+            if other_src and other_src not in base_src:
+                base["source"] = clean_ws(f"{base_src}; {other_src}") if base_src else other_src
+
+        removed_titles = [clean_ws(str(rows[k].get("title", ""))) for k in cluster if k != keep]
+        if removed_titles:
+            log(f"🧹 Same-address duplicate merge: kept '{clean_ws(str(base.get('title', '')))}' over {removed_titles} (day={day_i}, address={addr_i})")
+        survivors.append(base)
+
+    if merged_count:
+        log(f"🧹 Same-address duplicate merge: combined {merged_count} same-day same-address row(s) with different titles")
+    return survivors
+
+
 def enrich_events_for_export(
     events: List[dict],
     geocache: Dict[str, dict],
@@ -5311,6 +5406,10 @@ def enrich_events_for_export(
                 ev["address"] = location
         if filled:
             log(f"🏠 Full address looked up for {filled} events")
+
+    # 5) Now that addresses are resolved, catch duplicates that share the exact
+    #    same day + street address even when their titles are unrelated.
+    events = merge_same_day_same_address_duplicates(events)
 
     for ev in events:
         popularity, size, attendance = compute_popularity_and_size(ev)
@@ -5621,13 +5720,42 @@ def verify_parent_access(drive, parent_id: str) -> bool:
         return False
 
 
+def _execute_sheets_request(request, *, context: str, max_attempts: int = 5):
+    """Execute a googleapiclient Sheets request, retrying on transient (429/5xx) errors.
+
+    Google's Sheets API returns occasional 503s ("service currently unavailable")
+    that clear up within seconds; without a retry, one of these kills the whole
+    collector run after it already did all the work of gathering events."""
+    for attempt in range(max_attempts):
+        try:
+            return request.execute()
+        except HttpError as ex:
+            status = getattr(ex, "status_code", None) or getattr(getattr(ex, "resp", None), "status", None)
+            try:
+                status = int(status)
+            except (TypeError, ValueError):
+                status = None
+            if status in (429, 500, 502, 503, 504) and attempt < max_attempts - 1:
+                delay = (2 ** attempt) * 1.5
+                log(f"⚠️ Google Sheets API {status} on {context}, retrying in {delay:.1f}s (attempt {attempt + 1}/{max_attempts})")
+                time.sleep(delay)
+                continue
+            raise
+
+
 def ensure_sheet_tab(sheets, spreadsheet_id: str, title: str) -> None:
-    sheet_info = sheets.spreadsheets().get(spreadsheetId=spreadsheet_id, includeGridData=False).execute()
+    sheet_info = _execute_sheets_request(
+        sheets.spreadsheets().get(spreadsheetId=spreadsheet_id, includeGridData=False),
+        context="spreadsheets.get",
+    )
     titles = {sheet["properties"]["title"] for sheet in sheet_info.get("sheets", [])}
     if title in titles:
         return
     requests_body = {"requests": [{"addSheet": {"properties": {"title": title}}}]}
-    sheets.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id, body=requests_body).execute()
+    _execute_sheets_request(
+        sheets.spreadsheets().batchUpdate(spreadsheetId=spreadsheet_id, body=requests_body),
+        context="spreadsheets.batchUpdate(addSheet)",
+    )
 
 
 def _extract_address_components(text: str, city_state: str = "") -> Tuple[str, str, str]:
@@ -5780,10 +5908,13 @@ def _read_future_manual_events_from_sheet(sheets, spreadsheet_id: str) -> List[d
     now_et = datetime.now(tz=tz.gettz("America/New_York"))
     today_et = now_et.date()
     try:
-        resp = sheets.spreadsheets().values().get(
-            spreadsheetId=spreadsheet_id,
-            range="Events!A1:M4000",
-        ).execute()
+        resp = _execute_sheets_request(
+            sheets.spreadsheets().values().get(
+                spreadsheetId=spreadsheet_id,
+                range="Events!A1:M4000",
+            ),
+            context="values.get(Events!A1:M4000)",
+        )
     except Exception as ex:
         log(f"⚠️ Unable to read existing Events tab for manual-row preservation: {ex}")
         return []
@@ -5863,39 +5994,124 @@ def update_apex_spreadsheet(events: List[dict]) -> None:
 
     # 1) Clear the sheet range first (prevents leftovers if list shrinks)
     clear_range = "Events!A1:M"
-    sheets.spreadsheets().values().clear(
-        spreadsheetId=spreadsheet_id,
-        range=clear_range,
-        body={}
-    ).execute()
+    _execute_sheets_request(
+        sheets.spreadsheets().values().clear(
+            spreadsheetId=spreadsheet_id,
+            range=clear_range,
+            body={}
+        ),
+        context="values.clear(Events!A1:M)",
+    )
 
     # 2) Write data
-    sheets.spreadsheets().values().update(
-        spreadsheetId=spreadsheet_id,
-        range="Events!A1",
-        valueInputOption="RAW",
-        body={"values": values},
-    ).execute()
+    _execute_sheets_request(
+        sheets.spreadsheets().values().update(
+            spreadsheetId=spreadsheet_id,
+            range="Events!A1",
+            valueInputOption="RAW",
+            body={"values": values},
+        ),
+        context="values.update(Events!A1)",
+    )
 
     # 3) Write a visible update stamp (column O is outside the A:M table)
     stamp = f"Updated by bot: {now_et_iso()} | rows={len(values)-1}"
-    sheets.spreadsheets().values().update(
-        spreadsheetId=spreadsheet_id,
-        range="Events!O1",
-        valueInputOption="RAW",
-        body={"values": [[stamp]]},
-    ).execute()
+    _execute_sheets_request(
+        sheets.spreadsheets().values().update(
+            spreadsheetId=spreadsheet_id,
+            range="Events!O1",
+            valueInputOption="RAW",
+            body={"values": [[stamp]]},
+        ),
+        context="values.update(Events!O1)",
+    )
 
     # 4) Read back first few rows to prove it wrote
-    preview = sheets.spreadsheets().values().get(
-        spreadsheetId=spreadsheet_id,
-        range="Events!A1:C5",
-    ).execute()
+    preview = _execute_sheets_request(
+        sheets.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range="Events!A1:C5",
+        ),
+        context="values.get(Events!A1:C5 preview)",
+    )
     got = preview.get("values", [])
     log(f"🧽 Cleared Events sheet range {clear_range} then wrote {len(values)-1} rows")
     log(f"   Wrote {len(values)-1} events to Events!A1")
     log(f"   Preview A1:C5 = {got}")
     log(f"   Stamp written to Events!O1 = {stamp}")
+
+    # 5) Open the sheet back up and double-check what actually landed: flag any
+    # rows missing a start time or address, and catch duplicate rows (same date
+    # + same street address, even under different event names) that slipped
+    # past pre-write dedup. If any turn up, rewrite the sheet without them.
+    verify_written_sheet_output(sheets, spreadsheet_id, clear_range)
+
+
+def verify_written_sheet_output(sheets, spreadsheet_id: str, data_range: str) -> None:
+    """Read back everything just written to the Events tab and sanity-check it."""
+    resp = _execute_sheets_request(
+        sheets.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=data_range),
+        context="values.get(Events read-back for verification)",
+    )
+    all_values = resp.get("values", []) or []
+    if not all_values:
+        log("⚠️ Post-write verification: Events tab came back empty.")
+        return
+
+    sheet_headers = all_values[0]
+    idx = {name: i for i, name in enumerate(sheet_headers)}
+    data_rows = all_values[1:]
+
+    def cell(row: List[str], name: str) -> str:
+        i = idx.get(name)
+        return clean_ws(row[i]) if i is not None and i < len(row) else ""
+
+    missing_start_time = sum(1 for row in data_rows if cell(row, "Date") and not cell(row, "Start Time"))
+    missing_address = sum(1 for row in data_rows if not cell(row, "Address"))
+
+    seen: Dict[Tuple[str, str], int] = {}
+    dup_indices: set = set()
+    for i, row in enumerate(data_rows):
+        date = cell(row, "Date")
+        addr = cell(row, "Address")
+        if not date or not addr or not _has_full_street_address(addr):
+            continue
+        key = (date, _canonicalize_street_address_for_dedupe(addr))
+        if key in seen:
+            dup_indices.add(i)
+        else:
+            seen[key] = i
+
+    log(
+        "🔍 Post-write sheet verification: "
+        f"rows={len(data_rows)} missing_start_time={missing_start_time} "
+        f"missing_address={missing_address} duplicate_rows_found={len(dup_indices)}"
+    )
+
+    if not dup_indices:
+        return
+
+    dup_sample = [
+        f"{cell(data_rows[i], 'Event Name')} | {cell(data_rows[i], 'Date')} | {cell(data_rows[i], 'Address')}"
+        for i in list(dup_indices)[:5]
+    ]
+    log(f"🧹 Post-write duplicates removed: {dup_sample}")
+
+    cleaned_rows = [row for i, row in enumerate(data_rows) if i not in dup_indices]
+    _execute_sheets_request(
+        sheets.spreadsheets().values().clear(spreadsheetId=spreadsheet_id, range=data_range, body={}),
+        context="values.clear(Events post-verify rewrite)",
+    )
+    _execute_sheets_request(
+        sheets.spreadsheets().values().update(
+            spreadsheetId=spreadsheet_id,
+            range="Events!A1",
+            valueInputOption="RAW",
+            body={"values": [sheet_headers] + cleaned_rows},
+        ),
+        context="values.update(Events post-verify rewrite)",
+    )
+    log(f"🧹 Post-write verification removed {len(dup_indices)} duplicate row(s) still present after write; rewrote sheet.")
 
 
 
