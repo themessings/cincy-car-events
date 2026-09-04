@@ -1949,6 +1949,13 @@ _STREET_ADDRESS_START_RE = re.compile(
     re.IGNORECASE,
 )
 
+# A genuinely clean "City, ST" string only — not just any text that happens to
+# END that way. guess_city_state() falls back to returning its raw input
+# unparsed when it can't confidently extract a city, so a caller can't treat
+# a truthy city_state as automatically usable; it might still be the whole
+# "Venue Name - City, ST" the source scraped.
+_CLEAN_CITY_STATE_RE = re.compile(rf"^[A-Za-z][A-Za-z .'’]*,\s*({US_STATE_ABBR_RE})$")
+
 
 def _reconcile_location_with_address(location: str, address: str) -> str:
     """Drop a street-address fragment embedded in Location once we have a
@@ -5383,13 +5390,14 @@ def enrich_events_for_export(
                         targets,
                     )
                 )
-        verified = corrected = unconfirmed = name_corrected = address_corrected = 0
+        verified = corrected = unconfirmed = name_corrected = address_corrected = end_corrected = 0
         for ev, res in results:
             if not res:
                 ev["date_verified"] = "unconfirmed"
                 unconfirmed += 1
                 continue
             new_start = parse_iso_datetime_safe(str(res.get("start_iso", "")))
+            new_end = parse_iso_datetime_safe(str(res.get("end_iso", "")))
             if new_start and res.get("confident"):
                 old_start = parse_iso_datetime_safe(str(ev.get("start_iso", "")))
                 changed = (
@@ -5399,14 +5407,20 @@ def enrich_events_for_export(
                 )
                 if changed:
                     ev["start_iso"] = new_start.isoformat()
-                    new_end = parse_iso_datetime_safe(str(res.get("end_iso", "")))
-                    if new_end and new_end > new_start:
-                        ev["end_iso"] = new_end.isoformat()
                     ev["date_verified"] = "corrected"
                     corrected += 1
                 else:
                     ev["date_verified"] = "verified"
                     verified += 1
+
+                # End time double-check: independent of whether the start
+                # time needed correcting — a start that already matches
+                # doesn't guarantee the page's end time does too.
+                if new_end and new_end > new_start:
+                    old_end = parse_iso_datetime_safe(str(ev.get("end_iso", "")))
+                    if old_end is None or abs((new_end - old_end).total_seconds()) > 3600:
+                        ev["end_iso"] = new_end.isoformat()
+                        end_corrected += 1
             else:
                 ev["date_verified"] = ev.get("date_verified") or "unconfirmed"
 
@@ -5444,7 +5458,7 @@ def enrich_events_for_export(
             log(f"📝 Event names corrected from linked page: {name_corrected}")
         if address_corrected:
             log(f"🏠 Addresses corrected from linked page: {address_corrected}")
-        log(f"🔗 Link date-check: verified={verified} corrected={corrected} unconfirmed={unconfirmed} (of {len(targets)} with links)")
+        log(f"🔗 Link date-check: verified={verified} corrected={corrected} end_corrected={end_corrected} unconfirmed={unconfirmed} (of {len(targets)} with links)")
 
     # 2) Re-vet automotive using any description we just fetched (drop non-car).
     if revet_automotive:
@@ -5554,15 +5568,18 @@ def enrich_events_for_export(
                     ev["closest_city"] = filled_city
                     closest_city_guaranteed += 1
 
-            if not formatted and not current:
-                # Still couldn't confirm a street-level address: every event
-                # gets a *real*, city-qualified address rather than a bare,
-                # ungeocoded venue label.
-                qualifier = city_state or clean_ws(str(ev.get("closest_city", "")))
-                if qualifier and qualifier.lower() not in location.lower():
-                    ev["address"] = f"{location}, {qualifier}" if location else qualifier
-                else:
-                    ev["address"] = location
+            if not formatted and not _has_full_street_address(current):
+                # Still couldn't confirm a street-level address: fall back to
+                # a straight geographic address (city/state), never the venue
+                # or business name — Address must stay comparable across
+                # sources so same-day/same-address duplicate detection keeps
+                # working (a venue name baked in here would make two listings
+                # of the same place look like different addresses). city_state
+                # is only trusted here when it actually looks like "City, ST"
+                # — it can otherwise just be the raw venue text passed through
+                # unparsed (guess_city_state()'s own fallback behavior).
+                clean_city_state = city_state if _CLEAN_CITY_STATE_RE.match(city_state) else ""
+                ev["address"] = clean_city_state or clean_ws(str(ev.get("closest_city", "")))
         if filled:
             log(f"🏠 Full address looked up for {filled} events")
         if rejected_far:
