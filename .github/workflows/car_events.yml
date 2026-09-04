@@ -2,14 +2,42 @@ name: Cincinnati Car Events Collector
 
 on:
   schedule:
-    - cron: "0 11 * * 4" # Thursdays only, 11:00 UTC (6am ET standard / 7am ET daylight)
+    # GitHub Actions cron is fixed UTC and does not observe daylight saving,
+    # so "6am Eastern" is two different UTC times depending on the time of
+    # year. Both fire every Thursday; the gate job below keeps only the one
+    # that actually lands at 6am America/New_York and skips the other.
+    - cron: "0 10 * * 4" # 6:00 AM EDT (roughly Mar-Nov)
+    - cron: "0 11 * * 4" # 6:00 AM EST (roughly Nov-Mar)
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      proceed: ${{ steps.check.outputs.proceed }}
+    steps:
+      - id: check
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "Manual run (workflow_dispatch) — always proceeds."
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          HOUR_ET=$(TZ="America/New_York" date +%H)
+          if [ "$HOUR_ET" = "06" ]; then
+            echo "It's 6am Eastern right now — proceeding."
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "It's ${HOUR_ET}:00 Eastern right now, not 6am — this is the redundant cron firing for the other DST offset. Skipping."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+          fi
+
   collect:
+    needs: gate
+    if: needs.gate.outputs.proceed == 'true'
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +57,7 @@ jobs:
       - name: Install OCR runtime
         run: |
           sudo apt-get update
-          sudo apt-get install -y tesseract-ocr
+          sudo apt-get install -y tesseract-ocr fonts-liberation fonts-dejavu-core
 
       # Facebook feed scroll is opt-in. Set repo variable ENABLE_FACEBOOK_SCROLL=1
       # (Settings → Secrets and variables → Actions → Variables) to pull in the
@@ -42,7 +70,7 @@ jobs:
 
       - name: Syntax check collector scripts
         run: |
-          python -m py_compile scripts/events_collector.py scripts/validate_runtime_env.py scripts/clean_events.py
+          python -m py_compile scripts/events_collector.py scripts/validate_runtime_env.py scripts/clean_events.py scripts/generate_weekly_lineup.py
 
       - name: Run unit tests
         run: |
@@ -101,10 +129,18 @@ jobs:
           grep -Fq "🔎 Source summary:" data/collector.log
           grep -Fq "✅ Done." data/collector.log
 
+      - name: Generate weekly lineup (Apex carousel + caption)
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+          APEX_SPREADSHEET_ID: 1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8
+        run: |
+          python -u scripts/generate_weekly_lineup.py | tee data/lineup.log
+
       - name: Inspect output files
         run: |
           ls -la data
           ls -la data/runs || true
+          ls -la lineup_output || true
 
       - name: Upload output artifact
         uses: actions/upload-artifact@v4
@@ -118,6 +154,15 @@ jobs:
             data/source_health.json
             data/runs/*.json
             data/collector.log
+          if-no-files-found: warn
+
+      - name: Upload weekly lineup artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: apex-weekly-lineup
+          path: |
+            lineup_output/
+            data/lineup.log
           if-no-files-found: warn
 
       - name: Commit changes (if any)

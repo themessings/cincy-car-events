@@ -8,3 +8,8 @@ google-api-python-client==2.156.0
 google-auth==2.37.0
 google-auth-httplib2==0.2.0
 Pillow==10.4.0
+pandas==2.2.3
+pytz==2024.2
+rapidfuzz==3.10.1
+geopy==2.4.1
+qrcode==8.0
