@@ -1943,6 +1943,29 @@ def _extract_venue_prefix(text: str, formatted_address: str) -> str:
     return prefix
 
 
+_STREET_ADDRESS_START_RE = re.compile(
+    r"\d{1,6}\s+[A-Za-z0-9.\-' ]+?\b(?:street|st|avenue|ave|road|rd|drive|dr|boulevard|blvd|"
+    r"lane|ln|way|pike|highway|hwy|court|ct|parkway|pkwy|circle|cir|trail|terrace|place|pl)\b",
+    re.IGNORECASE,
+)
+
+
+def _reconcile_location_with_address(location: str, address: str) -> str:
+    """Drop a street-address fragment embedded in Location once we have a
+    confirmed Address, so the two columns can't state conflicting street-level
+    facts (e.g. Location carrying a source page's stale ZIP that differs from
+    the geocoded one). Keeps the venue-name prefix; leaves Location alone when
+    it has no venue name of its own (it just *is* the address already)."""
+    text = clean_ws(location)
+    if not text or not clean_ws(address):
+        return text
+    m = _STREET_ADDRESS_START_RE.search(text)
+    if not m:
+        return text
+    venue = clean_ws(text[: m.start()]).strip(" ,-–—")
+    return venue or text
+
+
 def clean_location(raw: str) -> str:
     """Extract one clean US postal address, keeping the venue name when present.
 
@@ -4972,6 +4995,7 @@ def verify_event_datetime_via_link(event: dict, url_cache: Dict[str, dict], allo
             start_dt = g["start_dt"]
             end_dt = g.get("end_dt") or (start_dt + timedelta(hours=2))
             result = {
+                "title": clean_ws(g.get("title", "")),
                 "start_iso": start_dt.isoformat(),
                 "end_iso": end_dt.isoformat(),
                 "location": clean_ws(g.get("location", "")),
@@ -5001,6 +5025,7 @@ def verify_event_datetime_via_link(event: dict, url_cache: Dict[str, dict], allo
                     # Confident only when the page carried a real clock time.
                     confident = not (start_dt.hour == 0 and start_dt.minute == 0)
                     result = {
+                        "title": clean_ws(best.get("title", "")),
                         "start_iso": start_dt.isoformat(),
                         "end_iso": end_dt.isoformat(),
                         "location": clean_ws(best.get("location", "")),
@@ -5324,7 +5349,7 @@ def enrich_events_for_export(
                         targets,
                     )
                 )
-        verified = corrected = unconfirmed = 0
+        verified = corrected = unconfirmed = name_corrected = address_corrected = 0
         for ev, res in results:
             if not res:
                 ev["date_verified"] = "unconfirmed"
@@ -5350,16 +5375,39 @@ def enrich_events_for_export(
                     verified += 1
             else:
                 ev["date_verified"] = ev.get("date_verified") or "unconfirmed"
+
+            # Name double-check: Facebook's own event "name" field for this
+            # exact event id is authoritative — prefer it over whatever a
+            # scraper guessed if the two have actually diverged.
+            if res.get("provider") == "facebook_graph":
+                page_title = clean_ws(str(res.get("title", "")))
+                if page_title and _normalize_title_for_export_dedupe(page_title) != _normalize_title_for_export_dedupe(str(ev.get("title", ""))):
+                    ev["title"] = page_title
+                    name_corrected += 1
+
             # Backfill details discovered on the page.
             if res.get("description") and not clean_ws(str(ev.get("description", ""))):
                 ev["description"] = clean_ws(str(res["description"]))[:2000]
             if res.get("location") and not clean_ws(str(ev.get("location", ""))):
                 ev["location"] = res["location"]
-            if res.get("address") and not clean_ws(str(ev.get("address", ""))):
-                ev["address"] = res["address"]
+            # Address double-check: a full street address pulled straight off
+            # the event's own page outranks a venue-name geocode guess, so it
+            # wins even when we already had (a possibly wrong) address.
+            page_address = clean_ws(str(res.get("address", "")))
+            if page_address and _has_full_street_address(page_address):
+                if _canonicalize_street_address_for_dedupe(page_address) != _canonicalize_street_address_for_dedupe(str(ev.get("address", ""))):
+                    if clean_ws(str(ev.get("address", ""))):
+                        address_corrected += 1
+                    ev["address"] = page_address
+            elif page_address and not clean_ws(str(ev.get("address", ""))):
+                ev["address"] = page_address
             for count_key in ("attending_count", "interested_count"):
                 if res.get(count_key) is not None:
                     ev[count_key] = res[count_key]
+        if name_corrected:
+            log(f"📝 Event names corrected from linked page: {name_corrected}")
+        if address_corrected:
+            log(f"🏠 Addresses corrected from linked page: {address_corrected}")
         log(f"🔗 Link date-check: verified={verified} corrected={corrected} unconfirmed={unconfirmed} (of {len(targets)} with links)")
 
     # 2) Re-vet automotive using any description we just fetched (drop non-car).
@@ -5390,13 +5438,28 @@ def enrich_events_for_export(
 
     # 4) Full-address lookup (serial — Nominatim allows <=1 req/sec) then scoring.
     if lookup_addresses:
+        home_lat = cfg["home"]["lat"]
+        home_lon = cfg["home"]["lon"]
+        local_max = float(cfg["filters"]["local_max_miles"])
+        rally_max = float(cfg["filters"]["rally_max_miles"])
         filled = 0
+        rejected_far = 0
         for ev in events:
             current = clean_ws(str(ev.get("address", "")))
             if current and _has_full_street_address(current):
                 continue
             location = clean_ws(str(ev.get("location", ""))) or current
             formatted, latlon = geocode_full_address(location, clean_ws(str(ev.get("city_state", ""))), geocache)
+            if formatted and latlon:
+                # A generic venue name ("Liberty Collective") can match a
+                # same-named business clear across the country; reject any
+                # geocode that lands implausibly far from Cincinnati rather
+                # than trust it just because Nominatim returned a hit.
+                allowed_max = rally_max if ev.get("category") == "rally" else local_max
+                if miles_from_home(latlon[0], latlon[1], home_lat, home_lon) > allowed_max:
+                    log(f"⚠️ Rejected implausible geocode for '{clean_ws(str(ev.get('title', '')))}': '{location}' -> {formatted}")
+                    rejected_far += 1
+                    formatted, latlon = "", None
             if formatted:
                 ev["address"] = formatted
                 filled += 1
@@ -5406,10 +5469,29 @@ def enrich_events_for_export(
                 ev["address"] = location
         if filled:
             log(f"🏠 Full address looked up for {filled} events")
+        if rejected_far:
+            log(f"🧹 Rejected {rejected_far} geocoded address(es) that landed implausibly far from Cincinnati")
 
     # 5) Now that addresses are resolved, catch duplicates that share the exact
     #    same day + street address even when their titles are unrelated.
     events = merge_same_day_same_address_duplicates(events)
+
+    # 6) Make Location and Address agree: once Address is a confirmed full
+    #    street address, drop any stale street/ZIP text embedded in Location
+    #    (a source page's own text can drift from what the venue geocodes to,
+    #    e.g. a ZIP off by one) so the two columns never contradict each other.
+    reconciled = 0
+    for ev in events:
+        address = clean_ws(str(ev.get("address", "")))
+        if not address or not _has_full_street_address(address):
+            continue
+        location = clean_ws(str(ev.get("location", "")))
+        new_location = _reconcile_location_with_address(location, address)
+        if new_location != location:
+            ev["location"] = new_location
+            reconciled += 1
+    if reconciled:
+        log(f"🧹 Reconciled Location text with confirmed Address for {reconciled} events")
 
     for ev in events:
         popularity, size, attendance = compute_popularity_and_size(ev)
