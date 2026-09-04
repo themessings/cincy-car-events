@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-04T08:50:58.601119-04:00",
-  "count": 456,
+  "generated_at_iso": "2026-09-04T08:56:59.235969-04:00",
+  "count": 458,
   "events": [
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -228,21 +228,6 @@
       "Event URL": "https://carsandcoffeeevents.com/events/outback-in-the-midwest-cars-n-coffee"
     },
     {
-      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
-      "Date": "2026-09-05",
-      "Start Time": "8:30 AM",
-      "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "42",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-09-05"
-    },
-    {
       "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
       "Date": "2026-09-05",
       "Start Time": "8:00 AM",
@@ -256,6 +241,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-starbucks-in-westerville-2026-06-20"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20"
     },
     {
       "Event Name": "Krueger’s Second Annual Car, Truck, & Bike Show",
@@ -1522,15 +1522,15 @@
       "Date": "2026-09-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7160 Taylor St, Liberty Township, OH 45069",
-      "Address": "7160 Taylor St, Liberty Township, OH 45069",
+      "Location": "7160 Taylor Street, Liberty Township, OH 45069",
+      "Address": "7160 Taylor Street, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center"
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1202419291741078/"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -2416,6 +2416,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-03"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-10-03",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "4809 Outer Loop, Louisville, KY 40219",
+      "Address": "4809 Outer Loop, Louisville, KY 40219",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859389604399/"
     },
     {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
@@ -3871,6 +3886,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-11-07/"
+    },
+    {
+      "Event Name": "Southern Indiana Car & Coffee",
+      "Date": "2026-11-07",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "4809 Outer Loop, Louisville, KY 40219",
+      "Address": "4809 Outer Loop, Louisville, KY 40219",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
