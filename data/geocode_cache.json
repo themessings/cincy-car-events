@@ -5224,5 +5224,33 @@
   "addr::9511 tarlton road tarlton road circleville oh 43113, circleville, oh": null,
   "addr::creitz park north on foote st. to creitz park cambridge city in 47327, cambridge city, in": null,
   "addr::fairborn city church 206w dayton-yellow springs rd fairborn oh 45324, fairborn, oh": null,
-  "addr::7140 taylor street - liberty township, ohio 45069 7140 taylor street - liberty township, oh": null
+  "addr::7140 taylor street - liberty township, ohio 45069 7140 taylor street - liberty township, oh": null,
+  "addr::waverly, oh": {
+    "formatted": "",
+    "latlon": [
+      39.126735,
+      -82.9854553
+    ]
+  },
+  "addr::circleville, oh": {
+    "formatted": "",
+    "latlon": [
+      39.600618,
+      -82.9460133
+    ]
+  },
+  "addr::marysville, oh": {
+    "formatted": "",
+    "latlon": [
+      40.2364486,
+      -83.3671432
+    ]
+  },
+  "addr::fairborn, oh": {
+    "formatted": "",
+    "latlon": [
+      39.8208998,
+      -84.0193858
+    ]
+  }
 }
