@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-03T21:40:43.382125-04:00",
-  "count": 445,
+  "generated_at_iso": "2026-09-03T21:47:23.475794-04:00",
+  "count": 432,
   "events": [
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -318,19 +318,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-09-05/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-09-06",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-06/"
     },
     {
       "Event Name": "McCordsville Cars & Coffee",
@@ -361,21 +361,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-09-06/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-09-06",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-06/"
     },
     {
       "Event Name": "Chicken Eater’s Car Club",
@@ -828,19 +813,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-09-12/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-09-13",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-13/"
     },
     {
       "Event Name": "Euro Cars and Cocoa",
@@ -886,21 +871,6 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/no-limits-937-cars-coffee/1728274965168803/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-09-13",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-13/"
     },
     {
       "Event Name": "United Ford Owners 15th Annual All Ohio Ford Show 2026",
@@ -1428,19 +1398,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/octane-lexington/2026-09-19/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-09-20",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-20/"
     },
     {
       "Event Name": "Fifth Annual Speak! for the Unspoken Car Show",
@@ -1486,21 +1456,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-09-20/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-09-20",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-20/"
     },
     {
       "Event Name": "Friends of Ohio K9 5th Annual Car Show",
@@ -1818,19 +1773,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/liberty-center-cars-coffee/2026-08-30/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-09-27",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-27/"
     },
     {
       "Event Name": "Joe Show Car, Truck and Bike Show",
@@ -1906,21 +1861,6 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/wyler-fastlane-2026/1029342319990551/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-09-27",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-09-27/"
     },
     {
       "Event Name": "7th Annual James Miller Memorial Car Show",
@@ -2328,19 +2268,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-03/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-10-04",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-04/"
     },
     {
       "Event Name": "Euro Cars and Cocoa",
@@ -2356,21 +2296,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-04/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-10-04",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-04/"
     },
     {
       "Event Name": "5th Floyd Central Band Car Show 2026",
@@ -2643,19 +2568,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-10/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-10-11",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-11/"
     },
     {
       "Event Name": "Euro Cars and Cocoa",
@@ -2671,21 +2596,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-11/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-10-11",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-11/"
     },
     {
       "Event Name": "'Cruise In' Car Show",
@@ -3018,19 +2928,19 @@
       "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-10-18",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-18/"
     },
     {
       "Event Name": "Fairfield Cars and Coffee 2026",
@@ -3061,21 +2971,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-18/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-10-18",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-18/"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 2",
@@ -3363,19 +3258,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-24/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-10-25",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-25/"
     },
     {
       "Event Name": "Euro Cars and Cocoa",
@@ -3391,21 +3286,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-25/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-10-25",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-10-25/"
     },
     {
       "Event Name": "Chicken Eater’s Car Club",
@@ -3588,21 +3468,6 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-10-31/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-11-01",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-11-01",
       "Start Time": "10:00 AM",
@@ -3614,7 +3479,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
       "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-01/"
     },
     {
@@ -3843,19 +3708,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-11-07/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-11-08",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-08/"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 3",
@@ -3871,21 +3736,6 @@
       "Attendance": "",
       "Source": "sheet",
       "Event URL": "Same as above"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-11-08",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-08/"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 4",
@@ -4038,19 +3888,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-11-14/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
+      "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-11-15",
-      "Start Time": "8:00 AM",
+      "Start Time": "10:00 AM",
       "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
+      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
       "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-15/"
     },
     {
       "Event Name": "Fairfield Cars and Coffee 2026",
@@ -4066,21 +3916,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/fairfield-cars-and-coffee-2026/2026-11-15/"
-    },
-    {
-      "Event Name": "ACKY Cars and Coffee",
-      "Date": "2026-11-15",
-      "Start Time": "10:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Circuit Cafe - 2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-15/"
     },
     {
       "Event Name": "Chicken Eater’s Car Club",
@@ -4218,21 +4053,6 @@
       "Event URL": "https://carsandcoffeeevents.com/event/octane-lexington/2026-11-21/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-11-22",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-11-22",
       "Start Time": "10:00 AM",
@@ -4244,7 +4064,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
       "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-22/"
     },
     {
@@ -4368,21 +4188,6 @@
       "Event URL": "https://carsandcoffeeevents.com/event/no-flex-car-cruise-2/2026-11-28/"
     },
     {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-11-29",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
-    },
-    {
       "Event Name": "ACKY Cars and Coffee",
       "Date": "2026-11-29",
       "Start Time": "10:00 AM",
@@ -4394,7 +4199,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
       "Event URL": "https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-11-29/"
     },
     {
