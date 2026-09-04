@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-03T23:42:33.985472-04:00",
-  "count": 459,
+  "generated_at_iso": "2026-09-04T00:05:53.969634-04:00",
+  "count": 489,
   "events": [
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -198,21 +198,6 @@
       "Event URL": "https://facebook.com/events/s/the-fast-parts-grand-prix-at-m/1173981004805186/"
     },
     {
-      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
-      "Date": "2026-09-05",
-      "Start Time": "8:30 AM",
-      "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "42",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-09-05"
-    },
-    {
       "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
       "Date": "2026-09-05",
       "Start Time": "8:00 AM",
@@ -256,6 +241,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/events/outback-in-the-midwest-cars-n-coffee"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
+      "Date": "2026-09-05",
+      "Start Time": "8:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20"
     },
     {
       "Event Name": "Krueger’s Second Annual Car, Truck, & Bike Show",
@@ -348,19 +348,19 @@
       "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-with-eagle-chevrolet-gmc"
     },
     {
-      "Event Name": "Muncie Cars & Coffee 2026 - Season 10",
+      "Event Name": "Muncie Cars & Coffee 2026 – Season 10",
       "Date": "2026-09-05",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "100 E Charles St, Muncie, IN 47305",
-      "Address": "100 E Charles St, Muncie, IN 47305",
+      "Location": "100 E Charles St, Muncie, IN 47302",
+      "Address": "100 E Charles St, Muncie, IN 47302",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-09-05"
     },
     {
       "Event Name": "Kentuckiana Showdown",
@@ -907,15 +907,15 @@
       "Date": "2026-09-12",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
+      "Location": "201 E North St, Springfield, OH 45501",
+      "Address": "201 E North St, Springfield, OH 45501",
       "Closest City": "Dayton, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/springfield-cars-and-coffee/2026-09-12/"
+      "Event URL": "https://carsandcoffeeevents.com/events/springfield-cars-and-coffee"
     },
     {
       "Event Name": "24th Annual RCC Car Show Reunion",
@@ -930,22 +930,22 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/24th-annual-rcc-car-show-reunion/"
+      "Event URL": "https://carsandcoffeeevents.com/events/24th-annual-rcc-car-show-reunion"
     },
     {
       "Event Name": "Bristol Village 2026 Car Show",
       "Date": "2026-09-12",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "330 Carl Penn Road, Waverly, OH 45690",
-      "Address": "330 Carl Penn Road, Waverly, OH 45690",
+      "Location": "Waverly, OH",
+      "Address": "Waverly, OH",
       "Closest City": "Columbus, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/bristol-village-2026-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/bristol-village-2026-car-show"
     },
     {
       "Event Name": "Gratis Car Show",
@@ -960,7 +960,7 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/gratis-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/gratis-car-show"
     },
     {
       "Event Name": "Miami Meadows Park Veterans Appreciation Car Show",
@@ -975,7 +975,7 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/miami-meadows-park-veterans-appreciation-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/miami-meadows-park-veterans-appreciation-car-show-2026-09-12"
     },
     {
       "Event Name": "4th Annual Chasing Sunsets Car Show",
@@ -1071,7 +1071,7 @@
       "Event Name": "South Bloomfield Elementary PTO’s Annual Car Show",
       "Date": "2026-09-12",
       "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
+      "End Time": "11:00 AM",
       "Location": "194 Dowler Dr, Ashville, OH 43103",
       "Address": "194 Dowler Dr, Ashville, OH 43103",
       "Closest City": "Columbus, OH",
@@ -1080,7 +1080,7 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/south-bloomfield-elementary-ptos-annual-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/south-bloomfield-elementary-ptos-car-show-2026-09-12"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -1102,21 +1102,21 @@
       "Date": "2026-09-12",
       "Start Time": "12:00 PM",
       "End Time": "5:00 PM",
-      "Location": "Cincinnati, OH",
-      "Address": "Cincinnati, OH",
+      "Location": "886 High St, Aberdeen, OH 45101",
+      "Address": "886 High St, Aberdeen, OH 45101",
       "Closest City": "Cincinnati, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/cruisin-for-christ-2nd-annual-car-truck-and-motorcycle-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/cruisin-for-christ-2nd-annual-car-truck-and-motorcycle-show"
     },
     {
       "Event Name": "Cruise’n For Cancer",
       "Date": "2026-09-12",
       "Start Time": "1:00 PM",
-      "End Time": "4:00 PM",
+      "End Time": "5:00 PM",
       "Location": "450 Victor Stier Dr, Milford, OH 45150",
       "Address": "450 Victor Stier Dr, Milford, OH 45150",
       "Closest City": "Cincinnati, OH",
@@ -1125,7 +1125,37 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/cruisen-for-cancer/"
+      "Event URL": "https://carsandcoffeeevents.com/events/cruisen-for-cancer"
+    },
+    {
+      "Event Name": "Kettering Saturday Night Cruise-In",
+      "Date": "2026-09-12",
+      "Start Time": "4:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "3205 Woodman Dr, Dayton, OH 45401",
+      "Address": "3205 Woodman Dr, Dayton, OH 45401",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-12"
+    },
+    {
+      "Event Name": "Ohio River Street Rodders Cruise-In",
+      "Date": "2026-09-12",
+      "Start Time": "4:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "1193 Fairground Road, Lucasville, OH 45648",
+      "Address": "1193 Fairground Road, Lucasville, OH 45648",
+      "Closest City": "Columbus, OH",
+      "Callout": "Registration required",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/ohio-river-street-rodders-cruise-in"
     },
     {
       "Event Name": "Hillsboro Round Town Cruisers Cruise Nights 2026",
@@ -1140,7 +1170,22 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/hillsboro-round-town-cruisers-cruise-nights-2026-5/"
+      "Event URL": "https://carsandcoffeeevents.com/events/hillsboro-round-town-cruisers-cruise-nights-2026"
+    },
+    {
+      "Event Name": "2nd Saturday Car Cruise, Food Truck & Concerts",
+      "Date": "2026-09-12",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "105 N Main St, Washington Court House, OH 43160",
+      "Address": "105 N Main St, Washington Court House, OH 43160",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "46",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-09-12"
     },
     {
       "Event Name": "Midnight Motors Auto Club Bi Weekly Meet",
@@ -1222,30 +1267,30 @@
       "Date": "2026-09-13",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "Cincinnati, OH",
-      "Address": "Cincinnati, OH",
-      "Closest City": "Cincinnati, OH",
+      "Location": "6735 Lakota Lane, West Chester Township, OH 45044",
+      "Address": "6735 Lakota Lane, West Chester Township, OH 45044",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/no-limits-937-cars-coffee/1728274965168803/"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/no-limits-937-cars-coffee"
     },
     {
       "Event Name": "United Ford Owners 15th Annual All Ohio Ford Show 2026",
       "Date": "2026-09-13",
       "Start Time": "10:00 AM",
       "End Time": "1:00 PM",
-      "Location": "Columbus, OH",
-      "Address": "Columbus, OH",
+      "Location": "344 - 350 N. Chillicothe St., Plain City, OH 43064",
+      "Address": "344 - 350 N. Chillicothe St., Plain City, OH 43064",
       "Closest City": "Columbus, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/united-ford-owners-15th-annual-all-ohio-ford-show-2026/"
+      "Event URL": "https://carsandcoffeeevents.com/events/united-ford-owners-15th-annual-all-ohio-ford-show-2026"
     },
     {
       "Event Name": "Luv’d Ones Ohio Pony Wagon Day Car Show",
@@ -1260,7 +1305,7 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/luvd-ones-ohio-pony-wagon-day-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/luvd-ones-ohio-pony-wagon-day-car-show"
     },
     {
       "Event Name": "Hot Rod & Car Show Cruise-In at One More Lounge",
@@ -1312,30 +1357,30 @@
       "Date": "2026-09-16",
       "Start Time": "5:00 PM",
       "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Drive, Liberty Township, OH 45044",
-      "Address": "8300 Four Bridges Drive, Liberty Township, OH 45044",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
+      "Location": "8300 Four Bridges Dr., Liberty Township, OH 45044",
+      "Address": "8300 Four Bridges Dr., Liberty Township, OH 45044",
+      "Closest City": "Dayton, OH",
+      "Callout": "Registration required",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/four-bridges-cruise-in"
     },
     {
       "Event Name": "Northridge Lions Club Cruise In",
       "Date": "2026-09-17",
       "Start Time": "5:00 PM",
       "End Time": "8:00 PM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
+      "Location": "2590 Derr Rd, Springfield, OH 45501",
+      "Address": "2590 Derr Rd, Springfield, OH 45501",
       "Closest City": "Dayton, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/northridge-lions-club-cruise-in-3/"
+      "Event URL": "https://carsandcoffeeevents.com/events/northridge-lions-club-cruise-in"
     },
     {
       "Event Name": "The Hoosier 2026 Vintage Wheels Swap Meet & Show",
@@ -1371,16 +1416,16 @@
       "Event Name": "Cruise-In to Butler Township",
       "Date": "2026-09-18",
       "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "777 Hollywood Blvd, Dayton, OH 45401",
-      "Address": "777 Hollywood Blvd, Dayton, OH 45401",
+      "End Time": "7:30 PM",
+      "Location": "3475 York Commons Blvd, Dayton, OH 45401",
+      "Address": "3475 York Commons Blvd, Dayton, OH 45401",
       "Closest City": "Dayton, OH",
       "Callout": "Registration required",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/cruise-in-to-butler-township/"
+      "Event URL": "https://carsandcoffeeevents.com/events/cruise-in-to-butler-township-2026-09-18"
     },
     {
       "Event Name": "Car Cruise-In and Kit Haymond Concert",
@@ -1431,16 +1476,16 @@
       "Event Name": "Igniters Street Rods Friday Night 2026 Summer Cruise-Ins",
       "Date": "2026-09-18",
       "Start Time": "6:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "Columbus, OH",
-      "Address": "Columbus, OH",
+      "End Time": "6:00 PM",
+      "Location": "1124 E Main St, Chillicothe, OH 45601",
+      "Address": "1124 E Main St, Chillicothe, OH 45601",
       "Closest City": "Columbus, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/igniters-street-rods-friday-night-2026-summer-cruise-ins/2026-09-18/"
+      "Event URL": "https://carsandcoffeeevents.com/events/igniters-street-rods-friday-night-summer-cruise-ins-2026-09-18"
     },
     {
       "Event Name": "Scottsburg Square Cruise-In",
@@ -1567,15 +1612,15 @@
       "Date": "2026-09-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7160 Taylor Street, Liberty Township, OH 45069",
-      "Address": "7160 Taylor Street, Liberty Township, OH 45069",
+      "Location": "7160 Taylor St, Liberty Township, OH 45069",
+      "Address": "7160 Taylor St, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cincy-cars-coffee-liberty-cent/1202419291741078/"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -1626,22 +1671,22 @@
       "Event Name": "Cars & Coffee in Circleville",
       "Date": "2026-09-19",
       "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Lancaster Pike, Circleville, OH 43113",
-      "Address": "Lancaster Pike, Circleville, OH 43113",
+      "End Time": "11:00 AM",
+      "Location": "Circleville, OH",
+      "Address": "Circleville, OH",
       "Closest City": "Columbus, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/cars-coffee-in-circleville/2026-09-19/"
+      "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-in-circleville"
     },
     {
       "Event Name": "9Lincoln’s 3rd Annual Car Show",
       "Date": "2026-09-19",
       "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
+      "End Time": "2:00 PM",
       "Location": "9120 Morrow Rossburg Rd, Pleasant Plain, OH 45162",
       "Address": "9120 Morrow Rossburg Rd, Pleasant Plain, OH 45162",
       "Closest City": "Cincinnati, OH",
@@ -1650,7 +1695,22 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/9lincolns-3rd-annual-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/9lincolns-car-show-2026-09-19"
+    },
+    {
+      "Event Name": "Winchester Cars & Coffee",
+      "Date": "2026-09-19",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "225 W North St, Winchester, IN 47394",
+      "Address": "225 W North St, Winchester, IN 47394",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/winchester-cars-coffee"
     },
     {
       "Event Name": "Waldron Lodge #217 Presents: Third Annual Car Show",
@@ -1746,16 +1806,46 @@
       "Event Name": "Caesar Ford Ranger Classic",
       "Date": "2026-09-19",
       "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
+      "End Time": "8:00 PM",
+      "Location": "520 S. Stringtown Rd., Xenia, OH 45385",
+      "Address": "520 S. Stringtown Rd., Xenia, OH 45385",
       "Closest City": "Dayton, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/caesar-ford-ranger-classic/"
+      "Event URL": "https://carsandcoffeeevents.com/events/caesar-ford-ranger-classic-2026-09-19"
+    },
+    {
+      "Event Name": "Kettering Saturday Night Cruise-In",
+      "Date": "2026-09-19",
+      "Start Time": "4:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "3205 Woodman Dr, Dayton, OH 45401",
+      "Address": "3205 Woodman Dr, Dayton, OH 45401",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-19"
+    },
+    {
+      "Event Name": "Mid Ohio Cruisers 2026 Car Show",
+      "Date": "2026-09-19",
+      "Start Time": "5:00 PM",
+      "End Time": "7:30 PM",
+      "Location": "Marysville, OH",
+      "Address": "Marysville, OH",
+      "Closest City": "Columbus, OH",
+      "Callout": "Registration required",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/mid-ohio-cruisers-2026-car-show"
     },
     {
       "Event Name": "Clarksville Steak ‘N Shake Cruise-In",
@@ -1806,16 +1896,16 @@
       "Event Name": "Fifth Annual Speak! for the Unspoken Car Show",
       "Date": "2026-09-20",
       "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "5445 Scioto Darby Rd, Hilliard, OH 43026",
-      "Address": "5445 Scioto Darby Rd, Hilliard, OH 43026",
+      "End Time": "2:00 PM",
+      "Location": "4635 Trueman Blvd, Hilliard, OH 43026",
+      "Address": "4635 Trueman Blvd, Hilliard, OH 43026",
       "Closest City": "Columbus, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/fifth-annual-speak-for-the-unspoken-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/fifth-speak-for-the-unspoken-car-show-2026-09-20"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1866,7 +1956,7 @@
       "Event Name": "Friends of Ohio K9 5th Annual Car Show",
       "Date": "2026-09-20",
       "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
+      "End Time": "3:00 PM",
       "Location": "8570 East State Route 73, Waynesville, OH 45068",
       "Address": "8570 East State Route 73, Waynesville, OH 45068",
       "Closest City": "Dayton, OH",
@@ -1875,13 +1965,13 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/friends-of-ohio-k9-5th-annual-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/friends-of-ohio-k9-car-show-2026-09-20"
     },
     {
       "Event Name": "MIDWESTFEST 10 CAR & BIKE SHOW",
       "Date": "2026-09-20",
       "Start Time": "12:00 PM",
-      "End Time": "3:00 PM",
+      "End Time": "8:00 PM",
       "Location": "Indianapolis, IN",
       "Address": "Indianapolis, IN",
       "Closest City": "Indianapolis, IN",
@@ -1890,7 +1980,22 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/midwestfest-10-car-bike-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/midwestfest-10-car-bike-show-2026-09-20"
+    },
+    {
+      "Event Name": "Historic Cammack Station Charity Cruise-In",
+      "Date": "2026-09-20",
+      "Start Time": "1:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "9200 W. Jackson Street, Muncie, IN 47302",
+      "Address": "9200 W. Jackson Street, Muncie, IN 47302",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "Registration required",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-20"
     },
     {
       "Event Name": "Pharaohs of Kentucky Hooter’s Car Show",
@@ -1951,6 +2056,36 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-09-25/"
+    },
+    {
+      "Event Name": "Roundtown Cruisers Free For Cruisers And Spectators!",
+      "Date": "2026-09-25",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "Circleville, OH",
+      "Address": "Circleville, OH",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/roundtown-cruisers-free-for-cruisers-and-spectators"
+    },
+    {
+      "Event Name": "Historic Cammack Station Charity Cruise-In",
+      "Date": "2026-09-25",
+      "Start Time": "5:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "9200 W. Jackson Street, Muncie, IN 47302",
+      "Address": "9200 W. Jackson Street, Muncie, IN 47302",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-25"
     },
     {
       "Event Name": "No Flex Car Cruise",
@@ -2028,6 +2163,21 @@
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-09-26/"
     },
     {
+      "Event Name": "Lawrenceburg Cars & Coffee",
+      "Date": "2026-09-26",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "68 Doughty Rd, Lawrenceburg, IN 47025",
+      "Address": "68 Doughty Rd, Lawrenceburg, IN 47025",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-26"
+    },
+    {
       "Event Name": "Columbus Indiana Cars and Coffee",
       "Date": "2026-09-26",
       "Start Time": "9:00 AM",
@@ -2046,7 +2196,7 @@
       "Event Name": "Hoosier Mustang Club Fall Festival Car & Truck Show",
       "Date": "2026-09-26",
       "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
+      "End Time": "3:00 PM",
       "Location": "3300 10th St, Columbus, IN 47201",
       "Address": "3300 10th St, Columbus, IN 47201",
       "Closest City": "Indianapolis, IN",
@@ -2055,37 +2205,37 @@
       "Popularity": "60",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/hoosier-mustang-club-fall-festival-car-truck-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/hoosier-mustang-club-fall-festival-car-truck-show-2026-09-26"
     },
     {
       "Event Name": "Bulldog Auto Show",
       "Date": "2026-09-26",
       "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
+      "End Time": "2:00 PM",
+      "Location": "507 Willow Grove Rd, Centerville, IN 47330",
+      "Address": "507 Willow Grove Rd, Centerville, IN 47330",
       "Closest City": "Dayton, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/bulldog-auto-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/bulldog-auto-show"
     },
     {
       "Event Name": "Mid-West Dayton Club Car Show",
       "Date": "2026-09-26",
       "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
+      "End Time": "3:00 PM",
+      "Location": "5550 Munger Rd., Dayton, OH 45401",
+      "Address": "5550 Munger Rd., Dayton, OH 45401",
       "Closest City": "Dayton, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/mid-west-dayton-club-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/mid-west-dayton-club-car-show"
     },
     {
       "Event Name": "8th Annual Car Show Sponsored By The Laurelville Fire Dept.",
@@ -2121,16 +2271,16 @@
       "Event Name": "Generations Church First Annual Car Show",
       "Date": "2026-09-26",
       "Start Time": "12:00 PM",
-      "End Time": "3:00 PM",
-      "Location": "64 N Main St, Miamisburg, OH 45342",
-      "Address": "64 N Main St, Miamisburg, OH 45342",
+      "End Time": "4:00 PM",
+      "Location": "1216 Richard St., Miamisburg, OH 45342",
+      "Address": "1216 Richard St., Miamisburg, OH 45342",
       "Closest City": "Dayton, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/generations-church-first-annual-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/generations-church-first-car-show-2026-09-26"
     },
     {
       "Event Name": "Thundercruise! - Car & Bike Meet",
@@ -2146,6 +2296,36 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/thundercruise-car-bike-meet/1182278670391763/"
+    },
+    {
+      "Event Name": "Kettering Saturday Night Cruise-In",
+      "Date": "2026-09-26",
+      "Start Time": "4:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "3205 Woodman Dr, Dayton, OH 45401",
+      "Address": "3205 Woodman Dr, Dayton, OH 45401",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-26"
+    },
+    {
+      "Event Name": "2nd Saturday Car Cruise, Food Truck & Concerts",
+      "Date": "2026-09-26",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "105 N Main St, Washington Court House, OH 43160",
+      "Address": "105 N Main St, Washington Court House, OH 43160",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "46",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-09-26"
     },
     {
       "Event Name": "No Flex Car Cruise",
@@ -2175,13 +2355,13 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/liberty-center-cars-coffee/2026-08-30/"
+      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-coffee"
     },
     {
       "Event Name": "Joe Show Car, Truck and Bike Show",
       "Date": "2026-09-27",
       "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
+      "End Time": "3:00 PM",
       "Location": "Cambridge City, IN",
       "Address": "Cambridge City, IN",
       "Closest City": "Dayton, OH",
@@ -2190,7 +2370,7 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/joe-show-car-truck-and-bike-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/joe-show-car-truck-and-bike-show"
     },
     {
       "Event Name": "Cincinnati VW/Porsche Reunion 2026, Fresh Air",
@@ -2238,6 +2418,21 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Cars & Coffee",
+      "Date": "2026-09-27",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "5811 Main St., McCordsville, IN 46055",
+      "Address": "5811 Main St., McCordsville, IN 46055",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-32"
+    },
+    {
       "Event Name": "Euro Cars and Cocoa",
       "Date": "2026-09-27",
       "Start Time": "9:00 AM",
@@ -2271,16 +2466,16 @@
       "Event Name": "7th Annual James Miller Memorial Car Show",
       "Date": "2026-09-27",
       "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "6100 S Mason Montgomery Rd, Mason, OH 45040",
-      "Address": "6100 S Mason Montgomery Rd, Mason, OH 45040",
+      "End Time": "3:00 PM",
+      "Location": "4601 State Route 42, Mason, OH 45040",
+      "Address": "4601 State Route 42, Mason, OH 45040",
       "Closest City": "Cincinnati, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/7th-annual-james-miller-memorial-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/james-miller-memorial-car-show-2026-09-27"
     },
     {
       "Event Name": "Concours Devou 2026",
@@ -2326,6 +2521,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Rockin’ Randall’s Cruise-In",
+      "Date": "2026-10-01",
+      "Start Time": "5:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "404 N. Main Street, Liberty, IN 47353",
+      "Address": "404 N. Main Street, Liberty, IN 47353",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/rockin-randalls-cruise-in"
     },
     {
       "Event Name": "HPDE - Autumn Thunder 2026",
@@ -2451,7 +2661,7 @@
       "Event Name": "Restoration Church 6th Annual Car Show 2026",
       "Date": "2026-10-03",
       "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
+      "End Time": "3:00 PM",
       "Location": "1550 W Tracy Rd, Whiteland, IN 46184",
       "Address": "1550 W Tracy Rd, Whiteland, IN 46184",
       "Closest City": "Indianapolis, IN",
@@ -2460,22 +2670,52 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/restoration-church-6th-annual-car-show-2026/"
+      "Event URL": "https://carsandcoffeeevents.com/events/restoration-church-6th-annual-car-show-2026"
+    },
+    {
+      "Event Name": "Lawrenceburg Cars & Coffee",
+      "Date": "2026-10-03",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "68 Doughty Rd, Lawrenceburg, IN 47025",
+      "Address": "68 Doughty Rd, Lawrenceburg, IN 47025",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-03"
+    },
+    {
+      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
+      "Date": "2026-10-03",
+      "Start Time": "8:30 AM",
+      "End Time": "12:00 PM",
+      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "42",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-10-03"
     },
     {
       "Event Name": "Muncie Cars & Coffee 2026 – Season 10",
       "Date": "2026-10-03",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "3820 West Jackson Street, Muncie, IN 47302",
-      "Address": "3820 West Jackson Street, Muncie, IN 47302",
+      "Location": "100 E Charles St, Muncie, IN 47302",
+      "Address": "100 E Charles St, Muncie, IN 47302",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/muncie-cars-coffee-2026-season-10/2026-09-05/"
+      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-10-03"
     },
     {
       "Event Name": "First Saturday Cars and Coffee Lexington",
@@ -2511,7 +2751,7 @@
       "Event Name": "Rpm Transmissions 5th Car Show",
       "Date": "2026-10-03",
       "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
+      "End Time": "2:00 PM",
       "Location": "1426 W. 53rd Street, Anderson, IN 46011",
       "Address": "1426 W. 53rd Street, Anderson, IN 46011",
       "Closest City": "Indianapolis, IN",
@@ -2520,28 +2760,28 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/rpm-transmissions-5th-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/rpm-transmissions-car-show-2026-10-03"
     },
     {
       "Event Name": "Fairborn City Church 2nd Annual Open Car Show",
       "Date": "2026-10-03",
       "Start Time": "9:30 AM",
-      "End Time": "12:00 PM",
-      "Location": "Dayton Yellow Springs Road, Fairborn, OH 45324",
-      "Address": "Dayton Yellow Springs Road, Fairborn, OH 45324",
+      "End Time": "2:30 PM",
+      "Location": "Fairborn, OH",
+      "Address": "Fairborn, OH",
       "Closest City": "Dayton, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/fairborn-city-church-2nd-annual-open-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/fairborn-city-church-2nd-annual-open-car-show"
     },
     {
       "Event Name": "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event",
       "Date": "2026-10-03",
       "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
+      "End Time": "1:00 PM",
       "Location": "Cincinnati, OH",
       "Address": "Cincinnati, OH",
       "Closest City": "Cincinnati, OH",
@@ -2556,7 +2796,7 @@
       "Event Name": "6th Annual Car Show and Gun Giveaway",
       "Date": "2026-10-03",
       "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
+      "End Time": "4:00 PM",
       "Location": "305 N Ferguson, Henryville, IN 47126",
       "Address": "305 N Ferguson, Henryville, IN 47126",
       "Closest City": "Louisville, KY",
@@ -2565,7 +2805,7 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/6th-annual-car-show-and-gun-giveaway/"
+      "Event URL": "https://carsandcoffeeevents.com/events/6th-annual-car-show-and-gun-giveaway"
     },
     {
       "Event Name": "Porsche Cruise In - OVRPCA & Eclipse Annual Event",
@@ -2617,15 +2857,15 @@
       "Date": "2026-10-03",
       "Start Time": "4:00 PM",
       "End Time": "9:00 PM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
+      "Location": "3205 Woodman Dr, Dayton, OH 45401",
+      "Address": "3205 Woodman Dr, Dayton, OH 45401",
       "Closest City": "Dayton, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/kettering-saturday-night-cruise-in/2026-08-29/"
+      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-10-03"
     },
     {
       "Event Name": "Take Back the Strip – Circleville Cruise Nights",
@@ -2706,16 +2946,16 @@
       "Event Name": "5th Floyd Central Band Car Show 2026",
       "Date": "2026-10-04",
       "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "6575 Old Vincennes Road, Floyd County, IN 47119",
-      "Address": "6575 Old Vincennes Road, Floyd County, IN 47119",
+      "End Time": "5:00 PM",
+      "Location": "6575 Old Vincennes Rd, Floyds Knobs, IN 47119",
+      "Address": "6575 Old Vincennes Rd, Floyds Knobs, IN 47119",
       "Closest City": "Louisville, KY",
       "Callout": "",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/5th-floyd-central-band-car-show-2026/"
+      "Event URL": "https://carsandcoffeeevents.com/events/5th-floyd-central-band-car-show-2026"
     },
     {
       "Event Name": "Chicken Eater’s Car Club",
@@ -2746,6 +2986,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "RPM Performance Cruise-In",
+      "Date": "2026-10-07",
+      "Start Time": "6:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "3202 S East Street, Indianapolis, IN 46201",
+      "Address": "3202 S East Street, Indianapolis, IN 46201",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/rpm-performance-cruise-in"
     },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -2838,6 +3093,21 @@
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-10-10/"
     },
     {
+      "Event Name": "Lawrenceburg Cars & Coffee",
+      "Date": "2026-10-10",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "68 Doughty Rd, Lawrenceburg, IN 47025",
+      "Address": "68 Doughty Rd, Lawrenceburg, IN 47025",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-10"
+    },
+    {
       "Event Name": "Richmond Ky Cars & Coffee",
       "Date": "2026-10-10",
       "Start Time": "9:00 AM",
@@ -2850,7 +3120,7 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/richmond-ky-cars-coffee/2026-09-12/"
+      "Event URL": "https://carsandcoffeeevents.com/events/richmond-ky-cars-coffee-2026-10-10"
     },
     {
       "Event Name": "Destination Cars and Coffee",
@@ -2871,22 +3141,22 @@
       "Event Name": "2nd annual David Landman memorial car show!",
       "Date": "2026-10-10",
       "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "6655 Hwy 23 S, Chillicothe, OH 45601",
-      "Address": "6655 Hwy 23 S, Chillicothe, OH 45601",
+      "End Time": "4:00 PM",
+      "Location": "1470 North Bridge Street, Chillicothe, OH 45601",
+      "Address": "1470 North Bridge Street, Chillicothe, OH 45601",
       "Closest City": "Columbus, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/2nd-annual-david-landman-memorial-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/david-landman-memorial-car-show-2026-10-10"
     },
     {
       "Event Name": "Friends for Paws Car Show",
       "Date": "2026-10-10",
       "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
+      "End Time": "2:00 PM",
       "Location": "299 Falls Park Drive, Pendleton, IN 46064",
       "Address": "299 Falls Park Drive, Pendleton, IN 46064",
       "Closest City": "Indianapolis, IN",
@@ -2895,7 +3165,7 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/friends-for-paws-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/friends-for-paws-car-show"
     },
     {
       "Event Name": "Gemeinschaft - Save The Date (October)",
@@ -2931,7 +3201,7 @@
       "Event Name": "Merchant’s Cruise-in – Fort Street Car Classics",
       "Date": "2026-10-10",
       "Start Time": "4:00 PM",
-      "End Time": "7:00 PM",
+      "End Time": "8:00 PM",
       "Location": "113 N Wayne St, Fort Recovery, OH 45846",
       "Address": "113 N Wayne St, Fort Recovery, OH 45846",
       "Closest City": "Fort Wayne, IN",
@@ -2940,22 +3210,22 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/merchants-cruise-in-fort-street-car-classics/"
+      "Event URL": "https://carsandcoffeeevents.com/events/merchants-cruise-in-fort-street-car-classics-2026-10-10"
     },
     {
       "Event Name": "2nd Saturday Car Cruise, Food Truck & Concerts",
       "Date": "2026-10-10",
       "Start Time": "5:00 PM",
       "End Time": "8:00 PM",
-      "Location": "90 Washington Ave, Washington Court House, OH 43160",
-      "Address": "90 Washington Ave, Washington Court House, OH 43160",
+      "Location": "105 N Main St, Washington Court House, OH 43160",
+      "Address": "105 N Main St, Washington Court House, OH 43160",
       "Closest City": "Columbus, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/2nd-saturday-car-cruise-food-truck-concerts-2/2026-08-29/"
+      "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-10-10"
     },
     {
       "Event Name": "No Flex Car Cruise",
@@ -3033,6 +3303,21 @@
       "Event URL": "https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-10-14/"
     },
     {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2026-10-14",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-10-14"
+    },
+    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-10-14",
       "Start Time": "5:00 PM",
@@ -3051,16 +3336,16 @@
       "Event Name": "Daredevil Brewing Co. Speedway Cruise-In",
       "Date": "2026-10-14",
       "Start Time": "6:00 PM",
-      "End Time": "9:00 PM",
-      "Location": "5520 Madison Ave, Indianapolis, IN 46201",
-      "Address": "5520 Madison Ave, Indianapolis, IN 46201",
+      "End Time": "6:00 PM",
+      "Location": "1151 N Main St, Indianapolis, IN 46201",
+      "Address": "1151 N Main St, Indianapolis, IN 46201",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Local",
       "Popularity": "40",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/daredevil-brewing-co-speedway-cruise-in/2026-09-09/"
+      "Event URL": "https://carsandcoffeeevents.com/events/daredevil-brewing-co-speedway-cruise-in-2026-10-14"
     },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -3120,7 +3405,7 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/lawrenceburg-cars-coffee/2026-08-29/"
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-17"
     },
     {
       "Event Name": "Liberty Center Cars and Coffee",
@@ -3135,7 +3420,7 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/liberty-center-cars-and-coffee/2026-09-19/"
+      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-10-17"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -3213,25 +3498,25 @@
       "Event URL": "https://carsandcoffeeevents.com/event/hilliard-cars-and-coffee/2026-10-17/"
     },
     {
-      "Event Name": "Cars and Coffee – Columbus",
+      "Event Name": "Cars and Coffee - Columbus",
       "Date": "2026-10-17",
       "Start Time": "9:00 AM",
       "End Time": "11:00 AM",
-      "Location": "Indianapolis, IN",
-      "Address": "Indianapolis, IN",
+      "Location": "3300 10th St, Columbus, IN 47201",
+      "Address": "3300 10th St, Columbus, IN 47201",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
+      "Size": "Local",
+      "Popularity": "34",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/cars-and-coffee-columbus/2026-10-17/"
+      "Event URL": "https://carsandcoffeeevents.com/events/cars-and-coffee-columbus"
     },
     {
       "Event Name": "Lighthouse Church Car Show",
       "Date": "2026-10-17",
       "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
+      "End Time": "2:00 PM",
       "Location": "8270 Beech St, Elizabeth, IN 47117",
       "Address": "8270 Beech St, Elizabeth, IN 47117",
       "Closest City": "Louisville, KY",
@@ -3240,7 +3525,7 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/lighthouse-church-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/lighthouse-church-car-show"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3261,22 +3546,22 @@
       "Event Name": "Sidney First Naz Fall Harvest Festival & Anything On Wheels Car Cruise",
       "Date": "2026-10-17",
       "Start Time": "12:00 PM",
-      "End Time": "3:00 PM",
-      "Location": "Dayton, OH",
-      "Address": "Dayton, OH",
+      "End Time": "2:30 PM",
+      "Location": "1899 Wapakoneta Ave, Sidney, OH 45365",
+      "Address": "1899 Wapakoneta Ave, Sidney, OH 45365",
       "Closest City": "Dayton, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/sidney-first-naz-fall-harvest-festival-anything-on-wheels-car-cruise/"
+      "Event URL": "https://carsandcoffeeevents.com/events/sidney-first-naz-fall-harvest-festival-anything-on-wheels-car-cruise-2026-10-17"
     },
     {
       "Event Name": "Capital City Classic Auto Club Classic Car Cruise-In",
       "Date": "2026-10-17",
       "Start Time": "12:00 PM",
-      "End Time": "3:00 PM",
+      "End Time": "2:00 PM",
       "Location": "629 Versailles Rd, Frankfort, KY 40601",
       "Address": "629 Versailles Rd, Frankfort, KY 40601",
       "Closest City": "Lexington, KY",
@@ -3285,7 +3570,7 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/capital-city-classic-auto-club-classic-car-cruise-in/"
+      "Event URL": "https://carsandcoffeeevents.com/events/capital-city-classic-auto-club-classic-car-cruise-in-2026-10-17"
     },
     {
       "Event Name": "No Flex Car Cruise",
@@ -3376,6 +3661,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/euro-cars-and-cocoa/2026-10-18/"
+    },
+    {
+      "Event Name": "Historic Cammack Station Charity Cruise-In",
+      "Date": "2026-10-18",
+      "Start Time": "1:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "9200 W. Jackson Street, Muncie, IN 47302",
+      "Address": "9200 W. Jackson Street, Muncie, IN 47302",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "Registration required",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-10-18"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 2",
@@ -3621,16 +3921,16 @@
       "Event Name": "Danville Professional Firefighters Car Show",
       "Date": "2026-10-24",
       "Start Time": "10:00 AM",
-      "End Time": "1:00 PM",
-      "Location": "Lexington, KY",
-      "Address": "Lexington, KY",
+      "End Time": "2:00 PM",
+      "Location": "1000 Cunningham Dr., Danville, KY 40422",
+      "Address": "1000 Cunningham Dr., Danville, KY 40422",
       "Closest City": "Lexington, KY",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/danville-professional-firefighters-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/danville-professional-firefighters-car-show"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3742,15 +4042,15 @@
       "Date": "2026-10-30",
       "Start Time": "4:00 PM",
       "End Time": "8:00 PM",
-      "Location": "3820 West Jackson Street, Muncie, IN 47302",
-      "Address": "3820 West Jackson Street, Muncie, IN 47302",
+      "Location": "9200 W. Jackson Street, Muncie, IN 47302",
+      "Address": "9200 W. Jackson Street, Muncie, IN 47302",
       "Closest City": "Indianapolis, IN",
       "Callout": "Registration required",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/historic-cammack-station-charity-cruise-in-2/2026-09-13/"
+      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-10-30"
     },
     {
       "Event Name": "No Flex Car Cruise",
@@ -3846,16 +4146,16 @@
       "Event Name": "Steels & Wheels Halloween Car Show",
       "Date": "2026-10-31",
       "Start Time": "12:00 PM",
-      "End Time": "3:00 PM",
-      "Location": "20 S High St, Canal Winchester, OH 43110",
-      "Address": "20 S High St, Canal Winchester, OH 43110",
+      "End Time": "4:00 PM",
+      "Location": "100 Gender Rd, Canal Winchester, OH 43110",
+      "Address": "100 Gender Rd, Canal Winchester, OH 43110",
       "Closest City": "Columbus, OH",
       "Callout": "Registration required",
       "Size": "Local",
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/steels-wheels-halloween-car-show/"
+      "Event URL": "https://carsandcoffeeevents.com/events/steels-wheels-halloween-car-show-2026-10-31"
     },
     {
       "Event Name": "No Flex Car Cruise",
@@ -4006,6 +4306,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-11-07/"
+    },
+    {
+      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
+      "Date": "2026-11-07",
+      "Start Time": "8:30 AM",
+      "End Time": "12:00 PM",
+      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "42",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-11-07"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 2",
@@ -4186,6 +4501,21 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
       "Event URL": "https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-11-11/"
+    },
+    {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2026-11-11",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-11-11"
     },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -4548,19 +4878,19 @@
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-11-28/"
     },
     {
-      "Event Name": "Ohio Ford Expo Super Swap",
+      "Event Name": "Ohio Ford Expo",
       "Date": "2026-11-28",
       "Start Time": "9:00 AM",
       "End Time": "4:00 PM",
-      "Location": "717 East 17th Avenue, Columbus, OH 43211",
-      "Address": "717 East 17th Avenue, Columbus, OH 43211",
+      "Location": "717 E. 17th Ave., Columbus, OH 43211",
+      "Address": "717 E. 17th Ave., Columbus, OH 43211",
       "Closest City": "Columbus, OH",
       "Callout": "Tickets required",
       "Size": "Regional",
       "Popularity": "62",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/ohio-ford-expo-super-swap/"
+      "Event URL": "https://carsandcoffeeevents.com/events/ohio-ford-expo"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4698,6 +5028,21 @@
       "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-coffee/2026-12-05/"
     },
     {
+      "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
+      "Date": "2026-12-05",
+      "Start Time": "8:30 AM",
+      "End Time": "12:00 PM",
+      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "42",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-12-05"
+    },
+    {
       "Event Name": "First Saturday Cars and Coffee Lexington",
       "Date": "2026-12-05",
       "Start Time": "9:00 AM",
@@ -4788,6 +5133,21 @@
       "Event URL": "https://carsandcoffeeevents.com/event/chicken-eaters-car-club/2026-12-09/"
     },
     {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2026-12-09",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-12-09"
+    },
+    {
       "Event Name": "Car Cruise-In and Kit Haymond Concert",
       "Date": "2026-12-10",
       "Start Time": "7:00 PM",
@@ -4800,7 +5160,7 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/car-cruise-in-and-kit-haymond-concert-8/"
+      "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-12-10"
     },
     {
       "Event Name": "Columbus Cars & Coffee Fridays",
@@ -4972,15 +5332,15 @@
       "Date": "2027-01-02",
       "Start Time": "8:30 AM",
       "End Time": "12:00 PM",
-      "Location": "3711 - 3721 - 3731 Ridge Mill Drive, Columbus, OH 43026",
-      "Address": "3711 - 3721 - 3731 Ridge Mill Drive, Columbus, OH 43026",
+      "Location": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "Address": "3650 Olentangy River Rd, Columbus, OH 43085",
       "Closest City": "Columbus, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "42",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/columbus-cars-n-coffee-meetup-1st-saturdays/2026-09-05/"
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2027-01-02"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -5011,6 +5371,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2027-01-13",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-01-13"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -5073,6 +5448,21 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2027-02-10",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-02-10"
+    },
+    {
       "Event Name": "Cars at Madison Square",
       "Date": "2027-02-13",
       "Start Time": "11:00 AM",
@@ -5131,6 +5521,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2027-03-10",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-03-10"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -5236,6 +5641,21 @@
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2027-04-14",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-04-14"
     },
     {
       "Event Name": "Hoosier Rally (SCCA)",
@@ -5448,6 +5868,21 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2027-05-12",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-05-12"
+    },
+    {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
       "Date": "2027-05-15",
       "Start Time": "9:00 AM",
@@ -5566,6 +6001,21 @@
       "Attendance": "",
       "Source": "sheet",
       "Event URL": "https://cincyscca.com/rally-cross/"
+    },
+    {
+      "Event Name": "Monthly Car & Bike Lunch Cruise In",
+      "Date": "2027-06-09",
+      "Start Time": "11:00 AM",
+      "End Time": "1:00 PM",
+      "Location": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-06-09"
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 1",
@@ -5880,7 +6330,7 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/event/monthly-car-bike-lunch-cruise-in/2026-09-09/"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-07-14"
     },
     {
       "Event Name": "Rally North America – Day 4",

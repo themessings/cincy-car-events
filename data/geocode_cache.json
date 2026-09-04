@@ -5164,5 +5164,65 @@
   "addr::dallara experience hub 1201 n main st, indianapolis speedway in 46224": null,
   "addr::johnson co. fairgrounds franklin in 46131": null,
   "addr::downtown union city union city in 47390": null,
-  "addr::980 lewis & clark pkwy lewis & clark pkwy clarksville in 47129, clarksville, in": null
+  "addr::980 lewis & clark pkwy lewis & clark pkwy clarksville in 47129, clarksville, in": null,
+  "44223, USA": {
+    "lat": "41.1532599",
+    "lon": "-81.5129664"
+  },
+  "44233, USA": {
+    "lat": "41.2474892",
+    "lon": "-81.7399942"
+  },
+  "49352, USA": {
+    "lat": "30.6972412",
+    "lon": "-88.1892334"
+  },
+  "44333, USA": {
+    "lat": "41.1396129",
+    "lon": "-81.6170991"
+  },
+  "44135, USA": {
+    "lat": "41.4288334",
+    "lon": "-81.8131181"
+  },
+  "33185, USA": {
+    "lat": "25.7291984",
+    "lon": "-80.4448106"
+  },
+  "46614, USA": {
+    "lat": "41.6332613",
+    "lon": "-86.2468296"
+  },
+  "46901, USA": {
+    "lat": "40.4959407",
+    "lon": "-86.1417152"
+  },
+  "46818, USA": {
+    "lat": "41.1485085",
+    "lon": "-85.2051147"
+  },
+  "46077, USA": {
+    "lat": "39.9618893",
+    "lon": "-86.2798908"
+  },
+  "18751, USA": {
+    "lat": "40.8005291",
+    "lon": "-76.4394886"
+  },
+  "addr::martinsville, in": {
+    "formatted": "",
+    "latlon": [
+      39.4278253,
+      -86.428328
+    ]
+  },
+  "addr::625 east 5th st east 5th st waverly oh 45690, waverly, oh": null,
+  "addr::downtown hillsboro ohio hillsboro oh 45133": null,
+  "addr::209 lancaster pike lancaster pike circleville oh 43113, circleville, oh": null,
+  "addr::1575 cobblestone way cobblestone way marysville oh 43040, marysville, oh": null,
+  "addr::marion county fairgrounds marion county fairgrounds indianapolis in 46201, indianapolis, in": null,
+  "addr::9511 tarlton road tarlton road circleville oh 43113, circleville, oh": null,
+  "addr::creitz park north on foote st. to creitz park cambridge city in 47327, cambridge city, in": null,
+  "addr::fairborn city church 206w dayton-yellow springs rd fairborn oh 45324, fairborn, oh": null,
+  "addr::7140 taylor street - liberty township, ohio 45069 7140 taylor street - liberty township, oh": null
 }
