@@ -5596,5 +5596,13 @@
     "lat": "35.7954019",
     "lon": "-83.5618798"
   },
-  "addr::the waverly hills sanatorium - 4400 paralee dr, louisville, ky": null
+  "addr::the waverly hills sanatorium - 4400 paralee dr, louisville, ky": null,
+  "45409, USA": {
+    "lat": "39.7315876",
+    "lon": "-84.1863820"
+  },
+  "24450, USA": {
+    "lat": "37.7897882",
+    "lon": "-79.4654707"
+  }
 }
