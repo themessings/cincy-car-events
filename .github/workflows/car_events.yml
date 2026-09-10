@@ -5,9 +5,14 @@ on:
     # GitHub Actions cron is fixed UTC and does not observe daylight saving,
     # so "6am Eastern" is two different UTC times depending on the time of
     # year. Both fire every Thursday; the gate job below keeps only the one
-    # that actually lands at 6am America/New_York and skips the other.
-    - cron: "0 10 * * 4" # 6:00 AM EDT (roughly Mar-Nov)
-    - cron: "0 11 * * 4" # 6:00 AM EST (roughly Nov-Mar)
+    # whose UTC hour is really 6am America/New_York today, and skips the other.
+    #
+    # The minute is deliberately :20, not :00. GitHub queues scheduled runs on
+    # a best-effort basis and the top of the hour is its most congested slot —
+    # runs there are delayed by hours or dropped entirely. Past runs of this
+    # workflow landed as late as 15:22 UTC for an 11:00 UTC cron.
+    - cron: "20 10 * * 4" # 6:20 AM EDT (roughly Mar-Nov)
+    - cron: "20 11 * * 4" # 6:20 AM EST (roughly Nov-Mar)
   workflow_dispatch: {}
 
 permissions:
@@ -26,12 +31,24 @@ jobs:
             echo "proceed=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          HOUR_ET=$(TZ="America/New_York" date +%H)
-          if [ "$HOUR_ET" = "06" ]; then
-            echo "It's 6am Eastern right now — proceeding."
+          # Decide from WHICH cron fired, never from the clock. A scheduled run
+          # can start hours after its slot when GitHub is busy, so checking the
+          # current hour silently skipped legitimate runs that arrived late.
+          CRON="${{ github.event.schedule }}"
+          OFFSET=$(TZ="America/New_York" date +%z)
+          case "$OFFSET" in
+            -0400) WANTED="20 10 * * 4" ;; # Eastern Daylight Time
+            -0500) WANTED="20 11 * * 4" ;; # Eastern Standard Time
+            *)     WANTED="" ;;
+          esac
+          if [ -z "$WANTED" ]; then
+            echo "Unexpected America/New_York offset ${OFFSET} — proceeding rather than skipping a week."
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          elif [ "$CRON" = "$WANTED" ]; then
+            echo "Eastern is at ${OFFSET} and cron '${CRON}' is the 6:20am Eastern one — proceeding."
             echo "proceed=true" >> "$GITHUB_OUTPUT"
           else
-            echo "It's ${HOUR_ET}:00 Eastern right now, not 6am — this is the redundant cron firing for the other DST offset. Skipping."
+            echo "Eastern is at ${OFFSET}, so '${WANTED}' is today's 6:20am cron. This run came from '${CRON}' — the redundant other-DST cron. Skipping."
             echo "proceed=false" >> "$GITHUB_OUTPUT"
           fi
 
