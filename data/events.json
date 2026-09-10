@@ -1,5 +1,5 @@
 {
-  "generated_at_iso": "2026-09-10T10:33:18.752732-04:00",
+  "generated_at_iso": "2026-09-10T10:43:47.164566-04:00",
   "count": 339,
   "events": [
     {
@@ -843,19 +843,19 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
+      "Event Name": "Liberty Center Cars and Coffee",
       "Date": "2026-09-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7160 Taylor St, Liberty Township, OH 45069",
-      "Address": "7160 Taylor St, Liberty Township, OH 45069",
+      "Location": "7140 Taylor Street, Liberty Township, OH 45069",
+      "Address": "7140 Taylor Street, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); iCloud Published Calendar (ICS)",
+      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-09-19"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -3729,7 +3729,7 @@
       "End Time": "11:00 AM",
       "Location": "4819 E Miami River Rd, Cleves, OH 45002",
       "Address": "4819 E Miami River Rd, Cleves, OH 45002",
-      "Closest City": "Dayton, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "32",
@@ -3759,7 +3759,7 @@
       "End Time": "11:00 AM",
       "Location": "4819 E Miami River Rd, Cleves, OH 45002",
       "Address": "4819 E Miami River Rd, Cleves, OH 45002",
-      "Closest City": "Dayton, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "32",
@@ -4239,7 +4239,7 @@
       "End Time": "11:00 AM",
       "Location": "4819 E Miami River Rd, Cleves, OH 45002",
       "Address": "4819 E Miami River Rd, Cleves, OH 45002",
-      "Closest City": "Dayton, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Local",
       "Popularity": "32",
