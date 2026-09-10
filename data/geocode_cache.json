@@ -5600,5 +5600,363 @@
   "24450, USA": {
     "lat": "37.7897882",
     "lon": "-79.4654707"
-  }
+  },
+  "251 Eastwood Road, Williamsburg, OH 45176": null,
+  "7001 Alexandria Pike, Alexandria, KY 41001": {
+    "lat": "38.9957596",
+    "lon": "-84.3975480"
+  },
+  "6024 Rip Rap Rd, Dayton, OH 45401": {
+    "lat": "39.8295382",
+    "lon": "-84.1648282"
+  },
+  "4809 Outer Loop, Louisville, KY 40219": {
+    "lat": "38.1385832",
+    "lon": "-85.6726221"
+  },
+  "2751 Dixie Hwy, Crestview Hills, KY 41017": {
+    "lat": "39.0303343",
+    "lon": "-84.5736955"
+  },
+  "68 Doughty Rd, Lawrenceburg, IN 47025": {
+    "lat": "39.0944481",
+    "lon": "-84.8693156"
+  },
+  "2726 Riverside Drive, Cincinnati, OH 45202": {
+    "lat": "39.1227724",
+    "lon": "-84.4549396"
+  },
+  "3650 Olentangy River Road, Columbus, OH 43085": {
+    "lat": "40.0343533",
+    "lon": "-83.0317649"
+  },
+  "691 N. Cleveland Ave, Columbus, OH 43085": {
+    "lat": "40.0859242",
+    "lon": "-82.9510466"
+  },
+  "1924 Boston Rd, Bardstown, KY 40004": {
+    "lat": "37.8110308",
+    "lon": "-85.4836780"
+  },
+  "1201 N Main St, Indianapolis, IN 46201": null,
+  "201 E North St, Springfield, OH 45501": {
+    "lat": "39.9272080",
+    "lon": "-83.8093470"
+  },
+  "144 S. Columbus St., Russellville, OH 45168": {
+    "lat": "38.8643070",
+    "lon": "-83.7867880"
+  },
+  "625 E 5th St, Waverly, OH 45690": {
+    "lat": "39.1327634",
+    "lon": "-82.9709349"
+  },
+  "100 E Franklin St, Gratis, OH 45330": {
+    "lat": "39.6483015",
+    "lon": "-84.5240917"
+  },
+  "8707 W US Highway 36, Modoc, IN 47358": null,
+  "1414 Dr Robert R Martin Bypass, Richmond, KY 40475": {
+    "lat": "37.7729802",
+    "lon": "-84.2954910"
+  },
+  "1201 N Main St, Indianapolis Speedway, IN 46224": null,
+  "1546 OH-131, Milford, OH 45150": null,
+  "1715 Fairgrove Ave, Hamilton, OH 45011": {
+    "lat": "39.4030109",
+    "lon": "-84.5348308"
+  },
+  "194 Dowler Dr, Ashville, OH 43103": null,
+  "5350 Medpace Way, Cincinnati, OH 45227": {
+    "lat": "39.1597752",
+    "lon": "-84.4024037"
+  },
+  "886 High St, Aberdeen, OH 45101": {
+    "lat": "38.6554247",
+    "lon": "-83.7635592"
+  },
+  "450 Victor Stier Dr, Milford, OH 45150": {
+    "lat": "39.1770464",
+    "lon": "-84.2951932"
+  },
+  "3205 Woodman Dr, Dayton, OH 45401": {
+    "lat": "39.7549243",
+    "lon": "-84.1204318"
+  },
+  "1193 Fairground Road, Lucasville, OH 45648": {
+    "lat": "38.9034173",
+    "lon": "-83.0025966"
+  },
+  "105 N Main St, Washington Court House, OH 43160": {
+    "lat": "39.5357721",
+    "lon": "-83.4401387"
+  },
+  "674 Eastern Bypass, Richmond, KY 40475": {
+    "lat": "37.7343743",
+    "lon": "-84.3074801"
+  },
+  "5811 Main St., McCordsville, IN 46055": {
+    "lat": "39.8944823",
+    "lon": "-85.9171310"
+  },
+  "6735 Lakota Lane, West Chester Township, OH 45044": null,
+  "600 W Loveland Ave, Loveland, OH 45140-2359": {
+    "lat": "39.2694714",
+    "lon": "-84.2660188"
+  },
+  "344 - 350 N. Chillicothe St., Plain City, OH 43064": {
+    "lat": "40.1139503",
+    "lon": "-83.2698128"
+  },
+  "370 East Main St, St Paris, OH 43072": {
+    "lat": "40.1277226",
+    "lon": "-83.9536700"
+  },
+  "7143 Southeastern Ave, Wanamaker, IN 46239": {
+    "lat": "39.7067616",
+    "lon": "-86.0136608"
+  },
+  "237 W Monroe St, Franklin, IN 46131": {
+    "lat": "39.4793653",
+    "lon": "-86.0577800"
+  },
+  "200 Byrd Way, Greenwood, IN 46142": {
+    "lat": "39.6129608",
+    "lon": "-86.0785043"
+  },
+  "8300 Four Bridges Dr., Liberty Township, OH 45044": {
+    "lat": "39.3769340",
+    "lon": "-84.3460220"
+  },
+  "6044 US40, Tipp City, OH 45371": null,
+  "4114 Reas Lane, New Albany, IN 47150": {
+    "lat": "38.3418871",
+    "lon": "-85.8268575"
+  },
+  "2590 Derr Rd, Springfield, OH 45501": {
+    "lat": "39.9570378",
+    "lon": "-83.7860400"
+  },
+  "250 Fairground St, Franklin, IN 46131": null,
+  "3475 York Commons Blvd, Dayton, OH 45401": null,
+  "170 W. Joe B Hall Ave, Shepherdsville, KY 40165": {
+    "lat": "37.9872989",
+    "lon": "-85.7182324"
+  },
+  "305 N Highway 31, Austin, IN 47102": null,
+  "1124 E Main St, Chillicothe, OH 45601": {
+    "lat": "39.3377285",
+    "lon": "-82.9501235"
+  },
+  "7220 N Dixie Dr, Dayton, OH 45414-2708, United States, Dayton, OH": null,
+  "8900 Keystone Xing, Indianapolis, IN 46240-0030": {
+    "lat": "39.9171167",
+    "lon": "-86.1111337"
+  },
+  "7160 Taylor St, Liberty Township, OH 45069": {
+    "lat": "39.3718138",
+    "lon": "-84.3754367"
+  },
+  "9111 Haverstick Rd, Indianapolis, IN 46240": {
+    "lat": "39.9203704",
+    "lon": "-86.1156125"
+  },
+  "7901 US Highway 31 South, Indianapolis, IN 46201": null,
+  "9120 Morrow Rossburg Rd, Pleasant Plain, OH 45162": {
+    "lat": "39.2937384",
+    "lon": "-84.0982280"
+  },
+  "225 W North St, Winchester, IN 47394": {
+    "lat": "40.1734702",
+    "lon": "-84.9838498"
+  },
+  "209 Lancaster Pike, Lancaster Pike Circleville, OH 43113": null,
+  "5313 S. 800 E., Waldron, IN 46182": null,
+  "2003 Pleasant St., Noblesville, IN 46060": {
+    "lat": "40.0382100",
+    "lon": "-85.9994716"
+  },
+  "7300 E. Troy Ave, Indianapolis, IN 46201": {
+    "lat": "39.7294484",
+    "lon": "-86.0368505"
+  },
+  "105 N Columbia St, Union City, IN 47390": {
+    "lat": "40.1980623",
+    "lon": "-84.8079581"
+  },
+  "9160 Lawrenceburg Rd, Harrison, OH 45030": {
+    "lat": "39.2427718",
+    "lon": "-84.8192934"
+  },
+  "520 S. Stringtown Rd., Xenia, OH 45385": null,
+  "1575 Cobblestone Way, Marysville, OH 43040": {
+    "lat": "40.2586108",
+    "lon": "-83.3742909"
+  },
+  "980 E Lewis and Clark Pkwy, Clarksville, IN 47129": {
+    "lat": "38.3158828",
+    "lon": "-85.7589856"
+  },
+  "4635 Trueman Blvd, Hilliard, OH 43026": {
+    "lat": "40.0479678",
+    "lon": "-83.1259670"
+  },
+  "8570 East State Route 73, Waynesville, OH 45068": null,
+  "7300 E Troy Ave, Indianapolis, IN 46239": {
+    "lat": "39.7294484",
+    "lon": "-86.0368505"
+  },
+  "9200 W. Jackson Street, Muncie, IN 47302": {
+    "lat": "40.1928168",
+    "lon": "-85.3868315"
+  },
+  "3101 Richmond Road, Lexington, KY 40502": {
+    "lat": "38.0036619",
+    "lon": "-84.4442178"
+  },
+  "8300 Four Bridges Drive, Liberty Township, OH 45044": {
+    "lat": "39.3778820",
+    "lon": "-84.3488350"
+  },
+  "9511 Tarlton Road, Tarlton Road Circleville, OH 43113": null,
+  "3300 10th St, Columbus, IN 47201": {
+    "lat": "39.2088190",
+    "lon": "-85.8845500"
+  },
+  "507 Willow Grove Rd, Centerville, IN 47330": {
+    "lat": "39.8135130",
+    "lon": "-85.0011645"
+  },
+  "5550 Munger Rd., Dayton, OH 45401": null,
+  "1216 Richard St., Miamisburg, OH 45342": {
+    "lat": "39.6499757",
+    "lon": "-84.2688737"
+  },
+  "1 S Main St, Miamisburg, OH 45342": {
+    "lat": "39.6417160",
+    "lon": "-84.2892570"
+  },
+  "7160 Taylor Street, Liberty Township, OH 45069": {
+    "lat": "39.3718138",
+    "lon": "-84.3754367"
+  },
+  "3529 W Kemper Rd, Cincinnati, OH 45251": null,
+  "3529 Kemper Road, Cincinnati, OH 45251": null,
+  "1301 Western Ave, Cincinnati, OH 45203-1118": {
+    "lat": "39.1094037",
+    "lon": "-84.5372344"
+  },
+  "4601 State Route 42, Mason, OH 45040": null,
+  "790 Park Ln, Covington, KY 41011": {
+    "lat": "39.0810376",
+    "lon": "-84.5281445"
+  },
+  "404 N. Main Street, Liberty, IN 47353": {
+    "lat": "39.6395988",
+    "lon": "-84.9310377"
+  },
+  "1550 W Tracy Rd, Whiteland, IN 46184": null,
+  "3650 Olentangy River Rd, Columbus, OH 43085": {
+    "lat": "40.0343533",
+    "lon": "-83.0317649"
+  },
+  "100 E Charles St, Muncie, IN 47302": {
+    "lat": "40.1911940",
+    "lon": "-85.3863990"
+  },
+  "1426 W. 53rd Street, Anderson, IN 46011": {
+    "lat": "40.0615934",
+    "lon": "-85.7001718"
+  },
+  "100 E Charles St, Muncie, IN 47305": {
+    "lat": "40.1911940",
+    "lon": "-85.3863990"
+  },
+  "305 N Ferguson, Henryville, IN 47126": {
+    "lat": "38.5391269",
+    "lon": "-85.7678077"
+  },
+  "2669 E Kemper Rd, Cincinnati, OH 45241": null,
+  "513 Marsailles Rd, Versailles, KY 40383": {
+    "lat": "38.0485006",
+    "lon": "-84.7081777"
+  },
+  "1927 Midland Trail, Shelbyville, KY 40065": {
+    "lat": "38.2131764",
+    "lon": "-85.2533444"
+  },
+  "6575 Old Vincennes Rd, Floyds Knobs, IN 47119": {
+    "lat": "38.3335154",
+    "lon": "-85.9335909"
+  },
+  "3202 S East Street, Indianapolis, IN 46201": {
+    "lat": "39.7194890",
+    "lon": "-86.1498015"
+  },
+  "1470 North Bridge Street, Chillicothe, OH 45601": {
+    "lat": "39.3652587",
+    "lon": "-82.9793241"
+  },
+  "299 Falls Park Drive, Pendleton, IN 46064": {
+    "lat": "40.0055674",
+    "lon": "-85.7445152"
+  },
+  "113 N Wayne St, Fort Recovery, OH 45846": {
+    "lat": "40.4162774",
+    "lon": "-84.7792342"
+  },
+  "4521 Spring Grove Avenue, Cincinnati, OH 45223": {
+    "lat": "39.1642798",
+    "lon": "-84.5230149"
+  },
+  "1611 Polaris Pkwy, Columbus, OH 43085": {
+    "lat": "40.1411779",
+    "lon": "-82.9746032"
+  },
+  "1151 N Main St, Indianapolis, IN 46201": null,
+  "7140 Taylor Street, Liberty Township, OH 45069": {
+    "lat": "39.3718632",
+    "lon": "-84.3754281"
+  },
+  "8270 Beech St, Elizabeth, IN 47117": {
+    "lat": "38.1211950",
+    "lon": "-85.9717836"
+  },
+  "1899 Wapakoneta Ave, Sidney, OH 45365": {
+    "lat": "40.3063550",
+    "lon": "-84.1596040"
+  },
+  "629 Versailles Rd, Frankfort, KY 40601": {
+    "lat": "38.1960608",
+    "lon": "-84.8294056"
+  },
+  "9225 Priority Way West Dr, Indianapolis, IN 46240-0108": {
+    "lat": "39.9224008",
+    "lon": "-86.1066417"
+  },
+  "9225 Priority Way West Drive, Indianapolis, IN 46240": {
+    "lat": "39.9224008",
+    "lon": "-86.1066417"
+  },
+  "1000 Cunningham Dr., Danville, KY 40422": {
+    "lat": "37.6504711",
+    "lon": "-84.7923408"
+  },
+  "100 Gender Rd, Canal Winchester, OH 43110": {
+    "lat": "39.8590449",
+    "lon": "-82.8277631"
+  },
+  "297 Buttermilk Pike, Fort Mitchell, KY 41017-2136": {
+    "lat": "39.0428835",
+    "lon": "-84.5705520"
+  },
+  "717 E. 17th Ave., Columbus, OH 43211": {
+    "lat": "40.0029556",
+    "lon": "-82.9913182"
+  },
+  "937 Phillips Ln., Louisville, KY 40209": {
+    "lat": "38.2003301",
+    "lon": "-85.7454934"
+  },
+  "4819 E Miami River Rd, Cleves, OH 45002": null
 }
