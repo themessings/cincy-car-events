@@ -1057,6 +1057,12 @@ def dedupe_and_merge_events(events: List[Event]) -> List[Event]:
             if e.date != other.date:
                 continue
 
+            # Two events the sheet already filed under different cities are
+            # not the same event, however alike their titles read.
+            if (e.sheet_closest_city and other.sheet_closest_city
+                    and e.sheet_closest_city.strip().lower() != other.sheet_closest_city.strip().lower()):
+                continue
+
             title_score = fuzz.token_set_ratio(normalize_for_dedupe(e.title), normalize_for_dedupe(other.title))
             place_score = fuzz.token_set_ratio(
                 normalize_for_dedupe(smart_place(e.location, e.address)),
@@ -1069,9 +1075,28 @@ def dedupe_and_merge_events(events: List[Event]) -> List[Event]:
                 m2 = other.start.hour * 60 + other.start.minute
                 time_close = abs(m1 - m2) <= 90
 
-            if title_score >= 88 and (place_score >= 70 or time_close):
-                cluster.append(other)
-                used[j] = True
+            if title_score < 88:
+                continue
+
+            same_place = place_score >= 70
+            if not same_place:
+                # token_set_ratio returns a perfect 100 whenever one title's
+                # words are a subset of the other's, so a generic "Cars &
+                # Coffee" at Indianapolis Speedway matched "Cincinnati Cars
+                # and Coffee @ Crestview Hills" 100mi away and swallowed it:
+                # the merged row carried Crestview's name on Indianapolis's
+                # address and time, and the real Crestview meet disappeared
+                # from the lineup entirely. When the two places do not look
+                # alike, the titles must also match on word ORDER, which a
+                # subset cannot fake (41.5 for that pair, against 100).
+                order_score = fuzz.token_sort_ratio(
+                    normalize_for_dedupe(e.title), normalize_for_dedupe(other.title)
+                )
+                if order_score < 88 or not time_close:
+                    continue
+
+            cluster.append(other)
+            used[j] = True
 
         best = sorted(
             cluster,
@@ -1086,6 +1111,8 @@ def dedupe_and_merge_events(events: List[Event]) -> List[Event]:
         )[0]
 
         if len(cluster) > 1:
+            print(f"MERGE {e.date}: kept '{best.title}' @ {best.address or best.location} "
+                  f"<- {[c.title for c in cluster if c is not best]}")
             titles = [c.title for c in cluster if c.title]
             best.title = max(titles, key=len) if titles else best.title
             if not best.location:
