@@ -1,4 +1,5 @@
 import json
+import pathlib
 import unittest
 import yaml
 from collections import Counter
@@ -847,6 +848,15 @@ class NearDuplicateMergeTests(unittest.TestCase):
         self.assertEqual(len(out), 2)
 
 
+def _real_config() -> dict:
+    """The project's own config/sources.yml. These enrichment paths read deep
+    into it (home coords, distance limits, categorisation keywords), so a
+    hand-stubbed dict just drifts out of date."""
+    import yaml
+    root = pathlib.Path(__file__).resolve().parents[1]
+    return yaml.safe_load((root / "config" / "sources.yml").read_text())
+
+
 class ExportEnrichmentTests(unittest.TestCase):
     def test_revet_drops_non_car_and_scores_rows(self):
         events = [
@@ -863,3 +873,36 @@ class ExportEnrichmentTests(unittest.TestCase):
         self.assertIn("Cars and Coffee", titles)
         self.assertNotIn("Downtown Wine Walk", titles)
         self.assertTrue(all("popularity" in e and "size" in e for e in out))
+
+    def test_closest_city_is_corrected_from_the_geocoded_address(self):
+        # The feed labels this meet "Dayton, OH" because the organising club is
+        # a Dayton brand, but the venue is ~17mi from downtown Cincinnati and
+        # ~32mi from Dayton. The map has to win, or Cincinnati readers skip it.
+        cfg = _real_config()
+        addr = "6735 Lakota Lane, West Chester Township, OH 45044"
+        events = [{
+            "title": "No Limits 937 Cars & Coffee", "location": addr, "address": addr,
+            "closest_city": "Dayton, OH", "source": "CarsAndCoffeeEvents API",
+            "start_iso": "2026-09-13T09:00:00-04:00", "end_iso": "2026-09-13T12:00:00-04:00", "url": "",
+        }]
+        geocache = {addr: {"lat": "39.3303357", "lon": "-84.4082750"}}
+        out = enrich_events_for_export(
+            events, geocache, {}, cfg,
+            verify_dates=False, lookup_addresses=True, fetch_facebook=False, revet_automotive=False,
+        )
+        self.assertEqual(out[0]["closest_city"], "Cincinnati, OH")
+
+    def test_closest_city_is_left_alone_when_it_already_matches_the_map(self):
+        cfg = _real_config()
+        addr = "2726 Riverside Drive, Cincinnati, OH 45202"
+        events = [{
+            "title": "Circuit Cafe Cars and Coffee", "location": addr, "address": addr,
+            "closest_city": "Cincinnati, OH", "source": "CarsAndCoffeeEvents API",
+            "start_iso": "2026-09-13T08:00:00-04:00", "end_iso": "2026-09-13T12:00:00-04:00", "url": "",
+        }]
+        geocache = {addr: {"lat": "39.1031", "lon": "-84.5120"}}
+        out = enrich_events_for_export(
+            events, geocache, {}, cfg,
+            verify_dates=False, lookup_addresses=True, fetch_facebook=False, revet_automotive=False,
+        )
+        self.assertEqual(out[0]["closest_city"], "Cincinnati, OH")

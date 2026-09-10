@@ -6050,12 +6050,41 @@ def enrich_events_for_export(
             log(f"🗺️ Closest City guaranteed (fallback) for {closest_city_guaranteed} events")
 
     # Events whose address was already a full street address skipped the loop
-    # above entirely (via `continue`) — make sure they still get Closest City.
+    # above entirely (via `continue`) — make sure they still get Closest City,
+    # and that a Closest City handed to us by a feed actually matches the map.
+    closest_city_corrected = 0
     for ev in events:
-        if not clean_ws(str(ev.get("closest_city", ""))):
+        existing_city = clean_ws(str(ev.get("closest_city", "")))
+        if not existing_city:
             filled_city = _guarantee_closest_city(ev, cfg)
             if filled_city:
                 ev["closest_city"] = filled_city
+            continue
+        if not lookup_addresses:
+            continue
+        # A feed's Closest City often describes the ORGANISER, not the venue.
+        # The Dayton-based "No Limits 937" club files its Liberty Township
+        # meet under "Dayton, OH" when that venue sits ~17mi from downtown
+        # Cincinnati and ~32mi from Dayton, which buries it under the wrong
+        # heading for every Cincinnati reader. Wherever the address itself
+        # geocodes, the map decides — never the feed's own label.
+        latlon = None
+        if ev.get("address_lat") is not None and ev.get("address_lon") is not None:
+            latlon = (ev["address_lat"], ev["address_lon"])
+        else:
+            addr = clean_ws(str(ev.get("address", "")))
+            if addr and _has_full_street_address(addr):
+                latlon = geocode(addr, geocache)
+        if not latlon:
+            continue
+        mapped_city = closest_major_city(latlon[0], latlon[1])
+        if mapped_city and mapped_city != existing_city:
+            log(f"🗺️ Closest City corrected for '{clean_ws(str(ev.get('title', '')))}': "
+                f"'{existing_city}' -> '{mapped_city}' (geocoded address, not the feed's label)")
+            ev["closest_city"] = mapped_city
+            closest_city_corrected += 1
+    if closest_city_corrected:
+        log(f"🗺️ Closest City corrected from the map for {closest_city_corrected} events")
 
     # 5) Now that addresses are resolved, catch duplicates that share the exact
     #    same day + street address even when their titles are unrelated.
