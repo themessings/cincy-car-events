@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-10T10:43:47.164566-04:00",
-  "count": 339,
+  "generated_at_iso": "2026-09-10T11:15:46.958515-04:00",
+  "count": 333,
   "events": [
     {
       "Event Name": "Premier Car & Truck Cruise-In",
@@ -61,21 +61,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/indiana-cruisers-monthly-cruise-the-square"
-    },
-    {
-      "Event Name": "Wheels & Whoppers",
-      "Date": "2026-09-04",
-      "Start Time": "5:00 PM",
-      "End Time": "10:00 PM",
-      "Location": "47 East Main Street, North Vernon, IN 47265",
-      "Address": "47 East Main Street, North Vernon, IN 47265",
-      "Closest City": "Louisville, KY",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "32",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/wheels-whoppers"
     },
     {
       "Event Name": "Jackson County Gear Grinders Muscle Hustle",
@@ -513,36 +498,6 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "McCordsville Cars & Coffee",
-      "Date": "2026-09-06",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "5811 Main St., McCordsville, IN 46055",
-      "Address": "5811 Main St., McCordsville, IN 46055",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/mccordsville-cars-coffee"
-    },
-    {
-      "Event Name": "No Limits 937™ Cars & Coffee",
-      "Date": "2026-09-13",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "6735 Lakota Lane, West Chester Township, OH 45044",
-      "Address": "6735 Lakota Lane, West Chester Township, OH 45044",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/no-limits-937-cars-coffee"
-    },
-    {
       "Event Name": "Euro Cars and Cocoa",
       "Date": "2026-09-13",
       "Start Time": "9:00 AM",
@@ -618,21 +573,6 @@
       "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-09-13"
     },
     {
-      "Event Name": "Tommy And Da Fam Cruise-In",
-      "Date": "2026-09-08",
-      "Start Time": "5:00 PM",
-      "End Time": "5:00 PM",
-      "Location": "200 Byrd Way, Greenwood, IN 46142",
-      "Address": "200 Byrd Way, Greenwood, IN 46142",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Size": "Regional",
-      "Popularity": "54",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/tommy-and-da-fam-cruise-in"
-    },
-    {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-09-16",
       "Start Time": "5:00 PM",
@@ -661,21 +601,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/djs-cruise-in-night"
-    },
-    {
-      "Event Name": "Warehouse Wednesdays",
-      "Date": "2026-09-09",
-      "Start Time": "5:00 PM",
-      "End Time": "5:00 PM",
-      "Location": "4114 Reas Lane, New Albany, IN 47150",
-      "Address": "4114 Reas Lane, New Albany, IN 47150",
-      "Closest City": "Louisville, KY",
-      "Callout": "",
-      "Size": "Regional",
-      "Popularity": "66",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/warehouse-wednesdays"
     },
     {
       "Event Name": "Northridge Lions Club Cruise In",
@@ -843,19 +768,19 @@
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
     },
     {
-      "Event Name": "Liberty Center Cars and Coffee",
+      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
       "Date": "2026-09-19",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7140 Taylor Street, Liberty Township, OH 45069",
-      "Address": "7140 Taylor Street, Liberty Township, OH 45069",
+      "Location": "7160 Taylor St, Liberty Township, OH 45069",
+      "Address": "7160 Taylor St, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-09-19"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -1593,21 +1518,6 @@
       "Event URL": "https://carsandcoffeeevents.com/events/rockin-randalls-cruise-in"
     },
     {
-      "Event Name": "McDonald’s Sellersburg 2026 Summer Car Shows",
-      "Date": "2026-09-04",
-      "Start Time": "6:00 PM",
-      "End Time": "6:00 PM",
-      "Location": "102 Enterprise Way, Sellersburg, IN 47172",
-      "Address": "102 Enterprise Way, Sellersburg, IN 47172",
-      "Closest City": "Louisville, KY",
-      "Callout": "",
-      "Size": "Regional",
-      "Popularity": "66",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/mcdonalds-sellersburg-2026-summer-car-show-schedule"
-    },
-    {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
       "Date": "2026-10-03",
       "Start Time": "8:00 AM",
@@ -1726,21 +1636,6 @@
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/rpm-transmissions-car-show-2026-10-03"
-    },
-    {
-      "Event Name": "Muncie Cars & Coffee 2026 - Season 10",
-      "Date": "2026-09-05",
-      "Start Time": "9:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "100 E Charles St, Muncie, IN 47305",
-      "Address": "100 E Charles St, Muncie, IN 47305",
-      "Closest City": "Indianapolis, IN",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10"
     },
     {
       "Event Name": "6th Annual Car Show and Gun Giveaway",
@@ -5075,6 +4970,21 @@
     {
       "Event Name": "Cars at Madison Square",
       "Date": "2028-09-02",
+      "Start Time": "11:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "5350 Medpace Way, Cincinnati, OH 45227",
+      "Address": "5350 Medpace Way, Cincinnati, OH 45227",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cars at Madison Square",
+      "Date": "2028-09-09",
       "Start Time": "11:00 AM",
       "End Time": "2:00 PM",
       "Location": "5350 Medpace Way, Cincinnati, OH 45227",
