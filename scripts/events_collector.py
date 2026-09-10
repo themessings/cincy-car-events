@@ -1272,6 +1272,28 @@ MAJOR_CITIES: List[Tuple[str, float, float]] = [
 ]
 
 
+# A ZIP-level point is a few miles fuzzy, so it is only allowed to move an
+# event to a different major city when the two are not close to tied.
+COARSE_CITY_MARGIN_MILES = 10.0
+
+
+def _coarse_city_move_is_clear(
+    latlon: Tuple[float, float], from_city: str, to_city: str
+) -> bool:
+    """True when a coarse (ZIP-level) point is decisively nearer `to_city`."""
+    by_name = {name: (lat, lon) for name, lat, lon in MAJOR_CITIES}
+    origin = by_name.get(from_city)
+    if origin is None:
+        # The old label isn't even one of our major cities — nothing to weigh
+        # it against, so the mapped city wins.
+        return True
+    target = by_name.get(to_city)
+    if target is None:
+        return False
+    gain = haversine_miles(latlon[0], latlon[1], *origin) - haversine_miles(latlon[0], latlon[1], *target)
+    return gain >= COARSE_CITY_MARGIN_MILES
+
+
 def closest_major_city(lat: Optional[float], lon: Optional[float]) -> str:
     if lat is None or lon is None:
         return ""
@@ -6069,20 +6091,36 @@ def enrich_events_for_export(
         # heading for every Cincinnati reader. Wherever the address itself
         # geocodes, the map decides — never the feed's own label.
         latlon = None
+        coarse = False
         if ev.get("address_lat") is not None and ev.get("address_lon") is not None:
             latlon = (ev["address_lat"], ev["address_lon"])
         else:
             addr = clean_ws(str(ev.get("address", "")))
             if addr and _has_full_street_address(addr):
                 latlon = geocode(addr, geocache)
+            if not latlon:
+                # A slightly-wrong street address resolves to nothing at all:
+                # the No Limits 937 feed places its venue in "West Chester
+                # Township" when it actually sits in neighbouring Liberty
+                # Township, and Nominatim returns no match. The ZIP still
+                # pins the event to within a few miles, which is far more
+                # precision than choosing between cities 30mi apart needs.
+                coarse_query = reliable_geocode_query(addr, clean_ws(str(ev.get("city_state", ""))))
+                if coarse_query:
+                    latlon = geocode(coarse_query, geocache)
+                    coarse = bool(latlon)
         if not latlon:
             continue
         mapped_city = closest_major_city(latlon[0], latlon[1])
-        if mapped_city and mapped_city != existing_city:
-            log(f"🗺️ Closest City corrected for '{clean_ws(str(ev.get('title', '')))}': "
-                f"'{existing_city}' -> '{mapped_city}' (geocoded address, not the feed's label)")
-            ev["closest_city"] = mapped_city
-            closest_city_corrected += 1
+        if not mapped_city or mapped_city == existing_city:
+            continue
+        if coarse and not _coarse_city_move_is_clear(latlon, existing_city, mapped_city):
+            continue
+        log(f"🗺️ Closest City corrected for '{clean_ws(str(ev.get('title', '')))}': "
+            f"'{existing_city}' -> '{mapped_city}' "
+            f"({'ZIP-level' if coarse else 'geocoded address'}, not the feed's label)")
+        ev["closest_city"] = mapped_city
+        closest_city_corrected += 1
     if closest_city_corrected:
         log(f"🗺️ Closest City corrected from the map for {closest_city_corrected} events")
 

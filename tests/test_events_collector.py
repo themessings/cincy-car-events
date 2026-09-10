@@ -906,3 +906,40 @@ class ExportEnrichmentTests(unittest.TestCase):
             verify_dates=False, lookup_addresses=True, fetch_facebook=False, revet_automotive=False,
         )
         self.assertEqual(out[0]["closest_city"], "Cincinnati, OH")
+
+    def test_closest_city_falls_back_to_the_zip_when_the_street_wont_geocode(self):
+        # This feed puts the venue in "West Chester Township" when it actually
+        # sits in neighbouring Liberty Township, so the street address matches
+        # nothing. The ZIP still places it firmly on the Cincinnati side.
+        cfg = _real_config()
+        addr = "6735 Lakota Lane, West Chester Township, OH 45044"
+        events = [{
+            "title": "No Limits 937 Cars & Coffee", "location": addr, "address": addr,
+            "closest_city": "Dayton, OH", "source": "CarsAndCoffeeEvents API",
+            "start_iso": "2026-09-13T09:00:00-04:00", "end_iso": "2026-09-13T12:00:00-04:00", "url": "",
+        }]
+        geocache = {addr: None, "45044, USA": {"lat": "39.3303357", "lon": "-84.4082750"}}
+        out = enrich_events_for_export(
+            events, geocache, {}, cfg,
+            verify_dates=False, lookup_addresses=True, fetch_facebook=False, revet_automotive=False,
+        )
+        self.assertEqual(out[0]["closest_city"], "Cincinnati, OH")
+
+    def test_a_coarse_zip_point_will_not_move_a_near_tie(self):
+        # Roughly halfway between Cincinnati and Dayton, a ZIP-level point is
+        # not precise enough to reassign the event. Dayton is nearer here, but
+        # only by ~1mi, so the feed's "Cincinnati" label has to stand.
+        cfg = _real_config()
+        addr = "1 Main Street, Middletown, OH 45042"
+        events = [{
+            "title": "Midpoint Cruise In", "location": addr, "address": addr,
+            "closest_city": "Cincinnati, OH", "source": "CarsAndCoffeeEvents API",
+            "start_iso": "2026-09-13T09:00:00-04:00", "end_iso": "2026-09-13T12:00:00-04:00", "url": "",
+        }]
+        # 24.8mi to Cincinnati, 23.6mi to Dayton — inside the coarse margin.
+        geocache = {addr: None, "45042, USA": {"lat": "39.4400", "lon": "-84.3520"}}
+        out = enrich_events_for_export(
+            events, geocache, {}, cfg,
+            verify_dates=False, lookup_addresses=True, fetch_facebook=False, revet_automotive=False,
+        )
+        self.assertEqual(out[0]["closest_city"], "Cincinnati, OH")
