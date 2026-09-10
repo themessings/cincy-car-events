@@ -5751,6 +5751,32 @@ def _address_trust_tier(ev: dict) -> str:
     return "other"
 
 
+def _manual_exclusions(cfg: dict) -> List[dict]:
+    """The config's manually curated "never publish this" list."""
+    raw = (cfg.get("filters") or {}).get("manual_exclude_events") or []
+    return [r for r in raw if isinstance(r, dict) and (r.get("title") or r.get("url"))]
+
+
+def _matching_exclusion(ev: dict, rules: List[dict]) -> Optional[dict]:
+    """The first exclusion rule this event matches, or None.
+
+    A rule matches when ANY key it specifies matches case-insensitively:
+    `title` as a substring of the event name, `url` as a substring of the
+    event link. Either alone is enough, so a feed renaming an event or moving
+    its link doesn't quietly bring it back.
+    """
+    title = clean_ws(str(ev.get("title", ""))).lower()
+    url = clean_ws(str(ev.get("url", ""))).lower()
+    for rule in rules:
+        want_title = clean_ws(str(rule.get("title", ""))).lower()
+        want_url = clean_ws(str(rule.get("url", ""))).lower()
+        if want_title and want_title in title:
+            return rule
+        if want_url and want_url in url:
+            return rule
+    return None
+
+
 def _guarantee_closest_city(ev: dict, cfg: dict) -> str:
     """Best-effort Closest City when lat/lon geocoding hasn't produced one:
     fall back to a state found in whatever location text we have, then to the
@@ -5810,6 +5836,26 @@ def enrich_events_for_export(
     dropped_dead_source = before_dead_filter - len(events)
     if dropped_dead_source:
         log(f"🧹 Dropped {dropped_dead_source} event(s) whose only source was a dead pre-migration carsandcoffeeevents.com link (unverifiable stale date)")
+
+    # 0.5) Drop anything on the manual exclusion list. These are events Joel
+    # has decided should never appear, whatever the feeds keep saying — a
+    # listing he could not stand up against the organiser's own website or
+    # social feeds. Feeds re-supply them every run, so the exclusion has to
+    # live in config rather than in a one-off edit of the exported data.
+    excluded = _manual_exclusions(cfg)
+    if excluded:
+        before_manual = len(events)
+        kept = []
+        for ev in events:
+            rule = _matching_exclusion(ev, excluded)
+            if rule is None:
+                kept.append(ev)
+                continue
+            log(f"🚫 Excluded '{clean_ws(str(ev.get('title', '')))}' on {clean_ws(str(ev.get('start_iso', '')))[:10]} "
+                f"— {rule.get('reason') or 'manual exclusion'}")
+        events = kept
+        if before_manual - len(events):
+            log(f"🚫 Dropped {before_manual - len(events)} event(s) on the manual exclusion list")
 
     # 1) Verify date/time via the event link (parallel across events; cached).
     if verify_dates:

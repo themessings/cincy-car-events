@@ -285,6 +285,21 @@ filters:
   # Sources trusted as automotive even when a title lacks car keywords
   # (club calendars, sanctioning bodies, registration platforms). Matched as a
   # case-insensitive substring against the event's Source name.
+  # Events that must never appear in the lineup, whatever the feeds say.
+  # A rule matches when ANY key it lists matches, case-insensitively:
+  # `title` as a substring of the event name, `url` as a substring of the
+  # event link. Always record who asked and why — these are judgement calls,
+  # not data, and the next person needs to know whether it still applies.
+  manual_exclude_events:
+  - title: No Limits 937
+    url: no-limits-937-cars-coffee
+    reason: >-
+      Joel, 2026-09-10 — pulled because he could not stand the listing up
+      against the organiser's own website or social feeds. Their site is
+      stale (schedule page still says May 2026, "Our Next Meet" 404s) and
+      they only publish to Instagram, so their listings can't be verified
+      the way he wants to verify them.
+
   car_dedicated_sources:
   - OVR PCA
   - MotorsportReg

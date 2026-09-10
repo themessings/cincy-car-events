@@ -881,7 +881,7 @@ class ExportEnrichmentTests(unittest.TestCase):
         cfg = _real_config()
         addr = "6735 Lakota Lane, West Chester Township, OH 45044"
         events = [{
-            "title": "No Limits 937 Cars & Coffee", "location": addr, "address": addr,
+            "title": "Lakota Lane Cars & Coffee", "location": addr, "address": addr,
             "closest_city": "Dayton, OH", "source": "CarsAndCoffeeEvents API",
             "start_iso": "2026-09-13T09:00:00-04:00", "end_iso": "2026-09-13T12:00:00-04:00", "url": "",
         }]
@@ -914,7 +914,7 @@ class ExportEnrichmentTests(unittest.TestCase):
         cfg = _real_config()
         addr = "6735 Lakota Lane, West Chester Township, OH 45044"
         events = [{
-            "title": "No Limits 937 Cars & Coffee", "location": addr, "address": addr,
+            "title": "Lakota Lane Cars & Coffee", "location": addr, "address": addr,
             "closest_city": "Dayton, OH", "source": "CarsAndCoffeeEvents API",
             "start_iso": "2026-09-13T09:00:00-04:00", "end_iso": "2026-09-13T12:00:00-04:00", "url": "",
         }]
@@ -943,3 +943,37 @@ class ExportEnrichmentTests(unittest.TestCase):
             verify_dates=False, lookup_addresses=True, fetch_facebook=False, revet_automotive=False,
         )
         self.assertEqual(out[0]["closest_city"], "Cincinnati, OH")
+
+    def test_manual_exclusion_drops_the_event_by_title(self):
+        cfg = _real_config()
+        events = [
+            {"title": "No Limits 937™ Cars & Coffee", "location": "Liberty Collective",
+             "source": "CarsAndCoffeeEvents API", "closest_city": "Cincinnati, OH",
+             "start_iso": "2026-09-13T09:00:00-04:00", "end_iso": "2026-09-13T12:00:00-04:00", "url": ""},
+            {"title": "Circuit Cafe Cars and Coffee", "location": "Cincinnati, OH",
+             "source": "CarsAndCoffeeEvents API", "closest_city": "Cincinnati, OH",
+             "start_iso": "2026-09-13T08:00:00-04:00", "end_iso": "2026-09-13T12:00:00-04:00", "url": ""},
+        ]
+        out = enrich_events_for_export(
+            events, {}, {}, cfg,
+            verify_dates=False, lookup_addresses=False, fetch_facebook=False, revet_automotive=False,
+        )
+        titles = {e["title"] for e in out}
+        self.assertNotIn("No Limits 937™ Cars & Coffee", titles)
+        self.assertIn("Circuit Cafe Cars and Coffee", titles)
+
+    def test_manual_exclusion_still_drops_it_when_the_feed_renames_it(self):
+        # Matching on either the title OR the link means a feed retitling the
+        # event can't quietly put it back on the slides.
+        cfg = _real_config()
+        events = [{
+            "title": "Cars & Coffee at Liberty Collective", "location": "Liberty Collective",
+            "source": "CarsAndCoffeeEvents API", "closest_city": "Cincinnati, OH",
+            "start_iso": "2026-10-11T09:00:00-04:00", "end_iso": "2026-10-11T12:00:00-04:00",
+            "url": "https://carsandcoffeeevents.com/events/no-limits-937-cars-coffee",
+        }]
+        out = enrich_events_for_export(
+            events, {}, {}, cfg,
+            verify_dates=False, lookup_addresses=False, fetch_facebook=False, revet_automotive=False,
+        )
+        self.assertEqual(out, [])
