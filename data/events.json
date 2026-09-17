@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-17T09:43:00.485422-04:00",
-  "count": 298,
+  "generated_at_iso": "2026-09-17T11:15:44.037415-04:00",
+  "count": 299,
   "events": [
     {
       "Event Name": "Premier Car & Truck Cruise-In",
@@ -209,7 +209,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); iCloud Published Calendar (ICS)",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-09-19"
     },
     {
@@ -4460,6 +4460,21 @@
     {
       "Event Name": "Cars at Madison Square",
       "Date": "2028-09-09",
+      "Start Time": "11:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "5350 Medpace Way, Cincinnati, OH 45227",
+      "Address": "5350 Medpace Way, Cincinnati, OH 45227",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+    },
+    {
+      "Event Name": "Cars at Madison Square",
+      "Date": "2028-09-16",
       "Start Time": "11:00 AM",
       "End Time": "2:00 PM",
       "Location": "5350 Medpace Way, Cincinnati, OH 45227",
