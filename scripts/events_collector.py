@@ -1136,7 +1136,12 @@ def collect_manual_events(source: dict, diagnostics: Optional[dict] = None) -> L
             "location": clean_ws(entry.get("location", "")),
             "city_state": clean_ws(entry.get("city_state", "")),
             "url": clean_ws(entry.get("url", "")),
-            "source": "manual_verified",
+            # The config name, like every other collector — NOT a code token. The
+            # merge-stage distance exemption matches events to exempt sources by NAME
+            # (distance_exempt_sources, ~7266), so "manual_verified" never matched
+            # "Manually Verified Events" and the 110-mile events kept getting dropped
+            # even with the flag set. It also reads better in the sheet's Source column.
+            "source": clean_ws(str(source.get("name", ""))) or "Manually Verified Events",
             # Every other collector copies these from its source block; this one
             # did not, so the config flags were silently ignored and four verified
             # events were dropped on 2026-09-17 (see the source comment).
