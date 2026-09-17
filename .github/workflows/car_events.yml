@@ -4,19 +4,39 @@ on:
   schedule:
     # GitHub Actions cron is fixed UTC and does not observe daylight saving,
     # so "6am Eastern" is two different UTC times depending on the time of
-    # year. Both fire every Thursday; the gate job below keeps only the one
-    # whose UTC hour is really 6am America/New_York today, and skips the other.
+    # year. Both sets fire every Thursday; the gate job below keeps only the
+    # ones whose UTC hour is really Eastern morning today, and skips the rest.
     #
     # The minute is deliberately :20, not :00. GitHub queues scheduled runs on
     # a best-effort basis and the top of the hour is its most congested slot —
     # runs there are delayed by hours or dropped entirely. Past runs of this
     # workflow landed as late as 15:22 UTC for an 11:00 UTC cron.
+    #
+    # Each DST set has a primary slot and two backstops, because a delayed run
+    # is not the worst case — GitHub also DROPS scheduled runs outright, and a
+    # dropped one costs a whole week's post with nothing in the Actions tab to
+    # show for it. That is not hypothetical: the Thursday cron produced no run
+    # at all on 2026-09-10 or 2026-09-17. Whichever slot lands first does the
+    # work and pushes a car-events-bot commit; the gate then no-ops the others,
+    # so the backstops only ever cost minutes when the primary really was lost.
     - cron: "20 10 * * 4" # 6:20 AM EDT (roughly Mar-Nov)
+    - cron: "20 13 * * 4" # 9:20 AM EDT — backstop
+    - cron: "20 16 * * 4" # 12:20 PM EDT — backstop
     - cron: "20 11 * * 4" # 6:20 AM EST (roughly Nov-Mar)
+    - cron: "20 14 * * 4" # 9:20 AM EST — backstop
+    - cron: "20 17 * * 4" # 12:20 PM EST — backstop
   workflow_dispatch: {}
 
 permissions:
   contents: write
+
+# One collector at a time. A backstop that fires while a badly delayed primary
+# is still running would otherwise duplicate the whole run and race it on the
+# push; queued behind it instead, its gate sees the finished run's commit and
+# skips. Never cancel-in-progress — the run in flight is the one doing the work.
+concurrency:
+  group: car-events-collector
+  cancel-in-progress: false
 
 jobs:
   gate:
@@ -24,33 +44,70 @@ jobs:
     outputs:
       proceed: ${{ steps.check.outputs.proceed }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Enough history for the "already collected today" check below to
+          # find the most recent car-events-bot commit.
+          fetch-depth: 50
+
       - id: check
         run: |
+          set -euo pipefail
+
           if [ "${{ github.event_name }}" != "schedule" ]; then
             echo "Manual run (workflow_dispatch) — always proceeds."
             echo "proceed=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+
           # Decide from WHICH cron fired, never from the clock. A scheduled run
           # can start hours after its slot when GitHub is busy, so checking the
           # current hour silently skipped legitimate runs that arrived late.
           CRON="${{ github.event.schedule }}"
-          OFFSET=$(TZ="America/New_York" date +%z)
+          HOUR="$(printf '%s\n' "$CRON" | awk '{print $2}')"
+          OFFSET="$(TZ="America/New_York" date +%z)"
           case "$OFFSET" in
-            -0400) WANTED="20 10 * * 4" ;; # Eastern Daylight Time
-            -0500) WANTED="20 11 * * 4" ;; # Eastern Standard Time
-            *)     WANTED="" ;;
+            -0400) TODAYS_HOURS="10 13 16" ;; # Eastern Daylight Time
+            -0500) TODAYS_HOURS="11 14 17" ;; # Eastern Standard Time
+            *)     TODAYS_HOURS="" ;;
           esac
-          if [ -z "$WANTED" ]; then
+
+          if [ -z "$TODAYS_HOURS" ]; then
             echo "Unexpected America/New_York offset ${OFFSET} — proceeding rather than skipping a week."
             echo "proceed=true" >> "$GITHUB_OUTPUT"
-          elif [ "$CRON" = "$WANTED" ]; then
-            echo "Eastern is at ${OFFSET} and cron '${CRON}' is the 6:20am Eastern one — proceeding."
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Eastern is at ${OFFSET}, so '${WANTED}' is today's 6:20am cron. This run came from '${CRON}' — the redundant other-DST cron. Skipping."
-            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+
+          case " ${TODAYS_HOURS} " in
+            *" ${HOUR} "*) ;;
+            *)
+              echo "Eastern is at ${OFFSET}, so today's slots are UTC hours ${TODAYS_HOURS}. This run came from '${CRON}' — the redundant other-DST cron. Skipping."
+              echo "proceed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+              ;;
+          esac
+
+          # A real slot for today. Run only if this week's collection has not
+          # already landed. Every successful run rewrites data/source_health.json
+          # (it stamps last_run_iso per source) and commits it as car-events-bot,
+          # so such a commit dated today is proof the work is done. Anything
+          # else — no commit, a failed collector, an unreadable history —
+          # proceeds, because a needless re-run costs minutes and a wrongly
+          # skipped one costs the week.
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          git fetch --quiet --depth=50 origin "$BRANCH"
+          MIDNIGHT_ET="$(TZ="America/New_York" date -d "today 00:00:00" +%s)"
+          LAST_BOT="$(git log -1 --author="car-events-bot" --format=%ct FETCH_HEAD 2>/dev/null || true)"
+
+          if [ -n "$LAST_BOT" ] && [ "$LAST_BOT" -ge "$MIDNIGHT_ET" ]; then
+            echo "Already collected today: ${BRANCH} carries a car-events-bot commit from $(date -u -d "@${LAST_BOT}" '+%Y-%m-%d %H:%M UTC'). '${CRON}' is a backstop with nothing to do. Skipping."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Eastern is at ${OFFSET} and cron '${CRON}' is one of today's slots (UTC hours ${TODAYS_HOURS}); no car-events-bot commit since midnight Eastern — proceeding."
+          echo "proceed=true" >> "$GITHUB_OUTPUT"
 
   collect:
     needs: gate
