@@ -580,8 +580,10 @@ sources:
 # Coffee); the Ohio one is a group, sponsored by Bilstein — hence the group URL.
 organizer_social:
   - url: https://www.facebook.com/cincinnaticarsandcoffee
+    instagram: circuitcafecincy
     match: ["circuit cafe", "2726 riverside"]
   - url: https://www.facebook.com/ElementEatery/
+    instagram: elementeatery
     match: ["cars at madison square", "5350 medpace"]
   - url: https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/
     match: ["southern indiana car & coffee", "4809 outer loop"]
@@ -600,6 +602,7 @@ organizer_social:
   # One organisation runs the Friday (Colins Coffee), Saturday (Olentangy) and
   # Sunday (Westerville Starbucks) meets, so one page covers all three series.
   - url: https://www.facebook.com/TheColumbusCarsandCoffee/
+    instagram: thecolumbuscarsandcoffee
     match: ["columbus cars", "3650 olentangy", "691 n. cleveland", "691 n cleveland"]
   # Season reported as May 2 – Oct 2 in the Dayton press; listing-site rows on
   # Oct 3 and Oct 24 may be stale — check the group before trusting them.
@@ -614,12 +617,14 @@ organizer_social:
   - url: https://www.facebook.com/IndyCarsandCoffee/
     match: ["indianapolis cars and coffee", "indianapolis cars & coffee", "9111 haverstick", "keystone at the crossing", "9225 priority way"]
   - url: https://www.facebook.com/HockingHillsCC
+    instagram: hockinghillscc
     match: ["hocking hills cars", "12762 grey"]
   - url: https://www.facebook.com/groups/962325874974960
     match: ["fairfield cars and coffee", "8695 bilstein"]
   - url: https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/
     match: ["usb cars", "8805 governors hill"]
   - url: https://www.instagram.com/grahamrahalperformance
+    instagram: grahamrahalperformance
     match: ["graham rahal", "10850 creek way"]
   - url: https://www.facebook.com/profile.php?id=61580880012844
     match: ["euro cars and cocoa", "600 w loveland"]

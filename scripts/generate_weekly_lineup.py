@@ -49,7 +49,7 @@ from googleapiclient.http import MediaIoBaseDownload, MediaFileUpload
 # CONFIG
 # ----------------------------
 SPREADSHEET_ID = os.getenv("APEX_SPREADSHEET_ID", "1lVpqhmUOQDZywjGeYxgm7ILNXqP3l6Z74pVXw1oKSQ8")
-SHEET_RANGE = "Events!A1:M4000"
+SHEET_RANGE = "Events!A1:N4000"  # N = Organizer Social (added 2026-09-17)
 
 TZ_NAME = "America/New_York"
 
@@ -1883,7 +1883,55 @@ for p in glob.glob(f"{out_base_no_ext}_slide_*.jpg"):
 
 slide_paths = render_carousel_images(blocks, out_base_no_ext)
 
+
+# ----------------------------
+# INSTAGRAM TAGS (Joel, 2026-09-17: "tag the instagram accounts of the events in the post")
+# ----------------------------
+def instagram_handles(events: List["Event"]) -> List[str]:
+    """Handles to @-mention in the caption, in first-seen order, no repeats.
+
+    Two sources, in this order: the event's own "Organizer Social" cell when it is an
+    instagram.com link, then the `instagram:` field on the organizer_social rule that
+    matches the event (config/sources.yml). Only handles read off the organiser's own
+    page ever reach that config — a guessed handle tags a stranger, in public, under
+    both business names."""
+    import yaml
+    rules = []
+    try:
+        cfg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "sources.yml")
+        with open(cfg_path, "r", encoding="utf-8") as fh:
+            for r in (yaml.safe_load(fh) or {}).get("organizer_social") or []:
+                h = str(r.get("instagram") or "").strip().lstrip("@")
+                needles = [str(n).strip().lower() for n in (r.get("match") or []) if str(n).strip()]
+                if h and needles:
+                    rules.append((needles, h))
+    except Exception as ex:
+        print(f"[WARN] instagram_handles: could not read organizer_social rules: {ex}")
+    seen: List[str] = []
+    for e in events:
+        hay = f"{e.title} {e.location} {e.address}".lower()
+        h = ""
+        link = str((e.source_row or {}).get("Organizer Social") or "")
+        m = re.search(r"instagram\.com/([A-Za-z0-9_.]+)", link)
+        if m and m.group(1).lower() not in {"p", "reel", "explore", "stories"}:
+            h = m.group(1)
+        if not h:
+            for needles, handle in rules:
+                if any(n in hay for n in needles):
+                    h = handle
+                    break
+        if h and h.lower() not in {x.lower() for x in seen}:
+            seen.append(h)
+    return seen
+
+
 caption = make_caption(selected_dates, events_by_date_city_full, events_selected)
+handles = instagram_handles(events_selected)
+if handles:
+    caption = caption.rstrip() + "\n\nHosts this week: " + " ".join("@" + h for h in handles) + "\n"
+    print("Instagram tags:", " ".join("@" + h for h in handles))
+else:
+    print("Instagram tags: none matched this week")
 with open(out_caption_path, "w", encoding="utf-8") as f:
     f.write(caption)
 
