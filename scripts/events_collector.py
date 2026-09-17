@@ -1137,6 +1137,11 @@ def collect_manual_events(source: dict, diagnostics: Optional[dict] = None) -> L
             "city_state": clean_ws(entry.get("city_state", "")),
             "url": clean_ws(entry.get("url", "")),
             "source": "manual_verified",
+            # Every other collector copies these from its source block; this one
+            # did not, so the config flags were silently ignored and four verified
+            # events were dropped on 2026-09-17 (see the source comment).
+            "bypass_distance_filter": bool(source.get("bypass_distance_filter", False)),
+            "bypass_automotive_filter": bool(source.get("bypass_automotive_filter", False)),
         })
     diagnostics["parsed_events"] = len(out)
     if not out:

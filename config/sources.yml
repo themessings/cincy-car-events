@@ -384,6 +384,13 @@ sources:
 # host's own Facebook event page.)
 - type: manual_events
   name: Manually Verified Events
+  # Hand-verified means exactly that: the organiser's own page was read for each
+  # date. So neither automatic gate applies. Without these two flags the 2026-09-17
+  # run silently dropped four of the seven — Graham Rahal (Zionsville, 110 mi) and
+  # Hocking Hills (Logan, 116 mi) fell to the 105-mile cap, and "Trunk or Treat"
+  # has no car word in it, so the automotive filter binned it too.
+  bypass_distance_filter: true
+  bypass_automotive_filter: true
   events:
     - title: Euro Cars and Cocoa
       location: The Cocoa Muse, 600 W Loveland Ave, Loveland, OH 45140-2359
