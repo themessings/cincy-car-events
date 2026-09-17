@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-17T15:33:56.506463-04:00",
-  "count": 313,
+  "generated_at_iso": "2026-09-17T15:41:39.135304-04:00",
+  "count": 317,
   "events": [
     {
       "Event Name": "Premier Car & Truck Cruise-In",
@@ -638,7 +638,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "manual_verified",
+      "Source": "manual_verified; Manually Verified Events",
       "Event URL": "https://www.facebook.com/groups/962325874974960",
       "Organizer Social": "https://www.facebook.com/groups/962325874974960"
     },
@@ -897,6 +897,22 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/bulldog-auto-show",
       "Organizer Social": ""
+    },
+    {
+      "Event Name": "Graham Rahal Performance Cars & Coffee",
+      "Date": "2026-09-26",
+      "Start Time": "9:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "10850 Creek Way, Zionsville, IN 46077",
+      "Address": "10850 Creek Way, Zionsville, IN 46077",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://www.instagram.com/grahamrahalperformance",
+      "Organizer Social": "https://www.instagram.com/grahamrahalperformance"
     },
     {
       "Event Name": "Mid-West Dayton Club Car Show",
@@ -1313,6 +1329,22 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/rpm-transmissions-car-show-2026-10-03",
       "Organizer Social": ""
+    },
+    {
+      "Event Name": "Hocking Hills Cars & Coffee",
+      "Date": "2026-10-03",
+      "Start Time": "9:00 AM",
+      "End Time": "11:30 AM",
+      "Location": "12762 Grey St, Logan, OH 43138",
+      "Address": "12762 Grey St, Logan, OH 43138",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://www.facebook.com/HockingHillsCC",
+      "Organizer Social": "https://www.facebook.com/HockingHillsCC"
     },
     {
       "Event Name": "6th Annual Car Show and Gun Giveaway",
@@ -1790,7 +1822,7 @@
       "Size": "Small",
       "Popularity": "8",
       "Attendance": "",
-      "Source": "manual_verified",
+      "Source": "manual_verified; Manually Verified Events",
       "Event URL": "https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/",
       "Organizer Social": "https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/"
     },
@@ -1998,7 +2030,7 @@
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "manual_verified",
+      "Source": "manual_verified; Manually Verified Events",
       "Event URL": "https://www.facebook.com/groups/962325874974960",
       "Organizer Social": "https://www.facebook.com/groups/962325874974960"
     },
@@ -2227,6 +2259,22 @@
       "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
+      "Event Name": "Graham Rahal Performance Trunk or Treat",
+      "Date": "2026-10-24",
+      "Start Time": "4:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "10850 Creek Way, Zionsville, IN 46077",
+      "Address": "10850 Creek Way, Zionsville, IN 46077",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://www.instagram.com/grahamrahalperformance",
+      "Organizer Social": "https://www.instagram.com/grahamrahalperformance"
+    },
+    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-25",
       "Start Time": "8:00 AM",
@@ -2449,6 +2497,22 @@
       "Source": "sheet",
       "Event URL": "Same as above",
       "Organizer Social": "https://corsarally.com/events/dragon/"
+    },
+    {
+      "Event Name": "Hocking Hills Cars & Coffee",
+      "Date": "2026-11-07",
+      "Start Time": "9:00 AM",
+      "End Time": "11:30 AM",
+      "Location": "12762 Grey St, Logan, OH 43138",
+      "Address": "12762 Grey St, Logan, OH 43138",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://www.facebook.com/HockingHillsCC",
+      "Organizer Social": "https://www.facebook.com/HockingHillsCC"
     },
     {
       "Event Name": "READ DETAILS!!! Coldwell Banker 4th Annual Car & Truck Show",
