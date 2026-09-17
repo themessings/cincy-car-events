@@ -580,10 +580,10 @@ sources:
 # Coffee); the Ohio one is a group, sponsored by Bilstein — hence the group URL.
 organizer_social:
   - url: https://www.facebook.com/cincinnaticarsandcoffee
-    instagram: circuitcafecincy
+    instagram: [circuitcafecincy, cincinnaticarsandcoffee]  # both, as Joel tagged them 2026-09-10
     match: ["circuit cafe", "2726 riverside"]
   - url: https://www.facebook.com/ElementEatery/
-    instagram: elementeatery
+    instagram: carsatmadisonsquare  # the event's own account — what Joel tagged 2026-09-10 (elementeatery is the venue)
     match: ["cars at madison square", "5350 medpace"]
   - url: https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/
     match: ["southern indiana car & coffee", "4809 outer loop"]
@@ -635,5 +635,13 @@ organizer_social:
   - url: https://www.instagram.com/delhi_street_rodders/
     instagram: delhi_street_rodders
     match: ["delhi street rodders"]
+  # Two more Joel tagged on his 2026-09-10 lineup post; kept so they tag whenever
+  # the event is in the window.
+  - url: https://www.instagram.com/eurocarsandcocoa/
+    instagram: eurocarsandcocoa
+    match: ["euro cars and cocoa", "600 w loveland"]
+  - url: https://www.instagram.com/latenightlap/
+    instagram: latenightlap
+    match: ["late night lap"]
   # Not found (2026-09-17): "2nd Saturday Car Cruise" Washington Court House —
   # sponsored by a local business, no page located. Add here if one turns up.

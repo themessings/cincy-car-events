@@ -1901,10 +1901,11 @@ def instagram_handles(events: List["Event"]) -> List[str]:
         cfg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "sources.yml")
         with open(cfg_path, "r", encoding="utf-8") as fh:
             for r in (yaml.safe_load(fh) or {}).get("organizer_social") or []:
-                h = str(r.get("instagram") or "").strip().lstrip("@")
+                raw = r.get("instagram") or []
+                hs = [str(x).strip().lstrip("@") for x in (raw if isinstance(raw, list) else [raw]) if str(x).strip()]
                 needles = [str(n).strip().lower() for n in (r.get("match") or []) if str(n).strip()]
-                if h and needles:
-                    rules.append((needles, h))
+                if hs and needles:
+                    rules.append((needles, hs))
     except Exception as ex:
         print(f"[WARN] instagram_handles: could not read organizer_social rules: {ex}")
     seen: List[str] = []
@@ -1915,13 +1916,15 @@ def instagram_handles(events: List["Event"]) -> List[str]:
         m = re.search(r"instagram\.com/([A-Za-z0-9_.]+)", link)
         if m and m.group(1).lower() not in {"p", "reel", "explore", "stories"}:
             h = m.group(1)
-        if not h:
-            for needles, handle in rules:
+        found = [h] if h else []
+        if not found:
+            for needles, handles in rules:
                 if any(n in hay for n in needles):
-                    h = handle
+                    found = handles
                     break
-        if h and h.lower() not in {x.lower() for x in seen}:
-            seen.append(h)
+        for f in found:
+            if f.lower() not in {x.lower() for x in seen}:
+                seen.append(f)
     return seen
 
 
