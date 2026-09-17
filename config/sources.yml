@@ -588,6 +588,7 @@ organizer_social:
   - url: https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/
     match: ["southern indiana car & coffee", "4809 outer loop"]
   - url: https://www.facebook.com/groups/881422478573528/
+    instagram: crestview_carsandcoffee  # from Joel, 2026-09-17: 'Crestview Hills/NKY Cars and Coffee'
     match: ["crestview hills", "2751 dixie"]
   - url: https://www.facebook.com/events/1267308188591932/
     match: ["four bridges cruise"]
