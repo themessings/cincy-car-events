@@ -6245,12 +6245,49 @@ def write_csv(events: List[dict], path: str) -> None:
         "Attendance",
         "Source",
         "Event URL",
+        "Organizer Social",
     ]
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         w.writeheader()
         for ev in events:
             w.writerow(ev)
+
+
+# ─── Organizer social lookup ─────────────────────────────────────────────────
+# WHY. On 2026-09-17 Joel spotted a Graham Rahal Cars & Coffee still listed for a
+# date the organiser had moved a month earlier. Checking meant hunting for the
+# organiser's page from scratch, per event. Recurring series are exactly the
+# events that get rescheduled, and one link per series covers every row of it —
+# 17 series account for ~60% of the sheet. So each event carries its organiser's
+# Facebook/Instagram in its own column, and a date check becomes one click.
+#
+# The listing site we scrape carries NO organiser link (organizer: null in its
+# structured data; its only social links are its own), so this cannot be pulled
+# from the source — it is a curated table in config, matched by name or venue.
+ORGANIZER_SOCIAL_RULES: List[dict] = []
+
+
+def load_organizer_social_rules(cfg: dict) -> None:
+    global ORGANIZER_SOCIAL_RULES
+    rules = []
+    for entry in (cfg.get("organizer_social") or []):
+        url = clean_ws(str(entry.get("url", "")))
+        needles = [clean_ws(str(n)).lower() for n in (entry.get("match") or []) if clean_ws(str(n))]
+        if url and needles:
+            rules.append({"url": url, "match": needles})
+    ORGANIZER_SOCIAL_RULES = rules
+
+
+def lookup_organizer_social(title: str, location: str, event_url: str = "") -> str:
+    # An event whose own link already IS the organiser's page needs no lookup.
+    if re.search(r"(facebook|instagram)\.com", event_url or "", re.I):
+        return event_url
+    hay = f"{title} {location}".lower()
+    for rule in ORGANIZER_SOCIAL_RULES:
+        if any(n in hay for n in rule["match"]):
+            return rule["url"]
+    return ""
 
 
 def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = None) -> Tuple[List[dict], List[str]]:
@@ -6268,6 +6305,7 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         "Attendance",
         "Source",
         "Event URL",
+        "Organizer Social",
     ]
     alias_map = {
         "title": ["title", "event_title", "name", "Event Name", "event name"],
@@ -6345,6 +6383,9 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
         # Address is the full street address when we have one, else the venue text.
         normalized["Address"] = explicit_address or raw_location
         normalized["Event URL"] = pick_value(row, alias_map["link"])
+        normalized["Organizer Social"] = lookup_organizer_social(
+            normalized["Event Name"], normalized["Location"], normalized["Event URL"]
+        )
         normalized["Source"] = normalize_source(pick_value(row, alias_map["source"]) or "")
 
         closest_city = pick_value(row, alias_map["closest_city"])
@@ -6998,6 +7039,7 @@ def main():
     log(f"   APEX_SPREADSHEET_ID set? {'YES' if bool(os.getenv('APEX_SPREADSHEET_ID')) else 'NO'}")
 
     cfg = load_yaml(CONFIG_PATH)
+    load_organizer_social_rules(cfg)
     sources = cfg.get("sources", [])
     screenshots_dir = clean_ws(os.getenv("SCREENSHOTS_DIR") or "/screenshots")
     if os.path.isdir(screenshots_dir):

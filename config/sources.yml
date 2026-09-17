@@ -392,6 +392,77 @@ sources:
       start_time: "9:00 AM"
       end_time: "12:00 PM"
       url: https://www.facebook.com/events/3994106880896076/
+
+    # ── 2026-09-17 sweep ─────────────────────────────────────────────────────
+    # These seven had lived only on a hand-typed "Sheet2" tab that the collector
+    # never reads, so none of them ever reached the Events tab or the app. Two of
+    # the seven were also wrong (Graham Rahal 9/19 → 9/26 after the organiser
+    # postponed; Fairfield 9/30 → 9/20, a typo — 9/30 is a Wednesday in a Sunday
+    # series). Every date below was confirmed on the organiser's OWN page on
+    # 2026-09-17, and `url` is that page, so the next check is one click.
+
+    # Hocking Hills Cars & Coffee — 2026 schedule post on their Facebook page,
+    # 3 Mar 2026: all meets Saturday 9:00–11:30 AM at The Hungry Buffalo.
+    - title: Hocking Hills Cars & Coffee
+      location: The Hungry Buffalo, 12762 Grey St, Logan, OH 43138
+      city_state: Logan, OH
+      date: "2026-10-03"
+      start_time: "9:00 AM"
+      end_time: "11:30 AM"
+      url: https://www.facebook.com/HockingHillsCC
+    - title: Hocking Hills Cars & Coffee
+      location: The Hungry Buffalo, 12762 Grey St, Logan, OH 43138
+      city_state: Logan, OH
+      date: "2026-11-07"
+      start_time: "9:00 AM"
+      end_time: "11:30 AM"
+      url: https://www.facebook.com/HockingHillsCC
+
+    # Fairfield Cars and Coffee (sponsored by Bilstein) — Facebook group event
+    # "Bilstein Cars and Coffee September 2026", Sunday 9 AM–12 PM. 3rd Sundays.
+    - title: Fairfield Cars and Coffee
+      location: Thyssenkrupp Bilstein, 8695 Bilstein Blvd, Hamilton, OH 45015
+      city_state: Hamilton, OH
+      date: "2026-09-20"
+      start_time: "9:00 AM"
+      end_time: "12:00 PM"
+      url: https://www.facebook.com/groups/962325874974960
+    - title: Fairfield Cars and Coffee
+      location: Thyssenkrupp Bilstein, 8695 Bilstein Blvd, Hamilton, OH 45015
+      city_state: Hamilton, OH
+      date: "2026-10-18"
+      start_time: "9:00 AM"
+      end_time: "12:00 PM"
+      url: https://www.facebook.com/groups/962325874974960
+
+    # USB (Union Savings Bank) Cars & Coffee — 2026 schedule post on their
+    # Facebook page, 4 Mar 2026. NOTE: moved from Saturday mornings to Wednesday
+    # night Cruise-Ins 6–8 PM this year; the old pattern will look wrong.
+    - title: USB Cars & Coffee Cruise-In
+      location: Union Savings Bank, 8805 Governors Hill Dr, Cincinnati, OH 45249
+      city_state: Cincinnati, OH
+      date: "2026-10-14"
+      start_time: "6:00 PM"
+      end_time: "8:00 PM"
+      url: https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/
+
+    # Graham Rahal Performance — "Cars & Coffee Schedule Update" on Instagram,
+    # 12 Aug 2026: Sep 12 → Sep 26, Oct 24 unchanged. Also on Facebook at
+    # facebook.com/GrahamRahalPerformance.
+    - title: Graham Rahal Performance Cars & Coffee
+      location: Graham Rahal Performance, 10850 Creek Way, Zionsville, IN 46077
+      city_state: Zionsville, IN
+      date: "2026-09-26"
+      start_time: "9:00 AM"
+      end_time: "11:00 AM"
+      url: https://www.instagram.com/grahamrahalperformance
+    - title: Graham Rahal Performance Trunk or Treat
+      location: Graham Rahal Performance, 10850 Creek Way, Zionsville, IN 46077
+      city_state: Zionsville, IN
+      date: "2026-10-24"
+      start_time: "4:00 PM"
+      end_time: "6:00 PM"
+      url: https://www.instagram.com/grahamrahalperformance
 - type: facebook_page_events
   name: Facebook Page Events (Graph API sheet/env IDs)
 # Scrolls the logged-in Facebook "Most Recent" home feed and harvests event links.
@@ -487,3 +558,63 @@ sources:
   query: (site:trackrabbit.com OR site:scca.com) (autocross OR "track day" OR "time
     trial" OR rallycross) (Ohio OR Kentucky OR Indiana)
   max_results: 30
+
+# ─── Organizer social pages ───────────────────────────────────────────────────
+# Fills the "Organizer Social" column so a date check is one click instead of a
+# hunt. Matched by substring against "<event name> <location>", case-insensitive;
+# first hit wins. Recurring series are the events that get rescheduled, and 17
+# of them make up ~60% of the sheet, so this short table covers most of it.
+#
+# The listing site we scrape exposes NO organiser link (organizer: null in its
+# structured data), so this cannot be automated from the source — every entry
+# below was found and checked by hand on 2026-09-17. When adding one, match on
+# something that cannot collide: a venue address beats a generic name.
+# ⚠️ "Fairfield Cars and Coffee" on Facebook is a CALIFORNIA page (Journey
+# Coffee); the Ohio one is a group, sponsored by Bilstein — hence the group URL.
+organizer_social:
+  - url: https://www.facebook.com/cincinnaticarsandcoffee
+    match: ["circuit cafe", "2726 riverside"]
+  - url: https://www.facebook.com/ElementEatery/
+    match: ["cars at madison square", "5350 medpace"]
+  - url: https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/
+    match: ["southern indiana car & coffee", "4809 outer loop"]
+  - url: https://www.facebook.com/groups/881422478573528/
+    match: ["crestview hills", "2751 dixie"]
+  - url: https://www.facebook.com/events/1267308188591932/
+    match: ["four bridges cruise"]
+  - url: https://www.facebook.com/Lawrenceburgcarsandcoffee/
+    match: ["lawrenceburg cars", "68 doughty"]
+  - url: https://gravityrally.com/pages/2026-cancer-awareness-rally
+    match: ["cancer awareness rally"]
+  - url: https://corsarally.com/events/dragon/
+    match: ["corsa dragon rally"]
+  - url: https://www.facebook.com/p/Cammack-Station-Cruise-In-Friday-Nights-at-Cammack-100071862756345/
+    match: ["cammack station"]
+  # One organisation runs the Friday (Colins Coffee), Saturday (Olentangy) and
+  # Sunday (Westerville Starbucks) meets, so one page covers all three series.
+  - url: https://www.facebook.com/TheColumbusCarsandCoffee/
+    match: ["columbus cars", "3650 olentangy", "691 n. cleveland", "691 n cleveland"]
+  # Season reported as May 2 – Oct 2 in the Dayton press; listing-site rows on
+  # Oct 3 and Oct 24 may be stale — check the group before trusting them.
+  - url: https://www.facebook.com/groups/1456889491292111
+    match: ["kettering saturday night", "3205 woodman"]
+  - url: https://www.facebook.com/groups/664728148123633/
+    match: ["lunch cruise", "1611 polaris"]
+  - url: https://www.facebook.com/CruisingFranklinIndiana/
+    match: ["kit haymond", "237 w monroe"]
+  - url: https://www.facebook.com/LibertyCenterOhio/
+    match: ["liberty center cars", "7140 taylor", "7160 taylor"]
+  - url: https://www.facebook.com/IndyCarsandCoffee/
+    match: ["indianapolis cars and coffee", "indianapolis cars & coffee", "9111 haverstick", "keystone at the crossing", "9225 priority way"]
+  - url: https://www.facebook.com/HockingHillsCC
+    match: ["hocking hills cars", "12762 grey"]
+  - url: https://www.facebook.com/groups/962325874974960
+    match: ["fairfield cars and coffee", "8695 bilstein"]
+  - url: https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/
+    match: ["usb cars", "8805 governors hill"]
+  - url: https://www.instagram.com/grahamrahalperformance
+    match: ["graham rahal", "10850 creek way"]
+  - url: https://www.facebook.com/profile.php?id=61580880012844
+    match: ["euro cars and cocoa", "600 w loveland"]
+  # Not found (2026-09-17): "2nd Saturday Car Cruise" Washington Court House —
+  # sponsored by a local business, no page located. Add here if one turns up.
