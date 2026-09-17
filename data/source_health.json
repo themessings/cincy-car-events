@@ -2,23 +2,23 @@
   "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661044-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952448-04:00",
     "last_status": "ok",
-    "last_collected": 183
+    "last_collected": 107
   },
   "OVR PCA Social Events (ICS)": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661061-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952481-04:00",
     "last_status": "ok",
     "last_collected": 92
   },
   "iCloud Published Calendar (ICS)": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661070-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952499-04:00",
     "last_status": "ok",
-    "last_collected": 186
+    "last_collected": 176
   },
   "Google Sheet Events Import": {
     "ever_productive": true,
@@ -30,126 +30,126 @@
   "Manually Verified Events": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661079-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952515-04:00",
     "last_status": "ok",
     "last_collected": 1
   },
   "Facebook Page Events (Graph API sheet/env IDs)": {
     "ever_productive": false,
-    "consecutive_zero_runs": 14,
-    "last_run_iso": "2026-09-10T11:15:46.661089-04:00",
+    "consecutive_zero_runs": 15,
+    "last_run_iso": "2026-09-17T09:37:33.952531-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Facebook Feed Scroll": {
     "ever_productive": false,
-    "consecutive_zero_runs": 14,
-    "last_run_iso": "2026-09-10T11:15:46.661108-04:00",
+    "consecutive_zero_runs": 15,
+    "last_run_iso": "2026-09-17T09:37:33.952545-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Google Events (SerpAPI) [serpapi_google_events]": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661118-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952559-04:00",
     "last_status": "ok",
-    "last_collected": 1
+    "last_collected": 2
   },
   "Google Events - Dayton": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661130-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952576-04:00",
     "last_status": "ok",
     "last_collected": 2
   },
   "Google Events - Columbus": {
     "ever_productive": false,
-    "consecutive_zero_runs": 14,
-    "last_run_iso": "2026-09-10T11:15:46.661142-04:00",
+    "consecutive_zero_runs": 15,
+    "last_run_iso": "2026-09-17T09:37:33.952592-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Google Events - Louisville": {
     "ever_productive": true,
-    "consecutive_zero_runs": 3,
-    "last_run_iso": "2026-09-10T11:15:46.661155-04:00",
+    "consecutive_zero_runs": 0,
+    "last_run_iso": "2026-09-17T09:37:33.952607-04:00",
     "last_status": "ok",
-    "last_collected": 0
+    "last_collected": 1
   },
   "Google Events - Lexington": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661165-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952620-04:00",
     "last_status": "ok",
     "last_collected": 1
   },
   "Google Events - Indianapolis": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661176-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952634-04:00",
     "last_status": "ok",
     "last_collected": 2
   },
   "Eventbrite Cincy": {
     "ever_productive": false,
-    "consecutive_zero_runs": 14,
-    "last_run_iso": "2026-09-10T11:15:46.661187-04:00",
+    "consecutive_zero_runs": 15,
+    "last_run_iso": "2026-09-17T09:37:33.952647-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Meetup Cincy Cars": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661197-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952660-04:00",
     "last_status": "ok",
-    "last_collected": 24
+    "last_collected": 63
   },
   "Regional rallies": {
     "ever_productive": false,
-    "consecutive_zero_runs": 14,
-    "last_run_iso": "2026-09-10T11:15:46.661208-04:00",
+    "consecutive_zero_runs": 15,
+    "last_run_iso": "2026-09-17T09:37:33.952673-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "SCCA RoadRally + RallyCross": {
     "ever_productive": true,
-    "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661219-04:00",
+    "consecutive_zero_runs": 1,
+    "last_run_iso": "2026-09-17T09:37:33.952687-04:00",
     "last_status": "ok",
-    "last_collected": 3
+    "last_collected": 0
   },
   "American Rally Association (SOFR + regional)": {
     "ever_productive": false,
-    "consecutive_zero_runs": 14,
-    "last_run_iso": "2026-09-10T11:15:46.661243-04:00",
+    "consecutive_zero_runs": 15,
+    "last_run_iso": "2026-09-17T09:37:33.952700-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661255-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952713-04:00",
     "last_status": "ok",
     "last_collected": 1
   },
   "Eventbrite regional autos (SerpAPI)": {
     "ever_productive": true,
-    "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661266-04:00",
+    "consecutive_zero_runs": 1,
+    "last_run_iso": "2026-09-17T09:37:33.952727-04:00",
     "last_status": "ok",
-    "last_collected": 1
+    "last_collected": 0
   },
   "MotorsportReg regional autos": {
     "ever_productive": false,
-    "consecutive_zero_runs": 14,
-    "last_run_iso": "2026-09-10T11:15:46.661278-04:00",
+    "consecutive_zero_runs": 15,
+    "last_run_iso": "2026-09-17T09:37:33.952740-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "TrackRabbit + SCCA calendar discovery": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-09-10T11:15:46.661289-04:00",
+    "last_run_iso": "2026-09-17T09:37:33.952753-04:00",
     "last_status": "ok",
     "last_collected": 8
   }
