@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-09-17T11:15:44.037415-04:00",
-  "count": 299,
+  "generated_at_iso": "2026-09-17T15:21:15.373841-04:00",
+  "count": 313,
   "events": [
     {
       "Event Name": "Premier Car & Truck Cruise-In",
@@ -15,7 +15,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/premier-car-truck-cruise-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/premier-car-truck-cruise-in",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Northridge Lions Club Cruise In",
@@ -30,7 +31,24 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/northridge-lions-club-cruise-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/northridge-lions-club-cruise-in",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "Alexandria Cruise-In",
+      "Date": "2026-09-17",
+      "Start Time": "5:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "7001 Alexandria Pike, Alexandria, KY 41001",
+      "Address": "7001 Alexandria Pike, Alexandria, KY 41001",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/alexandria-cruise-in-2",
+      "Organizer Social": ""
     },
     {
       "Event Name": "The Hoosier 2026 Vintage Wheels Swap Meet & Show",
@@ -45,7 +63,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/the-hoosier-2026-vintage-wheels-swap-meet-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/the-hoosier-2026-vintage-wheels-swap-meet-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cruise-In to Butler Township",
@@ -60,7 +79,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cruise-in-to-butler-township-2026-09-18"
+      "Event URL": "https://carsandcoffeeevents.com/events/cruise-in-to-butler-township-2026-09-18",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Car Cruise-In and Kit Haymond Concert",
@@ -75,7 +95,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-09-18"
+      "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-09-18",
+      "Organizer Social": "https://www.facebook.com/CruisingFranklinIndiana/"
     },
     {
       "Event Name": "Shepherdsville Cruise-In",
@@ -90,7 +111,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/shepherdsville-cruise-in-2"
+      "Event URL": "https://carsandcoffeeevents.com/events/shepherdsville-cruise-in-2",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Austin Dairy Queen Cruise In",
@@ -105,7 +127,24 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/austin-dairy-queen-cruise-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/austin-dairy-queen-cruise-in",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "Wheels & Whoppers",
+      "Date": "2026-09-18",
+      "Start Time": "5:00 PM",
+      "End Time": "10:00 PM",
+      "Location": "47 East Main Street, North Vernon, IN 47265",
+      "Address": "47 East Main Street, North Vernon, IN 47265",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/wheels-whoppers",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Igniters Street Rods Friday Night 2026 Summer Cruise-Ins",
@@ -120,7 +159,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/igniters-street-rods-friday-night-summer-cruise-ins-2026-09-18"
+      "Event URL": "https://carsandcoffeeevents.com/events/igniters-street-rods-friday-night-summer-cruise-ins-2026-09-18",
+      "Organizer Social": ""
     },
     {
       "Event Name": "KB Octane Presents: Rip Rap Friday Night Cruise-In",
@@ -135,7 +175,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/kb-octane-presents-rip-rap-friday-night-cruise-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/kb-octane-presents-rip-rap-friday-night-cruise-in",
+      "Organizer Social": ""
     },
     {
       "Event Name": "🍾 Preview Party for Dayton Concours d'Elegance",
@@ -150,7 +191,8 @@
       "Popularity": "58",
       "Attendance": "",
       "Source": "Google Events - Dayton",
-      "Event URL": "https://allevents.in/dayton/car-shows"
+      "Event URL": "https://allevents.in/dayton/car-shows",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Indianapolis Cars & Coffee - Hosted by Keystone at the Crossing Indianapolis",
@@ -165,7 +207,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/2179168556173345/"
+      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/2179168556173345/",
+      "Organizer Social": "https://facebook.com/events/s/indianapolis-cars-coffee-hoste/2179168556173345/"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -180,7 +223,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/",
+      "Organizer Social": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -195,7 +239,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/groups/881422478573528/"
     },
     {
       "Event Name": "Liberty Center Cars and Coffee",
@@ -210,7 +255,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-09-19"
+      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-09-19",
+      "Organizer Social": "https://www.facebook.com/LibertyCenterOhio/"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -225,7 +271,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-19"
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-19",
+      "Organizer Social": "https://www.facebook.com/Lawrenceburgcarsandcoffee/"
     },
     {
       "Event Name": "Indianapolis Cars and Coffee",
@@ -240,7 +287,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/IndyCarsandCoffee/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -255,7 +303,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
@@ -270,7 +319,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20"
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
       "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
@@ -285,7 +335,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-starbucks-in-westerville-2026-06-20"
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-starbucks-in-westerville-2026-06-20",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
       "Event Name": "Tommy’s Mccar Show Sponsored By Mcdonald’s",
@@ -300,7 +351,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/tommys-mccar-show-sponsored-by-mcdonalds"
+      "Event URL": "https://carsandcoffeeevents.com/events/tommys-mccar-show-sponsored-by-mcdonalds",
+      "Organizer Social": ""
     },
     {
       "Event Name": "9Lincoln’s 3rd Annual Car Show",
@@ -315,7 +367,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/9lincolns-car-show-2026-09-19"
+      "Event URL": "https://carsandcoffeeevents.com/events/9lincolns-car-show-2026-09-19",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Winchester Cars & Coffee",
@@ -330,7 +383,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/winchester-cars-coffee"
+      "Event URL": "https://carsandcoffeeevents.com/events/winchester-cars-coffee",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars & Coffee in Circleville",
@@ -345,7 +399,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-in-circleville"
+      "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-in-circleville",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Waldron Lodge #217 Presents: Third Annual Car Show",
@@ -360,7 +415,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/waldron-lodge-217-presents-third-annual-car-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/waldron-lodge-217-presents-third-annual-car-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Hog Heaven Cruise-in",
@@ -375,7 +431,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/hog-heaven-cruise-in-2026-09-19"
+      "Event URL": "https://carsandcoffeeevents.com/events/hog-heaven-cruise-in-2026-09-19",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -390,7 +447,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Midwest Fest 10 Car & Bike Show",
@@ -405,7 +463,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/midwest-fest-10-car-bike-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/midwest-fest-10-car-bike-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Downtown Union City Cruse in",
@@ -420,7 +479,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/downtown-cruse-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/downtown-cruse-in",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Delhi Street Rodders Car Show",
@@ -435,7 +495,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/delhi-street-rodders-car-show/1504155877799366/"
+      "Event URL": "https://facebook.com/events/s/delhi-street-rodders-car-show/1504155877799366/",
+      "Organizer Social": "https://facebook.com/events/s/delhi-street-rodders-car-show/1504155877799366/"
     },
     {
       "Event Name": "Caesar Ford Ranger Classic",
@@ -450,7 +511,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/caesar-ford-ranger-classic-2026-09-19"
+      "Event URL": "https://carsandcoffeeevents.com/events/caesar-ford-ranger-classic-2026-09-19",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Kettering Saturday Night Cruise-In",
@@ -465,7 +527,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-19"
+      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-19",
+      "Organizer Social": "https://www.facebook.com/groups/1456889491292111"
     },
     {
       "Event Name": "Ohio River Street Rodders Cruise-In",
@@ -480,7 +543,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/ohio-river-street-rodders-cruise-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/ohio-river-street-rodders-cruise-in",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Mid Ohio Cruisers 2026 Car Show",
@@ -495,7 +559,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/mid-ohio-cruisers-2026-car-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/mid-ohio-cruisers-2026-car-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Clarksville Steak ‘N Shake Cruise-In",
@@ -510,7 +575,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/clarksville-steak-n-shake-cruise-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/clarksville-steak-n-shake-cruise-in",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Fifth Annual Speak! for the Unspoken Car Show",
@@ -525,7 +591,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/fifth-speak-for-the-unspoken-car-show-2026-09-20"
+      "Event URL": "https://carsandcoffeeevents.com/events/fifth-speak-for-the-unspoken-car-show-2026-09-20",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -540,7 +607,40 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
+    },
+    {
+      "Event Name": "McCordsville Cars & Coffee",
+      "Date": "2026-09-20",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "5811 Main St., McCordsville, IN 46055",
+      "Address": "5811 Main St., McCordsville, IN 46055",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/mccordsville-cars-coffee",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "Fairfield Cars and Coffee",
+      "Date": "2026-09-20",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "8695 Bilstein Blvd, Hamilton, OH 45015",
+      "Address": "8695 Bilstein Blvd, Hamilton, OH 45015",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "manual_verified",
+      "Event URL": "https://www.facebook.com/groups/962325874974960",
+      "Organizer Social": "https://www.facebook.com/groups/962325874974960"
     },
     {
       "Event Name": "Friends of Ohio K9 5th Annual Car Show",
@@ -555,7 +655,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/friends-of-ohio-k9-car-show-2026-09-20"
+      "Event URL": "https://carsandcoffeeevents.com/events/friends-of-ohio-k9-car-show-2026-09-20",
+      "Organizer Social": ""
     },
     {
       "Event Name": "MIDWESTFEST 10 CAR & BIKE SHOW",
@@ -570,7 +671,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/midwestfest-10-car-bike-show-2026-09-20"
+      "Event URL": "https://carsandcoffeeevents.com/events/midwestfest-10-car-bike-show-2026-09-20",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Historic Cammack Station Charity Cruise-In",
@@ -585,7 +687,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-20"
+      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-20",
+      "Organizer Social": "https://www.facebook.com/p/Cammack-Station-Cruise-In-Friday-Nights-at-Cammack-100071862756345/"
     },
     {
       "Event Name": "Pharaohs of Kentucky Hooter’s Car Show",
@@ -600,7 +703,24 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/pharaohs-of-kentucky-and-hooters-hooters-car-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/pharaohs-of-kentucky-and-hooters-hooters-car-show",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "Tommy And Da Fam Cruise-In",
+      "Date": "2026-09-22",
+      "Start Time": "5:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "200 Byrd Way, Greenwood, IN 46142",
+      "Address": "200 Byrd Way, Greenwood, IN 46142",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/tommy-and-da-fam-cruise-in",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -615,7 +735,24 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/events/1267308188591932/"
+    },
+    {
+      "Event Name": "Warehouse Wednesdays",
+      "Date": "2026-09-23",
+      "Start Time": "5:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "4114 Reas Lane, New Albany, IN 47150",
+      "Address": "4114 Reas Lane, New Albany, IN 47150",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/warehouse-wednesdays",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Historic Cammack Station Charity Cruise-In",
@@ -630,7 +767,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-25"
+      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-25",
+      "Organizer Social": "https://www.facebook.com/p/Cammack-Station-Cruise-In-Friday-Nights-at-Cammack-100071862756345/"
     },
     {
       "Event Name": "Roundtown Cruisers Free For Cruisers And Spectators!",
@@ -645,7 +783,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/roundtown-cruisers-free-for-cruisers-and-spectators"
+      "Event URL": "https://carsandcoffeeevents.com/events/roundtown-cruisers-free-for-cruisers-and-spectators",
+      "Organizer Social": ""
     },
     {
       "Event Name": "2ND ANNUAL BOONESBORO RALLY",
@@ -660,7 +799,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "Google Events - Lexington",
-      "Event URL": "https://allevents.in/lexington/car-shows"
+      "Event URL": "https://allevents.in/lexington/car-shows",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -675,7 +815,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/",
+      "Organizer Social": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -690,7 +831,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/groups/881422478573528/"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -705,7 +847,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-26"
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-26",
+      "Organizer Social": "https://www.facebook.com/Lawrenceburgcarsandcoffee/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -720,7 +863,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Hoosier Mustang Club Fall Festival Car & Truck Show",
@@ -735,7 +879,8 @@
       "Popularity": "60",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/hoosier-mustang-club-fall-festival-car-truck-show-2026-09-26"
+      "Event URL": "https://carsandcoffeeevents.com/events/hoosier-mustang-club-fall-festival-car-truck-show-2026-09-26",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Bulldog Auto Show",
@@ -750,7 +895,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/bulldog-auto-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/bulldog-auto-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Mid-West Dayton Club Car Show",
@@ -765,7 +911,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/mid-west-dayton-club-car-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/mid-west-dayton-club-car-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -780,7 +927,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Generations Church First Annual Car Show",
@@ -795,7 +943,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/generations-church-first-car-show-2026-09-26"
+      "Event URL": "https://carsandcoffeeevents.com/events/generations-church-first-car-show-2026-09-26",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Thundercruise! - Car & Bike Meet",
@@ -810,7 +959,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/thundercruise-car-bike-meet/1182278670391763/"
+      "Event URL": "https://facebook.com/events/s/thundercruise-car-bike-meet/1182278670391763/",
+      "Organizer Social": "https://facebook.com/events/s/thundercruise-car-bike-meet/1182278670391763/"
     },
     {
       "Event Name": "Kettering Saturday Night Cruise-In",
@@ -825,7 +975,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-26"
+      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-26",
+      "Organizer Social": "https://www.facebook.com/groups/1456889491292111"
     },
     {
       "Event Name": "2nd Saturday Car Cruise, Food Truck & Concerts",
@@ -840,7 +991,24 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-09-26"
+      "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-09-26",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "Midnight Motors Auto Club Bi Weekly Meet",
+      "Date": "2026-09-26",
+      "Start Time": "6:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "674 Eastern Bypass, Richmond, KY 40475",
+      "Address": "674 Eastern Bypass, Richmond, KY 40475",
+      "Closest City": "Lexington, KY",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "24",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/midnight-motors-auto-club-bi-weekly-meet",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Liberty Center Cars & Coffee",
@@ -855,7 +1023,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-coffee"
+      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-coffee",
+      "Organizer Social": "https://www.facebook.com/LibertyCenterOhio/"
     },
     {
       "Event Name": "Cincinnati VW/Porsche Reunion 2026, Fresh Air",
@@ -870,7 +1039,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cincinnati-vwporsche-reunion-2/758822510614568/"
+      "Event URL": "https://facebook.com/events/s/cincinnati-vwporsche-reunion-2/758822510614568/",
+      "Organizer Social": "https://facebook.com/events/s/cincinnati-vwporsche-reunion-2/758822510614568/"
     },
     {
       "Event Name": "35th Annual VW & Porsche Reunion Show",
@@ -885,7 +1055,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/35th-annual-vw-porsche-reunion/1779246243286414/"
+      "Event URL": "https://facebook.com/events/s/35th-annual-vw-porsche-reunion/1779246243286414/",
+      "Organizer Social": "https://facebook.com/events/s/35th-annual-vw-porsche-reunion/1779246243286414/"
     },
     {
       "Event Name": "Cars & Coffee",
@@ -900,7 +1071,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-32"
+      "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-32",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -915,7 +1087,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Wyler FastLane 2026",
@@ -930,7 +1103,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/wyler-fastlane-2026/1029342319990551/"
+      "Event URL": "https://facebook.com/events/s/wyler-fastlane-2026/1029342319990551/",
+      "Organizer Social": "https://facebook.com/events/s/wyler-fastlane-2026/1029342319990551/"
     },
     {
       "Event Name": "7th Annual James Miller Memorial Car Show",
@@ -945,7 +1119,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/james-miller-memorial-car-show-2026-09-27"
+      "Event URL": "https://carsandcoffeeevents.com/events/james-miller-memorial-car-show-2026-09-27",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Concours Devou 2026",
@@ -960,7 +1135,8 @@
       "Popularity": "58",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/concours-devou-2026/1034478555767894/"
+      "Event URL": "https://facebook.com/events/s/concours-devou-2026/1034478555767894/",
+      "Organizer Social": "https://facebook.com/events/s/concours-devou-2026/1034478555767894/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -975,7 +1151,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/events/1267308188591932/"
     },
     {
       "Event Name": "Rockin’ Randall’s Cruise-In",
@@ -990,7 +1167,24 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/rockin-randalls-cruise-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/rockin-randalls-cruise-in",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "McDonald’s Sellersburg 2026 Summer Car Shows",
+      "Date": "2026-10-02",
+      "Start Time": "6:00 PM",
+      "End Time": "6:00 PM",
+      "Location": "102 Enterprise Way, Sellersburg, IN 47172",
+      "Address": "102 Enterprise Way, Sellersburg, IN 47172",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/mcdonalds-sellersburg-2026-summer-car-show-schedule",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1005,7 +1199,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/groups/881422478573528/"
     },
     {
       "Event Name": "Restoration Church 6th Annual Car Show 2026",
@@ -1020,7 +1215,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/restoration-church-6th-annual-car-show-2026"
+      "Event URL": "https://carsandcoffeeevents.com/events/restoration-church-6th-annual-car-show-2026",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -1035,7 +1231,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-03"
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-03",
+      "Organizer Social": "https://www.facebook.com/Lawrenceburgcarsandcoffee/"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -1050,7 +1247,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859389604399/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859389604399/",
+      "Organizer Social": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859389604399/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1065,7 +1263,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
@@ -1080,22 +1279,24 @@
       "Popularity": "42",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-10-03"
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-10-03",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
-      "Event Name": "Muncie Cars & Coffee 2026 – Season 10",
+      "Event Name": "Muncie Cars & Coffee 2026 - Season 10",
       "Date": "2026-10-03",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "100 E Charles St, Muncie, IN 47302",
-      "Address": "100 E Charles St, Muncie, IN 47302",
+      "Location": "100 E Charles St, Muncie, IN 47305",
+      "Address": "100 E Charles St, Muncie, IN 47305",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-10-03"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Rpm Transmissions 5th Car Show",
@@ -1110,7 +1311,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/rpm-transmissions-car-show-2026-10-03"
+      "Event URL": "https://carsandcoffeeevents.com/events/rpm-transmissions-car-show-2026-10-03",
+      "Organizer Social": ""
     },
     {
       "Event Name": "6th Annual Car Show and Gun Giveaway",
@@ -1125,7 +1327,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/6th-annual-car-show-and-gun-giveaway"
+      "Event URL": "https://carsandcoffeeevents.com/events/6th-annual-car-show-and-gun-giveaway",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -1140,7 +1343,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event",
@@ -1155,7 +1359,8 @@
       "Popularity": "34",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); OVR PCA Social Events (ICS)",
-      "Event URL": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
+      "Event URL": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/",
+      "Organizer Social": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
     },
     {
       "Event Name": "Bluegrass Outlawz Car Meet",
@@ -1170,7 +1375,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/bluegrass-outlawz-car-meet-2026-10-03"
+      "Event URL": "https://carsandcoffeeevents.com/events/bluegrass-outlawz-car-meet-2026-10-03",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Kettering Saturday Night Cruise-In",
@@ -1185,7 +1391,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-10-03"
+      "Event URL": "https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-10-03",
+      "Organizer Social": "https://www.facebook.com/groups/1456889491292111"
     },
     {
       "Event Name": "Shelby County Car Club Presents Monthly Cruise-In",
@@ -1200,7 +1407,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/shelby-county-car-club-presents-monthly-cruise-in-2026-10-03"
+      "Event URL": "https://carsandcoffeeevents.com/events/shelby-county-car-club-presents-monthly-cruise-in-2026-10-03",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1215,7 +1423,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "5th Floyd Central Band Car Show 2026",
@@ -1230,7 +1439,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/5th-floyd-central-band-car-show-2026"
+      "Event URL": "https://carsandcoffeeevents.com/events/5th-floyd-central-band-car-show-2026",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -1245,7 +1455,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/events/1267308188591932/"
     },
     {
       "Event Name": "RPM Performance Cruise-In",
@@ -1260,7 +1471,24 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/rpm-performance-cruise-in"
+      "Event URL": "https://carsandcoffeeevents.com/events/rpm-performance-cruise-in",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "Indiana Cruisers Monthly Cruise The Square",
+      "Date": "2026-10-09",
+      "Start Time": "5:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "Historical Charlestown City Square Charlestown IN 47111",
+      "Address": "Main Cross Street, Charlestown, IN 47111",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "24",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/indiana-cruisers-monthly-cruise-the-square",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -1275,7 +1503,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/",
+      "Organizer Social": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1290,7 +1519,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/groups/881422478573528/"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -1305,7 +1535,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-10",
+      "Organizer Social": "https://www.facebook.com/Lawrenceburgcarsandcoffee/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1320,7 +1551,24 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
+    },
+    {
+      "Event Name": "Fly-In / Drive-In Breakfast",
+      "Date": "2026-10-10",
+      "Start Time": "8:30 AM",
+      "End Time": "10:30 AM",
+      "Location": "1924 Boston Rd, Bardstown, KY 40004",
+      "Address": "1924 Boston Rd, Bardstown, KY 40004",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/fly-in-drive-in-breakfast",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Richmond Ky Cars & Coffee",
@@ -1335,7 +1583,24 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/richmond-ky-cars-coffee-2026-10-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/richmond-ky-cars-coffee-2026-10-10",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "Springfield Cars and Coffee",
+      "Date": "2026-10-10",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "201 E North St, Springfield, OH 45501",
+      "Address": "201 E North St, Springfield, OH 45501",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/springfield-cars-and-coffee",
+      "Organizer Social": ""
     },
     {
       "Event Name": "2nd annual David Landman memorial car show!",
@@ -1350,7 +1615,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/david-landman-memorial-car-show-2026-10-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/david-landman-memorial-car-show-2026-10-10",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Friends for Paws Car Show",
@@ -1365,7 +1631,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/friends-for-paws-car-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/friends-for-paws-car-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -1380,7 +1647,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Merchant’s Cruise-in – Fort Street Car Classics",
@@ -1395,7 +1663,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/merchants-cruise-in-fort-street-car-classics-2026-10-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/merchants-cruise-in-fort-street-car-classics-2026-10-10",
+      "Organizer Social": ""
     },
     {
       "Event Name": "2nd Saturday Car Cruise, Food Truck & Concerts",
@@ -1410,7 +1679,24 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-10-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/saturday-car-cruise-food-truck-concerts-2026-10-10",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "'Cruise In' Car Show",
+      "Date": "2026-10-11",
+      "Start Time": "12:00 AM",
+      "End Time": "12:00 AM",
+      "Location": "4521 Spring Grove Ave, Cincinnati, OH 45232-1934, United States, Cincinnati, OH",
+      "Address": "4521 Spring Grove Ave, Cincinnati, OH 45232-1934, United States, Cincinnati, OH",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Google Events (SerpAPI) [serpapi_google_events]",
+      "Event URL": "https://allevents.in/cincinnati/car-shows",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1425,7 +1711,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "'Cruise In' Car Show",
@@ -1440,7 +1727,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/cruise-in-car-show/1439212361072214/"
+      "Event URL": "https://facebook.com/events/s/cruise-in-car-show/1439212361072214/",
+      "Organizer Social": "https://facebook.com/events/s/cruise-in-car-show/1439212361072214/"
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -1455,7 +1743,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-10-14"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-10-14",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -1470,7 +1759,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/events/1267308188591932/"
     },
     {
       "Event Name": "Daredevil Brewing Co. Speedway Cruise-In",
@@ -1485,7 +1775,24 @@
       "Popularity": "40",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/daredevil-brewing-co-speedway-cruise-in-2026-10-14"
+      "Event URL": "https://carsandcoffeeevents.com/events/daredevil-brewing-co-speedway-cruise-in-2026-10-14",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "USB Cars & Coffee Cruise-In",
+      "Date": "2026-10-14",
+      "Start Time": "6:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "8805 Governors Hill Dr, Cincinnati, OH 45249",
+      "Address": "8805 Governors Hill Dr, Cincinnati, OH 45249",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "8",
+      "Attendance": "",
+      "Source": "manual_verified",
+      "Event URL": "https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/",
+      "Organizer Social": "https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/"
     },
     {
       "Event Name": "Lawrenceburg Cars & Coffee",
@@ -1500,7 +1807,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-17"
+      "Event URL": "https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-10-17",
+      "Organizer Social": "https://www.facebook.com/Lawrenceburgcarsandcoffee/"
     },
     {
       "Event Name": "Liberty Center Cars and Coffee",
@@ -1515,7 +1823,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-10-17"
+      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-10-17",
+      "Organizer Social": "https://www.facebook.com/LibertyCenterOhio/"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -1530,7 +1839,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/",
+      "Organizer Social": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1545,7 +1855,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/groups/881422478573528/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1560,7 +1871,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Cars and Coffee - Columbus",
@@ -1575,7 +1887,8 @@
       "Popularity": "34",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/cars-and-coffee-columbus"
+      "Event URL": "https://carsandcoffeeevents.com/events/cars-and-coffee-columbus",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Lighthouse Church Car Show",
@@ -1590,7 +1903,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/lighthouse-church-car-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/lighthouse-church-car-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -1605,7 +1919,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Sidney First Naz Fall Harvest Festival & Anything On Wheels Car Cruise",
@@ -1620,7 +1935,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/sidney-first-naz-fall-harvest-festival-anything-on-wheels-car-cruise-2026-10-17"
+      "Event URL": "https://carsandcoffeeevents.com/events/sidney-first-naz-fall-harvest-festival-anything-on-wheels-car-cruise-2026-10-17",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Capital City Classic Auto Club Classic Car Cruise-In",
@@ -1635,7 +1951,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/capital-city-classic-auto-club-classic-car-cruise-in-2026-10-17"
+      "Event URL": "https://carsandcoffeeevents.com/events/capital-city-classic-auto-club-classic-car-cruise-in-2026-10-17",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 1",
@@ -1650,7 +1967,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
+      "Event URL": "https://gravityrally.com/pages/2026-cancer-awareness-rally",
+      "Organizer Social": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1665,7 +1983,24 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
+    },
+    {
+      "Event Name": "Fairfield Cars and Coffee",
+      "Date": "2026-10-18",
+      "Start Time": "9:00 AM",
+      "End Time": "12:00 PM",
+      "Location": "8695 Bilstein Blvd, Hamilton, OH 45015",
+      "Address": "8695 Bilstein Blvd, Hamilton, OH 45015",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "manual_verified",
+      "Event URL": "https://www.facebook.com/groups/962325874974960",
+      "Organizer Social": "https://www.facebook.com/groups/962325874974960"
     },
     {
       "Event Name": "Historic Cammack Station Charity Cruise-In",
@@ -1680,7 +2015,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-10-18"
+      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-10-18",
+      "Organizer Social": "https://www.facebook.com/p/Cammack-Station-Cruise-In-Friday-Nights-at-Cammack-100071862756345/"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 2",
@@ -1695,7 +2031,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 3",
@@ -1710,7 +2047,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 4",
@@ -1725,22 +2063,24 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
       "Date": "2026-10-21",
       "Start Time": "5:00 PM",
       "End Time": "7:00 PM",
-      "Location": "8300 Four Bridges Drive, Liberty Township, OH 45044",
-      "Address": "8300 Four Bridges Drive, Liberty Township, OH 45044",
+      "Location": "8300 Four Bridges Dr., Liberty Township, OH 45044",
+      "Address": "8300 Four Bridges Dr., Liberty Township, OH 45044",
       "Closest City": "Cincinnati, OH",
-      "Callout": "",
+      "Callout": "Registration required",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/four-bridges-cruise-in",
+      "Organizer Social": "https://www.facebook.com/events/1267308188591932/"
     },
     {
       "Event Name": "Cancer Awareness Rally – Day 5",
@@ -1755,7 +2095,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": "https://gravityrally.com/pages/2026-cancer-awareness-rally"
     },
     {
       "Event Name": "Fall 2026 Rennsport Dragon Rally®",
@@ -1770,7 +2111,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/"
+      "Event URL": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/",
+      "Organizer Social": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -1785,7 +2127,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/",
+      "Organizer Social": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Indianapolis Cars & Coffee [Trunk-or-Treat] 👻🎃🍂🚗 - Hosted by Model 1 and Lakefront at Keystone",
@@ -1800,7 +2143,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-trunk/1305039368396062/"
+      "Event URL": "https://facebook.com/events/s/indianapolis-cars-coffee-trunk/1305039368396062/",
+      "Organizer Social": "https://facebook.com/events/s/indianapolis-cars-coffee-trunk/1305039368396062/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1815,7 +2159,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/groups/881422478573528/"
     },
     {
       "Event Name": "Indianapolis Cars and Coffee - Trunk-or-treat",
@@ -1830,7 +2175,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/IndyCarsandCoffee/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1845,7 +2191,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Danville Professional Firefighters Car Show",
@@ -1860,7 +2207,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/danville-professional-firefighters-car-show"
+      "Event URL": "https://carsandcoffeeevents.com/events/danville-professional-firefighters-car-show",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -1875,7 +2223,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1890,7 +2239,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
@@ -1905,7 +2255,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/events/1267308188591932/"
     },
     {
       "Event Name": "Historic Cammack Station Charity Cruise-In",
@@ -1920,7 +2271,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-10-30"
+      "Event URL": "https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-10-30",
+      "Organizer Social": "https://www.facebook.com/p/Cammack-Station-Cruise-In-Friday-Nights-at-Cammack-100071862756345/"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -1935,7 +2287,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/",
+      "Organizer Social": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Cincinnati Cars and Coffee @ Crestview Hills",
@@ -1950,7 +2303,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/groups/881422478573528/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -1965,7 +2319,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -1980,7 +2335,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Steels & Wheels Halloween Car Show",
@@ -1995,7 +2351,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/steels-wheels-halloween-car-show-2026-10-31"
+      "Event URL": "https://carsandcoffeeevents.com/events/steels-wheels-halloween-car-show-2026-10-31",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2010,7 +2367,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 1",
@@ -2025,7 +2383,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://corsarally.com/events/dragon/"
+      "Event URL": "https://corsarally.com/events/dragon/",
+      "Organizer Social": "https://corsarally.com/events/dragon/"
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -2040,7 +2399,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
+      "Event URL": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/",
+      "Organizer Social": "https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2055,7 +2415,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
@@ -2070,7 +2431,8 @@
       "Popularity": "42",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-11-07"
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-11-07",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 2",
@@ -2085,7 +2447,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": "https://corsarally.com/events/dragon/"
     },
     {
       "Event Name": "READ DETAILS!!! Coldwell Banker 4th Annual Car & Truck Show",
@@ -2100,7 +2463,8 @@
       "Popularity": "46",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://facebook.com/events/s/read-details-coldwell-banker-4/1416195726981667/"
+      "Event URL": "https://facebook.com/events/s/read-details-coldwell-banker-4/1416195726981667/",
+      "Organizer Social": "https://facebook.com/events/s/read-details-coldwell-banker-4/1416195726981667/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2115,7 +2479,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2130,7 +2495,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 3",
@@ -2145,7 +2511,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": "https://corsarally.com/events/dragon/"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 4",
@@ -2160,7 +2527,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": "https://corsarally.com/events/dragon/"
     },
     {
       "Event Name": "Corsa Dragon Rally – Day 5",
@@ -2175,7 +2543,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": "https://corsarally.com/events/dragon/"
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -2190,7 +2559,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-11-11"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-11-11",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2205,7 +2575,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2220,7 +2591,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2235,7 +2607,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2250,7 +2623,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2265,7 +2639,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2280,7 +2655,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2295,7 +2671,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Ohio Ford Expo",
@@ -2310,7 +2687,8 @@
       "Popularity": "62",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/ohio-ford-expo"
+      "Event URL": "https://carsandcoffeeevents.com/events/ohio-ford-expo",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2325,7 +2703,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
@@ -2340,7 +2719,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
@@ -2355,7 +2735,8 @@
       "Popularity": "42",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-12-05"
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-12-05",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2370,7 +2751,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -2385,7 +2767,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-12-09"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-12-09",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Car Cruise-In and Kit Haymond Concert",
@@ -2400,7 +2783,8 @@
       "Popularity": "20",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-12-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-12-10",
+      "Organizer Social": "https://www.facebook.com/CruisingFranklinIndiana/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2415,7 +2799,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2430,7 +2815,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2445,7 +2831,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
@@ -2460,7 +2847,8 @@
       "Popularity": "42",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2027-01-02"
+      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2027-01-02",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2475,7 +2863,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2490,7 +2879,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -2505,7 +2895,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-01-13"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-01-13",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2520,7 +2911,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2535,7 +2927,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2550,7 +2943,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2565,7 +2959,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -2580,7 +2975,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-02-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-02-10",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2595,7 +2991,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2610,7 +3007,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2625,7 +3023,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2640,7 +3039,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -2655,7 +3055,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-03-10"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-03-10",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2670,7 +3071,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2685,7 +3087,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Ohio Challenge RoadRally (SCCA)",
@@ -2700,7 +3103,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
+      "Event URL": "https://www.scca.com/pages/road-rally",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2715,7 +3119,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Ohio Challenge RoadRally (SCCA)",
@@ -2730,7 +3135,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
+      "Event URL": "https://www.scca.com/pages/road-rally",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2745,7 +3151,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2760,7 +3167,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -2775,7 +3183,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-04-14"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-04-14",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "KYANA Swap Meet",
@@ -2790,7 +3199,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "Google Events - Louisville",
-      "Event URL": "https://www.kyanaswapmeet.com/"
+      "Event URL": "https://www.kyanaswapmeet.com/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Hoosier Rally (SCCA)",
@@ -2805,7 +3215,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
+      "Event URL": "https://www.scca.com/pages/road-rally",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2820,7 +3231,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Hoosier Rally (SCCA)",
@@ -2835,7 +3247,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
+      "Event URL": "https://www.scca.com/pages/road-rally",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2850,7 +3263,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Buckeye RoadRally (SCCA)",
@@ -2865,7 +3279,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
+      "Event URL": "https://www.scca.com/pages/road-rally",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2880,7 +3295,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Buckeye RoadRally (SCCA)",
@@ -2895,7 +3311,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
+      "Event URL": "https://www.scca.com/pages/road-rally",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Corsa America Spring Rally – Day 1",
@@ -2910,7 +3327,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
+      "Event URL": "https://corsarally.com/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Corsa America Spring Rally – Day 2",
@@ -2925,7 +3343,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
+      "Event URL": "https://corsarally.com/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Corsa America Spring Rally – Day 1",
@@ -2940,7 +3359,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
+      "Event URL": "https://corsarally.com/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Corsa America Spring Rally – Day 3",
@@ -2955,7 +3375,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
+      "Event URL": "https://corsarally.com/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Corsa America Spring Rally – Day 2",
@@ -2970,7 +3391,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
+      "Event URL": "https://corsarally.com/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Corsa America Spring Rally – Day 3",
@@ -2985,7 +3407,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://corsarally.com/"
+      "Event URL": "https://corsarally.com/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3000,7 +3423,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -3015,7 +3439,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-05-12"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-05-12",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
@@ -3030,7 +3455,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
+      "Event URL": "https://www.scca.com/pages/road-rally",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3045,7 +3471,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Mid-Ohio RoadRally (SCCA)",
@@ -3060,7 +3487,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.scca.com/pages/road-rally"
+      "Event URL": "https://www.scca.com/pages/road-rally",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3075,7 +3503,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3090,7 +3519,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "RallyCross – Edgewater",
@@ -3105,7 +3535,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://cincyscca.com/rally-cross/"
+      "Event URL": "https://cincyscca.com/rally-cross/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3120,7 +3551,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "RallyCross – Edgewater",
@@ -3135,7 +3567,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://cincyscca.com/rally-cross/"
+      "Event URL": "https://cincyscca.com/rally-cross/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -3150,7 +3583,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-06-09"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-06-09",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 1",
@@ -3165,7 +3599,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
+      "Event URL": "https://www.americanrallyassociation.org/sofr",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 2",
@@ -3180,7 +3615,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
+      "Event URL": "https://www.americanrallyassociation.org/sofr",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 1",
@@ -3195,7 +3631,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
+      "Event URL": "https://www.americanrallyassociation.org/sofr",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 3",
@@ -3210,7 +3647,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
+      "Event URL": "https://www.americanrallyassociation.org/sofr",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 2",
@@ -3225,7 +3663,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
+      "Event URL": "https://www.americanrallyassociation.org/sofr",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3240,7 +3679,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Southern Ohio Forest Rally – Day 3",
@@ -3255,7 +3695,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.americanrallyassociation.org/sofr"
+      "Event URL": "https://www.americanrallyassociation.org/sofr",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 2",
@@ -3270,7 +3711,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -3285,7 +3727,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 2",
@@ -3300,7 +3743,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3315,7 +3759,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Dynasty Rally 2026 – Day 3",
@@ -3330,7 +3775,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3345,7 +3791,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3360,7 +3807,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "King of the Roads Rally",
@@ -3375,7 +3823,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://kingoftheroads.events/"
+      "Event URL": "https://kingoftheroads.events/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3390,7 +3839,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Rally North America – Ohio Valley 1200 – Day 1",
@@ -3405,7 +3855,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://rallynorthamerica.com/rally-events/"
+      "Event URL": "https://rallynorthamerica.com/rally-events/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Rally North America – Day 2",
@@ -3420,7 +3871,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Rally North America – Day 3",
@@ -3435,7 +3887,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Monthly Car & Bike Lunch Cruise In",
@@ -3450,7 +3903,8 @@
       "Popularity": "12",
       "Attendance": "",
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-07-14"
+      "Event URL": "https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-07-14",
+      "Organizer Social": "https://www.facebook.com/groups/664728148123633/"
     },
     {
       "Event Name": "Rally North America – Day 4",
@@ -3465,7 +3919,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3480,7 +3935,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3495,7 +3951,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cincy Car Cruise Rally",
@@ -3510,7 +3967,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "—"
+      "Event URL": "—",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Recharge Rally – Day 1",
@@ -3525,7 +3983,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://www.therechargerally.com/"
+      "Event URL": "https://www.therechargerally.com/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Recharge Rally – Day 2",
@@ -3540,7 +3999,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3555,7 +4015,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Recharge Rally – Day 3",
@@ -3570,7 +4031,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Recharge Rally – Day 4",
@@ -3585,7 +4047,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "Same as above"
+      "Event URL": "Same as above",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3600,7 +4063,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "RallyCross – Edgewater",
@@ -3615,7 +4079,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "sheet",
-      "Event URL": "https://cincyscca.com/rally-cross/"
+      "Event URL": "https://cincyscca.com/rally-cross/",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3630,7 +4095,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3645,7 +4111,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3660,7 +4127,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3675,7 +4143,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3690,7 +4159,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3705,7 +4175,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3720,7 +4191,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3735,7 +4207,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3750,7 +4223,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3765,7 +4239,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3780,7 +4255,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3795,7 +4271,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3810,7 +4287,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3825,7 +4303,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3840,7 +4319,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3855,7 +4335,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3870,7 +4351,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3885,7 +4367,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3900,7 +4383,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3915,7 +4399,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3930,7 +4415,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3945,7 +4431,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3960,7 +4447,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3975,7 +4463,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -3990,7 +4479,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4005,7 +4495,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4020,7 +4511,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4035,7 +4527,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4050,7 +4543,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4065,7 +4559,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4080,7 +4575,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4095,7 +4591,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4110,7 +4607,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4125,7 +4623,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4140,7 +4639,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4155,7 +4655,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4170,7 +4671,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4185,7 +4687,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4200,7 +4703,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4215,7 +4719,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4230,7 +4735,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4245,7 +4751,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4260,7 +4767,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4275,7 +4783,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4290,7 +4799,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4305,7 +4815,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4320,7 +4831,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4335,7 +4847,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4350,7 +4863,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4365,7 +4879,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4380,7 +4895,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4395,7 +4911,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4410,7 +4927,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4425,7 +4943,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4440,7 +4959,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4455,7 +4975,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4470,7 +4991,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -4485,7 +5007,8 @@
       "Popularity": "32",
       "Attendance": "",
       "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk"
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     }
   ]
 }

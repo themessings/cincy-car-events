@@ -5961,5 +5961,26 @@
   "4819 E Miami River Rd, Cleves, OH 45002": null,
   "addr::djs grille and chill 6044 us40 tipp city oh 45371, tipp city, oh": null,
   "1000 Carillon Blvd, Dayton, OH 45409-2023, United States, Dayton, OH": null,
-  "7901 Highway 31 South, Indianapolis, IN 46201": null
+  "7901 Highway 31 South, Indianapolis, IN 46201": null,
+  "45249, USA": {
+    "lat": "39.2780024",
+    "lon": "-84.3229777"
+  },
+  "10850, USA": {
+    "lat": "41.7655972",
+    "lon": "-87.6245919"
+  },
+  "45232, USA": {
+    "lat": "39.1752148",
+    "lon": "-84.5126336"
+  },
+  "8695 Bilstein Blvd, Hamilton, OH 45015": {
+    "lat": "39.3448195",
+    "lon": "-84.5123659"
+  },
+  "4521 Spring Grove Ave, Cincinnati, OH 45232-1934, United States, Cincinnati, OH": null,
+  "8805 Governors Hill Dr, Cincinnati, OH 45249": {
+    "lat": "39.2879065",
+    "lon": "-84.3181056"
+  }
 }
