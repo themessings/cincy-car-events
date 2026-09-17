@@ -15,10 +15,12 @@ on:
     # Each DST set has a primary slot and two backstops, because a delayed run
     # is not the worst case — GitHub also DROPS scheduled runs outright, and a
     # dropped one costs a whole week's post with nothing in the Actions tab to
-    # show for it. That is not hypothetical: the Thursday cron produced no run
-    # at all on 2026-09-10 or 2026-09-17. Whichever slot lands first does the
-    # work and pushes a car-events-bot commit; the gate then no-ops the others,
-    # so the backstops only ever cost minutes when the primary really was lost.
+    # show for it. Both failure modes are observed here, on consecutive weeks:
+    # 2026-09-10 produced no run at all, and on 2026-09-17 the 10:20 cron was
+    # not dispatched until 15:03 — 4h43m late, landing a 6:20am post near noon.
+    # Three slots are three chances for one to arrive on time. Whichever lands
+    # first does the work and pushes a car-events-bot commit; the gate then
+    # no-ops the others, so the extras cost seconds unless they are needed.
     - cron: "20 10 * * 4" # 6:20 AM EDT (roughly Mar-Nov)
     - cron: "20 13 * * 4" # 9:20 AM EDT — backstop
     - cron: "20 16 * * 4" # 12:20 PM EDT — backstop
@@ -89,7 +91,10 @@ jobs:
           esac
 
           # A real slot for today. Run only if this week's collection has not
-          # already landed. Every successful run rewrites data/source_health.json
+          # already landed — on 2026-09-17 a scheduled run arriving 4h43m late
+          # repeated a full 13-minute collection 80 minutes after a manual run
+          # had already published the week, because nothing checked.
+          # Every successful run rewrites data/source_health.json
           # (it stamps last_run_iso per source) and commits it as car-events-bot,
           # so such a commit dated today is proof the work is done. Anything
           # else — no commit, a failed collector, an unreadable history —

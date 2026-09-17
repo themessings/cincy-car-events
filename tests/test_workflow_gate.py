@@ -1,10 +1,14 @@
 """Tests for the collector workflow's schedule and its gate job.
 
 The gate has now failed silently twice — once comparing the wall clock to
-"06" so every delayed run was discarded, and once with a Thursday cron that
-GitHub simply never dispatched. Both times the workflow looked healthy while
+"06" so every delayed run was discarded, and once on a Thursday GitHub never
+dispatched the cron at all. Both times the workflow looked healthy while
 producing nothing, so these tests run the gate's real shell script against a
 stubbed clock and git history rather than re-describing it in Python.
+
+Delay is the other half of it: the 2026-09-17 dispatch arrived 4h43m after
+its slot, so the gate can never decide from the current time, and a late run
+has to recognise work another slot already did.
 """
 
 import os
