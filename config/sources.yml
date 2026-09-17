@@ -598,6 +598,7 @@ organizer_social:
   - url: https://corsarally.com/events/dragon/
     match: ["corsa dragon rally"]
   - url: https://www.facebook.com/p/Cammack-Station-Cruise-In-Friday-Nights-at-Cammack-100071862756345/
+    instagram: cammackstation
     match: ["cammack station"]
   # One organisation runs the Friday (Colins Coffee), Saturday (Olentangy) and
   # Sunday (Westerville Starbucks) meets, so one page covers all three series.
@@ -615,11 +616,13 @@ organizer_social:
   - url: https://www.facebook.com/LibertyCenterOhio/
     match: ["liberty center cars", "7140 taylor", "7160 taylor"]
   - url: https://www.facebook.com/IndyCarsandCoffee/
+    instagram: indycarsandcoffee
     match: ["indianapolis cars and coffee", "indianapolis cars & coffee", "9111 haverstick", "keystone at the crossing", "9225 priority way"]
   - url: https://www.facebook.com/HockingHillsCC
     instagram: hockinghillscc
     match: ["hocking hills cars", "12762 grey"]
   - url: https://www.facebook.com/groups/962325874974960
+    instagram: fairfieldcandc
     match: ["fairfield cars and coffee", "8695 bilstein"]
   - url: https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/
     match: ["usb cars", "8805 governors hill"]
@@ -628,5 +631,8 @@ organizer_social:
     match: ["graham rahal", "10850 creek way"]
   - url: https://www.facebook.com/profile.php?id=61580880012844
     match: ["euro cars and cocoa", "600 w loveland"]
+  - url: https://www.instagram.com/delhi_street_rodders/
+    instagram: delhi_street_rodders
+    match: ["delhi street rodders"]
   # Not found (2026-09-17): "2nd Saturday Car Cruise" Washington Court House —
   # sponsored by a local business, no page located. Add here if one turns up.
