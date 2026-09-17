@@ -583,7 +583,10 @@ organizer_social:
     instagram: [circuitcafecincy, cincinnaticarsandcoffee]  # both, as Joel tagged them 2026-09-10
     match: ["circuit cafe", "2726 riverside"]
   - url: https://www.facebook.com/ElementEatery/
-    instagram: carsatmadisonsquare  # the event's own account — what Joel tagged 2026-09-10 (elementeatery is the venue)
+    # The event's own account, as Joel tags it. ⚠️ Joel, 2026-09-17: 5350 Medpace Way
+    # is ENTIRELY Cars at Madison Square now — Caffeine & Fuel no longer runs there.
+    # Do not add @caffeineandfuelcincy back for this venue; @elementeatery is only the venue.
+    instagram: carsatmadisonsquare
     match: ["cars at madison square", "5350 medpace"]
   - url: https://facebook.com/events/s/southern-indiana-car-coffee/2441859369604401/
     match: ["southern indiana car & coffee", "4809 outer loop"]
