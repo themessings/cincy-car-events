@@ -31,6 +31,7 @@ from typing import Optional, List, Dict, Tuple, Any
 from collections import defaultdict
 
 import requests
+import time
 import pandas as pd
 from dateutil import parser as dateparser
 import pytz
@@ -212,6 +213,111 @@ CITY_COORDS = {
     "mansfield, oh": (40.7584, -82.5154),
     "marysville, oh": (40.2364, -83.3671),
 }
+
+# Manually entered ("Source: Manual") sheet rows never pass through the
+# collector's address enrichment, so their Closest City is routinely blank —
+# infer_city_state_from_address() below only reads an explicit "City, ST" out
+# of the address text, and a hand-typed row is often just a street + ZIP
+# ("3737 Stone Creek Blvd 45251") with no city name at all. When that first
+# pass finds nothing, ZIP_CITY_FALLBACK resolves the ZIP itself: geocode it
+# and hang the event on whichever of these hub cities is nearest, the same
+# set events_collector.py's own Closest City guarantee uses. Cached to
+# data/geocode_cache.json — the same file and query shape
+# (reliable_geocode_query()'s "NNNNN, USA") the collector already writes, so
+# a ZIP looked up by either script is looked up on the network only once.
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+GEOCODE_CACHE_PATH = os.path.join(ROOT, "data", "geocode_cache.json")
+
+ZIP_CITY_FALLBACK: List[Tuple[str, float, float]] = [
+    ("Cincinnati, OH", 39.1031, -84.5120),
+    ("Dayton, OH", 39.7589, -84.1916),
+    ("Columbus, OH", 39.9612, -82.9988),
+    ("Cleveland, OH", 41.4993, -81.6944),
+    ("Toledo, OH", 41.6528, -83.5379),
+    ("Louisville, KY", 38.2527, -85.7585),
+    ("Lexington, KY", 38.0406, -84.5037),
+    ("Indianapolis, IN", 39.7684, -86.1581),
+    ("Fort Wayne, IN", 41.0793, -85.1394),
+    ("Nashville, TN", 36.1627, -86.7816),
+    ("Knoxville, TN", 35.9606, -83.9207),
+    ("Pittsburgh, PA", 40.4406, -79.9959),
+    ("Charleston, WV", 38.3498, -81.6326),
+    ("Detroit, MI", 42.3314, -83.0458),
+    ("Chicago, IL", 41.8781, -87.6298),
+    ("St. Louis, MO", 38.6270, -90.1994),
+]
+
+
+def _load_geocode_cache() -> Dict[str, Any]:
+    try:
+        with open(GEOCODE_CACHE_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save_geocode_cache(cache: Dict[str, Any]) -> None:
+    try:
+        with open(GEOCODE_CACHE_PATH, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=2, ensure_ascii=False)
+    except OSError as ex:
+        print(f"⚠️ Could not save geocode cache: {ex}")
+
+
+_GEOCODE_CACHE = _load_geocode_cache()
+_GEOCODE_CACHE_DIRTY = False
+
+
+def _geocode_zip(zip5: str) -> Optional[Tuple[float, float]]:
+    global _GEOCODE_CACHE_DIRTY
+    query = f"{zip5}, USA"
+    cached = _GEOCODE_CACHE.get(query)
+    if cached is not None:
+        if isinstance(cached, dict) and "lat" in cached and "lon" in cached:
+            return float(cached["lat"]), float(cached["lon"])
+        return None
+    try:
+        r = requests.get(
+            "https://nominatim.openstreetmap.org/search",
+            params={"q": query, "format": "json", "limit": 1, "countrycodes": "us"},
+            headers={"User-Agent": "cincy-car-events-bot/1.0 (github actions)"},
+            timeout=20,
+        )
+        r.raise_for_status()
+        data = r.json()
+        time.sleep(1.1)
+        if data:
+            lat, lon = float(data[0]["lat"]), float(data[0]["lon"])
+            _GEOCODE_CACHE[query] = {"lat": lat, "lon": lon}
+            _GEOCODE_CACHE_DIRTY = True
+            return lat, lon
+        _GEOCODE_CACHE[query] = None
+        _GEOCODE_CACHE_DIRTY = True
+        return None
+    except Exception as ex:
+        print(f"⚠️ ZIP geocode failed for '{query}': {ex}")
+        return None
+
+
+def city_state_from_zip(text: str) -> Tuple[str, str]:
+    """Resolve a bare ZIP found in `text` to the nearest hub city.
+
+    A last-resort fallback for manually entered rows whose address has no
+    city name at all, only a street and a ZIP.
+    """
+    m = re.search(r"\b(\d{5})(?:-\d{4})?\b", text or "")
+    if not m:
+        return "", ""
+    latlon = _geocode_zip(m.group(1))
+    if not latlon:
+        return "", ""
+    name, _, _ = min(
+        ZIP_CITY_FALLBACK,
+        key=lambda c: geodesic(latlon, (c[1], c[2])).miles,
+    )
+    city, state = name.split(", ")
+    return city, state
+
 
 AVG_SPEED_MPH_FALLBACK = 52
 ROAD_FACTOR_FALLBACK = 1.15
@@ -1063,6 +1169,20 @@ def dedupe_and_merge_events(events: List[Event]) -> List[Event]:
                     and e.sheet_closest_city.strip().lower() != other.sheet_closest_city.strip().lower()):
                 continue
 
+            # Titles differing only by a number are distinct legs of a
+            # multi-day series, not duplicates: "Corsa America Spring Rally
+            # – Day 1" vs "– Day 2" scores a near-perfect match on every
+            # fuzzy measure below (only one token differs), so without this
+            # guard "Day 1" quietly absorbed "Day 2" and the second day
+            # vanished from the lineup. Mirrors events_collector.py's own
+            # merge_same_day_near_duplicates(), which carries the same guard
+            # for the exact same reason.
+            tokens_e = set(normalize_for_dedupe(e.title).split())
+            tokens_other = set(normalize_for_dedupe(other.title).split())
+            token_diff = tokens_e ^ tokens_other
+            if token_diff and all(tok.isdigit() for tok in token_diff):
+                continue
+
             title_score = fuzz.token_set_ratio(normalize_for_dedupe(e.title), normalize_for_dedupe(other.title))
             place_score = fuzz.token_set_ratio(
                 normalize_for_dedupe(smart_place(e.location, e.address)),
@@ -1170,9 +1290,16 @@ def enrich_events(events: List[Event]) -> List[Event]:
             e.state = sheet_state
         else:
             e.city, e.state = infer_city_state_from_address(e.address, e.location)
+            e.closest_city_source = "auto"
+            if not (e.city and e.state):
+                # No "City, ST" anywhere in the address/location text at all —
+                # the shape a hand-typed row with just a street + ZIP takes.
+                zip_city, zip_state = city_state_from_zip(f"{e.address} {e.location}")
+                if zip_city and zip_state:
+                    e.city, e.state = zip_city, zip_state
+                    e.closest_city_source = "auto-zip"
             fallback_group = ", ".join([x for x in [e.city, e.state] if x]).strip(", ")
             e.city_group = fallback_group if fallback_group else "Other"
-            e.closest_city_source = "auto"
 
         key = maybe_city_key(e.city, e.state)
         e.coords = CITY_COORDS.get(key)
@@ -1311,6 +1438,10 @@ for e in events_all[:15]:
 events_selected = [e for e in events_all if e.date in selected_set]
 events_selected = dedupe_and_merge_events(events_selected)
 events_selected = enrich_events(events_selected)
+
+if _GEOCODE_CACHE_DIRTY:
+    _save_geocode_cache(_GEOCODE_CACHE)
+    print(f"🗺️ Saved {len(_GEOCODE_CACHE)} geocode cache entries (ZIP fallback additions included)")
 
 events_selected = [
     e for e in events_selected
