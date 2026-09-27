@@ -1,6 +1,6 @@
 {
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-09-17T15:57:21.127957-04:00",
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
@@ -227,10 +227,6 @@
       }
     ]
   },
-  "https://www.instagram.com/p/DQFghu8jIVN/": {
-    "fetched_at_iso": "2026-03-30T07:54:55.059555-04:00",
-    "events": []
-  },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=2": {
     "fetched_at_iso": "2026-06-14T09:00:00.555759-04:00",
     "events": []
@@ -267,10 +263,6 @@
         "url": "https://www.meetup.com/daytonhikers/events/314131376/"
       }
     ]
-  },
-  "https://www.facebook.com/groups/RideMSTA/posts/10162476559641588/": {
-    "fetched_at_iso": "2026-03-31T07:50:54.076662-04:00",
-    "events": []
   },
   "https://nasarallysport.com/": {
     "fetched_at_iso": "2026-07-09T08:23:39.394340-04:00",
@@ -355,7 +347,7 @@
     "events": []
   },
   "https://cincyscca.com/": {
-    "fetched_at_iso": "2026-07-02T09:00:44.001039-04:00",
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=3": {
@@ -367,7 +359,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-09-17T15:57:21.127957-04:00",
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/hybridcars/is/": {
@@ -495,10 +487,6 @@
         "url": "https://www.scca.com/events/2005350-kentucky-region-autocross-test-and-tune-points-event-1-ncm-motorsports-park"
       }
     ]
-  },
-  "https://timetrials.scca.com/events/2008981-ohio-valley-sprints-time-trial-mid-ohio-sports-car-course": {
-    "fetched_at_iso": "2026-03-31T07:52:15.019115-04:00",
-    "events": []
   },
   "https://www.scca.com/events/2008389-western-ohio-edgewater-rallycross-4-edgewater-sports-park": {
     "fetched_at_iso": "2026-05-03T07:43:53.712867-04:00",
@@ -919,7 +907,7 @@
     "events": []
   },
   "https://www.eventbrite.com/b/oh--cincinnati/government/": {
-    "fetched_at_iso": "2026-09-17T11:13:48.381397-04:00",
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/estrangement/us/": {
@@ -1747,39 +1735,6 @@
       }
     ]
   },
-  "https://www.meetup.com/de-DE/sass-serious-about-social-stuff-30s-50s-day-cin-noky/": {
-    "fetched_at_iso": "2026-03-29T07:29:44.094267-04:00",
-    "events": [
-      {
-        "title": "Recreational Indoor Sand Volleyball at Grand Sands",
-        "start_iso": "2026-03-29T13:15:00-04:00",
-        "end_iso": "2026-03-29T15:15:00-04:00",
-        "location": "Grand Sands Volleyball 10750 Loveland Madeira Road, Loveland, OH Loveland OH",
-        "url": "https://www.meetup.com/de-DE/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/313721741/"
-      },
-      {
-        "title": "SEND IT! Climbing Club",
-        "start_iso": "2026-04-01T19:00:00-04:00",
-        "end_iso": "2026-04-01T21:00:00-04:00",
-        "location": "Rockquest climbing center 3575 e kemper rd,, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/de-DE/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/313945965/"
-      },
-      {
-        "title": "BINGO LOCO",
-        "start_iso": "2026-04-03T18:00:00-04:00",
-        "end_iso": "2026-04-03T21:30:00-04:00",
-        "location": "Megacorp Pavilion 101 West 4th Street,, Newport, KY Newport KY",
-        "url": "https://www.meetup.com/de-DE/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/313769866/"
-      },
-      {
-        "title": "Candlelight: Tribute to Metallica",
-        "start_iso": "2026-04-11T19:00:00-04:00",
-        "end_iso": "2026-04-11T23:00:00-04:00",
-        "location": "National Underground Railroad Freedom Center 50 East Freedom Way, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/de-DE/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/313331472/"
-      }
-    ]
-  },
   "https://www.meetup.com/sierraoutings/events/313714564/": {
     "fetched_at_iso": "2026-05-01T07:59:29.682685-04:00",
     "events": [
@@ -1820,10 +1775,6 @@
     "fetched_at_iso": "2026-07-17T08:10:53.809028-04:00",
     "events": []
   },
-  "https://www.instagram.com/p/DVMAQbnjvqY/": {
-    "fetched_at_iso": "2026-03-29T07:30:03.553326-04:00",
-    "events": []
-  },
   "https://www.facebook.com/CrownRallyOfficial/posts/three-ralliesthree-regionsone-crownthe-2026-crown-rally-season-is-almost-herefro/1332124102285528/": {
     "fetched_at_iso": "2026-07-26T08:04:19.381619-04:00",
     "events": []
@@ -1839,18 +1790,6 @@
   "https://www.scca.com/events/2009589-southern-indiana-region-autocross-3-mid-american-air-center": {
     "fetched_at_iso": "2026-04-03T07:39:44.862861-04:00",
     "events": []
-  },
-  "http://www.visitnc.com/events/19th-annual-highlands-motoring-festival": {
-    "fetched_at_iso": "2026-03-29T07:30:03.553326-04:00",
-    "events": [
-      {
-        "title": "19th Annual Highlands Motoring Festival",
-        "start_iso": "2026-06-11T00:00:00-04:00",
-        "end_iso": "2026-06-14T00:00:00-04:00",
-        "location": "411-499 Pine St. Highlands NC 28741",
-        "url": "https://www.visitnc.com/events/19th-annual-highlands-motoring-festival"
-      }
-    ]
   },
   "https://www.americanrallyassociation.org/event-results": {
     "fetched_at_iso": "2026-09-17T11:14:24.916370-04:00",
@@ -2011,10 +1950,6 @@
         "url": "https://www.meetup.com/peninsula-women-in-their-30s-ish-coffee-walks/events/314870824/"
       }
     ]
-  },
-  "https://www.facebook.com/groups/317549528315995/posts/34054090674235114/": {
-    "fetched_at_iso": "2026-03-30T07:54:55.059555-04:00",
-    "events": []
   },
   "https://www.maggievalleync.gov/events/annual-southeastern-mini-truckin-nationals-2026-223/": {
     "fetched_at_iso": "2026-04-01T20:15:19.778497-04:00",
@@ -2383,7 +2318,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/car-show/": {
-    "fetched_at_iso": "2026-04-01T20:50:17.954313-04:00",
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--coalton/goodguys-car-show-columbus-ohio/": {
@@ -3021,7 +2956,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1987276963895": {
-    "fetched_at_iso": "2026-09-17T15:57:21.127957-04:00",
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/events/lrjgqtyjcgblc/": {
@@ -14929,7 +14864,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=19": {
-    "fetched_at_iso": "2026-09-17T15:57:21.127957-04:00",
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-show-july-11th/?page=4": {
@@ -15248,7 +15183,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-middletown-ohio/?page=4": {
-    "fetched_at_iso": "2026-08-07T07:45:03.727334-04:00",
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/festival-ohio/?page=30": {
@@ -17236,7 +17171,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--auto-boat-and-air--events--next-month/car-show/": {
-    "fetched_at_iso": "2026-09-17T15:57:21.127957-04:00",
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/cincinnati-speed-dating/?page\\u003d5": {
@@ -17808,11 +17743,11 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/wheels-whoppers": {
-    "checked_at_iso": "2026-09-17T15:21:08.662378-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.440357-04:00",
     "result": {
       "title": "Wheels & Whoppers",
-      "start_iso": "2026-09-18T17:00:00-04:00",
-      "end_iso": "2026-09-18T22:00:00-04:00",
+      "start_iso": "2026-10-02T17:00:00-04:00",
+      "end_iso": "2026-10-02T22:00:00-04:00",
       "location": "Burger King North Vernon IN 47265",
       "address": "",
       "description": "Wheels & Whoppers is a recurring event hosted by Joe Cole every Friday from 5 to 10 PM at Burger King.",
@@ -17825,7 +17760,7 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/mcdonalds-sellersburg-2026-summer-car-show-schedule": {
-    "checked_at_iso": "2026-09-17T15:21:09.256871-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.441281-04:00",
     "result": {
       "title": "McDonald’s Sellersburg 2026 Summer Car Shows",
       "start_iso": "2026-10-02T18:00:00-04:00",
@@ -17985,7 +17920,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10": {
-    "checked_at_iso": "2026-09-17T15:21:09.272751-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.443540-04:00",
     "result": {
       "title": "Muncie Cars & Coffee 2026 - Season 10",
       "start_iso": "2026-10-03T09:00:00-04:00",
@@ -18024,11 +17959,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/tommy-and-da-fam-cruise-in": {
-    "checked_at_iso": "2026-09-17T15:21:08.669460-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.437493-04:00",
     "result": {
       "title": "Tommy And Da Fam Cruise-In",
-      "start_iso": "2026-09-22T17:00:00-04:00",
-      "end_iso": "2026-09-22T17:00:00-04:00",
+      "start_iso": "2026-09-29T17:00:00-04:00",
+      "end_iso": "2026-09-29T17:00:00-04:00",
       "location": "The Nest (Old Jonathon Byrd’s) 200 Byrd Way Greenwood IN 46142",
       "address": "200 Byrd Way, Greenwood, IN 46142",
       "description": "The Tommy And Da Fam Cruise-In will take place on May 19, 2026, starting at 5:00 PM at The Nest (Old Jonathon Byrd’s). LA ROSA will offer a dinner discount for attendees. Those who mention they are with the Cruise-In will receive 15% off their bill.",
@@ -18050,11 +17985,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/mccordsville-cars-coffee": {
-    "checked_at_iso": "2026-09-17T15:21:08.667950-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.908032-04:00",
     "result": {
       "title": "McCordsville Cars & Coffee",
-      "start_iso": "2026-09-20T08:00:00-04:00",
-      "end_iso": "2026-09-20T11:00:00-04:00",
+      "start_iso": "2026-10-04T08:00:00-04:00",
+      "end_iso": "2026-10-04T11:00:00-04:00",
       "location": "McCord Square 5811 Main St. McCordsville IN 46055",
       "address": "5811 Main St., McCordsville, IN 46055",
       "description": "Cars & Coffee takes place on Sundays from 8 AM to 11 AM in McCord Square, located at 5811 Main St., McCordsville. The event welcomes all makes, models, and years of vehicles.",
@@ -18080,11 +18015,11 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/warehouse-wednesdays": {
-    "checked_at_iso": "2026-09-17T15:21:08.669699-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.438604-04:00",
     "result": {
       "title": "Warehouse Wednesdays",
-      "start_iso": "2026-09-23T17:00:00-04:00",
-      "end_iso": "2026-09-23T17:00:00-04:00",
+      "start_iso": "2026-09-30T17:00:00-04:00",
+      "end_iso": "2026-09-30T17:00:00-04:00",
       "location": "4114 Reas Lane 4114 Reas Lane New Albany IN 47150",
       "address": "4114 Reas Lane, New Albany, IN 47150",
       "description": "Warehouse Wednesdays is a weekly event held at 4114 Reas Lane in New Albany, designed for automotive enthusiasts. The event encourages attendees to relax and connect with fellow car, bike, and truck enthusiasts. Participants are welcome to bring a cooler and spend an hour or two enjoying the atmosphere. The event is organized in collaboration with midnight_mafia_cc and takes place every Wednesday. Attendees are reminded to maintain a respectful environment during the meet.",
@@ -18123,11 +18058,11 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/alexandria-cruise-in-2": {
-    "checked_at_iso": "2026-09-17T15:21:08.660405-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.439500-04:00",
     "result": {
       "title": "Alexandria Cruise-In",
-      "start_iso": "2026-09-17T17:00:00-04:00",
-      "end_iso": "2026-09-17T20:00:00-04:00",
+      "start_iso": "2026-10-01T17:00:00-04:00",
+      "end_iso": "2026-10-01T20:00:00-04:00",
       "location": "Alexandria Village Green Shopping Center Alexandria KY 41001",
       "address": "",
       "description": "A weekly cruise-in held every Thursday evening starting May 7 at the Alexandria Village Green Shopping Center, open to all types of vehicles. No burnouts or engine revving allowed.",
@@ -18136,7 +18071,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/indiana-cruisers-monthly-cruise-the-square": {
-    "checked_at_iso": "2026-09-17T15:21:09.276873-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.921015-04:00",
     "result": {
       "title": "Indiana Cruisers Monthly Cruise The Square",
       "start_iso": "2026-10-09T17:00:00-04:00",
@@ -18175,7 +18110,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/fly-in-drive-in-breakfast": {
-    "checked_at_iso": "2026-09-17T15:21:09.286797-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.930821-04:00",
     "result": {
       "title": "Fly-In / Drive-In Breakfast",
       "start_iso": "2026-10-10T08:30:00-04:00",
@@ -18291,8 +18226,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/austin-dairy-queen-cruise-in": {
-    "checked_at_iso": "2026-09-17T09:37:54.259764-04:00",
-    "result": null
+    "checked_at_iso": "2026-09-27T15:44:16.221561-04:00",
+    "result": {
+      "title": "Austin Dairy Queen Cruise In",
+      "start_iso": "2026-10-16T17:00:00-04:00",
+      "end_iso": "2026-10-16T17:00:00-04:00",
+      "location": "305 N Highway 31 305 N Highway 31 Austin IN 47102",
+      "address": "305 N Highway 31, Austin, IN 47102",
+      "description": "The Austin Dairy Queen will host a Cruise In event on the 3rd Friday of every month from 5 PM until close. The event is scheduled for April to October 2026. Location: Austin Dairy Queen.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-19": {
     "checked_at_iso": "2026-09-17T09:37:54.266160-04:00",
@@ -18400,7 +18344,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/springfield-cars-and-coffee": {
-    "checked_at_iso": "2026-09-17T15:21:09.645854-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.931574-04:00",
     "result": {
       "title": "Springfield Cars and Coffee",
       "start_iso": "2026-10-10T09:00:00-04:00",
@@ -18499,7 +18443,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/four-bridges-cruise-in": {
-    "checked_at_iso": "2026-09-17T15:21:09.747037-04:00",
+    "checked_at_iso": "2026-09-27T15:44:16.312320-04:00",
     "result": {
       "title": "Four Bridges Cruise-In",
       "start_iso": "2026-10-21T17:00:00-04:00",
@@ -18537,8 +18481,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center": {
-    "checked_at_iso": "2026-09-17T11:15:23.753204-04:00",
-    "result": null
+    "checked_at_iso": "2026-09-27T15:44:16.293811-04:00",
+    "result": {
+      "title": "Cincy Cars & Coffee @ Liberty Center",
+      "start_iso": "2026-10-17T08:00:00-04:00",
+      "end_iso": "2026-10-17T12:00:00-04:00",
+      "location": "Taylor Parking Garage 7160 Taylor St Liberty Township OH 45069",
+      "address": "7160 Taylor St, Liberty Township, OH 45069",
+      "description": "Join us for our next Cincy Cars & Coffee @ Liberty Center (brought to you by Tri-State Mustang / Ford Club) from 8 am to noon. Just TWO MORE this season! Don’t miss your chance! Hope to see you there! Remaining 2026 Cars & Coffee Dates (Third Saturdays)• September 19, 2026• October 17, 2026",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-09-19": {
     "checked_at_iso": "2026-09-17T09:38:14.325666-04:00",
@@ -18553,8 +18506,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/winchester-cars-coffee": {
-    "checked_at_iso": "2026-09-17T09:38:14.329319-04:00",
-    "result": null
+    "checked_at_iso": "2026-09-27T15:44:16.299137-04:00",
+    "result": {
+      "title": "Winchester Cars & Coffee",
+      "start_iso": "2026-10-17T09:00:00-04:00",
+      "end_iso": "2026-10-17T11:00:00-04:00",
+      "location": "NorthBlock Coffee Co 225 W North St Winchester IN 47394",
+      "address": "225 W North St, Winchester, IN 47394",
+      "description": "Join us on the West side of NorthBlock Coffee Co for awesome rides and delicious coffee. Do you have a sweet ride, do you love coffee? Even if you don't, join us anyway!3rd Sat 9 to 11 May through October",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/caesar-ford-ranger-classic-2026-09-19": {
     "checked_at_iso": "2026-09-17T09:38:34.423196-04:00",
@@ -18662,8 +18624,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-10-03": {
-    "checked_at_iso": "2026-09-17T09:40:14.665128-04:00",
-    "result": null
+    "checked_at_iso": "2026-09-27T15:44:15.880232-04:00",
+    "result": {
+      "title": "Muncie Cars & Coffee 2026 – Season 10",
+      "start_iso": "2026-10-03T09:00:00-04:00",
+      "end_iso": "2026-10-03T12:00:00-04:00",
+      "location": "100 E Charles St 100 E Charles St Muncie IN 47302",
+      "address": "100 E Charles St, Muncie, IN 47302",
+      "description": "The 10th Anniversary of Muncie Cars & Coffee will be held, celebrating a gathering of octane and caffeine enthusiasts. The event welcomes all makes, models, and years of vehicles. Participants do not need to bring a vehicle to attend and enjoy the cars on display. The event occurs on the first Saturday of every month.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/rpm-transmissions-car-show-2026-10-03": {
     "checked_at_iso": "2026-09-24T10:24:00.027650-04:00",
@@ -18846,11 +18817,11 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/scottsburg-square-cruise-in": {
-    "checked_at_iso": "2026-09-17T15:21:08.662619-04:00",
+    "checked_at_iso": "2026-09-27T15:44:16.252766-04:00",
     "result": {
       "title": "Scottsburg Square Cruise-In",
-      "start_iso": "2026-09-18T18:00:00-04:00",
-      "end_iso": "2026-09-18T18:00:00-04:00",
+      "start_iso": "2026-10-16T18:00:00-04:00",
+      "end_iso": "2026-10-16T18:00:00-04:00",
       "location": "S Main St S Main St Scottsburg IN 47170",
       "address": "S Main St, Scottsburg, IN 47170",
       "description": "Scottsburg Square will host the Cruise-In event every third Friday of the month. The event is set to begin at 6:00 PM.",
@@ -18947,11 +18918,11 @@
     }
   },
   "https://www.eventbrite.com/d/united-states--ohio/fork-n-film-cincinnati-ohio/?page=2": {
-    "fetched_at_iso": "2026-09-17T15:56:49.131016-04:00",
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/car-show-near-45140/?page=0": {
-    "fetched_at_iso": "2026-09-10T11:14:56.904315-04:00",
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/cincinnati-speed-dating/?page=6": {
@@ -19129,7 +19100,7 @@
     "events": []
   },
   "https://www.scca.com/articles/2020115-bring-in-the-new-year-with-these-challenging-and-fun-roadrallies": {
-    "fetched_at_iso": "2026-09-10T08:55:02.750113-04:00",
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
     "events": []
   },
   "https://cincyscca.com/2025/06/rallycross-event-1-edgewater-sports-park/": {
@@ -19145,7 +19116,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/in--lawrenceburg/events--this-weekend/classic-car-show/": {
-    "fetched_at_iso": "2026-09-17T15:57:21.127957-04:00",
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/knights-of-columbus-9th-annual-charity-car-show-2026-join-the-knights-for-o-tickets-2000037635407": {
@@ -19299,15 +19270,15 @@
     "events": []
   },
   "verify::https://www.facebook.com/groups/962325874974960": {
-    "checked_at_iso": "2026-09-17T15:21:08.668875-04:00",
+    "checked_at_iso": "2026-09-27T15:44:16.312179-04:00",
     "result": null
   },
   "verify::https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/": {
-    "checked_at_iso": "2026-09-17T15:21:09.746320-04:00",
+    "checked_at_iso": "2026-09-27T15:44:16.221472-04:00",
     "result": null
   },
   "verify::https://allevents.in/cincinnati/car-shows": {
-    "checked_at_iso": "2026-09-17T15:21:09.727441-04:00",
+    "checked_at_iso": "2026-09-27T15:44:16.205496-04:00",
     "result": {
       "title": "'Cruise In' Car Show",
       "start_iso": "2026-10-11T00:00:00-04:00",
@@ -19320,11 +19291,11 @@
     }
   },
   "verify::https://www.instagram.com/grahamrahalperformance": {
-    "checked_at_iso": "2026-09-17T15:41:36.131028-04:00",
+    "checked_at_iso": "2026-09-27T15:44:16.469998-04:00",
     "result": null
   },
   "verify::https://www.facebook.com/HockingHillsCC": {
-    "checked_at_iso": "2026-09-17T15:41:36.131784-04:00",
+    "checked_at_iso": "2026-09-27T15:44:15.880011-04:00",
     "result": null
   },
   "https://www.eventbrite.com/": {
@@ -19386,5 +19357,274 @@
   "verify::https://facebook.com/events/s/jwmf-charity-dinner-ticketed-e/838249985956055/": {
     "checked_at_iso": "2026-09-24T10:25:00.103448-04:00",
     "result": null
+  },
+  "https://www.eventbrite.com/d/ky--florence/events--next-week/": {
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/united-states--ohio/events--tomorrow/cincinnati/?page=4": {
+    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/2010280-north-carolina-autox-2026-beast-of-the-east-ncrvthscc-north-carolina-center-for-automotive-research-inc": {
+    "fetched_at_iso": "2026-09-27T15:40:58.060552-04:00",
+    "events": [
+      {
+        "title": "North Carolina AutoX 2026 Beast of the East (NCRvTHSCC) @ North Carolina Center for Automotive Research, Inc.",
+        "start_iso": "2026-06-06T01:00:00-04:00",
+        "end_iso": "2026-06-08T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2010280-north-carolina-autox-2026-beast-of-the-east-ncrvthscc-north-carolina-center-for-automotive-research-inc"
+      }
+    ]
+  },
+  "https://www.thscc.com/events/2026-09-05-thscc-at-cars-and-coffee-morrisville": {
+    "fetched_at_iso": "2026-09-27T15:40:58.060552-04:00",
+    "events": [
+      {
+        "title": "THSCC at Cars and Coffee Morrisville",
+        "start_iso": "2026-09-05T00:00:00-04:00",
+        "end_iso": "2026-09-05T00:00:00-04:00",
+        "location": "Cars and Coffee Morrisville Durham NC 27613",
+        "url": "https://thscc.com/events/2026-09-05-thscc-at-cars-and-coffee-morrisville"
+      }
+    ]
+  },
+  "https://www.instagram.com/p/DZa_lPvD-QK/": {
+    "fetched_at_iso": "2026-09-27T15:40:58.060552-04:00",
+    "events": []
+  },
+  "https://www.facebook.com/FosterLoveAdoptRepeat/posts/today-is-the-day-tell-everyone-you-know-support-a-great-cause-and-have-a-fun-fam/1277030854632428/": {
+    "fetched_at_iso": "2026-09-27T15:40:58.060552-04:00",
+    "events": []
+  },
+  "https://www.greatrace.com/news/day-7-truckin-into-south-carolina": {
+    "fetched_at_iso": "2026-09-27T15:40:58.060552-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/archives?page=4&within=500": {
+    "fetched_at_iso": "2026-09-27T15:40:58.060552-04:00",
+    "events": []
+  },
+  "https://www.instagram.com/p/DLdcOQ-STcX/": {
+    "fetched_at_iso": "2026-09-27T15:40:58.060552-04:00",
+    "events": []
+  },
+  "https://wcti12.com/news/local/rallycross-thrives-in-eastern-carolina-offering-thrills-for-all-car-enthusiasts": {
+    "fetched_at_iso": "2026-09-27T15:40:58.060552-04:00",
+    "events": []
+  },
+  "https://www.scca.com/articles/2020450-this-rallycross-season-is-poised-to-please-offering-thrills-chills-plus-cash-and-prizes": {
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/archives?categories=other-events&page=8": {
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/page/1": {
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
+    "events": []
+  },
+  "https://www.scca.com/articles/2018870-country-roads-rallycross-national-tour-drivers-powered-through-the-muck": {
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
+    "events": []
+  },
+  "https://growtiming.scca.com/pages/roadrally-rules": {
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/archives?categories=starting-line&page=7": {
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/2008598-indianapolis-witch-hunt-in-putnam-county-regional-gta-roadrally-first-national-bank-cloverdale-in": {
+    "fetched_at_iso": "2026-09-27T15:41:38.720930-04:00",
+    "events": [
+      {
+        "title": "Indianapolis, Witch Hunt in Putnam County Regional GTA RoadRally @ First National Bank (Cloverdale, IN)",
+        "start_iso": "2025-10-25T01:00:00-04:00",
+        "end_iso": "2025-10-26T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2008598-indianapolis-witch-hunt-in-putnam-county-regional-gta-roadrally-first-national-bank-cloverdale-in"
+      }
+    ]
+  },
+  "https://www.sneakattackrally.com/ARACombinerThing/teamsPublic.html?search=colorado": {
+    "fetched_at_iso": "2026-09-27T15:42:16.289116-04:00",
+    "events": []
+  },
+  "https://sneakattackrally.com/ARACombinerThing/index.html?year=2023&rally=Show-Me-Rally": {
+    "fetched_at_iso": "2026-09-27T15:42:16.289116-04:00",
+    "events": []
+  },
+  "https://sneakattackrally.com/ARACombinerThing/index.html?year=2025&rally=Lost-Pines-RallySprint": {
+    "fetched_at_iso": "2026-09-27T15:42:16.289116-04:00",
+    "events": []
+  },
+  "https://sneakattackrally.com/ARA/index.html?year=2024&rally=ojibwe": {
+    "fetched_at_iso": "2026-09-27T15:42:16.289116-04:00",
+    "events": []
+  },
+  "https://sneakattackrally.com/ARACombinerThing/index.html?year=2024&rally=big-white-winter-rally&hide=704": {
+    "fetched_at_iso": "2026-09-27T15:42:16.289116-04:00",
+    "events": []
+  },
+  "https://sneakattackrally.com/ARACombinerThing/index.html?year=2022&rally=oregon": {
+    "fetched_at_iso": "2026-09-27T15:42:16.289116-04:00",
+    "events": []
+  },
+  "https://www.americanrallyassociation.org/post/pelizzari-wins-fifth-sno-drift-regional-rally": {
+    "fetched_at_iso": "2026-09-27T15:42:16.289116-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/free--events/car-shows/": {
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/in--indianapolis/main-attraction-car-show/": {
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/b/ky--louisville--merriwether/auto-boat-and-air/": {
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--louisville/events--today/car-show/": {
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/ky--louisville/wiskey-row-car-show/": {
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--dayton/car-show-at-mecum-auction/?page=0": {
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--medina/columbus-goodguys-car-show/": {
+    "fetched_at_iso": "2026-09-27T15:42:25.060736-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/calendar/?country=US&radius=180&lat=40.69&lng=-82.64&loc=Lexington&page=11": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/events/2026-red-river-gorge-driving-tour-rural-roads-of-central-kentucky-bmw-cca-819174": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/calendar/?country=US&radius=180&lat=38.06043&lng=-84.53837&loc=Lexington&page=6": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/events/896CD417-A6E3-3C13-245DC58D2E80FF68/status": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/events/nasa-great-lakes-mid-ohio-sports-car-course-club-race-3772": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/calendar/?country=US&radius=300&lat=41.08&lng=-85.14&loc=Fort+Wayne&page=6": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/events/southwestern-ohio-autocross-challenge-traders-world-scca-cincinnati-solo-976758": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/events/1010ths-hpde-july-mid-ohio-sports-car-course-motorsports-274820": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/calendar/?country=US&radius=180&lat=40.44&lng=-80.66&loc=Toronto&page=14": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/events/vrperformance-open-track-day-at-mid-ohio-sports-car-course-491322": {
+    "fetched_at_iso": "2026-09-27T15:43:50.658107-04:00",
+    "events": []
+  },
+  "https://timetrials.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park": {
+    "fetched_at_iso": "2026-09-27T15:43:59.458360-04:00",
+    "events": [
+      {
+        "title": "Kentucky, Track Day/Time Trial @ NCM Motorsports Park",
+        "start_iso": "2026-07-25T01:00:00-04:00",
+        "end_iso": "2026-07-27T00:59:59-04:00",
+        "location": "",
+        "url": "https://timetrials.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park"
+      }
+    ]
+  },
+  "https://www.scca.com/events/2009579-southern-indiana-region-fun-autocross-8-mid-american-air-center": {
+    "fetched_at_iso": "2026-09-27T15:43:59.458360-04:00",
+    "events": [
+      {
+        "title": "Southern Indiana Region Fun Autocross #8 @ Mid-American Air Center",
+        "start_iso": "2026-10-04T01:00:00-04:00",
+        "end_iso": "2026-10-05T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2009579-southern-indiana-region-fun-autocross-8-mid-american-air-center"
+      }
+    ]
+  },
+  "https://growtiming.scca.com/events/2008980-ohio-valley-autumn-classic-time-trail-mid-ohio-sports-car-course": {
+    "fetched_at_iso": "2026-09-27T15:43:59.458360-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/2002943-ohio-valley-autocross-2023-pax-challenge-1-fortress": {
+    "fetched_at_iso": "2026-09-27T15:43:59.458360-04:00",
+    "events": [
+      {
+        "title": "Ohio Valley Autocross 2023 PAX Challenge 1 @ Fortress",
+        "start_iso": "2023-08-16T01:00:00-04:00",
+        "end_iso": "2023-08-17T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2002943-ohio-valley-autocross-2023-pax-challenge-1-fortress"
+      }
+    ]
+  },
+  "https://timetrials.scca.com/events/1994897-time-trials-kentucky-region": {
+    "fetched_at_iso": "2026-09-27T15:43:59.458360-04:00",
+    "events": [
+      {
+        "title": "Time Trials (Kentucky Region)",
+        "start_iso": "2019-08-04T01:00:00-04:00",
+        "end_iso": "2019-08-05T00:59:59-04:00",
+        "location": "",
+        "url": "https://timetrials.scca.com/events/1994897-time-trials-kentucky-region"
+      }
+    ]
+  },
+  "https://www.scca.com/events/page/7": {
+    "fetched_at_iso": "2026-09-27T15:43:59.458360-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/2008606-indiana-northwest-region-autocross-5-liberty-bible-church": {
+    "fetched_at_iso": "2026-09-27T15:43:59.458360-04:00",
+    "events": [
+      {
+        "title": "Indiana Northwest Region Autocross 5 @ Liberty Bible Church",
+        "start_iso": "2025-09-20T01:00:00-04:00",
+        "end_iso": "2025-09-21T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2008606-indiana-northwest-region-autocross-5-liberty-bible-church"
+      }
+    ]
+  },
+  "verify::https://www.scca.com/events/2009579-southern-indiana-region-fun-autocross-8-mid-american-air-center": {
+    "checked_at_iso": "2026-09-27T15:44:15.899258-04:00",
+    "result": {
+      "title": "Southern Indiana Region Fun Autocross #8 @ Mid-American Air Center",
+      "start_iso": "2026-10-04T01:00:00-04:00",
+      "end_iso": "2026-10-05T00:59:59-04:00",
+      "location": "",
+      "address": "",
+      "description": "",
+      "provider": "schema_org",
+      "confident": true
+    }
   }
 }

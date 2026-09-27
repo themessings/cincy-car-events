@@ -6002,5 +6002,21 @@
   "addr::devou park – drees pavilion - 790 park lane, covington, ky": null,
   "addr::mota car club": null,
   "170 W. Joe B Hall Ave 170 W. Joe B Hall Ave, Shepherdsville, KY 40165": null,
-  "3101 Richmond Road 3101 Richmond Road, Lexington, KY 40502": null
+  "3101 Richmond Road 3101 Richmond Road, Lexington, KY 40502": null,
+  "Delaware, OH": {
+    "lat": "40.2317686",
+    "lon": "-82.9651045"
+  },
+  "37074, USA": {
+    "lat": "36.3963352",
+    "lon": "-86.1567806"
+  },
+  "10330, USA": {
+    "lat": "41.9478280",
+    "lon": "-87.7470345"
+  },
+  "600 West Loveland Avenue, Loveland, OH 45140": {
+    "lat": "39.2694714",
+    "lon": "-84.2660188"
+  }
 }
