@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-10-01T12:12:26.179943-04:00",
-  "count": 261,
+  "generated_at_iso": "2026-10-01T12:31:27.152776-04:00",
+  "count": 265,
   "events": [
     {
       "Event Name": "Rockin’ Randall’s Cruise-In",
@@ -179,22 +179,6 @@
       "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
-      "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
-      "Date": "2026-10-03",
-      "Start Time": "8:00 AM",
-      "End Time": "11:00 AM",
-      "Location": "691 N. Cleveland Ave, Columbus, OH 43085",
-      "Address": "691 N. Cleveland Ave, Columbus, OH 43085",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-starbucks-in-westerville-2026-06-20",
-      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
-    },
-    {
       "Event Name": "Columbus Cars n Coffee Meetup – 1st Saturdays",
       "Date": "2026-10-03",
       "Start Time": "8:30 AM",
@@ -211,19 +195,19 @@
       "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
-      "Event Name": "Muncie Cars & Coffee 2026 - Season 10",
+      "Event Name": "Muncie Cars & Coffee 2026 – Season 10",
       "Date": "2026-10-03",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "100 E Charles St, Muncie, IN 47305",
-      "Address": "100 E Charles St, Muncie, IN 47305",
+      "Location": "100 E Charles St, Muncie, IN 47302",
+      "Address": "100 E Charles St, Muncie, IN 47302",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-10-03",
       "Organizer Social": ""
     },
     {
@@ -291,6 +275,22 @@
       "Organizer Social": "https://facebook.com/events/s/porsche-cruise-in-ovr-pca-ecli/959215626430485/"
     },
     {
+      "Event Name": "Shelby County Car Club Presents Monthly Cruise-In",
+      "Date": "2026-10-03",
+      "Start Time": "2:00 PM",
+      "End Time": "5:00 PM",
+      "Location": "1927 Midland Trail, Shelbyville, KY 40065",
+      "Address": "1927 Midland Trail, Shelbyville, KY 40065",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "12",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://www.facebook.com/ShelbyCountyCarClub",
+      "Organizer Social": "https://www.facebook.com/ShelbyCountyCarClub"
+    },
+    {
       "Event Name": "Bluegrass Outlawz Car Meet",
       "Date": "2026-10-03",
       "Start Time": "3:00 PM",
@@ -323,22 +323,6 @@
       "Organizer Social": "https://www.facebook.com/groups/1456889491292111"
     },
     {
-      "Event Name": "Shelby County Car Club Presents Monthly Cruise-In",
-      "Date": "2026-10-03",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "1927 Midland Trail, Shelbyville, KY 40065",
-      "Address": "1927 Midland Trail, Shelbyville, KY 40065",
-      "Closest City": "Louisville, KY",
-      "Callout": "Registration required",
-      "Size": "Small",
-      "Popularity": "12",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/shelby-county-car-club-presents-monthly-cruise-in-2026-10-03",
-      "Organizer Social": ""
-    },
-    {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-10-04",
       "Start Time": "8:00 AM",
@@ -369,6 +353,22 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/mccordsville-cars-coffee",
       "Organizer Social": ""
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
+      "Date": "2026-10-04",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "691 N. Cleveland Ave, Westerville, OH 43081",
+      "Address": "691 N. Cleveland Ave, Westerville, OH 43081",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://columbuscarsandcoffee.net/",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
       "Event Name": "Cars and Coffee; Sunday October 4th, 9am-noon",
@@ -691,6 +691,22 @@
       "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
+      "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
+      "Date": "2026-10-11",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "691 N. Cleveland Ave, Westerville, OH 43081",
+      "Address": "691 N. Cleveland Ave, Westerville, OH 43081",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://columbuscarsandcoffee.net/",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
+    },
+    {
       "Event Name": "'Cruise In' Car Show",
       "Date": "2026-10-11",
       "Start Time": "11:00 AM",
@@ -819,19 +835,19 @@
       "Organizer Social": "https://www.facebook.com/Lawrenceburgcarsandcoffee/"
     },
     {
-      "Event Name": "Liberty Center Cars and Coffee",
+      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
       "Date": "2026-10-17",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7140 Taylor Street, Liberty Township, OH 45069",
-      "Address": "7140 Taylor Street, Liberty Township, OH 45069",
+      "Location": "7160 Taylor St, Liberty Township, OH 45069",
+      "Address": "7160 Taylor St, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-10-17",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center",
       "Organizer Social": "https://www.facebook.com/LibertyCenterOhio/"
     },
     {
@@ -913,6 +929,22 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/winchester-cars-coffee",
       "Organizer Social": ""
+    },
+    {
+      "Event Name": "Hocking Hills Cars & Coffee",
+      "Date": "2026-10-17",
+      "Start Time": "9:00 AM",
+      "End Time": "11:30 AM",
+      "Location": "12762 Grey St, Logan, OH 43138",
+      "Address": "12762 Grey St, Logan, OH 43138",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://www.facebook.com/HockingHillsCC",
+      "Organizer Social": "https://www.facebook.com/HockingHillsCC"
     },
     {
       "Event Name": "Lighthouse Church Car Show",
@@ -1057,6 +1089,22 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-32",
       "Organizer Social": ""
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
+      "Date": "2026-10-18",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "691 N. Cleveland Ave, Westerville, OH 43081",
+      "Address": "691 N. Cleveland Ave, Westerville, OH 43081",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://columbuscarsandcoffee.net/",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
       "Event Name": "Fairfield Cars and Coffee",
@@ -1361,6 +1409,22 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-coffee",
       "Organizer Social": "https://www.facebook.com/LibertyCenterOhio/"
+    },
+    {
+      "Event Name": "Columbus Cars & Coffee – Starbucks in Westerville",
+      "Date": "2026-10-25",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "691 N. Cleveland Ave, Westerville, OH 43081",
+      "Address": "691 N. Cleveland Ave, Westerville, OH 43081",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "Manually Verified Events",
+      "Event URL": "https://columbuscarsandcoffee.net/",
+      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
       "Event Name": "Four Bridges Cruise-In",
