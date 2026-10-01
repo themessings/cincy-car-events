@@ -305,7 +305,11 @@ def city_state_from_zip(text: str) -> Tuple[str, str]:
     A last-resort fallback for manually entered rows whose address has no
     city name at all, only a street and a ZIP.
     """
-    m = re.search(r"\b(\d{5})(?:-\d{4})?\b", text or "")
+    # The LAST five-digit number is the ZIP. The first is often a street number:
+    # "10050 Innovation Dr Suite 340 Miamisburge OH 45342" geocoded "10050"
+    # and put Dayton Car's & Coffee under "St. Louis, MO" (2026-10-01).
+    found = list(re.finditer(r"\b(\d{5})(?:-\d{4})?\b", text or ""))
+    m = found[-1] if found else None
     if not m:
         return "", ""
     latlon = _geocode_zip(m.group(1))
