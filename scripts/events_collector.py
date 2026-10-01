@@ -5822,10 +5822,18 @@ def _matching_exclusion(ev: dict, rules: List[dict]) -> Optional[dict]:
     `title` as a substring of the event name, `url` as a substring of the
     event link. Either alone is enough, so a feed renaming an event or moving
     its link doesn't quietly bring it back.
+
+    A rule with `dates` (YYYY-MM-DD list) only drops those days — a host
+    cancelling one Saturday (Cars at Madison Square, 2026-10-03, private event
+    at the venue) must not take every other week off the lineup with it.
     """
     title = clean_ws(str(ev.get("title", ""))).lower()
     url = clean_ws(str(ev.get("url", ""))).lower()
+    day = clean_ws(str(ev.get("start_iso", "")))[:10]
     for rule in rules:
+        dates = rule.get("dates") or []
+        if dates and day not in {str(d) for d in dates}:
+            continue
         want_title = clean_ws(str(rule.get("title", ""))).lower()
         want_url = clean_ws(str(rule.get("url", ""))).lower()
         if want_title and want_title in title:
