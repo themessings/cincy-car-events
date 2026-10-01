@@ -1463,7 +1463,11 @@ for e in events_all[:15]:
         "| callout=", repr(e.callout),
     )
 
-events_selected = [e for e in events_all if e.date in selected_set]
+# Rallies stay in the sheet and the app, never on the weekend slides (Joel,
+# 2026-10-01: "exclude the rallys"). They are multi-day tours that start
+# hundreds of miles away — a Washington, DC launch was headed "Cincinnati".
+RALLY_TITLE_RE = re.compile(r"\b(rally|roadrally|rallycross)\b", re.IGNORECASE)
+events_selected = [e for e in events_all if e.date in selected_set and not RALLY_TITLE_RE.search(e.title or "")]
 events_selected = dedupe_and_merge_events(events_selected)
 events_selected = enrich_events(events_selected)
 
