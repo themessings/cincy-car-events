@@ -1304,14 +1304,62 @@ def _coarse_city_move_is_clear(
     return gain >= COARSE_CITY_MARGIN_MILES
 
 
-def closest_major_city(lat: Optional[float], lon: Optional[float]) -> str:
+# Which states each market heading may hold. Cincinnati and Louisville are
+# river metros whose suburbs really do cross the state line (Covington KY and
+# Lawrenceburg IN are Cincinnati; New Albany IN is Louisville). Every other
+# city heads its own state only — Liberty, IN sits 40mi from Dayton and 43mi
+# from Cincinnati, and filing it under "Dayton, OH" was wrong to every reader
+# who saw the 2026-09-25 lineup (Joel, 2026-10-01).
+MARKET_EXTRA_STATES: Dict[str, Tuple[str, ...]] = {
+    "Cincinnati, OH": ("KY", "IN"),
+    "Louisville, KY": ("IN",),
+}
+
+# A market that may hold the event's state wins unless it is this much farther
+# than the nearest city of any state. Keeps a border town whose only real
+# neighbour is across the line (Steubenville OH -> Pittsburgh) out of a home
+# state city two hours away.
+CROSS_STATE_MARGIN_MILES = 25.0
+
+_EVENT_STATE_RE: Optional["re.Pattern[str]"] = None  # built on first use; US_STATE_ABBR_RE is defined below
+
+
+def market_serves_state(city: str, state: str) -> bool:
+    if not state:
+        return True
+    return city.endswith(f", {state}") or state in MARKET_EXTRA_STATES.get(city, ())
+
+
+def event_state(*texts: str) -> str:
+    """Two-letter state from the last ", ST" in the first text that has one."""
+    global _EVENT_STATE_RE
+    if _EVENT_STATE_RE is None:
+        _EVENT_STATE_RE = re.compile(rf",\s*({US_STATE_ABBR_RE})\b")
+    for text in texts:
+        found = _EVENT_STATE_RE.findall(clean_ws(str(text or "")))
+        if found:
+            return found[-1].upper()
+    return ""
+
+
+def closest_major_city(lat: Optional[float], lon: Optional[float], state: str = "") -> str:
     if lat is None or lon is None:
         return ""
     try:
-        name, _, _ = min(MAJOR_CITIES, key=lambda c: haversine_miles(lat, lon, c[1], c[2]))
+        ranked = sorted(MAJOR_CITIES, key=lambda c: haversine_miles(lat, lon, c[1], c[2]))
     except Exception:
         return ""
-    return name
+    nearest = ranked[0]
+    state = clean_ws(state).upper()
+    if state and not market_serves_state(nearest[0], state):
+        for city in ranked[1:]:
+            if not market_serves_state(city[0], state):
+                continue
+            extra = haversine_miles(lat, lon, city[1], city[2]) - haversine_miles(lat, lon, nearest[1], nearest[2])
+            if extra <= CROSS_STATE_MARGIN_MILES:
+                return city[0]
+            break
+    return nearest[0]
 
 
 REGISTRATION_KEYWORDS = (
@@ -5787,11 +5835,15 @@ def _matching_exclusion(ev: dict, rules: List[dict]) -> Optional[dict]:
     return None
 
 
+def _ev_state(ev: dict) -> str:
+    return event_state(*(ev.get(k, "") for k in ("address", "city_state", "location")))
+
+
 def _guarantee_closest_city(ev: dict, cfg: dict) -> str:
     """Best-effort Closest City when lat/lon geocoding hasn't produced one:
     fall back to a state found in whatever location text we have, then to the
     configured home city. Closest City should never be blank on export."""
-    filled = closest_major_city(ev.get("lat"), ev.get("lon"))
+    filled = closest_major_city(ev.get("lat"), ev.get("lon"), _ev_state(ev))
     if filled:
         return filled
     text = " ".join(clean_ws(str(ev.get(k, ""))) for k in ("city_state", "address", "location"))
@@ -6167,10 +6219,13 @@ def enrich_events_for_export(
                     coarse = bool(latlon)
         if not latlon:
             continue
-        mapped_city = closest_major_city(latlon[0], latlon[1])
+        mapped_city = closest_major_city(latlon[0], latlon[1], _ev_state(ev))
         if not mapped_city or mapped_city == existing_city:
             continue
-        if coarse and not _coarse_city_move_is_clear(latlon, existing_city, mapped_city):
+        # A ZIP point is fuzzy, but it is never fuzzy about the state: a label
+        # whose market cannot hold this state moves regardless of the margin.
+        if (coarse and market_serves_state(existing_city, _ev_state(ev))
+                and not _coarse_city_move_is_clear(latlon, existing_city, mapped_city)):
             continue
         log(f"🗺️ Closest City corrected for '{clean_ws(str(ev.get('title', '')))}': "
             f"'{existing_city}' -> '{mapped_city}' "
@@ -6407,7 +6462,10 @@ def normalize_export_schema(rows: List[dict], headers: Optional[List[str]] = Non
                 except Exception:
                     return None
 
-            closest_city = closest_major_city(_coord(alias_map["lat"]), _coord(alias_map["lon"]))
+            closest_city = closest_major_city(
+                _coord(alias_map["lat"]), _coord(alias_map["lon"]),
+                event_state(normalized["Address"], normalized["Location"]),
+            )
         normalized["Closest City"] = closest_city
 
         normalized["Callout"] = (
@@ -7305,7 +7363,7 @@ def main():
                 continue
 
         if not clean_ws(str(ev.get("closest_city", "") or "")):
-            filled = closest_major_city(lat, lon)
+            filled = closest_major_city(lat, lon, _ev_state(ev))
             if filled:
                 ev["closest_city"] = filled
                 closest_city_backfilled += 1
