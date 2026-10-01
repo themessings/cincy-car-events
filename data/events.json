@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-10-01T11:25:56.474488-04:00",
-  "count": 262,
+  "generated_at_iso": "2026-10-01T12:05:01.050873-04:00",
+  "count": 261,
   "events": [
     {
       "Event Name": "Rockin’ Randall’s Cruise-In",
@@ -9,7 +9,7 @@
       "End Time": "5:00 PM",
       "Location": "404 N. Main Street, Liberty, IN 47353",
       "Address": "404 N. Main Street, Liberty, IN 47353",
-      "Closest City": "Dayton, OH",
+      "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
@@ -211,19 +211,19 @@
       "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
     },
     {
-      "Event Name": "Muncie Cars & Coffee 2026 – Season 10",
+      "Event Name": "Muncie Cars & Coffee 2026 - Season 10",
       "Date": "2026-10-03",
       "Start Time": "9:00 AM",
       "End Time": "12:00 PM",
-      "Location": "100 E Charles St, Muncie, IN 47302",
-      "Address": "100 E Charles St, Muncie, IN 47302",
+      "Location": "100 E Charles St, Muncie, IN 47305",
+      "Address": "100 E Charles St, Muncie, IN 47305",
       "Closest City": "Indianapolis, IN",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-season-10-2026-10-03",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10",
       "Organizer Social": ""
     },
     {
@@ -241,22 +241,6 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/rpm-transmissions-car-show-2026-10-03",
       "Organizer Social": ""
-    },
-    {
-      "Event Name": "Hocking Hills Cars & Coffee",
-      "Date": "2026-10-03",
-      "Start Time": "9:00 AM",
-      "End Time": "11:30 AM",
-      "Location": "12762 Grey St, Logan, OH 43138",
-      "Address": "12762 Grey St, Logan, OH 43138",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "Manually Verified Events",
-      "Event URL": "https://www.facebook.com/HockingHillsCC",
-      "Organizer Social": "https://www.facebook.com/HockingHillsCC"
     },
     {
       "Event Name": "Lex Ky Cars and Coffee",
@@ -289,22 +273,6 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN); CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/6th-annual-car-show-and-gun-giveaway",
       "Organizer Social": ""
-    },
-    {
-      "Event Name": "Cars at Madison Square",
-      "Date": "2026-10-03",
-      "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "5350 Medpace Way, Cincinnati, OH 45227",
-      "Address": "5350 Medpace Way, Cincinnati, OH 45227",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "32",
-      "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
-      "Organizer Social": "https://www.facebook.com/ElementEatery/"
     },
     {
       "Event Name": "Porsche Cruise In | OVR PCA & ECLIPSE Annual Event",
@@ -649,7 +617,7 @@
       "End Time": "8:00 PM",
       "Location": "113 N Wayne St, Fort Recovery, OH 45846",
       "Address": "113 N Wayne St, Fort Recovery, OH 45846",
-      "Closest City": "Fort Wayne, IN",
+      "Closest City": "Dayton, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
@@ -851,19 +819,19 @@
       "Organizer Social": "https://www.facebook.com/Lawrenceburgcarsandcoffee/"
     },
     {
-      "Event Name": "Liberty Center Cars and Coffee",
+      "Event Name": "Cincy Cars & Coffee @ Liberty Center",
       "Date": "2026-10-17",
       "Start Time": "8:00 AM",
       "End Time": "12:00 PM",
-      "Location": "7140 Taylor Street, Liberty Township, OH 45069",
-      "Address": "7140 Taylor Street, Liberty Township, OH 45069",
+      "Location": "7160 Taylor St, Liberty Township, OH 45069",
+      "Address": "7160 Taylor St, Liberty Township, OH 45069",
       "Closest City": "Cincinnati, OH",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
       "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://carsandcoffeeevents.com/events/liberty-center-cars-and-coffee-2026-10-17",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center",
       "Organizer Social": "https://www.facebook.com/LibertyCenterOhio/"
     },
     {
@@ -937,7 +905,7 @@
       "End Time": "11:00 AM",
       "Location": "225 W North St, Winchester, IN 47394",
       "Address": "225 W North St, Winchester, IN 47394",
-      "Closest City": "Dayton, OH",
+      "Closest City": "Fort Wayne, IN",
       "Callout": "",
       "Size": "Small",
       "Popularity": "20",
@@ -1073,6 +1041,22 @@
       "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
       "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
+    },
+    {
+      "Event Name": "Cars & Coffee",
+      "Date": "2026-10-18",
+      "Start Time": "8:00 AM",
+      "End Time": "11:00 AM",
+      "Location": "5811 Main St., McCordsville, IN 46055",
+      "Address": "5811 Main St., McCordsville, IN 46055",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/cars-coffee-32",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Fairfield Cars and Coffee",

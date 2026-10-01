@@ -6028,5 +6028,9 @@
   },
   "addr::evansville indiana area-road rally": null,
   "3650 Olentangy River Rd 3650 Olentangy River Rd, Columbus, OH 43085": null,
-  "7160 Taylor Street 7160 Taylor Street, Liberty Township, OH 45069": null
+  "7160 Taylor Street 7160 Taylor Street, Liberty Township, OH 45069": null,
+  "2349 Richmond Road, Lexington, KY 40502": {
+    "lat": "38.0178078",
+    "lon": "-84.4605929"
+  }
 }

@@ -343,7 +343,7 @@
     "events": []
   },
   "https://cincyscca.com/": {
-    "fetched_at_iso": "2026-10-01T11:21:23.323505-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:33.662639-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=3": {
@@ -497,7 +497,7 @@
     ]
   },
   "https://www.scca.com/pages/autocross": {
-    "fetched_at_iso": "2026-10-01T11:22:26.601448-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:56.061761-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/show-me-rally-closes-ara-s-2025-season-and-hints-at-epic-2026": {
@@ -573,7 +573,7 @@
     ]
   },
   "https://americancollectors.com/articles/classic-car-shows-in-the-u-s-for-2026/": {
-    "fetched_at_iso": "2026-10-01T11:20:52.273848-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:14.348876-04:00",
     "events": []
   },
   "https://www.scca.com/membership_areas/75": {
@@ -891,7 +891,7 @@
     ]
   },
   "https://www.eventbrite.com/d/ky--lexington/rally/": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.eventbrite.com/b/oh--cincinnati/government/": {
@@ -1322,7 +1322,7 @@
     ]
   },
   "https://sneakattackrally.com/ARACombinerThing/schedule.html?ara": {
-    "fetched_at_iso": "2026-10-01T11:21:33.412477-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:44.065542-04:00",
     "events": []
   },
   "https://www.scca.com/events/1998943-northwestern-ohio-region-event-6-autocross-toledo-express-airport": {
@@ -1759,7 +1759,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/car-show/": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.ssrfanatic.com/threads/maggie-valley-%E2%80%9Crally-in-the-valley%E2%80%9D-2026-registration.275306/page-2": {
@@ -2005,7 +2005,7 @@
     "events": []
   },
   "https://www.scca.com/pages/i-want-to-rallycross": {
-    "fetched_at_iso": "2026-10-01T11:22:26.601448-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:56.061761-04:00",
     "events": []
   },
   "https://www.scca.com/events/2001480-ohio-valley-region-rallycross-pe-3-joe-s-speedway": {
@@ -2029,7 +2029,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/post/university-of-northwestern-ohio-and-american-rally-association-extend-official-educational-partnersh": {
-    "fetched_at_iso": "2026-10-01T11:21:33.412477-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:44.065542-04:00",
     "events": []
   },
   "https://www.meetup.com/find/us--oh--cincinnati/car-meets/": {
@@ -3172,7 +3172,7 @@
     "events": []
   },
   "https://www.scca.com/pages/what-is-autocross": {
-    "fetched_at_iso": "2026-10-01T11:22:26.601448-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:56.061761-04:00",
     "events": []
   },
   "https://cincyscca.com/autocross/": {
@@ -17997,8 +17997,17 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/cars-coffee-32": {
-    "checked_at_iso": "2026-09-24T10:23:39.750974-04:00",
-    "result": null
+    "checked_at_iso": "2026-10-01T12:04:58.831241-04:00",
+    "result": {
+      "title": "Cars & Coffee",
+      "start_iso": "2026-10-18T08:00:00-04:00",
+      "end_iso": "2026-10-18T11:00:00-04:00",
+      "location": "McCord Square 5811 Main St. McCordsville IN 46055",
+      "address": "5811 Main St., McCordsville, IN 46055",
+      "description": "McCordsville Cars & Coffee returns for its 3rd season in 2026! Meets are held once a month on select days, May through October on Sundays 8am-11am at McCord Square, 5611 Main Street in McCordsville. (May 17th, June 14th, July 12th, Aug 22nd, Sept 27th & Oct 18th)We have been welcoming on average about 250-300 vehicles of all varieties at each meet. All makes, models and years are welcome! Free coffee and donuts while supplies last!Questions? Contact Niki Jones at njones@mccordsville.in.gov Ph: 3...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/james-miller-memorial-car-show-2026-09-27": {
     "checked_at_iso": "2026-09-24T10:23:39.865147-04:00",
@@ -18319,7 +18328,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/car-show-near-45140/?page=0": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/cincinnati-speed-dating/?page=6": {
@@ -18497,7 +18506,7 @@
     "events": []
   },
   "https://www.scca.com/articles/2020115-bring-in-the-new-year-with-these-challenging-and-fun-roadrallies": {
-    "fetched_at_iso": "2026-10-01T11:21:23.323505-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:33.662639-04:00",
     "events": []
   },
   "https://cincyscca.com/2025/06/rallycross-event-1-edgewater-sports-park/": {
@@ -18513,7 +18522,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/in--lawrenceburg/events--this-weekend/classic-car-show/": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/knights-of-columbus-9th-annual-charity-car-show-2026-join-the-knights-for-o-tickets-2000037635407": {
@@ -18800,7 +18809,7 @@
     "events": []
   },
   "https://www.scca.com/events/archives?page=4&within=500": {
-    "fetched_at_iso": "2026-10-01T11:20:52.273848-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:14.348876-04:00",
     "events": []
   },
   "https://www.instagram.com/p/DLdcOQ-STcX/": {
@@ -18808,7 +18817,7 @@
     "events": []
   },
   "https://wcti12.com/news/local/rallycross-thrives-in-eastern-carolina-offering-thrills-for-all-car-enthusiasts": {
-    "fetched_at_iso": "2026-10-01T11:20:52.273848-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:14.348876-04:00",
     "events": []
   },
   "https://www.scca.com/articles/2020450-this-rallycross-season-is-poised-to-please-offering-thrills-chills-plus-cash-and-prizes": {
@@ -18876,19 +18885,19 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--events/car-shows/": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/main-attraction-car-show/": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.eventbrite.com/b/ky--louisville--merriwether/auto-boat-and-air/": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--louisville/events--today/car-show/": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/wiskey-row-car-show/": {
@@ -18896,7 +18905,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--dayton/car-show-at-mecum-auction/?page=0": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--medina/columbus-goodguys-car-show/": {
@@ -18924,7 +18933,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?country=US&radius=300&lat=41.08&lng=-85.14&loc=Fort+Wayne&page=6": {
-    "fetched_at_iso": "2026-10-01T11:21:55.560293-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:52.596823-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/events/southwestern-ohio-autocross-challenge-traders-world-scca-cincinnati-solo-976758": {
@@ -19025,35 +19034,35 @@
     }
   },
   "https://www.eventbrite.com/d/ky--fort-wright/cars/": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--florence/events--next-week/events-in-northern-kentucky/": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--middletown/car-show-in-middletown/?page=2": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/in--greensburg/car-show-rebeca-park/": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--middletown/events--today/car-show-in-middletown/": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--greenville/good-guys-car-show/": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--chillicothe/road-rally/?page=8": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--dayton/events--this-weekend/good-guys-car-show/": {
-    "fetched_at_iso": "2026-10-01T11:20:45.907425-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:13.567931-04:00",
     "events": []
   },
   "https://www.meetup.com/pl/cincinnatibackpackers/": {
@@ -19090,23 +19099,23 @@
     ]
   },
   "https://www.facebook.com/tourdeluxrally/posts/-2026-tdr-presents-hell-en-back-iii-the-majestic-mountain-tour-rallyoctober-21st/1514327060717606/": {
-    "fetched_at_iso": "2026-10-01T11:20:52.273848-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:14.348876-04:00",
     "events": []
   },
   "https://www.greatrace.com/news/day-5-north-carolina-southern-hospitality": {
-    "fetched_at_iso": "2026-10-01T11:20:52.273848-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:14.348876-04:00",
     "events": []
   },
   "https://www.facebook.com/friendsofjaclyn/videos/were-about-to-begin-something-truly-specialfrom-august-616-the-great-american-ro/1609968200095269/": {
-    "fetched_at_iso": "2026-10-01T11:20:52.273848-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:14.348876-04:00",
     "events": []
   },
   "https://backroadsofappalachia.org/events/category/rallycross/": {
-    "fetched_at_iso": "2026-10-01T11:20:52.273848-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:14.348876-04:00",
     "events": []
   },
   "https://www.instagram.com/reel/DYqLZG-NHVZ/": {
-    "fetched_at_iso": "2026-10-01T11:20:52.273848-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:14.348876-04:00",
     "events": []
   },
   "https://www.scca.com/events/2010108-southern-indiana-region-roadrally-3-cannonball-again-first-baptist-church": {
@@ -19122,55 +19131,55 @@
     ]
   },
   "https://cincyscca.com/locations/mid-ohio-sports-car-course/": {
-    "fetched_at_iso": "2026-10-01T11:21:23.323505-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:33.662639-04:00",
     "events": []
   },
   "https://www.scca.com/events/page/10": {
-    "fetched_at_iso": "2026-10-01T11:21:23.323505-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:33.662639-04:00",
     "events": []
   },
   "https://growtiming.scca.com/events?categories=solo-series%2Csolo%2Csolo-nationals%2Cmatch-tour%2Ccam%2Cautocross-5%2Ccam-1618845074-43&limit=20&reorder=events.starts_at+ASC": {
-    "fetched_at_iso": "2026-10-01T11:21:23.323505-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:33.662639-04:00",
     "events": []
   },
   "https://www.scca.com/events/archives?categories=timetrials-2&page=10": {
-    "fetched_at_iso": "2026-10-01T11:21:23.323505-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:33.662639-04:00",
     "events": []
   },
   "https://www.scca.com/events/archives?categories=rally%2Csolo%2Cstarting-line%2Cprosolo%2Cautocross-5%2Crallycross%2Crallycross-2%2Csl-rallycross%2Ctrackdays%2Cregional-track-event%2Ctrackdays-2%2Ctrack-events%2Ctrack-night%2Ctimetrials%2Csl-track%2Ctimetrials-2%2Ctarga%2Ctime-attack-standalone%2Ctime-trials-national-tour%2Ctime-trials-tmatk-trksprnt%2Chillclimb-1618845072-70%2Chillclimb%2Cclub%2Cclub-2%2Cclubracing&page=3": {
-    "fetched_at_iso": "2026-10-01T11:21:23.323505-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:33.662639-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/boone-forest-rally-brings-eastern-regional-fight-to-appalachia": {
-    "fetched_at_iso": "2026-10-01T11:21:33.412477-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:44.065542-04:00",
     "events": []
   },
   "https://www.sneakattackrally.com/ARACombinerThing/teamsPublic.html?search=ohio": {
-    "fetched_at_iso": "2026-10-01T11:21:33.412477-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:44.065542-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/organization": {
-    "fetched_at_iso": "2026-10-01T11:21:33.412477-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:44.065542-04:00",
     "events": []
   },
   "https://sneakattackrally.com/ARA/entryList.html?rally=sno*driftrally": {
-    "fetched_at_iso": "2026-10-01T11:21:33.412477-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:44.065542-04:00",
     "events": []
   },
   "https://sneakattackrally.com/ARACombinerThing/index.html?year=2026&rally=southern_ohio_forest_rally_2026": {
-    "fetched_at_iso": "2026-10-01T11:21:33.412477-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:44.065542-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/motor-meet-up-cruise-in-tickets-1997270007357": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-show-columbus/": {
-    "fetched_at_iso": "2026-10-01T11:21:53.381550-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:51.135180-04:00",
     "events": []
   },
   "https://mvscc.motorsportreg.com/": {
-    "fetched_at_iso": "2026-10-01T11:21:55.560293-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:52.596823-04:00",
     "events": []
   },
   "https://www99.motorsportreg.com/events/nasa-great-lakes-mid-ohio-sports-car-course-combined-5246": {
@@ -19234,15 +19243,15 @@
     ]
   },
   "https://kyscca.motorsportreg.com/calendar/autocross/": {
-    "fetched_at_iso": "2026-10-01T11:21:55.560293-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:52.596823-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/venues/evansville-indiana-area-in": {
-    "fetched_at_iso": "2026-10-01T11:21:55.560293-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:52.596823-04:00",
     "events": []
   },
   "https://www.scca.com/pages/what-is-rallycross": {
-    "fetched_at_iso": "2026-10-01T11:22:26.601448-04:00",
+    "fetched_at_iso": "2026-10-01T12:04:56.061761-04:00",
     "events": []
   },
   "verify::https://facebook.com/events/s/lex-ky-cars-and-coffee/1111176901860659/": {
