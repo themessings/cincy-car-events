@@ -5830,9 +5830,17 @@ def _matching_exclusion(ev: dict, rules: List[dict]) -> Optional[dict]:
     title = clean_ws(str(ev.get("title", ""))).lower()
     url = clean_ws(str(ev.get("url", ""))).lower()
     day = clean_ws(str(ev.get("start_iso", "")))[:10]
+    try:
+        weekday = datetime.strptime(day, "%Y-%m-%d").strftime("%a")
+    except ValueError:
+        weekday = ""
     for rule in rules:
         dates = rule.get("dates") or []
         if dates and day not in {str(d) for d in dates}:
+            continue
+        # keep_weekdays: the rule leaves these days alone — a listing site that
+        # files a Sunday-only meet under Saturdays (Westerville, 2026-10-01).
+        if weekday and weekday in {str(w)[:3].title() for w in (rule.get("keep_weekdays") or [])}:
             continue
         want_title = clean_ws(str(rule.get("title", ""))).lower()
         want_url = clean_ws(str(rule.get("url", ""))).lower()

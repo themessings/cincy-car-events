@@ -311,6 +311,18 @@ filters:
       2026-10-01 host check — @hockinghillscc posted 2026-08-30 "Our
       October meet will now be on the 17th of October" and again 09-12 and
       09-22. Feeds still list the old Oct 3 date.
+  - title: Starbucks in Westerville
+    keep_weekdays: [Sun]
+    reason: >-
+      2026-10-01 date audit — the host's own site (columbuscarsandcoffee.net):
+      "every Sunday meet at Starbucks in Westerville - 8am-11am". The listing
+      site files it under Saturdays; the 10-03 lineup showed it on Saturday.
+  - url: shelby-county-car-club-presents-monthly-cruise-in-2026-10-03
+    dates: ["2026-10-03"]
+    reason: >-
+      2026-10-01 date audit — the listing's own note says "October meet: 2PM
+      to 5PM" but its time field says 5-8 PM. Re-added below as a manual event
+      at 2-5 PM. (Their Facebook page would not load to confirm.)
 
   car_dedicated_sources:
   - OVR PCA
@@ -425,7 +437,7 @@ sources:
     - title: Hocking Hills Cars & Coffee
       location: The Hungry Buffalo, 12762 Grey St, Logan, OH 43138
       city_state: Logan, OH
-      date: "2026-10-03"
+      date: "2026-10-17"  # moved from Oct 3 — host posts 2026-08-30, 09-12, 09-22
       start_time: "9:00 AM"
       end_time: "11:30 AM"
       url: https://www.facebook.com/HockingHillsCC
@@ -439,6 +451,44 @@ sources:
 
     # Fairfield Cars and Coffee (sponsored by Bilstein) — Facebook group event
     # "Bilstein Cars and Coffee September 2026", Sunday 9 AM–12 PM. 3rd Sundays.
+    # 2026-10-01 date audit. Westerville: host site columbuscarsandcoffee.net
+    # says every Sunday 8-11 AM at 691 N. Cleveland Ave, Westerville 43081.
+    - title: Columbus Cars & Coffee – Starbucks in Westerville
+      location: Starbucks, 691 N. Cleveland Ave, Westerville, OH 43081
+      city_state: Westerville, OH
+      date: "2026-10-04"
+      start_time: "8:00 AM"
+      end_time: "11:00 AM"
+      url: https://columbuscarsandcoffee.net/
+    - title: Columbus Cars & Coffee – Starbucks in Westerville
+      location: Starbucks, 691 N. Cleveland Ave, Westerville, OH 43081
+      city_state: Westerville, OH
+      date: "2026-10-11"
+      start_time: "8:00 AM"
+      end_time: "11:00 AM"
+      url: https://columbuscarsandcoffee.net/
+    - title: Columbus Cars & Coffee – Starbucks in Westerville
+      location: Starbucks, 691 N. Cleveland Ave, Westerville, OH 43081
+      city_state: Westerville, OH
+      date: "2026-10-18"
+      start_time: "8:00 AM"
+      end_time: "11:00 AM"
+      url: https://columbuscarsandcoffee.net/
+    - title: Columbus Cars & Coffee – Starbucks in Westerville
+      location: Starbucks, 691 N. Cleveland Ave, Westerville, OH 43081
+      city_state: Westerville, OH
+      date: "2026-10-25"
+      start_time: "8:00 AM"
+      end_time: "11:00 AM"
+      url: https://columbuscarsandcoffee.net/
+    # Shelby County Car Club — October meet runs 2-5 PM per the listing's note.
+    - title: Shelby County Car Club Presents Monthly Cruise-In
+      location: Hardees Parking Lot, 1927 Midland Trail, Shelbyville, KY 40065
+      city_state: Shelbyville, KY
+      date: "2026-10-03"
+      start_time: "2:00 PM"
+      end_time: "5:00 PM"
+      url: https://www.facebook.com/ShelbyCountyCarClub
     - title: Fairfield Cars and Coffee
       location: Thyssenkrupp Bilstein, 8695 Bilstein Blvd, Hamilton, OH 45015
       city_state: Hamilton, OH

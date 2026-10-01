@@ -19,6 +19,13 @@ class ManualExcludeDatesTests(unittest.TestCase):
         ev = {"title": "No Limits 937 Cars & Coffee", "url": "", "start_iso": "2026-10-10T09:00:00-04:00"}
         self.assertIs(_matching_exclusion(ev, [rule]), rule)
 
+    def test_keep_weekdays_spares_the_real_day(self):
+        rule = {"title": "Starbucks in Westerville", "keep_weekdays": ["Sun"]}
+        sat = {"title": "Columbus Cars & Coffee – Starbucks in Westerville", "url": "", "start_iso": "2026-10-03T08:00:00-04:00"}
+        sun = {"title": "Columbus Cars & Coffee – Starbucks in Westerville", "url": "", "start_iso": "2026-10-04T08:00:00-04:00"}
+        self.assertIs(_matching_exclusion(sat, [rule]), rule)
+        self.assertIsNone(_matching_exclusion(sun, [rule]))
+
 
 if __name__ == "__main__":
     unittest.main()
