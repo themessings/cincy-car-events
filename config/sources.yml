@@ -299,6 +299,12 @@ filters:
       stale (schedule page still says May 2026, "Our Next Meet" 404s) and
       they only publish to Instagram, so their listings can't be verified
       the way he wants to verify them.
+  - title: Cars at Madison Square
+    dates: ["2026-10-03"]
+    reason: >-
+      Joel, 2026-10-01 — @latenightlap posted "No show this Saturday":
+      Madison Square is closed for a private event. Back Oct 10. The weekly
+      repeat on the iCloud calendar still listed it.
 
   car_dedicated_sources:
   - OVR PCA
