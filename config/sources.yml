@@ -305,6 +305,12 @@ filters:
       Joel, 2026-10-01 — @latenightlap posted "No show this Saturday":
       Madison Square is closed for a private event. Back Oct 10. The weekly
       repeat on the iCloud calendar still listed it.
+  - title: Hocking Hills Cars
+    dates: ["2026-10-03"]
+    reason: >-
+      2026-10-01 host check — @hockinghillscc posted 2026-08-30 "Our
+      October meet will now be on the 17th of October" and again 09-12 and
+      09-22. Feeds still list the old Oct 3 date.
 
   car_dedicated_sources:
   - OVR PCA
