@@ -311,12 +311,36 @@ def city_state_from_zip(text: str) -> Tuple[str, str]:
     latlon = _geocode_zip(m.group(1))
     if not latlon:
         return "", ""
-    name, _, _ = min(
-        ZIP_CITY_FALLBACK,
-        key=lambda c: geodesic(latlon, (c[1], c[2])).miles,
-    )
+    ranked = sorted(ZIP_CITY_FALLBACK, key=lambda c: geodesic(latlon, (c[1], c[2])).miles)
+    name = ranked[0][0]
+    # Same rule as events_collector.closest_major_city(): a heading only holds
+    # its own state, bar the two river metros, so a Liberty, IN ZIP is never
+    # filed under "Dayton, OH" (Joel, 2026-10-01).
+    zip_state = _state_from_zip(m.group(1))
+    if zip_state and not _market_serves_state(name, zip_state):
+        nearest_mi = geodesic(latlon, (ranked[0][1], ranked[0][2])).miles
+        for cand, lat, lon in ranked[1:]:
+            if _market_serves_state(cand, zip_state):
+                if geodesic(latlon, (lat, lon)).miles - nearest_mi <= CROSS_STATE_MARGIN_MILES:
+                    name = cand
+                break
     city, state = name.split(", ")
     return city, state
+
+
+# Mirrors events_collector.MARKET_EXTRA_STATES / CROSS_STATE_MARGIN_MILES.
+MARKET_EXTRA_STATES = {"Cincinnati, OH": ("KY", "IN"), "Louisville, KY": ("IN",)}
+CROSS_STATE_MARGIN_MILES = 25.0
+_ZIP3_STATE = [(400, 427, "KY"), (430, 459, "OH"), (460, 479, "IN")]
+
+
+def _state_from_zip(zip5: str) -> str:
+    z3 = int(zip5[:3])
+    return next((st for lo, hi, st in _ZIP3_STATE if lo <= z3 <= hi), "")
+
+
+def _market_serves_state(city: str, state: str) -> bool:
+    return city.endswith(f", {state}") or state in MARKET_EXTRA_STATES.get(city, ())
 
 
 AVG_SPEED_MPH_FALLBACK = 52
