@@ -375,6 +375,14 @@ def get_google_credentials() -> Optional[service_account.Credentials]:
 # ----------------------------
 # HELPERS
 # ----------------------------
+MANUAL_SOURCE_TOKENS = {"", "manual", "manually_added", "user", "user_added"}
+
+
+def is_manual_source(x) -> bool:
+    """True for a sheet row someone typed in by hand rather than one the collector wrote."""
+    return coalesce_str(x).strip().lower() in MANUAL_SOURCE_TOKENS
+
+
 def coalesce_str(x) -> str:
     if x is None:
         return ""
@@ -1055,6 +1063,7 @@ def build_events(df: pd.DataFrame) -> List[Event]:
 
     col_closest_city = find_column_exact(df, "Closest City")
     col_callout = find_column_exact(df, "Callout")
+    col_source = find_column_exact(df, "Source")
 
     if col_closest_city is None:
         raise ValueError(f"Could not find exact column 'Closest City'. Actual headers: {[repr(c) for c in df.columns]}")
@@ -1090,7 +1099,16 @@ def build_events(df: pd.DataFrame) -> List[Event]:
         col_end_dt = None
 
     out = []
+    skipped_manual = 0
     for _, row in df.iterrows():
+        # Hand-typed sheet rows never reach a slide (Joel, 2026-10-03: "We need
+        # to eliminate the manual entries as they pose too much risk"). A typed
+        # "Dayton Car's & Coffee" row with no source link went out on the
+        # 2026-10-01 carousel as a real event. Every row the collector writes
+        # names the source it came from; a blank or "Manual" one did not.
+        if col_source is not None and is_manual_source(row.get(col_source)):
+            skipped_manual += 1
+            continue
         title = clean_title(row.get(col_title) if col_title else None)
         loc   = clean_place(coalesce_str(row.get(col_loc) if col_loc else None))
         addr  = clean_place(coalesce_str(row.get(col_addr) if col_addr else None))
@@ -1136,6 +1154,7 @@ def build_events(df: pd.DataFrame) -> List[Event]:
             sheet_closest_city=sheet_closest_city,
             sheet_callout=sheet_callout
         ))
+    print(f"Hand-typed (Source blank/Manual) rows skipped: {skipped_manual}")
     return out
 
 
