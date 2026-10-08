@@ -40,7 +40,7 @@
     ]
   },
   "https://www.americanrallyassociation.org/2026-ara-schedule": {
-    "fetched_at_iso": "2026-09-17T11:14:24.916370-04:00",
+    "fetched_at_iso": "2026-10-08T06:44:42.045307-04:00",
     "events": []
   },
   "https://www.sandhillsmotoringexpo.com/": {
@@ -132,7 +132,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/sofr": {
-    "fetched_at_iso": "2026-09-17T11:14:24.916370-04:00",
+    "fetched_at_iso": "2026-10-08T06:44:42.045307-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/american-rally-association-announces-2026-schedule": {
@@ -140,7 +140,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/live": {
-    "fetched_at_iso": "2026-09-17T11:14:24.916370-04:00",
+    "fetched_at_iso": "2026-10-08T06:44:42.045307-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/copy-of-2025-championship-standings": {
@@ -358,60 +358,6 @@
     "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
   },
-  "https://www.meetup.com/topics/hybridcars/is/": {
-    "fetched_at_iso": "2026-04-05T07:30:25.879774-04:00",
-    "events": [
-      {
-        "title": "Pinnacles - Tres Pinos ride",
-        "start_iso": "2026-04-26T11:15:00-04:00",
-        "end_iso": "2026-04-26T17:00:00-04:00",
-        "location": "Chevron Hollister 1390 Prospect Ave, Hollister, CA 95023 Hollister CA 95023",
-        "url": "https://www.meetup.com/central-cal-bmw-riders-ccbr/events/314095299/"
-      },
-      {
-        "title": "San Leandro Toastmasters (Hybrid)",
-        "start_iso": "2026-04-09T21:30:00-04:00",
-        "end_iso": "2026-04-09T23:00:00-04:00",
-        "location": "San Leandro Main Library 300 Estudillo Avenue, San Leandro, CA 94577 San Leandro CA 94577",
-        "url": "https://www.meetup.com/d57_toastmasters_clubs_meetup_group/events/314027438/"
-      },
-      {
-        "title": "47th Annual Tierra Bella Cycling Tour",
-        "start_iso": "2026-04-12T09:00:00-04:00",
-        "end_iso": "2026-04-12T20:00:00-04:00",
-        "location": "Gilroy High School 750 W 10th St, Gilroy, CA 95020 Gilroy CA 95020",
-        "url": "https://www.meetup.com/redwood-shores-cycling-meetup/events/314063800/"
-      },
-      {
-        "title": "Meditation Program 2026 - Day 08 (Laziness)",
-        "start_iso": "2026-04-17T23:00:00-04:00",
-        "end_iso": "2026-04-18T00:30:00-04:00",
-        "location": "Buddhi Vihara 402 Knowles Ave., San Jose, CA San Jose CA",
-        "url": "https://www.meetup.com/santa-clara-meditation-meetup/events/314011952/"
-      },
-      {
-        "title": "Iceberg Summit 2026",
-        "start_iso": "2026-04-08T22:00:00-04:00",
-        "end_iso": "2026-04-09T20:00:00-04:00",
-        "location": "Marriot Marquis 780 Mission Street, San Francisco, CA San Francisco CA",
-        "url": "https://www.meetup.com/snowflake-bay-area-meetup/events/314051771/"
-      },
-      {
-        "title": "Sunrise Business Leaders Toastmasters, Hybrid Meeting, Concord.",
-        "start_iso": "2026-04-16T10:00:00-04:00",
-        "end_iso": "2026-04-16T11:00:00-04:00",
-        "location": "Golden State Lumber 1080 Burnett Ave, Concord, CA 94520 Concord CA 94520",
-        "url": "https://www.meetup.com/d57_toastmasters_clubs_meetup_group/events/313981841/"
-      },
-      {
-        "title": "Meditation Program 2026 - Day 15 (Q & A)",
-        "start_iso": "2026-04-10T23:00:00-04:00",
-        "end_iso": "2026-04-11T00:30:00-04:00",
-        "location": "Buddhi Vihara 402 Knowles Ave., San Jose, CA San Jose CA",
-        "url": "https://www.meetup.com/santa-clara-meditation-meetup/events/313891112/"
-      }
-    ]
-  },
   "https://www.scca.com/pages/2026-majors-schedule": {
     "fetched_at_iso": "2026-04-28T08:24:25.820937-04:00",
     "events": []
@@ -612,60 +558,6 @@
     "fetched_at_iso": "2026-04-26T07:41:25.961507-04:00",
     "events": []
   },
-  "https://www.meetup.com/pl-PL/topics/hybridcars/by/": {
-    "fetched_at_iso": "2026-04-05T07:30:25.879774-04:00",
-    "events": [
-      {
-        "title": "Pinnacles - Tres Pinos ride",
-        "start_iso": "2026-04-26T11:15:00-04:00",
-        "end_iso": "2026-04-26T17:00:00-04:00",
-        "location": "Chevron Hollister 1390 Prospect Ave, Hollister, CA 95023 Hollister CA 95023",
-        "url": "https://www.meetup.com/pl-PL/central-cal-bmw-riders-ccbr/events/314095299/"
-      },
-      {
-        "title": "San Leandro Toastmasters (Hybrid)",
-        "start_iso": "2026-04-09T21:30:00-04:00",
-        "end_iso": "2026-04-09T23:00:00-04:00",
-        "location": "San Leandro Main Library 300 Estudillo Avenue, San Leandro, CA 94577 San Leandro CA 94577",
-        "url": "https://www.meetup.com/pl-PL/d57_toastmasters_clubs_meetup_group/events/314027438/"
-      },
-      {
-        "title": "47th Annual Tierra Bella Cycling Tour",
-        "start_iso": "2026-04-12T09:00:00-04:00",
-        "end_iso": "2026-04-12T20:00:00-04:00",
-        "location": "Gilroy High School 750 W 10th St, Gilroy, CA 95020 Gilroy CA 95020",
-        "url": "https://www.meetup.com/pl-PL/redwood-shores-cycling-meetup/events/314063800/"
-      },
-      {
-        "title": "Meditation Program 2026 - Day 08 (Laziness)",
-        "start_iso": "2026-04-17T23:00:00-04:00",
-        "end_iso": "2026-04-18T00:30:00-04:00",
-        "location": "Buddhi Vihara 402 Knowles Ave., San Jose, CA San Jose CA",
-        "url": "https://www.meetup.com/pl-PL/santa-clara-meditation-meetup/events/314011952/"
-      },
-      {
-        "title": "Iceberg Summit 2026",
-        "start_iso": "2026-04-08T22:00:00-04:00",
-        "end_iso": "2026-04-09T20:00:00-04:00",
-        "location": "Marriot Marquis 780 Mission Street, San Francisco, CA San Francisco CA",
-        "url": "https://www.meetup.com/pl-PL/snowflake-bay-area-meetup/events/314051771/"
-      },
-      {
-        "title": "Sunrise Business Leaders Toastmasters, Hybrid Meeting, Concord.",
-        "start_iso": "2026-04-16T10:00:00-04:00",
-        "end_iso": "2026-04-16T11:00:00-04:00",
-        "location": "Golden State Lumber 1080 Burnett Ave, Concord, CA 94520 Concord CA 94520",
-        "url": "https://www.meetup.com/pl-PL/d57_toastmasters_clubs_meetup_group/events/313981841/"
-      },
-      {
-        "title": "Meditation Program 2026 - Day 15 (Q & A)",
-        "start_iso": "2026-04-10T23:00:00-04:00",
-        "end_iso": "2026-04-11T00:30:00-04:00",
-        "location": "Buddhi Vihara 402 Knowles Ave., San Jose, CA San Jose CA",
-        "url": "https://www.meetup.com/pl-PL/santa-clara-meditation-meetup/events/313891112/"
-      }
-    ]
-  },
   "https://www.meetup.com/topics/camping/us/": {
     "fetched_at_iso": "2026-05-01T07:59:29.682685-04:00",
     "events": [
@@ -847,7 +739,7 @@
     ]
   },
   "https://www.scca.com/events/2008150-western-ohio-edgewater-rallycross-2-scca-edgewater-sports-park": {
-    "fetched_at_iso": "2026-06-16T11:52:52.054697-04:00",
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
     "events": [
       {
         "title": "Western Ohio, Edgewater RallyCross #2 SCCA @ Edgewater Sports Park",
@@ -1326,7 +1218,7 @@
     "events": []
   },
   "https://www.scca.com/events/1998943-northwestern-ohio-region-event-6-autocross-toledo-express-airport": {
-    "fetched_at_iso": "2026-09-24T10:22:53.369106-04:00",
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
     "events": [
       {
         "title": "Northwestern Ohio Region - Event 6 - Autocross @ Toledo Express Airport",
@@ -1382,16 +1274,8 @@
     "fetched_at_iso": "2026-05-31T08:11:55.896957-04:00",
     "events": []
   },
-  "https://timetrials.scca.com/events/2000156-cincinnati-region-trace-event-time-trial-mid-ohio-sports-car-course": {
-    "fetched_at_iso": "2026-04-07T07:56:37.875788-04:00",
-    "events": []
-  },
   "https://www.eventbrite.com/d/oh--cincinnati/car-race/": {
     "fetched_at_iso": "2026-05-03T07:43:28.389089-04:00",
-    "events": []
-  },
-  "https://www.americanrallyassociation.org/post/southern-ohio-forest-rally-stage-guide": {
-    "fetched_at_iso": "2026-04-06T07:50:38.067818-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/events/buckeye-bmw-cca-mid-ohio-hpde-2025-sports-car-course-driving-events-732866": {
@@ -1742,10 +1626,6 @@
     "fetched_at_iso": "2026-06-21T09:04:40.337262-04:00",
     "events": []
   },
-  "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/313769866/": {
-    "fetched_at_iso": "2026-04-09T07:59:16.513875-04:00",
-    "events": []
-  },
   "https://www.eventbrite.com/d/oh--batavia/car-show/": {
     "fetched_at_iso": "2026-06-19T10:13:01.985176-04:00",
     "events": []
@@ -1803,20 +1683,12 @@
     "fetched_at_iso": "2026-04-13T08:03:39.158792-04:00",
     "events": []
   },
-  "https://www.facebook.com/groups/ncrallycross/posts/9091621247627870/": {
-    "fetched_at_iso": "2026-04-10T07:50:29.234988-04:00",
-    "events": []
-  },
   "https://www.therechargerally.com/app-landing-page": {
     "fetched_at_iso": "2026-07-02T09:57:05.841963-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--events--this-weekend/cincinnati-ohio/?page=4": {
     "fetched_at_iso": "2026-04-13T08:03:12.416604-04:00",
-    "events": []
-  },
-  "https://www.scca.com/events/2009915-kentucky-region-autocross-2026-points-event-2-salem-motorsports-park": {
-    "fetched_at_iso": "2026-04-05T07:31:13.341524-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/vip-program": {
@@ -1856,118 +1728,8 @@
       }
     ]
   },
-  "https://www.meetup.com/ko-KR/topics/hybridcars/gr/": {
-    "fetched_at_iso": "2026-04-06T07:49:35.052777-04:00",
-    "events": [
-      {
-        "title": "Bowling 🎳",
-        "start_iso": "2026-04-06T12:30:00-04:00",
-        "end_iso": "2026-04-06T14:00:00-04:00",
-        "location": "Royal Bowling Tefthidos 7, Peristeri 121 32, Peristeri Peristeri",
-        "url": "https://www.meetup.com/ko-KR/athens-sports-and-outdoor-activities/events/314022895/"
-      },
-      {
-        "title": "It's Finally Friday! International night! EXCEPTIONALLY THURSDAY",
-        "start_iso": "2026-04-10T14:00:00-04:00",
-        "end_iso": "2026-04-10T20:00:00-04:00",
-        "location": "A LIAR MAN Sofroniou 2, Athina 118 54, Greece, Athens meetup1 Athens meetup1",
-        "url": "https://www.meetup.com/ko-KR/athens-friday-night-fever/events/312261475/"
-      },
-      {
-        "title": "Market Intelligence in a Society that hates Transparency [foobar.i/o #8]",
-        "start_iso": "2026-04-07T12:00:00-04:00",
-        "end_iso": "2026-04-07T14:00:00-04:00",
-        "location": "Starttech Ventures Likourgou 1, Athina 105 51, Greece, Athens meetup1 Athens meetup1",
-        "url": "https://www.meetup.com/ko-KR/foobar-io/events/313630621/"
-      },
-      {
-        "title": "Founders Running Club :: Athens",
-        "start_iso": "2026-04-11T02:00:00-04:00",
-        "end_iso": "2026-04-11T03:30:00-04:00",
-        "location": "SuiHub Agiou Markou 22, Athens, 105 60, Greece, Athens meetup1 Athens meetup1",
-        "url": "https://www.meetup.com/ko-KR/founders-running-club-athens/events/313891945/"
-      },
-      {
-        "title": "Co-Working Wednesday for Digital Nomads & Remote Workers! @P55",
-        "start_iso": "2026-04-08T03:00:00-04:00",
-        "end_iso": "2026-04-08T13:00:00-04:00",
-        "location": "Π55 Coworking Space Plateon 55, Athina 104 35 Athina 104 35",
-        "url": "https://www.meetup.com/ko-KR/meetup-group-dhlqlvdd/events/307942171/"
-      },
-      {
-        "title": "Greek Brunch: Make New Friends",
-        "start_iso": "2026-04-12T05:30:00-04:00",
-        "end_iso": "2026-04-12T07:30:00-04:00",
-        "location": "Secret Restaurant Location in Athens Karistou , Athina 115 23, Greece, Athens meetup1 Athens meetup1",
-        "url": "https://www.meetup.com/ko-KR/athens-brunch-club/events/312632764/"
-      },
-      {
-        "title": "Coffee & Chat at 12pm@En Aithria",
-        "start_iso": "2026-04-12T05:00:00-04:00",
-        "end_iso": "2026-04-12T10:00:00-04:00",
-        "location": "En aithria Astiggos 13, Athens, 10555,, Athens meetup1 Athens meetup1",
-        "url": "https://www.meetup.com/ko-KR/meetup-group-dhlqlvdd/events/313907497/"
-      },
-      {
-        "title": "Game Night",
-        "start_iso": "2026-04-07T13:00:00-04:00",
-        "end_iso": "2026-04-07T16:55:00-04:00",
-        "location": "Yellowsquare Athens Pl. Theatrou 18, Athina 105 52,, Athens meetup1 Athens meetup1",
-        "url": "https://www.meetup.com/ko-KR/nomad-hub-greece-group/events/313630925/"
-      },
-      {
-        "title": "KSU 930AM - BREAKFAST & A RIDE.",
-        "start_iso": "2026-04-26T09:30:00-04:00",
-        "end_iso": "2026-04-26T16:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/southern-cruisers-greater-manassas/events/314115825/"
-      },
-      {
-        "title": "Career Success Group Job Seeker Accountability & Networking",
-        "start_iso": "2026-04-23T09:30:00-04:00",
-        "end_iso": "2026-04-23T10:30:00-04:00",
-        "location": "Great Careers Network Great Careers Network, 53 Darby Road, Ste. F, Paoli, PA 19301 Paoli PA 19301",
-        "url": "https://www.meetup.com/ko-KR/philadelphia-area-great-careers-group/events/313471159/"
-      },
-      {
-        "title": "4H Center - Lands Run Falls - Hickerson Hollow",
-        "start_iso": "2026-04-11T09:00:00-04:00",
-        "end_iso": "2026-04-11T13:30:00-04:00",
-        "location": "Northern Virginia 4-H Educational & Conference Center 600 4h Center Dr, Front Royal, VA 22630 Front Royal VA 22630",
-        "url": "https://www.meetup.com/ko-KR/blue-mountain-hiking-club/events/314137084/"
-      },
-      {
-        "title": "Hazel Mountain -Catlett Mountain Loop 7.8 miles, Moderate",
-        "start_iso": "2026-04-10T09:30:00-04:00",
-        "end_iso": "2026-04-10T14:00:00-04:00",
-        "location": "Meadow Spring Parking , Sperryville, VA 22740 Sperryville VA 22740",
-        "url": "https://www.meetup.com/ko-KR/gethiking-charlottesville-charlottesville-va/events/314119897/"
-      },
-      {
-        "title": "AI Your Way: MCPs vs Skills vs SubAgents 🤖🚀 - Sam Basu",
-        "start_iso": "2026-04-09T18:30:00-04:00",
-        "end_iso": "2026-04-09T20:30:00-04:00",
-        "location": "InfernoRed Office, One Loudoun 44679 Endicott Drive, One Loudoun, Loudoun, VA 20147 Loudoun VA 20147",
-        "url": "https://www.meetup.com/ko-KR/caparea-net/events/313644696/"
-      },
-      {
-        "title": "Hike Old Rag Mountain",
-        "start_iso": "2026-04-11T10:00:00-04:00",
-        "end_iso": "2026-04-11T15:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/active-and-social/events/313870327/"
-      },
-      {
-        "title": "Hike Through Bluebell Fields",
-        "start_iso": "2026-04-07T09:30:00-04:00",
-        "end_iso": "2026-04-07T12:30:00-04:00",
-        "location": "Limeton United Methodist Church 9 Limeton Main Street, Bentonville, VA 22610 Bentonville VA 22610",
-        "url": "https://www.meetup.com/ko-KR/hikers-for-him/events/313959587/"
-      }
-    ]
-  },
   "https://www.americanrallyassociation.org/boone-forest-rally": {
-    "fetched_at_iso": "2026-09-17T11:14:24.916370-04:00",
+    "fetched_at_iso": "2026-10-08T06:44:42.045307-04:00",
     "events": []
   },
   "https://www.meetup.com/northern-kentucky-sierra-club/": {
@@ -1996,14 +1758,6 @@
       }
     ]
   },
-  "https://www.specialstage.com/threads/hey-guys-and-probably-some-gals.89215/latest": {
-    "fetched_at_iso": "2026-04-08T07:56:05.634404-04:00",
-    "events": []
-  },
-  "https://www.eventbrite.com/d/oh--columbus/free--events/car-shows/": {
-    "fetched_at_iso": "2026-04-10T07:51:56.488634-04:00",
-    "events": []
-  },
   "https://www.scca.com/pages/i-want-to-rallycross": {
     "fetched_at_iso": "2026-10-01T12:31:20.326582-04:00",
     "events": []
@@ -2019,10 +1773,6 @@
         "url": "https://www.scca.com/events/2001480-ohio-valley-region-rallycross-pe-3-joe-s-speedway"
       }
     ]
-  },
-  "https://www.facebook.com/groups/339170166256123/posts/3252601584912952/": {
-    "fetched_at_iso": "2026-04-09T07:59:29.798006-04:00",
-    "events": []
   },
   "https://www.scca.com/pages/rallycross-national-tour": {
     "fetched_at_iso": "2026-09-24T10:20:07.606129-04:00",
@@ -2118,158 +1868,6 @@
         "end_iso": "2026-07-30T14:00:00-04:00",
         "location": "",
         "url": "https://www.meetup.com/toastmasters-clubs-of-cincinnati-and-the-tri-state/events/315629901/"
-      }
-    ]
-  },
-  "https://www.meetup.com/topics/cruising/": {
-    "fetched_at_iso": "2026-04-10T07:50:20.488457-04:00",
-    "events": [
-      {
-        "title": "Spring is here! Let's enjoy a wonderful happy hour at The Keg",
-        "start_iso": "2026-04-10T19:00:00-04:00",
-        "end_iso": "2026-04-10T21:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/scottsdales-best-over-50-happy-hours-and-more-by-debra/events/313972453/"
-      },
-      {
-        "title": "Friday Morning Dragonboat Meetup",
-        "start_iso": "2026-04-10T08:30:00-04:00",
-        "end_iso": "2026-04-10T10:30:00-04:00",
-        "location": "Tempe Town Lake Marina 550 E. Tempe Town Lake, Tempe, Ar 85281 Tempe Ar 85281",
-        "url": "https://www.meetup.com/phoenix-heat-canoe-club/events/313881884/"
-      },
-      {
-        "title": "Daddy O's",
-        "start_iso": "2026-04-10T14:30:00-04:00",
-        "end_iso": "2026-04-10T16:30:00-04:00",
-        "location": "Daddy O's 4163 W Thunderbird Rd, Phoenix, AZ 85029 Phoenix AZ 85029",
-        "url": "https://www.meetup.com/llrlivinglovingretirement/events/313913667/"
-      },
-      {
-        "title": "FREE POKER FRIDAYS!",
-        "start_iso": "2026-04-10T15:00:00-04:00",
-        "end_iso": "2026-04-10T22:00:00-04:00",
-        "location": "Hail Mary's Sports Bar 5114 W Camelback Rd,, Glendale, AZ 85301 Glendale AZ 85301",
-        "url": "https://www.meetup.com/thingstodoinglendale/events/313886261/"
-      },
-      {
-        "title": "Learn Reiki Today! Certification Class",
-        "start_iso": "2026-04-10T16:00:00-04:00",
-        "end_iso": "2026-04-10T22:00:00-04:00",
-        "location": "610 E Montebello Ave 610 E Montebello Ave, Phoenix, AZ 85012 Phoenix AZ 85012",
-        "url": "https://www.meetup.com/girlfriendsgalore/events/313886845/"
-      },
-      {
-        "title": "Florence Toastmasters",
-        "start_iso": "2026-04-10T15:05:00-04:00",
-        "end_iso": "2026-04-10T16:05:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/district-3-toastmasters/events/313886244/"
-      },
-      {
-        "title": "$5 Morning Qi Gong Meditation in Motion Back in the Sumida Park on TUESDAY 9/2",
-        "start_iso": "2026-04-10T10:30:00-04:00",
-        "end_iso": "2026-04-10T11:30:00-04:00",
-        "location": "Sumida Park 1817 E Gardenia Ave, Phoenix, AZ 85020 Phoenix AZ 85020",
-        "url": "https://www.meetup.com/5-morning-qi-gong-practice/events/313883171/"
-      },
-      {
-        "title": "FREE Sandra Bassett Show at Scottsdale Qtr",
-        "start_iso": "2026-04-11T20:00:00-04:00",
-        "end_iso": "2026-04-11T22:30:00-04:00",
-        "location": "Zinburger @ Scottsdale Quarter 15257 N Scottsdale Rd, Scottsdale, AZ Scottsdale AZ",
-        "url": "https://www.meetup.com/the-scottsdale-50-just-for-fun-meetup-group/events/314041583/"
-      },
-      {
-        "title": "FREE Outdoor Concert at PV Mall Park",
-        "start_iso": "2026-04-10T21:00:00-04:00",
-        "end_iso": "2026-04-10T23:00:00-04:00",
-        "location": "The Park at PV 12740 N. Tatum Blvd, Phoenix, AZ 85032, Phoenix, AZ 85032 Phoenix AZ 85032",
-        "url": "https://www.meetup.com/the-scottsdale-50-just-for-fun-meetup-group/events/313739023/"
-      },
-      {
-        "title": "Nuevo Vallarta, Mexico. World Class Vidanta Mayan Palace",
-        "start_iso": "2026-04-11T15:00:00-04:00",
-        "end_iso": "2026-04-18T17:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/scottsdale-55-travel-club/events/312448298/"
-      },
-      {
-        "title": "Roosevelt/Apache Lake, Lunch at Maria's",
-        "start_iso": "2026-04-12T12:00:00-04:00",
-        "end_iso": "2026-04-12T20:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/north-phoenix-cruisers/events/314157183/"
-      },
-      {
-        "title": "Nuevo Vallarta,Mexico, Vidanta Mayan Palace, World Class Resort for 1 to 3 weeks",
-        "start_iso": "2026-04-12T02:00:00-04:00",
-        "end_iso": "2026-04-18T04:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/scottsdale-60/events/312452925/"
-      },
-      {
-        "title": "Sensual Saturday at D&B | Spring Fling Edition",
-        "start_iso": "2026-04-12T01:00:00-04:00",
-        "end_iso": "2026-04-12T05:00:00-04:00",
-        "location": "Dave & Buster's Tempe 2000 E Rio Salado Pkwy Suite 1100, Tempe, AZ 85281 Tempe AZ 85281",
-        "url": "https://www.meetup.com/bachata-addiction/events/314138275/"
-      },
-      {
-        "title": "Urban Wine Walk",
-        "start_iso": "2026-04-11T16:00:00-04:00",
-        "end_iso": "2026-04-11T20:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/chilfree-by-choice-or-chance-late-30-s-early-50-s/events/313270549/"
-      },
-      {
-        "title": "1st South Africa, Zimbabwe & Botswana 2026",
-        "start_iso": "2026-04-26T15:00:00-04:00",
-        "end_iso": "2026-05-09T17:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/we-love-travel/events/301018083/"
-      },
-      {
-        "title": "Desert Ridge Monthly Meet-up",
-        "start_iso": "2026-04-15T20:30:00-04:00",
-        "end_iso": "2026-04-15T22:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/meetup-group-emhilhod/events/313972753/"
-      },
-      {
-        "title": "Nuevo Vallarta, Mexico. World Class Vidanta Mayan Palace",
-        "start_iso": "2026-04-18T15:00:00-04:00",
-        "end_iso": "2026-04-25T17:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/scottsdale-55-travel-club/events/312448347/"
-      },
-      {
-        "title": "Let's Get Together and Discuss Future Trip Ideas as well as Packing Tips",
-        "start_iso": "2026-04-25T12:00:00-04:00",
-        "end_iso": "2026-04-25T14:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/meetup-group-tumvyahf/events/313477399/"
-      },
-      {
-        "title": "Happy Hour at il Capo",
-        "start_iso": "2026-04-21T19:30:00-04:00",
-        "end_iso": "2026-04-21T21:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/scottsdales-best-over-50-happy-hours-and-more-by-debra/events/314161697/"
-      },
-      {
-        "title": "Rubio's Coastal Grill & Frozen Yogurt",
-        "start_iso": "2026-04-12T21:30:00-04:00",
-        "end_iso": "2026-04-12T23:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/meetup-group-cheapeats/events/314124752/"
-      },
-      {
-        "title": "BLACK VIOLIN",
-        "start_iso": "2026-04-16T22:30:00-04:00",
-        "end_iso": "2026-04-17T00:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/sippin-trippin-40/events/310853028/"
       }
     ]
   },
@@ -17140,11 +16738,11 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/wheels-whoppers": {
-    "checked_at_iso": "2026-09-27T15:44:15.440357-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.340491-04:00",
     "result": {
       "title": "Wheels & Whoppers",
-      "start_iso": "2026-10-02T17:00:00-04:00",
-      "end_iso": "2026-10-02T22:00:00-04:00",
+      "start_iso": "2026-10-09T17:00:00-04:00",
+      "end_iso": "2026-10-09T22:00:00-04:00",
       "location": "Burger King North Vernon IN 47265",
       "address": "",
       "description": "Wheels & Whoppers is a recurring event hosted by Joe Cole every Friday from 5 to 10 PM at Burger King.",
@@ -17157,11 +16755,11 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/mcdonalds-sellersburg-2026-summer-car-show-schedule": {
-    "checked_at_iso": "2026-09-27T15:44:15.441281-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.982402-04:00",
     "result": {
       "title": "McDonald’s Sellersburg 2026 Summer Car Shows",
-      "start_iso": "2026-10-02T18:00:00-04:00",
-      "end_iso": "2026-10-02T18:00:00-04:00",
+      "start_iso": "2027-04-02T18:00:00-04:00",
+      "end_iso": "2027-04-02T18:00:00-04:00",
       "location": "McDonald’s Sellersburg IN 47172",
       "address": "",
       "description": "The McDonald’s in Sellersburg will host a summer car show on the first Friday of each month from April to October. The events will begin at 6 p.m. each evening. Attendance is free. Participants can expect music, food, door prizes, and the opportunity to connect with friends.",
@@ -17317,11 +16915,11 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10": {
-    "checked_at_iso": "2026-09-27T15:44:15.443540-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.806751-04:00",
     "result": {
       "title": "Muncie Cars & Coffee 2026 - Season 10",
-      "start_iso": "2026-10-03T09:00:00-04:00",
-      "end_iso": "2026-10-03T12:00:00-04:00",
+      "start_iso": "2027-03-06T09:00:00-05:00",
+      "end_iso": "2027-03-06T12:00:00-05:00",
       "location": "The corner of Charles Street and Walnut Street Muncie 100 E Charles St Muncie IN 47305",
       "address": "100 E Charles St, Muncie, IN 47305",
       "description": "A gathering of octane and caffeine lovers. All makes, models and years welcome. We love anything on wheels! No vehicle? No problem! Just come out and enjoy the cars.",
@@ -17455,11 +17053,11 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/alexandria-cruise-in-2": {
-    "checked_at_iso": "2026-09-27T15:44:15.439500-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.338133-04:00",
     "result": {
       "title": "Alexandria Cruise-In",
-      "start_iso": "2026-10-01T17:00:00-04:00",
-      "end_iso": "2026-10-01T20:00:00-04:00",
+      "start_iso": "2026-10-08T17:00:00-04:00",
+      "end_iso": "2026-10-08T20:00:00-04:00",
       "location": "Alexandria Village Green Shopping Center Alexandria KY 41001",
       "address": "",
       "description": "A weekly cruise-in held every Thursday evening starting May 7 at the Alexandria Village Green Shopping Center, open to all types of vehicles. No burnouts or engine revving allowed.",
@@ -17468,7 +17066,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/indiana-cruisers-monthly-cruise-the-square": {
-    "checked_at_iso": "2026-09-27T15:44:15.921015-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.339315-04:00",
     "result": {
       "title": "Indiana Cruisers Monthly Cruise The Square",
       "start_iso": "2026-10-09T17:00:00-04:00",
@@ -17507,7 +17105,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/fly-in-drive-in-breakfast": {
-    "checked_at_iso": "2026-09-27T15:44:15.930821-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.344963-04:00",
     "result": {
       "title": "Fly-In / Drive-In Breakfast",
       "start_iso": "2026-10-10T08:30:00-04:00",
@@ -17623,7 +17221,7 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/austin-dairy-queen-cruise-in": {
-    "checked_at_iso": "2026-09-27T15:44:16.221561-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.727018-04:00",
     "result": {
       "title": "Austin Dairy Queen Cruise In",
       "start_iso": "2026-10-16T17:00:00-04:00",
@@ -17741,7 +17339,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/springfield-cars-and-coffee": {
-    "checked_at_iso": "2026-09-27T15:44:15.931574-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.345995-04:00",
     "result": {
       "title": "Springfield Cars and Coffee",
       "start_iso": "2026-10-10T09:00:00-04:00",
@@ -17840,7 +17438,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/four-bridges-cruise-in": {
-    "checked_at_iso": "2026-09-27T15:44:16.312320-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.788554-04:00",
     "result": {
       "title": "Four Bridges Cruise-In",
       "start_iso": "2026-10-21T17:00:00-04:00",
@@ -17903,7 +17501,7 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/winchester-cars-coffee": {
-    "checked_at_iso": "2026-09-27T15:44:16.299137-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.778915-04:00",
     "result": {
       "title": "Winchester Cars & Coffee",
       "start_iso": "2026-10-17T09:00:00-04:00",
@@ -18223,7 +17821,7 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/scottsburg-square-cruise-in": {
-    "checked_at_iso": "2026-09-27T15:44:16.252766-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.749796-04:00",
     "result": {
       "title": "Scottsburg Square Cruise-In",
       "start_iso": "2026-10-16T18:00:00-04:00",
@@ -18249,13 +17847,13 @@
     }
   },
   "verify::https://allevents.in/dayton/car-shows": {
-    "checked_at_iso": "2026-09-17T09:37:54.263591-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.347351-04:00",
     "result": {
-      "title": "🍾 Preview Party for Dayton Concours d'Elegance",
-      "start_iso": "2026-09-19T00:00:00-04:00",
-      "end_iso": "2026-09-19T00:00:00-04:00",
-      "location": "1000 Carillon Blvd, Dayton, OH, United States, Ohio 45409 1000 Carillon Blvd, Dayton, OH 45409-2023, United States Dayton OH",
-      "address": "1000 Carillon Blvd, Dayton, OH 45409-2023, United States, Dayton, OH",
+      "title": "'Cruise In' Car Show",
+      "start_iso": "2026-10-11T00:00:00-04:00",
+      "end_iso": "2026-10-11T00:00:00-04:00",
+      "location": "4521 Spring Grove Ave, Cincinnati, OH, United States, Ohio 45232 4521 Spring Grove Ave, Cincinnati, OH 45232-1934, United States Cincinnati OH",
+      "address": "4521 Spring Grove Ave, Cincinnati, OH 45232-1934, United States, Cincinnati, OH",
       "description": "",
       "provider": "schema_org",
       "confident": false
@@ -18676,11 +18274,11 @@
     "events": []
   },
   "verify::https://www.facebook.com/groups/962325874974960": {
-    "checked_at_iso": "2026-09-27T15:44:16.312179-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.788344-04:00",
     "result": null
   },
   "verify::https://www.facebook.com/p/USB-Cars-Coffee-100067570392427/": {
-    "checked_at_iso": "2026-09-27T15:44:16.221472-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.726692-04:00",
     "result": null
   },
   "verify::https://allevents.in/cincinnati/car-shows": {
@@ -18697,11 +18295,11 @@
     }
   },
   "verify::https://www.instagram.com/grahamrahalperformance": {
-    "checked_at_iso": "2026-09-27T15:44:16.469998-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.805002-04:00",
     "result": null
   },
   "verify::https://www.facebook.com/HockingHillsCC": {
-    "checked_at_iso": "2026-09-27T15:44:15.880011-04:00",
+    "checked_at_iso": "2026-10-08T06:51:05.787940-04:00",
     "result": null
   },
   "https://www.eventbrite.com/": {
@@ -18953,7 +18551,7 @@
     "events": []
   },
   "https://timetrials.scca.com/events/2009848-kentucky-track-day-time-trial-ncm-motorsports-park": {
-    "fetched_at_iso": "2026-09-27T15:43:59.458360-04:00",
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
     "events": [
       {
         "title": "Kentucky, Track Day/Time Trial @ NCM Motorsports Park",
@@ -19282,5 +18880,101 @@
   "verify::https://columbuscarsandcoffee.net/": {
     "checked_at_iso": "2026-10-01T12:31:23.343021-04:00",
     "result": null
+  },
+  "https://cincyscca.com/events/rallycross-event-2/": {
+    "fetched_at_iso": "2026-10-08T06:44:03.401209-04:00",
+    "events": []
+  },
+  "https://www.scca.com/articles/1994608-scca-announces-2009-rallycross-schedule": {
+    "fetched_at_iso": "2026-10-08T06:44:03.401209-04:00",
+    "events": []
+  },
+  "https://cincyscca.com/events/rallycross-event-3/": {
+    "fetched_at_iso": "2026-10-08T06:44:03.401209-04:00",
+    "events": []
+  },
+  "https://www.scca.com/events/1999473-ohio-valley-region-rallycross-pe-6-joe-s-speedway": {
+    "fetched_at_iso": "2026-10-08T06:44:03.401209-04:00",
+    "events": [
+      {
+        "title": "Ohio Valley Region RallyCross PE#6 @ Joe's Speedway",
+        "start_iso": "2021-09-11T01:00:00-04:00",
+        "end_iso": "2021-09-12T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/1999473-ohio-valley-region-rallycross-pe-6-joe-s-speedway"
+      }
+    ]
+  },
+  "https://www.scca.com/events/2010305-kentucky-region-autocross-2026-kyscca-points-event-7-border-wars-2-ncm-motorsports-park": {
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
+    "events": [
+      {
+        "title": "Kentucky Region Autocross 2026 KYSCCA Points Event 7 & Border Wars 2 @ NCM Motorsports Park",
+        "start_iso": "2026-08-09T01:00:00-04:00",
+        "end_iso": "2026-08-10T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2010305-kentucky-region-autocross-2026-kyscca-points-event-7-border-wars-2-ncm-motorsports-park"
+      }
+    ]
+  },
+  "https://www.scca.com/events/1994897-time-trials-kentucky-region": {
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
+    "events": [
+      {
+        "title": "Time Trials (Kentucky Region)",
+        "start_iso": "2019-08-04T01:00:00-04:00",
+        "end_iso": "2019-08-05T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/1994897-time-trials-kentucky-region"
+      }
+    ]
+  },
+  "https://www.scca.com/events/2007201-southern-indiana-region-autocross-5-mid-american-air-center": {
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
+    "events": [
+      {
+        "title": "Southern Indiana Region Autocross #5 @ Mid-American Air Center",
+        "start_iso": "2025-08-24T01:00:00-04:00",
+        "end_iso": "2025-08-25T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2007201-southern-indiana-region-autocross-5-mid-american-air-center"
+      }
+    ]
+  },
+  "https://www.scca.com/events/2005951-western-ohio-region-scca-corvair-society-of-america-autocross-2024-kil-kare-raceway": {
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
+    "events": [
+      {
+        "title": "Western Ohio Region SCCA/Corvair Society of America Autocross 2024 @ Kil-Kare Raceway",
+        "start_iso": "2024-07-25T01:00:00-04:00",
+        "end_iso": "2024-07-26T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2005951-western-ohio-region-scca-corvair-society-of-america-autocross-2024-kil-kare-raceway"
+      }
+    ]
+  },
+  "https://www.scca.com/events/2009750-indianapolis-sia-autocross-2026-subaru-of-indiana-automotive": {
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
+    "events": [
+      {
+        "title": "Indianapolis, SIA Autocross 2026 @ Subaru of Indiana Automotive",
+        "start_iso": "2026-06-21T01:00:00-04:00",
+        "end_iso": "2026-06-22T00:59:59-04:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2009750-indianapolis-sia-autocross-2026-subaru-of-indiana-automotive"
+      }
+    ]
+  },
+  "https://www.scca.com/events/2008799-indiana-northwest-region-autocross-fun-event-liberty-bible-church": {
+    "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
+    "events": [
+      {
+        "title": "Indiana Northwest Region Autocross Fun Event @ Liberty Bible Church",
+        "start_iso": "2025-11-08T01:00:00-05:00",
+        "end_iso": "2025-11-09T00:59:59-05:00",
+        "location": "",
+        "url": "https://www.scca.com/events/2008799-indiana-northwest-region-autocross-fun-event-liberty-bible-church"
+      }
+    ]
   }
 }
