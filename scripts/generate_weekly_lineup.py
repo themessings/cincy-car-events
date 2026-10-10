@@ -2032,6 +2032,12 @@ def make_caption(
     out.append(f"Android → {SPOTTID_PLAY_URL.replace('https://', '')}")
     out.append("")
 
+    out.append(
+        "⚠️ Plans change. Always check with the event host for last-minute "
+        "changes, cancellations, or weather calls before you head out."
+    )
+    out.append("")
+
     out.append("Want your event in next week's lineup?")
     out.append("admin@ApexAutoLounge.com")
     out.append("")
