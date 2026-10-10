@@ -155,6 +155,8 @@ CLOCK_ICON_URL = "https://raw.githubusercontent.com/twitter/twemoji/master/asset
 PIN_ICON_URL   = "https://raw.githubusercontent.com/twitter/twemoji/master/assets/72x72/1f4cd.png"
 
 NO_EVENTS_LINE = "No standout posted events found - go drive something anyway."
+# Appended after the last event, so it always lands on the final slide.
+HOST_DISCLAIMER = "Plans change. Always check with the event host for last-minute changes before you head out."
 CTA_TEXT = "Want your event featured in the weekend lineup? Send details to admin@ApexAutoLounge.com"
 
 BASE_HASHTAGS = ["#theapexautolounge", "#carculture", "#carmeet", "#carsandcoffee", "#spottid"]
@@ -1542,6 +1544,8 @@ for d in selected_dates:
                 "place": e.display_place_image,
             })
 
+blocks.append({"type": "disclaimer", "text": HOST_DISCLAIMER})
+
 
 # ----------------------------
 # IMAGE RENDER HELPERS
@@ -1667,6 +1671,9 @@ def measure_block_height(draw, block, max_w):
     if block["type"] == "note":
         lines = clamp_lines(wrap_text(draw, block["text"], FONT_LOC, max_w), 2)
         return len(lines) * (FONT_LOC.size + 4) + 12
+    if block["type"] == "disclaimer":
+        lines = clamp_lines(wrap_text(draw, block["text"], FONT_EVENT, max_w), 3)
+        return 8 + len(lines) * (FONT_EVENT.size + 4) + 12
 
     title_lines = clamp_lines(wrap_text(draw, block["title"], FONT_EVENT, max_w), 2)
     place_lines = clamp_lines(wrap_text(draw, block["place"], FONT_LOC, max_w - 24), 2)
@@ -1826,6 +1833,19 @@ def draw_blocks_on_column(img, draw, block_list, start_idx, x0, y0, max_y, max_w
             for ln in lines:
                 draw.text((x0, y), ln, font=FONT_LOC, fill=MIDGRAY)
                 y += FONT_LOC.size + 4
+            y += 12
+            i += 1
+            continue
+
+        if b["type"] == "disclaimer":
+            needed = measure_block_height(draw, b, max_w)
+            if y + needed >= max_y:
+                break
+
+            y += 8
+            for ln in clamp_lines(wrap_text(draw, b["text"], FONT_EVENT, max_w), 3):
+                draw.text((x0, y), ln, font=FONT_EVENT, fill=YELLOW)
+                y += FONT_EVENT.size + 4
             y += 12
             i += 1
             continue
