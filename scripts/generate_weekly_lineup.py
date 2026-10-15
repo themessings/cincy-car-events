@@ -40,6 +40,9 @@ from geopy.distance import geodesic
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageChops
 import qrcode
+import sys as _sys
+_sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from caption_rules import caption_problems, scrub_caption, scrub_title
 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -159,7 +162,7 @@ NO_EVENTS_LINE = "No standout posted events found - go drive something anyway."
 HOST_DISCLAIMER = "Plans change. Always check with the event host for last-minute changes before you head out."
 CTA_TEXT = "Want your event featured in the weekend lineup? Send details to admin@ApexAutoLounge.com"
 
-BASE_HASHTAGS = ["#theapexautolounge", "#carculture", "#carmeet", "#carsandcoffee", "#spottid"]
+BASE_HASHTAGS = ["#theapexautolounge", "#carculture", "#carsandcoffee", "#spottid"]  # max 4: brand.js blocks more
 
 SPOTTID_CLAIM_URL = "https://link.getspottid.com/plate"
 
@@ -2007,22 +2010,22 @@ def make_caption(
     if n:
         count_word = NUMBER_WORDS.get(n, str(n))
         market_word = "market" if n == 1 else "markets"
-        out.append(f"{count_word} {market_word}. One weekend. {', '.join(market_names)} — all loaded.")
+        out.append(f"{count_word} {market_word}. One weekend. {', '.join(market_names)}, all loaded.")
     else:
         out.append("This week's regional lineup is here.")
     out.append("")
     out.append(
         "Cars & coffee, cruise-ins, and full shows from Friday morning through "
         "Thursday night. Whatever you drive, there's a spot for it within an "
-        "hour of you. Swipe for the full regional lineup — times, addresses, "
-        "weather, all of it."
+        "hour of you. Swipe for the full regional lineup with times, addresses, "
+        "and weather."
     )
     out.append("")
 
     featured = find_featured_event(events_selected)
     if featured:
-        out.append(f"🔥 {featured.date.strftime('%A').upper()} IS THE ONE 🔥")
-        out.append(f"{featured.title} — {format_time_compact(featured.start, featured.end)}")
+        out.append(f"{featured.date.strftime('%A').upper()} IS THE ONE")
+        out.append(f"{scrub_title(featured.title)}, {format_time_compact(featured.start, featured.end)}")
         out.append(compact_address_short(featured.display_place_caption))
         out.append("")
 
@@ -2046,14 +2049,14 @@ def make_caption(
         out.append("")
 
     cta_day = f" before {featured.date.strftime('%A')}" if featured else ""
-    out.append(f"📱 Get SpottID{cta_day}:")
+    out.append(f"Get SpottID{cta_day}:")
     out.append(f"Claim Your Car → {SPOTTID_CLAIM_URL.replace('https://', '')}")
     out.append(f"iOS → {SPOTTID_APPLE_URL.replace('https://', '')}")
     out.append(f"Android → {SPOTTID_PLAY_URL.replace('https://', '')}")
     out.append("")
 
     out.append(
-        "⚠️ Plans change. Always check with the event host for last-minute "
+        "Plans change. Always check with the event host for last-minute "
         "changes, cancellations, or weather calls before you head out."
     )
     out.append("")
@@ -2073,7 +2076,11 @@ def make_caption(
         cleaned.append(line.rstrip())
         prev_blank = blank
 
-    return "\n".join(cleaned).strip()
+    final = scrub_caption("\n".join(cleaned).strip())
+    problems = caption_problems(final)
+    if problems:
+        raise RuntimeError(f"Caption breaks the brand rules ({'; '.join(problems)}); not writing it.")
+    return final
 
 # ----------------------------
 # OUTPUTS
@@ -2139,10 +2146,15 @@ def instagram_handles(events: List["Event"]) -> List[str]:
 caption = make_caption(selected_dates, events_by_date_city_full, events_selected)
 handles = instagram_handles(events_selected)
 if handles:
-    caption = caption.rstrip() + "\n\nHosts this week: " + " ".join("@" + h for h in handles) + "\n"
+    # Hosts go above the hashtags so the hashtags stay on the last line (brand rule).
+    _body, _, _tags = caption.rstrip().rpartition("\n")
+    caption = _body.rstrip() + "\n\nHosts this week: " + " ".join("@" + h for h in handles) + "\n\n" + _tags + "\n"
     print("Instagram tags:", " ".join("@" + h for h in handles))
 else:
     print("Instagram tags: none matched this week")
+_final_problems = caption_problems(caption)
+if _final_problems:
+    raise RuntimeError(f"Final caption breaks the brand rules ({'; '.join(_final_problems)}).")
 with open(out_caption_path, "w", encoding="utf-8") as f:
     f.write(caption)
 
