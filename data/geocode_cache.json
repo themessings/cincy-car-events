@@ -6040,5 +6040,10 @@
   "47941, USA": {
     "lat": "40.3767818",
     "lon": "-86.7688133"
+  },
+  "addr::410 w broadway 410 west broadway louisville ky": null,
+  "4521 Spring Grove Ave, Cincinnati, OH 45232-1934": {
+    "lat": "39.1642798",
+    "lon": "-84.5230149"
   }
 }
