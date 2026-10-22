@@ -34,6 +34,15 @@ def scrub_title(title: str) -> str:
     return re.sub(r"\s*[—–]\s*", ", ", title)
 
 
+def strip_title_noise(title: str) -> str:
+    """Slide titles: the slide font has no emoji, so each one printed as an empty
+    box (2026-10-22: "Indianapolis Cars & Coffee [Trunk-or-Treat] <4 emoji> - Hosted by").
+    Drop the emoji, and a cut-off "Hosted by" that names nobody."""
+    t = re.sub(rf"[{_EMOJI}\u200d\ufe0f]", "", title)
+    t = re.sub(r"\s*[-,:|]?\s*hosted by\s*$", "", t, flags=re.IGNORECASE)
+    return re.sub(r"\s{2,}", " ", t).strip()
+
+
 def scrub_caption(text: str) -> str:
     """Last-resort cleanup: dashes become commas, leading/trailing emoji are dropped."""
     text = re.sub(r"\s*[—–]\s*", ", ", text)

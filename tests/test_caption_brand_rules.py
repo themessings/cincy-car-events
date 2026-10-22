@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from caption_rules import caption_problems, scrub_caption, scrub_title  # noqa: E402
+from caption_rules import caption_problems, scrub_caption, scrub_title, strip_title_noise  # noqa: E402
 
 BAD = "Six markets. One weekend. A, B — all loaded.\n\U0001F525 FRIDAY IS THE ONE \U0001F525\n\U0001F4F1 Get it\n#a #b #c #d #e"
 
@@ -30,3 +30,18 @@ def test_generator_source_is_clean():
         assert ch not in body
     tags = re.findall(r"#\w+", re.search(r"^BASE_HASHTAGS = \[(.*?)\]", src, re.M).group(1))
     assert len(tags) <= 4
+
+
+def test_slide_titles_drop_emoji_and_a_cut_off_host():
+    # 2026-10-22: the slide printed four empty boxes and "-..." for this title.
+    t = "Indianapolis Cars & Coffee [Trunk-or-Treat] \U0001F47B\U0001F383\U0001F342\U0001F697 - Hosted by"
+    assert strip_title_noise(t) == "Indianapolis Cars & Coffee [Trunk-or-Treat]"
+    assert strip_title_noise("Fall 2026 Rennsport Dragon Rally\u00ae") == "Fall 2026 Rennsport Dragon Rally\u00ae"
+    assert strip_title_noise("No Limits 937\u2122 Cars & Coffee") == "No Limits 937\u2122 Cars & Coffee"
+    assert strip_title_noise("Cruise In Hosted by Tri-State Mustang") == "Cruise In Hosted by Tri-State Mustang"
+
+
+def test_generator_cleans_slide_titles():
+    src = (ROOT / "scripts" / "generate_weekly_lineup.py").read_text(encoding="utf-8")
+    fn = next(n for n in ast.walk(ast.parse(src)) if isinstance(n, ast.FunctionDef) and n.name == "clean_title")
+    assert "strip_title_noise(" in ast.get_source_segment(src, fn)

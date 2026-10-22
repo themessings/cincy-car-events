@@ -323,6 +323,36 @@ filters:
       2026-10-01 date audit — the listing's own note says "October meet: 2PM
       to 5PM" but its time field says 5-8 PM. Re-added below as a manual event
       at 2-5 PM. (Their Facebook page would not load to confirm.)
+  - url: liberty-center-cars-coffee
+    reason: >-
+      2026-10-22, after Tony Alonso emailed asking who listed it. This
+      carsandcoffeeevents.com series ("Donations accepted for Honor Flight")
+      has rolled a Sunday date forward since July (7/26, 8/30, 9/27, 10/25).
+      The host, the Tri-State Mustang / Ford Club, lists third Saturdays,
+      May to October, with Oct 17 as the last 2026 meet
+      (/events/cincy-cars-coffee-at-liberty-center). The host's two Saturday
+      listings use other links and are not touched by this rule.
+  - title: Wheels & Whoppers
+    url: wheels-whoppers
+    reason: >-
+      2026-10-22 lineup check. The only source is a carsandcoffeeevents.com
+      listing placed in North Vernon, IN, whose text ("hosted by Joe Cole
+      every Friday from 5 to 10 PM at Burger King") matches a Los Angeles
+      Burger King meet. Nothing ties it to Indiana, and its own page did not
+      verify on 10-15.
+  - title: Trunk or Treat Car Show
+    dates: ["2026-10-24"]
+    reason: >-
+      2026-10-22 lineup check. It came from the allevents.in Dayton list page
+      with no time (the slide printed 12:00 AM) and an address borrowed from a
+      different event (4521 Spring Grove Ave). The list page itself says Smith
+      Park, Middletown. Not verified anywhere else.
+  - title: Four Bridges Cruise-In
+    dates: ["2026-10-28"]
+    reason: >-
+      2026-10-22 lineup check. The host listing says it runs "on the third
+      Wednesday of every month from April to October", so Oct 21 was the last
+      2026 date. The iCloud calendar repeats it every Wednesday.
 
   car_dedicated_sources:
   - OVR PCA
