@@ -6045,5 +6045,10 @@
   "4521 Spring Grove Ave, Cincinnati, OH 45232-1934": {
     "lat": "39.1642798",
     "lon": "-84.5230149"
+  },
+  "addr::305 n highway 31 305 n highway 31 austin in 47102, austin, in": null,
+  "Austin, IN": {
+    "lat": "38.7423428",
+    "lon": "-85.8048022"
   }
 }
