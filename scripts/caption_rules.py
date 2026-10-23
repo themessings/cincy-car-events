@@ -45,6 +45,44 @@ def strip_title_noise(title: str) -> str:
     return re.sub(r"\s{2,}", " ", t).strip()
 
 
+KIND_WORDS = (
+    ("Cars & coffee", re.compile(r"\bcoffee\b", re.IGNORECASE)),
+    ("cruise-ins", re.compile(r"\bcruise", re.IGNORECASE)),
+    ("full shows", re.compile(r"\bshows?\b|\bconcours\b", re.IGNORECASE)),
+)
+
+
+def _and_join(items):
+    if len(items) <= 2:
+        return " and ".join(items)
+    return ", ".join(items[:-1]) + f", and {items[-1]}"
+
+
+def what_and_when(titles, event_days) -> str:
+    """The caption's "what and when" sentence, built from what the slides really carry.
+
+    It was fixed text: "Cars & coffee, cruise-ins, and full shows from Friday morning
+    through Thursday night." The 2026-10-22 repost had nine events, all on Saturday and
+    Sunday and none of them a cruise-in, and the same caption went on to say "Friday,
+    Monday, Tuesday, Wednesday, and Thursday? Nothing posted." Now only the kinds in the
+    event titles and the days that have events are named; a full week reads as before.
+    `event_days` are the dates with at least one event. No days gives an empty string."""
+    days = sorted(set(event_days))
+    if not days:
+        return ""
+    kinds = [word for word, rx in KIND_WORDS if any(rx.search(t or "") for t in titles)]
+    what = _and_join(kinds) if kinds else "Meets"
+    what = what[0].upper() + what[1:]
+    names = [d.strftime("%A") for d in days]
+    if len(names) == 1:
+        when = f"on {names[0]}"
+    elif len(names) == 2:
+        when = f"on {names[0]} and {names[1]}"
+    else:
+        when = f"from {names[0]} morning through {names[-1]} night"
+    return f"{what} {when}."
+
+
 def scrub_caption(text: str) -> str:
     """Last-resort cleanup: dashes become commas, leading/trailing emoji are dropped."""
     text = re.sub(r"\s*[—–]\s*", ", ", text)

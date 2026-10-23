@@ -42,7 +42,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageChops
 import qrcode
 import sys as _sys
 _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from caption_rules import caption_problems, scrub_caption, scrub_title, strip_title_noise
+from caption_rules import caption_problems, scrub_caption, scrub_title, strip_title_noise, what_and_when
 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -2022,11 +2022,14 @@ def make_caption(
     else:
         out.append("This week's regional lineup is here.")
     out.append("")
+    # Only the kinds and the days the slides carry (2026-10-23: a Saturday and Sunday week
+    # with no cruise-in still promised cruise-ins every day, Friday to Thursday).
+    event_days = [d for d in dates if any(events_by_date_city.get(d, {}).values())]
+    lead = what_and_when([e.title for e in events_selected], event_days)
     out.append(
-        "Cars & coffee, cruise-ins, and full shows from Friday morning through "
-        "Thursday night. Whatever you drive, there's a spot for it within an "
-        "hour of you. Swipe for the full regional lineup with times, addresses, "
-        "and weather."
+        (lead + " " if lead else "")
+        + "Whatever you drive, there's a spot for it within an hour of you. "
+        "Swipe for the full regional lineup with times, addresses, and weather."
     )
     out.append("")
 
