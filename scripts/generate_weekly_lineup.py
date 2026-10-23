@@ -42,7 +42,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageChops
 import qrcode
 import sys as _sys
 _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from caption_rules import caption_problems, scrub_caption, scrub_title
+from caption_rules import caption_problems, scrub_caption, scrub_title, strip_title_noise
 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -402,7 +402,7 @@ def normalize_spaces(s: str) -> str:
 def clean_title(s: str) -> str:
     s = coalesce_str(s)
     s = s.replace("‚Äú", '"').replace("‚Äù", '"').replace("‚Äô", "'")
-    return normalize_spaces(s)
+    return normalize_spaces(strip_title_noise(s))
 
 def clean_place(s: str) -> str:
     if not s:
