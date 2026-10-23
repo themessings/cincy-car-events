@@ -45,3 +45,22 @@ def test_generator_cleans_slide_titles():
     src = (ROOT / "scripts" / "generate_weekly_lineup.py").read_text(encoding="utf-8")
     fn = next(n for n in ast.walk(ast.parse(src)) if isinstance(n, ast.FunctionDef) and n.name == "clean_title")
     assert "strip_title_noise(" in ast.get_source_segment(src, fn)
+
+
+def test_slide_titles_drop_a_hosted_by_tail():
+    t = "Indianapolis Cars & Coffee [Trunk-or-Treat] \U0001F47B\U0001F383\U0001F342\U0001F697 - Hosted by Model 1 and Lakefront at Keystone"
+    assert strip_title_noise(t) == "Indianapolis Cars & Coffee [Trunk-or-Treat]"
+
+
+def test_fonts_are_picked_by_exact_name_and_never_slanted(tmp_path):
+    src = (ROOT / "scripts" / "generate_weekly_lineup.py").read_text(encoding="utf-8")
+    fn = next(n for n in ast.walk(ast.parse(src)) if isinstance(n, ast.FunctionDef) and n.name == "find_font_file")
+    ns = {"os": __import__("os"), "List": __import__("typing").List, "Optional": __import__("typing").Optional, "FONT_ROOTS": []}
+    exec(ast.get_source_segment(src, fn), ns)
+    d = tmp_path / "dejavu"
+    d.mkdir()
+    for name in ("DejaVuSans-BoldOblique.ttf", "DejaVuSans-Oblique.ttf", "DejaVuSans-Bold.ttf", "DejaVuSans.ttf"):
+        (d / name).write_bytes(b"")
+    bold = ns["find_font_file"](["dejavusans-bold.ttf", "liberationsans-bold.ttf"], roots=[str(tmp_path)])
+    reg = ns["find_font_file"](["dejavusans.ttf", "liberationsans-regular.ttf"], roots=[str(tmp_path)])
+    assert bold.endswith("DejaVuSans-Bold.ttf") and reg.endswith("DejaVuSans.ttf")

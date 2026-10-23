@@ -58,6 +58,17 @@ class LineupCheck20261022Tests(unittest.TestCase):
         self.assertIsNotNone(self._hit("Four Bridges Cruise-In", "", "2026-10-28"))
         self.assertIsNone(self._hit("Four Bridges Cruise-In", "", "2027-04-21"))
 
+    def test_three_unverified_evening_listings_are_dropped(self):
+        base = "https://carsandcoffeeevents.com/events/"
+        self.assertIsNotNone(self._hit("KB Octane Presents: Rip Rap Friday Night Cruise-In",
+                                       base + "kb-octane-presents-rip-rap-friday-night-cruise-in", "2026-10-23"))
+        self.assertIsNotNone(self._hit("Columbus Cars & Coffee - 3650 Olentangy River Road",
+                                       base + "columbus-cars-coffee-3650-olentangy-river-road-2026-06-20", "2026-10-24"))
+        self.assertIsNotNone(self._hit("Alexandria Cruise-In", base + "alexandria-cruise-in-2", "2026-10-29"))
+        # the Westerville Sunday meet from the same host stays
+        self.assertIsNone(self._hit("Columbus Cars & Coffee - Starbucks in Westerville",
+                                    "https://columbuscarsandcoffee.net/", "2026-10-25"))
+
 
 if __name__ == "__main__":
     unittest.main()
