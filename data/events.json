@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-10-22T23:03:19.197758-04:00",
-  "count": 195,
+  "generated_at_iso": "2026-10-23T09:05:30.404034-04:00",
+  "count": 196,
   "events": [
     {
       "Event Name": "Fall 2026 Rennsport Dragon Rally®",
@@ -1281,6 +1281,22 @@
       "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
       "Event URL": "https://carsandcoffeeevents.com/events/pharaohs-of-kentucky-and-hooters-hooters-car-show",
       "Organizer Social": ""
+    },
+    {
+      "Event Name": "Four Bridges Cruise-In",
+      "Date": "2027-04-21",
+      "Start Time": "5:00 PM",
+      "End Time": "7:00 PM",
+      "Location": "8300 Four Bridges Dr, Liberty Township, OH 45044",
+      "Address": "8300 Four Bridges Dr, Liberty Township, OH 45044",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "Registration required",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/four-bridges-cruise-in",
+      "Organizer Social": "https://www.facebook.com/events/1267308188591932/"
     },
     {
       "Event Name": "Cars at Madison Square",

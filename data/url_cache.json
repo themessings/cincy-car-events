@@ -1,6 +1,6 @@
 {
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
@@ -40,7 +40,7 @@
     ]
   },
   "https://www.americanrallyassociation.org/2026-ara-schedule": {
-    "fetched_at_iso": "2026-10-22T06:30:34.706228-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:48.846329-04:00",
     "events": []
   },
   "https://www.sandhillsmotoringexpo.com/": {
@@ -48,7 +48,7 @@
     "events": []
   },
   "https://rallynorthamerica.com/drives-events/": {
-    "fetched_at_iso": "2026-10-22T23:03:07.886184-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:53.476537-04:00",
     "events": []
   },
   "https://www.facebook.com/groups/ncrallycross/posts/24327648043598609/": {
@@ -60,11 +60,11 @@
     "events": []
   },
   "https://www.scca.com/pages/road-rally-events": {
-    "fetched_at_iso": "2026-10-22T23:02:57.459711-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:29.864304-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/": {
-    "fetched_at_iso": "2026-10-22T23:02:43.732487-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
     "events": []
   },
   "https://www.facebook.com/indyhoodrats/posts/road-rally-to-the-famous-11-mile-long-tail-of-the-dragon-located-in-vonore-tenne/867730542516222/": {
@@ -72,7 +72,7 @@
     "events": []
   },
   "https://www.greatrace.com/": {
-    "fetched_at_iso": "2026-10-22T23:02:43.732487-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
     "events": []
   },
   "https://www.scca.com/events/2008957-ohio-valley-summer-sprints-regional-road-race-2026-mid-ohio-sports-car-course": {
@@ -88,7 +88,7 @@
     ]
   },
   "https://www.scca.com/pages/road-rally-national-championship": {
-    "fetched_at_iso": "2026-10-22T23:02:57.459711-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:29.864304-04:00",
     "events": []
   },
   "https://www.scca.com/events/2009084-ohio-region-2026-winter-roadrally-dibellas-subs-solon": {
@@ -108,31 +108,19 @@
     "events": []
   },
   "https://cincyscca.com/road-rally/": {
-    "fetched_at_iso": "2026-10-22T23:02:57.459711-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:29.864304-04:00",
     "events": []
   },
   "https://cincyscca.com/rally-cross/": {
     "fetched_at_iso": "2026-05-05T08:03:42.352569-04:00",
     "events": []
   },
-  "https://www.scca.com/events/2009158-2026-kentucky-starting-line-school-ncm-motorsports-park": {
-    "fetched_at_iso": "2026-04-26T07:40:26.708507-04:00",
-    "events": [
-      {
-        "title": "2026 Kentucky Starting Line School @ NCM Motorsports Park",
-        "start_iso": "2026-07-18T01:00:00-04:00",
-        "end_iso": "2026-07-19T00:59:59-04:00",
-        "location": "",
-        "url": "https://www.scca.com/events/2009158-2026-kentucky-starting-line-school-ncm-motorsports-park"
-      }
-    ]
-  },
   "https://www.scca.com/articles/2020187-rallycross-national-championship-heads-west-for-2026-divisional-challenge-brings-feisty-thrills": {
     "fetched_at_iso": "2026-09-24T10:20:07.606129-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/sofr": {
-    "fetched_at_iso": "2026-10-22T23:03:07.074580-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:48.846329-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/american-rally-association-announces-2026-schedule": {
@@ -140,7 +128,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/live": {
-    "fetched_at_iso": "2026-10-22T06:30:34.706228-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:48.846329-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/copy-of-2025-championship-standings": {
@@ -152,15 +140,15 @@
     "events": []
   },
   "https://www.dynastyautoevents.com/": {
-    "fetched_at_iso": "2026-10-22T23:03:07.886184-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:53.476537-04:00",
     "events": []
   },
   "https://www.therechargerally.com/": {
-    "fetched_at_iso": "2026-10-22T23:03:07.886184-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:53.476537-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-tickets": {
-    "fetched_at_iso": "2026-10-22T23:03:07.886184-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:53.476537-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-dash-2025": {
@@ -188,11 +176,11 @@
     ]
   },
   "https://rallynorthamerica.com/rally-events/": {
-    "fetched_at_iso": "2026-10-22T23:03:07.886184-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:53.476537-04:00",
     "events": []
   },
   "https://gravityrally.com/pages/2026-cancer-awareness-rally": {
-    "fetched_at_iso": "2026-10-22T23:03:07.886184-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:53.476537-04:00",
     "events": []
   },
   "https://www.dynastyautoevents.com/event-details/dynasty-the-cincinnati-auto-expo": {
@@ -249,7 +237,7 @@
     "events": []
   },
   "https://www.scca.com/pages/road-rally": {
-    "fetched_at_iso": "2026-10-22T23:02:57.459711-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:29.864304-04:00",
     "events": []
   },
   "https://www.americanrallyassociation.org/post/ara-s-summer-starts-with-southern-ohio-forest-rally": {
@@ -281,7 +269,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.scca.com/pages/2026-majors-schedule": {
@@ -289,7 +277,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/car-show/": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/in--indianapolis/car-shows/": {
@@ -305,11 +293,11 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/southern-indiana": {
-    "fetched_at_iso": "2026-10-22T23:03:14.629680-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:00.381258-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/ohio-valley": {
-    "fetched_at_iso": "2026-10-22T23:03:14.629680-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:00.381258-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?loc=Louisville&country=US&lat=38.20&lng=-85.74&radius=180": {
@@ -317,11 +305,11 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/indianapolis": {
-    "fetched_at_iso": "2026-10-22T23:03:14.629680-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:00.381258-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/central-kentucky": {
-    "fetched_at_iso": "2026-10-22T23:03:14.629680-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:00.381258-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/calendar/?country=US&radius=180&lat=39.25&lng=-84.38&loc=Cincinnati&page=2": {
@@ -333,7 +321,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/western-ohio": {
-    "fetched_at_iso": "2026-10-22T23:03:14.629680-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:00.381258-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/venues/mid-ohio-sports-car-course-lexington-oh": {
@@ -341,7 +329,7 @@
     "events": []
   },
   "https://www.scca.com/events/2005350-kentucky-region-autocross-test-and-tune-points-event-1-ncm-motorsports-park": {
-    "fetched_at_iso": "2026-09-24T10:22:53.369106-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:05.785703-04:00",
     "events": [
       {
         "title": "Kentucky Region Autocross Test and Tune & Points Event #1 @ NCM Motorsports Park",
@@ -377,7 +365,7 @@
     "events": []
   },
   "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course": {
-    "fetched_at_iso": "2026-09-24T10:22:53.369106-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:05.785703-04:00",
     "events": [
       {
         "title": "Cincinnati ITSpec*tacular Track Day @ Mid-Ohio Sports Car Course",
@@ -393,7 +381,7 @@
     "events": []
   },
   "https://www.scca.com/events/1998559-western-ohio-region-points-event-1-autocross-event-kil-kare-raceway": {
-    "fetched_at_iso": "2026-09-24T10:22:53.369106-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:05.785703-04:00",
     "events": [
       {
         "title": "Western Ohio Region Points Event 1 Autocross Event @ Kil-Kare Raceway",
@@ -445,7 +433,7 @@
     "events": []
   },
   "https://www.scca.com/events/2008042-indianapolis-autocross-subaru-challenge-subaru-of-indiana-automotive": {
-    "fetched_at_iso": "2026-09-17T09:37:27.652881-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:05.785703-04:00",
     "events": [
       {
         "title": "Indianapolis Autocross Subaru Challenge @ Subaru of Indiana Automotive",
@@ -466,10 +454,6 @@
   },
   "https://www.eventbrite.com/d/oh--cleves/cincinnati-exp-regional-rally/": {
     "fetched_at_iso": "2026-05-08T08:08:43.952344-04:00",
-    "events": []
-  },
-  "https://www.eventbrite.com/e/knights-of-columbus-annual-car-show-benefitting-st-judes-childrens-hosp-tickets-1538415214319": {
-    "fetched_at_iso": "2026-04-26T07:41:25.961507-04:00",
     "events": []
   },
   "https://www.meetup.com/topics/camping/us/": {
@@ -633,7 +617,7 @@
     "events": []
   },
   "https://www.instagram.com/reel/DU_0rq_DBhC/": {
-    "fetched_at_iso": "2026-10-22T23:02:43.732487-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
     "events": []
   },
   "https://www.scca.com/events/2009582-southern-indiana-road-rally-1-more-scrambled-legs-hardee-s-evansville": {
@@ -1080,7 +1064,7 @@
     "events": []
   },
   "https://www.scca.com/pages/rallycross": {
-    "fetched_at_iso": "2026-10-22T06:30:32.085040-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:29.864304-04:00",
     "events": []
   },
   "https://www.meetup.com/sw_polls_static_sitemap4.xml.gz": {
@@ -1108,7 +1092,7 @@
     ]
   },
   "https://www.meetup.com/sierraoutings/": {
-    "fetched_at_iso": "2026-10-22T06:29:55.540681-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": [
       {
         "title": "Intermediate Backpacking at Cumberland Gap - Pinnacle to White Rocks",
@@ -1239,7 +1223,7 @@
     "events": []
   },
   "https://www.meetup.com/cincinnatibackpackers/": {
-    "fetched_at_iso": "2026-10-22T06:29:55.540681-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": [
       {
         "title": "Annual Autumn Backpacking & Day Hiking at Cumberland Gap KY",
@@ -1317,7 +1301,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/event-results": {
-    "fetched_at_iso": "2026-09-17T11:14:24.916370-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:48.846329-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--kentucky/cincinnati-ohio/": {
@@ -1579,7 +1563,7 @@
     ]
   },
   "https://www.americanrallyassociation.org/boone-forest-rally": {
-    "fetched_at_iso": "2026-10-22T06:30:34.706228-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:48.846329-04:00",
     "events": []
   },
   "https://www.meetup.com/northern-kentucky-sierra-club/": {
@@ -1609,7 +1593,7 @@
     ]
   },
   "https://www.scca.com/pages/i-want-to-rallycross": {
-    "fetched_at_iso": "2026-10-22T23:02:57.459711-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:05.785703-04:00",
     "events": []
   },
   "https://www.scca.com/events/2001480-ohio-valley-region-rallycross-pe-3-joe-s-speedway": {
@@ -1767,7 +1751,7 @@
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1987276963895": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.meetup.com/techlife-cincinnati/events/lrjgqtyjcgblc/": {
@@ -1791,7 +1775,7 @@
     "events": []
   },
   "https://www.thscc.com/programs/rallycross": {
-    "fetched_at_iso": "2026-10-22T23:02:43.732487-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
     "events": []
   },
   "https://www.eventbrite.com/o/concours-devou-110823766751": {
@@ -1831,7 +1815,7 @@
     ]
   },
   "https://www.eventbrite.com/d/ky--florence/car-shows/": {
-    "fetched_at_iso": "2026-10-22T06:29:53.898056-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
     "events": []
   },
   "https://www.scca.com/events/2000229-southern-indiana-region-autocross-mid-american-air-center": {
@@ -1900,7 +1884,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/orgs/scca/neohio": {
-    "fetched_at_iso": "2026-10-22T23:03:14.629680-04:00",
+    "fetched_at_iso": "2026-10-23T09:05:00.381258-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--powell/classic-car-show-this-weekend/": {
@@ -2481,7 +2465,7 @@
     "events": []
   },
   "https://cincyscca.com/rallycross/2026-rallycross-schedule-and-results/": {
-    "fetched_at_iso": "2026-10-22T23:02:57.459711-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:29.864304-04:00",
     "events": []
   },
   "https://www.scca.com/events/2009926-2026-appalachian-triangle-rallycross-event-2-appalachian-overland-triangle": {
@@ -2501,7 +2485,7 @@
     "events": []
   },
   "https://sneakattackrally.com/ARA/entryList.html?ohio": {
-    "fetched_at_iso": "2026-09-17T11:14:24.916370-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:48.846329-04:00",
     "events": []
   },
   "https://local12.com/": {
@@ -2513,7 +2497,7 @@
     "events": []
   },
   "https://www.facebook.com/groups/ncrallycross/": {
-    "fetched_at_iso": "2026-10-22T23:02:43.732487-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
     "events": []
   },
   "https://www.thextremexperience.com/?srsltid=AfmBOoqO5z-CkryvTLtvjW5q6MC12_40yEoeYCi6AMeQX0sQuNXFHRtQ": {
@@ -2521,7 +2505,7 @@
     "events": []
   },
   "https://24hoursoflemons.com/lemons-rally/": {
-    "fetched_at_iso": "2026-09-17T15:56:50.940828-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
     "events": []
   },
   "https://www.youtube.com/watch?v=W0nh0kaDJjo": {
@@ -4401,7 +4385,7 @@
     ]
   },
   "https://goldrushrally.com/": {
-    "fetched_at_iso": "2026-10-22T23:02:43.732487-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
     "events": []
   },
   "https://www.scca.com/articles/2019245-the-2025-usrrc-will-be-an-unforgettable-shore-to-shore-buckeye-adventure": {
@@ -4914,7 +4898,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/post/hotly-contested-unpredictable-ara-national-championship-set-to-continue-at-southern-ohio": {
-    "fetched_at_iso": "2026-09-17T11:14:24.916370-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:48.846329-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=33": {
@@ -5872,7 +5856,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=15": {
-    "fetched_at_iso": "2026-08-07T07:47:44.200674-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=17": {
@@ -5880,7 +5864,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=16": {
-    "fetched_at_iso": "2026-10-22T06:29:53.898056-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=21": {
@@ -6656,7 +6640,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-middletown-ohio/?page=2": {
-    "fetched_at_iso": "2026-10-22T06:29:53.898056-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/drive-rally/?page=10": {
@@ -12592,7 +12576,7 @@
     "events": []
   },
   "https://www.therechargerally.com/rechargerallynine": {
-    "fetched_at_iso": "2026-10-22T23:03:07.886184-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:53.476537-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=18": {
@@ -13214,7 +13198,7 @@
     "events": []
   },
   "https://www.meetup.com/women-travel-abroad-cincinnati/events/313732902/": {
-    "fetched_at_iso": "2026-10-22T06:29:55.540681-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": [
       {
         "title": "SOLD OUT! | Scotland | April 27 - May 4, 2027",
@@ -13246,7 +13230,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-show-july-11th/": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/": {
@@ -15553,7 +15537,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--auto-boat-and-air--events--next-month/car-show/": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/cincinnati-speed-dating/?page\\u003d5": {
@@ -15722,7 +15706,7 @@
     "events": []
   },
   "https://www.meetup.com/find/us--oh--mount-saint-joseph/": {
-    "fetched_at_iso": "2026-10-22T06:29:55.540681-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": [
       {
         "title": "Cincy Web Tech Drinkup, presented by Encore Talent Solutions",
@@ -15767,11 +15751,11 @@
         "url": "https://www.meetup.com/lingomix-cincy-multilingual-language-exchange/events/315609870/"
       },
       {
-        "title": "Hungry Hungry Heathens",
-        "start_iso": "2026-10-26T18:30:00-04:00",
-        "end_iso": "2026-10-26T21:00:00-04:00",
-        "location": "MadTree Brewing 3301 Madison Road, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/communityofreason/events/313906450/"
+        "title": "Men's Group - Pleasant Ridge (Cincinnati)",
+        "start_iso": "2026-10-29T18:45:00-04:00",
+        "end_iso": "2026-10-29T21:15:00-04:00",
+        "location": "Cincinnati Ohio Cincinnati Ohio, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/mkp-cincinnati/events/316917232/"
       },
       {
         "title": "What is Time?",
@@ -15781,67 +15765,11 @@
         "url": "https://www.meetup.com/science-conversation-cincy-meetup/events/316913200/"
       },
       {
-        "title": "Cincinnati Museum: after hours Halloween edition",
-        "start_iso": "2026-10-22T19:00:00-04:00",
-        "end_iso": "2026-10-22T22:00:00-04:00",
-        "location": "Union Terminal 1301 Western Avenue, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/sass-serious-about-social-stuff-30s-50s-day-cin-noky/events/316169016/"
-      },
-      {
-        "title": "🏓 Pickleball @ Upton Park Royal Oak (All Levels)",
-        "start_iso": "2026-10-22T17:30:00-04:00",
-        "end_iso": "2026-10-22T19:45:00-04:00",
-        "location": "UPTON PARK Mandalay avenue, Royal Oak, MI Royal Oak MI",
-        "url": "https://www.meetup.com/meetup-group-vbpgvdrg/events/317038895/"
-      },
-      {
-        "title": "Men's Group - Pleasant Ridge (Cincinnati)",
-        "start_iso": "2026-10-22T18:45:00-04:00",
-        "end_iso": "2026-10-22T21:15:00-04:00",
-        "location": "Cincinnati Ohio Cincinnati Ohio, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/mkp-cincinnati/events/316819466/"
-      },
-      {
-        "title": "FFRF National Convention recap with our very own Elaine Moscovitz!",
-        "start_iso": "2026-10-22T19:00:00-04:00",
-        "end_iso": "2026-10-22T20:30:00-04:00",
-        "location": "Junior League of Cincinnati 3500 Columbia Pkwy, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/ffrfcmc/events/316831915/"
-      },
-      {
-        "title": "Argentine Tango - Level 2",
-        "start_iso": "2026-10-22T19:00:00-04:00",
-        "end_iso": "2026-10-22T20:30:00-04:00",
-        "location": "Tango del Barrio 6110 Hamilton Ave., 2nd Floor, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/argentine-tango-in-cincinnati/events/316819912/"
-      },
-      {
-        "title": "B2B IP Cincinnati, OH",
-        "start_iso": "2026-10-22T08:30:00-04:00",
-        "end_iso": "2026-10-22T09:30:00-04:00",
-        "location": "Republic Bank Building 4030 Smith Rd, Suite 200, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/h7networkcincinnati/events/316812021/"
-      },
-      {
-        "title": "FREE Pumpkin Carving",
-        "start_iso": "2026-10-22T19:30:00-04:00",
-        "end_iso": "2026-10-22T21:00:00-04:00",
-        "location": "2360 Kipling Avenue 2360 Kipling Ave, Cincinnati, OH 45239, USA, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/madis-house/events/316980210/"
-      },
-      {
-        "title": "Independent Film \" Never After Dark\" at CWC",
-        "start_iso": "2026-10-24T19:00:00-04:00",
-        "end_iso": "2026-10-24T21:30:00-04:00",
-        "location": "719 Race St 719 Race St, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/communityofreason/events/316683081/"
-      },
-      {
-        "title": "Dinner before the movie at Historic Arnold's Bar and Grill",
-        "start_iso": "2026-10-24T17:00:00-04:00",
-        "end_iso": "2026-10-24T18:45:00-04:00",
-        "location": "210 E 8th St 210 E 8th St, Cincinnati, OH 45202, USA, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/communityofreason/events/316683513/"
+        "title": "Cincinnati Claude Workshop for Professionals and Founders",
+        "start_iso": "2026-10-23T19:30:00-04:00",
+        "end_iso": "2026-10-23T20:30:00-04:00",
+        "location": "2344 Amsterdam Rd 2344 Amsterdam Rd, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/crypto-traders-collective-and-social-club/events/317093122/"
       },
       {
         "title": "Friday Corryville All Levels Coed Indoor Volleyball",
@@ -15851,6 +15779,20 @@
         "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/316711935/"
       },
       {
+        "title": "Hitting 6:15-7:15pm All Ages FREE 60 mins of Volleyball Drills",
+        "start_iso": "2026-10-23T18:15:00-04:00",
+        "end_iso": "2026-10-23T19:15:00-04:00",
+        "location": "Corryville Recreation Center 2823 Eden Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/316870732/"
+      },
+      {
+        "title": "7:15-8:45pm Friday Corryville All Levels Coed Indoor Volleyball",
+        "start_iso": "2026-10-23T19:15:00-04:00",
+        "end_iso": "2026-10-23T20:45:00-04:00",
+        "location": "Corryville Recreation Center 2823 Eden Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/316765231/"
+      },
+      {
         "title": "Board Game Buddies",
         "start_iso": "2026-10-23T19:00:00-04:00",
         "end_iso": "2026-10-23T21:00:00-04:00",
@@ -15858,11 +15800,46 @@
         "url": "https://www.meetup.com/board-game-buddies/events/316416673/"
       },
       {
+        "title": "Friday Night Magic at Dice on Draft",
+        "start_iso": "2026-10-23T18:00:00-04:00",
+        "end_iso": "2026-10-23T20:00:00-04:00",
+        "location": "Dice on Draft 20 E 5th Street, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/dice-on-draft-events/events/316832235/"
+      },
+      {
         "title": "Guided Meditation at Clifton Ave., Cincinnati- Come experience peace within !!",
         "start_iso": "2026-10-23T19:00:00-04:00",
         "end_iso": "2026-10-23T20:15:00-04:00",
         "location": "Clifton United Methodist Church 3416 Clifton Avenue, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/sahajameditationcincy/events/316832988/"
+      },
+      {
+        "title": "Marcos & Florencia Weekend Workshop",
+        "start_iso": "2026-10-23T19:00:00-04:00",
+        "end_iso": "2026-10-23T22:00:00-04:00",
+        "location": "Tango del Barrio 6110 Hamilton Ave., 2nd Floor, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/argentine-tango-in-cincinnati/events/316832933/"
+      },
+      {
+        "title": "Independent Film \" Never After Dark\" at CWC",
+        "start_iso": "2026-10-24T19:00:00-04:00",
+        "end_iso": "2026-10-24T21:30:00-04:00",
+        "location": "719 Race St 719 Race St, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/communityofreason/events/316683081/"
+      },
+      {
+        "title": "Dragons Guild Presents - DM Draco's AoS",
+        "start_iso": "2026-10-24T12:00:00-04:00",
+        "end_iso": "2026-10-24T18:00:00-04:00",
+        "location": "Rockin' Rooster Comics & Games 5000 Glenway Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/iwantto/events/315287268/"
+      },
+      {
+        "title": "Saturday hike at Spring Grove Cemetery",
+        "start_iso": "2026-10-24T10:00:00-04:00",
+        "end_iso": "2026-10-24T12:00:00-04:00",
+        "location": "Spring Grove 4389 Spring Grove Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/cincyhikesandhangs/events/317059911/"
       },
       {
         "title": "Queer Crafters of Cincy - October Meet Up",
@@ -15879,11 +15856,11 @@
         "url": "https://www.meetup.com/dice-on-draft-events/events/316802292/"
       },
       {
-        "title": "Friday Night Magic at Dice on Draft",
-        "start_iso": "2026-10-23T18:00:00-04:00",
-        "end_iso": "2026-10-23T20:00:00-04:00",
-        "location": "Dice on Draft 20 E 5th Street, Covington, KY Covington KY",
-        "url": "https://www.meetup.com/dice-on-draft-events/events/316832235/"
+        "title": "Blood on The Clcoktower",
+        "start_iso": "2026-10-25T20:00:00-04:00",
+        "end_iso": "2026-10-25T22:00:00-04:00",
+        "location": "Dice on Draft 20 E 5th St, Covington, KY 41011, USA, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/dice-on-draft-events/events/316861781/"
       },
       {
         "title": "Witches Ball at Leapin Lizard",
@@ -15914,11 +15891,18 @@
         "url": "https://www.meetup.com/single-over-50-fun-cincinnati/events/315425431/"
       },
       {
-        "title": "Dragons Guild Presents - DM Draco's AoS",
-        "start_iso": "2026-10-24T12:00:00-04:00",
-        "end_iso": "2026-10-24T18:00:00-04:00",
-        "location": "Rockin' Rooster Comics & Games 5000 Glenway Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/iwantto/events/315287268/"
+        "title": "Board Game Bar Hangout in Covington, November",
+        "start_iso": "2026-11-05T18:30:00-05:00",
+        "end_iso": "2026-11-05T20:30:00-05:00",
+        "location": "Dice on Draft 20 E 5th Street, Covington, KY Covington KY",
+        "url": "https://www.meetup.com/queencitysocialclub/events/317095778/"
+      },
+      {
+        "title": "Spring Grove Cemetery Walk",
+        "start_iso": "2026-10-27T10:00:00-04:00",
+        "end_iso": "2026-10-27T12:00:00-04:00",
+        "location": "Spring Grove Cemetery and Arboretum 4521 Spring Grove Ave, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/iwantto/events/312983229/"
       },
       {
         "title": "Sunday Bender Mountain hike (Difficult)",
@@ -15928,18 +15912,18 @@
         "url": "https://www.meetup.com/cincyhikesandhangs/events/316955624/"
       },
       {
-        "title": "Gayle Pille Vs SD1: nature preservation vs development",
-        "start_iso": "2026-10-26T18:30:00-04:00",
-        "end_iso": "2026-10-26T20:00:00-04:00",
-        "location": "Kenton County Public Library - Erlanger Branch 401 Kenton Lands Rd, Erlanger, KY 41018, USA, Erlanger, KY Erlanger KY",
-        "url": "https://www.meetup.com/northern-kentucky-sierra-club/events/316769981/"
-      },
-      {
         "title": "Final Friday Art at Pendleton Art Center",
         "start_iso": "2026-10-30T19:00:00-04:00",
         "end_iso": "2026-10-30T21:00:00-04:00",
         "location": "Pendleton Art Center 1310 Pendleton St, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/cincyhikesandhangs/events/316917785/"
+      },
+      {
+        "title": "Gayle Pille Vs SD1: nature preservation vs development",
+        "start_iso": "2026-10-26T18:30:00-04:00",
+        "end_iso": "2026-10-26T20:00:00-04:00",
+        "location": "Kenton County Public Library - Erlanger Branch 401 Kenton Lands Rd, Erlanger, KY 41018, USA, Erlanger, KY Erlanger KY",
+        "url": "https://www.meetup.com/northern-kentucky-sierra-club/events/316769981/"
       },
       {
         "title": "Let’s Meet at - Eden Park",
@@ -15949,18 +15933,18 @@
         "url": "https://www.meetup.com/lets-meet-at-the-park/events/316618455/"
       },
       {
-        "title": "Saturday hike at Spring Grove Cemetery",
-        "start_iso": "2026-10-24T10:00:00-04:00",
-        "end_iso": "2026-10-24T12:00:00-04:00",
-        "location": "Spring Grove 4389 Spring Grove Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/cincyhikesandhangs/events/317059911/"
-      },
-      {
         "title": "Tokyo Kitty Karaoke Night",
         "start_iso": "2026-11-20T19:00:00-05:00",
         "end_iso": "2026-11-20T21:00:00-05:00",
         "location": "Tokyo Kitty 575 Race Street, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/cincyhikesandhangs/events/316917757/"
+      },
+      {
+        "title": "Sawyer Point to Eden Park Hike",
+        "start_iso": "2026-10-25T09:00:00-04:00",
+        "end_iso": "2026-10-25T11:00:00-04:00",
+        "location": "Sawyer Point 705 E. Pete Rose Way, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/hike-cincinnati/events/317088092/"
       },
       {
         "title": "Urban Hiking - Findlay Market to Mt. Adams and Back",
@@ -15970,32 +15954,11 @@
         "url": "https://www.meetup.com/hike-cincinnati/events/316839357/"
       },
       {
-        "title": "Sunday Fitness Hike: Newport Aquarium to Eden Park Hike and Back - 9AM Start",
-        "start_iso": "2026-10-25T09:00:00-04:00",
-        "end_iso": "2026-10-25T12:00:00-04:00",
-        "location": "1 Aquarium Way 1 Aquarium Way, Newport, KY Newport KY",
-        "url": "https://www.meetup.com/hike-cincinnati/events/316648436/"
-      },
-      {
         "title": "MCKIE (HIGH) INTERMEDIATE Vball.",
         "start_iso": "2026-10-27T18:00:00-04:00",
         "end_iso": "2026-10-27T20:00:00-04:00",
         "location": "McKie Recreation Center 1655 Chase Ave, Cincinnati, OH Cincinnati OH",
         "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/317039262/"
-      },
-      {
-        "title": "7:15-8:45pm Friday Corryville All Levels Coed Indoor Volleyball",
-        "start_iso": "2026-10-23T19:15:00-04:00",
-        "end_iso": "2026-10-23T20:45:00-04:00",
-        "location": "Corryville Recreation Center 2823 Eden Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/316765231/"
-      },
-      {
-        "title": "Hitting 6:15-7:15pm All Ages FREE 60 mins of Volleyball Drills",
-        "start_iso": "2026-10-23T18:15:00-04:00",
-        "end_iso": "2026-10-23T19:15:00-04:00",
-        "location": "Corryville Recreation Center 2823 Eden Ave, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/the-cincinnati-volleyball-connextion/events/316870732/"
       },
       {
         "title": "2 Courts Wed Coed Intermediate Court Corryville 6:15-8:45",
@@ -16742,7 +16705,7 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/four-bridges-cruise-in": {
-    "checked_at_iso": "2026-10-15T09:47:22.885630-04:00",
+    "checked_at_iso": "2026-10-23T09:05:08.575788-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/luvd-ones-ohio-pony-wagon-day-car-show": {
@@ -17279,11 +17242,11 @@
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/cincinnati-speed-dating/?page=6": {
-    "fetched_at_iso": "2026-10-22T06:29:53.898056-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
     "events": []
   },
   "https://www.meetup.com/cincinnatibackpackers/events/316338334/": {
-    "fetched_at_iso": "2026-10-22T06:29:55.540681-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": [
       {
         "title": "Annual Autumn Backpacking & Day Hiking at Cumberland Gap KY",
@@ -17469,7 +17432,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/in--lawrenceburg/events--this-weekend/classic-car-show/": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.eventbrite.com/e/knights-of-columbus-9th-annual-charity-car-show-2026-join-the-knights-for-o-tickets-2000037635407": {
@@ -17538,7 +17501,7 @@
     ]
   },
   "https://www.eventbrite.com/e/corsaview-car-show-tickets-1998445064986": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ga--columbus/car-shows/": {
@@ -18327,19 +18290,19 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=20": {
-    "fetched_at_iso": "2026-10-22T06:29:53.898056-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/things-to-do-in-cincinnati-in-july/?page=2": {
-    "fetched_at_iso": "2026-10-22T06:29:53.898056-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--events/startup/?page=4": {
-    "fetched_at_iso": "2026-10-22T06:29:53.898056-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
     "events": []
   },
   "https://www.meetup.com/sierraoutings/events/316518800/": {
-    "fetched_at_iso": "2026-10-22T06:29:55.540681-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": [
       {
         "title": "Intermediate Backpacking at Cumberland Gap - Pinnacle to White Rocks",
@@ -18351,7 +18314,7 @@
     ]
   },
   "https://www.meetup.com/i-d-be-game-for-that/events/hznvxtyjckbkb/": {
-    "fetched_at_iso": "2026-10-22T06:29:55.540681-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": [
       {
         "title": "Trivia & a Movie in the Park - How to Train Your Dragon (Live Action)",
@@ -18363,7 +18326,7 @@
     ]
   },
   "https://www.meetup.com/de-de/i-d-be-game-for-that/": {
-    "fetched_at_iso": "2026-10-22T23:02:41.813467-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": []
   },
   "https://www.facebook.com/dreamcars4kids/videos/%EF%B8%8F-mountain-rally-2026-what-a-weekendmountain-roads-incredible-cars-great-people-/855524784248939/": {
@@ -18395,7 +18358,7 @@
     ]
   },
   "https://www.meetup.com/find/us--ky--waddy/meet-new-friends/": {
-    "fetched_at_iso": "2026-10-22T06:29:55.540681-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": [
       {
         "title": "Wednesday Night Meditation Practice",
@@ -18412,18 +18375,18 @@
         "url": "https://www.meetup.com/indianapolis-zen-center/events/316875358/"
       },
       {
-        "title": "Architecting with AI",
-        "start_iso": "2026-10-22T18:30:00-04:00",
-        "end_iso": "2026-10-22T20:30:00-04:00",
-        "location": "Slingshot 700 N Hurstbourne Pkwy #120, Louisville, KY Louisville KY",
-        "url": "https://www.meetup.com/louisville-dotnet/events/316993748/"
-      },
-      {
         "title": "Brain Tumor Support Group",
         "start_iso": "2026-10-26T17:30:00-04:00",
         "end_iso": "2026-10-26T19:30:00-04:00",
         "location": "Gilda's Club Kentuckiana 2440 Grinstead Drive, Louisville, KY Louisville KY",
         "url": "https://www.meetup.com/louisville-brain-injury-meetup-group/events/316874193/"
+      },
+      {
+        "title": "Coloring, Cars and Coffee… Oh My!",
+        "start_iso": "2026-11-10T10:00:00-05:00",
+        "end_iso": "2026-11-10T11:30:00-05:00",
+        "location": "",
+        "url": "https://www.meetup.com/northeast-louisville-mama-me-group/events/316522320/"
       },
       {
         "title": "Let's play games, and socialize",
@@ -18433,11 +18396,25 @@
         "url": "https://www.meetup.com/lexingtongames/events/316902788/"
       },
       {
+        "title": "Run Your Own Local LLM & Save on AI Costs!",
+        "start_iso": "2026-11-04T18:30:00-05:00",
+        "end_iso": "2026-11-04T20:00:00-05:00",
+        "location": "9000 Keystone Crossing 9000 Keystone Crossing, Indianapolis, IN Indianapolis IN",
+        "url": "https://www.meetup.com/indy-net-consortium/events/315044422/"
+      },
+      {
         "title": "Beer and Boardgames at West Sixth Brewing",
         "start_iso": "2026-11-02T18:00:00-05:00",
         "end_iso": "2026-11-02T20:00:00-05:00",
         "location": "West Sixth Brewing 501 West 6th Street, Lexington, KY Lexington KY",
         "url": "https://www.meetup.com/lexingtongames/events/316965908/"
+      },
+      {
+        "title": "Lexington Home-Based Speed Dating for Commitment",
+        "start_iso": "2026-11-08T17:00:00-05:00",
+        "end_iso": "2026-11-08T18:00:00-05:00",
+        "location": "2300 Sandersville Rd 2300 Sandersville Rd, Lexington, KY Lexington KY",
+        "url": "https://www.meetup.com/pedal-pals-mountain-bike-social-club/events/317092640/"
       },
       {
         "title": "Kentucky Speed Dating for Louisville Singles 35-52",
@@ -18447,38 +18424,24 @@
         "url": "https://www.meetup.com/cincinnati-speed-dating-singles-meet-up/events/316699450/"
       },
       {
-        "title": "Lexington Critical Hits and Coffee Conversations",
-        "start_iso": "2026-11-01T17:00:00-05:00",
-        "end_iso": "2026-11-01T18:00:00-05:00",
-        "location": "5105 Keene Rd 5105 Keene Rd, Lexington, KY Lexington KY",
-        "url": "https://www.meetup.com/dungeons-and-dragons-social-tabletop-society/events/317073326/"
-      },
-      {
-        "title": "October 22nd Meetup - .NET 11 & Jurassic Park - Matthew-Hope Eland",
-        "start_iso": "2026-10-22T17:30:00-04:00",
-        "end_iso": "2026-10-22T19:30:00-04:00",
-        "location": "Central Insurance 4450 Bridge Park Ave,, Dublin, OH Dublin OH",
-        "url": "https://www.meetup.com/central-ohio-net-developers-group-condg/events/315808796/"
-      },
-      {
         "title": "Let's speak Spanish- At Joseph Beth Booksellers Cafe",
-        "start_iso": "2026-10-22T19:00:00-04:00",
-        "end_iso": "2026-10-22T20:00:00-04:00",
+        "start_iso": "2026-10-29T19:00:00-04:00",
+        "end_iso": "2026-10-29T20:00:00-04:00",
         "location": "Joseph-Beth Booksellers 161 Lexington Green Cir # B, Lexington, KY Lexington KY",
-        "url": "https://www.meetup.com/lexington-spanish-language-meetup-group/events/316820101/"
+        "url": "https://www.meetup.com/lexington-spanish-language-meetup-group/events/316917444/"
       }
     ]
   },
   "https://www.meetup.com/en-AU/topics/affordable-housing/": {
-    "fetched_at_iso": "2026-10-22T23:02:41.813467-04:00",
+    "fetched_at_iso": "2026-10-23T09:03:49.787550-04:00",
     "events": []
   },
   "https://www.facebook.com/wcti12/videos/while-north-carolina-is-renowned-as-a-motorsport-hub-the-eastern-part-of-the-sta/696072613323608/": {
-    "fetched_at_iso": "2026-10-22T23:02:43.732487-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-show-columbus-ohio/?page=49": {
-    "fetched_at_iso": "2026-10-22T23:03:13.037326-04:00",
+    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
     "events": []
   },
   "https://www.motorsportreg.com/events/arpca-mid-ohio-fall-2026-sports-car-course-pca-allegheny-588581": {
@@ -18496,5 +18459,25 @@
   "https://www.scca.com/events/archives?categories=rallycross-regional&page=3": {
     "fetched_at_iso": "2026-10-22T23:03:18.150910-04:00",
     "events": []
+  },
+  "https://www.scca.com/events/archives?categories=rallycross-national&page=10": {
+    "fetched_at_iso": "2026-10-23T09:04:29.864304-04:00",
+    "events": []
+  },
+  "https://www.motorsportreg.com/events/1010ths-hpde-august-25-mid-ohio-sports-car-course-motorsports-980637": {
+    "fetched_at_iso": "2026-10-23T09:05:00.381258-04:00",
+    "events": [
+      {
+        "title": "1010ths HPDE August 25 @ Mid Ohio",
+        "start_iso": "2022-08-25T00:00:00-04:00",
+        "end_iso": "2022-08-25T00:00:00-04:00",
+        "location": "Mid-Ohio Sports Car Course",
+        "url": "https://www.motorsportreg.com/events/1010ths-hpde-august-25-mid-ohio-sports-car-course-motorsports-980637"
+      }
+    ]
+  },
+  "verify::https://www.meetup.com/northeast-louisville-mama-me-group/events/316522320/": {
+    "checked_at_iso": "2026-10-23T09:05:08.575011-04:00",
+    "result": null
   }
 }
