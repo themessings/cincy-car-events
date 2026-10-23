@@ -5815,6 +5815,22 @@ def _manual_exclusions(cfg: dict) -> List[dict]:
     return [r for r in raw if isinstance(r, dict) and (r.get("title") or r.get("url"))]
 
 
+def _on_schedule(day: str, sched: dict) -> bool:
+    """True when YYYY-MM-DD is the host's own date: the `nth` `weekday` of one of `months`.
+
+    keep_schedule: {weekday: Sat, nth: 3, months: [5, 6, 7, 8, 9, 10]} is "the 3rd Saturday,
+    May to October". No `nth` means every such weekday; no `months` means every month."""
+    try:
+        d = datetime.strptime(day, "%Y-%m-%d").date()
+    except ValueError:
+        return False
+    if d.strftime("%a") != str(sched.get("weekday", ""))[:3].title():
+        return False
+    months = {int(m) for m in (sched.get("months") or range(1, 13))}
+    nth = int(sched.get("nth") or 0)
+    return d.month in months and (not nth or (d.day - 1) // 7 + 1 == nth)
+
+
 def _matching_exclusion(ev: dict, rules: List[dict]) -> Optional[dict]:
     """The first exclusion rule this event matches, or None.
 
@@ -5841,6 +5857,10 @@ def _matching_exclusion(ev: dict, rules: List[dict]) -> Optional[dict]:
         # keep_weekdays: the rule leaves these days alone — a listing site that
         # files a Sunday-only meet under Saturdays (Westerville, 2026-10-01).
         if weekday and weekday in {str(w)[:3].title() for w in (rule.get("keep_weekdays") or [])}:
+            continue
+        # keep_schedule: the rule leaves the host's own schedule alone and drops every other
+        # date, whatever site listed it (Liberty Center, host-confirmed 2026-10-22).
+        if rule.get("keep_schedule") and _on_schedule(day, rule["keep_schedule"]):
             continue
         want_title = clean_ws(str(rule.get("title", ""))).lower()
         want_url = clean_ws(str(rule.get("url", ""))).lower()

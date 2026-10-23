@@ -72,3 +72,27 @@ class LineupCheck20261022Tests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_liberty_center_keeps_only_the_host_schedule(self):
+        # Tony Alonso, Tri-State Mustang / Ford Club, 2026-10-22: 3rd Saturday, May to October.
+        title = "Liberty Center Cars & Coffee"
+        for url in ("https://allevents.in/cincinnati/liberty-center-cars-and-coffee",
+                    "https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center"):
+            self.assertIsNone(self._hit(title, url, "2027-05-15"))  # 3rd Saturday of May
+            self.assertIsNone(self._hit(title, url, "2026-10-17"))  # 3rd Saturday of October
+            self.assertIsNotNone(self._hit(title, url, "2027-05-16"))  # a Sunday
+            self.assertIsNotNone(self._hit(title, url, "2027-05-08"))  # 2nd Saturday
+            self.assertIsNotNone(self._hit(title, url, "2026-11-21"))  # 3rd Saturday, out of season
+
+
+class OnScheduleTests(unittest.TestCase):
+    def test_nth_weekday_in_season(self):
+        from scripts.events_collector import _on_schedule
+        sched = {"weekday": "Sat", "nth": 3, "months": [5, 6, 7, 8, 9, 10]}
+        self.assertTrue(_on_schedule("2026-10-17", sched))
+        self.assertTrue(_on_schedule("2026-05-16", sched))
+        self.assertFalse(_on_schedule("2026-10-24", sched))
+        self.assertFalse(_on_schedule("2026-10-18", sched))
+        self.assertFalse(_on_schedule("2026-04-18", sched))
+        self.assertFalse(_on_schedule("", sched))
+        self.assertTrue(_on_schedule("2026-10-24", {"weekday": "Sat"}))
