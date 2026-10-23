@@ -64,3 +64,11 @@ def test_fonts_are_picked_by_exact_name_and_never_slanted(tmp_path):
     bold = ns["find_font_file"](["dejavusans-bold.ttf", "liberationsans-bold.ttf"], roots=[str(tmp_path)])
     reg = ns["find_font_file"](["dejavusans.ttf", "liberationsans-regular.ttf"], roots=[str(tmp_path)])
     assert bold.endswith("DejaVuSans-Bold.ttf") and reg.endswith("DejaVuSans.ttf")
+
+
+def test_one_slide_week_does_not_say_swipe():
+    src = (ROOT / "scripts" / "generate_weekly_lineup.py").read_text(encoding="utf-8")
+    i = src.index("caption = make_caption(")
+    tail = src[i:i + 400]
+    assert "if len(slide_paths) == 1:" in tail and '"See the full regional lineup"' in tail
+    assert "Swipe for the full regional lineup" in src  # the multi-slide wording is unchanged

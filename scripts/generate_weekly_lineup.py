@@ -2152,6 +2152,9 @@ def instagram_handles(events: List["Event"]) -> List[str]:
 
 
 caption = make_caption(selected_dates, events_by_date_city_full, events_selected)
+if len(slide_paths) == 1:
+    # One slide has nothing to swipe to (2026-10-22: a one-slide week still said "Swipe").
+    caption = caption.replace("Swipe for the full regional lineup", "See the full regional lineup")
 handles = instagram_handles(events_selected)
 if handles:
     # Hosts go above the hashtags so the hashtags stay on the last line (brand rule).
