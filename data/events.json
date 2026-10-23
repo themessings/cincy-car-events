@@ -1,6 +1,6 @@
 {
-  "generated_at_iso": "2026-10-22T22:41:02.119576-04:00",
-  "count": 198,
+  "generated_at_iso": "2026-10-22T22:55:05.445395-04:00",
+  "count": 195,
   "events": [
     {
       "Event Name": "Fall 2026 Rennsport Dragon Rally®",
@@ -17,22 +17,6 @@
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/",
       "Organizer Social": "https://facebook.com/events/s/fall-2026-rennsport-dragon-ral/1422620702802640/"
-    },
-    {
-      "Event Name": "KB Octane Presents: Rip Rap Friday Night Cruise-In",
-      "Date": "2026-10-23",
-      "Start Time": "7:00 PM",
-      "End Time": "7:00 PM",
-      "Location": "6024 Rip Rap Rd, Dayton, OH 45401",
-      "Address": "6024 Rip Rap Rd, Dayton, OH 45401",
-      "Closest City": "Dayton, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/kb-octane-presents-rip-rap-friday-night-cruise-in",
-      "Organizer Social": ""
     },
     {
       "Event Name": "Southern Indiana Car & Coffee",
@@ -115,22 +99,6 @@
       "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
     },
     {
-      "Event Name": "Columbus Cars & Coffee – 3650 Olentangy River Road",
-      "Date": "2026-10-24",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "3650 Olentangy River Road, Columbus, OH 43085",
-      "Address": "3650 Olentangy River Road, Columbus, OH 43085",
-      "Closest City": "Columbus, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/columbus-cars-coffee-3650-olentangy-river-road-2026-06-20",
-      "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
-    },
-    {
       "Event Name": "Danville Professional Firefighters Car Show",
       "Date": "2026-10-24",
       "Start Time": "10:00 AM",
@@ -209,22 +177,6 @@
       "Source": "Manually Verified Events",
       "Event URL": "https://columbuscarsandcoffee.net/",
       "Organizer Social": "https://www.facebook.com/TheColumbusCarsandCoffee/"
-    },
-    {
-      "Event Name": "Alexandria Cruise-In",
-      "Date": "2026-10-29",
-      "Start Time": "5:00 PM",
-      "End Time": "8:00 PM",
-      "Location": "7001 Alexandria Pike, Alexandria, KY 41001",
-      "Address": "7001 Alexandria Pike, Alexandria, KY 41001",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
-      "Event URL": "https://carsandcoffeeevents.com/events/alexandria-cruise-in-2",
-      "Organizer Social": ""
     },
     {
       "Event Name": "Historic Cammack Station Charity Cruise-In",
