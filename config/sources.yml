@@ -332,6 +332,15 @@ filters:
       May to October, with Oct 17 as the last 2026 meet
       (/events/cincy-cars-coffee-at-liberty-center). The host's two Saturday
       listings use other links and are not touched by this rule.
+  - title: Liberty Center Cars
+    keep_schedule: {weekday: Sat, nth: 3, months: [5, 6, 7, 8, 9, 10]}
+    reason: >-
+      Host-confirmed schedule. Tony Alonso, for the Tri-State Mustang / Ford
+      Club (the host), emailed Joel on 2026-10-22: Liberty Center Cars and
+      Coffee is the 3rd Saturday of the month, May to October, and a listing
+      that says Sunday is wrong. Club event calendar:
+      https://share.google/Mf9RjbVFRIXsJfEGu. Any Liberty Center Cars listing
+      on another day or month is dropped, whatever site it came from.
   - title: Wheels & Whoppers
     url: wheels-whoppers
     reason: >-
