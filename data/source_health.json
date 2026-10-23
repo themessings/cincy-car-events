@@ -2,21 +2,21 @@
   "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255059-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956382-04:00",
     "last_status": "ok",
-    "last_collected": 174
+    "last_collected": 121
   },
   "OVR PCA Social Events (ICS)": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255095-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956428-04:00",
     "last_status": "ok",
     "last_collected": 92
   },
   "iCloud Published Calendar (ICS)": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255113-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956452-04:00",
     "last_status": "ok",
     "last_collected": 130
   },
@@ -30,126 +30,126 @@
   "Manually Verified Events": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255129-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956468-04:00",
     "last_status": "ok",
     "last_collected": 13
   },
   "Facebook Page Events (Graph API sheet/env IDs)": {
     "ever_productive": false,
-    "consecutive_zero_runs": 32,
-    "last_run_iso": "2026-10-22T22:55:05.255146-04:00",
+    "consecutive_zero_runs": 33,
+    "last_run_iso": "2026-10-22T23:03:18.956484-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Facebook Feed Scroll": {
     "ever_productive": false,
-    "consecutive_zero_runs": 32,
-    "last_run_iso": "2026-10-22T22:55:05.255161-04:00",
+    "consecutive_zero_runs": 33,
+    "last_run_iso": "2026-10-22T23:03:18.956499-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Google Events (SerpAPI) [serpapi_google_events]": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255177-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956512-04:00",
     "last_status": "ok",
     "last_collected": 1
   },
   "Google Events - Dayton": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255195-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956529-04:00",
     "last_status": "ok",
     "last_collected": 2
   },
   "Google Events - Columbus": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255212-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956543-04:00",
     "last_status": "ok",
     "last_collected": 1
   },
   "Google Events - Louisville": {
     "ever_productive": true,
-    "consecutive_zero_runs": 2,
-    "last_run_iso": "2026-10-22T22:55:05.255246-04:00",
+    "consecutive_zero_runs": 3,
+    "last_run_iso": "2026-10-22T23:03:18.956560-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Google Events - Lexington": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255262-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956574-04:00",
     "last_status": "ok",
     "last_collected": 1
   },
   "Google Events - Indianapolis": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255278-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956587-04:00",
     "last_status": "ok",
     "last_collected": 1
   },
   "Eventbrite Cincy": {
     "ever_productive": false,
-    "consecutive_zero_runs": 32,
-    "last_run_iso": "2026-10-22T22:55:05.255294-04:00",
+    "consecutive_zero_runs": 33,
+    "last_run_iso": "2026-10-22T23:03:18.956601-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Meetup Cincy Cars": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255310-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956614-04:00",
     "last_status": "ok",
     "last_collected": 63
   },
   "Regional rallies": {
     "ever_productive": true,
-    "consecutive_zero_runs": 10,
-    "last_run_iso": "2026-10-22T22:55:05.255327-04:00",
+    "consecutive_zero_runs": 11,
+    "last_run_iso": "2026-10-22T23:03:18.956628-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "SCCA RoadRally + RallyCross": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255343-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956642-04:00",
     "last_status": "ok",
     "last_collected": 2
   },
   "American Rally Association (SOFR + regional)": {
     "ever_productive": false,
-    "consecutive_zero_runs": 32,
-    "last_run_iso": "2026-10-22T22:55:05.255359-04:00",
+    "consecutive_zero_runs": 33,
+    "last_run_iso": "2026-10-22T23:03:18.956654-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "Touring rally organizers (Corsa/Dynasty/Recharge/RNA/Gridlife/Gravity)": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255374-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956667-04:00",
     "last_status": "ok",
     "last_collected": 1
   },
   "Eventbrite regional autos (SerpAPI)": {
     "ever_productive": true,
-    "consecutive_zero_runs": 18,
-    "last_run_iso": "2026-10-22T22:55:05.255391-04:00",
+    "consecutive_zero_runs": 19,
+    "last_run_iso": "2026-10-22T23:03:18.956681-04:00",
     "last_status": "ok",
     "last_collected": 0
   },
   "MotorsportReg regional autos": {
     "ever_productive": true,
     "consecutive_zero_runs": 0,
-    "last_run_iso": "2026-10-22T22:55:05.255406-04:00",
+    "last_run_iso": "2026-10-22T23:03:18.956694-04:00",
     "last_status": "ok",
     "last_collected": 4
   },
   "TrackRabbit + SCCA calendar discovery": {
     "ever_productive": true,
-    "consecutive_zero_runs": 5,
-    "last_run_iso": "2026-10-22T22:55:05.255423-04:00",
+    "consecutive_zero_runs": 6,
+    "last_run_iso": "2026-10-22T23:03:18.956708-04:00",
     "last_status": "ok",
     "last_collected": 0
   }
