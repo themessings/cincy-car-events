@@ -867,29 +867,37 @@ else:
 # ----------------------------
 # FONTS
 # ----------------------------
-def find_font_file(preferred_names: List[str]) -> Optional[str]:
-    roots = [
-        "/usr/share/fonts",
-        "/usr/local/share/fonts",
-        "/usr/share/fonts/truetype",
-        "/usr/share/fonts/opentype",
-    ]
-    hits = []
-    for root in roots:
+FONT_ROOTS = [
+    "/usr/share/fonts",
+    "/usr/local/share/fonts",
+    "/usr/share/fonts/truetype",
+    "/usr/share/fonts/opentype",
+]
+
+
+def find_font_file(preferred_names: List[str], roots: Optional[List[str]] = None) -> Optional[str]:
+    """The installed file whose name matches the earliest entry in preferred_names.
+
+    Exact file names, never a substring. The old substring search returned whatever
+    os.walk met first, and walk order is filesystem order: on 2026-10-22 the evening
+    runner met DejaVuSans-BoldOblique.ttf first and the whole carousel came out bold
+    italic, where the morning run had been upright DejaVu Sans."""
+    found = {}
+    for root in (roots if roots is not None else FONT_ROOTS):
         if not os.path.isdir(root):
             continue
-        for r, _, files in os.walk(root):
-            for fn in files:
-                if not fn.lower().endswith(".ttf"):
-                    continue
-                lower = fn.lower()
-                for name in preferred_names:
-                    if name in lower:
-                        hits.append(os.path.join(r, fn))
-    return hits[0] if hits else None
+        for r, dirs, files in os.walk(root):
+            dirs.sort()
+            for fn in sorted(files):
+                found.setdefault(fn.lower(), os.path.join(r, fn))
+    for name in preferred_names:
+        if name in found:
+            return found[name]
+    return None
 
-ARIAL_BOLD_PATH = find_font_file(["arialbd", "arial-bold", "arial_bold", "liberationsans-bold", "dejavusans-bold"])
-ARIAL_REG_PATH  = find_font_file(["arial", "liberationsans-regular", "liberationsans", "dejavusans"])
+# DejaVu first: the upright 10-22 morning carousel rendered in DejaVu Sans on the runner.
+ARIAL_BOLD_PATH = find_font_file(["dejavusans-bold.ttf", "liberationsans-bold.ttf", "arialbd.ttf"])
+ARIAL_REG_PATH  = find_font_file(["dejavusans.ttf", "liberationsans-regular.ttf", "arial.ttf"])
 
 if ARIAL_BOLD_PATH is None:
     ARIAL_BOLD_PATH = ARIAL_REG_PATH
