@@ -6054,5 +6054,10 @@
   "8300 Four Bridges Dr, Liberty Township, OH 45044": {
     "lat": "39.3769340",
     "lon": "-84.3460220"
-  }
+  },
+  "40515, USA": {
+    "lat": "37.9203596",
+    "lon": "-84.4252046"
+  },
+  "150 Shoreside Dr, Lexington, KY 40515-6433, United States, Lexington, KY": null
 }
