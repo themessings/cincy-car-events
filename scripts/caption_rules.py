@@ -6,6 +6,7 @@ em/en dash, two or more lines starting with an emoji, or more than 4 hashtags
 the Thursday post was not sent. These helpers mirror those three rules so the
 caption is checked here, at the source, on every run.
 """
+import html
 import re
 
 _EMOJI = "\U0001F300-\U0001FAFF☀-➿⭐⬆✅❌"
@@ -27,6 +28,20 @@ def caption_problems(text: str):
     if tags > MAX_HASHTAGS:
         out.append(f"{tags} hashtags (max {MAX_HASHTAGS})")
     return out
+
+
+def decode_entities(text: str) -> str:
+    """Sheet text can arrive HTML-escaped, sometimes more than once: the collector
+    stored "Fall Cruise-In &amp; Shopping Extravaganza", and the 2026-11-12 lineup
+    slide printed "&amp;" on a public post. Decode until the text stops changing
+    (at most three passes) so "&amp;amp;", "&#39;" and "&quot;" become plain
+    characters. A literal "&" with no entity after it is left alone."""
+    for _ in range(3):
+        decoded = html.unescape(text)
+        if decoded == text:
+            break
+        text = decoded
+    return text
 
 
 def scrub_title(title: str) -> str:

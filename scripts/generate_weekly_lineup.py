@@ -42,7 +42,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageChops
 import qrcode
 import sys as _sys
 _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from caption_rules import caption_problems, scrub_caption, scrub_title, strip_title_noise, what_and_when
+from caption_rules import caption_problems, decode_entities, scrub_caption, scrub_title, strip_title_noise, what_and_when
 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -400,14 +400,14 @@ def normalize_spaces(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "").strip())
 
 def clean_title(s: str) -> str:
-    s = coalesce_str(s)
+    s = decode_entities(coalesce_str(s))
     s = s.replace("‚Äú", '"').replace("‚Äù", '"').replace("‚Äô", "'")
     return normalize_spaces(strip_title_noise(s))
 
 def clean_place(s: str) -> str:
     if not s:
         return ""
-    s = normalize_spaces(s)
+    s = normalize_spaces(decode_entities(s))
     s = s.replace(" ,", ",")
     parts = [p.strip() for p in s.split(",") if p.strip()]
     out = []
@@ -1128,7 +1128,7 @@ def build_events(df: pd.DataFrame) -> List[Event]:
         url   = coalesce_str(row.get(col_url) if col_url else None)
 
         sheet_closest_city = clean_place(coalesce_str(row.get(col_closest_city)))
-        sheet_callout = normalize_spaces(coalesce_str(row.get(col_callout)))
+        sheet_callout = normalize_spaces(decode_entities(coalesce_str(row.get(col_callout))))
 
         start_dt = parse_dt_safe(row.get(col_start_dt)) if col_start_dt else None
         end_dt   = parse_dt_safe(row.get(col_end_dt)) if col_end_dt else None
