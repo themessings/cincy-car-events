@@ -6081,5 +6081,43 @@
   "3001 Knoxville Center Dr, Knoxville, TN 37924": {
     "lat": "36.0325591",
     "lon": "-83.8728315"
+  },
+  "43604, USA": {
+    "lat": "41.6547132",
+    "lon": "-83.5372185"
+  },
+  "45208, USA": {
+    "lat": "39.1365646",
+    "lon": "-84.4335550"
+  },
+  "46205, USA": {
+    "lat": "39.8284460",
+    "lon": "-86.1388056"
+  },
+  "24986, USA": {
+    "lat": "37.7977563",
+    "lon": "-80.2970578"
+  },
+  "37203, USA": {
+    "lat": "36.1516240",
+    "lon": "-86.7884090"
+  },
+  "addr::wolf creek rod and gun club - 6700 derby rd, dayton, oh": null,
+  "525 Elm St, Cincinnati, OH 45202, Cincinnati, OH 45202": null,
+  "1202 E 38th St, Indianapolis, IN 46205": {
+    "lat": "39.8299866",
+    "lon": "-86.1298816"
+  },
+  "3600 Observatory Ave., Cincinnati, OH 45208": {
+    "lat": "39.1386900",
+    "lon": "-84.4163450"
+  },
+  "4201 Versailles Road, Lexington, KY 40510": {
+    "lat": "38.0439170",
+    "lon": "-84.5943530"
+  },
+  "1000 Carillon Blvd, Dayton, OH 45409": {
+    "lat": "39.7288581",
+    "lon": "-84.1981936"
   }
 }

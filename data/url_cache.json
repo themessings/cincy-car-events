@@ -1,27 +1,15 @@
 {
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/": {
-    "fetched_at_iso": "2026-11-19T06:28:40.738562-05:00",
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
     "events": []
   },
   "https://www.eventbrite.com/e/concours-devou-classic-car-show-in-greater-cincinnati-tickets-1352192045809": {
-    "fetched_at_iso": "2026-11-12T07:13:08.000710-05:00",
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
     "events": []
   },
   "https://www.eventbrite.com/b/oh--colerain/auto-boat-and-air/": {
     "fetched_at_iso": "2026-06-14T09:00:00.555759-04:00",
     "events": []
-  },
-  "https://www.meetup.com/sierraoutings/events/312951134/": {
-    "fetched_at_iso": "2026-05-26T09:54:27.681019-04:00",
-    "events": [
-      {
-        "title": "Beginner Winter Backpacking Big South Fork",
-        "start_iso": "2026-03-27T08:00:00-04:00",
-        "end_iso": "2026-03-29T18:00:00-04:00",
-        "location": "Meijer 4990 Houston Rd, Florence, KY Florence KY",
-        "url": "https://www.meetup.com/sierraoutings/events/312951134/"
-      }
-    ]
   },
   "https://www.americanrallyassociation.org/2026-ara-schedule": {
     "fetched_at_iso": "2026-10-23T09:04:48.846329-04:00",
@@ -32,7 +20,7 @@
     "events": []
   },
   "https://rallynorthamerica.com/drives-events/": {
-    "fetched_at_iso": "2026-10-29T08:30:09.160231-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:15.689677-05:00",
     "events": []
   },
   "https://www.facebook.com/groups/ncrallycross/posts/24327648043598609/": {
@@ -44,7 +32,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/": {
-    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:15.689677-05:00",
     "events": []
   },
   "https://www.facebook.com/indyhoodrats/posts/road-rally-to-the-famous-11-mile-long-tail-of-the-dragon-located-in-vonore-tenne/867730542516222/": {
@@ -52,7 +40,7 @@
     "events": []
   },
   "https://www.greatrace.com/": {
-    "fetched_at_iso": "2026-10-23T09:04:12.162973-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:15.689677-05:00",
     "events": []
   },
   "https://www.scca.com/events/2008957-ohio-valley-summer-sprints-regional-road-race-2026-mid-ohio-sports-car-course": {
@@ -185,7 +173,7 @@
     "events": []
   },
   "https://www.americanrallyassociation.org/post/ara-s-summer-starts-with-southern-ohio-forest-rally": {
-    "fetched_at_iso": "2026-11-12T07:13:04.564720-05:00",
+    "fetched_at_iso": "2026-11-26T06:29:09.911323-05:00",
     "events": []
   },
   "https://www.therechargerally.com/rechargerally8": {
@@ -205,7 +193,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/": {
-    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/car-show/": {
@@ -274,10 +262,6 @@
   },
   "https://www.scca.com/pages/autocross": {
     "fetched_at_iso": "2026-10-01T12:31:20.326582-04:00",
-    "events": []
-  },
-  "https://www.americanrallyassociation.org/post/show-me-rally-closes-ara-s-2025-season-and-hints-at-epic-2026": {
-    "fetched_at_iso": "2026-05-26T09:55:30.114817-04:00",
     "events": []
   },
   "https://www.scca.com/events/2008984-cincinnati-itspec-tacular-track-day-mid-ohio-sports-car-course": {
@@ -373,16 +357,8 @@
     "events": []
   },
   "https://www.scca.com/events/2009582-southern-indiana-road-rally-1-more-scrambled-legs-hardee-s-evansville": {
-    "fetched_at_iso": "2026-10-22T22:37:16.511019-04:00",
-    "events": [
-      {
-        "title": "Southern Indiana Road Rally #1 More Scrambled Legs @ Hardee's - Evansville",
-        "start_iso": "2026-03-08T01:00:00-05:00",
-        "end_iso": "2026-03-09T00:59:59-04:00",
-        "location": "",
-        "url": "https://www.scca.com/events/2009582-southern-indiana-road-rally-1-more-scrambled-legs-hardee-s-evansville"
-      }
-    ]
+    "fetched_at_iso": "2026-11-26T06:28:35.620844-05:00",
+    "events": []
   },
   "https://www.scca.com/events/2008150-western-ohio-edgewater-rallycross-2-scca-edgewater-sports-park": {
     "fetched_at_iso": "2026-10-08T06:50:58.971434-04:00",
@@ -427,158 +403,6 @@
   "https://www.eventbrite.com/b/oh--cincinnati/government/": {
     "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
     "events": []
-  },
-  "https://www.meetup.com/topics/estrangement/us/": {
-    "fetched_at_iso": "2026-05-26T09:54:27.681019-04:00",
-    "events": [
-      {
-        "title": "Walk at Brookside Gardens",
-        "start_iso": "2026-05-26T11:00:00-04:00",
-        "end_iso": "2026-05-26T13:00:00-04:00",
-        "location": "Brookside Gardens 1800 Glenallen Ave,, Wheaton, MD 20902 Wheaton MD 20902",
-        "url": "https://www.meetup.com/50s-60s-and-70s-of-the-red-line-and-beyond/events/314927774/"
-      },
-      {
-        "title": "Tuesday Run: Rocklands to Custis Trail",
-        "start_iso": "2026-05-26T18:30:00-04:00",
-        "end_iso": "2026-05-26T20:30:00-04:00",
-        "location": "Rocklands Barbeque & Grilling Company 3471 Washington Blvd, Arlington, VA 22201 Arlington VA 22201",
-        "url": "https://www.meetup.com/arlington-guys-running-group/events/314280040/"
-      },
-      {
-        "title": "· Moon Manor · by Bang Bang & Granat ☼ online event",
-        "start_iso": "2026-05-26T19:00:00-04:00",
-        "end_iso": "2026-05-26T21:00:00-04:00",
-        "location": "Nowhere King Street, Alexandria, VA 22301 Alexandria VA 22301",
-        "url": "https://www.meetup.com/oddball-cinema/events/312127899/"
-      },
-      {
-        "title": "Volleyball - Advanced Beginners (B) - Quincy Park",
-        "start_iso": "2026-05-26T17:30:00-04:00",
-        "end_iso": "2026-05-26T20:00:00-04:00",
-        "location": "Quincy Park, Arlington, VA Washington Blvd, Arlington, VA 22201 Arlington VA 22201",
-        "url": "https://www.meetup.com/smiley-social/events/314954916/"
-      },
-      {
-        "title": "Unhappy Hour Breathwork :Release Emotional Wounds, Heart Break and Grief",
-        "start_iso": "2026-05-26T18:00:00-04:00",
-        "end_iso": "2026-05-26T19:30:00-04:00",
-        "location": "Curanderas Heart Mindfulness and Wellness Center Washington Blvd, Arlington, VA 22205, USA, Arlington, VA 22205 Arlington VA 22205",
-        "url": "https://www.meetup.com/dmv-area-sound-healing-breathwork-shamanism-and-curanderismo/events/314666239/"
-      },
-      {
-        "title": "MP(Tue)-Grass Volleyball: BB/A (Stevenson Park)",
-        "start_iso": "2026-05-26T17:45:00-04:00",
-        "end_iso": "2026-05-26T20:45:00-04:00",
-        "location": "Stevenson Park 300 Stulz Rd, Alexandria, VA Alexandria VA",
-        "url": "https://www.meetup.com/smiley-social/events/314948642/"
-      },
-      {
-        "title": "Fine dining at Surreal",
-        "start_iso": "2026-05-26T18:00:00-04:00",
-        "end_iso": "2026-05-26T20:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/womens-circle-40s-50s/events/314758052/"
-      },
-      {
-        "title": "FREE HUGS Postponed to Sunday, May 31st!!",
-        "start_iso": "2026-05-31T13:00:00-04:00",
-        "end_iso": "2026-05-31T15:00:00-04:00",
-        "location": "1306 Madison Dr NW 1306 Madison Dr NW, Washington, DC 20560 Washington DC 20560",
-        "url": "https://www.meetup.com/free-hugs-dc-md-va/events/313920838/"
-      },
-      {
-        "title": "Upper Rock Creek -- Kengla Trail",
-        "start_iso": "2026-05-29T11:00:00-04:00",
-        "end_iso": "2026-05-29T13:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/silver-spring-outdoors/events/314956806/"
-      },
-      {
-        "title": "Wids With Kids Zoom Peer Night",
-        "start_iso": "2026-05-27T21:00:00-04:00",
-        "end_iso": "2026-05-27T23:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/widowed-in-montgomery-county/events/314571257/"
-      },
-      {
-        "title": "Songkran Festival and Thai New Year Celebration",
-        "start_iso": "2026-05-30T10:00:00-04:00",
-        "end_iso": "2026-05-30T13:00:00-04:00",
-        "location": "THAI Songkran Festival 7200 COLUMBIA PIKE, ANNANDALE, VA 22003 ANNANDALE VA 22003",
-        "url": "https://www.meetup.com/active-friends-travel-with-friends-of-the-world/events/314687992/"
-      },
-      {
-        "title": "BLACC Brunch at Quarter Market",
-        "start_iso": "2026-05-30T13:00:00-04:00",
-        "end_iso": "2026-05-30T14:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/blaccspacedc/events/314387634/"
-      },
-      {
-        "title": "Family Zumba",
-        "start_iso": "2026-05-30T10:30:00-04:00",
-        "end_iso": "2026-05-30T11:30:00-04:00",
-        "location": "Columbia Park Community Center 1901 Kent Village Dr., Greater Landover, MD 20785 Greater Landover MD 20785",
-        "url": "https://www.meetup.com/pgparks-yoga-fitness-in-the-parks/events/314729923/"
-      },
-      {
-        "title": "Washington DC Gay Online Speed Dating",
-        "start_iso": "2026-05-31T16:00:00-04:00",
-        "end_iso": "2026-05-31T17:00:00-04:00",
-        "location": "V3F3+2X Washington V3F3+2X Washington, Washington DC, DC 20057 Washington DC DC 20057",
-        "url": "https://www.meetup.com/purposeful-journeys-toward-genuine-male-connection/events/314904240/"
-      },
-      {
-        "title": "Mission families playdate at Jose Coronado playground",
-        "start_iso": "2026-06-06T13:30:00-04:00",
-        "end_iso": "2026-06-06T15:30:00-04:00",
-        "location": "Jose Coronado Playground 2502 Folsom St, San Francisco, CA 94110, San Francisco, CA 94110 San Francisco CA 94110",
-        "url": "https://www.meetup.com/joyful-parenting-sf/events/314833976/"
-      },
-      {
-        "title": "In Person Family Constellation in Berkeley",
-        "start_iso": "2026-06-14T17:00:00-04:00",
-        "end_iso": "2026-06-14T20:00:00-04:00",
-        "location": "Western Sky Studio 2525 Eighth Street (at Dwight), Berkeley, CA 94710 Berkeley CA 94710",
-        "url": "https://www.meetup.com/constellations/events/314819734/"
-      },
-      {
-        "title": "🥾 Sunday Morning Hike for Divorced Dads at Sawyer Camp Trail",
-        "start_iso": "2026-06-07T12:30:00-04:00",
-        "end_iso": "2026-06-07T13:30:00-04:00",
-        "location": "Sawyer Camp Trail Crystal Springs Rd & Sawyer Camp Recreation Trail, San Mateo, CA San Mateo CA",
-        "url": "https://www.meetup.com/drr-burlingame/events/314848032/"
-      },
-      {
-        "title": "🥾 Sunday Morning Hike for Divorced Dads at Sawyer Camp Trail 🚶🏻",
-        "start_iso": "2026-06-07T12:30:00-04:00",
-        "end_iso": "2026-06-07T13:30:00-04:00",
-        "location": "Sawyer Camp Trail Crystal Springs Rd & Sawyer Camp Recreation Trail, San Mateo, CA San Mateo CA",
-        "url": "https://www.meetup.com/divorce-support-san-francisco/events/314847999/"
-      },
-      {
-        "title": "Dipsea Trail From Mill Valley",
-        "start_iso": "2026-06-13T09:00:00-04:00",
-        "end_iso": "2026-06-13T23:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/phirse/events/313167560/"
-      },
-      {
-        "title": "Family Summer Sundays + Food/coffee (Lake Anza)",
-        "start_iso": "2026-06-07T12:30:00-04:00",
-        "end_iso": "2026-06-07T14:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/trail-running-group/events/314512621/"
-      },
-      {
-        "title": "Men's Group Meeting - Real Men, Real Visibility, Connection & Growth - Peninsula",
-        "start_iso": "2026-05-26T22:00:00-04:00",
-        "end_iso": "2026-05-27T00:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/mensgroup/events/314670368/"
-      }
-    ]
   },
   "https://www.meetup.com/topics/geo/us/": {
     "fetched_at_iso": "2026-06-12T10:10:55.749604-04:00",
@@ -1266,7 +1090,7 @@
     "events": []
   },
   "https://www.expressrally.com/": {
-    "fetched_at_iso": "2026-09-04T12:20:21.402763-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:15.689677-05:00",
     "events": []
   },
   "https://www.thscc.com/programs/rallycross": {
@@ -1294,11 +1118,7 @@
     ]
   },
   "https://www.eventbrite.com/d/ky--florence/car-shows/": {
-    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
-    "events": []
-  },
-  "https://www.motorsportreg.com/events/2026-ohio-winter-rally-dibellas-subs-scca-neohio-road-463306": {
-    "fetched_at_iso": "2026-05-29T10:01:26.342814-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
     "events": []
   },
   "https://www.eventbrite.com/b/ky--florence/government/": {
@@ -1344,39 +1164,6 @@
   "https://www.eventbrite.com/d/oh--cincinnati/rallies/": {
     "fetched_at_iso": "2026-06-02T10:53:42.530534-04:00",
     "events": []
-  },
-  "https://www.meetup.com/tr-tr/techlife-cincinnati/": {
-    "fetched_at_iso": "2026-05-26T09:54:27.681019-04:00",
-    "events": [
-      {
-        "title": "Cincy .NET Users Group (CINNUG) and Architect Forum Monthly Meeting",
-        "start_iso": "2026-05-26T18:00:00-04:00",
-        "end_iso": "2026-05-26T20:00:00-04:00",
-        "location": "Office Key 9078 Union Centre Blvd, suite 350, West Chester, OH West Chester OH",
-        "url": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/312344101/"
-      },
-      {
-        "title": "CINPA Monthly Meeting",
-        "start_iso": "2026-06-03T18:30:00-04:00",
-        "end_iso": "2026-06-03T20:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502686/"
-      },
-      {
-        "title": "Agile Cincinnati",
-        "start_iso": "2026-06-11T18:00:00-04:00",
-        "end_iso": "2026-06-11T20:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502699/"
-      },
-      {
-        "title": "Cincinnati Ruby Brigade - Monthly Meetup",
-        "start_iso": "2026-06-18T12:00:00-04:00",
-        "end_iso": "2026-06-18T13:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/tr-TR/techlife-cincinnati/events/314502711/"
-      }
-    ]
   },
   "https://en.wikipedia.org/wiki/Cincinnati": {
     "fetched_at_iso": "2026-07-02T08:59:08.537519-04:00",
@@ -1502,10 +1289,6 @@
     "fetched_at_iso": "2026-06-05T09:54:28.877927-04:00",
     "events": []
   },
-  "https://www.wlwt.com/": {
-    "fetched_at_iso": "2026-05-29T09:59:40.549583-04:00",
-    "events": []
-  },
   "https://en.wikipedia.org/wiki/Southern_United_States": {
     "fetched_at_iso": "2026-07-02T08:22:54.854042-04:00",
     "events": [
@@ -1580,10 +1363,6 @@
   },
   "https://www.cincyautomall.com/": {
     "fetched_at_iso": "2026-05-31T08:13:09.624636-04:00",
-    "events": []
-  },
-  "https://www.autotrader.com/cars-for-sale/cincinnati-oh": {
-    "fetched_at_iso": "2026-05-24T08:03:48.844245-04:00",
     "events": []
   },
   "https://www.kbb.com/car-finder/": {
@@ -1694,10 +1473,6 @@
     "fetched_at_iso": "2026-06-07T08:21:42.047323-04:00",
     "events": []
   },
-  "https://ovr-scca.org/autocross-guide/": {
-    "fetched_at_iso": "2026-05-26T09:57:26.340903-04:00",
-    "events": []
-  },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show/?page=14": {
     "fetched_at_iso": "2026-06-23T09:43:02.347368-04:00",
     "events": []
@@ -1711,7 +1486,7 @@
     "events": []
   },
   "https://cincyscca.com/rallycross/2026-rallycross-schedule-and-results/": {
-    "fetched_at_iso": "2026-11-19T06:28:19.500755-05:00",
+    "fetched_at_iso": "2026-11-26T06:28:35.620844-05:00",
     "events": []
   },
   "https://www.scca.com/events/2009926-2026-appalachian-triangle-rallycross-event-2-appalachian-overland-triangle": {
@@ -1782,158 +1557,6 @@
       }
     ]
   },
-  "https://www.meetup.com/ko-KR/topics/fundraising-and-grant-opportunities/us/": {
-    "fetched_at_iso": "2026-05-26T09:54:27.681019-04:00",
-    "events": [
-      {
-        "title": "Kuntanawa Nation Song Circle and Amazon Fundraiser",
-        "start_iso": "2026-05-26T19:00:00-04:00",
-        "end_iso": "2026-05-26T21:00:00-04:00",
-        "location": "Real Eyes Meditation & Wellness Center 15406 Riding Stable Rd, Laurel, MD 21042 Laurel MD 21042",
-        "url": "https://www.meetup.com/ko-KR/ellicott-city-meditation-meetup-group/events/314690887/"
-      },
-      {
-        "title": "Tuesday Del Ray meeting",
-        "start_iso": "2026-05-26T19:30:00-04:00",
-        "end_iso": "2026-05-26T20:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/alexandria-volunteering-meetup-group/events/314668006/"
-      },
-      {
-        "title": "Monthly Meeting & Happy Hour",
-        "start_iso": "2026-05-26T18:00:00-04:00",
-        "end_iso": "2026-05-26T19:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/rotaractdc/events/314706328/"
-      },
-      {
-        "title": "Open Shop Hours",
-        "start_iso": "2026-05-26T18:00:00-04:00",
-        "end_iso": "2026-05-26T21:00:00-04:00",
-        "location": "Rockville Bike Hub 2277 Lewis Avenue, Rockville, MD 20851 Rockville MD 20851",
-        "url": "https://www.meetup.com/ko-KR/rockville-bike-hub/events/314268657/"
-      },
-      {
-        "title": "Alexandria A Cappella Event",
-        "start_iso": "2026-05-26T19:00:00-04:00",
-        "end_iso": "2026-05-26T21:00:00-04:00",
-        "location": "Alexandria Renew Enterprises 1800 Limerick St, Room 600, Alexandria, va 22314 Alexandria va 22314",
-        "url": "https://www.meetup.com/ko-KR/metro-voices-a-four-part-a-cappella-harmony-chorus/events/314736638/"
-      },
-      {
-        "title": "Profs & Pints DC: Artemis II and Beyond",
-        "start_iso": "2026-05-26T18:00:00-04:00",
-        "end_iso": "2026-05-26T20:00:00-04:00",
-        "location": "Penn Social 801 E St NW, Washington, DC 20004 Washington DC 20004",
-        "url": "https://www.meetup.com/ko-KR/profs-and-pints-meetup/events/314545445/"
-      },
-      {
-        "title": "Alexandria Pints & Pawns Meetup",
-        "start_iso": "2026-05-26T19:00:00-04:00",
-        "end_iso": "2026-05-26T21:00:00-04:00",
-        "location": "Mason Social 728 North Henry Street, Alexandria, VA 22314 Alexandria VA 22314",
-        "url": "https://www.meetup.com/ko-KR/alexandria-pints-pawns-chess-club/events/314667723/"
-      },
-      {
-        "title": "MTG Cube Draft",
-        "start_iso": "2026-05-28T18:30:00-04:00",
-        "end_iso": "2026-05-28T21:30:00-04:00",
-        "location": "As You Are Bar 500 8th Street SE, Washington DC, DC 20003 Washington DC DC 20003",
-        "url": "https://www.meetup.com/ko-KR/washington-magic-tricks-meetup-group/events/314916957/"
-      },
-      {
-        "title": "On https://blackecon101.podbean.com/ every Thursday at 6 pm",
-        "start_iso": "2026-05-28T18:00:00-04:00",
-        "end_iso": "2026-05-28T18:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/crowdgoersdc/events/314712674/"
-      },
-      {
-        "title": "Investment, Trade and Crypto Networking [PLEASE READ 🙏]",
-        "start_iso": "2026-05-27T17:00:00-04:00",
-        "end_iso": "2026-05-27T19:00:00-04:00",
-        "location": "Marrakesh DC 1331 H St NW, Washington, DC 20005 Washington DC 20005",
-        "url": "https://www.meetup.com/ko-KR/dc-investo/events/287335151/"
-      },
-      {
-        "title": "Rock Creek Trail and Capital Crescent Trail Loop",
-        "start_iso": "2026-05-31T10:50:00-04:00",
-        "end_iso": "2026-05-31T13:50:00-04:00",
-        "location": "Meadowbrook Local Park 7901 Meadowbrook Lane, Chevy Chase, MD 20815 Chevy Chase MD 20815",
-        "url": "https://www.meetup.com/ko-KR/md-rail-trail-biking-club/events/313764326/"
-      },
-      {
-        "title": "Black Econ 101 Podcast on https://blackecon101.podbean.com/",
-        "start_iso": "2026-05-28T18:00:00-04:00",
-        "end_iso": "2026-05-28T18:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/dc-equity-crowdfunding-meetup/events/314712634/"
-      },
-      {
-        "title": "🔥 60-Minute Full-Body Circuit Training Workout",
-        "start_iso": "2026-05-30T12:00:00-04:00",
-        "end_iso": "2026-05-30T13:00:00-04:00",
-        "location": "Founders Park 38°48'27.9\"N 77°02'19.1\"W, Alexandria, VA 22301 Alexandria VA 22301",
-        "url": "https://www.meetup.com/ko-KR/alexandria-fun-healthy-living-ahl/events/314729961/"
-      },
-      {
-        "title": "Last Thursday MARTY at Georgetown Piano Bar",
-        "start_iso": "2026-05-28T19:00:00-04:00",
-        "end_iso": "2026-05-28T21:00:00-04:00",
-        "location": "Georgetown Piano Bar 3287 M. Street NW, Washington, DC Washington DC",
-        "url": "https://www.meetup.com/ko-KR/www-teamnetwork-com/events/314816546/"
-      },
-      {
-        "title": "June (Pride) Event and Dyke March Fundraiser",
-        "start_iso": "2026-06-06T22:00:00-04:00",
-        "end_iso": "2026-06-07T00:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/san-francisco-lipstick-lesbians/events/313434856/"
-      },
-      {
-        "title": "FREE PMs for Good: Scaling Impact",
-        "start_iso": "2026-05-30T16:30:00-04:00",
-        "end_iso": "2026-05-30T18:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/pmi-sfbac/events/314530866/"
-      },
-      {
-        "title": "Startup Founders Masterclass",
-        "start_iso": "2026-06-10T11:00:00-04:00",
-        "end_iso": "2026-06-10T12:00:00-04:00",
-        "location": "WeWork 600 California Street 600 California Street, San Francisco, CA 94108 San Francisco CA 94108",
-        "url": "https://www.meetup.com/ko-KR/san-francisco-startups-group/events/314697343/"
-      },
-      {
-        "title": "Phantom of the Opera in 2026 -- money due April 15,2026",
-        "start_iso": "2026-05-30T16:00:00-04:00",
-        "end_iso": "2026-05-30T19:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/ffover40/events/307345531/"
-      },
-      {
-        "title": "Founders, Investors & Talent Networking Mixer | San Francisco",
-        "start_iso": "2026-06-10T22:00:00-04:00",
-        "end_iso": "2026-06-11T01:00:00-04:00",
-        "location": "Bamboo Hut 479 Broadway, San Francisco, CA San Francisco CA",
-        "url": "https://www.meetup.com/ko-KR/startup-networking-founder-ecosystem-san-francisco/events/314574086/"
-      },
-      {
-        "title": "Red Bull Basement World Final 2026",
-        "start_iso": "2026-06-03T21:00:00-04:00",
-        "end_iso": "2026-06-04T01:00:00-04:00",
-        "location": "Pier 48 Pier 48, San Francisco, CA 94158., San Francisco, CA 94158 San Francisco CA 94158",
-        "url": "https://www.meetup.com/ko-KR/orange-county-entrepreneurs-investors-networking/events/314897383/"
-      },
-      {
-        "title": "Climate Ride - San Francisco to LA **May 31 - June 5, 2026**",
-        "start_iso": "2026-05-31T20:00:00-04:00",
-        "end_iso": "2026-06-05T22:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ko-KR/fremont-newark-union-city-bicycling/events/310134447/"
-      }
-    ]
-  },
   "https://www.transportation.ohio.gov/": {
     "fetched_at_iso": "2026-06-23T09:43:46.739422-04:00",
     "events": [
@@ -1960,10 +1583,6 @@
   },
   "https://www.facebook.com/ohiouniversitysouthern/": {
     "fetched_at_iso": "2026-06-26T09:12:15.438560-04:00",
-    "events": []
-  },
-  "https://www.rallyhouse.com/?srsltid=AfmBOoqL5j0ek-nn0cmRhtc4ZhU2QRDY7FUXww_w1uYuETBm9GSMOwHA": {
-    "fetched_at_iso": "2026-05-24T08:03:32.314417-04:00",
     "events": []
   },
   "https://www.thecarconnection.com/": {
@@ -2134,172 +1753,8 @@
       }
     ]
   },
-  "https://www.meetup.com/topics/active-420/us/": {
-    "fetched_at_iso": "2026-05-26T09:54:27.681019-04:00",
-    "events": [
-      {
-        "title": "Portuguese Conversation at Electric Cool-Aid",
-        "start_iso": "2026-05-26T18:00:00-04:00",
-        "end_iso": "2026-05-26T21:00:00-04:00",
-        "location": "Electric Cool-Aid 512 Rhode Island Ave NW, Washington, DC 20001 Washington DC 20001",
-        "url": "https://www.meetup.com/dc-portuguese-conversation-group/events/314701204/"
-      },
-      {
-        "title": "Ending Spring Curanderismo Energy Cleansing Limpia",
-        "start_iso": "2026-05-26T10:00:00-04:00",
-        "end_iso": "2026-06-02T16:00:00-04:00",
-        "location": "Curanderas Heart Mindfulness and Wellness Center Washington Blvd, Arlington, VA 22205, USA, Arlington, VA 22205 Arlington VA 22205",
-        "url": "https://www.meetup.com/dmv-area-sound-healing-breathwork-shamanism-and-curanderismo/events/314956507/"
-      },
-      {
-        "title": "In-person Conversation & Culture @ Columbia East Library 50+ Center",
-        "start_iso": "2026-05-26T19:00:00-04:00",
-        "end_iso": "2026-05-26T21:00:00-04:00",
-        "location": "50+ Center at the East Columbia Library 6600 Cradlerock Way, columbia, MD columbia MD",
-        "url": "https://www.meetup.com/lingualounge/events/310519295/"
-      },
-      {
-        "title": "Reboot Hour (DMV) — Summer Kick-off Edition (Drop-In Happy Hour)",
-        "start_iso": "2026-05-26T17:00:00-04:00",
-        "end_iso": "2026-05-26T19:00:00-04:00",
-        "location": "Carpool 900 N. Glebe Road, Arlington, VA 22203 Arlington VA 22203",
-        "url": "https://www.meetup.com/ewaste-warriors/events/314700713/"
-      },
-      {
-        "title": "DC Documentary Club: Pez Outlaw",
-        "start_iso": "2026-05-26T18:30:00-04:00",
-        "end_iso": "2026-05-26T20:30:00-04:00",
-        "location": "Meridian at Mount Vernon Triangle 425 L St Nw, Washington, DC Washington DC",
-        "url": "https://www.meetup.com/dc-docs-meetup-group/events/314544171/"
-      },
-      {
-        "title": "Adulting with Allergies: Young Adult Food Allergy Social Club",
-        "start_iso": "2026-05-26T19:00:00-04:00",
-        "end_iso": "2026-05-26T20:00:00-04:00",
-        "location": "ZOOM VIRTUAL MEETING 7901 Jones Branch Drive, McLean, VA 22102 McLean VA 22102",
-        "url": "https://www.meetup.com/young-adult-food-allergy-social-club/events/314680626/"
-      },
-      {
-        "title": "BOAT (Baddies On A Track) Tuesday!",
-        "start_iso": "2026-05-26T06:00:59-04:00",
-        "end_iso": "2026-05-26T07:15:59-04:00",
-        "location": "Benjamin Bannaker Recreational Field 2500 Georgia Avenue NW, Washington, DC 20001 Washington DC 20001",
-        "url": "https://www.meetup.com/obsidian-wellness-club/events/314656369/"
-      },
-      {
-        "title": "Disaster+Travel+Wilderness First Aid (In-Person) Certification Course",
-        "start_iso": "2026-05-30T08:00:00-04:00",
-        "end_iso": "2026-05-31T19:00:00-04:00",
-        "location": "District of Columbia , Washington, DC Washington DC",
-        "url": "https://www.meetup.com/iwanttodothatdc/events/313848990/"
-      },
-      {
-        "title": "Saturday Language Exchange [PLEASE READ 🙏]",
-        "start_iso": "2026-05-30T18:00:00-04:00",
-        "end_iso": "2026-05-30T20:00:00-04:00",
-        "location": "Marrakesh DC 1331 H St NW, Washington, DC 20005 Washington DC 20005",
-        "url": "https://www.meetup.com/dclanguageexchangegroup/events/314910837/"
-      },
-      {
-        "title": "BLACC Brunch at Quarter Market",
-        "start_iso": "2026-05-30T13:00:00-04:00",
-        "end_iso": "2026-05-30T14:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/blaccspacedc/events/314387634/"
-      },
-      {
-        "title": "SATURDAY Asian Language Exchange [PLEASE READ🙏]",
-        "start_iso": "2026-05-30T18:00:00-04:00",
-        "end_iso": "2026-05-30T20:00:00-04:00",
-        "location": "Marrakesh DC 1331 H St NW, Washington, DC 20005 Washington DC 20005",
-        "url": "https://www.meetup.com/asian-languages-exchange-group/events/314913415/"
-      },
-      {
-        "title": "Remixing The Trap: NeoSoul, Jazz, & R & B DC-Partnerships & Projects Dinner",
-        "start_iso": "2026-05-30T18:00:00-04:00",
-        "end_iso": "2026-05-30T22:00:00-04:00",
-        "location": "12 stories 75 District Square SW 12th floor,, Washington, DC, DC 20024 Washington, DC DC 20024",
-        "url": "https://www.meetup.com/conscious-blacks-in-the-dmv/events/314614466/"
-      },
-      {
-        "title": "Howard County Asian American and Pacific Islander Festival",
-        "start_iso": "2026-05-30T12:00:00-04:00",
-        "end_iso": "2026-05-30T15:00:00-04:00",
-        "location": "Merriweather Park in Symphony Woods 10431 Little Patuxent Parkway, Columbia, MD 21044 Columbia MD 21044",
-        "url": "https://www.meetup.com/asian-dining-and-adventure-group/events/314706046/"
-      },
-      {
-        "title": "ONLINE LIVE- Are you Brighter than a 6th grader? Trivia",
-        "start_iso": "2026-05-26T20:45:00-04:00",
-        "end_iso": "2026-05-26T21:45:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/iwanttodothatdc/events/314838492/"
-      },
-      {
-        "title": "Cultural Festival in Chinatwon",
-        "start_iso": "2026-05-31T13:00:00-04:00",
-        "end_iso": "2026-05-31T19:00:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/norcalasianamerican/events/314949972/"
-      },
-      {
-        "title": "Bollywood Nights at Salesforce Park - Free",
-        "start_iso": "2026-06-05T20:30:00-04:00",
-        "end_iso": "2026-06-05T22:00:00-04:00",
-        "location": "salesforce park 425 mission street, san francisco, CA 94105 san francisco CA 94105",
-        "url": "https://www.meetup.com/iwanttodothatsf/events/314580787/"
-      },
-      {
-        "title": "Costa Rica Eco Adventure: Waterfalls, Snorkeling, Zip lines, Rafting, Volcanoes!",
-        "start_iso": "2026-06-05T22:00:00-04:00",
-        "end_iso": "2026-06-06T00:00:00-04:00",
-        "location": "International Terminal - San Francisco International Airport (SFO) San Francisco, California 94128 SFO, San Francisco, CA San Francisco CA",
-        "url": "https://www.meetup.com/ccccc-sf/events/310894024/"
-      },
-      {
-        "title": "Great Music Belongs to Everyone",
-        "start_iso": "2026-05-30T22:00:00-04:00",
-        "end_iso": "2026-05-31T00:00:00-04:00",
-        "location": "McKenna Theater @ SF State 1600 Holloway Ave, San Francisco, CA 94132 San Francisco CA 94132",
-        "url": "https://www.meetup.com/ccccc-sf/events/313954170/"
-      },
-      {
-        "title": "ONLINE LIVE- Are you Brighter than a 6th grader? Trivia",
-        "start_iso": "2026-05-26T20:45:00-04:00",
-        "end_iso": "2026-05-26T21:45:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/ccccc-sf/events/314838602/"
-      },
-      {
-        "title": "Let’s do Board Games for a change, Anyone? (Burlingame)",
-        "start_iso": "2026-06-05T21:30:00-04:00",
-        "end_iso": "2026-06-05T23:30:00-04:00",
-        "location": "",
-        "url": "https://www.meetup.com/asianamericanadventurers-explorers/events/314612428/"
-      },
-      {
-        "title": "Costa Rica Eco Adventure: Waterfalls, Snorkeling, Zip lines, Rafting, Volcanoes!",
-        "start_iso": "2026-06-05T22:00:00-04:00",
-        "end_iso": "2026-06-15T00:00:00-04:00",
-        "location": "International Terminal - San Francisco International Airport (SFO) San Francisco, California 94128 SFO, San Francisco, CA San Francisco CA",
-        "url": "https://www.meetup.com/iwanttodothatsf/events/310894060/"
-      }
-    ]
-  },
   "https://www.youtube.com/@wrc/videos": {
     "fetched_at_iso": "2026-06-02T10:55:08.895963-04:00",
-    "events": []
-  },
-  "https://www.thesaurus.com/browse/rally": {
-    "fetched_at_iso": "2026-05-29T10:00:03.240133-04:00",
-    "events": []
-  },
-  "https://www.yelp.com/biz/rallys-cincinnati-3": {
-    "fetched_at_iso": "2026-05-29T10:00:03.240133-04:00",
-    "events": []
-  },
-  "https://carbuzz.com/": {
-    "fetched_at_iso": "2026-05-29T10:00:58.410342-04:00",
     "events": []
   },
   "https://www.scca.com/events/2005128-southern-indiana-region-autocross-5-mid-american-air-center": {
@@ -3756,11 +3211,11 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-middletown-ohio/?page=3": {
-    "fetched_at_iso": "2026-06-23T09:43:02.347368-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-downtown-hamilton/?page=4": {
-    "fetched_at_iso": "2026-11-19T06:28:40.738562-05:00",
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
     "events": []
   },
   "https://www.meetup.com/queencitysocialclub/events/315178560/": {
@@ -5410,7 +4865,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-middletown-ohio/?page=2": {
-    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/drive-rally/?page=10": {
@@ -5718,7 +5173,7 @@
     }
   },
   "verify::https://kingoftheroads.events/": {
-    "checked_at_iso": "2026-11-12T07:14:20.503667-05:00",
+    "checked_at_iso": "2026-11-26T06:29:57.756417-05:00",
     "result": null
   },
   "verify::https://facebook.com/events/s/renegades-up-car-truck-bike-cr/2869461123391324/": {
@@ -5845,7 +5300,7 @@
     }
   },
   "verify::https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk": {
-    "checked_at_iso": "2026-11-12T07:13:17.847912-05:00",
+    "checked_at_iso": "2026-11-26T06:29:55.156607-05:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee-3/2026-07-04/": {
@@ -6297,7 +5752,7 @@
     "result": null
   },
   "verify::https://rallynorthamerica.com/rally-events/": {
-    "checked_at_iso": "2026-11-12T07:14:20.595617-05:00",
+    "checked_at_iso": "2026-11-26T06:29:57.854149-05:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/destination-cars-and-coffee/2026-07-11/": {
@@ -6345,7 +5800,7 @@
     "result": null
   },
   "verify::https://same as above": {
-    "checked_at_iso": "2026-11-12T07:14:20.503168-05:00",
+    "checked_at_iso": "2026-11-26T06:29:57.755870-05:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/acky-cars-and-coffee/2026-07-12/": {
@@ -6714,7 +6169,7 @@
     "result": null
   },
   "verify::https://—": {
-    "checked_at_iso": "2026-11-12T07:14:22.333196-05:00",
+    "checked_at_iso": "2026-11-26T06:29:58.093928-05:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/columbus-cars-coffee-fridays/2026-07-24/": {
@@ -6960,7 +6415,7 @@
     "result": null
   },
   "verify::https://www.therechargerally.com/": {
-    "checked_at_iso": "2026-11-12T07:14:22.333544-05:00",
+    "checked_at_iso": "2026-11-26T06:29:58.094252-05:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/wheels-whoppers-2/2026-07-31/": {
@@ -8468,7 +7923,7 @@
     }
   },
   "verify::https://cincyscca.com/rally-cross/": {
-    "checked_at_iso": "2026-11-12T07:14:18.915465-05:00",
+    "checked_at_iso": "2026-11-26T06:29:57.345619-05:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/event/tommy-and-da-fam-cruise-in/2026-09-01/": {
@@ -11314,15 +10769,15 @@
     "result": null
   },
   "verify::https://www.scca.com/pages/road-rally": {
-    "checked_at_iso": "2026-11-12T07:13:38.724034-05:00",
+    "checked_at_iso": "2026-11-26T06:29:56.213066-05:00",
     "result": null
   },
   "verify::https://corsarally.com/": {
-    "checked_at_iso": "2026-11-12T07:14:18.387209-05:00",
+    "checked_at_iso": "2026-11-26T06:29:57.025514-05:00",
     "result": null
   },
   "verify::https://www.americanrallyassociation.org/sofr": {
-    "checked_at_iso": "2026-11-12T07:14:20.361543-05:00",
+    "checked_at_iso": "2026-11-26T06:29:57.423958-05:00",
     "result": null
   },
   "https://www.subaru.com/motorsports.html": {
@@ -12084,7 +11539,7 @@
     "events": []
   },
   "https://www.motorsportreg.com/calendar/rally/": {
-    "fetched_at_iso": "2026-10-15T09:41:55.752197-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:15.689677-05:00",
     "events": []
   },
   "verify::https://carsandcoffeeevents.com/event/cincinnati-cars-and-coffee/2026-07-18/": {
@@ -12193,7 +11648,7 @@
     }
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=11": {
-    "fetched_at_iso": "2026-08-07T07:45:03.727334-04:00",
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=5": {
@@ -12311,7 +11766,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-in-middletown-ohio/?page=4": {
-    "fetched_at_iso": "2026-09-27T15:40:33.119494-04:00",
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/festival-ohio/?page=30": {
@@ -14810,8 +14265,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/mcdonalds-sellersburg-2026-summer-car-show-schedule": {
-    "checked_at_iso": "2026-11-12T07:13:38.734627-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.230671-05:00",
+    "result": {
+      "title": "McDonald’s Sellersburg 2026 Summer Car Shows",
+      "start_iso": "2027-04-02T18:00:00-04:00",
+      "end_iso": "2027-04-02T18:00:00-04:00",
+      "location": "McDonald’s Sellersburg IN 47172",
+      "address": "",
+      "description": "The McDonald’s in Sellersburg will host a summer car show on the first Friday of each month from April to October. The events will begin at 6 p.m. each evening. Attendance is free. Participants can expect music, food, door prizes, and the opportunity to connect with friends.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/southern-indiana-cars-coffee": {
     "checked_at_iso": "2026-09-03T23:42:06.426700-04:00",
@@ -14961,8 +14425,17 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/muncie-cars-coffee-2026-season-10": {
-    "checked_at_iso": "2026-11-12T07:13:38.532042-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.935729-05:00",
+    "result": {
+      "title": "Muncie Cars & Coffee 2026 - Season 10",
+      "start_iso": "2027-03-06T09:00:00-05:00",
+      "end_iso": "2027-03-06T12:00:00-05:00",
+      "location": "The corner of Charles Street and Walnut Street Muncie 100 E Charles St Muncie IN 47305",
+      "address": "100 E Charles St, Muncie, IN 47305",
+      "description": "A gathering of octane and caffeine lovers. All makes, models and years welcome. We love anything on wheels! No vehicle? No problem! Just come out and enjoy the cars.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/kettering-saturday-night-cruise-in-2026-09-05": {
     "checked_at_iso": "2026-09-03T23:42:07.716814-04:00",
@@ -15103,8 +14576,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/indiana-cruisers-monthly-cruise-the-square": {
-    "checked_at_iso": "2026-11-12T07:13:38.869722-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.267777-05:00",
+    "result": {
+      "title": "Indiana Cruisers Monthly Cruise The Square",
+      "start_iso": "2027-04-09T17:00:00-04:00",
+      "end_iso": "2027-04-09T17:00:00-04:00",
+      "location": "Historical Charlestown City Square Charlestown IN 47111",
+      "address": "",
+      "description": "The Indiana Cruisers Monthly Cruise will take place on the second Friday of each month from April through October. The event is open to all vehicles and will feature food trucks and live music on July 10 and August 7. The cruise will start at 5:00 PM in Charlestown, Indiana.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/jackson-county-gear-grinders-muscle-hustle": {
     "checked_at_iso": "2026-09-03T23:42:08.579888-04:00",
@@ -15133,8 +14615,17 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/fly-in-drive-in-breakfast": {
-    "checked_at_iso": "2026-11-12T07:14:18.554439-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:57.095838-05:00",
+    "result": {
+      "title": "Fly-In / Drive-In Breakfast",
+      "start_iso": "2027-05-08T08:30:00-04:00",
+      "end_iso": "2027-05-08T10:30:00-04:00",
+      "location": "Bardstown Nelson County Airport Bardstown KY 40004",
+      "address": "",
+      "description": "The Fly-In / Drive-In Breakfast takes place on the second Saturday of each month from May through October at Bardstown Nelson County Airport. The event features a Spot Landing Contest, where pilots can land between designated lines. Pilots who successfully complete the landing challenge will eat for free, contingent on staffing availability. The breakfast runs from 8:30 AM to 10:30 AM.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/dallara-cars-coffee-2026-09-12": {
     "checked_at_iso": "2026-09-03T23:42:09.045084-04:00",
@@ -15236,11 +14727,11 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/shepherdsville-cruise-in-2": {
-    "checked_at_iso": "2026-10-15T06:41:32.128730-04:00",
+    "checked_at_iso": "2026-11-26T06:29:57.160154-05:00",
     "result": {
       "title": "Shepherdsville Cruise-In",
-      "start_iso": "2026-10-16T17:00:00-04:00",
-      "end_iso": "2026-10-16T21:00:00-04:00",
+      "start_iso": "2027-05-21T17:00:00-04:00",
+      "end_iso": "2027-05-21T21:00:00-04:00",
       "location": "170 W. Joe B Hall Ave 170 W. Joe B Hall Ave Shepherdsville KY 40165",
       "address": "170 W. Joe B Hall Ave, Shepherdsville, KY 40165",
       "description": "The Shepherdsville Cruise-In takes place on the 3rd Friday of every month from May to October. The event is scheduled from 5 PM to 9 PM at 170 W. Joe B Hall Ave.",
@@ -15249,8 +14740,17 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/austin-dairy-queen-cruise-in": {
-    "checked_at_iso": "2026-11-12T07:13:58.542811-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.548609-05:00",
+    "result": {
+      "title": "Austin Dairy Queen Cruise In",
+      "start_iso": "2027-04-16T17:00:00-04:00",
+      "end_iso": "2027-04-16T17:00:00-04:00",
+      "location": "305 N Highway 31 305 N Highway 31 Austin IN 47102",
+      "address": "305 N Highway 31, Austin, IN 47102",
+      "description": "The Austin Dairy Queen will host a Cruise In event on the 3rd Friday of every month from 5 PM until close. The event is scheduled for April to October 2026. Location: Austin Dairy Queen.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/lawrenceburg-cars-coffee-2026-09-19": {
     "checked_at_iso": "2026-09-17T09:37:54.266160-04:00",
@@ -15281,8 +14781,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/pharaohs-of-kentucky-and-hooters-hooters-car-show": {
-    "checked_at_iso": "2026-11-12T07:13:58.825399-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.581644-05:00",
+    "result": {
+      "title": "Pharaohs of Kentucky Hooter’s Car Show",
+      "start_iso": "2027-04-18T16:00:00-04:00",
+      "end_iso": "2027-04-18T19:00:00-04:00",
+      "location": "3101 Richmond Road 3101 Richmond Road Lexington KY 40502",
+      "address": "3101 Richmond Road, Lexington, KY 40502",
+      "description": "The Pharaohs of Kentucky Hooter’s Car Show is a monthly event running from April to October. It takes place on the third Sunday of each month from 4:00 PM to 7:00 PM. Participants must pay a $10 entry fee per vehicle. The event features a 50/50 drawing and a variety of door prizes. Five trophies will be awarded. The car show will be held at Hooter’s.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/bluegrass-outlawz-car-meet-2026-10-03": {
     "checked_at_iso": "2026-10-01T11:22:49.021302-04:00",
@@ -15466,8 +14975,17 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/four-bridges-cruise-in": {
-    "checked_at_iso": "2026-11-12T07:13:58.891688-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.593322-05:00",
+    "result": {
+      "title": "Four Bridges Cruise-In",
+      "start_iso": "2027-04-21T17:00:00-04:00",
+      "end_iso": "2027-04-21T19:00:00-04:00",
+      "location": "Four Bridges Country Club 8300 Four Bridges Dr. Liberty Township OH 45044",
+      "address": "8300 Four Bridges Dr., Liberty Township, OH 45044",
+      "description": "The Four Bridges Cruise-In takes place on the third Wednesday of every month from April to October. The event welcomes all cars, trucks, and motorcycles, regardless of year, make, or model. There are no fees, registration, or prizes required. Participants can simply show up. The event is held at the Four Bridges Country Club from 5:00 PM to 7:00 PM.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/luvd-ones-ohio-pony-wagon-day-car-show": {
     "checked_at_iso": "2026-09-04T00:05:30.930886-04:00",
@@ -15495,7 +15013,7 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/cincy-cars-coffee-at-liberty-center": {
-    "checked_at_iso": "2026-11-19T06:28:58.410717-05:00",
+    "checked_at_iso": "2026-11-26T06:29:57.132802-05:00",
     "result": {
       "title": "Cincy Cars & Coffee @ Liberty Center",
       "start_iso": "2027-05-15T08:00:00-04:00",
@@ -15512,15 +15030,24 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/cars-coffee-in-circleville": {
-    "checked_at_iso": "2026-11-12T07:13:58.626742-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.580352-05:00",
+    "result": {
+      "title": "Cars & Coffee in Circleville",
+      "start_iso": "2027-04-17T09:00:00-04:00",
+      "end_iso": "2027-04-17T11:00:00-04:00",
+      "location": "209 Lancaster Pike Lancaster Pike Circleville OH 43113",
+      "address": "Lancaster Pike, Circleville, OH 43113",
+      "description": "Cars & Coffee will return for its 2026 season, taking place every third Saturday from April to September. The event invites participants with all makes and models of vehicles. Local coffee vendors will be featured at the gatherings. The events will be held at 209 Lancaster Pike, starting on April 18, 2026. Each event will run from 9:00 AM to 11:00 AM.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/9lincolns-car-show-2026-09-19": {
     "checked_at_iso": "2026-09-17T09:38:14.328302-04:00",
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/winchester-cars-coffee": {
-    "checked_at_iso": "2026-11-19T06:28:58.411592-05:00",
+    "checked_at_iso": "2026-11-26T06:29:57.159690-05:00",
     "result": {
       "title": "Winchester Cars & Coffee",
       "start_iso": "2027-05-15T09:00:00-04:00",
@@ -15541,8 +15068,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/mid-ohio-cruisers-2026-car-show": {
-    "checked_at_iso": "2026-11-12T07:13:38.260522-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.795779-05:00",
+    "result": {
+      "title": "Mid Ohio Cruisers 2026 Car Show",
+      "start_iso": "2027-01-16T17:00:00-05:00",
+      "end_iso": "2027-01-16T19:30:00-05:00",
+      "location": "1575 Cobblestone Way Cobblestone Way Marysville OH 43040",
+      "address": "Cobblestone Way, Marysville, OH 43040",
+      "description": "The MID OHIO CRUISERS will host a car show on the third Saturday of each month from April through October in 2026. Events will take place from 5:00 PM to 7:30 PM, with free registration available from 5:00 PM to 7:30 PM. Awards will be presented after 8:30 PM. Top 15 awards will be given each month, along with a 50/50 raffle, door prizes, dash plaques, and oldies music. The event is located at 1575 Cobblestone Way. The specific dates for the car show are April 18, May 16, June 20, July 18, Aug...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/fifth-speak-for-the-unspoken-car-show-2026-09-20": {
     "checked_at_iso": "2026-09-17T09:38:54.517299-04:00",
@@ -15561,8 +15097,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/roundtown-cruisers-free-for-cruisers-and-spectators": {
-    "checked_at_iso": "2026-11-12T07:13:58.989805-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.663784-05:00",
+    "result": {
+      "title": "Roundtown Cruisers Free For Cruisers And Spectators!",
+      "start_iso": "2027-04-30T17:00:00-04:00",
+      "end_iso": "2027-04-30T20:00:00-04:00",
+      "location": "9511 Tarlton Road Tarlton Road Circleville OH 43113",
+      "address": "Tarlton Road, Circleville, OH 43113",
+      "description": "Roundtown Cruisers will hold a series of events from April to September, running every last Friday of the month. The events take place from 5:00 PM to 8:00 PM at 818 Tarlton Road. Activities include a 50/50 raffle, dash plaques for the first 50 cars at each event, along with food and entertainment.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/historic-cammack-station-charity-cruise-in-2026-09-25": {
     "checked_at_iso": "2026-09-24T10:22:59.389170-04:00",
@@ -15689,8 +15234,17 @@
     "result": null
   },
   "verify::https://carsandcoffeeevents.com/events/rpm-performance-cruise-in": {
-    "checked_at_iso": "2026-11-12T07:14:18.484383-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.968040-05:00",
+    "result": {
+      "title": "RPM Performance Cruise-In",
+      "start_iso": "2027-05-05T18:00:00-04:00",
+      "end_iso": "2027-05-05T18:00:00-04:00",
+      "location": "RPM Performance 3202 S East Street Indianapolis IN 46201",
+      "address": "3202 S East Street, Indianapolis, IN 46201",
+      "description": "The RPM Performance Cruise-In takes place on the first Wednesday of each month from May to October. Events begin at 6:00 PM. Upcoming dates include June 3rd, July 1st, August 5th, September 2nd, and October 7th. The location for the event is 3202 S East Street.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/richmond-ky-cars-coffee-2026-10-10": {
     "checked_at_iso": "2026-10-01T11:23:28.842652-04:00",
@@ -15854,52 +15408,160 @@
     }
   },
   "verify::https://carsandcoffeeevents.com/events/ohio-ford-expo": {
-    "checked_at_iso": "2026-11-12T07:13:18.127973-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.153928-05:00",
+    "result": {
+      "title": "Ohio Ford Expo",
+      "start_iso": "2026-11-28T09:00:00-05:00",
+      "end_iso": "2026-11-28T16:00:00-05:00",
+      "location": "Ohio Expo Center 717 E. 17th Ave. Columbus OH 43211",
+      "address": "717 E. 17th Ave., Columbus, OH 43211",
+      "description": "This all-Ford Swap Meet & Expo encompasses acres of automotive products and related parts - cars, trucks, accessories, racing equipment, collectibles and more! Now in the brand-new, 150,000 square foot Ohio Agriculture Center! All indoors and heated! Ford, Lincoln and Mercury car corral, Car Club Corner, specialty show cars and more! Automotive gift ideas for Christmas! It’s one of the largest Ford-themed events in the USA, attracting thousands of participants. Directions: Ohio Expo Center, 717...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2026-12-05": {
-    "checked_at_iso": "2026-11-12T07:13:18.242217-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.157880-05:00",
+    "result": {
+      "title": "Columbus Cars n Coffee Meetup – 1st Saturdays",
+      "start_iso": "2026-12-05T08:30:00-05:00",
+      "end_iso": "2026-12-05T12:00:00-05:00",
+      "location": "3650 Olentangy River Rd 3650 Olentangy River Rd Columbus OH 43085",
+      "address": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "description": "The Buckeye Lambda Cars & Coffee Meetup will take place on the first Saturday of each month alongside the established Columbus Cars & Coffee event. Participants will gather on the northwest side of the parking area in Columbus, Ohio, with Buckeye Lambda members using this as their regular meeting spot. The event runs from 8:30 AM to 12:00 PM. Scott Harris will serve as the point person for this ongoing meetup.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2026-12-09": {
-    "checked_at_iso": "2026-11-12T07:13:18.452619-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.449443-05:00",
+    "result": {
+      "title": "Monthly Car & Bike Lunch Cruise In",
+      "start_iso": "2026-12-09T11:00:00-05:00",
+      "end_iso": "2026-12-09T13:00:00-05:00",
+      "location": "1611 Polaris Pkwy 1611 Polaris Pkwy Columbus OH 43085",
+      "address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "description": "Join fellow motor enthusiasts for the Monthly Car & Bike Lunch Cruise In, happening every second Wednesday of the month in Columbus, Ohio. This event provides a relaxed atmosphere where car, bike, SUV, and truck lovers can enjoy a meal and good company. = No purchases, dues, or fees are required. Attendees are encouraged to be safe and responsible. Whether you stay for the entire two hours or just drop by for a bit, it’s an opportunity to connect with like-minded individuals and enjoy a casual...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/car-cruise-in-and-kit-haymond-concert-2026-12-10": {
-    "checked_at_iso": "2026-11-12T07:13:18.454110-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.621322-05:00",
+    "result": {
+      "title": "Car Cruise-In and Kit Haymond Concert",
+      "start_iso": "2026-12-10T19:00:00-05:00",
+      "end_iso": "2026-12-10T19:00:00-05:00",
+      "location": "237 W Monroe St 237 W Monroe St Franklin IN 46131",
+      "address": "237 W Monroe St, Franklin, IN 46131",
+      "description": "The Car Cruise-In and Kit Haymond Concert will take place on July 31, 2026, from 4:00 PM to 9:00 PM in Franklin, Indiana. This event is part of the Arts @ the Amp summer series, supported by the Branigin Foundation, and is free to the public.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/columbus-cars-n-coffee-meetup-saturdays-2027-01-02": {
-    "checked_at_iso": "2026-11-12T07:13:18.501599-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.763543-05:00",
+    "result": {
+      "title": "Columbus Cars n Coffee Meetup – 1st Saturdays",
+      "start_iso": "2027-01-02T08:30:00-05:00",
+      "end_iso": "2027-01-02T12:00:00-05:00",
+      "location": "3650 Olentangy River Rd 3650 Olentangy River Rd Columbus OH 43085",
+      "address": "3650 Olentangy River Rd, Columbus, OH 43085",
+      "description": "The Buckeye Lambda Cars & Coffee Meetup will take place on the first Saturday of each month alongside the established Columbus Cars & Coffee event. Participants will gather on the northwest side of the parking area in Columbus, Ohio, with Buckeye Lambda members using this as their regular meeting spot. The event runs from 8:30 AM to 12:00 PM. Scott Harris will serve as the point person for this ongoing meetup.",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-01-13": {
-    "checked_at_iso": "2026-11-12T07:13:18.602939-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.784777-05:00",
+    "result": {
+      "title": "Monthly Car & Bike Lunch Cruise In",
+      "start_iso": "2027-01-13T11:00:00-05:00",
+      "end_iso": "2027-01-13T13:00:00-05:00",
+      "location": "1611 Polaris Pkwy 1611 Polaris Pkwy Columbus OH 43085",
+      "address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "description": "Join fellow motor enthusiasts for the Monthly Car & Bike Lunch Cruise In, happening every second Wednesday of the month in Columbus, Ohio. This event provides a relaxed atmosphere where car, bike, SUV, and truck lovers can enjoy a meal and good company. = No purchases, dues, or fees are required. Attendees are encouraged to be safe and responsible. Whether you stay for the entire two hours or just drop by for a bit, it’s an opportunity to connect with like-minded individuals and enjoy a casual...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-02-10": {
-    "checked_at_iso": "2026-11-12T07:13:38.461734-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:55.907604-05:00",
+    "result": {
+      "title": "Monthly Car & Bike Lunch Cruise In",
+      "start_iso": "2027-02-10T11:00:00-05:00",
+      "end_iso": "2027-02-10T13:00:00-05:00",
+      "location": "1611 Polaris Pkwy 1611 Polaris Pkwy Columbus OH 43085",
+      "address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "description": "Join fellow motor enthusiasts for the Monthly Car & Bike Lunch Cruise In, happening every second Wednesday of the month in Columbus, Ohio. This event provides a relaxed atmosphere where car, bike, SUV, and truck lovers can enjoy a meal and good company. = No purchases, dues, or fees are required. Attendees are encouraged to be safe and responsible. Whether you stay for the entire two hours or just drop by for a bit, it’s an opportunity to connect with like-minded individuals and enjoy a casual...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-03-10": {
-    "checked_at_iso": "2026-11-12T07:13:38.564442-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.185169-05:00",
+    "result": {
+      "title": "Monthly Car & Bike Lunch Cruise In",
+      "start_iso": "2027-03-10T11:00:00-05:00",
+      "end_iso": "2027-03-10T13:00:00-05:00",
+      "location": "1611 Polaris Pkwy 1611 Polaris Pkwy Columbus OH 43085",
+      "address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "description": "Join fellow motor enthusiasts for the Monthly Car & Bike Lunch Cruise In, happening every second Wednesday of the month in Columbus, Ohio. This event provides a relaxed atmosphere where car, bike, SUV, and truck lovers can enjoy a meal and good company. = No purchases, dues, or fees are required. Attendees are encouraged to be safe and responsible. Whether you stay for the entire two hours or just drop by for a bit, it’s an opportunity to connect with like-minded individuals and enjoy a casual...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-04-14": {
-    "checked_at_iso": "2026-11-12T07:13:58.283726-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:56.462396-05:00",
+    "result": {
+      "title": "Monthly Car & Bike Lunch Cruise In",
+      "start_iso": "2027-04-14T11:00:00-04:00",
+      "end_iso": "2027-04-14T13:00:00-04:00",
+      "location": "1611 Polaris Pkwy 1611 Polaris Pkwy Columbus OH 43085",
+      "address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "description": "Join fellow motor enthusiasts for the Monthly Car & Bike Lunch Cruise In, happening every second Wednesday of the month in Columbus, Ohio. This event provides a relaxed atmosphere where car, bike, SUV, and truck lovers can enjoy a meal and good company. = No purchases, dues, or fees are required. Attendees are encouraged to be safe and responsible. Whether you stay for the entire two hours or just drop by for a bit, it’s an opportunity to connect with like-minded individuals and enjoy a casual...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-05-12": {
-    "checked_at_iso": "2026-11-12T07:14:18.708907-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:57.128548-05:00",
+    "result": {
+      "title": "Monthly Car & Bike Lunch Cruise In",
+      "start_iso": "2027-05-12T11:00:00-04:00",
+      "end_iso": "2027-05-12T13:00:00-04:00",
+      "location": "1611 Polaris Pkwy 1611 Polaris Pkwy Columbus OH 43085",
+      "address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "description": "Join fellow motor enthusiasts for the Monthly Car & Bike Lunch Cruise In, happening every second Wednesday of the month in Columbus, Ohio. This event provides a relaxed atmosphere where car, bike, SUV, and truck lovers can enjoy a meal and good company. = No purchases, dues, or fees are required. Attendees are encouraged to be safe and responsible. Whether you stay for the entire two hours or just drop by for a bit, it’s an opportunity to connect with like-minded individuals and enjoy a casual...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-06-09": {
-    "checked_at_iso": "2026-11-12T07:14:19.013960-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:57.382062-05:00",
+    "result": {
+      "title": "Monthly Car & Bike Lunch Cruise In",
+      "start_iso": "2027-06-09T11:00:00-04:00",
+      "end_iso": "2027-06-09T13:00:00-04:00",
+      "location": "1611 Polaris Pkwy 1611 Polaris Pkwy Columbus OH 43085",
+      "address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "description": "Join fellow motor enthusiasts for the Monthly Car & Bike Lunch Cruise In, happening every second Wednesday of the month in Columbus, Ohio. This event provides a relaxed atmosphere where car, bike, SUV, and truck lovers can enjoy a meal and good company. = No purchases, dues, or fees are required. Attendees are encouraged to be safe and responsible. Whether you stay for the entire two hours or just drop by for a bit, it’s an opportunity to connect with like-minded individuals and enjoy a casual...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "verify::https://carsandcoffeeevents.com/events/monthly-car-bike-lunch-cruise-in-2027-07-14": {
-    "checked_at_iso": "2026-11-12T07:14:21.428076-05:00",
-    "result": null
+    "checked_at_iso": "2026-11-26T06:29:57.951403-05:00",
+    "result": {
+      "title": "Monthly Car & Bike Lunch Cruise In",
+      "start_iso": "2027-07-14T11:00:00-04:00",
+      "end_iso": "2027-07-14T13:00:00-04:00",
+      "location": "1611 Polaris Pkwy 1611 Polaris Pkwy Columbus OH 43085",
+      "address": "1611 Polaris Pkwy, Columbus, OH 43085",
+      "description": "Join fellow motor enthusiasts for the Monthly Car & Bike Lunch Cruise In, happening every second Wednesday of the month in Columbus, Ohio. This event provides a relaxed atmosphere where car, bike, SUV, and truck lovers can enjoy a meal and good company. = No purchases, dues, or fees are required. Attendees are encouraged to be safe and responsible. Whether you stay for the entire two hours or just drop by for a bit, it’s an opportunity to connect with like-minded individuals and enjoy a casual...",
+      "provider": "schema_org",
+      "confident": true
+    }
   },
   "https://www.southernohioforestrally.com/": {
     "fetched_at_iso": "2026-09-04T06:21:43.372178-04:00",
@@ -15996,7 +15658,7 @@
     "events": []
   },
   "verify::https://www.kyanaswapmeet.com/": {
-    "checked_at_iso": "2026-11-12T07:13:58.556356-05:00",
+    "checked_at_iso": "2026-11-26T06:29:56.567102-05:00",
     "result": {
       "title": "KYANA Swap Meet",
       "start_iso": "2027-04-17T08:00:00-04:00",
@@ -16030,7 +15692,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/united-states--ohio/cincinnati-speed-dating/?page=6": {
-    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
     "events": []
   },
   "https://www.meetup.com/cincinnatibackpackers/events/316338334/": {
@@ -16135,40 +15797,26 @@
     ]
   },
   "https://www.meetup.com/ko-kr/gohio-adventures-around-columbus/": {
-    "fetched_at_iso": "2026-09-10T08:54:27.522563-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
     "events": [
       {
-        "title": "Morning people unite!! 🐤 ☕ + 💬 @ The Roosevelt Coffeehouse",
-        "start_iso": "2026-09-12T08:00:00-04:00",
-        "end_iso": "2026-09-12T09:30:00-04:00",
-        "location": "The Roosevelt Coffeehouse 303 Green Meadows Drive S, Lewis Center, OH Lewis Center OH",
-        "url": "https://www.meetup.com/ko-KR/gohio-adventures-around-columbus/events/316467411/"
+        "title": "Trails & Ales! Clear Creek Metro Park / Double Edge Brewing",
+        "start_iso": "2026-12-12T14:00:00-05:00",
+        "end_iso": "2026-12-12T18:00:00-05:00",
+        "location": "Clear Creek Metro Park Parking Lot HCQC+HW, Rockbridge, OH Rockbridge OH",
+        "url": "https://www.meetup.com/ko-KR/gohio-adventures-around-columbus/events/317305220/"
       },
       {
-        "title": "Trails & Ales! Battelle Darby Creek Metro Park / Galloway Tavern",
-        "start_iso": "2026-09-12T14:30:00-04:00",
-        "end_iso": "2026-09-12T18:30:00-04:00",
-        "location": "Cedar Ridge Picnic Area 1775 Darby Creek Dr, Galloway, OH Galloway OH",
-        "url": "https://www.meetup.com/ko-KR/gohio-adventures-around-columbus/events/316252099/"
-      },
-      {
-        "title": "Saturday at the Cincinnati Zoo & Botanical Garden",
-        "start_iso": "2026-09-26T12:00:00-04:00",
-        "end_iso": "2026-09-26T16:00:00-04:00",
-        "location": "Cincinnati Zoo & Botanical Garden 3400 Vine St, Cincinnati, OH Cincinnati OH",
-        "url": "https://www.meetup.com/ko-KR/gohio-adventures-around-columbus/events/313619860/"
-      },
-      {
-        "title": "America's Taj Mahal: Prabhupada's Palace of Gold",
-        "start_iso": "2026-10-24T12:00:00-04:00",
-        "end_iso": "2026-10-24T16:00:00-04:00",
-        "location": "Welcome Center, ISKCON New Vrindaban 3759 McCreary's Ridge Rd, Moundsville, WV Moundsville WV",
-        "url": "https://www.meetup.com/ko-KR/gohio-adventures-around-columbus/events/314355782/"
+        "title": "A Winter Weekend at Punderson State Park",
+        "start_iso": "2027-01-15T16:00:00-05:00",
+        "end_iso": "2027-01-17T10:00:00-05:00",
+        "location": "Punderson Manor Lodge & Conference Center 11755 Kinsman Rd, Newbury, OH Newbury OH",
+        "url": "https://www.meetup.com/ko-KR/gohio-adventures-around-columbus/events/315062416/"
       }
     ]
   },
   "https://www.meetup.com/vegas-f1-fans/": {
-    "fetched_at_iso": "2026-09-24T10:18:24.968679-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
     "events": []
   },
   "https://www.meetup.com/nl/topics/whiskey/": {
@@ -16224,16 +15872,8 @@
     "events": []
   },
   "https://www.eventbrite.com/e/knights-of-columbus-9th-annual-charity-car-show-2026-join-the-knights-for-o-tickets-2000037635407": {
-    "fetched_at_iso": "2026-09-10T10:27:41.621012-04:00",
-    "events": [
-      {
-        "title": "Knights of Columbus 9th Annual Charity CAR SHOW 2026 Join the Knights for o Tickets, Saturday, November 7 • 9 AM - 2 PM | Eventbrite",
-        "start_iso": "2026-09-09T00:00:00-04:00",
-        "end_iso": "2026-09-09T02:00:00-04:00",
-        "location": "Columbus",
-        "url": "https://www.eventbrite.com/e/knights-of-columbus-9th-annual-charity-car-show-2026-join-the-knights-for-o-tickets-2000037635407"
-      }
-    ]
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
+    "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/food-truck-festival/": {
     "fetched_at_iso": "2026-09-17T15:56:49.131016-04:00",
@@ -16289,7 +15929,7 @@
     ]
   },
   "https://www.eventbrite.com/e/corsaview-car-show-tickets-1998445064986": {
-    "fetched_at_iso": "2026-10-23T09:04:58.473794-04:00",
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ga--columbus/car-shows/": {
@@ -17070,7 +16710,7 @@
     ]
   },
   "https://www.eventbrite.com/d/oh--cincinnati/car-show-today/?page=20": {
-    "fetched_at_iso": "2026-10-23T09:03:46.913399-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/things-to-do-in-cincinnati-in-july/?page=2": {
@@ -17138,70 +16778,70 @@
     ]
   },
   "https://www.meetup.com/find/us--ky--waddy/meet-new-friends/": {
-    "fetched_at_iso": "2026-10-29T08:29:01.722199-04:00",
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
     "events": [
       {
-        "title": "Monday Night Meditation Practice",
-        "start_iso": "2026-11-02T19:00:00-05:00",
-        "end_iso": "2026-11-02T21:00:00-05:00",
-        "location": "Indianapolis Zen Center 3703 N Washington Blvd, Indianapolis, IN Indianapolis IN",
-        "url": "https://www.meetup.com/indianapolis-zen-center/events/317020641/"
+        "title": "Christmas Market at Wildside Winery",
+        "start_iso": "2026-12-06T12:00:00-05:00",
+        "end_iso": "2026-12-06T14:00:00-05:00",
+        "location": "",
+        "url": "https://www.meetup.com/lexington-womens-social-group-30s/events/316940475/"
       },
       {
         "title": "Friendship Spinners Guild Meeting",
-        "start_iso": "2026-11-14T10:00:00-05:00",
-        "end_iso": "2026-11-14T16:00:00-05:00",
+        "start_iso": "2026-12-12T10:00:00-05:00",
+        "end_iso": "2026-12-12T16:00:00-05:00",
         "location": "Franklin County Extension Office 101 Lakeview Ct, Frankfort, KY Frankfort KY",
-        "url": "https://www.meetup.com/knit2tog-louisville/events/317130780/"
+        "url": "https://www.meetup.com/knit2tog-louisville/events/317538254/"
       },
       {
-        "title": "Coloring, Cars and Coffee… Oh My!",
-        "start_iso": "2026-11-10T10:00:00-05:00",
-        "end_iso": "2026-11-10T11:30:00-05:00",
-        "location": "",
-        "url": "https://www.meetup.com/northeast-louisville-mama-me-group/events/316522320/"
+        "title": "Idempotency, Exactly-Once, and Other Lies We Tell Ourselves",
+        "start_iso": "2026-12-17T18:30:00-05:00",
+        "end_iso": "2026-12-17T20:30:00-05:00",
+        "location": "Slingshot 700 N Hurstbourne Pkwy #120, Louisville, KY Louisville KY",
+        "url": "https://www.meetup.com/louisville-dotnet/events/317546217/"
       },
       {
         "title": "Let's play games, and socialize",
-        "start_iso": "2026-11-04T18:00:00-05:00",
-        "end_iso": "2026-11-04T21:00:00-05:00",
+        "start_iso": "2026-12-02T18:00:00-05:00",
+        "end_iso": "2026-12-02T21:00:00-05:00",
         "location": "The Rusty Scabbard 820 Lane Allen Rd, Garden Springs Shopping Center, Lexington, KY Lexington KY",
-        "url": "https://www.meetup.com/lexingtongames/events/317001599/"
+        "url": "https://www.meetup.com/lexingtongames/events/317403128/"
       },
       {
         "title": "Beer and Boardgames at West Sixth Brewing",
-        "start_iso": "2026-11-02T18:00:00-05:00",
-        "end_iso": "2026-11-02T20:00:00-05:00",
+        "start_iso": "2026-12-07T18:00:00-05:00",
+        "end_iso": "2026-12-07T20:00:00-05:00",
         "location": "West Sixth Brewing 501 West 6th Street, Lexington, KY Lexington KY",
-        "url": "https://www.meetup.com/lexingtongames/events/316965908/"
+        "url": "https://www.meetup.com/lexingtongames/events/317474493/"
       },
       {
-        "title": "Kentucky Speed Dating for Louisville Singles 35-52",
-        "start_iso": "2026-11-09T19:00:00-05:00",
-        "end_iso": "2026-11-09T21:00:00-05:00",
+        "title": "Louisville Speed Dating for Kentucky Singles Ages 40s/50s",
+        "start_iso": "2026-12-08T19:00:00-05:00",
+        "end_iso": "2026-12-08T21:00:00-05:00",
         "location": "Trellis Brewing 827 Logan St, Louisville, KY 40204, USA, Louisville, KY Louisville KY",
-        "url": "https://www.meetup.com/cincinnati-speed-dating-singles-meet-up/events/316699450/"
+        "url": "https://www.meetup.com/cincinnati-speed-dating-singles-meet-up/events/316728149/"
       },
       {
-        "title": "Louisville Speed Dating for Kentucky Singles Age 30s/40s",
-        "start_iso": "2026-11-16T19:00:00-05:00",
-        "end_iso": "2026-11-16T21:00:00-05:00",
-        "location": "Heine Brothers Coffee 822 Eastern Pkwy, Louisville, KY 40217, USA, Louisville, KY Louisville KY",
-        "url": "https://www.meetup.com/cincinnati-speed-dating-singles-meet-up/events/316728138/"
+        "title": "Kentucky Speed Dating for Louisville Singles Ages 50s/60s",
+        "start_iso": "2026-12-14T19:00:00-05:00",
+        "end_iso": "2026-12-14T21:00:00-05:00",
+        "location": "Trellis Brewing 827 Logan St, Louisville, KY 40204, USA, Louisville, KY Louisville KY",
+        "url": "https://www.meetup.com/cincinnati-speed-dating-singles-meet-up/events/316728154/"
       },
       {
         "title": "Let's speak Spanish- At Joseph Beth Booksellers Cafe",
-        "start_iso": "2026-10-29T19:00:00-04:00",
-        "end_iso": "2026-10-29T20:00:00-04:00",
+        "start_iso": "2026-11-26T19:00:00-05:00",
+        "end_iso": "2026-11-26T20:00:00-05:00",
         "location": "Joseph-Beth Booksellers 161 Lexington Green Cir # B, Lexington, KY Lexington KY",
-        "url": "https://www.meetup.com/lexington-spanish-language-meetup-group/events/316917444/"
+        "url": "https://www.meetup.com/lexington-spanish-language-meetup-group/events/317320566/"
       },
       {
-        "title": "Run Your Own Local LLM & Save on AI Costs!",
-        "start_iso": "2026-11-04T18:30:00-05:00",
-        "end_iso": "2026-11-04T20:00:00-05:00",
-        "location": "9000 Keystone Crossing 9000 Keystone Crossing, Indianapolis, IN Indianapolis IN",
-        "url": "https://www.meetup.com/indy-net-consortium/events/315044422/"
+        "title": "WordPress Security in the Age of AI: What Small Site Owners Actually Need to Do",
+        "start_iso": "2026-12-02T19:00:00-05:00",
+        "end_iso": "2026-12-02T21:00:00-05:00",
+        "location": "Knoxville Entrepreneur Center 17 Market Square SUITE 101, Knoxville, TN Knoxville TN",
+        "url": "https://www.meetup.com/wordpressknoxville/events/317165528/"
       }
     ]
   },
@@ -17214,7 +16854,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--columbus/car-show-columbus-ohio/?page=49": {
-    "fetched_at_iso": "2026-11-12T07:13:08.000710-05:00",
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
     "events": []
   },
   "https://www.motorsportreg.com/events/arpca-mid-ohio-fall-2026-sports-car-course-pca-allegheny-588581": {
@@ -17740,7 +17380,7 @@
     "events": []
   },
   "https://www.scca.com/motorsports/roadrally/": {
-    "fetched_at_iso": "2026-11-12T07:12:12.593215-05:00",
+    "fetched_at_iso": "2026-11-26T06:28:35.620844-05:00",
     "events": []
   },
   "https://www.scca.com/events/2010733-southern-indiana-region-roadrally-6-the-world-famous-ice-cream-rally-lic-s-deli-ice-cream": {
@@ -17756,7 +17396,7 @@
     "events": []
   },
   "https://www.eventbrite.com/d/oh--cincinnati/free--events/car-show/": {
-    "fetched_at_iso": "2026-11-12T07:13:08.000710-05:00",
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
     "events": []
   },
   "https://www.eventbrite.com/d/ky--louisville/louisville-car-show/?page=2": {
@@ -17797,7 +17437,7 @@
     ]
   },
   "https://www.meetup.com/nl/sierraoutings/": {
-    "fetched_at_iso": "2026-11-19T06:27:46.039132-05:00",
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
     "events": [
       {
         "title": "Annual Hike Before the Bird at Sharon Woods",
@@ -17830,7 +17470,7 @@
     ]
   },
   "https://www.meetup.com/it-it/cincinnatibackpackers/": {
-    "fetched_at_iso": "2026-11-19T06:27:46.039132-05:00",
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
     "events": [
       {
         "title": "Osa Adventure in Costa Rica",
@@ -17838,6 +17478,13 @@
         "end_iso": "2027-01-16T21:00:00-05:00",
         "location": "Osa Peninsula Osa Peninsula, Puntarenas Province, Costa Rica, Puntarenas Province Puntarenas Province",
         "url": "https://www.meetup.com/it-IT/cincinnatibackpackers/events/316785069/"
+      },
+      {
+        "title": "A Thousand Miles on the Pacific Crest Trail: Adventures Along the Ring of Fire",
+        "start_iso": "2027-01-14T18:30:00-05:00",
+        "end_iso": "2027-01-14T19:30:00-05:00",
+        "location": "Springboro Performing Arts Center 115 Wright Station Way, Springboro, OH 45066, USA, Springboro, OH Springboro OH",
+        "url": "https://www.meetup.com/it-IT/cincinnatibackpackers/events/317581344/"
       },
       {
         "title": "Corcovado National Park Wildlife Tour",
@@ -17914,7 +17561,7 @@
     }
   },
   "verify::https://autolnk.autolnkusa.com/e/wrc-rally-us-2027": {
-    "checked_at_iso": "2026-11-19T06:28:58.413361-05:00",
+    "checked_at_iso": "2026-11-26T06:29:58.207940-05:00",
     "result": {
       "title": "WRC Rally US 2027",
       "start_iso": "2027-08-26T20:00:00-04:00",
@@ -17922,6 +17569,346 @@
       "location": "WRC Rally US (rally HQ / WRC Arena) 3001 Knoxville Center Dr Knoxville TN 37924",
       "address": "3001 Knoxville Center Dr, Knoxville, TN 37924",
       "description": "The BEST is yet to COME 📆: AUGUST 26-29, 2027 🎥:WRC",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "https://www.eventbrite.com/d/united-states--ohio/car-show-near-45140/?page=3": {
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/events-in-cincinnati-ohio/": {
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/speed-dating-black-people/?page=3": {
+    "fetched_at_iso": "2026-11-26T06:28:00.811644-05:00",
+    "events": []
+  },
+  "https://www.meetup.com/sierraoutings/events/317197451/": {
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
+    "events": [
+      {
+        "title": "Five Day Backpack in the Big South Fork",
+        "start_iso": "2026-11-12T07:00:00-05:00",
+        "end_iso": "2026-11-16T19:00:00-05:00",
+        "location": "7291 Ridge Avenue 7291 Ridge Ave, Cincinnati, OH 45237, USA, Cincinnati, OH Cincinnati OH",
+        "url": "https://www.meetup.com/sierraoutings/events/317197451/"
+      }
+    ]
+  },
+  "https://www.meetup.com/women-travel-abroad-cincinnati/events/312063656/": {
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
+    "events": [
+      {
+        "title": "6 Spots Left! | Cuba | February 8 - 13, 2027",
+        "start_iso": "2027-02-08T18:00:00-05:00",
+        "end_iso": "2027-02-13T20:00:00-05:00",
+        "location": "Havana, Cuba 66 Cienfuegos, La Habana 10200, Cuba, Havana, OH Havana OH",
+        "url": "https://www.meetup.com/women-travel-abroad-cincinnati/events/312063656/"
+      }
+    ]
+  },
+  "https://www.meetup.com/find/us--ky--new-castle/meet-new-friends/": {
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
+    "events": [
+      {
+        "title": "Tot Time",
+        "start_iso": "2026-12-10T10:00:00-05:00",
+        "end_iso": "2026-12-10T12:00:00-05:00",
+        "location": "",
+        "url": "https://www.meetup.com/northeast-louisville-mama-me-group/events/317509456/"
+      },
+      {
+        "title": "TRAIL MIX Nature/Outdoor Adventure Book Club and Swap Social",
+        "start_iso": "2026-12-08T19:00:00-05:00",
+        "end_iso": "2026-12-08T21:00:00-05:00",
+        "location": "",
+        "url": "https://www.meetup.com/louisvillehikingmeetup/events/317490402/"
+      },
+      {
+        "title": "Tigerrific Play Date",
+        "start_iso": "2026-12-04T10:00:00-05:00",
+        "end_iso": "2026-12-04T11:30:00-05:00",
+        "location": "",
+        "url": "https://www.meetup.com/northeast-louisville-mama-me-group/events/317509405/"
+      },
+      {
+        "title": "Blue Wave Christmas Party, hohohaha",
+        "start_iso": "2026-12-05T14:00:00-05:00",
+        "end_iso": "2026-12-05T17:00:00-05:00",
+        "location": "",
+        "url": "https://www.meetup.com/liberals-over-50/events/317526248/"
+      },
+      {
+        "title": "Games on Tap: Akasha",
+        "start_iso": "2026-12-02T18:30:00-05:00",
+        "end_iso": "2026-12-02T22:00:00-05:00",
+        "location": "Akasha Brewing Company 909 East Market Street, Louisville, KY Louisville KY",
+        "url": "https://www.meetup.com/games-on-tap/events/316778103/"
+      },
+      {
+        "title": "Games on Tap: Atrium @ Logan St.",
+        "start_iso": "2026-12-09T18:30:00-05:00",
+        "end_iso": "2026-12-09T22:00:00-05:00",
+        "location": "Atrium Brewing 1154 Logan St, Louisville, KY Louisville KY",
+        "url": "https://www.meetup.com/games-on-tap/events/316778737/"
+      },
+      {
+        "title": "Louisville Speed Dating for Kentucky Singles Ages 40s/50s",
+        "start_iso": "2026-12-08T19:00:00-05:00",
+        "end_iso": "2026-12-08T21:00:00-05:00",
+        "location": "Trellis Brewing 827 Logan St, Louisville, KY 40204, USA, Louisville, KY Louisville KY",
+        "url": "https://www.meetup.com/cincinnati-speed-dating-singles-meet-up/events/316728149/"
+      },
+      {
+        "title": "Kentucky Speed Dating for Louisville Singles Ages 50s/60s",
+        "start_iso": "2026-12-14T19:00:00-05:00",
+        "end_iso": "2026-12-14T21:00:00-05:00",
+        "location": "Trellis Brewing 827 Logan St, Louisville, KY 40204, USA, Louisville, KY Louisville KY",
+        "url": "https://www.meetup.com/cincinnati-speed-dating-singles-meet-up/events/316728154/"
+      },
+      {
+        "title": "Bible Reading: 2 Peter",
+        "start_iso": "2026-11-30T08:00:00-05:00",
+        "end_iso": "2026-11-30T09:00:00-05:00",
+        "location": "LaGrange Coffee Rosters 110 East Main Street, LaGrange, KY LaGrange KY",
+        "url": "https://www.meetup.com/oldham-county-bible-readers/events/317367910/"
+      },
+      {
+        "title": "Idempotency, Exactly-Once, and Other Lies We Tell Ourselves",
+        "start_iso": "2026-12-17T18:30:00-05:00",
+        "end_iso": "2026-12-17T20:30:00-05:00",
+        "location": "Slingshot 700 N Hurstbourne Pkwy #120, Louisville, KY Louisville KY",
+        "url": "https://www.meetup.com/louisville-dotnet/events/317546217/"
+      }
+    ]
+  },
+  "https://www.meetup.com/it-IT/i-d-be-game-for-that/?eventOrigin=city_popular_groups": {
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
+    "events": []
+  },
+  "https://www.meetup.com/lp/career-and-business/entrepreneur-groups-near-me/": {
+    "fetched_at_iso": "2026-11-26T06:28:01.865109-05:00",
+    "events": [
+      {
+        "title": "General Business Networking - Québec City",
+        "start_iso": "2026-12-09T18:00:00-05:00",
+        "end_iso": "2026-12-09T20:00:00-05:00",
+        "location": "'3 Brasseurs - Grande Allée' '3 Brasseurs - Grande Allée', 650 Grande Allée E, Québec, QC G1R 2K5, Canada Québec QC G1R 2K5",
+        "url": "https://www.meetup.com/strive-networking/events/316009415/"
+      },
+      {
+        "title": "Real Estate Investor Networking Quebec City | Investors, Developers & Agents",
+        "start_iso": "2026-11-26T19:00:00-05:00",
+        "end_iso": "2026-11-26T22:00:00-05:00",
+        "location": "3 Brasseurs - Grande Allée 650 Grande Allée Est, Québec, QC, G1R 2K5 Quebec City QC G1R 2K5",
+        "url": "https://www.meetup.com/propertydealnetwork/events/317107102/"
+      },
+      {
+        "title": "Rencontre d'échecs - Québec - Ninkasi",
+        "start_iso": "2026-12-06T08:00:00-05:00",
+        "end_iso": "2026-12-06T11:00:00-05:00",
+        "location": "Ninkasi 801 Rue Saint-Jean Québec QC G1R 1R2",
+        "url": "https://www.meetup.com/rencontre-dechecs/events/317553402/"
+      },
+      {
+        "title": "LES COMMUNICATEURS DE QUÉBEC - Un cadeau pour soi",
+        "start_iso": "2026-12-01T18:45:00-05:00",
+        "end_iso": "2026-12-01T20:15:00-05:00",
+        "location": "Centre Montmartre 1669 chemin Saint-Louis Québec qc G1S 1G5",
+        "url": "https://www.meetup.com/toastmasters-international-ville-de-quebec/events/317587612/"
+      },
+      {
+        "title": "Quebec City Personality-Matched Dating for Locals",
+        "start_iso": "2026-11-29T16:00:00-05:00",
+        "end_iso": "2026-11-29T17:00:00-05:00",
+        "location": "358 Rue Champlain 358 Rue Champlain, Québec, QC G1K 4J2, Canada Québec QC G1K 4J2",
+        "url": "https://www.meetup.com/first-mic-podcasting-beginners-circle/events/317561657/"
+      },
+      {
+        "title": "Quebec City Relax at Home With Speed Dating",
+        "start_iso": "2026-11-26T16:00:00-05:00",
+        "end_iso": "2026-11-26T17:00:00-05:00",
+        "location": "24 Rue Sainte-Ursule 24 Rue Sainte-Ursule, Québec, QC G1R 4E4, Canada Québec QC G1R 4E4",
+        "url": "https://www.meetup.com/etsy-sellers-study-circle/events/317574685/"
+      },
+      {
+        "title": "GUM 365 et Communauté Microsoft Azure - Retour sur le Ignite 2026 (Québec)",
+        "start_iso": "2026-11-26T18:00:00-05:00",
+        "end_iso": "2026-11-26T20:00:00-05:00",
+        "location": "Microsoft Canada 2640 Bd Laurier Microsoft Québec QC G1V 5C2",
+        "url": "https://www.meetup.com/gum365/events/317315917/"
+      },
+      {
+        "title": "Retour sur le Ignite 2026 (Azure Québec + GUM 365)",
+        "start_iso": "2026-11-26T18:00:00-05:00",
+        "end_iso": "2026-11-26T20:00:00-05:00",
+        "location": "Microsoft Canada 2640 Boul Laurier Microsoft, Québec, QC G1V 5C2, Canada Québec QC G1V 5C2",
+        "url": "https://www.meetup.com/azureqc/events/317374949/"
+      },
+      {
+        "title": "Quebec City Your Living Room Speed Dating Party",
+        "start_iso": "2026-11-29T16:00:00-05:00",
+        "end_iso": "2026-11-29T17:00:00-05:00",
+        "location": "301 Bd Champlain 301 Bd Champlain, Québec, QC G1K 4J1, Canada Québec QC G1K 4J1",
+        "url": "https://www.meetup.com/tesserae-and-tea-mosaic-teachers-circle/events/317563131/"
+      },
+      {
+        "title": "Quebec City Five Minute Dates From Your Living Room",
+        "start_iso": "2026-11-29T16:00:00-05:00",
+        "end_iso": "2026-11-29T17:00:00-05:00",
+        "location": "1 Côte de la Fabrique 1 Côte de la Fabrique, Québec, QC G1R 3V6, Canada Québec QC G1R 3V6",
+        "url": "https://www.meetup.com/sunday-knights-chess-social-club/events/317570014/"
+      },
+      {
+        "title": "Our 14th Event | qc day trip: old quebec, petit champlain & christmas magic ❄️🏰",
+        "start_iso": "2026-12-13T07:30:00-05:00",
+        "end_iso": "2026-12-13T17:00:00-05:00",
+        "location": "Québec City Québec City, QC, Canada Québec City QC",
+        "url": "https://www.meetup.com/mtlownw/events/317541475/"
+      },
+      {
+        "title": "Montreal & Quebec Christmas Markets---December 8-13, 2026",
+        "start_iso": "2026-12-08T08:00:00-05:00",
+        "end_iso": "2026-12-13T08:00:00-05:00",
+        "location": "Suitcase Gals Delmarva (travel group for Women over 40)",
+        "url": "https://www.meetup.com/suitcase-gals-oc-travel-group-for-women-over-50/events/313683310/"
+      },
+      {
+        "title": "Quebec City Gay & Bi Men: Speed Dating Online",
+        "start_iso": "2026-12-13T17:00:00-05:00",
+        "end_iso": "2026-12-13T18:00:00-05:00",
+        "location": "3419 Rue des Sureaux 3419 Rue des Sureaux Quebec City QC G1G 1Z4",
+        "url": "https://www.meetup.com/german-language-support-and-conversation-circle/events/317584198/"
+      },
+      {
+        "title": "Guided Meditation Boston | Somerville",
+        "start_iso": "2026-12-03T18:30:00-05:00",
+        "end_iso": "2026-12-03T19:30:00-05:00",
+        "location": "The Zen Art Center 86 Joy Street, Studio 5R Somerville MA 02143",
+        "url": "https://www.meetup.com/zenartcenter/events/317046842/"
+      },
+      {
+        "title": "Zen Meditation Boston | Somerville",
+        "start_iso": "2026-12-17T18:30:00-05:00",
+        "end_iso": "2026-12-17T19:30:00-05:00",
+        "location": "The Zen Art Center 86 Joy Street, Studio 5R Somerville MA 02143",
+        "url": "https://www.meetup.com/zenartcenter/events/317046846/"
+      }
+    ]
+  },
+  "https://www.facebook.com/sccaofficial/posts/the-2027-united-states-roadrally-challenge-is-heading-to-the-scenic-roads-of-app/1813971466793890/": {
+    "fetched_at_iso": "2026-11-26T06:28:15.689677-05:00",
+    "events": []
+  },
+  "https://teamoneil.com/": {
+    "fetched_at_iso": "2026-11-26T06:28:15.689677-05:00",
+    "events": []
+  },
+  "https://www.caranddriver.com/news/a74084206/global-rally-returns-to-the-us-in-2027-with-a-late-august-wrc-debut/": {
+    "fetched_at_iso": "2026-11-26T06:28:15.689677-05:00",
+    "events": []
+  },
+  "https://www.scca.com/motorsports/rallycross/": {
+    "fetched_at_iso": "2026-11-26T06:29:41.108913-05:00",
+    "events": []
+  },
+  "https://www.eventbrite.com/d/oh--cincinnati/classic-car-show/?page=2": {
+    "fetched_at_iso": "2026-11-26T06:29:12.905982-05:00",
+    "events": []
+  },
+  "https://www.scca.com/motorsports/autocross/": {
+    "fetched_at_iso": "2026-11-26T06:29:41.108913-05:00",
+    "events": []
+  },
+  "verify::https://carsandcoffeeevents.com/events/world-of-wheels-cincinnati-cavalcade-of-customs": {
+    "checked_at_iso": "2026-11-26T06:29:55.764799-05:00",
+    "result": {
+      "title": "World of Wheels Cincinnati (Cavalcade of Customs)",
+      "start_iso": "2027-01-08T15:00:00-05:00",
+      "end_iso": "2027-01-08T21:00:00-05:00",
+      "location": "First Financial Convention Center 525 Elm St, Cincinnati, OH 45202 Cincinnati OH 45202",
+      "address": "525 Elm St, Cincinnati, OH 45202, Cincinnati, OH 45202",
+      "description": "The 66th annual World of Wheels stop in Cincinnati: an indoor custom car show with hot rods, customs, trucks and motorcycles competing for awards, plus guest appearances.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/events/world-of-wheels-indianapolis": {
+    "checked_at_iso": "2026-11-26T06:29:56.197334-05:00",
+    "result": {
+      "title": "World of Wheels Indianapolis",
+      "start_iso": "2027-03-19T15:00:00-04:00",
+      "end_iso": "2027-03-19T20:00:00-04:00",
+      "location": "Indiana State Fairgrounds 1202 E 38th St Indianapolis IN 46205",
+      "address": "1202 E 38th St, Indianapolis, IN 46205",
+      "description": "The 68th annual World of Wheels stop in Indianapolis: an indoor custom car show with hot rods, customs, trucks and motorcycles competing for awards, plus guest appearances.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/events/49th-cincinnati-concours-delegance": {
+    "checked_at_iso": "2026-11-26T06:29:57.683344-05:00",
+    "result": {
+      "title": "49th Cincinnati Concours d'Elegance",
+      "start_iso": "2027-06-13T10:00:00-04:00",
+      "end_iso": "2027-06-13T16:00:00-04:00",
+      "location": "Ault Park 3600 Observatory Ave. Cincinnati OH 45208",
+      "address": "3600 Observatory Ave., Cincinnati, OH 45208",
+      "description": "Cars and motorcycles displayed in the formal gardens of Ault Park, one of the longest-running concours in the US. The 2027 theme is Supercars Through the Ages, with special classes for Cadillac's 125th anniversary, JDM cars and a Harley-Davidson tribute.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/events/goodguys-summit-racing-nationals": {
+    "checked_at_iso": "2026-11-26T06:29:57.851006-05:00",
+    "result": {
+      "title": "Goodguys Summit Racing Nationals",
+      "start_iso": "2027-07-09T08:00:00-04:00",
+      "end_iso": "2027-07-09T17:00:00-04:00",
+      "location": "Ohio Expo Center 717 E. 17th Ave. Columbus OH 43211",
+      "address": "717 E. 17th Ave., Columbus, OH 43211",
+      "description": "The 29th Summit Racing Nationals: one of Goodguys' biggest shows, filling the Ohio fairgrounds with hot rods, muscle cars and customs.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/events/keeneland-concours-delegance": {
+    "checked_at_iso": "2026-11-26T06:29:58.025132-05:00",
+    "result": {
+      "title": "Keeneland Concours d’Elegance",
+      "start_iso": "2027-07-17T09:00:00-04:00",
+      "end_iso": "2027-07-17T16:30:00-04:00",
+      "location": "Keeneland Race Track 4201 Versailles Road Lexington KY 40510",
+      "address": "4201 Versailles Road, Lexington, KY 40510",
+      "description": "On the third weekend of July, the annual Keeneland Concours d’Elegance will again be held on the beautiful grounds of Kentucky’s renowned Keeneland Race Course in Lexington, Kentucky. We will be showcasing the finest collector vehicles in the country from antiques to future classics. Automobiles and other unique types of vehicles will be judged for their historical accuracy, presentation, and cleanliness. Each class winner and runner-up will receive an award. The 2027 Concours featured marque...",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/events/asphalt-outlaws-car-show-2027": {
+    "checked_at_iso": "2026-11-26T06:29:58.156459-05:00",
+    "result": {
+      "title": "Asphalt Outlaws Car Show 2027",
+      "start_iso": "2027-08-21T09:00:00-04:00",
+      "end_iso": "2027-08-21T17:00:00-04:00",
+      "location": "Wolf Creek Rod and Gun Club 6700 Derby Rd, Dayton, OH Miamisburg OH 45342",
+      "address": "6700 Derby Rd, Dayton, OH, Miamisburg, OH 45342",
+      "description": "Flyers are in the process of being made with this years vehicle.",
+      "provider": "schema_org",
+      "confident": true
+    }
+  },
+  "verify::https://carsandcoffeeevents.com/events/dayton-concours-delegance": {
+    "checked_at_iso": "2026-11-26T06:29:58.353801-05:00",
+    "result": {
+      "title": "Dayton Concours d’Elegance",
+      "start_iso": "2027-09-19T10:30:00-04:00",
+      "end_iso": "2027-09-19T16:00:00-04:00",
+      "location": "Carillon Park 1000 Carillon Blvd Dayton OH 45409",
+      "address": "1000 Carillon Blvd, Dayton, OH 45409",
+      "description": "The Dayton Concours d’Elegance at Carillon Park presented by AAA is the Midwest’s premier classic & antique automobile and motorcycle show. AAAThe invitational event brings 200 of the finest historical cars and motorcycles together inside the grounds of the 65-acre historical park. The vehicles are either restored to original or preserved in original condition. Cars from the early 1900s are displayed along side the classics of the ‘50s and ‘60s, as well as a variety of two wheeled machines. Ent...",
       "provider": "schema_org",
       "confident": true
     }

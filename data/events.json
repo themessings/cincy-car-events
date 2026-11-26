@@ -1,55 +1,7 @@
 {
-  "generated_at_iso": "2026-11-19T06:29:01.836075-05:00",
-  "count": 172,
+  "generated_at_iso": "2026-11-26T06:30:11.822404-05:00",
+  "count": 177,
   "events": [
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-11-21",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
-      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
-    },
-    {
-      "Event Name": "Cars at Madison Square",
-      "Date": "2026-11-21",
-      "Start Time": "11:00 AM",
-      "End Time": "2:00 PM",
-      "Location": "5350 Medpace Way, Cincinnati, OH 45227",
-      "Address": "5350 Medpace Way, Cincinnati, OH 45227",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Local",
-      "Popularity": "32",
-      "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
-      "Organizer Social": "https://www.facebook.com/ElementEatery/"
-    },
-    {
-      "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
-      "Date": "2026-11-22",
-      "Start Time": "8:00 AM",
-      "End Time": "12:00 PM",
-      "Location": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Address": "2726 Riverside Drive, Cincinnati, OH 45202",
-      "Closest City": "Cincinnati, OH",
-      "Callout": "",
-      "Size": "Small",
-      "Popularity": "20",
-      "Attendance": "",
-      "Source": "iCloud Published Calendar (ICS); CarsAndCoffeeEvents API (OH/KY/IN); iCloud Published Calendar (ICS)",
-      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
-      "Organizer Social": "https://www.facebook.com/cincinnaticarsandcoffee"
-    },
     {
       "Event Name": "Circuit Cafe / Cincinnati Cars and Coffee",
       "Date": "2026-11-28",
@@ -257,6 +209,22 @@
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
       "Organizer Social": "https://www.facebook.com/ElementEatery/"
+    },
+    {
+      "Event Name": "World of Wheels Cincinnati (Cavalcade of Customs)",
+      "Date": "2027-01-08",
+      "Start Time": "3:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "525 Elm St, Cincinnati, OH 45202, Cincinnati, OH 45202",
+      "Address": "525 Elm St, Cincinnati, OH 45202, Cincinnati, OH 45202",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "48",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/world-of-wheels-cincinnati-cavalcade-of-customs",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -497,6 +465,22 @@
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
       "Organizer Social": "https://www.facebook.com/ElementEatery/"
+    },
+    {
+      "Event Name": "World of Wheels Indianapolis",
+      "Date": "2027-03-19",
+      "Start Time": "3:00 PM",
+      "End Time": "8:00 PM",
+      "Location": "1202 E 38th St, Indianapolis, IN 46205",
+      "Address": "1202 E 38th St, Indianapolis, IN 46205",
+      "Closest City": "Indianapolis, IN",
+      "Callout": "",
+      "Size": "Regional",
+      "Popularity": "62",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/world-of-wheels-indianapolis",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -1091,6 +1075,22 @@
       "Organizer Social": ""
     },
     {
+      "Event Name": "Shepherdsville Cruise-In",
+      "Date": "2027-05-21",
+      "Start Time": "5:00 PM",
+      "End Time": "9:00 PM",
+      "Location": "170 W. Joe B Hall Ave, Shepherdsville, KY 40165",
+      "Address": "170 W. Joe B Hall Ave, Shepherdsville, KY 40165",
+      "Closest City": "Louisville, KY",
+      "Callout": "",
+      "Size": "Small",
+      "Popularity": "20",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/shepherdsville-cruise-in-2",
+      "Organizer Social": ""
+    },
+    {
       "Event Name": "Cars at Madison Square",
       "Date": "2027-05-22",
       "Start Time": "11:00 AM",
@@ -1299,6 +1299,22 @@
       "Organizer Social": ""
     },
     {
+      "Event Name": "49th Cincinnati Concours d'Elegance",
+      "Date": "2027-06-13",
+      "Start Time": "10:00 AM",
+      "End Time": "4:00 PM",
+      "Location": "3600 Observatory Ave., Cincinnati, OH 45208",
+      "Address": "3600 Observatory Ave., Cincinnati, OH 45208",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Regional",
+      "Popularity": "72",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/49th-cincinnati-concours-delegance",
+      "Organizer Social": ""
+    },
+    {
       "Event Name": "Dynasty Rally 2026 – Day 2",
       "Date": "2027-06-18",
       "Start Time": "9:00 AM",
@@ -1427,6 +1443,22 @@
       "Organizer Social": ""
     },
     {
+      "Event Name": "Goodguys Summit Racing Nationals",
+      "Date": "2027-07-09",
+      "Start Time": "8:00 AM",
+      "End Time": "5:00 PM",
+      "Location": "717 E. 17th Ave., Columbus, OH 43211",
+      "Address": "717 E. 17th Ave., Columbus, OH 43211",
+      "Closest City": "Columbus, OH",
+      "Callout": "",
+      "Size": "Major",
+      "Popularity": "76",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/goodguys-summit-racing-nationals",
+      "Organizer Social": ""
+    },
+    {
       "Event Name": "Cars at Madison Square",
       "Date": "2027-07-10",
       "Start Time": "11:00 AM",
@@ -1520,6 +1552,22 @@
       "Attendance": "",
       "Source": "sheet",
       "Event URL": "Same as above",
+      "Organizer Social": ""
+    },
+    {
+      "Event Name": "Keeneland Concours d’Elegance",
+      "Date": "2027-07-17",
+      "Start Time": "9:00 AM",
+      "End Time": "4:30 PM",
+      "Location": "4201 Versailles Road, Lexington, KY 40510",
+      "Address": "4201 Versailles Road, Lexington, KY 40510",
+      "Closest City": "Lexington, KY",
+      "Callout": "",
+      "Size": "Regional",
+      "Popularity": "58",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/keeneland-concours-delegance",
       "Organizer Social": ""
     },
     {
@@ -1793,6 +1841,22 @@
       "Source": "iCloud Published Calendar (ICS)",
       "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
       "Organizer Social": "https://www.facebook.com/ElementEatery/"
+    },
+    {
+      "Event Name": "Dayton Concours d’Elegance",
+      "Date": "2027-09-19",
+      "Start Time": "10:30 AM",
+      "End Time": "4:00 PM",
+      "Location": "1000 Carillon Blvd, Dayton, OH 45409",
+      "Address": "1000 Carillon Blvd, Dayton, OH 45409",
+      "Closest City": "Dayton, OH",
+      "Callout": "",
+      "Size": "Regional",
+      "Popularity": "58",
+      "Attendance": "",
+      "Source": "CarsAndCoffeeEvents API (OH/KY/IN/WV/TN)",
+      "Event URL": "https://carsandcoffeeevents.com/events/dayton-concours-delegance",
+      "Organizer Social": ""
     },
     {
       "Event Name": "Cars at Madison Square",
@@ -2741,6 +2805,22 @@
     {
       "Event Name": "Cars at Madison Square",
       "Date": "2028-11-11",
+      "Start Time": "11:00 AM",
+      "End Time": "2:00 PM",
+      "Location": "5350 Medpace Way, Cincinnati, OH 45227",
+      "Address": "5350 Medpace Way, Cincinnati, OH 45227",
+      "Closest City": "Cincinnati, OH",
+      "Callout": "",
+      "Size": "Local",
+      "Popularity": "32",
+      "Attendance": "",
+      "Source": "iCloud Published Calendar (ICS)",
+      "Event URL": "https://p147-caldav.icloud.com/published/2/MjAyOTg3MDYzMDYyMDI5OBf9ajX0FwLfmy7tt5VOuuB3qsUCkmTmEXtFYEkUfJhPbL01ZnaiaS-7j1aRwxpLpv3Uusg0k-ywiw3A3H9vbBk",
+      "Organizer Social": "https://www.facebook.com/ElementEatery/"
+    },
+    {
+      "Event Name": "Cars at Madison Square",
+      "Date": "2028-11-18",
       "Start Time": "11:00 AM",
       "End Time": "2:00 PM",
       "Location": "5350 Medpace Way, Cincinnati, OH 45227",
